@@ -1,105 +1,158 @@
 ---
 const res = await fetch(
-    "https://script.google.com/macros/s/AKfycbxdL1jDNweYxDYD6PMDnUjcIuOki2-pd5JVn5TRQ3vCQTEHqjkplyz2gKi0XddfjlNy/exec",
+  "https://script.google.com/macros/s/AKfycbxdL1jDNweYxDYD6PMDnUjcIuOki2-pd5JVn5TRQ3vCQTEHqjkplyz2gKi0XddfjlNy/exec",
 );
 const text = await res.text();
 // console.log('Response:', text);
 const { data } = JSON.parse(text);
 
 function getGradeColor(grade: number): string {
-    if (grade >= 90) return 'grade-a';
-    if (grade >= 80) return 'grade-b';
-    if (grade >= 70) return 'grade-c';
-    if (grade >= 60) return 'grade-d';
-    return 'grade-f';
+  if (grade >= 90) return "grade-a";
+  if (grade >= 80) return "grade-b";
+  if (grade >= 70) return "grade-c";
+  if (grade >= 60) return "grade-d";
+  return "grade-f";
 }
 ---
 
-<section class="py-3">
+<!-- <section class="py-20 ">
   <div class="container px-4 mx-auto">
-    <div class="flex flex-wrap -mx-3 -mb-6">
-      <div class="w-full md:w-1/2 lg:w-1/4 px-3 mb-6">
-        <div class="max-w-sm mx-auto py-8 px-6 bg-gray-500 rounded-xl">
-          <div class="max-w-xs mx-auto text-center">
-            <div class="flex mx-auto w-12 h-12 mb-4 items-center justify-center bg-blue-500 bg-opacity-20 text-blue-500 rounded-xl">
-              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M21 16H1C0.734784 16 0.48043 16.1054 0.292893 16.2929C0.105357 16.4804 0 16.7348 0 17C0 17.2652 0.105357 17.5196 0.292893 17.7071C0.48043 17.8946 0.734784 18 1 18H21C21.2652 18 21.5196 17.8946 21.7071 17.7071C21.8946 17.5196 22 17.2652 22 17C22 16.7348 21.8946 16.4804 21.7071 16.2929C21.5196 16.1054 21.2652 16 21 16ZM21 20H1C0.734784 20 0.48043 20.1054 0.292893 20.2929C0.105357 20.4804 0 20.7348 0 21C0 21.2652 0.105357 21.5196 0.292893 21.7071C0.48043 21.8946 0.734784 22 1 22H21C21.2652 22 21.5196 21.8946 21.7071 21.7071C21.8946 21.5196 22 21.2652 22 21C22 20.7348 21.8946 20.4804 21.7071 20.2929C21.5196 20.1054 21.2652 20 21 20ZM5 6C4.80222 6 4.60888 6.05865 4.44443 6.16853C4.27998 6.27841 4.15181 6.43459 4.07612 6.61732C4.00043 6.80004 3.98063 7.00111 4.01921 7.19509C4.0578 7.38907 4.15304 7.56725 4.29289 7.70711C4.43275 7.84696 4.61093 7.9422 4.80491 7.98079C4.99889 8.01937 5.19996 7.99957 5.38268 7.92388C5.56541 7.84819 5.72159 7.72002 5.83147 7.55557C5.94135 7.39112 6 7.19778 6 7C6 6.73478 5.89464 6.48043 5.70711 6.29289C5.51957 6.10536 5.26522 6 5 6ZM19 0H3C2.20435 0 1.44129 0.31607 0.87868 0.87868C0.31607 1.44129 0 2.20435 0 3V11C0 11.7956 0.31607 12.5587 0.87868 13.1213C1.44129 13.6839 2.20435 14 3 14H19C19.7956 14 20.5587 13.6839 21.1213 13.1213C21.6839 12.5587 22 11.7956 22 11V3C22 2.20435 21.6839 1.44129 21.1213 0.87868C20.5587 0.31607 19.7956 0 19 0ZM20 11C20 11.2652 19.8946 11.5196 19.7071 11.7071C19.5196 11.8946 19.2652 12 19 12H3C2.73478 12 2.48043 11.8946 2.29289 11.7071C2.10536 11.5196 2 11.2652 2 11V3C2 2.73478 2.10536 2.48043 2.29289 2.29289C2.48043 2.10536 2.73478 2 3 2H19C19.2652 2 19.5196 2.10536 19.7071 2.29289C19.8946 2.48043 20 2.73478 20 3V11ZM11 4C10.4067 4 9.82664 4.17595 9.33329 4.50559C8.83994 4.83524 8.45542 5.30377 8.22836 5.85195C8.0013 6.40013 7.94189 7.00333 8.05764 7.58527C8.1734 8.16721 8.45912 8.70176 8.87868 9.12132C9.29824 9.54088 9.83279 9.8266 10.4147 9.94236C10.9967 10.0581 11.5999 9.9987 12.1481 9.77164C12.6962 9.54458 13.1648 9.16006 13.4944 8.66671C13.8241 8.17336 14 7.59334 14 7C14 6.20435 13.6839 5.44129 13.1213 4.87868C12.5587 4.31607 11.7956 4 11 4ZM11 8C10.8022 8 10.6089 7.94135 10.4444 7.83147C10.28 7.72159 10.1518 7.56541 10.0761 7.38268C10.0004 7.19996 9.98063 6.99889 10.0192 6.80491C10.0578 6.61093 10.153 6.43275 10.2929 6.29289C10.4327 6.15304 10.6109 6.0578 10.8049 6.01921C10.9989 5.98063 11.2 6.00043 11.3827 6.07612C11.5654 6.15181 11.7216 6.27998 11.8315 6.44443C11.9414 6.60888 12 6.80222 12 7C12 7.26522 11.8946 7.51957 11.7071 7.70711C11.5196 7.89464 11.2652 8 11 8ZM17 6C16.8022 6 16.6089 6.05865 16.4444 6.16853C16.28 6.27841 16.1518 6.43459 16.0761 6.61732C16.0004 6.80004 15.9806 7.00111 16.0192 7.19509C16.0578 7.38907 16.153 7.56725 16.2929 7.70711C16.4327 7.84696 16.6109 7.9422 16.8049 7.98079C16.9989 8.01937 17.2 7.99957 17.3827 7.92388C17.5654 7.84819 17.7216 7.72002 17.8315 7.55557C17.9414 7.39112 18 7.19778 18 7C18 6.73478 17.8946 6.48043 17.7071 6.29289C17.5196 6.10536 17.2652 6 17 6Z" fill="#194BFB"></path>
-              </svg>
-            </div>
-            <span class="text-xs text-gray-300 font-semibold">Budget</span>
-            <h4 class="text-2xl leading-8 text-gray-100 font-semibold mb-4">$28K</h4>
-            <div class="flex flex-wrap items-center justify-center -m-1">
-              <div class="w-auto p-1">
-                <span class="inline-block py-1 px-2 text-xs text-green-500 font-medium bg-teal-900 rounded-full">1,0%</span>
+    <div class="flex flex-wrap items-center -mx-4 -mb-10">
+      {
+        data.map((i) => (
+          <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-10 text-center ">
+            <div class="relative w-32 h-32 mx-auto mb-8 bg-white border-4 border-black shadow-[8px_8px_0px_0px_#f6339a]">
+              <div class="absolute inset-0 flex items-center justify-center">
+                <p class="text-4xl font-black text-black tracking-tight">{i.grade}%</p>
               </div>
-              <div class="w-auto p-1">
-                <span class="text-xs text-gray-300 font-medium">Since last month</span>
-              </div>
+              <div class="absolute -top-2 -right-2 w-8 h-8 bg-yellow-300 border-2 border-black" />
+              <div class="absolute -bottom-2 -left-2 w-6 h-6 bg-pink-500 border-2 border-black" />
             </div>
+            <h3 class="mb-3 text-2xl font-black tracking-tight text-white uppercase">
+             {i.class}
+            </h3>
+            <p class="text-gray-700 text-lg font-medium">
+              Raw market dominance metrics
+            </p>
           </div>
-        </div>
+        ))
+      }
+    </div>
+  </div>
+</section> -->
+<section class="py-8" x-data="{ showContent: false }">
+  <div class="container px-4 mx-auto">
+    <div class="pt-4 bg-transparent shadow rounded">
+      <div class="flex px-6 pb-4 border-b">
+        <h3 class="text-xl font-bold">Current Grades</h3>
       </div>
-      <div class="w-full md:w-1/2 lg:w-1/4 px-3 mb-6">
-        <div class="max-w-sm mx-auto py-8 px-6 bg-gray-500 rounded-xl">
-          <div class="max-w-xs mx-auto text-center">
-            <div class="flex mx-auto w-12 h-12 mb-4 items-center justify-center bg-blue-500 bg-opacity-20 text-blue-500 rounded-xl">
-              <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11.3 9.22C11.8336 8.75813 12.2616 8.18688 12.5549 7.54502C12.8482 6.90316 13 6.20571 13 5.5C13 4.17392 12.4732 2.90215 11.5355 1.96447C10.5979 1.02678 9.32608 0.5 8 0.5C6.67392 0.5 5.40215 1.02678 4.46447 1.96447C3.52678 2.90215 3 4.17392 3 5.5C2.99999 6.20571 3.1518 6.90316 3.44513 7.54502C3.73845 8.18688 4.16642 8.75813 4.7 9.22C3.30014 9.85388 2.11247 10.8775 1.27898 12.1685C0.445495 13.4596 0.00147185 14.9633 0 16.5C0 16.7652 0.105357 17.0196 0.292893 17.2071C0.48043 17.3946 0.734784 17.5 1 17.5C1.26522 17.5 1.51957 17.3946 1.70711 17.2071C1.89464 17.0196 2 16.7652 2 16.5C2 14.9087 2.63214 13.3826 3.75736 12.2574C4.88258 11.1321 6.4087 10.5 8 10.5C9.5913 10.5 11.1174 11.1321 12.2426 12.2574C13.3679 13.3826 14 14.9087 14 16.5C14 16.7652 14.1054 17.0196 14.2929 17.2071C14.4804 17.3946 14.7348 17.5 15 17.5C15.2652 17.5 15.5196 17.3946 15.7071 17.2071C15.8946 17.0196 16 16.7652 16 16.5C15.9985 14.9633 15.5545 13.4596 14.721 12.1685C13.8875 10.8775 12.6999 9.85388 11.3 9.22ZM8 8.5C7.40666 8.5 6.82664 8.32405 6.33329 7.99441C5.83994 7.66476 5.45542 7.19623 5.22836 6.64805C5.0013 6.09987 4.94189 5.49667 5.05764 4.91473C5.1734 4.33279 5.45912 3.79824 5.87868 3.37868C6.29824 2.95912 6.83279 2.6734 7.41473 2.55764C7.99667 2.44189 8.59987 2.5013 9.14805 2.72836C9.69623 2.95542 10.1648 3.33994 10.4944 3.83329C10.8241 4.32664 11 4.90666 11 5.5C11 6.29565 10.6839 7.05871 10.1213 7.62132C9.55871 8.18393 8.79565 8.5 8 8.5ZM17.74 8.82C18.38 8.09933 18.798 7.20905 18.9438 6.25634C19.0896 5.30362 18.9569 4.32907 18.5618 3.45C18.1666 2.57093 17.5258 1.8248 16.7165 1.30142C15.9071 0.77805 14.9638 0.499742 14 0.5C13.7348 0.5 13.4804 0.605357 13.2929 0.792893C13.1054 0.98043 13 1.23478 13 1.5C13 1.76522 13.1054 2.01957 13.2929 2.20711C13.4804 2.39464 13.7348 2.5 14 2.5C14.7956 2.5 15.5587 2.81607 16.1213 3.37868C16.6839 3.94129 17 4.70435 17 5.5C16.9986 6.02524 16.8593 6.5409 16.5961 6.99542C16.3328 7.44994 15.9549 7.82738 15.5 8.09C15.3517 8.17552 15.2279 8.29766 15.1404 8.44474C15.0528 8.59182 15.0045 8.7589 15 8.93C14.9958 9.09976 15.0349 9.2678 15.1137 9.41826C15.1924 9.56872 15.3081 9.69665 15.45 9.79L15.84 10.05L15.97 10.12C17.1754 10.6917 18.1923 11.596 18.901 12.7263C19.6096 13.8566 19.9805 15.1659 19.97 16.5C19.97 16.7652 20.0754 17.0196 20.2629 17.2071C20.4504 17.3946 20.7048 17.5 20.97 17.5C21.2352 17.5 21.4896 17.3946 21.6771 17.2071C21.8646 17.0196 21.97 16.7652 21.97 16.5C21.9782 14.9654 21.5938 13.4543 20.8535 12.1101C20.1131 10.7659 19.0413 9.63331 17.74 8.82Z" fill="#194BFB"></path>
+      <div class="p-4 overflow-x-auto">
+        <table class="table-auto w-full">
+          <thead>
+            <tr class="text-xs text-white text-left"><th class="pb-3 font-medium">Class</th><th class="pb-3 font-medium">Teacher</th><th class="pb-3 font-medium">Period</th><th class="pb-3 font-medium">Grade</th><th class="pb-3 font-medium">Letter Grade</th></tr>
+          </thead>
+          <tbody>
+            <tr class="text-xs bg-gray-50/10">
+              <td class="py-5 px-6 font-medium">English</td>
+              <td class="font-medium">Teacher</td>
+              <td class="font-medium">teacher@shuffle.dev</td>
+              <td class="font-medium">Monthly</td>
+              <td>
+                <span class="inline-block py-1 px-2 text-white bg-green-500 rounded-full">Completed</span>
+              </td>
+            </tr>
+            <tr class="text-xs">
+              <td class="py-5 px-6 font-medium">SR2451EW32</td>
+              <td class="font-medium">08.04.2021</td>
+              <td class="font-medium">name@shuffle.dev</td>
+              <td class="font-medium">Monthly</td>
+              <td>
+                <span class="inline-block py-1 px-2 text-white bg-red-500 rounded-full">Canceled</span>
+              </td>
+            </tr>
+            <tr class="text-xs bg-gray-50/10">
+              <td class="py-5 px-6 font-medium">SR2451EW32</td>
+              <td class="font-medium">08.04.2021</td>
+              <td class="font-medium">name@shuffle.dev</td>
+              <td class="font-medium">Lifetime</td>
+              <td>
+                <span class="inline-block py-1 px-2 text-white bg-orange-500 rounded-full">Pending</span>
+              </td>
+            </tr>
+            <tr class="text-xs">
+              <td class="py-5 px-6 font-medium">SR2451EW32</td>
+              <td class="font-medium">08.04.2021</td>
+              <td class="font-medium">name@shuffle.dev</td>
+              <td class="font-medium">Yearly</td>
+              <td>
+                <span class="inline-block py-1 px-2 text-white bg-green-500 rounded-full">Completed</span>
+              </td>
+            </tr>
+            <tr class="text-xs bg-gray-50/10">
+              <td class="py-5 px-6 font-medium">SR2451EW32</td>
+              <td class="font-medium">08.04.2021</td>
+              <td class="font-medium">name@shuffle.dev</td>
+              <td class="font-medium">Monthly</td>
+              <td>
+                <span class="inline-block py-1 px-2 text-white bg-green-500 rounded-full">Completed</span>
+              </td>
+            </tr>
+            <tr :class="{ 'hidden': !showContent }" class="text-xs bg-transparent">
+              <td class="py-5 px-6 font-medium">SR2451EW32</td>
+              <td class="font-medium">21.12.2022</td>
+              <td class="font-medium">name@shuffle.dev</td>
+              <td class="font-medium">Monthly</td>
+              <td>
+                <span class="inline-block py-1 px-2 text-white bg-orange-500 rounded-full">Pending</span>
+              </td>
+            </tr>
+            <tr :class="{ 'hidden': !showContent }" class="text-xs">
+              <td class="py-5 px-6 font-medium">SR2451EW32</td>
+              <td class="font-medium">21.12.2022</td>
+              <td class="font-medium">name@shuffle.dev</td>
+              <td class="font-medium">Monthly</td>
+              <td>
+                <span class="inline-block py-1 px-2 text-white bg-green-500 rounded-full">Completed</span>
+              </td>
+            </tr>
+            <tr :class="{ 'hidden': !showContent }" class="text-xs bg-gray-50">
+              <td class="py-5 px-6 font-medium">SR2451EW32</td>
+              <td class="font-medium">21.12.2022</td>
+              <td class="font-medium">name@shuffle.dev</td>
+              <td class="font-medium">Lifetime</td>
+              <td>
+                <span class="inline-block py-1 px-2 text-white bg-orange-500 rounded-full">Pending</span>
+              </td>
+            </tr>
+            <tr :class="{ 'hidden': !showContent }" class="text-xs">
+              <td class="py-5 px-6 font-medium">SR2451EW32</td>
+              <td class="font-medium">21.12.2022</td>
+              <td class="font-medium">name@shuffle.dev</td>
+              <td class="font-medium">Yearly</td>
+              <td>
+                <span class="inline-block py-1 px-2 text-white bg-red-500 rounded-full">Canceled</span>
+              </td>
+            </tr>
+            <tr :class="{ 'hidden': !showContent }" class="text-xs bg-gray-50">
+              <td class="py-5 px-6 font-medium">SR2451EW32</td>
+              <td class="font-medium">21.12.2022</td>
+              <td class="font-medium">name@shuffle.dev</td>
+              <td class="font-medium">Monthly</td>
+              <td>
+                <span class="inline-block py-1 px-2 text-white bg-red-500 rounded-full">Canceled</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="text-center mt-5">
+          <a x-on:click.prevent="showContent = true" x-show="!showContent" class="inline-flex items-center text-xs text-indigo-500 hover:text-blue-600 font-medium" href="#" style="display: none;">
+            <span class="inline-block mr-2">
+              <svg class="text-indigo-400 h-3 w-3" viewbox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.66667 12.3333H3.33333C2.8029 12.3333 2.29419 12.1226 1.91912 11.7476C1.54405 11.3725 1.33333 10.8638 1.33333 10.3333V3.66668C1.33333 3.48987 1.2631 3.3203 1.13807 3.19527C1.01305 3.07025 0.843478 3.00001 0.666667 3.00001C0.489856 3.00001 0.320286 3.07025 0.195262 3.19527C0.0702379 3.3203 0 3.48987 0 3.66668V10.3333C0 11.2174 0.351189 12.0652 0.976311 12.6904C1.60143 13.3155 2.44928 13.6667 3.33333 13.6667H8.66667C8.84348 13.6667 9.01305 13.5964 9.13807 13.4714C9.2631 13.3464 9.33333 13.1768 9.33333 13C9.33333 12.8232 9.2631 12.6536 9.13807 12.5286C9.01305 12.4036 8.84348 12.3333 8.66667 12.3333ZM4.66667 7.66668C4.66667 7.84349 4.7369 8.01306 4.86193 8.13808C4.98695 8.26311 5.15652 8.33334 5.33333 8.33334H8.66667C8.84348 8.33334 9.01305 8.26311 9.13807 8.13808C9.2631 8.01306 9.33333 7.84349 9.33333 7.66668C9.33333 7.48987 9.2631 7.3203 9.13807 7.19527C9.01305 7.07025 8.84348 7.00001 8.66667 7.00001H5.33333C5.15652 7.00001 4.98695 7.07025 4.86193 7.19527C4.7369 7.3203 4.66667 7.48987 4.66667 7.66668ZM12 4.96001C11.9931 4.89877 11.9796 4.83843 11.96 4.78001V4.72001C11.9279 4.65146 11.8852 4.58845 11.8333 4.53334V4.53334L7.83333 0.533343C7.77822 0.481488 7.71521 0.438731 7.64667 0.406677C7.62677 0.40385 7.60657 0.40385 7.58667 0.406677C7.51894 0.367838 7.44415 0.342906 7.36667 0.333344H4.66667C4.13623 0.333344 3.62753 0.544057 3.25245 0.91913C2.87738 1.2942 2.66667 1.80291 2.66667 2.33334V9.00001C2.66667 9.53044 2.87738 10.0392 3.25245 10.4142C3.62753 10.7893 4.13623 11 4.66667 11H10C10.5304 11 11.0391 10.7893 11.4142 10.4142C11.7893 10.0392 12 9.53044 12 9.00001V5.00001C12 5.00001 12 5.00001 12 4.96001ZM8 2.60668L9.72667 4.33334H8.66667C8.48986 4.33334 8.32029 4.26311 8.19526 4.13808C8.07024 4.01306 8 3.84349 8 3.66668V2.60668ZM10.6667 9.00001C10.6667 9.17682 10.5964 9.34639 10.4714 9.47141C10.3464 9.59644 10.1768 9.66668 10 9.66668H4.66667C4.48986 9.66668 4.32029 9.59644 4.19526 9.47141C4.07024 9.34639 4 9.17682 4 9.00001V2.33334C4 2.15653 4.07024 1.98696 4.19526 1.86194C4.32029 1.73691 4.48986 1.66668 4.66667 1.66668H6.66667V3.66668C6.66847 3.89411 6.70905 4.11956 6.78667 4.33334H5.33333C5.15652 4.33334 4.98695 4.40358 4.86193 4.52861C4.7369 4.65363 4.66667 4.8232 4.66667 5.00001C4.66667 5.17682 4.7369 5.34639 4.86193 5.47141C4.98695 5.59644 5.15652 5.66668 5.33333 5.66668H10.6667V9.00001Z" fill="currentColor"></path>
               </svg>
-            </div>
-            <span class="text-xs text-gray-300 font-semibold">Total customers</span>
-            <h4 class="text-2xl leading-8 text-gray-100 font-semibold mb-4">1.6K</h4>
-            <div class="flex flex-wrap items-center justify-center -m-1">
-              <div class="w-auto p-1">
-                <span class="inline-block py-1 px-2 text-xs text-green-500 font-medium bg-teal-900 rounded-full">1,0%</span>
-              </div>
-              <div class="w-auto p-1">
-                <span class="text-xs text-gray-300 font-medium">Since last month</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="w-full md:w-1/2 lg:w-1/4 px-3 mb-6">
-        <div class="max-w-sm mx-auto py-8 px-6 bg-gray-500 rounded-xl">
-          <div class="max-w-xs mx-auto text-center">
-            <div class="flex mx-auto w-12 h-12 mb-4 items-center justify-center bg-blue-500 bg-opacity-20 text-blue-500 rounded-xl">
-              <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M13 2H11.82C11.6137 1.41645 11.2319 0.910998 10.7271 0.552938C10.2222 0.194879 9.61894 0.00173951 9 0H7C6.38106 0.00173951 5.7778 0.194879 5.27293 0.552938C4.76807 0.910998 4.38631 1.41645 4.18 2H3C2.20435 2 1.44129 2.31607 0.87868 2.87868C0.316071 3.44129 0 4.20435 0 5V17C0 17.7956 0.316071 18.5587 0.87868 19.1213C1.44129 19.6839 2.20435 20 3 20H13C13.7956 20 14.5587 19.6839 15.1213 19.1213C15.6839 18.5587 16 17.7956 16 17V5C16 4.20435 15.6839 3.44129 15.1213 2.87868C14.5587 2.31607 13.7956 2 13 2ZM6 3C6 2.73478 6.10536 2.48043 6.29289 2.29289C6.48043 2.10536 6.73478 2 7 2H9C9.26522 2 9.51957 2.10536 9.70711 2.29289C9.89464 2.48043 10 2.73478 10 3V4H6V3ZM14 17C14 17.2652 13.8946 17.5196 13.7071 17.7071C13.5196 17.8946 13.2652 18 13 18H3C2.73478 18 2.48043 17.8946 2.29289 17.7071C2.10536 17.5196 2 17.2652 2 17V5C2 4.73478 2.10536 4.48043 2.29289 4.29289C2.48043 4.10536 2.73478 4 3 4H4V5C4 5.26522 4.10536 5.51957 4.29289 5.70711C4.48043 5.89464 4.73478 6 5 6H11C11.2652 6 11.5196 5.89464 11.7071 5.70711C11.8946 5.51957 12 5.26522 12 5V4H13C13.2652 4 13.5196 4.10536 13.7071 4.29289C13.8946 4.48043 14 4.73478 14 5V17Z" fill="#194BFB"></path>
-              </svg>
-            </div>
-            <span class="text-xs text-gray-300 font-semibold">Tasks Progress</span>
-            <h4 class="text-2xl leading-8 text-gray-100 font-semibold mb-4">64.5%</h4>
-            <div class="flex flex-wrap items-center justify-center -m-1">
-              <div class="w-auto p-1">
-                <span class="inline-block py-1 px-2 text-xs text-green-500 font-medium bg-teal-900 rounded-full">1,0%</span>
-              </div>
-              <div class="w-auto p-1">
-                <span class="text-xs text-gray-300 font-medium">Since last month</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="w-full md:w-1/2 lg:w-1/4 px-3 mb-6">
-        <div class="max-w-sm mx-auto py-8 px-6 bg-gray-500 rounded-xl">
-          <div class="max-w-xs mx-auto text-center">
-            <div class="flex mx-auto w-12 h-12 mb-4 items-center justify-center bg-blue-500 bg-opacity-20 text-blue-500 rounded-xl">
-              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M19 0H3C2.20435 0 1.44129 0.31607 0.87868 0.87868C0.31607 1.44129 0 2.20435 0 3V19C0 19.7956 0.31607 20.5587 0.87868 21.1213C1.44129 21.6839 2.20435 22 3 22H19C19.7956 22 20.5587 21.6839 21.1213 21.1213C21.6839 20.5587 22 19.7956 22 19V3C22 2.20435 21.6839 1.44129 21.1213 0.87868C20.5587 0.31607 19.7956 0 19 0ZM7 20H3C2.73478 20 2.48043 19.8946 2.29289 19.7071C2.10536 19.5196 2 19.2652 2 19V17.82C2.32067 17.9364 2.65886 17.9973 3 18H7V20ZM7 16H3C2.73478 16 2.48043 15.8946 2.29289 15.7071C2.10536 15.5196 2 15.2652 2 15V13.82C2.32067 13.9364 2.65886 13.9973 3 14H7V16ZM7 12H3C2.73478 12 2.48043 11.8946 2.29289 11.7071C2.10536 11.5196 2 11.2652 2 11V3C2 2.73478 2.10536 2.48043 2.29289 2.29289C2.48043 2.10536 2.73478 2 3 2H7V12ZM13 20H9V14H13V20ZM13 12H9V2H13V12ZM20 19C20 19.2652 19.8946 19.5196 19.7071 19.7071C19.5196 19.8946 19.2652 20 19 20H15V18H19C19.3411 17.9973 19.6793 17.9364 20 17.82V19ZM20 15C20 15.2652 19.8946 15.5196 19.7071 15.7071C19.5196 15.8946 19.2652 16 19 16H15V14H19C19.3411 13.9973 19.6793 13.9364 20 13.82V15ZM20 11C20 11.2652 19.8946 11.5196 19.7071 11.7071C19.5196 11.8946 19.2652 12 19 12H15V2H19C19.2652 2 19.5196 2.10536 19.7071 2.29289C19.8946 2.48043 20 2.73478 20 3V11ZM17 6C16.8022 6 16.6089 6.05865 16.4444 6.16853C16.28 6.27841 16.1518 6.43459 16.0761 6.61732C16.0004 6.80004 15.9806 7.00111 16.0192 7.19509C16.0578 7.38907 16.153 7.56725 16.2929 7.70711C16.4327 7.84696 16.6109 7.9422 16.8049 7.98079C16.9989 8.01937 17.2 7.99957 17.3827 7.92388C17.5654 7.84819 17.7216 7.72002 17.8315 7.55557C17.9414 7.39112 18 7.19778 18 7C18 6.73478 17.8946 6.48043 17.7071 6.29289C17.5196 6.10536 17.2652 6 17 6ZM5 8C5.19778 8 5.39112 7.94135 5.55557 7.83147C5.72002 7.72159 5.84819 7.56541 5.92388 7.38268C5.99957 7.19996 6.01937 6.99889 5.98079 6.80491C5.9422 6.61093 5.84696 6.43275 5.70711 6.29289C5.56725 6.15304 5.38907 6.0578 5.19509 6.01921C5.00111 5.98063 4.80004 6.00043 4.61732 6.07612C4.43459 6.15181 4.27841 6.27998 4.16853 6.44443C4.05865 6.60888 4 6.80222 4 7C4 7.26522 4.10536 7.51957 4.29289 7.70711C4.48043 7.89464 4.73478 8 5 8Z" fill="#194BFB"></path>
-              </svg>
-            </div>
-            <span class="text-xs text-gray-300 font-semibold">Total profit</span>
-            <h4 class="text-2xl leading-8 text-gray-100 font-semibold mb-4">$23K</h4>
-            <div class="flex flex-wrap items-center justify-center -m-1">
-              <div class="w-auto p-1">
-                <span class="inline-block py-1 px-2 text-xs text-green-500 font-medium bg-teal-900 rounded-full">1,0%</span>
-              </div>
-              <div class="w-auto p-1">
-                <span class="text-xs text-gray-300 font-medium">Since last month</span>
-              </div>
-            </div>
-          </div>
+            </span>
+            <span>Load more transactions</span>
+          </a>
         </div>
       </div>
     </div>

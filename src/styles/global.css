@@ -4,5 +4,26 @@
 
 
 @theme {
-  --font-player:  "Press Start 2P", system-ui;
+    --font-player: "Press Start 2P", system-ui;
+}
+
+
+.grade-a {
+    color: #01BC61;
+}
+
+.grade-b {
+    color: #E6EF18;
+}
+
+.grade-c {
+    color: #E69E18;
+}
+
+.grade-d {
+    color: #E66A78;
+}
+
+.grade-f {
+    color: #E60A18;
 }
