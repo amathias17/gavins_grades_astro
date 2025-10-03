@@ -1,0 +1,66 @@
+---
+const res = await fetch(
+    "https://script.google.com/macros/s/AKfycbxdL1jDNweYxDYD6PMDnUjcIuOki2-pd5JVn5TRQ3vCQTEHqjkplyz2gKi0XddfjlNy/exec",
+);
+const text = await res.text();
+// console.log('Response:', text);
+const { data } = JSON.parse(text);
+
+function getGradeColor(grade: number): string {
+    if (grade >= 90) return 'grade-a';
+    if (grade >= 80) return 'grade-b';
+    if (grade >= 70) return 'grade-c';
+    if (grade >= 60) return 'grade-d';
+    return 'grade-f';
+}
+---
+
+<section
+    class="border-1 border-dashed border-slate-800 mb-16"
+    data-pg-collapsed
+>
+    <div>
+        <h1
+            class="capitalize font-bold mb-6 pt-6 text-3xl text-center text-green-400 font-player"
+        >
+            Current Grades
+        </h1>
+    </div>
+    <div
+        class="container gap-6 grid grid-cols-1 mb-8 mx-auto pl-4 pr-4 md:grid-cols-2 lg:grid-cols-3"
+    >
+        {
+            data.map((i) => (
+                <div class="bg-gray-800 p-6 rounded-lg transition-colors hover:bg-gray-700">
+                    <div class="flex items-baseline justify-between mb-2">
+                        <h3 class="text-xl font-semibold">{i.class}</h3>
+                        <span class="text-sm text-gray-400">Period {i.period}</span>
+                    </div>
+                    <div class="flex items-baseline justify-between mb-2">
+                        <div class={`text-3xl font-bold ${getGradeColor(i.grade)}`}>{i.grade}%</div>
+                        <span class={`text-4xl font-bold leading-none ${getGradeColor(i.grade)}`}>{i.lettergrade}</span>
+                    </div>
+                    <div class="text-gray-400 text-sm">{i.teacher}</div>
+                </div>
+            ))
+        }
+    </div>
+</section>
+
+<style>
+    .grade-a {
+        color: #01BC61;
+    }
+    .grade-b {
+        color: #E6EF18;
+    }
+    .grade-c {
+        color: #E69E18;
+    }
+    .grade-d {
+        color: #E66A78;
+    }
+    .grade-f {
+        color: #E60A18;
+    }
+</style>
