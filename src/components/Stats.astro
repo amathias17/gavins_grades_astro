@@ -1,3 +1,20 @@
+---
+const res = await fetch(
+    "https://script.google.com/macros/s/AKfycbxdL1jDNweYxDYD6PMDnUjcIuOki2-pd5JVn5TRQ3vCQTEHqjkplyz2gKi0XddfjlNy/exec",
+);
+const text = await res.text();
+// console.log('Response:', text);
+const { data } = JSON.parse(text);
+
+function getGradeColor(grade: number): string {
+    if (grade >= 90) return 'grade-a';
+    if (grade >= 80) return 'grade-b';
+    if (grade >= 70) return 'grade-c';
+    if (grade >= 60) return 'grade-d';
+    return 'grade-f';
+}
+---
+
 <section class="py-3">
   <div class="container px-4 mx-auto">
     <div class="flex flex-wrap -mx-3 -mb-6">
