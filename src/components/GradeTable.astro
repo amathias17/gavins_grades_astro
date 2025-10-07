@@ -1,0 +1,105 @@
+---
+import gradesData from '../data/grades.json';
+
+// Get all unique dates from grade history
+const allDates = Object.values(gradesData.grade_history)
+    .flatMap(classHistory => Object.keys(classHistory as Record<string, number>))
+    .filter((date, index, self) => self.indexOf(date) === index)
+    .sort((a, b) => new Date(a).getTime() - new Date(b).getTime());
+
+// Get all class names
+const classNames = Object.keys(gradesData.grade_history);
+
+function getGradeColor(grade: number): string {
+    if (grade >= 90) return 'grade-a';
+    if (grade >= 80) return 'grade-b';
+    if (grade >= 70) return 'grade-c';
+    if (grade >= 60) return 'grade-d';
+    return 'grade-f';
+}
+---
+
+<section class="border-1 border-dashed border-slate-800 mb-16">
+    <div>
+        <h1 class="capitalize font-bold mb-6 pt-6 text-xl md:text-3xl text-center text-green-400 font-player px-2">
+            Grade History
+        </h1>
+    </div>
+    <div class="container mx-auto px-2 md:px-4 mb-8">
+        <div class="overflow-x-auto shadow-lg rounded-lg border border-gray-700">
+            <table class="w-full border-collapse text-sm">
+                <thead>
+                    <tr class="bg-gray-800">
+                        <th class="border border-gray-700 p-2 md:p-3 text-left sticky left-0 bg-gray-800 z-10 text-xs md:text-sm min-w-[100px] md:min-w-[150px]">Class</th>
+                        {allDates.map(date => (
+                            <th class="border border-gray-700 p-2 md:p-3 text-center whitespace-nowrap text-xs md:text-sm min-w-[70px] md:min-w-[90px]">{date}</th>
+                        ))}
+                    </tr>
+                </thead>
+                <tbody>
+                    {classNames.map((className, index) => (
+                        <tr class={index % 2 === 0 ? 'bg-gray-900' : 'bg-gray-850'}>
+                            <td class="border border-gray-700 p-2 md:p-3 font-semibold sticky left-0 z-10 text-xs md:text-sm"
+                                class:list={[index % 2 === 0 ? 'bg-gray-900' : 'bg-gray-850']}>
+                                {className}
+                            </td>
+                            {allDates.map(date => {
+                                const grade = gradesData.grade_history[className as keyof typeof gradesData.grade_history]?.[date];
+                                return (
+                                    <td class="border border-gray-700 p-2 md:p-3 text-center">
+                                        {grade !== undefined ? (
+                                            <span class={`font-bold text-xs md:text-sm ${getGradeColor(grade)}`}>
+                                                {grade}%
+                                            </span>
+                                        ) : (
+                                            <span class="text-gray-600">-</span>
+                                        )}
+                                    </td>
+                                );
+                            })}
+                        </tr>
+                    ))}
+                    <tr class="bg-gray-700 font-bold">
+                        <td class="border border-gray-600 p-2 md:p-3 sticky left-0 bg-gray-700 z-10 text-xs md:text-sm">
+                            Overall Average
+                        </td>
+                        {allDates.map(date => {
+                            const average = gradesData.average_history[date as keyof typeof gradesData.average_history];
+                            return (
+                                <td class="border border-gray-600 p-2 md:p-3 text-center">
+                                    {average !== undefined ? (
+                                        <span class={`font-bold text-xs md:text-sm ${getGradeColor(average)}`}>
+                                            {average}%
+                                        </span>
+                                    ) : (
+                                        <span class="text-gray-600">-</span>
+                                    )}
+                                </td>
+                            );
+                        })}
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<style>
+    table {
+        min-width: 100%;
+    }
+
+    /* Improve mobile scrolling */
+    .overflow-x-auto {
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Better sticky positioning on mobile */
+    @supports (position: sticky) {
+        thead th:first-child,
+        tbody td:first-child {
+            position: sticky;
+            left: 0;
+        }
+    }
+</style>
