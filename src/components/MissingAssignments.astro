@@ -4,23 +4,25 @@ import missingAssignmentsData from '../data/missing_assignments.json';
 const assignments = missingAssignmentsData.assignments;
 ---
 
-<section class="mb-16" data-pg-collapsed>
-    <h1 class="capitalize font-bold mb-6 text-3xl text-center text-red-700 font-player">
+<section class="mb-16" aria-labelledby="missing-assignments-heading">
+    <h1 id="missing-assignments-heading" class="capitalize font-bold mb-6 text-xl md:text-3xl text-center text-red-700 font-player px-2">
         Missing Assignments
     </h1>
     <div
-        class="container gap-6 grid grid-cols-1 mb-8 mx-auto pl-4 pr-4 md:grid-cols-2 lg:grid-cols-3"
+        class="container gap-6 grid grid-cols-1 mb-8 mx-auto px-2 md:px-4 md:grid-cols-2 lg:grid-cols-3"
+        role="list"
+        aria-label="List of missing assignments"
     >
         {
             assignments.map((item) => (
-                <div class="bg-gray-800 p-6 rounded-lg transition-colors hover:bg-gray-700">
+                <article class="bg-gray-800 p-4 md:p-6 rounded-lg transition-colors hover:bg-gray-700" role="listitem" aria-label={`Missing assignment: ${item.assignment} for ${item.class}, due ${item.due_date}, worth ${item.points} points`}>
                     <div class="flex items-center justify-between mb-2">
-                        <h3 class="text-xl font-semibold">{item.assignment}</h3>
-                        <span class="text-sm text-gray-400">{item.due_date}</span>
+                        <h2 class="text-lg md:text-xl font-semibold">{item.assignment}</h2>
+                        <time class="text-xs md:text-sm text-gray-400" datetime={item.due_date} aria-label={`Due date: ${item.due_date}`}>{item.due_date}</time>
                     </div>
-                    <div class="text-3xl font-bold mb-2">{item.points} pts</div>
-                    <div class="mb-2 text-gray-400 text-sm">{item.class}</div>
-                </div>
+                    <div class="text-2xl md:text-3xl font-bold mb-2" aria-label={`Worth ${item.points} points`}>{item.points} pts</div>
+                    <div class="mb-2 text-gray-400 text-xs md:text-sm" aria-label={`Class: ${item.class}`}>{item.class}</div>
+                </article>
             ))
         }
     </div>

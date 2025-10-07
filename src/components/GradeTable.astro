@@ -19,40 +19,40 @@ function getGradeColor(grade: number): string {
 }
 ---
 
-<section class="border-1 border-dashed border-slate-800 mb-16">
+<section class="border-1 border-dashed border-slate-800 mb-16" aria-labelledby="grade-history-heading">
     <div>
-        <h1 class="capitalize font-bold mb-6 pt-6 text-xl md:text-3xl text-center text-green-400 font-player px-2">
+        <h1 id="grade-history-heading" class="capitalize font-bold mb-6 pt-6 text-xl md:text-3xl text-center text-green-400 font-player px-2">
             Grade History
         </h1>
     </div>
     <div class="container mx-auto px-2 md:px-4 mb-8">
-        <div class="overflow-x-auto shadow-lg rounded-lg border border-gray-700">
-            <table class="w-full border-collapse text-sm">
+        <div class="overflow-x-auto shadow-lg rounded-lg border border-gray-700" role="region" aria-label="Scrollable grade history table" tabindex="0">
+            <table class="w-full border-collapse text-sm" role="table" aria-label="Grade history showing all classes and dates">
                 <thead>
                     <tr class="bg-gray-800">
-                        <th class="border border-gray-700 p-2 md:p-3 text-left sticky left-0 bg-gray-800 z-10 text-xs md:text-sm min-w-[100px] md:min-w-[150px]">Class</th>
+                        <th scope="col" class="border border-gray-700 p-2 md:p-3 text-left sticky left-0 bg-gray-800 z-10 text-xs md:text-sm min-w-[100px] md:min-w-[150px]">Class</th>
                         {allDates.map(date => (
-                            <th class="border border-gray-700 p-2 md:p-3 text-center whitespace-nowrap text-xs md:text-sm min-w-[70px] md:min-w-[90px]">{date}</th>
+                            <th scope="col" class="border border-gray-700 p-2 md:p-3 text-center whitespace-nowrap text-xs md:text-sm min-w-[70px] md:min-w-[90px]">{date}</th>
                         ))}
                     </tr>
                 </thead>
                 <tbody>
                     {classNames.map((className, index) => (
                         <tr class={index % 2 === 0 ? 'bg-gray-900' : 'bg-gray-850'}>
-                            <td class="border border-gray-700 p-2 md:p-3 font-semibold sticky left-0 z-10 text-xs md:text-sm"
+                            <th scope="row" class="border border-gray-700 p-2 md:p-3 font-semibold sticky left-0 z-10 text-xs md:text-sm text-left"
                                 class:list={[index % 2 === 0 ? 'bg-gray-900' : 'bg-gray-850']}>
                                 {className}
-                            </td>
+                            </th>
                             {allDates.map(date => {
                                 const grade = gradesData.grade_history[className as keyof typeof gradesData.grade_history]?.[date];
                                 return (
-                                    <td class="border border-gray-700 p-2 md:p-3 text-center">
+                                    <td class="border border-gray-700 p-2 md:p-3 text-center" aria-label={grade !== undefined ? `${className} grade on ${date}: ${grade} percent` : `${className} grade on ${date}: no data`}>
                                         {grade !== undefined ? (
-                                            <span class={`font-bold text-xs md:text-sm ${getGradeColor(grade)}`}>
+                                            <span class={`font-bold text-xs md:text-sm ${getGradeColor(grade)}`} aria-hidden="true">
                                                 {grade}%
                                             </span>
                                         ) : (
-                                            <span class="text-gray-600">-</span>
+                                            <span class="text-gray-600" aria-label="No grade data">-</span>
                                         )}
                                     </td>
                                 );
@@ -60,19 +60,19 @@ function getGradeColor(grade: number): string {
                         </tr>
                     ))}
                     <tr class="bg-gray-700 font-bold">
-                        <td class="border border-gray-600 p-2 md:p-3 sticky left-0 bg-gray-700 z-10 text-xs md:text-sm">
+                        <th scope="row" class="border border-gray-600 p-2 md:p-3 sticky left-0 bg-gray-700 z-10 text-xs md:text-sm text-left">
                             Overall Average
-                        </td>
+                        </th>
                         {allDates.map(date => {
                             const average = gradesData.average_history[date as keyof typeof gradesData.average_history];
                             return (
-                                <td class="border border-gray-600 p-2 md:p-3 text-center">
+                                <td class="border border-gray-600 p-2 md:p-3 text-center" aria-label={average !== undefined ? `Overall average on ${date}: ${average} percent` : `Overall average on ${date}: no data`}>
                                     {average !== undefined ? (
-                                        <span class={`font-bold text-xs md:text-sm ${getGradeColor(average)}`}>
+                                        <span class={`font-bold text-xs md:text-sm ${getGradeColor(average)}`} aria-hidden="true">
                                             {average}%
                                         </span>
                                     ) : (
-                                        <span class="text-gray-600">-</span>
+                                        <span class="text-gray-600" aria-label="No average data">-</span>
                                     )}
                                 </td>
                             );

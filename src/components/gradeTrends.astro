@@ -33,14 +33,16 @@ const datasets = classes.map((className, index) => ({
 }));
 ---
 
-<section class="mb-16">
-    <h1 class="capitalize font-bold mb-6 text-3xl text-center text-blue-400 font-player">
+<section class="mb-16" aria-labelledby="grade-trends-heading">
+    <h1 id="grade-trends-heading" class="capitalize font-bold mb-6 text-xl md:text-3xl text-center text-blue-400 font-player px-2">
         Grade Trends
     </h1>
-    <div class="container mx-auto px-4">
-        <div class="bg-gray-800 p-6 rounded-lg">
+    <div class="container mx-auto px-2 md:px-4">
+        <div class="bg-gray-800 p-4 md:p-6 rounded-lg">
             <canvas
                 id="gradeChart"
+                role="img"
+                aria-label="Line chart showing grade trends over time for all classes"
                 data-dates={JSON.stringify(dates)}
                 data-datasets={JSON.stringify(datasets)}
             ></canvas>
