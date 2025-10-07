@@ -1,0 +1,162 @@
+{
+  "metadata": {
+    "last_updated": "10/07/2025 07:57 AM",
+    "total_missing": 9
+  },
+  "assignments": [
+    {
+      "due_date": "10/02/2025",
+      "assignment": "Midpoint and Distance WS #1",
+      "class": "Intermediate Geometry",
+      "teacher": "Caleb Marasco",
+      "category": "Class Work",
+      "points": "12"
+    },
+    {
+      "due_date": "10/01/2025",
+      "assignment": "Angles Addition",
+      "class": "Intermediate Geometry",
+      "teacher": "Caleb Marasco",
+      "category": "Class Work",
+      "points": "16"
+    },
+    {
+      "due_date": "09/23/2025",
+      "assignment": "Ch 2 Packet",
+      "class": "Health",
+      "teacher": "Amy Palfey",
+      "category": "Class Work",
+      "points": "15"
+    },
+    {
+      "due_date": "09/19/2025",
+      "assignment": "Turn of the Century Ad",
+      "class": "American Studies",
+      "teacher": "Brock Seese",
+      "category": "Project",
+      "points": "20"
+    },
+    {
+      "due_date": "09/17/2025",
+      "assignment": "The Jungle Reading",
+      "class": "American Studies",
+      "teacher": "Brock Seese",
+      "category": "Reading",
+      "points": "25"
+    },
+    {
+      "due_date": "09/17/2025",
+      "assignment": "Name Acrostic",
+      "class": "Health",
+      "teacher": "Amy Palfey",
+      "category": "Project",
+      "points": "15"
+    },
+    {
+      "due_date": "09/12/2025",
+      "assignment": "2 Point Perspective Cubes",
+      "class": "Art 1",
+      "teacher": "Kathryn Curry",
+      "category": "Class Work",
+      "points": "25"
+    },
+    {
+      "due_date": "09/09/2025",
+      "assignment": "Chapter 1 Packet",
+      "class": "Health",
+      "teacher": "Amy Palfey",
+      "category": "Class Work",
+      "points": "20"
+    },
+    {
+      "due_date": "09/05/2025",
+      "assignment": "Ch 1 Sec 3",
+      "class": "Health",
+      "teacher": "Amy Palfey",
+      "category": "Quiz",
+      "points": "10"
+    }
+  ],
+  "by_class": {
+    "Intermediate Geometry": [
+      {
+        "due_date": "10/02/2025",
+        "assignment": "Midpoint and Distance WS #1",
+        "class": "Intermediate Geometry",
+        "teacher": "Caleb Marasco",
+        "category": "Class Work",
+        "points": "12"
+      },
+      {
+        "due_date": "10/01/2025",
+        "assignment": "Angles Addition",
+        "class": "Intermediate Geometry",
+        "teacher": "Caleb Marasco",
+        "category": "Class Work",
+        "points": "16"
+      }
+    ],
+    "Health": [
+      {
+        "due_date": "09/23/2025",
+        "assignment": "Ch 2 Packet",
+        "class": "Health",
+        "teacher": "Amy Palfey",
+        "category": "Class Work",
+        "points": "15"
+      },
+      {
+        "due_date": "09/17/2025",
+        "assignment": "Name Acrostic",
+        "class": "Health",
+        "teacher": "Amy Palfey",
+        "category": "Project",
+        "points": "15"
+      },
+      {
+        "due_date": "09/09/2025",
+        "assignment": "Chapter 1 Packet",
+        "class": "Health",
+        "teacher": "Amy Palfey",
+        "category": "Class Work",
+        "points": "20"
+      },
+      {
+        "due_date": "09/05/2025",
+        "assignment": "Ch 1 Sec 3",
+        "class": "Health",
+        "teacher": "Amy Palfey",
+        "category": "Quiz",
+        "points": "10"
+      }
+    ],
+    "American Studies": [
+      {
+        "due_date": "09/19/2025",
+        "assignment": "Turn of the Century Ad",
+        "class": "American Studies",
+        "teacher": "Brock Seese",
+        "category": "Project",
+        "points": "20"
+      },
+      {
+        "due_date": "09/17/2025",
+        "assignment": "The Jungle Reading",
+        "class": "American Studies",
+        "teacher": "Brock Seese",
+        "category": "Reading",
+        "points": "25"
+      }
+    ],
+    "Art 1": [
+      {
+        "due_date": "09/12/2025",
+        "assignment": "2 Point Perspective Cubes",
+        "class": "Art 1",
+        "teacher": "Kathryn Curry",
+        "category": "Class Work",
+        "points": "25"
+      }
+    ]
+  }
+}

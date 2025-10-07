@@ -1,10 +1,13 @@
 ---
-const res = await fetch(
-    "https://script.google.com/macros/s/AKfycbxdL1jDNweYxDYD6PMDnUjcIuOki2-pd5JVn5TRQ3vCQTEHqjkplyz2gKi0XddfjlNy/exec",
-);
-const text = await res.text();
-// console.log('Response:', text);
-const { data } = JSON.parse(text);
+import gradesData from '../data/grades.json';
+
+const data = gradesData.classes.map((classInfo) => ({
+    class: classInfo.class_name,
+    teacher: classInfo.teacher,
+    period: classInfo.period,
+    grade: classInfo.current_grade,
+    lettergrade: classInfo.letter_grade,
+}));
 
 function getGradeColor(grade: number): string {
     if (grade >= 90) return 'grade-a';
