@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "10/07/2025 07:57 AM",
+    "last_updated": "10/07/2025 01:52 PM",
     "most_recent_date": "10/7/2025",
     "total_classes": 9
   },
@@ -16,14 +16,14 @@
       "class_name": "English 10",
       "teacher": "Megan Leone",
       "period": 1,
-      "current_grade": 86,
-      "letter_grade": "B"
+      "current_grade": 62,
+      "letter_grade": "D"
     },
     {
       "class_name": "Biology 2",
       "teacher": "Denise Condo",
       "period": 2,
-      "current_grade": 73,
+      "current_grade": 77,
       "letter_grade": "C"
     },
     {
@@ -51,7 +51,7 @@
       "class_name": "American Studies",
       "teacher": "Brock Seese",
       "period": 6,
-      "current_grade": 78,
+      "current_grade": 77,
       "letter_grade": "C"
     },
     {
@@ -98,7 +98,7 @@
       "10/2/2025": 84,
       "10/3/2025": 86,
       "10/6/2025": 86,
-      "10/7/2025": 86
+      "10/7/2025": 62
     },
     "Biology 2": {
       "9/23/2025": 70,
@@ -113,7 +113,7 @@
       "10/2/2025": 70,
       "10/3/2025": 70,
       "10/6/2025": 70,
-      "10/7/2025": 73
+      "10/7/2025": 77
     },
     "History Pop Culture 1": {
       "9/23/2025": 64,
@@ -173,7 +173,7 @@
       "10/2/2025": 77,
       "10/3/2025": 77,
       "10/6/2025": 78,
-      "10/7/2025": 78
+      "10/7/2025": 77
     },
     "Intermediate Geometry": {
       "9/23/2025": 74,
@@ -206,7 +206,7 @@
       "10/7/2025": 76
     }
   },
-  "overall_average": 70,
+  "overall_average": 67,
   "average_history": {
     "9/23/2025": 71,
     "9/24/2025": 71,
@@ -220,6 +220,6 @@
     "10/2/2025": 70,
     "10/3/2025": 70,
     "10/6/2025": 69,
-    "10/7/2025": 70
+    "10/7/2025": 67
   }
 }

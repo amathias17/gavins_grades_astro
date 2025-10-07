@@ -1,9 +1,17 @@
 {
   "metadata": {
-    "last_updated": "10/07/2025 07:57 AM",
-    "total_missing": 9
+    "last_updated": "10/07/2025 01:52 PM",
+    "total_missing": 11
   },
   "assignments": [
+    {
+      "due_date": "10/03/2025",
+      "assignment": "Fall Sketchbook",
+      "class": "Art 1",
+      "teacher": "Kathryn Curry",
+      "category": "Homework",
+      "points": "10"
+    },
     {
       "due_date": "10/02/2025",
       "assignment": "Midpoint and Distance WS #1",
@@ -19,6 +27,14 @@
       "teacher": "Caleb Marasco",
       "category": "Class Work",
       "points": "16"
+    },
+    {
+      "due_date": "09/30/2025",
+      "assignment": "Mustache One-Pager",
+      "class": "English 10",
+      "teacher": "10 Megan Leone",
+      "category": "Project",
+      "points": "75"
     },
     {
       "due_date": "09/23/2025",
@@ -78,6 +94,24 @@
     }
   ],
   "by_class": {
+    "Art 1": [
+      {
+        "due_date": "10/03/2025",
+        "assignment": "Fall Sketchbook",
+        "class": "Art 1",
+        "teacher": "Kathryn Curry",
+        "category": "Homework",
+        "points": "10"
+      },
+      {
+        "due_date": "09/12/2025",
+        "assignment": "2 Point Perspective Cubes",
+        "class": "Art 1",
+        "teacher": "Kathryn Curry",
+        "category": "Class Work",
+        "points": "25"
+      }
+    ],
     "Intermediate Geometry": [
       {
         "due_date": "10/02/2025",
@@ -94,6 +128,16 @@
         "teacher": "Caleb Marasco",
         "category": "Class Work",
         "points": "16"
+      }
+    ],
+    "English 10": [
+      {
+        "due_date": "09/30/2025",
+        "assignment": "Mustache One-Pager",
+        "class": "English 10",
+        "teacher": "10 Megan Leone",
+        "category": "Project",
+        "points": "75"
       }
     ],
     "Health": [
@@ -145,16 +189,6 @@
         "class": "American Studies",
         "teacher": "Brock Seese",
         "category": "Reading",
-        "points": "25"
-      }
-    ],
-    "Art 1": [
-      {
-        "due_date": "09/12/2025",
-        "assignment": "2 Point Perspective Cubes",
-        "class": "Art 1",
-        "teacher": "Kathryn Curry",
-        "category": "Class Work",
         "points": "25"
       }
     ]
