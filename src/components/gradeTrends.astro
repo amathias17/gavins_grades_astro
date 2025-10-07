@@ -1,0 +1,119 @@
+---
+import gradesData from '../data/grades.json';
+
+// Extract grade history data
+const gradeHistory = gradesData.grade_history;
+const classes = Object.keys(gradeHistory);
+
+// Get all dates (from the first class)
+const dates = Object.keys(gradeHistory[classes[0]]).sort((a, b) =>
+    new Date(a).getTime() - new Date(b).getTime()
+);
+
+// Generate colors for each class
+const colors = [
+    '#ef4444', // red
+    '#3b82f6', // blue
+    '#10b981', // green
+    '#f59e0b', // amber
+    '#8b5cf6', // purple
+    '#ec4899', // pink
+    '#14b8a6', // teal
+    '#f97316', // orange
+    '#6366f1', // indigo
+];
+
+// Prepare datasets for Chart.js
+const datasets = classes.map((className, index) => ({
+    label: className,
+    data: dates.map(date => gradeHistory[className][date]),
+    borderColor: colors[index % colors.length],
+    backgroundColor: colors[index % colors.length] + '20',
+    tension: 0.4,
+}));
+---
+
+<section class="mb-16">
+    <h1 class="capitalize font-bold mb-6 text-3xl text-center text-blue-400 font-player">
+        Grade Trends
+    </h1>
+    <div class="container mx-auto px-4">
+        <div class="bg-gray-800 p-6 rounded-lg">
+            <canvas
+                id="gradeChart"
+                data-dates={JSON.stringify(dates)}
+                data-datasets={JSON.stringify(datasets)}
+            ></canvas>
+        </div>
+    </div>
+</section>
+
+<script>
+    import Chart from 'chart.js/auto';
+
+    const dates = JSON.parse(document.getElementById('gradeChart').dataset.dates);
+    const datasets = JSON.parse(document.getElementById('gradeChart').dataset.datasets);
+
+    const ctx = document.getElementById('gradeChart');
+
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: dates,
+            datasets: datasets,
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'top',
+                    labels: {
+                        color: '#e5e7eb',
+                        padding: 15,
+                        font: {
+                            size: 12,
+                        },
+                    },
+                },
+                tooltip: {
+                    mode: 'index',
+                    intersect: false,
+                },
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 100,
+                    title: {
+                        display: true,
+                        text: 'Grade (%)',
+                        color: '#e5e7eb',
+                    },
+                    ticks: {
+                        color: '#e5e7eb',
+                    },
+                    grid: {
+                        color: '#374151',
+                    },
+                },
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Date',
+                        color: '#e5e7eb',
+                    },
+                    ticks: {
+                        color: '#e5e7eb',
+                        maxRotation: 45,
+                        minRotation: 45,
+                    },
+                    grid: {
+                        color: '#374151',
+                    },
+                },
+            },
+        },
+    });
+</script>
