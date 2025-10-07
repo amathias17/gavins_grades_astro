@@ -38,7 +38,7 @@ const datasets = classes.map((className, index) => ({
         Grade Trends
     </h1>
     <div class="container mx-auto px-2 md:px-4">
-        <div class="bg-gray-800 p-4 md:p-6 rounded-lg">
+        <div class="bg-gray-800 p-2 md:p-6 rounded-lg">
             <canvas
                 id="gradeChart"
                 role="img"
@@ -58,6 +58,8 @@ const datasets = classes.map((className, index) => ({
 
     const ctx = document.getElementById('gradeChart');
 
+    const isMobile = window.innerWidth < 768;
+
     new Chart(ctx, {
         type: 'line',
         data: {
@@ -67,21 +69,30 @@ const datasets = classes.map((className, index) => ({
         options: {
             responsive: true,
             maintainAspectRatio: true,
+            aspectRatio: isMobile ? 1.2 : 2.5,
             plugins: {
                 legend: {
                     display: true,
                     position: 'top',
                     labels: {
                         color: '#e5e7eb',
-                        padding: 15,
+                        padding: isMobile ? 8 : 15,
                         font: {
-                            size: 12,
+                            size: isMobile ? 10 : 12,
                         },
+                        boxWidth: isMobile ? 15 : 40,
+                        boxHeight: isMobile ? 15 : 12,
                     },
                 },
                 tooltip: {
                     mode: 'index',
                     intersect: false,
+                    titleFont: {
+                        size: isMobile ? 11 : 13,
+                    },
+                    bodyFont: {
+                        size: isMobile ? 10 : 12,
+                    },
                 },
             },
             scales: {
@@ -89,12 +100,18 @@ const datasets = classes.map((className, index) => ({
                     beginAtZero: true,
                     max: 100,
                     title: {
-                        display: true,
+                        display: !isMobile,
                         text: 'Grade (%)',
                         color: '#e5e7eb',
+                        font: {
+                            size: isMobile ? 10 : 12,
+                        },
                     },
                     ticks: {
                         color: '#e5e7eb',
+                        font: {
+                            size: isMobile ? 9 : 11,
+                        },
                     },
                     grid: {
                         color: '#374151',
@@ -102,14 +119,20 @@ const datasets = classes.map((className, index) => ({
                 },
                 x: {
                     title: {
-                        display: true,
+                        display: !isMobile,
                         text: 'Date',
                         color: '#e5e7eb',
+                        font: {
+                            size: isMobile ? 10 : 12,
+                        },
                     },
                     ticks: {
                         color: '#e5e7eb',
-                        maxRotation: 45,
-                        minRotation: 45,
+                        maxRotation: isMobile ? 90 : 45,
+                        minRotation: isMobile ? 90 : 45,
+                        font: {
+                            size: isMobile ? 8 : 11,
+                        },
                     },
                     grid: {
                         color: '#374151',
