@@ -10,6 +10,9 @@ const allDates = Object.values(gradesData.grade_history)
 // Get last 3 dates for mobile view
 const last3Dates = allDates.slice(-3);
 
+// Get last 7 dates for desktop view
+const last7Dates = allDates.slice(-7);
+
 // Get all class names
 const classNames = Object.keys(gradesData.grade_history);
 
@@ -36,7 +39,10 @@ function getGradeColor(grade: number): string {
                         <th scope="col" class="border border-gray-700 p-2 md:p-3 text-left sticky left-0 bg-gray-800 z-10 text-xs md:text-sm min-w-[100px] md:min-w-[150px]">Class</th>
                         {allDates.map(date => (
                             <th scope="col" class="border border-gray-700 p-2 md:p-3 text-center whitespace-nowrap text-xs md:text-sm min-w-[70px] md:min-w-[90px]"
-                                class:list={[!last3Dates.includes(date) && 'hidden md:table-cell']}>{date}</th>
+                                class:list={[
+                                    !last3Dates.includes(date) && 'hidden',
+                                    last7Dates.includes(date) && 'md:table-cell'
+                                ]}>{date}</th>
                         ))}
                     </tr>
                 </thead>
@@ -51,7 +57,10 @@ function getGradeColor(grade: number): string {
                                 const grade = gradesData.grade_history[className as keyof typeof gradesData.grade_history]?.[date];
                                 return (
                                     <td class="border border-gray-700 p-2 md:p-3 text-center"
-                                        class:list={[!last3Dates.includes(date) && 'hidden md:table-cell']}
+                                        class:list={[
+                                            !last3Dates.includes(date) && 'hidden',
+                                            last7Dates.includes(date) && 'md:table-cell'
+                                        ]}
                                         aria-label={grade !== undefined ? `${className} grade on ${date}: ${grade} percent` : `${className} grade on ${date}: no data`}>
                                         {grade !== undefined ? (
                                             <span class={`font-bold text-xs md:text-sm ${getGradeColor(grade)}`} aria-hidden="true">
@@ -73,7 +82,10 @@ function getGradeColor(grade: number): string {
                             const average = gradesData.average_history[date as keyof typeof gradesData.average_history];
                             return (
                                 <td class="border border-gray-600 p-2 md:p-3 text-center"
-                                    class:list={[!last3Dates.includes(date) && 'hidden md:table-cell']}
+                                    class:list={[
+                                        !last3Dates.includes(date) && 'hidden',
+                                        last7Dates.includes(date) && 'md:table-cell'
+                                    ]}
                                     aria-label={average !== undefined ? `Overall average on ${date}: ${average} percent` : `Overall average on ${date}: no data`}>
                                     {average !== undefined ? (
                                         <span class={`font-bold text-xs md:text-sm ${getGradeColor(average)}`} aria-hidden="true">
