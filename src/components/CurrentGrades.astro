@@ -82,11 +82,18 @@ function getGradeColor(grade: number): string {
                             <span class="text-[0.6em] text-white uppercase">
                                 {i.class}
                             </span>
-                            <span
-                                class={`grade-badge ${getGradeColor(i.grade)}`}
-                            >
-                                {i.lettergrade}
-                            </span>
+                            <div class="flex gap-2.5 items-center">
+                                <span
+                                    class={`grade-badge ${getGradeColor(i.grade)}`}
+                                >
+                                    {i.lettergrade}
+                                </span>
+                                <span
+                                    class={`grade-badge ${getGradeColor(i.grade)}`}
+                                >
+                                    {i.grade}%
+                                </span>
+                            </div>
                         </>
                     </div>
                     <div class="w-full h-6 relative overflow-hidden border-[3px] border-solid border-white bg-[#000]">

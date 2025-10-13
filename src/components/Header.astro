@@ -1,3 +1,9 @@
+---
+import gradesData from "../data/grades.json";
+
+const overallAverage = gradesData.overall_average;
+---
+
 <!-- <div class="fixed h-full left-0 scanlines top-0 w-full z-1000"></div>
 <header class="bg-gray-900 text-white font-player" role="banner">
     <nav class="flex items-center flex-wrap px-4 py-5 container mx-auto" role="navigation" aria-label="Main navigation">
@@ -84,7 +90,7 @@
                         </div>
                         <div class="border-[3px] border-solid border-white min-w-[100px] px-[15px] py-3 text-center">
                             <div class="text-[0.4em] text-[#aaa] mb-2">AVG</div>
-                            <div class="text-[0.8em] text-[#00ffff]">69%</div>
+                            <div class="text-[0.8em] text-[#00ffff]">{overallAverage}%</div>
                         </div>
                         <div class="border-[3px] border-solid border-white min-w-[100px] px-[15px] py-3 text-center">
                             <div class="text-[0.4em] text-[#aaa] mb-2">STREAK</div>
