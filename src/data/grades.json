@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "10/13/2025 08:07 AM",
+    "last_updated": "10/13/2025 12:46 PM",
     "most_recent_date": "10/13/2025",
     "total_classes": 9
   },
@@ -16,7 +16,7 @@
       "class_name": "English 10",
       "teacher": "Megan Leone",
       "period": 1,
-      "current_grade": 66,
+      "current_grade": 67,
       "letter_grade": "D"
     },
     {
@@ -37,8 +37,8 @@
       "class_name": "Art 1",
       "teacher": "Kathryn Curry",
       "period": 4,
-      "current_grade": 69,
-      "letter_grade": "D"
+      "current_grade": 58,
+      "letter_grade": "F"
     },
     {
       "class_name": "Physical Educuation",
@@ -106,7 +106,7 @@
       "10/8/2025": 65,
       "10/9/2025": 66,
       "10/10/2025": 66,
-      "10/13/2025": 66
+      "10/13/2025": 67
     },
     "Biology 2": {
       "9/23/2025": 70,
@@ -163,7 +163,7 @@
       "10/8/2025": 69,
       "10/9/2025": 69,
       "10/10/2025": 69,
-      "10/13/2025": 69
+      "10/13/2025": 58
     },
     "Physical Educuation": {
       "9/23/2025": 60,
@@ -242,7 +242,7 @@
       "10/13/2025": 77
     }
   },
-  "overall_average": 69,
+  "overall_average": 68,
   "average_history": {
     "9/23/2025": 71,
     "9/24/2025": 71,
@@ -260,6 +260,6 @@
     "10/8/2025": 69,
     "10/9/2025": 69,
     "10/10/2025": 69,
-    "10/13/2025": 69
+    "10/13/2025": 68
   }
 }
