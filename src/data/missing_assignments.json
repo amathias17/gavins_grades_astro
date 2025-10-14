@@ -1,9 +1,17 @@
 {
   "metadata": {
-    "last_updated": "10/13/2025 12:46 PM",
-    "total_missing": 10
+    "last_updated": "10/14/2025 12:43 PM",
+    "total_missing": 11
   },
   "assignments": [
+    {
+      "due_date": "10/07/2025",
+      "assignment": "Ch 3 Packet",
+      "class": "Health",
+      "teacher": "Amy Palfey",
+      "category": "Class Work",
+      "points": "20"
+    },
     {
       "due_date": "10/02/2025",
       "assignment": "Midpoint and Distance WS #1",
@@ -86,35 +94,15 @@
     }
   ],
   "by_class": {
-    "Intermediate Geometry": [
-      {
-        "due_date": "10/02/2025",
-        "assignment": "Midpoint and Distance WS #1",
-        "class": "Intermediate Geometry",
-        "teacher": "Caleb Marasco",
-        "category": "Class Work",
-        "points": "12"
-      },
-      {
-        "due_date": "10/01/2025",
-        "assignment": "Angles Addition",
-        "class": "Intermediate Geometry",
-        "teacher": "Caleb Marasco",
-        "category": "Class Work",
-        "points": "16"
-      }
-    ],
-    "English 10": [
-      {
-        "due_date": "09/30/2025",
-        "assignment": "Mustache One-Pager",
-        "class": "English 10",
-        "teacher": "10 Megan Leone",
-        "category": "Project",
-        "points": "75"
-      }
-    ],
     "Health": [
+      {
+        "due_date": "10/07/2025",
+        "assignment": "Ch 3 Packet",
+        "class": "Health",
+        "teacher": "Amy Palfey",
+        "category": "Class Work",
+        "points": "20"
+      },
       {
         "due_date": "09/23/2025",
         "assignment": "Ch 2 Packet",
@@ -146,6 +134,34 @@
         "teacher": "Amy Palfey",
         "category": "Quiz",
         "points": "10"
+      }
+    ],
+    "Intermediate Geometry": [
+      {
+        "due_date": "10/02/2025",
+        "assignment": "Midpoint and Distance WS #1",
+        "class": "Intermediate Geometry",
+        "teacher": "Caleb Marasco",
+        "category": "Class Work",
+        "points": "12"
+      },
+      {
+        "due_date": "10/01/2025",
+        "assignment": "Angles Addition",
+        "class": "Intermediate Geometry",
+        "teacher": "Caleb Marasco",
+        "category": "Class Work",
+        "points": "16"
+      }
+    ],
+    "English 10": [
+      {
+        "due_date": "09/30/2025",
+        "assignment": "Mustache One-Pager",
+        "class": "English 10",
+        "teacher": "10 Megan Leone",
+        "category": "Project",
+        "points": "75"
       }
     ],
     "American Studies": [
