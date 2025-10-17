@@ -1,9 +1,17 @@
 {
   "metadata": {
-    "last_updated": "10/16/2025 10:41 AM",
-    "total_missing": 9
+    "last_updated": "10/17/2025 09:05 AM",
+    "total_missing": 10
   },
   "assignments": [
+    {
+      "due_date": "10/17/2025",
+      "assignment": "Bellringer V ocab 10/13-10/16",
+      "class": "English 10",
+      "teacher": "10 Megan Leone Bell",
+      "category": "Ringer",
+      "points": "10"
+    },
     {
       "due_date": "10/07/2025",
       "assignment": "Ch 3 Packet",
@@ -78,6 +86,24 @@
     }
   ],
   "by_class": {
+    "English 10": [
+      {
+        "due_date": "10/17/2025",
+        "assignment": "Bellringer V ocab 10/13-10/16",
+        "class": "English 10",
+        "teacher": "10 Megan Leone Bell",
+        "category": "Ringer",
+        "points": "10"
+      },
+      {
+        "due_date": "09/30/2025",
+        "assignment": "Mustache One-Pager",
+        "class": "English 10",
+        "teacher": "10 Megan Leone",
+        "category": "Project",
+        "points": "75"
+      }
+    ],
     "Health": [
       {
         "due_date": "10/07/2025",
@@ -118,16 +144,6 @@
         "teacher": "Amy Palfey",
         "category": "Quiz",
         "points": "10"
-      }
-    ],
-    "English 10": [
-      {
-        "due_date": "09/30/2025",
-        "assignment": "Mustache One-Pager",
-        "class": "English 10",
-        "teacher": "10 Megan Leone",
-        "category": "Project",
-        "points": "75"
       }
     ],
     "American Studies": [
