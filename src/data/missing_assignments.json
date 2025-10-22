@@ -1,9 +1,17 @@
 {
   "metadata": {
-    "last_updated": "10/17/2025 09:05 AM",
-    "total_missing": 10
+    "last_updated": "10/22/2025 08:18 AM",
+    "total_missing": 11
   },
   "assignments": [
+    {
+      "due_date": "10/17/2025",
+      "assignment": "Free Draw Sketchbook",
+      "class": "Art 1",
+      "teacher": "Kathryn Curry",
+      "category": "Homework",
+      "points": "10"
+    },
     {
       "due_date": "10/17/2025",
       "assignment": "Bellringer V ocab 10/13-10/16",
@@ -86,6 +94,24 @@
     }
   ],
   "by_class": {
+    "Art 1": [
+      {
+        "due_date": "10/17/2025",
+        "assignment": "Free Draw Sketchbook",
+        "class": "Art 1",
+        "teacher": "Kathryn Curry",
+        "category": "Homework",
+        "points": "10"
+      },
+      {
+        "due_date": "09/12/2025",
+        "assignment": "2 Point Perspective Cubes",
+        "class": "Art 1",
+        "teacher": "Kathryn Curry",
+        "category": "Class Work",
+        "points": "25"
+      }
+    ],
     "English 10": [
       {
         "due_date": "10/17/2025",
@@ -161,16 +187,6 @@
         "class": "American Studies",
         "teacher": "Brock Seese",
         "category": "Reading",
-        "points": "25"
-      }
-    ],
-    "Art 1": [
-      {
-        "due_date": "09/12/2025",
-        "assignment": "2 Point Perspective Cubes",
-        "class": "Art 1",
-        "teacher": "Kathryn Curry",
-        "category": "Class Work",
         "points": "25"
       }
     ]
