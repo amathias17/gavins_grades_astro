@@ -5,10 +5,17 @@ import missingAssignmentsData from "../data/missing_assignments.json";
 const data = gradesData.classes.map((classInfo) => ({
     class: classInfo.class_name,
     teacher: classInfo.teacher,
+    q1_grade: classInfo.q1_grade,
+    q1_letter_grade: classInfo.q1_letter_grade,
+    q2_grade: classInfo.q2_grade,
+    q2_letter_grade: classInfo.q2_letter_grade,
     period: classInfo.period,
     grade: classInfo.current_grade,
     lettergrade: classInfo.letter_grade,
 }));
+const metadata = {
+    last_updated: gradesData.metadata.last_updated,
+};
 
 const missingAssignments = missingAssignmentsData.assignments.map(
     (assignment) => ({
@@ -72,7 +79,9 @@ function getGradeColor(grade: number): string {
             >
                 📚
             </div>
-            <div class="text-[0.7em] text-[#00ff00]">CURRENT.GRADES</div>
+            <div class="text-[0.7em] text-[#00ff00]">
+                CURRENT.GRADES - UPDATED {metadata.last_updated}
+            </div>
         </div>
         {
             data.map((i) => (
@@ -80,8 +89,9 @@ function getGradeColor(grade: number): string {
                     <div class="flex justify-between items-center flex-wrap gap-2.5 mb-[15px]">
                         <>
                             <span class="text-[0.6em] text-white uppercase">
-                                {i.class}
+                                {i.class} - {i.teacher}
                             </span>
+
                             <div class="flex gap-2.5 items-center">
                                 <span
                                     class={`grade-badge ${getGradeColor(i.grade)}`}
@@ -106,35 +116,36 @@ function getGradeColor(grade: number): string {
             ))
         }
     </div>
-    <!-- Active Quests -->
+</div>
+
+<!-- Active Quests -->
+<div
+    class="shadow-[0_0_0_4px_#000,0_0_0_8px_#fff,8px_8px_0_8px_rgba(255,255,255,0.3)] relative p-5 border-4 border-solid border-white card"
+>
     <div
-        class="shadow-[0_0_0_4px_#000,0_0_0_8px_#fff,8px_8px_0_8px_rgba(255,255,255,0.3)] relative p-5 border-4 border-solid border-white card"
+        class="flex items-center gap-[15px] mb-5 pb-[15px] border-b-[3px] border-b-[#555] border-dashed"
     >
         <div
-            class="flex items-center gap-[15px] mb-5 pb-[15px] border-b-[3px] border-b-[#555] border-dashed"
+            class="w-12 h-12 flex items-center justify-center text-[1.2em] border-[3px] border-solid border-[#00ff00] bg-[#000] bg-[#000]"
         >
-            <div
-                class="w-12 h-12 flex items-center justify-center text-[1.2em] border-[3px] border-solid border-[#00ff00] bg-[#000] bg-[#000]"
-            >
-                ⚔️
-            </div>
-            <div class="text-[0.7em] text-[#00ff00]">MISSING.QUESTS</div>
+            ⚔️
         </div>
-        {
-            missingAssignments.map((a) => (
-                <div class="bg-[#000] p-[15px] mb-[12px] border-[3px] border-[solid] border-[#00ffff] flex items-center gap-[15px]">
-                    <div class="w-[20px] h-[20px] border-[3px] border-[#00ffff] bg-[#000] flex-shrink-0"></div>
-                    <div class="flex-[1]">
-                        <strong class="text-[0.5em] text-[#fff] block mb-[8px] uppercase">
-                            {a.assignment}
-                        </strong>
-                        <p class="text-[0.4em] text-[#aaa] uppercase">
-                            {a.class} - DUE: {a.due}
-                        </p>
-                    </div>
-                    <div class="quest-reward">+{a.points}XP</div>
-                </div>
-            ))
-        }
+        <div class="text-[0.7em] text-[#00ff00]">MISSING.QUESTS</div>
     </div>
+    {
+        missingAssignments.map((a) => (
+            <div class="bg-[#000] p-[15px] mb-[12px] border-[3px] border-[solid] border-[#00ffff] flex items-center gap-[15px]">
+                <div class="w-[20px] h-[20px] border-[3px] border-[#00ffff] bg-[#000] flex-shrink-0" />
+                <div class="flex-[1]">
+                    <strong class="text-[0.5em] text-[#fff] block mb-[8px] uppercase">
+                        {a.assignment}
+                    </strong>
+                    <p class="text-[0.4em] text-[#aaa] uppercase">
+                        {a.class} - DUE: {a.due}
+                    </p>
+                </div>
+                <div class="quest-reward">+{a.points}XP</div>
+            </div>
+        ))
+    }
 </div>
