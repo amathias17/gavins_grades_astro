@@ -6,7 +6,7 @@ async function scrapeGrades(username, password) {
     console.log('Starting Skyward scraper...');
 
     const browser = await chromium.launch({
-        headless: false  // Set to true later for automation
+        headless: true  // Set to true later for automation
     });
 
     const page = await browser.newPage();
