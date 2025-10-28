@@ -1,0 +1,48 @@
+name: Scrape Grades
+
+on:
+  # Run on a schedule (every 2 hours)
+  schedule:
+    - cron: '0 */2 * * *'  # Runs at minute 0 of every 2nd hour (UTC time)
+
+  # Allow manual triggering from GitHub Actions tab
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Check out the repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Set up Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      # Install dependencies
+      - name: Install dependencies
+        run: npm ci
+
+      # Install Playwright browsers
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      # Run the scraper
+      - name: Run grade scraper
+        env:
+          SKYWARD_USERNAME: ${{ secrets.SKYWARD_USERNAME }}
+          SKYWARD_PASSWORD: ${{ secrets.SKYWARD_PASSWORD }}
+        run: node scraper/skyward-scraper.cjs
+
+      # Commit and push changes if there are any
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add -A
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update grades data [automated]" && git push)
