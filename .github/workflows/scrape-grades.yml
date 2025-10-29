@@ -3,7 +3,7 @@ name: Scrape Grades
 on:
   # Run on a schedule (every 2 hours)
   schedule:
-    - cron: '0 */2 * * *'  # Runs at minute 0 of every 2nd hour (UTC time)
+    - cron: '0 8,16 * * *'  # Runs at minute 0 of every 2nd hour (UTC time)
 
   # Allow manual triggering from GitHub Actions tab
   workflow_dispatch:
