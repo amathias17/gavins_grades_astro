@@ -184,7 +184,8 @@ async function saveGradesToFile(grades) {
         year: 'numeric',
         hour: '2-digit',
         minute: '2-digit',
-        hour12: true
+        hour12: true,
+        timeZone: 'America/New_York'
     });
 
     // Helper function to normalize class names to title case
