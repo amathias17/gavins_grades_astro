@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "10/29/2025, 08:53 AM",
-    "most_recent_date": "10/29/2025",
+    "last_updated": "10/30/2025, 04:12 AM",
+    "most_recent_date": "10/30/2025",
     "total_classes": 9
   },
   "classes": [
@@ -9,8 +9,8 @@
       "class_name": "Sophomore Seminar",
       "teacher": "Victoria Good",
       "period": "0",
-      "q1_grade": 56,
-      "q1_letter_grade": "F",
+      "q1_grade": null,
+      "q1_letter_grade": null,
       "q2_grade": 0,
       "q2_letter_grade": "F",
       "current_grade": 0,
@@ -22,9 +22,9 @@
       "period": "1",
       "q1_grade": 70,
       "q1_letter_grade": "C",
-      "q2_grade": 98,
+      "q2_grade": 94,
       "q2_letter_grade": "A",
-      "current_grade": 98,
+      "current_grade": 94,
       "letter_grade": "A"
     },
     {
@@ -99,53 +99,63 @@
       "period": "8",
       "q1_grade": 78,
       "q1_letter_grade": "C",
-      "q2_grade": null,
-      "q2_letter_grade": null,
-      "current_grade": 78,
-      "letter_grade": "C"
+      "q2_grade": 100,
+      "q2_letter_grade": "A",
+      "current_grade": 100,
+      "letter_grade": "A"
     }
   ],
   "grade_history": {
     "Sophomore Seminar": {
       "10/28/2025": 56,
-      "10/29/2025": 0
+      "10/29/2025": 0,
+      "10/30/2025": 0
     },
     "English 10": {
       "10/28/2025": 98,
-      "10/29/2025": 98
+      "10/29/2025": 98,
+      "10/30/2025": 94
     },
     "Biology 2": {
       "10/28/2025": 85,
-      "10/29/2025": 85
+      "10/29/2025": 85,
+      "10/30/2025": 85
     },
     "History Pop Cult 1": {
       "10/28/2025": 73,
-      "10/29/2025": 73
+      "10/29/2025": 73,
+      "10/30/2025": 73
     },
     "Art 1": {
       "10/28/2025": 55,
-      "10/29/2025": 55
+      "10/29/2025": 55,
+      "10/30/2025": 55
     },
     "Physical Educ": {
       "10/28/2025": 79,
-      "10/29/2025": 79
+      "10/29/2025": 79,
+      "10/30/2025": 79
     },
     "Amer Studies": {
       "10/28/2025": 72,
-      "10/29/2025": 72
+      "10/29/2025": 72,
+      "10/30/2025": 72
     },
     "Intermediate Geometry": {
       "10/28/2025": 70,
-      "10/29/2025": 70
+      "10/29/2025": 70,
+      "10/30/2025": 70
     },
     "Health": {
       "10/28/2025": 78,
-      "10/29/2025": 78
+      "10/29/2025": 78,
+      "10/30/2025": 100
     }
   },
-  "overall_average": 76,
+  "overall_average": 79,
   "average_history": {
     "10/28/2025": 74,
-    "10/29/2025": 76
+    "10/29/2025": 76,
+    "10/30/2025": 79
   }
 }
