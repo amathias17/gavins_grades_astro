@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "10/30/2025, 04:12 AM",
+    "last_updated": "10/30/2025, 12:12 PM",
     "most_recent_date": "10/30/2025",
     "total_classes": 9
   },
@@ -22,10 +22,10 @@
       "period": "1",
       "q1_grade": 70,
       "q1_letter_grade": "C",
-      "q2_grade": 94,
-      "q2_letter_grade": "A",
-      "current_grade": 94,
-      "letter_grade": "A"
+      "q2_grade": 84,
+      "q2_letter_grade": "B",
+      "current_grade": 84,
+      "letter_grade": "B"
     },
     {
       "class_name": "Biology 2",
@@ -66,10 +66,10 @@
       "period": "5",
       "q1_grade": 79,
       "q1_letter_grade": "C",
-      "q2_grade": null,
-      "q2_letter_grade": null,
-      "current_grade": 79,
-      "letter_grade": "C"
+      "q2_grade": 100,
+      "q2_letter_grade": "A",
+      "current_grade": 100,
+      "letter_grade": "A"
     },
     {
       "class_name": "Amer Studies",
@@ -114,7 +114,7 @@
     "English 10": {
       "10/28/2025": 98,
       "10/29/2025": 98,
-      "10/30/2025": 94
+      "10/30/2025": 84
     },
     "Biology 2": {
       "10/28/2025": 85,
@@ -134,7 +134,7 @@
     "Physical Educ": {
       "10/28/2025": 79,
       "10/29/2025": 79,
-      "10/30/2025": 79
+      "10/30/2025": 100
     },
     "Amer Studies": {
       "10/28/2025": 72,
@@ -152,10 +152,10 @@
       "10/30/2025": 100
     }
   },
-  "overall_average": 79,
+  "overall_average": 80,
   "average_history": {
     "10/28/2025": 74,
     "10/29/2025": 76,
-    "10/30/2025": 79
+    "10/30/2025": 80
   }
 }
