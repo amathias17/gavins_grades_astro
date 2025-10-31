@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "10/30/2025, 12:12 PM",
-    "most_recent_date": "10/30/2025",
+    "last_updated": "10/31/2025, 04:13 AM",
+    "most_recent_date": "10/31/2025",
     "total_classes": 9
   },
   "classes": [
@@ -22,9 +22,9 @@
       "period": "1",
       "q1_grade": 70,
       "q1_letter_grade": "C",
-      "q2_grade": 84,
+      "q2_grade": 86,
       "q2_letter_grade": "B",
-      "current_grade": 84,
+      "current_grade": 86,
       "letter_grade": "B"
     },
     {
@@ -77,10 +77,10 @@
       "period": "6",
       "q1_grade": 72,
       "q1_letter_grade": "C",
-      "q2_grade": null,
-      "q2_letter_grade": null,
-      "current_grade": 72,
-      "letter_grade": "C"
+      "q2_grade": 100,
+      "q2_letter_grade": "A",
+      "current_grade": 100,
+      "letter_grade": "A"
     },
     {
       "class_name": "Intermediate Geometry",
@@ -99,63 +99,73 @@
       "period": "8",
       "q1_grade": 78,
       "q1_letter_grade": "C",
-      "q2_grade": 100,
-      "q2_letter_grade": "A",
-      "current_grade": 100,
-      "letter_grade": "A"
+      "q2_grade": 55,
+      "q2_letter_grade": "F",
+      "current_grade": 55,
+      "letter_grade": "F"
     }
   ],
   "grade_history": {
     "Sophomore Seminar": {
       "10/28/2025": 56,
       "10/29/2025": 0,
-      "10/30/2025": 0
+      "10/30/2025": 0,
+      "10/31/2025": 0
     },
     "English 10": {
       "10/28/2025": 98,
       "10/29/2025": 98,
-      "10/30/2025": 84
+      "10/30/2025": 84,
+      "10/31/2025": 86
     },
     "Biology 2": {
       "10/28/2025": 85,
       "10/29/2025": 85,
-      "10/30/2025": 85
+      "10/30/2025": 85,
+      "10/31/2025": 85
     },
     "History Pop Cult 1": {
       "10/28/2025": 73,
       "10/29/2025": 73,
-      "10/30/2025": 73
+      "10/30/2025": 73,
+      "10/31/2025": 73
     },
     "Art 1": {
       "10/28/2025": 55,
       "10/29/2025": 55,
-      "10/30/2025": 55
+      "10/30/2025": 55,
+      "10/31/2025": 55
     },
     "Physical Educ": {
       "10/28/2025": 79,
       "10/29/2025": 79,
-      "10/30/2025": 100
+      "10/30/2025": 100,
+      "10/31/2025": 100
     },
     "Amer Studies": {
       "10/28/2025": 72,
       "10/29/2025": 72,
-      "10/30/2025": 72
+      "10/30/2025": 72,
+      "10/31/2025": 100
     },
     "Intermediate Geometry": {
       "10/28/2025": 70,
       "10/29/2025": 70,
-      "10/30/2025": 70
+      "10/30/2025": 70,
+      "10/31/2025": 70
     },
     "Health": {
       "10/28/2025": 78,
       "10/29/2025": 78,
-      "10/30/2025": 100
+      "10/30/2025": 100,
+      "10/31/2025": 55
     }
   },
-  "overall_average": 80,
+  "overall_average": 78,
   "average_history": {
     "10/28/2025": 74,
     "10/29/2025": 76,
-    "10/30/2025": 80
+    "10/30/2025": 80,
+    "10/31/2025": 78
   }
 }
