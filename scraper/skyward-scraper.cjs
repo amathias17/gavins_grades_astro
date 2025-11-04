@@ -32,7 +32,44 @@ async function scrapeGrades(username, password) {
         console.log('Login successful!');
 
         console.log('Navigating to Gradebook...');
-        await popup.click('text=Gradebook');
+
+        // Try multiple selectors for the Gradebook link with increased timeout
+        const gradebookSelectors = [
+            'a:has-text("Gradebook")',
+            'text=Gradebook',
+            '[title*="Gradebook"]',
+            'a[href*="gradebook"]'
+        ];
+
+        let gradebookFound = false;
+        for (const selector of gradebookSelectors) {
+            try {
+                console.log(`Trying selector: ${selector}`);
+                await popup.waitForSelector(selector, { timeout: 10000, state: 'visible' });
+                await popup.click(selector);
+                gradebookFound = true;
+                console.log(`Successfully clicked Gradebook using: ${selector}`);
+                break;
+            } catch (e) {
+                console.log(`Selector ${selector} not found, trying next...`);
+            }
+        }
+
+        if (!gradebookFound) {
+            // Take a screenshot for debugging
+            await popup.screenshot({ path: 'debug-screenshot.png' });
+            console.log('Available links on page:');
+            const links = await popup.evaluate(() => {
+                return Array.from(document.querySelectorAll('a')).map(a => ({
+                    text: a.textContent.trim(),
+                    href: a.href,
+                    title: a.title
+                }));
+            });
+            console.log(JSON.stringify(links, null, 2));
+            throw new Error('Could not find Gradebook link with any selector');
+        }
+
         await popup.waitForLoadState('networkidle');
 
         // Wait a moment for the page to fully load
