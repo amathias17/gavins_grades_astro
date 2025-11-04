@@ -17,14 +17,14 @@ const metadata = {
     last_updated: gradesData.metadata.last_updated,
 };
 
-const missingAssignments = missingAssignmentsData.missing_assignments.map(
+const missingAssignments = missingAssignmentsData.missing_assignments?.map(
     (assignment) => ({
         assignment: assignment.assignment_name,
         class: assignment.class_name,
         due: assignment.due_date,
         max_points: assignment.max_points,
     }),
-);
+) ?? [];
 
 function getGradeColor(grade: number): string {
     if (grade >= 90) return "grade-a";
