@@ -6,7 +6,8 @@
       "Bash(timeout:*)",
       "Bash(echo \"Exit code: $?\")",
       "Bash(set DEBUG_HTML=true)",
-      "Bash(DEBUG_HTML=true node src/scripts/grades.js)"
+      "Bash(DEBUG_HTML=true node src/scripts/grades.js)",
+      "Bash(git add:*)"
     ],
     "deny": [],
     "ask": []
