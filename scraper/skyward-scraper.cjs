@@ -454,8 +454,8 @@ async function saveGradesToFile(grades, missingAssignments = []) {
 
 // Test the scraper
 async function main() {
-    const username = process.env.SKYWARD_USERNAME || 'amathias1';
-    const password = process.env.SKYWARD_PASSWORD || 'Hd#2WH7JhVt#!U';
+    const username = process.env.SKYWARD_USERNAME;
+    const password = process.env.SKYWARD_PASSWORD;
 
     // Validate credentials
     if (!username || !password) {
