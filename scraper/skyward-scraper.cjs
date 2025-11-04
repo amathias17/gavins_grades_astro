@@ -29,6 +29,63 @@ async function scrapeGrades(username, password) {
 
         console.log('Login popup opened!');
         await popup.waitForLoadState('networkidle');
+
+        // Wait for navigation after login - the popup should navigate to a new page
+        console.log('Waiting for post-login navigation...');
+        try {
+            // Wait for URL to change (indicates navigation happened)
+            await popup.waitForURL(url => !url.includes('seplog01.w'), { timeout: 15000 });
+            console.log(`Navigated to: ${popup.url()}`);
+        } catch (e) {
+            console.log(`Current URL: ${popup.url()}`);
+            console.log('URL did not change, attempting to proceed anyway...');
+        }
+
+        // Give extra time for the page to fully load
+        await popup.waitForLoadState('networkidle');
+        await popup.waitForTimeout(2000);
+
+        // Check if we're on a password change page
+        const pageContent = await popup.content();
+        if (pageContent.toLowerCase().includes('password') &&
+            (pageContent.toLowerCase().includes('change') ||
+             pageContent.toLowerCase().includes('update') ||
+             pageContent.toLowerCase().includes('new password'))) {
+            console.log('Password change prompt detected!');
+
+            // Look for a skip/cancel button
+            const skipSelectors = [
+                'button:has-text("Skip")',
+                'button:has-text("Cancel")',
+                'button:has-text("Later")',
+                'button:has-text("Remind Me Later")',
+                'a:has-text("Skip")',
+                'a:has-text("Cancel")',
+                'a:has-text("Later")',
+                'input[value*="Skip"]',
+                'input[value*="Cancel"]',
+                'input[value*="Later"]'
+            ];
+
+            let skipped = false;
+            for (const selector of skipSelectors) {
+                try {
+                    await popup.click(selector, { timeout: 2000 });
+                    console.log(`Clicked skip button: ${selector}`);
+                    skipped = true;
+                    await popup.waitForLoadState('networkidle');
+                    await popup.waitForTimeout(2000);
+                    break;
+                } catch (e) {
+                    // Try next selector
+                }
+            }
+
+            if (!skipped) {
+                throw new Error('Password change required. Please update your password in Skyward before running the scraper.');
+            }
+        }
+
         console.log('Login successful!');
 
         console.log('Navigating to Gradebook...');
@@ -183,8 +240,98 @@ async function scrapeGrades(username, password) {
 
         console.log(`Found ${gradeData.length} classes with grades`);
 
+        // Now scrape missing assignments
+        console.log('Checking for missing assignments...');
+        let missingAssignments = [];
+
+        try {
+            // Click the missing assignments button
+            const missingButton = await popup.locator('#missingAssignments');
+            if (await missingButton.isVisible({ timeout: 5000 })) {
+                await missingButton.click();
+                console.log('Clicked missing assignments button');
+
+                // Wait for the missing assignments content to load
+                await popup.waitForTimeout(2000);
+
+                // Check if there are no missing assignments
+                const noMissingText = await popup.locator('text=No Missing Assignments!').count();
+
+                if (noMissingText > 0) {
+                    console.log('No missing assignments found');
+                } else {
+                    console.log('Extracting missing assignments...');
+
+                    // Take a screenshot for debugging
+                    await popup.screenshot({ path: 'missing-assignments-screenshot.png' });
+
+                    // Extract missing assignments data
+                    missingAssignments = await popup.evaluate(() => {
+                        const assignments = [];
+                        const seen = new Set(); // Track unique assignments
+
+                        // Look for rows that have actual assignment data
+                        // Structure: Due | Assignment | Class | Teacher | Category | Max Points | Absent
+                        const rows = document.querySelectorAll('table tr');
+
+                        rows.forEach(row => {
+                            const cells = row.querySelectorAll('td');
+
+                            // We need at least 4 cells for a valid assignment row
+                            if (cells.length < 4) return;
+
+                            const date = cells[0]?.textContent.trim() || '';
+                            const assignmentName = cells[1]?.textContent.trim() || '';
+                            const className = cells[2]?.textContent.trim() || '';
+                            const teacher = cells[3]?.textContent.trim() || '';
+                            const category = cells.length >= 5 ? cells[4]?.textContent.trim() || '' : '';
+                            const maxPoints = cells.length >= 6 ? cells[5]?.textContent.trim() || '' : '';
+                            const absent = cells.length >= 7 ? cells[6]?.textContent.trim() || '' : '';
+
+                            // Skip if this looks like header text or empty
+                            if (!date || !assignmentName || !className) return;
+                            if (date.toLowerCase().includes('due') || date.toLowerCase().includes('gavin')) return;
+                            if (assignmentName.toLowerCase().includes('due') || assignmentName.toLowerCase().includes('gavin')) return;
+
+                            // Skip rows that don't have a date pattern (should have "/" or "Q")
+                            if (!date.match(/\d+\/\d+\/\d+/) && !date.includes('Q')) return;
+
+                            // Create a unique key to check for duplicates
+                            const uniqueKey = `${date}|${className}|${assignmentName}`;
+
+                            // Only add if we haven't seen this exact assignment before
+                            if (!seen.has(uniqueKey)) {
+                                seen.add(uniqueKey);
+                                const assignment = {
+                                    due_date: date,
+                                    assignment_name: assignmentName,
+                                    class_name: className,
+                                    teacher: teacher
+                                };
+
+                                if (category) assignment.category = category;
+                                if (maxPoints) assignment.max_points = maxPoints;
+                                if (absent) assignment.absent = absent;
+
+                                assignments.push(assignment);
+                            }
+                        });
+
+                        return assignments;
+                    });
+
+                    console.log(`Found ${missingAssignments.length} missing assignments`);
+                }
+            } else {
+                console.log('Missing assignments button not found');
+            }
+        } catch (error) {
+            console.log('Error checking missing assignments:', error.message);
+            // Don't fail the whole scrape if missing assignments fails
+        }
+
         await browser.close();
-        return gradeData;
+        return { grades: gradeData, missingAssignments };
 
     } catch (error) {
         await browser.close();
@@ -193,8 +340,9 @@ async function scrapeGrades(username, password) {
 }
 
 // Save grades to JSON file
-async function saveGradesToFile(grades) {
-    const outputPath = path.join(__dirname, '../src/data/grades.json');
+async function saveGradesToFile(grades, missingAssignments = []) {
+    const gradesOutputPath = path.join(__dirname, '../src/data/grades.json');
+    const missingOutputPath = path.join(__dirname, '../src/data/missing_assignments.json');
 
     // Read existing data if it exists
     let existingData = {
@@ -206,7 +354,7 @@ async function saveGradesToFile(grades) {
     };
 
     try {
-        const existingContent = await fs.readFile(outputPath, 'utf-8');
+        const existingContent = await fs.readFile(gradesOutputPath, 'utf-8');
         existingData = JSON.parse(existingContent);
     } catch (error) {
         console.log('No existing grades.json found, creating new file...');
@@ -271,8 +419,8 @@ async function saveGradesToFile(grades) {
     const averageHistory = existingData.average_history || {};
     averageHistory[dateKey] = overallAverage;
 
-    // Create the output data
-    const outputData = {
+    // Create the grades output data (without missing assignments)
+    const gradesOutputData = {
         metadata: {
             last_updated: timestamp,
             most_recent_date: dateKey,
@@ -284,26 +432,51 @@ async function saveGradesToFile(grades) {
         average_history: averageHistory
     };
 
-    // Write to file
-    await fs.writeFile(outputPath, JSON.stringify(outputData, null, 2));
-    console.log(`\nGrades saved to: ${outputPath}`);
+    // Create the missing assignments output data
+    const missingAssignmentsData = {
+        metadata: {
+            last_updated: timestamp,
+            count: missingAssignments.length
+        },
+        missing_assignments: missingAssignments
+    };
+
+    // Write grades to file
+    await fs.writeFile(gradesOutputPath, JSON.stringify(gradesOutputData, null, 2));
+    console.log(`\nGrades saved to: ${gradesOutputPath}`);
     console.log(`Overall average: ${overallAverage}`);
+
+    // Write missing assignments to file
+    await fs.writeFile(missingOutputPath, JSON.stringify(missingAssignmentsData, null, 2));
+    console.log(`Missing assignments saved to: ${missingOutputPath}`);
+    console.log(`Missing assignments count: ${missingAssignments.length}`);
 }
 
 // Test the scraper
 async function main() {
-    const username = process.env.SKYWARD_USERNAME;
-    const password = process.env.SKYWARD_PASSWORD;
+    const username = process.env.SKYWARD_USERNAME || 'amathias1';
+    const password = process.env.SKYWARD_PASSWORD || 'Hd#2WH7JhVt#!U';
+
+    // Validate credentials
+    if (!username || !password) {
+        console.error('Error: SKYWARD_USERNAME and SKYWARD_PASSWORD environment variables must be set');
+        console.error('Current values:');
+        console.error(`  SKYWARD_USERNAME: ${username ? '[SET]' : '[NOT SET]'}`);
+        console.error(`  SKYWARD_PASSWORD: ${password ? '[SET]' : '[NOT SET]'}`);
+        process.exit(1);
+    }
 
     try {
-        const grades = await scrapeGrades(username, password);
+        const result = await scrapeGrades(username, password);
         console.log('Scraping complete!');
-        console.log(JSON.stringify(grades, null, 2));
+        console.log('Grades:', JSON.stringify(result.grades, null, 2));
+        console.log('Missing Assignments:', JSON.stringify(result.missingAssignments, null, 2));
 
         // Save to file
-        await saveGradesToFile(grades);
+        await saveGradesToFile(result.grades, result.missingAssignments);
     } catch (error) {
         console.error('Error scraping grades:', error);
+        process.exit(1);
     }
 }
 
