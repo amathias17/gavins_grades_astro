@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "11/05/2025, 11:13 AM",
+    "last_updated": "11/05/2025, 04:16 PM",
     "most_recent_date": "11/5/2025",
     "total_classes": 9
   },
@@ -11,9 +11,9 @@
       "period": "0",
       "q1_grade": null,
       "q1_letter_grade": null,
-      "q2_grade": 0,
+      "q2_grade": 52,
       "q2_letter_grade": "F",
-      "current_grade": 0,
+      "current_grade": 52,
       "letter_grade": "F"
     },
     {
@@ -44,10 +44,10 @@
       "period": "3",
       "q1_grade": 73,
       "q1_letter_grade": "C",
-      "q2_grade": null,
-      "q2_letter_grade": null,
-      "current_grade": 73,
-      "letter_grade": "C"
+      "q2_grade": 80,
+      "q2_letter_grade": "B",
+      "current_grade": 80,
+      "letter_grade": "B"
     },
     {
       "class_name": "Art 1",
@@ -108,7 +108,7 @@
   "grade_history": {
     "Sophomore Seminar": {
       "11/4/2025": 0,
-      "11/5/2025": 0
+      "11/5/2025": 52
     },
     "English 10": {
       "11/4/2025": 86,
@@ -120,7 +120,7 @@
     },
     "History Pop Cult 1": {
       "11/4/2025": 73,
-      "11/5/2025": 73
+      "11/5/2025": 80
     },
     "Art 1": {
       "11/4/2025": 55,
@@ -143,9 +143,9 @@
       "11/5/2025": 98
     }
   },
-  "overall_average": 80,
+  "overall_average": 78,
   "average_history": {
     "11/4/2025": 85,
-    "11/5/2025": 80
+    "11/5/2025": 78
   }
 }
