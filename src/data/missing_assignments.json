@@ -1,7 +1,16 @@
 {
   "metadata": {
-    "last_updated": "11/10/2025, 03:13 AM",
-    "count": 0
+    "last_updated": "11/10/2025, 11:11 AM",
+    "count": 1
   },
-  "missing_assignments": []
+  "missing_assignments": [
+    {
+      "due_date": "11/10/2025  (Q2)",
+      "assignment_name": "Folable Macromolecules",
+      "class_name": "BIOLOGY            2",
+      "teacher": "Denise Condo",
+      "category": "Homework",
+      "max_points": "10"
+    }
+  ]
 }
