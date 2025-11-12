@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "11/12/2025, 03:12 AM",
+    "last_updated": "11/12/2025, 11:12 AM",
     "most_recent_date": "11/12/2025",
     "total_classes": 9
   },
@@ -22,10 +22,10 @@
       "period": "1",
       "q1_grade": 70,
       "q1_letter_grade": "C",
-      "q2_grade": 86,
-      "q2_letter_grade": "B",
-      "current_grade": 86,
-      "letter_grade": "B"
+      "q2_grade": 71,
+      "q2_letter_grade": "C",
+      "current_grade": 71,
+      "letter_grade": "C"
     },
     {
       "class_name": "Biology 2",
@@ -44,10 +44,10 @@
       "period": "3",
       "q1_grade": 73,
       "q1_letter_grade": "C",
-      "q2_grade": 80,
-      "q2_letter_grade": "B",
-      "current_grade": 80,
-      "letter_grade": "B"
+      "q2_grade": 90,
+      "q2_letter_grade": "A",
+      "current_grade": 90,
+      "letter_grade": "A"
     },
     {
       "class_name": "Art 1",
@@ -77,10 +77,10 @@
       "period": "6",
       "q1_grade": 72,
       "q1_letter_grade": "C",
-      "q2_grade": 100,
-      "q2_letter_grade": "A",
-      "current_grade": 100,
-      "letter_grade": "A"
+      "q2_grade": 20,
+      "q2_letter_grade": "F",
+      "current_grade": 20,
+      "letter_grade": "F"
     },
     {
       "class_name": "Intermediate Geometry",
@@ -126,7 +126,7 @@
       "11/9/2025": 86,
       "11/10/2025": 86,
       "11/11/2025": 86,
-      "11/12/2025": 86
+      "11/12/2025": 71
     },
     "Biology 2": {
       "11/4/2025": 100,
@@ -148,7 +148,7 @@
       "11/9/2025": 80,
       "11/10/2025": 80,
       "11/11/2025": 80,
-      "11/12/2025": 80
+      "11/12/2025": 90
     },
     "Art 1": {
       "11/4/2025": 55,
@@ -181,7 +181,7 @@
       "11/9/2025": 100,
       "11/10/2025": 100,
       "11/11/2025": 100,
-      "11/12/2025": 100
+      "11/12/2025": 20
     },
     "Intermediate Geometry": {
       "11/4/2025": 70,
@@ -206,7 +206,7 @@
       "11/12/2025": 98
     }
   },
-  "overall_average": 81,
+  "overall_average": 72,
   "average_history": {
     "11/4/2025": 85,
     "11/5/2025": 78,
@@ -216,6 +216,6 @@
     "11/9/2025": 81,
     "11/10/2025": 81,
     "11/11/2025": 81,
-    "11/12/2025": 81
+    "11/12/2025": 72
   }
 }

@@ -1,9 +1,25 @@
 {
   "metadata": {
-    "last_updated": "11/12/2025, 03:12 AM",
-    "count": 1
+    "last_updated": "11/12/2025, 11:12 AM",
+    "count": 5
   },
   "missing_assignments": [
+    {
+      "due_date": "11/12/2025  (Q2)",
+      "assignment_name": "WebQuest Causes of WWI",
+      "class_name": "AMER STUDIES",
+      "teacher": "Brock Seese",
+      "category": "Participation",
+      "max_points": "20"
+    },
+    {
+      "due_date": "11/12/2025  (Q2)",
+      "assignment_name": "WebQuest WWI Weapons",
+      "class_name": "AMER STUDIES",
+      "teacher": "Brock Seese",
+      "category": "Participation",
+      "max_points": "20"
+    },
     {
       "due_date": "11/10/2025  (Q2)",
       "assignment_name": "Folable Macromolecules",
@@ -11,6 +27,22 @@
       "teacher": "Denise Condo",
       "category": "Homework",
       "max_points": "10"
+    },
+    {
+      "due_date": "10/29/2025  (Q2)",
+      "assignment_name": "1914 Map",
+      "class_name": "AMER STUDIES",
+      "teacher": "Brock Seese",
+      "category": "Class Work",
+      "max_points": "10"
+    },
+    {
+      "due_date": "10/28/2025  (Q2)",
+      "assignment_name": "Chapter 7 Vocabulary",
+      "class_name": "AMER STUDIES",
+      "teacher": "Brock Seese",
+      "category": "Reading",
+      "max_points": "28"
     }
   ]
 }
