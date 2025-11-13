@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "11/13/2025, 03:12 AM",
-    "count": 5
+    "last_updated": "11/13/2025, 11:13 AM",
+    "count": 4
   },
   "missing_assignments": [
     {
@@ -19,14 +19,6 @@
       "teacher": "Brock Seese",
       "category": "Participation",
       "max_points": "20"
-    },
-    {
-      "due_date": "11/10/2025  (Q2)",
-      "assignment_name": "Folable Macromolecules",
-      "class_name": "BIOLOGY            2",
-      "teacher": "Denise Condo",
-      "category": "Homework",
-      "max_points": "10"
     },
     {
       "due_date": "10/29/2025  (Q2)",
