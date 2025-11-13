@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "11/13/2025, 11:13 AM",
+    "last_updated": "11/13/2025, 02:47 PM",
     "most_recent_date": "11/13/2025",
     "total_classes": 9
   },
@@ -77,10 +77,10 @@
       "period": "6",
       "q1_grade": 72,
       "q1_letter_grade": "C",
-      "q2_grade": 20,
-      "q2_letter_grade": "F",
-      "current_grade": 20,
-      "letter_grade": "F"
+      "q2_grade": 100,
+      "q2_letter_grade": "A",
+      "current_grade": 100,
+      "letter_grade": "A"
     },
     {
       "class_name": "Intermediate Geometry",
@@ -88,10 +88,10 @@
       "period": "7",
       "q1_grade": 70,
       "q1_letter_grade": "C",
-      "q2_grade": null,
-      "q2_letter_grade": null,
-      "current_grade": 70,
-      "letter_grade": "C"
+      "q2_grade": 61,
+      "q2_letter_grade": "D",
+      "current_grade": 61,
+      "letter_grade": "D"
     },
     {
       "class_name": "Health",
@@ -188,7 +188,7 @@
       "11/10/2025": 100,
       "11/11/2025": 100,
       "11/12/2025": 20,
-      "11/13/2025": 20
+      "11/13/2025": 100
     },
     "Intermediate Geometry": {
       "11/4/2025": 70,
@@ -200,7 +200,7 @@
       "11/10/2025": 70,
       "11/11/2025": 70,
       "11/12/2025": 70,
-      "11/13/2025": 70
+      "11/13/2025": 61
     },
     "Health": {
       "11/4/2025": 98,
@@ -215,7 +215,7 @@
       "11/13/2025": 91
     }
   },
-  "overall_average": 71,
+  "overall_average": 79,
   "average_history": {
     "11/4/2025": 85,
     "11/5/2025": 78,
@@ -226,6 +226,6 @@
     "11/10/2025": 81,
     "11/11/2025": 81,
     "11/12/2025": 72,
-    "11/13/2025": 71
+    "11/13/2025": 79
   }
 }
