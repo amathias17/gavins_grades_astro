@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "11/14/2025, 01:14 PM",
+    "last_updated": "11/14/2025, 02:49 PM",
     "most_recent_date": "11/14/2025",
     "total_classes": 9
   },
@@ -88,10 +88,10 @@
       "period": "7",
       "q1_grade": 70,
       "q1_letter_grade": "C",
-      "q2_grade": 61,
-      "q2_letter_grade": "D",
-      "current_grade": 61,
-      "letter_grade": "D"
+      "q2_grade": 78,
+      "q2_letter_grade": "C",
+      "current_grade": 78,
+      "letter_grade": "C"
     },
     {
       "class_name": "Health",
@@ -208,7 +208,7 @@
       "11/11/2025": 70,
       "11/12/2025": 70,
       "11/13/2025": 61,
-      "11/14/2025": 61
+      "11/14/2025": 78
     },
     "Health": {
       "11/4/2025": 98,
@@ -224,7 +224,7 @@
       "11/14/2025": 91
     }
   },
-  "overall_average": 81,
+  "overall_average": 83,
   "average_history": {
     "11/4/2025": 85,
     "11/5/2025": 78,
@@ -236,6 +236,6 @@
     "11/11/2025": 81,
     "11/12/2025": 72,
     "11/13/2025": 79,
-    "11/14/2025": 81
+    "11/14/2025": 83
   }
 }
