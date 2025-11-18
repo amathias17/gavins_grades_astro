@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "11/18/2025, 03:12 AM",
+    "last_updated": "11/18/2025, 11:11 AM",
     "most_recent_date": "11/18/2025",
     "total_classes": 9
   },
@@ -22,9 +22,9 @@
       "period": "1",
       "q1_grade": 70,
       "q1_letter_grade": "C",
-      "q2_grade": 71,
+      "q2_grade": 75,
       "q2_letter_grade": "C",
-      "current_grade": 71,
+      "current_grade": 75,
       "letter_grade": "C"
     },
     {
@@ -33,10 +33,10 @@
       "period": "2",
       "q1_grade": 85,
       "q1_letter_grade": "B",
-      "q2_grade": 69,
-      "q2_letter_grade": "D",
-      "current_grade": 69,
-      "letter_grade": "D"
+      "q2_grade": 71,
+      "q2_letter_grade": "C",
+      "current_grade": 71,
+      "letter_grade": "C"
     },
     {
       "class_name": "History Pop Cult 1",
@@ -55,9 +55,9 @@
       "period": "4",
       "q1_grade": 55,
       "q1_letter_grade": "F",
-      "q2_grade": 80,
+      "q2_grade": 87,
       "q2_letter_grade": "B",
-      "current_grade": 80,
+      "current_grade": 87,
       "letter_grade": "B"
     },
     {
@@ -99,9 +99,9 @@
       "period": "8",
       "q1_grade": 78,
       "q1_letter_grade": "C",
-      "q2_grade": 91,
+      "q2_grade": 93,
       "q2_letter_grade": "A",
-      "current_grade": 91,
+      "current_grade": 93,
       "letter_grade": "A"
     }
   ],
@@ -138,7 +138,7 @@
       "11/15/2025": 71,
       "11/16/2025": 71,
       "11/17/2025": 71,
-      "11/18/2025": 71
+      "11/18/2025": 75
     },
     "Biology 2": {
       "11/4/2025": 100,
@@ -155,7 +155,7 @@
       "11/15/2025": 69,
       "11/16/2025": 69,
       "11/17/2025": 69,
-      "11/18/2025": 69
+      "11/18/2025": 71
     },
     "History Pop Cult 1": {
       "11/4/2025": 73,
@@ -189,7 +189,7 @@
       "11/15/2025": 80,
       "11/16/2025": 80,
       "11/17/2025": 80,
-      "11/18/2025": 80
+      "11/18/2025": 87
     },
     "Physical Educ": {
       "11/4/2025": 100,
@@ -257,10 +257,10 @@
       "11/15/2025": 91,
       "11/16/2025": 91,
       "11/17/2025": 91,
-      "11/18/2025": 91
+      "11/18/2025": 93
     }
   },
-  "overall_average": 83,
+  "overall_average": 84,
   "average_history": {
     "11/4/2025": 85,
     "11/5/2025": 78,
@@ -276,6 +276,6 @@
     "11/15/2025": 83,
     "11/16/2025": 83,
     "11/17/2025": 83,
-    "11/18/2025": 83
+    "11/18/2025": 84
   }
 }
