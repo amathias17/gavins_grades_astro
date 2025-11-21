@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "11/21/2025, 03:12 AM",
+    "last_updated": "11/21/2025, 11:10 AM",
     "most_recent_date": "11/21/2025",
     "total_classes": 9
   },
@@ -33,9 +33,9 @@
       "period": "2",
       "q1_grade": 85,
       "q1_letter_grade": "B",
-      "q2_grade": 78,
+      "q2_grade": 79,
       "q2_letter_grade": "C",
-      "current_grade": 78,
+      "current_grade": 79,
       "letter_grade": "C"
     },
     {
@@ -164,7 +164,7 @@
       "11/18/2025": 71,
       "11/19/2025": 78,
       "11/20/2025": 78,
-      "11/21/2025": 78
+      "11/21/2025": 79
     },
     "History Pop Cult 1": {
       "11/4/2025": 73,
