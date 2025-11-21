@@ -1,7 +1,16 @@
 {
   "metadata": {
-    "last_updated": "11/21/2025, 11:10 AM",
-    "count": 0
+    "last_updated": "11/21/2025, 02:58 PM",
+    "count": 1
   },
-  "missing_assignments": []
+  "missing_assignments": [
+    {
+      "due_date": "11/21/2025  (Q2)",
+      "assignment_name": "Still Life Drawing",
+      "class_name": "ART 1",
+      "teacher": "Kathryn Curry",
+      "category": "Benchmark",
+      "max_points": "60"
+    }
+  ]
 }
