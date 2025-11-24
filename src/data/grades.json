@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "11/24/2025, 03:13 AM",
+    "last_updated": "11/24/2025, 10:16 AM",
     "most_recent_date": "11/24/2025",
     "total_classes": 9
   },
@@ -14,8 +14,7 @@
       "q2_grade": 66,
       "q2_letter_grade": "D",
       "current_grade": 66,
-      "letter_grade": "D",
-      "class_id": "0"
+      "letter_grade": "D"
     },
     {
       "class_name": "English 10",
@@ -26,60 +25,7 @@
       "q2_grade": 75,
       "q2_letter_grade": "C",
       "current_grade": 75,
-      "letter_grade": "C",
-      "class_id": "1",
-      "assignments": [
-        {
-          "id": "eng10-1",
-          "name": "Romeo and Juliet Essay",
-          "category": "Writing",
-          "dueDate": "11/15/2025",
-          "score": 42,
-          "maxPoints": 50,
-          "percentage": 84,
-          "status": "graded"
-        },
-        {
-          "id": "eng10-2",
-          "name": "Vocabulary Quiz Ch. 5",
-          "category": "Quiz",
-          "dueDate": "11/18/2025",
-          "score": 18,
-          "maxPoints": 20,
-          "percentage": 90,
-          "status": "graded"
-        },
-        {
-          "id": "eng10-3",
-          "name": "Shakespeare Presentation",
-          "category": "Project",
-          "dueDate": "11/22/2025",
-          "score": 68,
-          "maxPoints": 100,
-          "percentage": 68,
-          "status": "graded"
-        },
-        {
-          "id": "eng10-4",
-          "name": "Reading Log Week 10",
-          "category": "Homework",
-          "dueDate": "11/20/2025",
-          "score": null,
-          "maxPoints": 10,
-          "percentage": null,
-          "status": "missing"
-        },
-        {
-          "id": "eng10-5",
-          "name": "Figurative Language Worksheet",
-          "category": "Homework",
-          "dueDate": "11/12/2025",
-          "score": 15,
-          "maxPoints": 15,
-          "percentage": 100,
-          "status": "graded"
-        }
-      ]
+      "letter_grade": "C"
     },
     {
       "class_name": "Biology 2",
@@ -90,50 +36,7 @@
       "q2_grade": 79,
       "q2_letter_grade": "C",
       "current_grade": 79,
-      "letter_grade": "C",
-      "class_id": "2",
-      "assignments": [
-        {
-          "id": "bio2-1",
-          "name": "Cell Structure Lab Report",
-          "category": "Lab",
-          "dueDate": "11/10/2025",
-          "score": 85,
-          "maxPoints": 100,
-          "percentage": 85,
-          "status": "graded"
-        },
-        {
-          "id": "bio2-2",
-          "name": "Chapter 7 Test - Genetics",
-          "category": "Test",
-          "dueDate": "11/19/2025",
-          "score": 65,
-          "maxPoints": 100,
-          "percentage": 65,
-          "status": "graded"
-        },
-        {
-          "id": "bio2-3",
-          "name": "DNA Model Project",
-          "category": "Project",
-          "dueDate": "11/23/2025",
-          "score": 92,
-          "maxPoints": 100,
-          "percentage": 92,
-          "status": "graded"
-        },
-        {
-          "id": "bio2-4",
-          "name": "Homework Problems Ch. 7",
-          "category": "Homework",
-          "dueDate": "11/17/2025",
-          "score": 8,
-          "maxPoints": 10,
-          "percentage": 80,
-          "status": "graded"
-        }
-      ]
+      "letter_grade": "C"
     },
     {
       "class_name": "History Pop Cult 1",
@@ -144,8 +47,7 @@
       "q2_grade": 90,
       "q2_letter_grade": "A",
       "current_grade": 90,
-      "letter_grade": "A",
-      "class_id": "3"
+      "letter_grade": "A"
     },
     {
       "class_name": "Art 1",
@@ -156,8 +58,7 @@
       "q2_grade": 84,
       "q2_letter_grade": "B",
       "current_grade": 84,
-      "letter_grade": "B",
-      "class_id": "4"
+      "letter_grade": "B"
     },
     {
       "class_name": "Physical Educ",
@@ -168,8 +69,7 @@
       "q2_grade": 100,
       "q2_letter_grade": "A",
       "current_grade": 100,
-      "letter_grade": "A",
-      "class_id": "5"
+      "letter_grade": "A"
     },
     {
       "class_name": "Amer Studies",
@@ -180,8 +80,7 @@
       "q2_grade": 100,
       "q2_letter_grade": "A",
       "current_grade": 100,
-      "letter_grade": "A",
-      "class_id": "6"
+      "letter_grade": "A"
     },
     {
       "class_name": "Intermediate Geometry",
@@ -192,60 +91,7 @@
       "q2_grade": 69,
       "q2_letter_grade": "D",
       "current_grade": 69,
-      "letter_grade": "D",
-      "class_id": "7",
-      "assignments": [
-        {
-          "id": "geo7-1",
-          "name": "Triangle Proofs Homework",
-          "category": "Homework",
-          "dueDate": "11/14/2025",
-          "score": 7,
-          "maxPoints": 10,
-          "percentage": 70,
-          "status": "graded"
-        },
-        {
-          "id": "geo7-2",
-          "name": "Chapter 5 Test",
-          "category": "Test",
-          "dueDate": "11/20/2025",
-          "score": 55,
-          "maxPoints": 100,
-          "percentage": 55,
-          "status": "graded"
-        },
-        {
-          "id": "geo7-3",
-          "name": "Quiz: Pythagorean Theorem",
-          "category": "Quiz",
-          "dueDate": "11/16/2025",
-          "score": 24,
-          "maxPoints": 30,
-          "percentage": 80,
-          "status": "graded"
-        },
-        {
-          "id": "geo7-4",
-          "name": "Practice Problems Set 12",
-          "category": "Homework",
-          "dueDate": "11/21/2025",
-          "score": null,
-          "maxPoints": 10,
-          "percentage": null,
-          "status": "missing"
-        },
-        {
-          "id": "geo7-5",
-          "name": "Geometric Constructions",
-          "category": "Classwork",
-          "dueDate": "11/18/2025",
-          "score": 15,
-          "maxPoints": 15,
-          "percentage": 100,
-          "status": "graded"
-        }
-      ]
+      "letter_grade": "D"
     },
     {
       "class_name": "Health",
@@ -256,8 +102,7 @@
       "q2_grade": 94,
       "q2_letter_grade": "A",
       "current_grade": 94,
-      "letter_grade": "A",
-      "class_id": "8"
+      "letter_grade": "A"
     }
   ],
   "grade_history": {
