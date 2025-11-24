@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "11/24/2025, 12:11 PM",
+    "last_updated": "11/24/2025, 03:01 PM",
     "most_recent_date": "11/24/2025",
     "total_classes": 9
   },
@@ -33,10 +33,10 @@
       "period": "2",
       "q1_grade": 85,
       "q1_letter_grade": "B",
-      "q2_grade": 79,
-      "q2_letter_grade": "C",
-      "current_grade": 79,
-      "letter_grade": "C"
+      "q2_grade": 82,
+      "q2_letter_grade": "B",
+      "current_grade": 82,
+      "letter_grade": "B"
     },
     {
       "class_name": "History Pop Cult 1",
@@ -113,7 +113,7 @@
       "11/24/2025": 75
     },
     "Biology 2": {
-      "11/24/2025": 79
+      "11/24/2025": 82
     },
     "History Pop Cult 1": {
       "11/24/2025": 90
