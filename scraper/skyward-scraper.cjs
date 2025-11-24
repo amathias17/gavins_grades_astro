@@ -134,6 +134,127 @@ async function scrapeGrades(username, password) {
 
         console.log('Extracting grades...');
 
+        // Helper function to extract assignments for a specific class
+        async function scrapeClassAssignments(page, gradeLink, className) {
+            try {
+                console.log(`  Scraping assignments for: ${className}`);
+
+                // Click the grade link to open assignment details
+                await gradeLink.click();
+
+                // Wait for the assignment details to load (could be a modal, popup, or new section)
+                await page.waitForTimeout(2000);
+
+                // Extract assignment data from the page
+                const assignments = await page.evaluate(() => {
+                    const assignmentData = [];
+
+                    // Look for assignment rows - Skyward typically uses tables for assignment lists
+                    // Common patterns: rows with assignment details in a gradebook modal/section
+                    const assignmentRows = document.querySelectorAll('tr[data-assignment], .assignment-row, table.sf_gridContent tr');
+
+                    assignmentRows.forEach((row, index) => {
+                        const cells = row.querySelectorAll('td');
+                        if (cells.length < 3) return; // Skip header rows or incomplete data
+
+                        // Try to extract assignment information
+                        // Common Skyward format: Date | Assignment Name | Category | Score | Possible Points
+                        let assignmentName = '';
+                        let category = '';
+                        let dueDate = '';
+                        let score = null;
+                        let maxPoints = 0;
+
+                        // Look for assignment name (usually in a specific cell with a link or bold text)
+                        for (let i = 0; i < cells.length; i++) {
+                            const cellText = cells[i].textContent.trim();
+                            const cellHTML = cells[i].innerHTML;
+
+                            // Assignment name typically has a link or is in a specific column
+                            if (i === 1 || cellHTML.includes('<a') || cellHTML.includes('<b')) {
+                                if (!assignmentName && cellText && cellText.length > 3) {
+                                    assignmentName = cellText;
+                                }
+                            }
+
+                            // Look for date patterns (MM/DD/YYYY or similar)
+                            if (cellText.match(/\d{1,2}\/\d{1,2}\/\d{2,4}/)) {
+                                dueDate = cellText;
+                            }
+
+                            // Look for score patterns (e.g., "85/100" or "85" in a score column)
+                            const scoreMatch = cellText.match(/(\d+(?:\.\d+)?)\s*\/\s*(\d+(?:\.\d+)?)/);
+                            if (scoreMatch) {
+                                score = parseFloat(scoreMatch[1]);
+                                maxPoints = parseFloat(scoreMatch[2]);
+                            } else if (cellText === 'Missing' || cellText.toLowerCase().includes('miss')) {
+                                score = null;
+                                // Try to find max points in next cell or nearby
+                                if (i + 1 < cells.length) {
+                                    const nextCell = cells[i + 1].textContent.trim();
+                                    const pointsMatch = nextCell.match(/(\d+(?:\.\d+)?)/);
+                                    if (pointsMatch) {
+                                        maxPoints = parseFloat(pointsMatch[1]);
+                                    }
+                                }
+                            }
+
+                            // Category is often in a specific column (could be "Homework", "Test", "Quiz", etc.)
+                            if (cellText && !category && (
+                                cellText.toLowerCase().includes('homework') ||
+                                cellText.toLowerCase().includes('test') ||
+                                cellText.toLowerCase().includes('quiz') ||
+                                cellText.toLowerCase().includes('project') ||
+                                cellText.toLowerCase().includes('lab') ||
+                                cellText.toLowerCase().includes('classwork')
+                            )) {
+                                category = cellText;
+                            }
+                        }
+
+                        // Only add if we have at least a name and max points
+                        if (assignmentName && maxPoints > 0) {
+                            const percentage = score !== null ? Math.round((score / maxPoints) * 100) : null;
+                            const status = score === null ? 'missing' : 'graded';
+
+                            assignmentData.push({
+                                id: `${assignmentName.toLowerCase().replace(/[^a-z0-9]/g, '-')}-${index}`,
+                                name: assignmentName,
+                                category: category || 'Assignment',
+                                dueDate: dueDate || 'N/A',
+                                score: score,
+                                maxPoints: maxPoints,
+                                percentage: percentage,
+                                status: status
+                            });
+                        }
+                    });
+
+                    return assignmentData;
+                });
+
+                console.log(`    Found ${assignments.length} assignments`);
+
+                // Close the modal/popup if needed (try clicking close button or pressing Escape)
+                try {
+                    const closeButton = await page.locator('button:has-text("Close"), button:has-text("×"), .close, [aria-label="Close"]').first();
+                    if (await closeButton.isVisible({ timeout: 1000 })) {
+                        await closeButton.click();
+                    } else {
+                        await page.keyboard.press('Escape');
+                    }
+                    await page.waitForTimeout(500);
+                } catch (e) {
+                    // Close button not found, that's okay
+                }
+
+                return assignments;
+            } catch (error) {
+                console.log(`    Error scraping assignments for ${className}: ${error.message}`);
+                return [];
+            }
+        }
+
         // Extract grade data from the page
         const gradeData = await popup.evaluate(() => {
             const classes = [];
@@ -239,6 +360,47 @@ async function scrapeGrades(username, password) {
         });
 
         console.log(`Found ${gradeData.length} classes with grades`);
+
+        // Now scrape assignments for each class with a Q2 grade
+        console.log('Scraping individual class assignments...');
+        for (const classData of gradeData) {
+            try {
+                // Find the grade link for Q2 (current quarter) to click
+                const gradeLinks = await popup.locator(`a[id="showGradeInfo"]`).all();
+
+                // Match by finding the link that's in the same row as this class
+                // This is a simplified approach - we'll click each Q2 grade link sequentially
+                const classIndex = gradeData.indexOf(classData);
+
+                if (classIndex < gradeLinks.length && classData.q2_grade !== null) {
+                    // Click on the Q2 grade link (usually second link for each class)
+                    // Skip Q1, take Q2 (every other link starting from index 1, 3, 5...)
+                    const q2LinkIndex = classIndex * 2 + 1; // Q2 is the second link per class
+
+                    if (q2LinkIndex < gradeLinks.length) {
+                        const assignments = await scrapeClassAssignments(
+                            popup,
+                            gradeLinks[q2LinkIndex],
+                            classData.class_name
+                        );
+
+                        classData.assignments = assignments;
+                        classData.class_id = classData.period;
+                    }
+                } else {
+                    // No Q2 grade or link, use period as ID anyway
+                    classData.class_id = classData.period;
+                    classData.assignments = [];
+                }
+
+                // Small delay between classes to avoid overwhelming the server
+                await popup.waitForTimeout(500);
+            } catch (error) {
+                console.log(`Error processing assignments for ${classData.class_name}: ${error.message}`);
+                classData.class_id = classData.period;
+                classData.assignments = [];
+            }
+        }
 
         // Now scrape missing assignments
         console.log('Checking for missing assignments...');

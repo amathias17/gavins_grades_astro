@@ -86,7 +86,7 @@ function getGradeColor(grade: number): string {
             </div>
             {
                 data.map((i) => (
-                    <div class="mb-[15px] p-[15px] border-[3px] border-solid border-[#555] bg-[#000]">
+                    <a href={`/classes/${i.period}`} class="block mb-[15px] p-[15px] border-[3px] border-solid border-[#555] bg-[#000] hover:border-[#00ff00] hover:shadow-[0_0_10px_rgba(0,255,0,0.3)] transition-all cursor-pointer">
                         <div class="flex justify-between items-center flex-wrap gap-2.5 mb-[15px]">
                             <>
                                 <span class="text-[0.6em] text-white uppercase">
@@ -113,7 +113,7 @@ function getGradeColor(grade: number): string {
                                 style={`width: ${i.grade}%`}
                             />
                         </div>
-                    </div>
+                    </a>
                 ))
             }
         </div>
