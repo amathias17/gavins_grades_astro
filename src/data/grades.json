@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "11/24/2025, 10:16 AM",
+    "last_updated": "11/24/2025, 10:36 AM",
     "most_recent_date": "11/24/2025",
     "total_classes": 9
   },
@@ -14,9 +14,7 @@
       "q2_grade": 66,
       "q2_letter_grade": "D",
       "current_grade": 66,
-      "letter_grade": "D",
-      "class_id": "0",
-      "assignments": []
+      "letter_grade": "D"
     },
     {
       "class_name": "English 10",
@@ -27,40 +25,7 @@
       "q2_grade": 75,
       "q2_letter_grade": "C",
       "current_grade": 75,
-      "letter_grade": "C",
-      "class_id": "1",
-      "assignments": [
-        {
-          "id": "eng10-1",
-          "name": "Romeo and Juliet Essay",
-          "category": "Writing",
-          "dueDate": "11/15/2025",
-          "score": 42,
-          "maxPoints": 50,
-          "percentage": 84,
-          "status": "graded"
-        },
-        {
-          "id": "eng10-2",
-          "name": "Vocabulary Quiz Ch. 5",
-          "category": "Quiz",
-          "dueDate": "11/18/2025",
-          "score": 18,
-          "maxPoints": 20,
-          "percentage": 90,
-          "status": "graded"
-        },
-        {
-          "id": "eng10-3",
-          "name": "Shakespeare Presentation",
-          "category": "Project",
-          "dueDate": "11/22/2025",
-          "score": 68,
-          "maxPoints": 100,
-          "percentage": 68,
-          "status": "graded"
-        }
-      ]
+      "letter_grade": "C"
     },
     {
       "class_name": "Biology 2",
@@ -71,9 +36,7 @@
       "q2_grade": 79,
       "q2_letter_grade": "C",
       "current_grade": 79,
-      "letter_grade": "C",
-      "class_id": "2",
-      "assignments": []
+      "letter_grade": "C"
     },
     {
       "class_name": "History Pop Cult 1",
@@ -84,9 +47,7 @@
       "q2_grade": 90,
       "q2_letter_grade": "A",
       "current_grade": 90,
-      "letter_grade": "A",
-      "class_id": "3",
-      "assignments": []
+      "letter_grade": "A"
     },
     {
       "class_name": "Art 1",
@@ -97,9 +58,7 @@
       "q2_grade": 84,
       "q2_letter_grade": "B",
       "current_grade": 84,
-      "letter_grade": "B",
-      "class_id": "4",
-      "assignments": []
+      "letter_grade": "B"
     },
     {
       "class_name": "Physical Educ",
@@ -110,9 +69,7 @@
       "q2_grade": 100,
       "q2_letter_grade": "A",
       "current_grade": 100,
-      "letter_grade": "A",
-      "class_id": "5",
-      "assignments": []
+      "letter_grade": "A"
     },
     {
       "class_name": "Amer Studies",
@@ -123,9 +80,7 @@
       "q2_grade": 100,
       "q2_letter_grade": "A",
       "current_grade": 100,
-      "letter_grade": "A",
-      "class_id": "6",
-      "assignments": []
+      "letter_grade": "A"
     },
     {
       "class_name": "Intermediate Geometry",
@@ -136,9 +91,7 @@
       "q2_grade": 69,
       "q2_letter_grade": "D",
       "current_grade": 69,
-      "letter_grade": "D",
-      "class_id": "7",
-      "assignments": []
+      "letter_grade": "D"
     },
     {
       "class_name": "Health",
@@ -149,9 +102,7 @@
       "q2_grade": 94,
       "q2_letter_grade": "A",
       "current_grade": 94,
-      "letter_grade": "A",
-      "class_id": "8",
-      "assignments": []
+      "letter_grade": "A"
     }
   ],
   "grade_history": {

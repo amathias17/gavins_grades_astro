@@ -1,7 +1,40 @@
 {
   "metadata": {
-    "last_updated": "11/24/2025, 10:16 AM",
-    "count": 0
+    "last_updated": "11/24/2025, 10:36 AM",
+    "count": 5
   },
-  "missing_assignments": []
+  "missing_assignments": [
+    {
+      "due_date": "11/21/2025  (Q2)",
+      "assignment_name": "Still Life Drawing",
+      "class_name": "ART 1",
+      "teacher": "Kathryn Curry",
+      "category": "Benchmark",
+      "max_points": "60"
+    },
+    {
+      "due_date": "11/21/25",
+      "assignment_name": "Class Participation and Dress",
+      "class_name": "100",
+      "teacher": "50 out of 50"
+    },
+    {
+      "due_date": "11/14/25",
+      "assignment_name": "Class Participation and Dress",
+      "class_name": "100",
+      "teacher": "40 out of 40"
+    },
+    {
+      "due_date": "11/07/25",
+      "assignment_name": "Class Participation and Dress",
+      "class_name": "100",
+      "teacher": "40 out of 40"
+    },
+    {
+      "due_date": "10/30/25",
+      "assignment_name": "Class Participation and Dress",
+      "class_name": "100",
+      "teacher": "40 out of 40"
+    }
+  ]
 }
