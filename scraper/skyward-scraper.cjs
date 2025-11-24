@@ -143,98 +143,155 @@ async function scrapeGrades(username, password) {
                 await gradeLink.click({ force: true });
 
                 // Wait for the modal dialog to appear
-                await page.waitForSelector('#gradeInfoDialog', { timeout: 5000 });
-                await page.waitForTimeout(1500);
+                await page.waitForSelector('#gradeInfoDialog', { timeout: 10000 });
+                await page.waitForTimeout(2000);
 
-                // Extract assignment data from the page
-                const assignments = await page.evaluate(() => {
-                    const assignmentData = [];
+                // Collect all assignments across all pages
+                const allAssignments = [];
+                let pageNumber = 1;
+                let hasNextPage = true;
 
-                    // Look for assignment rows - Skyward typically uses tables for assignment lists
-                    // Common patterns: rows with assignment details in a gradebook modal/section
-                    const assignmentRows = document.querySelectorAll('tr[data-assignment], .assignment-row, table.sf_gridContent tr');
+                while (hasNextPage) {
+                    console.log(`    Scraping page ${pageNumber}...`);
 
-                    assignmentRows.forEach((row, index) => {
-                        const cells = row.querySelectorAll('td');
-                        if (cells.length < 3) return; // Skip header rows or incomplete data
+                    // Extract assignment data from current page
+                    const pageAssignments = await page.evaluate(() => {
+                        const assignmentData = [];
 
-                        // Try to extract assignment information
-                        // Common Skyward format: Date | Assignment Name | Category | Score | Possible Points
-                        let assignmentName = '';
-                        let category = '';
-                        let dueDate = '';
-                        let score = null;
-                        let maxPoints = 0;
+                        // Look for assignment rows - Skyward typically uses tables for assignment lists
+                        const assignmentRows = document.querySelectorAll('tr[data-assignment], .assignment-row, table.sf_gridContent tr');
 
-                        // Look for assignment name (usually in a specific cell with a link or bold text)
-                        for (let i = 0; i < cells.length; i++) {
-                            const cellText = cells[i].textContent.trim();
-                            const cellHTML = cells[i].innerHTML;
+                        assignmentRows.forEach((row, index) => {
+                            const cells = row.querySelectorAll('td');
+                            if (cells.length < 3) return; // Skip header rows or incomplete data
 
-                            // Assignment name typically has a link or is in a specific column
-                            if (i === 1 || cellHTML.includes('<a') || cellHTML.includes('<b')) {
-                                if (!assignmentName && cellText && cellText.length > 3) {
-                                    assignmentName = cellText;
-                                }
-                            }
+                            // Try to extract assignment information
+                            let assignmentName = '';
+                            let category = '';
+                            let dueDate = '';
+                            let score = null;
+                            let maxPoints = 0;
 
-                            // Look for date patterns (MM/DD/YYYY or similar)
-                            if (cellText.match(/\d{1,2}\/\d{1,2}\/\d{2,4}/)) {
-                                dueDate = cellText;
-                            }
+                            // Look for assignment name (usually in a specific cell with a link or bold text)
+                            for (let i = 0; i < cells.length; i++) {
+                                const cellText = cells[i].textContent.trim();
+                                const cellHTML = cells[i].innerHTML;
 
-                            // Look for score patterns (e.g., "85/100" or "85" in a score column)
-                            const scoreMatch = cellText.match(/(\d+(?:\.\d+)?)\s*\/\s*(\d+(?:\.\d+)?)/);
-                            if (scoreMatch) {
-                                score = parseFloat(scoreMatch[1]);
-                                maxPoints = parseFloat(scoreMatch[2]);
-                            } else if (cellText === 'Missing' || cellText.toLowerCase().includes('miss')) {
-                                score = null;
-                                // Try to find max points in next cell or nearby
-                                if (i + 1 < cells.length) {
-                                    const nextCell = cells[i + 1].textContent.trim();
-                                    const pointsMatch = nextCell.match(/(\d+(?:\.\d+)?)/);
-                                    if (pointsMatch) {
-                                        maxPoints = parseFloat(pointsMatch[1]);
+                                // Assignment name typically has a link or is in a specific column
+                                if (i === 1 || cellHTML.includes('<a') || cellHTML.includes('<b')) {
+                                    if (!assignmentName && cellText && cellText.length > 3) {
+                                        assignmentName = cellText;
                                     }
                                 }
+
+                                // Look for date patterns (MM/DD/YYYY or similar)
+                                if (cellText.match(/\d{1,2}\/\d{1,2}\/\d{2,4}/)) {
+                                    dueDate = cellText;
+                                }
+
+                                // Look for score patterns (e.g., "85/100" or "85" in a score column)
+                                const scoreMatch = cellText.match(/(\d+(?:\.\d+)?)\s*\/\s*(\d+(?:\.\d+)?)/);
+                                if (scoreMatch) {
+                                    score = parseFloat(scoreMatch[1]);
+                                    maxPoints = parseFloat(scoreMatch[2]);
+                                } else if (cellText === 'Missing' || cellText.toLowerCase().includes('miss')) {
+                                    score = null;
+                                    // Try to find max points in next cell or nearby
+                                    if (i + 1 < cells.length) {
+                                        const nextCell = cells[i + 1].textContent.trim();
+                                        const pointsMatch = nextCell.match(/(\d+(?:\.\d+)?)/);
+                                        if (pointsMatch) {
+                                            maxPoints = parseFloat(pointsMatch[1]);
+                                        }
+                                    }
+                                }
+
+                                // Category is often in a specific column
+                                if (cellText && !category && (
+                                    cellText.toLowerCase().includes('homework') ||
+                                    cellText.toLowerCase().includes('test') ||
+                                    cellText.toLowerCase().includes('quiz') ||
+                                    cellText.toLowerCase().includes('project') ||
+                                    cellText.toLowerCase().includes('lab') ||
+                                    cellText.toLowerCase().includes('classwork') ||
+                                    cellText.toLowerCase().includes('writing')
+                                )) {
+                                    category = cellText;
+                                }
                             }
 
-                            // Category is often in a specific column (could be "Homework", "Test", "Quiz", etc.)
-                            if (cellText && !category && (
-                                cellText.toLowerCase().includes('homework') ||
-                                cellText.toLowerCase().includes('test') ||
-                                cellText.toLowerCase().includes('quiz') ||
-                                cellText.toLowerCase().includes('project') ||
-                                cellText.toLowerCase().includes('lab') ||
-                                cellText.toLowerCase().includes('classwork')
-                            )) {
-                                category = cellText;
+                            // Only add if we have at least a name and max points
+                            if (assignmentName && maxPoints > 0) {
+                                const percentage = score !== null ? Math.round((score / maxPoints) * 100) : null;
+                                const status = score === null ? 'missing' : 'graded';
+
+                                assignmentData.push({
+                                    name: assignmentName,
+                                    category: category || 'Assignment',
+                                    dueDate: dueDate || 'N/A',
+                                    score: score,
+                                    maxPoints: maxPoints,
+                                    percentage: percentage,
+                                    status: status
+                                });
                             }
-                        }
+                        });
 
-                        // Only add if we have at least a name and max points
-                        if (assignmentName && maxPoints > 0) {
-                            const percentage = score !== null ? Math.round((score / maxPoints) * 100) : null;
-                            const status = score === null ? 'missing' : 'graded';
-
-                            assignmentData.push({
-                                id: `${assignmentName.toLowerCase().replace(/[^a-z0-9]/g, '-')}-${index}`,
-                                name: assignmentName,
-                                category: category || 'Assignment',
-                                dueDate: dueDate || 'N/A',
-                                score: score,
-                                maxPoints: maxPoints,
-                                percentage: percentage,
-                                status: status
-                            });
-                        }
+                        return assignmentData;
                     });
 
-                    return assignmentData;
-                });
+                    // Add assignments from this page to the collection
+                    allAssignments.push(...pageAssignments);
+                    console.log(`      Found ${pageAssignments.length} assignments on page ${pageNumber}`);
 
-                console.log(`    Found ${assignments.length} assignments`);
+                    // Check for Next button and click it if present
+                    try {
+                        const nextButtonSelectors = [
+                            'input[value="Next"]',
+                            'button:has-text("Next")',
+                            'a:has-text("Next")',
+                            '#gradeInfoDialog input[type="button"][value="Next"]',
+                            '.sf_gridFooter input[value="Next"]'
+                        ];
+
+                        let nextButtonClicked = false;
+                        for (const selector of nextButtonSelectors) {
+                            try {
+                                const nextButton = page.locator(selector).first();
+                                const isVisible = await nextButton.isVisible({ timeout: 1000 });
+                                const isEnabled = await nextButton.isEnabled({ timeout: 1000 });
+
+                                if (isVisible && isEnabled) {
+                                    await nextButton.click({ force: true, timeout: 5000 });
+                                    await page.waitForTimeout(2000); // Wait for next page to load
+                                    nextButtonClicked = true;
+                                    pageNumber++;
+                                    console.log(`      Clicked Next button, moving to page ${pageNumber}`);
+                                    break;
+                                }
+                            } catch (e) {
+                                // Try next selector
+                                continue;
+                            }
+                        }
+
+                        if (!nextButtonClicked) {
+                            hasNextPage = false;
+                            console.log(`      No more pages found`);
+                        }
+                    } catch (error) {
+                        hasNextPage = false;
+                        console.log(`      Pagination check failed: ${error.message}`);
+                    }
+                }
+
+                // Add unique IDs to all assignments
+                const assignments = allAssignments.map((assignment, index) => ({
+                    ...assignment,
+                    id: `${assignment.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}-${index}`
+                }));
+
+                console.log(`    Total assignments collected: ${assignments.length}`);
 
                 // Close the modal dialog - Skyward uses a specific expand/collapse button
                 try {
@@ -251,11 +308,11 @@ async function scrapeGrades(username, password) {
                     for (const selector of closeSelectors) {
                         try {
                             const closeBtn = page.locator(selector).first();
-                            if (await closeBtn.isVisible({ timeout: 1000 })) {
-                                await closeBtn.click({ force: true, timeout: 5000 });
+                            if (await closeBtn.isVisible({ timeout: 2000 })) {
+                                await closeBtn.click({ force: true, timeout: 8000 });
                                 closed = true;
                                 console.log(`    Closed modal using: ${selector}`);
-                                await page.waitForTimeout(500);
+                                await page.waitForTimeout(1000);
                                 break;
                             }
                         } catch (e) {
@@ -271,15 +328,15 @@ async function scrapeGrades(username, password) {
                     }
 
                     // Wait for the dialog to close completely
-                    await page.waitForSelector('#gradeInfoDialog', { state: 'hidden', timeout: 5000 }).catch(() => {
+                    await page.waitForSelector('#gradeInfoDialog', { state: 'hidden', timeout: 8000 }).catch(() => {
                         console.log('    Dialog may still be visible, continuing anyway');
                     });
-                    await page.waitForTimeout(1000);
+                    await page.waitForTimeout(1500);
                 } catch (e) {
                     console.log(`    Warning: Could not close modal: ${e.message}`);
                     // Try one more time with Escape
                     await page.keyboard.press('Escape');
-                    await page.waitForTimeout(1000);
+                    await page.waitForTimeout(1500);
                 }
 
                 return assignments;
@@ -401,17 +458,21 @@ async function scrapeGrades(username, password) {
             try {
                 // IMPORTANT: Before clicking a new grade link, ensure any previous modal is closed
                 try {
-                    const dialogVisible = await popup.locator('#gradeInfoDialog').isVisible();
+                    const dialogVisible = await popup.locator('#gradeInfoDialog').isVisible({ timeout: 2000 });
                     if (dialogVisible) {
                         console.log(`  Closing previous modal before processing ${classData.class_name}...`);
                         // Try to close with the expand button
                         const expandBtn = popup.locator('.sf_expander.vAt.sf_expandIcon').first();
-                        if (await expandBtn.isVisible({ timeout: 1000 })) {
-                            await expandBtn.click({ force: true });
-                            await popup.waitForTimeout(800);
+                        if (await expandBtn.isVisible({ timeout: 2000 })) {
+                            await expandBtn.click({ force: true, timeout: 8000 });
+                            await popup.waitForTimeout(1500);
+                            // Verify it closed
+                            await popup.waitForSelector('#gradeInfoDialog', { state: 'hidden', timeout: 8000 }).catch(() => {
+                                console.log('    Warning: Modal may not have closed completely');
+                            });
                         } else {
                             await popup.keyboard.press('Escape');
-                            await popup.waitForTimeout(500);
+                            await popup.waitForTimeout(1000);
                         }
                     }
                 } catch (e) {
@@ -455,93 +516,60 @@ async function scrapeGrades(username, password) {
             }
         }
 
-        // Now scrape missing assignments
-        console.log('Checking for missing assignments...');
+        // Filter missing assignments from the collected assignment data
+        console.log('Filtering truly missing assignments...');
         let missingAssignments = [];
 
         try {
-            // Click the missing assignments button
-            const missingButton = await popup.locator('#missingAssignments');
-            if (await missingButton.isVisible({ timeout: 5000 })) {
-                await missingButton.click();
-                console.log('Clicked missing assignments button');
+            const currentDate = new Date();
 
-                // Wait for the missing assignments content to load
-                await popup.waitForTimeout(2000);
+            // Iterate through all classes and their assignments
+            for (const classData of gradeData) {
+                if (!classData.assignments || classData.assignments.length === 0) continue;
 
-                // Check if there are no missing assignments
-                const noMissingText = await popup.locator('text=No Missing Assignments!').count();
-
-                if (noMissingText > 0) {
-                    console.log('No missing assignments found');
-                } else {
-                    console.log('Extracting missing assignments...');
-
-                    // Take a screenshot for debugging
-                    await popup.screenshot({ path: 'missing-assignments-screenshot.png' });
-
-                    // Extract missing assignments data
-                    missingAssignments = await popup.evaluate(() => {
-                        const assignments = [];
-                        const seen = new Set(); // Track unique assignments
-
-                        // Look for rows that have actual assignment data
-                        // Structure: Due | Assignment | Class | Teacher | Category | Max Points | Absent
-                        const rows = document.querySelectorAll('table tr');
-
-                        rows.forEach(row => {
-                            const cells = row.querySelectorAll('td');
-
-                            // We need at least 4 cells for a valid assignment row
-                            if (cells.length < 4) return;
-
-                            const date = cells[0]?.textContent.trim() || '';
-                            const assignmentName = cells[1]?.textContent.trim() || '';
-                            const className = cells[2]?.textContent.trim() || '';
-                            const teacher = cells[3]?.textContent.trim() || '';
-                            const category = cells.length >= 5 ? cells[4]?.textContent.trim() || '' : '';
-                            const maxPoints = cells.length >= 6 ? cells[5]?.textContent.trim() || '' : '';
-                            const absent = cells.length >= 7 ? cells[6]?.textContent.trim() || '' : '';
-
-                            // Skip if this looks like header text or empty
-                            if (!date || !assignmentName || !className) return;
-                            if (date.toLowerCase().includes('due') || date.toLowerCase().includes('gavin')) return;
-                            if (assignmentName.toLowerCase().includes('due') || assignmentName.toLowerCase().includes('gavin')) return;
-
-                            // Skip rows that don't have a date pattern (should have "/" or "Q")
-                            if (!date.match(/\d+\/\d+\/\d+/) && !date.includes('Q')) return;
-
-                            // Create a unique key to check for duplicates
-                            const uniqueKey = `${date}|${className}|${assignmentName}`;
-
-                            // Only add if we haven't seen this exact assignment before
-                            if (!seen.has(uniqueKey)) {
-                                seen.add(uniqueKey);
-                                const assignment = {
-                                    due_date: date,
-                                    assignment_name: assignmentName,
-                                    class_name: className,
-                                    teacher: teacher
-                                };
-
-                                if (category) assignment.category = category;
-                                if (maxPoints) assignment.max_points = maxPoints;
-                                if (absent) assignment.absent = absent;
-
-                                assignments.push(assignment);
+                for (const assignment of classData.assignments) {
+                    // Parse the due date
+                    let isPastDue = false;
+                    if (assignment.dueDate && assignment.dueDate !== 'N/A') {
+                        try {
+                            // Handle MM/DD/YYYY format
+                            const dateParts = assignment.dueDate.match(/(\d{1,2})\/(\d{1,2})\/(\d{2,4})/);
+                            if (dateParts) {
+                                const month = parseInt(dateParts[1]) - 1; // JS months are 0-indexed
+                                const day = parseInt(dateParts[2]);
+                                let year = parseInt(dateParts[3]);
+                                // Handle 2-digit years
+                                if (year < 100) {
+                                    year += 2000;
+                                }
+                                const dueDate = new Date(year, month, day);
+                                isPastDue = dueDate < currentDate;
                             }
+                        } catch (e) {
+                            console.log(`    Warning: Could not parse date ${assignment.dueDate}`);
+                        }
+                    }
+
+                    // Assignment is truly missing if:
+                    // 1. It's past the due date AND
+                    // 2. No score recorded (score is null) OR status is 'missing'
+                    if (isPastDue && (assignment.score === null || assignment.status === 'missing')) {
+                        missingAssignments.push({
+                            due_date: assignment.dueDate,
+                            assignment_name: assignment.name,
+                            class_name: classData.class_name,
+                            teacher: classData.teacher,
+                            category: assignment.category,
+                            max_points: assignment.maxPoints,
+                            status: assignment.status
                         });
-
-                        return assignments;
-                    });
-
-                    console.log(`Found ${missingAssignments.length} missing assignments`);
+                    }
                 }
-            } else {
-                console.log('Missing assignments button not found');
             }
+
+            console.log(`Found ${missingAssignments.length} truly missing assignments (past due + no grade)`);
         } catch (error) {
-            console.log('Error checking missing assignments:', error.message);
+            console.log('Error filtering missing assignments:', error.message);
             // Don't fail the whole scrape if missing assignments fails
         }
 
@@ -610,7 +638,9 @@ async function saveGradesToFile(grades, missingAssignments = []) {
         q2_letter_grade: cls.q2_letter_grade,
         // Use Q2 grade if available, otherwise Q1
         current_grade: cls.q2_grade !== null ? cls.q2_grade : cls.q1_grade,
-        letter_grade: cls.q2_letter_grade !== null ? cls.q2_letter_grade : cls.q1_letter_grade
+        letter_grade: cls.q2_letter_grade !== null ? cls.q2_letter_grade : cls.q1_letter_grade,
+        class_id: cls.class_id || cls.period,
+        assignments: cls.assignments || []
     }));
 
     // Update grade history
