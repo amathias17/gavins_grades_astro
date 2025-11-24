@@ -140,10 +140,11 @@ async function scrapeGrades(username, password) {
                 console.log(`  Scraping assignments for: ${className}`);
 
                 // Click the grade link to open assignment details
-                await gradeLink.click();
+                await gradeLink.click({ force: true });
 
-                // Wait for the assignment details to load (could be a modal, popup, or new section)
-                await page.waitForTimeout(2000);
+                // Wait for the modal dialog to appear
+                await page.waitForSelector('#gradeInfoDialog', { timeout: 5000 });
+                await page.waitForTimeout(1500);
 
                 // Extract assignment data from the page
                 const assignments = await page.evaluate(() => {
@@ -235,17 +236,50 @@ async function scrapeGrades(username, password) {
 
                 console.log(`    Found ${assignments.length} assignments`);
 
-                // Close the modal/popup if needed (try clicking close button or pressing Escape)
+                // Close the modal dialog - Skyward uses a specific expand/collapse button
                 try {
-                    const closeButton = await page.locator('button:has-text("Close"), button:has-text("×"), .close, [aria-label="Close"]').first();
-                    if (await closeButton.isVisible({ timeout: 1000 })) {
-                        await closeButton.click();
-                    } else {
+                    // The close button is the expand/collapse icon
+                    const closeSelectors = [
+                        '.sf_expander.vAt.sf_expandIcon',  // Primary Skyward close button
+                        '#gradeInfoDialog .sf_expander',
+                        'div[onclick*="hideGradeInfo"]',
+                        '#gradeInfoDialog button[onclick*="close"]',
+                        'button:has-text("Close")'
+                    ];
+
+                    let closed = false;
+                    for (const selector of closeSelectors) {
+                        try {
+                            const closeBtn = page.locator(selector).first();
+                            if (await closeBtn.isVisible({ timeout: 1000 })) {
+                                await closeBtn.click({ force: true, timeout: 5000 });
+                                closed = true;
+                                console.log(`    Closed modal using: ${selector}`);
+                                await page.waitForTimeout(500);
+                                break;
+                            }
+                        } catch (e) {
+                            // Try next selector
+                            continue;
+                        }
+                    }
+
+                    if (!closed) {
+                        // Fallback: Press Escape key
+                        console.log('    Trying Escape key to close modal');
                         await page.keyboard.press('Escape');
                     }
-                    await page.waitForTimeout(500);
+
+                    // Wait for the dialog to close completely
+                    await page.waitForSelector('#gradeInfoDialog', { state: 'hidden', timeout: 5000 }).catch(() => {
+                        console.log('    Dialog may still be visible, continuing anyway');
+                    });
+                    await page.waitForTimeout(1000);
                 } catch (e) {
-                    // Close button not found, that's okay
+                    console.log(`    Warning: Could not close modal: ${e.message}`);
+                    // Try one more time with Escape
+                    await page.keyboard.press('Escape');
+                    await page.waitForTimeout(1000);
                 }
 
                 return assignments;
@@ -365,6 +399,25 @@ async function scrapeGrades(username, password) {
         console.log('Scraping individual class assignments...');
         for (const classData of gradeData) {
             try {
+                // IMPORTANT: Before clicking a new grade link, ensure any previous modal is closed
+                try {
+                    const dialogVisible = await popup.locator('#gradeInfoDialog').isVisible();
+                    if (dialogVisible) {
+                        console.log(`  Closing previous modal before processing ${classData.class_name}...`);
+                        // Try to close with the expand button
+                        const expandBtn = popup.locator('.sf_expander.vAt.sf_expandIcon').first();
+                        if (await expandBtn.isVisible({ timeout: 1000 })) {
+                            await expandBtn.click({ force: true });
+                            await popup.waitForTimeout(800);
+                        } else {
+                            await popup.keyboard.press('Escape');
+                            await popup.waitForTimeout(500);
+                        }
+                    }
+                } catch (e) {
+                    // No modal open, continue
+                }
+
                 // Find the grade link for Q2 (current quarter) to click
                 const gradeLinks = await popup.locator(`a[id="showGradeInfo"]`).all();
 
@@ -394,7 +447,7 @@ async function scrapeGrades(username, password) {
                 }
 
                 // Small delay between classes to avoid overwhelming the server
-                await popup.waitForTimeout(500);
+                await popup.waitForTimeout(800);
             } catch (error) {
                 console.log(`Error processing assignments for ${classData.class_name}: ${error.message}`);
                 classData.class_id = classData.period;
