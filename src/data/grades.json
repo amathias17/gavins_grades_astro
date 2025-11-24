@@ -1,5 +1,6 @@
 {
   "metadata": {
+    "last_updated": "11/24/2025, 11:12 AM",
     "last_updated": "11/24/2025, 11:53 AM",
     "most_recent_date": "11/24/2025",
     "total_classes": 9
@@ -14,6 +15,9 @@
       "q2_grade": 66,
       "q2_letter_grade": "D",
       "current_grade": 66,
+      "letter_grade": "D",
+      "class_id": "0",
+      "assignments": []
       "letter_grade": "D",
       "class_id": "0",
       "assignments": [
@@ -80,6 +84,9 @@
       "current_grade": 75,
       "letter_grade": "C",
       "class_id": "1",
+      "assignments": []
+      "letter_grade": "C",
+      "class_id": "1",
       "assignments": [
         {
           "name": "Class Work",
@@ -142,6 +149,9 @@
       "q2_grade": 79,
       "q2_letter_grade": "C",
       "current_grade": 79,
+      "letter_grade": "C",
+      "class_id": "2",
+      "assignments": []
       "letter_grade": "C",
       "class_id": "2",
       "assignments": [
@@ -208,6 +218,9 @@
       "current_grade": 90,
       "letter_grade": "A",
       "class_id": "3",
+      "assignments": []
+      "letter_grade": "A",
+      "class_id": "3",
       "assignments": [
         {
           "name": "Class Work",
@@ -270,6 +283,9 @@
       "q2_grade": 84,
       "q2_letter_grade": "B",
       "current_grade": 84,
+      "letter_grade": "B",
+      "class_id": "4",
+      "assignments": []
       "letter_grade": "B",
       "class_id": "4",
       "assignments": [
@@ -336,6 +352,9 @@
       "current_grade": 100,
       "letter_grade": "A",
       "class_id": "5",
+      "assignments": []
+      "letter_grade": "A",
+      "class_id": "5",
       "assignments": [
         {
           "name": "Class Work",
@@ -398,6 +417,9 @@
       "q2_grade": 100,
       "q2_letter_grade": "A",
       "current_grade": 100,
+      "letter_grade": "A",
+      "class_id": "6",
+      "assignments": []
       "letter_grade": "A",
       "class_id": "6",
       "assignments": [
@@ -464,6 +486,9 @@
       "current_grade": 69,
       "letter_grade": "D",
       "class_id": "7",
+      "assignments": []
+      "letter_grade": "D",
+      "class_id": "7",
       "assignments": [
         {
           "name": "Class Work",
@@ -526,6 +551,9 @@
       "q2_grade": 94,
       "q2_letter_grade": "A",
       "current_grade": 94,
+      "letter_grade": "A",
+      "class_id": "8",
+      "assignments": []
       "letter_grade": "A",
       "class_id": "8",
       "assignments": [
