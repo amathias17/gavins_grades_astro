@@ -1,12 +1,16 @@
 {
   "metadata": {
-<<<<<<< HEAD
-    "last_updated": "11/24/2025, 11:53 AM",
-    "count": 0
-=======
-    "last_updated": "11/23/2025, 11:09 AM",
+    "last_updated": "11/24/2025, 12:11 PM",
     "count": 1
->>>>>>> parent of 1785d7d (Update grades data [automated])
   },
-  "missing_assignments": []
+  "missing_assignments": [
+    {
+      "due_date": "11/21/2025  (Q2)",
+      "assignment_name": "Still Life Drawing",
+      "class_name": "ART 1",
+      "teacher": "Kathryn Curry",
+      "category": "Benchmark",
+      "max_points": "60"
+    }
+  ]
 }

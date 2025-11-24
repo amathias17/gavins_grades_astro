@@ -9,11 +9,7 @@ async function scrapeGrades(username, password) {
         headless: true  // Set to true later for automation
     });
 
-    const context = await browser.newContext({
-        viewport: { width: 1920, height: 1080 }  // Set viewport size for full screen
-    });
-
-    const page = await context.newPage();
+    const page = await browser.newPage();
 
     try {
         // Navigate to login page
@@ -25,51 +21,13 @@ async function scrapeGrades(username, password) {
         await page.fill('input[name="login"]', username);
         await page.fill('input[name="password"]', password);
 
-        // Take a screenshot before attempting login
-        await page.screenshot({ path: 'debug-before-login.png' });
-        console.log('Screenshot taken before login attempt');
+        // Wait for the popup to open
+        const [popup] = await Promise.all([
+            page.context().waitForEvent('page'),
+            page.press('input[name="password"]', 'Enter')
+        ]);
 
-        // Check if there's a submit button instead of using Enter
-        const submitButton = page.locator('input[type="submit"], button[type="submit"]').first();
-        const submitButtonCount = await submitButton.count();
-        const hasSubmitButton = submitButtonCount > 0;
-        console.log(`Submit button found: ${hasSubmitButton}`);
-
-        // Set up listener for popup BEFORE clicking
-        const popupPromise = context.waitForEvent('page', { timeout: 10000 }).catch(() => null);
-
-        // Click the Sign In button
-        console.log('Clicking Sign In button...');
-        if (hasSubmitButton) {
-            await submitButton.click();
-        } else {
-            await page.press('input[name="password"]', 'Enter');
-        }
-
-        // Wait for popup or timeout
-        console.log('Waiting for popup window...');
-        let popup = await popupPromise;
-
-        // If no popup opened, check if page navigated in same window
-        if (!popup) {
-            console.log('No popup detected. Checking current page...');
-            await page.waitForTimeout(2000);
-            const currentUrl = page.url();
-            console.log(`Current URL: ${currentUrl}`);
-
-            if (currentUrl !== 'https://skyweb.aasdcat.com/scripts/wsisa.dll/WService=wsEAplus/seplog01.w') {
-                console.log('Page navigated in same window, using current page');
-                popup = page;
-            } else {
-                throw new Error('Login failed: No popup opened and page did not navigate');
-            }
-        } else {
-            console.log('Login popup opened!');
-            // Set the popup to full screen so .sf_DialogClose button is visible
-            await popup.setViewportSize({ width: 1920, height: 1080 });
-            console.log('Popup viewport set to 1920x1080');
-        }
-
+        console.log('Login popup opened!');
         await popup.waitForLoadState('networkidle');
 
         // Wait for navigation after login - the popup should navigate to a new page
@@ -175,281 +133,6 @@ async function scrapeGrades(username, password) {
         await popup.waitForTimeout(2000);
 
         console.log('Extracting grades...');
-
-        // Helper function to extract assignments for a specific class
-        async function scrapeClassAssignments(page, gradeLink, className) {
-            try {
-                console.log(`  Scraping assignments for: ${className}`);
-
-                // Click the grade link to open assignment details
-                await gradeLink.click({ force: true });
-
-                // Wait for the modal dialog to appear
-                await page.waitForSelector('#gradeInfoDialog', { timeout: 10000 });
-
-                // CRITICAL: Wait for the modal to actually update with THIS class's data
-                // The modal header should contain the class name
-                await page.waitForTimeout(3000); // Give it time to fully load
-
-                // Verify we have the right class by checking the dialog content
-                const dialogClass = await page.evaluate(() => {
-                    const dialog = document.querySelector('#gradeInfoDialog');
-                    if (!dialog) return '';
-                    // Try to find class name in dialog header
-                    const text = dialog.textContent || '';
-                    return text.substring(0, 100); // First 100 chars
-                });
-                console.log(`    Dialog loaded with: ${dialogClass.substring(0, 50)}...`);
-
-                // Collect all assignments across all pages
-                const allAssignments = [];
-                let pageNumber = 1;
-                let hasNextPage = true;
-
-                while (hasNextPage) {
-                    console.log(`    Scraping page ${pageNumber}...`);
-
-                    // Take a screenshot for debugging
-                    try {
-                        await page.screenshot({ path: `debug-assignments-${className.replace(/[^a-z0-9]/gi, '-')}-page${pageNumber}.png` });
-                        console.log(`      Screenshot saved for debugging`);
-                    } catch (e) {
-                        console.log(`      Could not save screenshot: ${e.message}`);
-                    }
-
-                    // Extract assignment data from current page
-                    const pageAssignments = await page.evaluate(() => {
-                        const assignmentData = [];
-
-                        // Find the main assignments table within the dialog
-                        // Based on the screenshots, assignments are in rows under category headers
-                        const dialog = document.querySelector('#gradeInfoDialog');
-                        if (!dialog) {
-                            console.log('ERROR: Could not find #gradeInfoDialog');
-                            return [];
-                        }
-
-                        // Find all table rows within the dialog
-                        const allRows = dialog.querySelectorAll('tr');
-                        console.log(`Found ${allRows.length} total rows in dialog`);
-
-                        // Look for the assignment table - it has specific column headers
-                        // "Due", "Assignment", "Grade", "Points Earned", "Missing", "No Count", "Absent"
-                        let currentCategory = null;
-
-                        allRows.forEach((row) => {
-                            const cells = row.querySelectorAll('td');
-
-                            // Skip rows with no cells or only 1 cell
-                            if (cells.length === 0) return;
-
-                            // Check if this is a category header row (usually has 1 cell with colspan)
-                            if (cells.length === 1) {
-                                const cellText = cells[0].textContent.trim();
-                                // Category headers like "Benchmark", "Class Work", "Homework", etc.
-                                if (cellText && !cellText.toLowerCase().includes('there are no')) {
-                                    currentCategory = cellText;
-                                    console.log(`Found category: ${currentCategory}`);
-                                }
-                                return;
-                            }
-
-                            // Assignment rows typically have 7 cells:
-                            // [0] Due Date, [1] Assignment Name, [2] Grade, [3] Points Earned, [4] Missing, [5] No Count, [6] Absent
-                            if (cells.length >= 4) {
-                                const dueDate = cells[0].textContent.trim();
-                                const assignmentName = cells[1].textContent.trim();
-                                const pointsEarned = cells[3].textContent.trim();
-
-                                // Check if this looks like an actual assignment row
-                                // Assignment name should not be empty and should not contain "There are no"
-                                if (assignmentName &&
-                                    assignmentName.length > 0 &&
-                                    !assignmentName.toLowerCase().includes('there are no') &&
-                                    !assignmentName.toLowerCase().includes('due') &&  // Skip header rows
-                                    pointsEarned) {
-
-                                    // Parse points earned (format: "10 out of 15" or "170 out of 170")
-                                    const pointsMatch = pointsEarned.match(/(\d+(?:\.\d+)?)\s*out of\s*(\d+(?:\.\d+)?)/);
-
-                                    let score = null;
-                                    let maxPoints = 0;
-
-                                    if (pointsMatch) {
-                                        score = parseFloat(pointsMatch[1]);
-                                        maxPoints = parseFloat(pointsMatch[2]);
-                                    } else if (pointsEarned.toLowerCase().includes('missing')) {
-                                        // This is a missing assignment
-                                        score = null;
-                                        // Try to extract max points from elsewhere
-                                        const pointsOnly = pointsEarned.match(/(\d+(?:\.\d+)?)/);
-                                        if (pointsOnly) {
-                                            maxPoints = parseFloat(pointsOnly[1]);
-                                        }
-                                    }
-
-                                    if (maxPoints > 0) {
-                                        const percentage = score !== null ? Math.round((score / maxPoints) * 100) : null;
-                                        const status = score === null ? 'missing' : 'graded';
-
-                                        assignmentData.push({
-                                            name: assignmentName,
-                                            category: currentCategory || 'Assignment',
-                                            dueDate: dueDate.match(/\d{1,2}\/\d{1,2}\/\d{2,4}/) ? dueDate : 'N/A',
-                                            score: score,
-                                            maxPoints: maxPoints,
-                                            percentage: percentage,
-                                            status: status
-                                        });
-
-                                        console.log(`Added assignment: ${assignmentName} (${score}/${maxPoints})`);
-                                    }
-                                }
-                            }
-                        });
-
-                        console.log(`Total assignments extracted: ${assignmentData.length}`);
-                        return assignmentData;
-                    });
-
-                    // Add assignments from this page to the collection
-                    allAssignments.push(...pageAssignments);
-                    console.log(`      Found ${pageAssignments.length} assignments on page ${pageNumber}`);
-
-                    // Check for Next button and click it if present
-                    try {
-                        const nextButtonSelectors = [
-                            'input[value="Next"]',
-                            'button:has-text("Next")',
-                            'a:has-text("Next")',
-                            '#gradeInfoDialog input[type="button"][value="Next"]',
-                            '.sf_gridFooter input[value="Next"]'
-                        ];
-
-                        let nextButtonClicked = false;
-                        for (const selector of nextButtonSelectors) {
-                            try {
-                                const nextButton = page.locator(selector).first();
-                                const isVisible = await nextButton.isVisible({ timeout: 1000 });
-                                const isEnabled = await nextButton.isEnabled({ timeout: 1000 });
-
-                                if (isVisible && isEnabled) {
-                                    await nextButton.click({ force: true, timeout: 5000 });
-                                    await page.waitForTimeout(2000); // Wait for next page to load
-                                    nextButtonClicked = true;
-                                    pageNumber++;
-                                    console.log(`      Clicked Next button, moving to page ${pageNumber}`);
-                                    break;
-                                }
-                            } catch (e) {
-                                // Try next selector
-                                continue;
-                            }
-                        }
-
-                        if (!nextButtonClicked) {
-                            hasNextPage = false;
-                            console.log(`      No more pages found`);
-                        }
-                    } catch (error) {
-                        hasNextPage = false;
-                        console.log(`      Pagination check failed: ${error.message}`);
-                    }
-                }
-
-                // Add unique IDs to all assignments
-                const assignments = allAssignments.map((assignment, index) => ({
-                    ...assignment,
-                    id: `${assignment.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}-${index}`
-                }));
-
-                console.log(`    Total assignments collected: ${assignments.length}`);
-
-                // Close the modal dialog - CRITICAL: Must actually close before next class
-                try {
-                    console.log(`    Attempting to close modal...`);
-
-                    let closed = false;
-
-                    // Try method 1: XPath selector (most reliable)
-                    try {
-                        const xpathCloseBtn = page.locator('xpath=/html/body/div[8]/a[2]');
-                        const isVisible = await xpathCloseBtn.isVisible({ timeout: 2000 });
-                        if (isVisible) {
-                            await xpathCloseBtn.click({ force: true, timeout: 5000 });
-                            console.log(`    Clicked close button using XPath`);
-
-                            // Wait for it to close
-                            for (let i = 0; i < 10; i++) {
-                                await page.waitForTimeout(500);
-                                const isHidden = await page.locator('#gradeInfoDialog').isHidden().catch(() => false);
-                                if (isHidden) {
-                                    console.log(`    Modal confirmed closed after ${(i + 1) * 500}ms`);
-                                    closed = true;
-                                    break;
-                                }
-                            }
-                        }
-                    } catch (e) {
-                        console.log(`    XPath close button not found: ${e.message}`);
-                    }
-
-                    // Try method 2: CSS class selector
-                    if (!closed) {
-                        try {
-                            const closeBtn = page.locator('a.sf_DialogClose[href*="Close"]').first();
-                            const isVisible = await closeBtn.isVisible({ timeout: 2000 });
-                            if (isVisible) {
-                                await closeBtn.click({ force: true, timeout: 5000 });
-                                console.log(`    Clicked .sf_DialogClose button`);
-
-                                // Wait for it to close
-                                for (let i = 0; i < 10; i++) {
-                                    await page.waitForTimeout(500);
-                                    const isHidden = await page.locator('#gradeInfoDialog').isHidden().catch(() => false);
-                                    if (isHidden) {
-                                        console.log(`    Modal confirmed closed after ${(i + 1) * 500}ms`);
-                                        closed = true;
-                                        break;
-                                    }
-                                }
-                            }
-                        } catch (e) {
-                            console.log(`    CSS selector close button not found: ${e.message}`);
-                        }
-                    }
-
-                    // Try method 3: Press Escape key multiple times
-                    if (!closed) {
-                        console.log('    Trying Escape key to close modal');
-                        for (let i = 0; i < 3; i++) {
-                            await page.keyboard.press('Escape');
-                            await page.waitForTimeout(500);
-                            const isHidden = await page.locator('#gradeInfoDialog').isHidden().catch(() => false);
-                            if (isHidden) {
-                                console.log(`    Modal closed with Escape after ${i + 1} attempts`);
-                                closed = true;
-                                break;
-                            }
-                        }
-                    }
-
-                    if (!closed) {
-                        console.log('    WARNING: Modal may not have closed properly!');
-                    }
-
-                    // Extra wait to ensure UI has settled
-                    await page.waitForTimeout(1000);
-                } catch (e) {
-                    console.log(`    ERROR closing modal: ${e.message}`);
-                }
-
-                return assignments;
-            } catch (error) {
-                console.log(`    Error scraping assignments for ${className}: ${error.message}`);
-                return [];
-            }
-        }
 
         // Extract grade data from the page
         const gradeData = await popup.evaluate(() => {
@@ -557,125 +240,93 @@ async function scrapeGrades(username, password) {
 
         console.log(`Found ${gradeData.length} classes with grades`);
 
-        // Now scrape assignments for each class with a Q2 grade
-        console.log('Scraping individual class assignments...');
-        for (const classData of gradeData) {
-            try {
-                // IMPORTANT: Ensure any previous modal is fully closed before next class
-                console.log(`\n  === Processing ${classData.class_name} ===`);
-                try {
-                    const dialogVisible = await popup.locator('#gradeInfoDialog').isVisible({ timeout: 1000 }).catch(() => false);
-                    if (dialogVisible) {
-                        console.log(`  WARNING: Modal still open before processing ${classData.class_name}! Force closing...`);
-                        // Force close with Escape
-                        for (let i = 0; i < 5; i++) {
-                            await popup.keyboard.press('Escape');
-                            await popup.waitForTimeout(500);
-                            const stillVisible = await popup.locator('#gradeInfoDialog').isVisible({ timeout: 500 }).catch(() => false);
-                            if (!stillVisible) {
-                                console.log(`    Modal force-closed after ${i + 1} Escape presses`);
-                                break;
-                            }
-                        }
-                        await popup.waitForTimeout(1000);
-                    } else {
-                        console.log(`  Modal confirmed closed, ready to proceed`);
-                    }
-                } catch (e) {
-                    console.log(`  Modal check error: ${e.message}`);
-                }
-
-                // Find the grade link for Q2 (current quarter) to click
-                const gradeLinks = await popup.locator(`a[id="showGradeInfo"]`).all();
-
-                // Match by finding the link that's in the same row as this class
-                // This is a simplified approach - we'll click each Q2 grade link sequentially
-                const classIndex = gradeData.indexOf(classData);
-
-                if (classIndex < gradeLinks.length && classData.q2_grade !== null) {
-                    // Click on the Q2 grade link (usually second link for each class)
-                    // Skip Q1, take Q2 (every other link starting from index 1, 3, 5...)
-                    const q2LinkIndex = classIndex * 2 + 1; // Q2 is the second link per class
-
-                    if (q2LinkIndex < gradeLinks.length) {
-                        const assignments = await scrapeClassAssignments(
-                            popup,
-                            gradeLinks[q2LinkIndex],
-                            classData.class_name
-                        );
-
-                        classData.assignments = assignments;
-                        classData.class_id = classData.period;
-                    }
-                } else {
-                    // No Q2 grade or link, use period as ID anyway
-                    classData.class_id = classData.period;
-                    classData.assignments = [];
-                }
-
-                // Small delay between classes to avoid overwhelming the server
-                await popup.waitForTimeout(800);
-            } catch (error) {
-                console.log(`Error processing assignments for ${classData.class_name}: ${error.message}`);
-                classData.class_id = classData.period;
-                classData.assignments = [];
-            }
-        }
-
-        // Filter missing assignments from the collected assignment data
-        console.log('Filtering truly missing assignments...');
+        // Now scrape missing assignments
+        console.log('Checking for missing assignments...');
         let missingAssignments = [];
 
         try {
-            const currentDate = new Date();
+            // Click the missing assignments button
+            const missingButton = await popup.locator('#missingAssignments');
+            if (await missingButton.isVisible({ timeout: 5000 })) {
+                await missingButton.click();
+                console.log('Clicked missing assignments button');
 
-            // Iterate through all classes and their assignments
-            for (const classData of gradeData) {
-                if (!classData.assignments || classData.assignments.length === 0) continue;
+                // Wait for the missing assignments content to load
+                await popup.waitForTimeout(2000);
 
-                for (const assignment of classData.assignments) {
-                    // Parse the due date
-                    let isPastDue = false;
-                    if (assignment.dueDate && assignment.dueDate !== 'N/A') {
-                        try {
-                            // Handle MM/DD/YYYY format
-                            const dateParts = assignment.dueDate.match(/(\d{1,2})\/(\d{1,2})\/(\d{2,4})/);
-                            if (dateParts) {
-                                const month = parseInt(dateParts[1]) - 1; // JS months are 0-indexed
-                                const day = parseInt(dateParts[2]);
-                                let year = parseInt(dateParts[3]);
-                                // Handle 2-digit years
-                                if (year < 100) {
-                                    year += 2000;
-                                }
-                                const dueDate = new Date(year, month, day);
-                                isPastDue = dueDate < currentDate;
+                // Check if there are no missing assignments
+                const noMissingText = await popup.locator('text=No Missing Assignments!').count();
+
+                if (noMissingText > 0) {
+                    console.log('No missing assignments found');
+                } else {
+                    console.log('Extracting missing assignments...');
+
+                    // Take a screenshot for debugging
+                    await popup.screenshot({ path: 'missing-assignments-screenshot.png' });
+
+                    // Extract missing assignments data
+                    missingAssignments = await popup.evaluate(() => {
+                        const assignments = [];
+                        const seen = new Set(); // Track unique assignments
+
+                        // Look for rows that have actual assignment data
+                        // Structure: Due | Assignment | Class | Teacher | Category | Max Points | Absent
+                        const rows = document.querySelectorAll('table tr');
+
+                        rows.forEach(row => {
+                            const cells = row.querySelectorAll('td');
+
+                            // We need at least 4 cells for a valid assignment row
+                            if (cells.length < 4) return;
+
+                            const date = cells[0]?.textContent.trim() || '';
+                            const assignmentName = cells[1]?.textContent.trim() || '';
+                            const className = cells[2]?.textContent.trim() || '';
+                            const teacher = cells[3]?.textContent.trim() || '';
+                            const category = cells.length >= 5 ? cells[4]?.textContent.trim() || '' : '';
+                            const maxPoints = cells.length >= 6 ? cells[5]?.textContent.trim() || '' : '';
+                            const absent = cells.length >= 7 ? cells[6]?.textContent.trim() || '' : '';
+
+                            // Skip if this looks like header text or empty
+                            if (!date || !assignmentName || !className) return;
+                            if (date.toLowerCase().includes('due') || date.toLowerCase().includes('gavin')) return;
+                            if (assignmentName.toLowerCase().includes('due') || assignmentName.toLowerCase().includes('gavin')) return;
+
+                            // Skip rows that don't have a date pattern (should have "/" or "Q")
+                            if (!date.match(/\d+\/\d+\/\d+/) && !date.includes('Q')) return;
+
+                            // Create a unique key to check for duplicates
+                            const uniqueKey = `${date}|${className}|${assignmentName}`;
+
+                            // Only add if we haven't seen this exact assignment before
+                            if (!seen.has(uniqueKey)) {
+                                seen.add(uniqueKey);
+                                const assignment = {
+                                    due_date: date,
+                                    assignment_name: assignmentName,
+                                    class_name: className,
+                                    teacher: teacher
+                                };
+
+                                if (category) assignment.category = category;
+                                if (maxPoints) assignment.max_points = maxPoints;
+                                if (absent) assignment.absent = absent;
+
+                                assignments.push(assignment);
                             }
-                        } catch (e) {
-                            console.log(`    Warning: Could not parse date ${assignment.dueDate}`);
-                        }
-                    }
-
-                    // Assignment is truly missing if:
-                    // 1. It's past the due date AND
-                    // 2. No score recorded (score is null) OR status is 'missing'
-                    if (isPastDue && (assignment.score === null || assignment.status === 'missing')) {
-                        missingAssignments.push({
-                            due_date: assignment.dueDate,
-                            assignment_name: assignment.name,
-                            class_name: classData.class_name,
-                            teacher: classData.teacher,
-                            category: assignment.category,
-                            max_points: assignment.maxPoints,
-                            status: assignment.status
                         });
-                    }
-                }
-            }
 
-            console.log(`Found ${missingAssignments.length} truly missing assignments (past due + no grade)`);
+                        return assignments;
+                    });
+
+                    console.log(`Found ${missingAssignments.length} missing assignments`);
+                }
+            } else {
+                console.log('Missing assignments button not found');
+            }
         } catch (error) {
-            console.log('Error filtering missing assignments:', error.message);
+            console.log('Error checking missing assignments:', error.message);
             // Don't fail the whole scrape if missing assignments fails
         }
 
@@ -744,9 +395,7 @@ async function saveGradesToFile(grades, missingAssignments = []) {
         q2_letter_grade: cls.q2_letter_grade,
         // Use Q2 grade if available, otherwise Q1
         current_grade: cls.q2_grade !== null ? cls.q2_grade : cls.q1_grade,
-        letter_grade: cls.q2_letter_grade !== null ? cls.q2_letter_grade : cls.q1_letter_grade,
-        class_id: cls.class_id || cls.period,
-        assignments: cls.assignments || []
+        letter_grade: cls.q2_letter_grade !== null ? cls.q2_letter_grade : cls.q1_letter_grade
     }));
 
     // Update grade history

@@ -1,13 +1,7 @@
 {
   "metadata": {
-<<<<<<< HEAD
-    "last_updated": "11/24/2025, 11:12 AM",
-    "last_updated": "11/24/2025, 11:53 AM",
+    "last_updated": "11/24/2025, 12:11 PM",
     "most_recent_date": "11/24/2025",
-=======
-    "last_updated": "11/23/2025, 11:09 AM",
-    "most_recent_date": "11/23/2025",
->>>>>>> parent of 1785d7d (Update grades data [automated])
     "total_classes": 9
   },
   "classes": [
@@ -20,63 +14,7 @@
       "q2_grade": 66,
       "q2_letter_grade": "D",
       "current_grade": 66,
-      "letter_grade": "D",
-      "class_id": "0",
-      "assignments": []
-      "letter_grade": "D",
-      "class_id": "0",
-      "assignments": [
-        {
-          "name": "Class Work",
-          "category": "Assignment",
-          "dueDate": "N/A",
-          "score": 0,
-          "maxPoints": 10,
-          "percentage": 0,
-          "status": "graded",
-          "id": "class-work-0"
-        },
-        {
-          "name": "10/27-10/30 Part.",
-          "category": "Assignment",
-          "dueDate": "10/30/25",
-          "score": 0,
-          "maxPoints": 10,
-          "percentage": 0,
-          "status": "graded",
-          "id": "10-27-10-30-part--1"
-        },
-        {
-          "name": "Participation",
-          "category": "Assignment",
-          "dueDate": "N/A",
-          "score": 23,
-          "maxPoints": 25,
-          "percentage": 92,
-          "status": "graded",
-          "id": "participation-2"
-        },
-        {
-          "name": "Weekly Part. in Class",
-          "category": "Assignment",
-          "dueDate": "11/14/25",
-          "score": 10,
-          "maxPoints": 10,
-          "percentage": 100,
-          "status": "graded",
-          "id": "weekly-part--in-class-3"
-        },
-        {
-          "name": "Workbook Check",
-          "category": "Assignment",
-          "dueDate": "10/30/25",
-          "score": 13,
-          "maxPoints": 15,
-          "percentage": 87,
-          "status": "graded",
-          "id": "workbook-check-4"
-        }
-      ]
+      "letter_grade": "D"
     },
     {
       "class_name": "English 10",
@@ -87,63 +25,7 @@
       "q2_grade": 75,
       "q2_letter_grade": "C",
       "current_grade": 75,
-      "letter_grade": "C",
-      "class_id": "1",
-      "assignments": []
-      "letter_grade": "C",
-      "class_id": "1",
-      "assignments": [
-        {
-          "name": "Class Work",
-          "category": "Assignment",
-          "dueDate": "N/A",
-          "score": 0,
-          "maxPoints": 10,
-          "percentage": 0,
-          "status": "graded",
-          "id": "class-work-0"
-        },
-        {
-          "name": "10/27-10/30 Part.",
-          "category": "Assignment",
-          "dueDate": "10/30/25",
-          "score": 0,
-          "maxPoints": 10,
-          "percentage": 0,
-          "status": "graded",
-          "id": "10-27-10-30-part--1"
-        },
-        {
-          "name": "Participation",
-          "category": "Assignment",
-          "dueDate": "N/A",
-          "score": 23,
-          "maxPoints": 25,
-          "percentage": 92,
-          "status": "graded",
-          "id": "participation-2"
-        },
-        {
-          "name": "Weekly Part. in Class",
-          "category": "Assignment",
-          "dueDate": "11/14/25",
-          "score": 10,
-          "maxPoints": 10,
-          "percentage": 100,
-          "status": "graded",
-          "id": "weekly-part--in-class-3"
-        },
-        {
-          "name": "Workbook Check",
-          "category": "Assignment",
-          "dueDate": "10/30/25",
-          "score": 13,
-          "maxPoints": 15,
-          "percentage": 87,
-          "status": "graded",
-          "id": "workbook-check-4"
-        }
-      ]
+      "letter_grade": "C"
     },
     {
       "class_name": "Biology 2",
@@ -154,63 +36,7 @@
       "q2_grade": 79,
       "q2_letter_grade": "C",
       "current_grade": 79,
-      "letter_grade": "C",
-      "class_id": "2",
-      "assignments": []
-      "letter_grade": "C",
-      "class_id": "2",
-      "assignments": [
-        {
-          "name": "Class Work",
-          "category": "Assignment",
-          "dueDate": "N/A",
-          "score": 0,
-          "maxPoints": 10,
-          "percentage": 0,
-          "status": "graded",
-          "id": "class-work-0"
-        },
-        {
-          "name": "10/27-10/30 Part.",
-          "category": "Assignment",
-          "dueDate": "10/30/25",
-          "score": 0,
-          "maxPoints": 10,
-          "percentage": 0,
-          "status": "graded",
-          "id": "10-27-10-30-part--1"
-        },
-        {
-          "name": "Participation",
-          "category": "Assignment",
-          "dueDate": "N/A",
-          "score": 23,
-          "maxPoints": 25,
-          "percentage": 92,
-          "status": "graded",
-          "id": "participation-2"
-        },
-        {
-          "name": "Weekly Part. in Class",
-          "category": "Assignment",
-          "dueDate": "11/14/25",
-          "score": 10,
-          "maxPoints": 10,
-          "percentage": 100,
-          "status": "graded",
-          "id": "weekly-part--in-class-3"
-        },
-        {
-          "name": "Workbook Check",
-          "category": "Assignment",
-          "dueDate": "10/30/25",
-          "score": 13,
-          "maxPoints": 15,
-          "percentage": 87,
-          "status": "graded",
-          "id": "workbook-check-4"
-        }
-      ]
+      "letter_grade": "C"
     },
     {
       "class_name": "History Pop Cult 1",
@@ -221,63 +47,7 @@
       "q2_grade": 90,
       "q2_letter_grade": "A",
       "current_grade": 90,
-      "letter_grade": "A",
-      "class_id": "3",
-      "assignments": []
-      "letter_grade": "A",
-      "class_id": "3",
-      "assignments": [
-        {
-          "name": "Class Work",
-          "category": "Assignment",
-          "dueDate": "N/A",
-          "score": 0,
-          "maxPoints": 10,
-          "percentage": 0,
-          "status": "graded",
-          "id": "class-work-0"
-        },
-        {
-          "name": "10/27-10/30 Part.",
-          "category": "Assignment",
-          "dueDate": "10/30/25",
-          "score": 0,
-          "maxPoints": 10,
-          "percentage": 0,
-          "status": "graded",
-          "id": "10-27-10-30-part--1"
-        },
-        {
-          "name": "Participation",
-          "category": "Assignment",
-          "dueDate": "N/A",
-          "score": 23,
-          "maxPoints": 25,
-          "percentage": 92,
-          "status": "graded",
-          "id": "participation-2"
-        },
-        {
-          "name": "Weekly Part. in Class",
-          "category": "Assignment",
-          "dueDate": "11/14/25",
-          "score": 10,
-          "maxPoints": 10,
-          "percentage": 100,
-          "status": "graded",
-          "id": "weekly-part--in-class-3"
-        },
-        {
-          "name": "Workbook Check",
-          "category": "Assignment",
-          "dueDate": "10/30/25",
-          "score": 13,
-          "maxPoints": 15,
-          "percentage": 87,
-          "status": "graded",
-          "id": "workbook-check-4"
-        }
-      ]
+      "letter_grade": "A"
     },
     {
       "class_name": "Art 1",
@@ -288,63 +58,7 @@
       "q2_grade": 84,
       "q2_letter_grade": "B",
       "current_grade": 84,
-      "letter_grade": "B",
-      "class_id": "4",
-      "assignments": []
-      "letter_grade": "B",
-      "class_id": "4",
-      "assignments": [
-        {
-          "name": "Class Work",
-          "category": "Assignment",
-          "dueDate": "N/A",
-          "score": 0,
-          "maxPoints": 10,
-          "percentage": 0,
-          "status": "graded",
-          "id": "class-work-0"
-        },
-        {
-          "name": "10/27-10/30 Part.",
-          "category": "Assignment",
-          "dueDate": "10/30/25",
-          "score": 0,
-          "maxPoints": 10,
-          "percentage": 0,
-          "status": "graded",
-          "id": "10-27-10-30-part--1"
-        },
-        {
-          "name": "Participation",
-          "category": "Assignment",
-          "dueDate": "N/A",
-          "score": 23,
-          "maxPoints": 25,
-          "percentage": 92,
-          "status": "graded",
-          "id": "participation-2"
-        },
-        {
-          "name": "Weekly Part. in Class",
-          "category": "Assignment",
-          "dueDate": "11/14/25",
-          "score": 10,
-          "maxPoints": 10,
-          "percentage": 100,
-          "status": "graded",
-          "id": "weekly-part--in-class-3"
-        },
-        {
-          "name": "Workbook Check",
-          "category": "Assignment",
-          "dueDate": "10/30/25",
-          "score": 13,
-          "maxPoints": 15,
-          "percentage": 87,
-          "status": "graded",
-          "id": "workbook-check-4"
-        }
-      ]
+      "letter_grade": "B"
     },
     {
       "class_name": "Physical Educ",
@@ -355,63 +69,7 @@
       "q2_grade": 100,
       "q2_letter_grade": "A",
       "current_grade": 100,
-      "letter_grade": "A",
-      "class_id": "5",
-      "assignments": []
-      "letter_grade": "A",
-      "class_id": "5",
-      "assignments": [
-        {
-          "name": "Class Work",
-          "category": "Assignment",
-          "dueDate": "N/A",
-          "score": 0,
-          "maxPoints": 10,
-          "percentage": 0,
-          "status": "graded",
-          "id": "class-work-0"
-        },
-        {
-          "name": "10/27-10/30 Part.",
-          "category": "Assignment",
-          "dueDate": "10/30/25",
-          "score": 0,
-          "maxPoints": 10,
-          "percentage": 0,
-          "status": "graded",
-          "id": "10-27-10-30-part--1"
-        },
-        {
-          "name": "Participation",
-          "category": "Assignment",
-          "dueDate": "N/A",
-          "score": 23,
-          "maxPoints": 25,
-          "percentage": 92,
-          "status": "graded",
-          "id": "participation-2"
-        },
-        {
-          "name": "Weekly Part. in Class",
-          "category": "Assignment",
-          "dueDate": "11/14/25",
-          "score": 10,
-          "maxPoints": 10,
-          "percentage": 100,
-          "status": "graded",
-          "id": "weekly-part--in-class-3"
-        },
-        {
-          "name": "Workbook Check",
-          "category": "Assignment",
-          "dueDate": "10/30/25",
-          "score": 13,
-          "maxPoints": 15,
-          "percentage": 87,
-          "status": "graded",
-          "id": "workbook-check-4"
-        }
-      ]
+      "letter_grade": "A"
     },
     {
       "class_name": "Amer Studies",
@@ -422,63 +80,7 @@
       "q2_grade": 100,
       "q2_letter_grade": "A",
       "current_grade": 100,
-      "letter_grade": "A",
-      "class_id": "6",
-      "assignments": []
-      "letter_grade": "A",
-      "class_id": "6",
-      "assignments": [
-        {
-          "name": "Class Work",
-          "category": "Assignment",
-          "dueDate": "N/A",
-          "score": 0,
-          "maxPoints": 10,
-          "percentage": 0,
-          "status": "graded",
-          "id": "class-work-0"
-        },
-        {
-          "name": "10/27-10/30 Part.",
-          "category": "Assignment",
-          "dueDate": "10/30/25",
-          "score": 0,
-          "maxPoints": 10,
-          "percentage": 0,
-          "status": "graded",
-          "id": "10-27-10-30-part--1"
-        },
-        {
-          "name": "Participation",
-          "category": "Assignment",
-          "dueDate": "N/A",
-          "score": 23,
-          "maxPoints": 25,
-          "percentage": 92,
-          "status": "graded",
-          "id": "participation-2"
-        },
-        {
-          "name": "Weekly Part. in Class",
-          "category": "Assignment",
-          "dueDate": "11/14/25",
-          "score": 10,
-          "maxPoints": 10,
-          "percentage": 100,
-          "status": "graded",
-          "id": "weekly-part--in-class-3"
-        },
-        {
-          "name": "Workbook Check",
-          "category": "Assignment",
-          "dueDate": "10/30/25",
-          "score": 13,
-          "maxPoints": 15,
-          "percentage": 87,
-          "status": "graded",
-          "id": "workbook-check-4"
-        }
-      ]
+      "letter_grade": "A"
     },
     {
       "class_name": "Intermediate Geometry",
@@ -489,63 +91,7 @@
       "q2_grade": 69,
       "q2_letter_grade": "D",
       "current_grade": 69,
-      "letter_grade": "D",
-      "class_id": "7",
-      "assignments": []
-      "letter_grade": "D",
-      "class_id": "7",
-      "assignments": [
-        {
-          "name": "Class Work",
-          "category": "Assignment",
-          "dueDate": "N/A",
-          "score": 0,
-          "maxPoints": 10,
-          "percentage": 0,
-          "status": "graded",
-          "id": "class-work-0"
-        },
-        {
-          "name": "10/27-10/30 Part.",
-          "category": "Assignment",
-          "dueDate": "10/30/25",
-          "score": 0,
-          "maxPoints": 10,
-          "percentage": 0,
-          "status": "graded",
-          "id": "10-27-10-30-part--1"
-        },
-        {
-          "name": "Participation",
-          "category": "Assignment",
-          "dueDate": "N/A",
-          "score": 23,
-          "maxPoints": 25,
-          "percentage": 92,
-          "status": "graded",
-          "id": "participation-2"
-        },
-        {
-          "name": "Weekly Part. in Class",
-          "category": "Assignment",
-          "dueDate": "11/14/25",
-          "score": 10,
-          "maxPoints": 10,
-          "percentage": 100,
-          "status": "graded",
-          "id": "weekly-part--in-class-3"
-        },
-        {
-          "name": "Workbook Check",
-          "category": "Assignment",
-          "dueDate": "10/30/25",
-          "score": 13,
-          "maxPoints": 15,
-          "percentage": 87,
-          "status": "graded",
-          "id": "workbook-check-4"
-        }
-      ]
+      "letter_grade": "D"
     },
     {
       "class_name": "Health",
@@ -556,286 +102,40 @@
       "q2_grade": 94,
       "q2_letter_grade": "A",
       "current_grade": 94,
-      "letter_grade": "A",
-      "class_id": "8",
-      "assignments": []
-      "letter_grade": "A",
-      "class_id": "8",
-      "assignments": [
-        {
-          "name": "Class Work",
-          "category": "Assignment",
-          "dueDate": "N/A",
-          "score": 0,
-          "maxPoints": 10,
-          "percentage": 0,
-          "status": "graded",
-          "id": "class-work-0"
-        },
-        {
-          "name": "10/27-10/30 Part.",
-          "category": "Assignment",
-          "dueDate": "10/30/25",
-          "score": 0,
-          "maxPoints": 10,
-          "percentage": 0,
-          "status": "graded",
-          "id": "10-27-10-30-part--1"
-        },
-        {
-          "name": "Participation",
-          "category": "Assignment",
-          "dueDate": "N/A",
-          "score": 23,
-          "maxPoints": 25,
-          "percentage": 92,
-          "status": "graded",
-          "id": "participation-2"
-        },
-        {
-          "name": "Weekly Part. in Class",
-          "category": "Assignment",
-          "dueDate": "11/14/25",
-          "score": 10,
-          "maxPoints": 10,
-          "percentage": 100,
-          "status": "graded",
-          "id": "weekly-part--in-class-3"
-        },
-        {
-          "name": "Workbook Check",
-          "category": "Assignment",
-          "dueDate": "10/30/25",
-          "score": 13,
-          "maxPoints": 15,
-          "percentage": 87,
-          "status": "graded",
-          "id": "workbook-check-4"
-        }
-      ]
+      "letter_grade": "A"
     }
   ],
   "grade_history": {
     "Sophomore Seminar": {
-      "11/4/2025": 0,
-      "11/5/2025": 52,
-      "11/6/2025": 52,
-      "11/7/2025": 52,
-      "11/8/2025": 52,
-      "11/9/2025": 52,
-      "11/10/2025": 52,
-      "11/11/2025": 52,
-      "11/12/2025": 52,
-      "11/13/2025": 52,
-      "11/14/2025": 66,
-      "11/15/2025": 66,
-      "11/16/2025": 66,
-      "11/17/2025": 66,
-      "11/18/2025": 66,
-      "11/19/2025": 66,
-      "11/20/2025": 66,
-      "11/21/2025": 66,
-      "11/22/2025": 66,
-      "11/23/2025": 66
+      "11/24/2025": 66
     },
     "English 10": {
-      "11/4/2025": 86,
-      "11/5/2025": 86,
-      "11/6/2025": 86,
-      "11/7/2025": 86,
-      "11/8/2025": 86,
-      "11/9/2025": 86,
-      "11/10/2025": 86,
-      "11/11/2025": 86,
-      "11/12/2025": 71,
-      "11/13/2025": 71,
-      "11/14/2025": 71,
-      "11/15/2025": 71,
-      "11/16/2025": 71,
-      "11/17/2025": 71,
-      "11/18/2025": 75,
-      "11/19/2025": 75,
-      "11/20/2025": 75,
-      "11/21/2025": 75,
-      "11/22/2025": 75,
-      "11/23/2025": 75
+      "11/24/2025": 75
     },
     "Biology 2": {
-      "11/4/2025": 100,
-      "11/5/2025": 58,
-      "11/6/2025": 58,
-      "11/7/2025": 65,
-      "11/8/2025": 65,
-      "11/9/2025": 65,
-      "11/10/2025": 65,
-      "11/11/2025": 65,
-      "11/12/2025": 65,
-      "11/13/2025": 69,
-      "11/14/2025": 69,
-      "11/15/2025": 69,
-      "11/16/2025": 69,
-      "11/17/2025": 69,
-      "11/18/2025": 71,
-      "11/19/2025": 78,
-      "11/20/2025": 78,
-      "11/21/2025": 79,
-      "11/22/2025": 79,
-      "11/23/2025": 79
+      "11/24/2025": 79
     },
     "History Pop Cult 1": {
-      "11/4/2025": 73,
-      "11/5/2025": 80,
-      "11/6/2025": 80,
-      "11/7/2025": 80,
-      "11/8/2025": 80,
-      "11/9/2025": 80,
-      "11/10/2025": 80,
-      "11/11/2025": 80,
-      "11/12/2025": 90,
-      "11/13/2025": 90,
-      "11/14/2025": 90,
-      "11/15/2025": 90,
-      "11/16/2025": 90,
-      "11/17/2025": 90,
-      "11/18/2025": 90,
-      "11/19/2025": 90,
-      "11/20/2025": 90,
-      "11/21/2025": 90,
-      "11/22/2025": 90,
-      "11/23/2025": 90
+      "11/24/2025": 90
     },
     "Art 1": {
-      "11/4/2025": 55,
-      "11/5/2025": 55,
-      "11/6/2025": 55,
-      "11/7/2025": 80,
-      "11/8/2025": 80,
-      "11/9/2025": 80,
-      "11/10/2025": 80,
-      "11/11/2025": 80,
-      "11/12/2025": 80,
-      "11/13/2025": 80,
-      "11/14/2025": 80,
-      "11/15/2025": 80,
-      "11/16/2025": 80,
-      "11/17/2025": 80,
-      "11/18/2025": 87,
-      "11/19/2025": 84,
-      "11/20/2025": 84,
-      "11/21/2025": 84,
-      "11/22/2025": 84,
-      "11/23/2025": 84
+      "11/24/2025": 84
     },
     "Physical Educ": {
-      "11/4/2025": 100,
-      "11/5/2025": 100,
-      "11/6/2025": 100,
-      "11/7/2025": 100,
-      "11/8/2025": 100,
-      "11/9/2025": 100,
-      "11/10/2025": 100,
-      "11/11/2025": 100,
-      "11/12/2025": 100,
-      "11/13/2025": 100,
-      "11/14/2025": 100,
-      "11/15/2025": 100,
-      "11/16/2025": 100,
-      "11/17/2025": 100,
-      "11/18/2025": 100,
-      "11/19/2025": 100,
-      "11/20/2025": 100,
-      "11/21/2025": 100,
-      "11/22/2025": 100,
-      "11/23/2025": 100
+      "11/24/2025": 100
     },
     "Amer Studies": {
-      "11/4/2025": 100,
-      "11/5/2025": 100,
-      "11/6/2025": 100,
-      "11/7/2025": 100,
-      "11/8/2025": 100,
-      "11/9/2025": 100,
-      "11/10/2025": 100,
-      "11/11/2025": 100,
-      "11/12/2025": 20,
-      "11/13/2025": 100,
-      "11/14/2025": 100,
-      "11/15/2025": 100,
-      "11/16/2025": 100,
-      "11/17/2025": 100,
-      "11/18/2025": 100,
-      "11/19/2025": 100,
-      "11/20/2025": 100,
-      "11/21/2025": 100,
-      "11/22/2025": 100,
-      "11/23/2025": 100
+      "11/24/2025": 100
     },
     "Intermediate Geometry": {
-      "11/4/2025": 70,
-      "11/5/2025": 70,
-      "11/6/2025": 70,
-      "11/7/2025": 70,
-      "11/8/2025": 70,
-      "11/9/2025": 70,
-      "11/10/2025": 70,
-      "11/11/2025": 70,
-      "11/12/2025": 70,
-      "11/13/2025": 61,
-      "11/14/2025": 78,
-      "11/15/2025": 78,
-      "11/16/2025": 78,
-      "11/17/2025": 78,
-      "11/18/2025": 78,
-      "11/19/2025": 78,
-      "11/20/2025": 69,
-      "11/21/2025": 69,
-      "11/22/2025": 69,
-      "11/23/2025": 69
+      "11/24/2025": 69
     },
     "Health": {
-      "11/4/2025": 98,
-      "11/5/2025": 98,
-      "11/6/2025": 98,
-      "11/7/2025": 98,
-      "11/8/2025": 98,
-      "11/9/2025": 98,
-      "11/10/2025": 98,
-      "11/11/2025": 98,
-      "11/12/2025": 98,
-      "11/13/2025": 91,
-      "11/14/2025": 91,
-      "11/15/2025": 91,
-      "11/16/2025": 91,
-      "11/17/2025": 91,
-      "11/18/2025": 93,
-      "11/19/2025": 80,
-      "11/20/2025": 94,
-      "11/21/2025": 94,
-      "11/22/2025": 94,
-      "11/23/2025": 94
+      "11/24/2025": 94
     }
   },
   "overall_average": 84,
   "average_history": {
-    "11/4/2025": 85,
-    "11/5/2025": 78,
-    "11/6/2025": 78,
-    "11/7/2025": 81,
-    "11/8/2025": 81,
-    "11/9/2025": 81,
-    "11/10/2025": 81,
-    "11/11/2025": 81,
-    "11/12/2025": 72,
-    "11/13/2025": 79,
-    "11/14/2025": 83,
-    "11/15/2025": 83,
-    "11/16/2025": 83,
-    "11/17/2025": 83,
-    "11/18/2025": 84,
-    "11/19/2025": 83,
-    "11/20/2025": 84,
-    "11/21/2025": 84,
-    "11/22/2025": 84,
-    "11/23/2025": 84
+    "11/24/2025": 84
   }
 }
