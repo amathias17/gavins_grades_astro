@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "11/25/2025, 06:04 AM",
+    "last_updated": "11/25/2025, 03:04 PM",
     "most_recent_date": "11/25/2025",
     "total_classes": 9
   },
@@ -33,9 +33,9 @@
       "period": "2",
       "q1_grade": 85,
       "q1_letter_grade": "B",
-      "q2_grade": 82,
+      "q2_grade": 86,
       "q2_letter_grade": "B",
-      "current_grade": 82,
+      "current_grade": 86,
       "letter_grade": "B"
     },
     {
@@ -99,10 +99,10 @@
       "period": "8",
       "q1_grade": 78,
       "q1_letter_grade": "C",
-      "q2_grade": 94,
-      "q2_letter_grade": "A",
-      "current_grade": 94,
-      "letter_grade": "A"
+      "q2_grade": 85,
+      "q2_letter_grade": "B",
+      "current_grade": 85,
+      "letter_grade": "B"
     }
   ],
   "grade_history": {
@@ -116,7 +116,7 @@
     },
     "Biology 2": {
       "11/24/2025": 82,
-      "11/25/2025": 82
+      "11/25/2025": 86
     },
     "History Pop Cult 1": {
       "11/24/2025": 90,
@@ -140,7 +140,7 @@
     },
     "Health": {
       "11/24/2025": 94,
-      "11/25/2025": 94
+      "11/25/2025": 85
     }
   },
   "overall_average": 84,

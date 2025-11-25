@@ -1,9 +1,17 @@
 {
   "metadata": {
-    "last_updated": "11/25/2025, 06:04 AM",
-    "count": 1
+    "last_updated": "11/25/2025, 03:04 PM",
+    "count": 2
   },
   "missing_assignments": [
+    {
+      "due_date": "11/25/2025  (Q2)",
+      "assignment_name": "Ch 9 Sec 1 Quiz",
+      "class_name": "HEALTH",
+      "teacher": "Amy Palfey",
+      "category": "Quiz",
+      "max_points": "10"
+    },
     {
       "due_date": "11/21/2025  (Q2)",
       "assignment_name": "Still Life Drawing",
