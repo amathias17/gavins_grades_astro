@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "12/03/2025, 06:03 AM",
+    "last_updated": "12/03/2025, 01:09 PM",
     "most_recent_date": "12/3/2025",
     "total_classes": 9
   },
@@ -11,10 +11,10 @@
       "period": "0",
       "q1_grade": null,
       "q1_letter_grade": null,
-      "q2_grade": 66,
-      "q2_letter_grade": "D",
-      "current_grade": 66,
-      "letter_grade": "D"
+      "q2_grade": 74,
+      "q2_letter_grade": "C",
+      "current_grade": 74,
+      "letter_grade": "C"
     },
     {
       "class_name": "English 10",
@@ -116,7 +116,7 @@
       "11/30/2025": 66,
       "12/1/2025": 66,
       "12/2/2025": 66,
-      "12/3/2025": 66
+      "12/3/2025": 74
     },
     "English 10": {
       "11/24/2025": 75,
@@ -215,7 +215,7 @@
       "12/3/2025": 85
     }
   },
-  "overall_average": 84,
+  "overall_average": 85,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -226,6 +226,6 @@
     "11/30/2025": 84,
     "12/1/2025": 84,
     "12/2/2025": 84,
-    "12/3/2025": 84
+    "12/3/2025": 85
   }
 }
