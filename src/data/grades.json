@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "12/04/2025, 03:04 AM",
+    "last_updated": "12/04/2025, 11:04 AM",
     "most_recent_date": "12/4/2025",
     "total_classes": 9
   },
@@ -22,9 +22,9 @@
       "period": "1",
       "q1_grade": 70,
       "q1_letter_grade": "C",
-      "q2_grade": 75,
+      "q2_grade": 77,
       "q2_letter_grade": "C",
-      "current_grade": 75,
+      "current_grade": 77,
       "letter_grade": "C"
     },
     {
@@ -44,10 +44,10 @@
       "period": "3",
       "q1_grade": 73,
       "q1_letter_grade": "C",
-      "q2_grade": 90,
-      "q2_letter_grade": "A",
-      "current_grade": 90,
-      "letter_grade": "A"
+      "q2_grade": 47,
+      "q2_letter_grade": "F",
+      "current_grade": 47,
+      "letter_grade": "F"
     },
     {
       "class_name": "Art 1",
@@ -55,9 +55,9 @@
       "period": "4",
       "q1_grade": 55,
       "q1_letter_grade": "F",
-      "q2_grade": 84,
+      "q2_grade": 86,
       "q2_letter_grade": "B",
-      "current_grade": 84,
+      "current_grade": 86,
       "letter_grade": "B"
     },
     {
@@ -99,9 +99,9 @@
       "period": "8",
       "q1_grade": 78,
       "q1_letter_grade": "C",
-      "q2_grade": 90,
+      "q2_grade": 94,
       "q2_letter_grade": "A",
-      "current_grade": 90,
+      "current_grade": 94,
       "letter_grade": "A"
     }
   ],
@@ -130,7 +130,7 @@
       "12/1/2025": 75,
       "12/2/2025": 75,
       "12/3/2025": 75,
-      "12/4/2025": 75
+      "12/4/2025": 77
     },
     "Biology 2": {
       "11/24/2025": 82,
@@ -156,7 +156,7 @@
       "12/1/2025": 90,
       "12/2/2025": 90,
       "12/3/2025": 90,
-      "12/4/2025": 90
+      "12/4/2025": 47
     },
     "Art 1": {
       "11/24/2025": 84,
@@ -169,7 +169,7 @@
       "12/1/2025": 84,
       "12/2/2025": 84,
       "12/3/2025": 84,
-      "12/4/2025": 84
+      "12/4/2025": 86
     },
     "Physical Educ": {
       "11/24/2025": 100,
@@ -221,10 +221,10 @@
       "12/1/2025": 85,
       "12/2/2025": 85,
       "12/3/2025": 85,
-      "12/4/2025": 90
+      "12/4/2025": 94
     }
   },
-  "overall_average": 85,
+  "overall_average": 82,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -236,6 +236,6 @@
     "12/1/2025": 84,
     "12/2/2025": 84,
     "12/3/2025": 85,
-    "12/4/2025": 85
+    "12/4/2025": 82
   }
 }
