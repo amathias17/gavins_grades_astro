@@ -1,9 +1,17 @@
 {
   "metadata": {
-    "last_updated": "12/08/2025, 03:04 AM",
-    "count": 1
+    "last_updated": "12/08/2025, 11:03 AM",
+    "count": 2
   },
   "missing_assignments": [
+    {
+      "due_date": "12/04/2025  (Q2)",
+      "assignment_name": "Ch 9 Packets",
+      "class_name": "HEALTH",
+      "teacher": "Amy Palfey",
+      "category": "Class Work",
+      "max_points": "15"
+    },
     {
       "due_date": "11/21/2025  (Q2)",
       "assignment_name": "Still Life Drawing",
