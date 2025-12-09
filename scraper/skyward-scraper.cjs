@@ -419,6 +419,49 @@ async function saveGradesToFile(grades, missingAssignments = []) {
     const averageHistory = existingData.average_history || {};
     averageHistory[dateKey] = overallAverage;
 
+    // Calculate streak (consecutive days with no missing assignments)
+    const streakHistory = existingData.streak_history || {};
+    const hasMissingAssignments = missingAssignments.length > 0;
+
+    // Get all dates in chronological order
+    const allDates = Object.keys(averageHistory).sort((a, b) => {
+        return new Date(a) - new Date(b);
+    });
+
+    // Calculate current streak by going backwards from today
+    let currentStreak = 0;
+    for (let i = allDates.length - 1; i >= 0; i--) {
+        const date = allDates[i];
+        const missingStat = streakHistory[date];
+
+        // If this is today's date, record the current missing status
+        if (date === dateKey) {
+            streakHistory[date] = hasMissingAssignments ? 0 : (i > 0 && streakHistory[allDates[i-1]] !== undefined ? streakHistory[allDates[i-1]] + 1 : 1);
+            if (!hasMissingAssignments) {
+                currentStreak = streakHistory[date];
+            }
+            break;
+        }
+
+        // Count backwards from most recent date before today
+        if (missingStat === undefined || missingStat === 0) {
+            break;
+        }
+        currentStreak = missingStat;
+    }
+
+    // If there are missing assignments today, reset streak to 0
+    if (hasMissingAssignments) {
+        currentStreak = 0;
+        streakHistory[dateKey] = 0;
+    } else if (streakHistory[dateKey] === undefined) {
+        // Calculate streak for today if not set yet
+        const previousDate = allDates[allDates.indexOf(dateKey) - 1];
+        const previousStreak = previousDate && streakHistory[previousDate] !== undefined ? streakHistory[previousDate] : 0;
+        currentStreak = previousStreak === 0 ? 1 : previousStreak + 1;
+        streakHistory[dateKey] = currentStreak;
+    }
+
     // Create the grades output data (without missing assignments)
     const gradesOutputData = {
         metadata: {
@@ -429,7 +472,9 @@ async function saveGradesToFile(grades, missingAssignments = []) {
         classes: transformedClasses,
         grade_history: gradeHistory,
         overall_average: overallAverage,
-        average_history: averageHistory
+        average_history: averageHistory,
+        streak: currentStreak,
+        streak_history: streakHistory
     };
 
     // Create the missing assignments output data
