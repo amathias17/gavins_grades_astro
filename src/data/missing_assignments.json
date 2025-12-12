@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "12/12/2025, 06:36 AM",
-    "count": 5
+    "last_updated": "12/12/2025, 12:02 PM",
+    "count": 4
   },
   "missing_assignments": [
     {
@@ -35,14 +35,6 @@
       "teacher": "Brock Seese",
       "category": "Class Work",
       "max_points": "15"
-    },
-    {
-      "due_date": "11/21/2025  (Q2)",
-      "assignment_name": "Still Life Drawing",
-      "class_name": "ART 1",
-      "teacher": "Kathryn Curry",
-      "category": "Benchmark",
-      "max_points": "60"
     }
   ]
 }

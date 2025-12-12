@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "12/12/2025, 06:36 AM",
+    "last_updated": "12/12/2025, 12:02 PM",
     "most_recent_date": "12/12/2025",
     "total_classes": 9
   },
@@ -55,9 +55,9 @@
       "period": "4",
       "q1_grade": 55,
       "q1_letter_grade": "F",
-      "q2_grade": 86,
+      "q2_grade": 80,
       "q2_letter_grade": "B",
-      "current_grade": 86,
+      "current_grade": 80,
       "letter_grade": "B"
     },
     {
@@ -209,7 +209,7 @@
       "12/9/2025": 86,
       "12/10/2025": 86,
       "12/11/2025": 86,
-      "12/12/2025": 86
+      "12/12/2025": 80
     },
     "Physical Educ": {
       "11/24/2025": 100,
@@ -296,7 +296,7 @@
       "12/12/2025": 77
     }
   },
-  "overall_average": 80,
+  "overall_average": 79,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -316,7 +316,7 @@
     "12/9/2025": 81,
     "12/10/2025": 81,
     "12/11/2025": 80,
-    "12/12/2025": 80
+    "12/12/2025": 79
   },
   "streak": 0,
   "streak_history": {
