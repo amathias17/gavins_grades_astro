@@ -1,0 +1,339 @@
+---
+import type { Class } from "../types/grades";
+
+interface Props {
+  classInfo: Class;
+}
+
+const { classInfo } = Astro.props;
+
+// Pass necessary data to client-side script via data attributes
+const dataProps = {
+  currentGrade: classInfo.current_grade,
+  letterGrade: classInfo.letter_grade,
+  hasAssignments: (classInfo.assignments?.length ?? 0) > 0,
+  assignments: JSON.stringify(classInfo.assignments ?? []),
+};
+---
+
+<div
+  class="shadow-[0_0_0_4px_#000,0_0_0_8px_#fff,8px_8px_0_8px_rgba(255,255,255,0.3)] relative p-5 border-4 border-solid border-white card mb-8"
+  id="grade-calculator"
+  data-current-grade={dataProps.currentGrade}
+  data-letter-grade={dataProps.letterGrade}
+  data-has-assignments={dataProps.hasAssignments}
+  data-assignments={dataProps.assignments}
+>
+  <!-- Header -->
+  <div
+    class="flex items-center gap-[15px] mb-5 pb-[15px] border-b-[3px] border-b-[#555] border-dashed"
+  >
+    <div
+      class="w-12 h-12 flex items-center justify-center text-[1.2em] border-[3px] border-solid border-[#00ff00] bg-[#000]"
+    >
+      🎯
+    </div>
+    <div class="text-[0.7em] text-[#00ff00]">GRADE.IMPACT.CALCULATOR</div>
+  </div>
+
+  <!-- Instructions -->
+  <div class="mb-5 text-[0.5em] text-[#aaa] uppercase">
+    Simulate a new assignment to see how it affects your grade
+  </div>
+
+  <!-- Input Form -->
+  <form id="calculator-form" class="mb-5" aria-label="Grade impact calculator">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+      <!-- Score Earned Input -->
+      <div class="bg-[#000] p-4 border-[3px] border-solid border-[#555]">
+        <label for="score-earned" class="block text-[0.5em] text-[#aaa] uppercase mb-2">
+          Score Earned
+        </label>
+        <div class="flex items-center gap-2">
+          <input
+            type="number"
+            id="score-earned"
+            name="scoreEarned"
+            min="0"
+            max="10000"
+            step="0.1"
+            class="w-full bg-[#000] border-[2px] border-[#00ff00] text-white p-2 text-[0.6em] uppercase font-mono focus:outline-none focus:border-[#00cc00] focus:shadow-[0_0_10px_rgba(0,255,0,0.3)]"
+            placeholder="85"
+            aria-describedby="score-earned-desc"
+            required
+          />
+          <span class="text-[0.5em] text-[#aaa]">PTS</span>
+        </div>
+        <span id="score-earned-desc" class="sr-only">Enter the points you earned on the hypothetical assignment</span>
+      </div>
+
+      <!-- Max Points Input -->
+      <div class="bg-[#000] p-4 border-[3px] border-solid border-[#555]">
+        <label for="max-points" class="block text-[0.5em] text-[#aaa] uppercase mb-2">
+          Max Points
+        </label>
+        <div class="flex items-center gap-2">
+          <input
+            type="number"
+            id="max-points"
+            name="maxPoints"
+            min="0.1"
+            max="10000"
+            step="0.1"
+            class="w-full bg-[#000] border-[2px] border-[#00ff00] text-white p-2 text-[0.6em] uppercase font-mono focus:outline-none focus:border-[#00cc00] focus:shadow-[0_0_10px_rgba(0,255,0,0.3)]"
+            placeholder="100"
+            aria-describedby="max-points-desc"
+            required
+          />
+          <span class="text-[0.5em] text-[#aaa]">PTS</span>
+        </div>
+        <span id="max-points-desc" class="sr-only">Enter the maximum possible points for the hypothetical assignment</span>
+      </div>
+    </div>
+
+    <!-- Error Display -->
+    <div id="calc-error" class="hidden mb-4 p-3 bg-[#E60A18] border-[2px] border-white text-white text-[0.5em] uppercase" role="alert" aria-live="assertive">
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="flex gap-3">
+      <button
+        type="submit"
+        id="calculate-btn"
+        class="flex-1 bg-[#00ff00] text-black px-6 py-3 text-[0.6em] uppercase font-bold border-[3px] border-white hover:bg-[#00cc00] hover:shadow-[0_0_15px_rgba(0,255,0,0.5)] transition-all cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+        aria-label="Calculate grade impact"
+      >
+        🚀 Calculate Impact
+      </button>
+      <button
+        type="button"
+        id="reset-btn"
+        class="bg-[#555] text-white px-6 py-3 text-[0.6em] uppercase font-bold border-[3px] border-white hover:bg-[#666] transition-all cursor-pointer"
+        aria-label="Reset calculator"
+      >
+        🔄 Reset
+      </button>
+    </div>
+  </form>
+
+  <!-- Results Display -->
+  <div id="results-container" class="hidden">
+    <div class="bg-[#000] p-5 border-[3px] border-solid border-[#00ff00]">
+      <div class="text-[0.6em] text-[#00ff00] uppercase mb-4 font-bold">
+        📊 Impact Analysis
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <!-- Current Grade -->
+        <div class="bg-[#111] p-3 border-[2px] border-[#555]">
+          <div class="text-[0.4em] text-[#aaa] uppercase mb-2">Current Grade</div>
+          <div class="flex items-center gap-2">
+            <span id="result-current-letter" class="grade-badge text-[0.7em]"></span>
+            <span id="result-current-percent" class="grade-badge text-[0.7em]"></span>
+          </div>
+        </div>
+
+        <!-- Projected Grade -->
+        <div class="bg-[#111] p-3 border-[2px] border-[#555]">
+          <div class="text-[0.4em] text-[#aaa] uppercase mb-2">Projected Grade</div>
+          <div class="flex items-center gap-2">
+            <span id="result-projected-letter" class="grade-badge text-[0.7em]"></span>
+            <span id="result-projected-percent" class="grade-badge text-[0.7em]"></span>
+            <span id="result-delta" class="text-[0.6em] font-bold"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="w-full h-8 relative overflow-hidden border-[3px] border-solid border-white bg-[#000]">
+        <div
+          id="result-progress"
+          class="h-full transition-[width] duration-[1s] ease-[steps(20)] relative after:content-[''] after:absolute after:w-1 after:h-full after:animate-[blink_0.5s_step-start_infinite] after:right-0 after:top-0"
+        >
+        </div>
+        <div id="result-progress-label" class="absolute inset-0 flex items-center justify-center text-[0.5em] font-bold z-10"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Import calculator utilities (bundled by Astro)
+  import { calculateGradeImpact, type GradeImpactResult } from "../utils/gradeCalculator";
+  import type { Assignment } from "../types/grades";
+
+  // Get DOM elements
+  const calculator = document.getElementById("grade-calculator");
+  const form = document.getElementById("calculator-form") as HTMLFormElement;
+  const scoreInput = document.getElementById("score-earned") as HTMLInputElement;
+  const maxPointsInput = document.getElementById("max-points") as HTMLInputElement;
+  const calculateBtn = document.getElementById("calculate-btn") as HTMLButtonElement;
+  const resetBtn = document.getElementById("reset-btn") as HTMLButtonElement;
+  const errorDiv = document.getElementById("calc-error") as HTMLDivElement;
+  const resultsContainer = document.getElementById("results-container") as HTMLDivElement;
+
+  // Result elements
+  const resultCurrentLetter = document.getElementById("result-current-letter") as HTMLSpanElement;
+  const resultCurrentPercent = document.getElementById("result-current-percent") as HTMLSpanElement;
+  const resultProjectedLetter = document.getElementById("result-projected-letter") as HTMLSpanElement;
+  const resultProjectedPercent = document.getElementById("result-projected-percent") as HTMLSpanElement;
+  const resultDelta = document.getElementById("result-delta") as HTMLSpanElement;
+  const resultProgress = document.getElementById("result-progress") as HTMLDivElement;
+  const resultProgressLabel = document.getElementById("result-progress-label") as HTMLDivElement;
+
+  if (!calculator) throw new Error("Calculator element not found");
+
+  // Get data from component props
+  const currentGrade = parseFloat(calculator.dataset.currentGrade || "0");
+  const letterGrade = calculator.dataset.letterGrade || "F";
+  const hasAssignments = calculator.dataset.hasAssignments === "true";
+  const assignments: Assignment[] = JSON.parse(calculator.dataset.assignments || "[]");
+
+  // Helper to get grade color class
+  function getGradeColorClass(grade: number): string {
+    if (grade >= 90) return "grade-a";
+    if (grade >= 80) return "grade-b";
+    if (grade >= 70) return "grade-c";
+    if (grade >= 60) return "grade-d";
+    return "grade-f";
+  }
+
+  // Hide error message
+  function hideError() {
+    errorDiv.classList.add("hidden");
+    errorDiv.textContent = "";
+  }
+
+  // Show error message
+  function showError(message: string) {
+    errorDiv.textContent = message;
+    errorDiv.classList.remove("hidden");
+    errorDiv.focus(); // For accessibility
+  }
+
+  // Hide results
+  function hideResults() {
+    resultsContainer.classList.add("hidden");
+  }
+
+  // Display calculation results
+  function displayResults(result: GradeImpactResult) {
+    // Current grade
+    resultCurrentLetter.textContent = result.currentLetterGrade;
+    resultCurrentLetter.className = `grade-badge ${getGradeColorClass(result.currentGrade)} text-[0.7em]`;
+
+    resultCurrentPercent.textContent = `${Math.round(result.currentGrade)}%`;
+    resultCurrentPercent.className = `grade-badge ${getGradeColorClass(result.currentGrade)} text-[0.7em]`;
+
+    // Projected grade
+    resultProjectedLetter.textContent = result.projectedLetterGrade;
+    resultProjectedLetter.className = `grade-badge ${getGradeColorClass(result.projectedGrade)} text-[0.7em]`;
+
+    resultProjectedPercent.textContent = `${Math.round(result.projectedGrade)}%`;
+    resultProjectedPercent.className = `grade-badge ${getGradeColorClass(result.projectedGrade)} text-[0.7em]`;
+
+    // Delta
+    const deltaSign = result.delta >= 0 ? "+" : "";
+    const deltaColor = result.isImprovement
+      ? "text-[#01BC61]" // Green
+      : result.isDecline
+      ? "text-[#E60A18]" // Red
+      : "text-[#aaa]"; // Gray
+    const deltaIcon = result.isImprovement ? "▲" : result.isDecline ? "▼" : "●";
+
+    resultDelta.textContent = `${deltaIcon}${deltaSign}${result.delta.toFixed(1)}%`;
+    resultDelta.className = `text-[0.6em] font-bold ${deltaColor}`;
+
+    // Progress bar
+    const progressColorClass = getGradeColorClass(result.projectedGrade);
+    resultProgress.className = `progress-fill ${progressColorClass} h-full transition-[width] duration-[1s] ease-[steps(20)] relative after:content-[''] after:absolute after:w-1 after:h-full after:animate-[blink_0.5s_step-start_infinite] after:right-0 after:top-0`;
+    resultProgress.style.width = `${Math.min(100, result.projectedGrade)}%`;
+
+    resultProgressLabel.textContent = `${Math.round(result.projectedGrade)}%`;
+
+    // Show results with fade-in
+    resultsContainer.classList.remove("hidden");
+
+    // Announce to screen readers
+    const announcement = `Grade impact calculated. Your current grade is ${result.currentGrade.toFixed(1)} percent, letter grade ${result.currentLetterGrade}. Your projected grade would be ${result.projectedGrade.toFixed(1)} percent, letter grade ${result.projectedLetterGrade}. That's a change of ${deltaSign}${result.delta.toFixed(1)} percent.`;
+    announceToScreenReader(announcement);
+  }
+
+  // Announce to screen readers
+  function announceToScreenReader(message: string) {
+    const announcement = document.createElement("div");
+    announcement.setAttribute("role", "status");
+    announcement.setAttribute("aria-live", "polite");
+    announcement.className = "sr-only";
+    announcement.textContent = message;
+    document.body.appendChild(announcement);
+
+    // Remove after announcement
+    setTimeout(() => {
+      document.body.removeChild(announcement);
+    }, 1000);
+  }
+
+  // Handle form submission
+  function handleSubmit(event: Event) {
+    event.preventDefault();
+
+    hideError();
+
+    const scoreEarned = parseFloat(scoreInput.value);
+    const maxPoints = parseFloat(maxPointsInput.value);
+
+    try {
+      const result = calculateGradeImpact(
+        currentGrade,
+        { scoreEarned, maxPoints },
+        hasAssignments ? assignments : undefined
+      );
+
+      displayResults(result);
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : "Invalid input";
+      showError(errorMessage);
+      hideResults();
+    }
+  }
+
+  // Handle reset
+  function handleReset() {
+    form.reset();
+    hideError();
+    hideResults();
+    scoreInput.focus(); // Return focus to first input
+  }
+
+  // Event listeners
+  form.addEventListener("submit", handleSubmit);
+  resetBtn.addEventListener("click", handleReset);
+
+  // Enable/disable calculate button based on input
+  function updateCalculateButton() {
+    const hasValues = scoreInput.value.trim() !== "" && maxPointsInput.value.trim() !== "";
+    calculateBtn.disabled = !hasValues;
+  }
+
+  scoreInput.addEventListener("input", updateCalculateButton);
+  maxPointsInput.addEventListener("input", updateCalculateButton);
+
+  // Initial button state
+  updateCalculateButton();
+</script>
+
+<style>
+  /* Screen reader only class */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+</style>

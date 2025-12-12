@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import GradeCalculator from "../../components/GradeCalculator.astro";
 import gradesData from "../../data/grades.json";
 import type { Class, Assignment } from "../../types/grades";
 
@@ -142,6 +143,9 @@ const hasAssignments = assignments.length > 0;
         }
       </div>
     </div>
+
+    <!-- Grade Calculator -->
+    <GradeCalculator classInfo={classInfo} />
 
     <!-- Assignments Section -->
     <div

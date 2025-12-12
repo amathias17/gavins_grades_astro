@@ -12,7 +12,13 @@
       "Bash(npm run dev:*)",
       "Bash(curl:*)",
       "Bash(tasklist:*)",
-      "Bash(findstr:*)"
+      "Bash(findstr:*)",
+      "mcp__sequential-thinking__sequentialthinking",
+      "mcp__octocode__githubViewRepoStructure",
+      "Bash(dir:*)",
+      "mcp__Astro-docs__search_astro_docs",
+      "mcp__deep-wiki-mcp__ask_question",
+      "Bash(npx astro check:*)"
     ],
     "deny": [],
     "ask": []
