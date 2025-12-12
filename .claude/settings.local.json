@@ -18,7 +18,9 @@
       "Bash(dir:*)",
       "mcp__Astro-docs__search_astro_docs",
       "mcp__deep-wiki-mcp__ask_question",
-      "Bash(npx astro check:*)"
+      "Bash(npx astro check:*)",
+      "Bash(npx playwright test:*)",
+      "Bash(npx playwright install)"
     ],
     "deny": [],
     "ask": []

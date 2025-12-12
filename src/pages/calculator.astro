@@ -1,0 +1,600 @@
+---
+/**
+ * Grade Impact Calculator - Dashboard Style
+ *
+ * A dedicated route for calculating grade impacts with a cleaner,
+ * dashboard-style layout. Distinct sections for better scannability.
+ */
+
+import BaseLayout from "../layouts/BaseLayout.astro";
+import gradesData from "../data/grades.json";
+import type { Class } from "../types/grades";
+
+const classes = gradesData.classes as Class[];
+
+// Helper function for grade colors (reuse existing pattern)
+function getGradeColor(grade: number): string {
+  if (grade >= 90) return "grade-a";
+  if (grade >= 80) return "grade-b";
+  if (grade >= 70) return "grade-c";
+  if (grade >= 60) return "grade-d";
+  return "grade-f";
+}
+---
+
+<BaseLayout>
+  <!-- Back Navigation -->
+  <div class="mb-6">
+    <a
+      href="/"
+      class="inline-flex items-center gap-2 text-[#00ff00] hover:text-[#00cc00] transition-colors text-[0.5em] uppercase border-2 border-[#00ff00] hover:border-[#00cc00] px-4 py-2 bg-[#000]"
+    >
+      <span>← BACK TO DASHBOARD</span>
+    </a>
+  </div>
+
+  <!-- Page Header -->
+  <div
+    class="shadow-[0_0_0_4px_#000,0_0_0_8px_#fff,8px_8px_0_8px_rgba(255,255,255,0.3)] relative p-5 md:p-8 border-4 border-solid border-white card mb-8"
+  >
+    <div class="flex items-center gap-[15px] mb-3">
+      <div
+        class="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center text-[1.5em] border-[3px] border-solid border-[#00ff00] bg-[#000]"
+      >
+        🎯
+      </div>
+      <div>
+        <h1 class="text-[0.8em] md:text-[1em] text-[#00ff00] uppercase">
+          Grade.Impact.Dashboard
+        </h1>
+        <p class="text-[0.4em] md:text-[0.5em] text-[#aaa] uppercase mt-1">
+          Simulate assignment scores to see grade changes
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Dashboard Grid -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+    <!-- LEFT COLUMN: Class Selector + Inputs -->
+    <div class="lg:col-span-1 space-y-6">
+      <!-- Class Selector Card -->
+      <div
+        class="shadow-[0_0_0_4px_#000,0_0_0_8px_#fff,8px_8px_0_8px_rgba(255,255,255,0.3)] relative p-5 border-4 border-solid border-white card"
+      >
+        <div
+          class="flex items-center gap-[15px] mb-4 pb-[15px] border-b-[3px] border-b-[#555] border-dashed"
+        >
+          <div
+            class="w-10 h-10 flex items-center justify-center text-[1em] border-[3px] border-solid border-[#00ff00] bg-[#000]"
+          >
+            📚
+          </div>
+          <div class="text-[0.6em] text-[#00ff00]">SELECT.CLASS</div>
+        </div>
+
+        <div class="bg-[#000] p-4 border-[3px] border-solid border-[#555]">
+          <label
+            for="class-selector"
+            class="block text-[0.5em] text-[#aaa] uppercase mb-3"
+          >
+            Choose Class
+          </label>
+          <select
+            id="class-selector"
+            class="w-full bg-[#000] border-[2px] border-[#00ff00] text-white p-3 text-[0.5em] uppercase font-mono focus:outline-none focus:border-[#00cc00] focus:shadow-[0_0_10px_rgba(0,255,0,0.3)]"
+            aria-label="Select class for grade calculation"
+          >
+            <option value="">-- Select a Class --</option>
+            {
+              classes.map((classInfo) => (
+                <option value={classInfo.period}>
+                  {classInfo.class_name} ({classInfo.current_grade}%)
+                </option>
+              ))
+            }
+          </select>
+        </div>
+
+        <!-- Current Class Info (Hidden until selection) -->
+        <div id="current-class-info" class="hidden mt-4">
+          <div class="bg-[#1a1a1a] p-3 border-[2px] border-[#555]">
+            <div class="text-[0.4em] text-[#aaa] uppercase mb-2">
+              Current Status
+            </div>
+            <div class="flex items-center gap-2">
+              <span id="current-class-letter" class="grade-badge text-[0.6em]"
+              ></span>
+              <span id="current-class-percent" class="grade-badge text-[0.6em]"
+              ></span>
+            </div>
+            <div class="text-[0.4em] text-[#aaa] mt-2">
+              <span id="current-class-teacher"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Input Card -->
+      <div
+        class="shadow-[0_0_0_4px_#000,0_0_0_8px_#fff,8px_8px_0_8px_rgba(255,255,255,0.3)] relative p-5 border-4 border-solid border-white card"
+      >
+        <div
+          class="flex items-center gap-[15px] mb-4 pb-[15px] border-b-[3px] border-b-[#555] border-dashed"
+        >
+          <div
+            class="w-10 h-10 flex items-center justify-center text-[1em] border-[3px] border-solid border-[#00ff00] bg-[#000]"
+          >
+            ✏️
+          </div>
+          <div class="text-[0.6em] text-[#00ff00]">HYPOTHETICAL.ASSIGNMENT</div>
+        </div>
+
+        <form id="calculator-form" class="space-y-4" novalidate>
+          <!-- Score Earned -->
+          <div class="bg-[#000] p-4 border-[3px] border-solid border-[#555]">
+            <label
+              for="score-earned"
+              class="block text-[0.5em] text-[#aaa] uppercase mb-2"
+            >
+              Points Earned
+            </label>
+            <div class="flex items-center gap-2">
+              <input
+                type="number"
+                id="score-earned"
+                min="0"
+                max="10000"
+                step="0.1"
+                class="flex-1 bg-[#000] border-[2px] border-[#00ff00] text-white p-2 text-[0.6em] uppercase font-mono focus:outline-none focus:border-[#00cc00] focus:shadow-[0_0_10px_rgba(0,255,0,0.3)]"
+                placeholder="85"
+                aria-describedby="score-help"
+                required
+              />
+              <span class="text-[0.5em] text-[#aaa]">PTS</span>
+            </div>
+            <span id="score-help" class="text-[0.35em] text-[#666] mt-1 block"
+              >Enter points you would earn</span
+            >
+          </div>
+
+          <!-- Max Points -->
+          <div class="bg-[#000] p-4 border-[3px] border-solid border-[#555]">
+            <label
+              for="max-points"
+              class="block text-[0.5em] text-[#aaa] uppercase mb-2"
+            >
+              Max Points Possible
+            </label>
+            <div class="flex items-center gap-2">
+              <input
+                type="number"
+                id="max-points"
+                min="0.1"
+                max="10000"
+                step="0.1"
+                class="flex-1 bg-[#000] border-[2px] border-[#00ff00] text-white p-2 text-[0.6em] uppercase font-mono focus:outline-none focus:border-[#00cc00] focus:shadow-[0_0_10px_rgba(0,255,0,0.3)]"
+                placeholder="100"
+                aria-describedby="max-help"
+                required
+              />
+              <span class="text-[0.5em] text-[#aaa]">PTS</span>
+            </div>
+            <span id="max-help" class="text-[0.35em] text-[#666] mt-1 block"
+              >Total points for assignment</span
+            >
+          </div>
+
+          <!-- Error Display -->
+          <div
+            id="calc-error"
+            class="hidden p-3 bg-[#E60A18] border-[2px] border-white text-white text-[0.45em] uppercase"
+            role="alert"
+            aria-live="assertive"
+          >
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex gap-3">
+            <button
+              type="submit"
+              id="calculate-btn"
+              class="flex-1 bg-[#00ff00] text-black px-4 py-3 text-[0.55em] uppercase font-bold border-[3px] border-white hover:bg-[#00cc00] hover:shadow-[0_0_15px_rgba(0,255,0,0.5)] transition-all cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              🚀 Calculate
+            </button>
+            <button
+              type="button"
+              id="reset-btn"
+              class="bg-[#555] text-white px-4 py-3 text-[0.55em] uppercase font-bold border-[3px] border-white hover:bg-[#666] transition-all cursor-pointer"
+            >
+              🔄 Reset
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN: Results Dashboard -->
+    <div class="lg:col-span-2">
+      <!-- Empty State -->
+      <div
+        id="empty-state"
+        class="shadow-[0_0_0_4px_#000,0_0_0_8px_#fff,8px_8px_0_8px_rgba(255,255,255,0.3)] relative p-8 md:p-12 border-4 border-solid border-white card text-center"
+      >
+        <div class="text-[3em] mb-4">🎮</div>
+        <h2 class="text-[0.7em] text-[#00ff00] uppercase mb-3">
+          Ready Player One
+        </h2>
+        <p class="text-[0.5em] text-[#aaa] max-w-md mx-auto">
+          Select a class and enter a hypothetical assignment score to see how it
+          would impact your grade. Your mission: optimize your XP!
+        </p>
+      </div>
+
+      <!-- Results Display (Hidden by default) -->
+      <div id="results-display" class="hidden space-y-6">
+        <!-- Results Header -->
+        <div
+          class="shadow-[0_0_0_4px_#000,0_0_0_8px_#fff,8px_8px_0_8px_rgba(255,255,255,0.3)] relative p-4 border-4 border-solid border-white card"
+        >
+          <div class="flex items-center gap-[15px]">
+            <div
+              class="w-10 h-10 flex items-center justify-center text-[1em] border-[3px] border-solid border-[#00ff00] bg-[#000]"
+            >
+              📊
+            </div>
+            <div class="text-[0.6em] text-[#00ff00]">IMPACT.ANALYSIS</div>
+          </div>
+        </div>
+
+        <!-- Results Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Current Grade Card -->
+          <div
+            class="shadow-[0_0_0_4px_#000,0_0_0_8px_#fff,8px_8px_0_8px_rgba(255,255,255,0.3)] relative p-5 border-4 border-solid border-white card"
+          >
+            <div class="text-[0.4em] text-[#aaa] uppercase mb-3 text-center">
+              Current Grade
+            </div>
+            <div class="flex flex-col items-center gap-3">
+              <span
+                id="result-current-letter"
+                class="grade-badge text-[1em]"></span>
+              <span
+                id="result-current-percent"
+                class="grade-badge text-[1em]"></span>
+            </div>
+          </div>
+
+          <!-- Delta Card (Center, Prominent) -->
+          <div
+            class="shadow-[0_0_0_4px_#000,0_0_0_8px_#00ff00,8px_8px_0_8px_rgba(0,255,0,0.3)] relative p-5 border-4 border-solid border-[#00ff00] card"
+          >
+            <div class="text-[0.4em] text-[#00ff00] uppercase mb-3 text-center">
+              Change
+            </div>
+            <div class="flex flex-col items-center">
+              <span
+                id="result-delta"
+                class="text-[1.5em] font-bold text-center"></span>
+              <span
+                id="result-delta-label"
+                class="text-[0.4em] uppercase mt-2"></span>
+            </div>
+          </div>
+
+          <!-- Projected Grade Card -->
+          <div
+            class="shadow-[0_0_0_4px_#000,0_0_0_8px_#fff,8px_8px_0_8px_rgba(255,255,255,0.3)] relative p-5 border-4 border-solid border-white card"
+          >
+            <div class="text-[0.4em] text-[#aaa] uppercase mb-3 text-center">
+              Projected Grade
+            </div>
+            <div class="flex flex-col items-center gap-3">
+              <span
+                id="result-projected-letter"
+                class="grade-badge text-[1em]"></span>
+              <span
+                id="result-projected-percent"
+                class="grade-badge text-[1em]"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Progress Visualization -->
+        <div
+          class="shadow-[0_0_0_4px_#000,0_0_0_8px_#fff,8px_8px_0_8px_rgba(255,255,255,0.3)] relative p-5 border-4 border-solid border-white card"
+        >
+          <div class="text-[0.5em] text-[#aaa] uppercase mb-3 text-center">
+            Grade Progression
+          </div>
+          <div
+            class="w-full h-12 relative overflow-hidden border-[3px] border-solid border-white bg-[#000]"
+          >
+            <div
+              id="result-progress"
+              class="h-full transition-[width] duration-[1s] ease-[steps(20)] relative after:content-[''] after:absolute after:w-1 after:h-full after:animate-[blink_0.5s_step-start_infinite] after:right-0 after:top-0"
+            >
+            </div>
+            <div
+              id="result-progress-label"
+              class="absolute inset-0 flex items-center justify-center text-[0.6em] font-bold z-10"
+            >
+            </div>
+          </div>
+        </div>
+
+        <!-- Assumptions Card (Collapsible) -->
+        <details
+          class="shadow-[0_0_0_4px_#000,0_0_0_8px_#fff,8px_8px_0_8px_rgba(255,255,255,0.3)] relative border-4 border-solid border-white card"
+        >
+          <summary
+            class="cursor-pointer p-4 hover:bg-[#1a1a1a] transition-colors"
+          >
+            <div class="flex items-center gap-[15px]">
+              <div
+                class="w-8 h-8 flex items-center justify-center text-[0.8em] border-[2px] border-solid border-[#555] bg-[#000]"
+              >
+                ℹ️
+              </div>
+              <div class="text-[0.5em] text-[#aaa] uppercase">
+                Calculation Details
+              </div>
+            </div>
+          </summary>
+          <div class="p-4 pt-0">
+            <div class="bg-[#000] p-4 border-[2px] border-[#555]">
+              <p id="assumptions-text" class="text-[0.45em] text-[#aaa]">
+                Calculation uses total points earned divided by total points
+                possible. For classes without assignment data, the current grade
+                is treated as 100 points possible.
+              </p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  import { calculateGradeImpact } from "../utils/gradeCalculator";
+  import type { Assignment, Class } from "../types/grades";
+  import gradesData from "../data/grades.json";
+
+  // Get all DOM elements
+  const classSelector = document.getElementById(
+    "class-selector"
+  ) as HTMLSelectElement;
+  const currentClassInfo = document.getElementById("current-class-info");
+  const currentClassLetter = document.getElementById("current-class-letter");
+  const currentClassPercent = document.getElementById("current-class-percent");
+  const currentClassTeacher = document.getElementById("current-class-teacher");
+
+  const form = document.getElementById("calculator-form") as HTMLFormElement;
+  const scoreInput = document.getElementById("score-earned") as HTMLInputElement;
+  const maxPointsInput = document.getElementById(
+    "max-points"
+  ) as HTMLInputElement;
+  const calculateBtn = document.getElementById(
+    "calculate-btn"
+  ) as HTMLButtonElement;
+  const resetBtn = document.getElementById("reset-btn") as HTMLButtonElement;
+  const errorDiv = document.getElementById("calc-error") as HTMLDivElement;
+
+  const emptyState = document.getElementById("empty-state");
+  const resultsDisplay = document.getElementById("results-display");
+
+  const resultCurrentLetter = document.getElementById("result-current-letter");
+  const resultCurrentPercent = document.getElementById("result-current-percent");
+  const resultProjectedLetter = document.getElementById(
+    "result-projected-letter"
+  );
+  const resultProjectedPercent = document.getElementById(
+    "result-projected-percent"
+  );
+  const resultDelta = document.getElementById("result-delta");
+  const resultDeltaLabel = document.getElementById("result-delta-label");
+  const resultProgress = document.getElementById("result-progress");
+  const resultProgressLabel = document.getElementById("result-progress-label");
+
+  // State
+  let selectedClass: Class | null = null;
+  const classes = gradesData.classes as Class[];
+
+  // Helper functions
+  function getGradeColorClass(grade: number): string {
+    if (grade >= 90) return "grade-a";
+    if (grade >= 80) return "grade-b";
+    if (grade >= 70) return "grade-c";
+    if (grade >= 60) return "grade-d";
+    return "grade-f";
+  }
+
+  function showError(message: string) {
+    if (errorDiv) {
+      errorDiv.textContent = message;
+      errorDiv.classList.remove("hidden");
+      errorDiv.focus();
+    }
+  }
+
+  function hideError() {
+    if (errorDiv) {
+      errorDiv.classList.add("hidden");
+      errorDiv.textContent = "";
+    }
+  }
+
+  function announceToScreenReader(message: string) {
+    const announcement = document.createElement("div");
+    announcement.setAttribute("role", "status");
+    announcement.setAttribute("aria-live", "polite");
+    announcement.className = "sr-only";
+    announcement.textContent = message;
+    document.body.appendChild(announcement);
+    setTimeout(() => document.body.removeChild(announcement), 1000);
+  }
+
+  // Event handlers
+  function handleClassSelection() {
+    const period = classSelector.value;
+
+    if (!period) {
+      selectedClass = null;
+      currentClassInfo?.classList.add("hidden");
+      return;
+    }
+
+    selectedClass =
+      classes.find(
+        (c) => c.period === period || c.class_id === period
+      ) || null;
+
+    if (selectedClass && currentClassInfo) {
+      // Show current class info
+      currentClassInfo.classList.remove("hidden");
+
+      if (currentClassLetter && currentClassPercent && currentClassTeacher) {
+        const colorClass = getGradeColorClass(selectedClass.current_grade);
+
+        currentClassLetter.textContent = selectedClass.letter_grade;
+        currentClassLetter.className = `grade-badge ${colorClass} text-[0.6em]`;
+
+        currentClassPercent.textContent = `${selectedClass.current_grade}%`;
+        currentClassPercent.className = `grade-badge ${colorClass} text-[0.6em]`;
+
+        currentClassTeacher.textContent = selectedClass.teacher;
+      }
+
+      announceToScreenReader(
+        `Selected ${selectedClass.class_name}, current grade is ${selectedClass.current_grade}%, letter grade ${selectedClass.letter_grade}`
+      );
+    }
+  }
+
+  function handleCalculate(event: Event) {
+    event.preventDefault();
+    hideError();
+
+    if (!selectedClass) {
+      showError("Please select a class first");
+      return;
+    }
+
+    const scoreEarned = parseFloat(scoreInput.value);
+    const maxPoints = parseFloat(maxPointsInput.value);
+
+    try {
+      const result = calculateGradeImpact(
+        selectedClass.current_grade,
+        { scoreEarned, maxPoints },
+        selectedClass.assignments
+      );
+
+      displayResults(result);
+    } catch (error) {
+      const errorMessage =
+        error instanceof Error ? error.message : "Invalid input";
+      showError(errorMessage);
+    }
+  }
+
+  function displayResults(result: any) {
+    // Hide empty state, show results
+    emptyState?.classList.add("hidden");
+    resultsDisplay?.classList.remove("hidden");
+
+    // Current grade
+    if (resultCurrentLetter && resultCurrentPercent) {
+      const currentColorClass = getGradeColorClass(result.currentGrade);
+
+      resultCurrentLetter.textContent = result.currentLetterGrade;
+      resultCurrentLetter.className = `grade-badge ${currentColorClass} text-[1em]`;
+
+      resultCurrentPercent.textContent = `${Math.round(result.currentGrade)}%`;
+      resultCurrentPercent.className = `grade-badge ${currentColorClass} text-[1em]`;
+    }
+
+    // Projected grade
+    if (resultProjectedLetter && resultProjectedPercent) {
+      const projectedColorClass = getGradeColorClass(result.projectedGrade);
+
+      resultProjectedLetter.textContent = result.projectedLetterGrade;
+      resultProjectedLetter.className = `grade-badge ${projectedColorClass} text-[1em]`;
+
+      resultProjectedPercent.textContent = `${Math.round(result.projectedGrade)}%`;
+      resultProjectedPercent.className = `grade-badge ${projectedColorClass} text-[1em]`;
+    }
+
+    // Delta
+    if (resultDelta && resultDeltaLabel) {
+      const deltaSign = result.delta >= 0 ? "+" : "";
+      const deltaColor = result.isImprovement
+        ? "text-[#01BC61]"
+        : result.isDecline
+        ? "text-[#E60A18]"
+        : "text-[#aaa]";
+      const deltaIcon = result.isImprovement
+        ? "▲"
+        : result.isDecline
+        ? "▼"
+        : "●";
+
+      resultDelta.textContent = `${deltaIcon} ${deltaSign}${result.delta.toFixed(1)}%`;
+      resultDelta.className = `text-[1.5em] font-bold text-center ${deltaColor}`;
+
+      const label = result.isImprovement
+        ? "Improvement"
+        : result.isDecline
+        ? "Decline"
+        : "No Change";
+      resultDeltaLabel.textContent = label;
+      resultDeltaLabel.className = `text-[0.4em] uppercase mt-2 ${deltaColor}`;
+    }
+
+    // Progress bar
+    if (resultProgress && resultProgressLabel) {
+      const progressColorClass = getGradeColorClass(result.projectedGrade);
+      resultProgress.className = `progress-fill ${progressColorClass} h-full transition-[width] duration-[1s] ease-[steps(20)] relative after:content-[''] after:absolute after:w-1 after:h-full after:animate-[blink_0.5s_step-start_infinite] after:right-0 after:top-0`;
+      resultProgress.style.width = `${Math.min(100, result.projectedGrade)}%`;
+
+      resultProgressLabel.textContent = `${Math.round(result.projectedGrade)}%`;
+    }
+
+    // Announce to screen readers
+    const announcement = `Grade impact calculated. Current: ${result.currentGrade.toFixed(1)}% (${result.currentLetterGrade}). Projected: ${result.projectedGrade.toFixed(1)}% (${result.projectedLetterGrade}). Change: ${result.delta.toFixed(1)}%.`;
+    announceToScreenReader(announcement);
+
+    // Scroll to results on mobile
+    if (window.innerWidth < 1024) {
+      resultsDisplay?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+  }
+
+  function handleReset() {
+    form.reset();
+    hideError();
+    emptyState?.classList.remove("hidden");
+    resultsDisplay?.classList.add("hidden");
+    scoreInput.focus();
+  }
+
+  function updateCalculateButton() {
+    const hasClass = !!selectedClass;
+    const hasInputs =
+      scoreInput.value.trim() !== "" && maxPointsInput.value.trim() !== "";
+    calculateBtn.disabled = !(hasClass && hasInputs);
+  }
+
+  // Event listeners
+  classSelector.addEventListener("change", handleClassSelection);
+  form.addEventListener("submit", handleCalculate);
+  resetBtn.addEventListener("click", handleReset);
+  scoreInput.addEventListener("input", updateCalculateButton);
+  maxPointsInput.addEventListener("input", updateCalculateButton);
+
+  // Initial state
+  updateCalculateButton();
+</script>
