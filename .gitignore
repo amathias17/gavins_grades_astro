@@ -22,3 +22,6 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# scraper caches (student data)
+scraper/detailed-grades-cache.json

@@ -10,6 +10,40 @@ const { chromium } = require('playwright');
 const fs = require('fs').promises;
 const path = require('path');
 
+const CACHE_FILENAME = 'detailed-grades-cache.json';
+
+async function readJsonIfExists(filePath) {
+  try {
+    const content = await fs.readFile(filePath, 'utf8');
+    return JSON.parse(content);
+  } catch (error) {
+    if (error.code === 'ENOENT') {
+      return null;
+    }
+    throw error;
+  }
+}
+
+async function loadCache() {
+  const cachePath = path.join(__dirname, CACHE_FILENAME);
+  const existing = await readJsonIfExists(cachePath);
+
+  return {
+    path: cachePath,
+    assignments: existing?.assignments ?? {},
+    updatedAt: existing?.updatedAt ?? null
+  };
+}
+
+async function saveCache(cachePath, assignments) {
+  const payload = {
+    updatedAt: new Date().toISOString(),
+    assignments
+  };
+
+  await fs.writeFile(cachePath, JSON.stringify(payload, null, 2));
+}
+
 async function loginAndNavigateToGradebook() {
   const username = process.env.SKYWARD_USERNAME;
   const password = process.env.SKYWARD_PASSWORD;
@@ -102,11 +136,40 @@ async function expandAllClasses(page) {
   await page.waitForTimeout(1500);
 }
 
+async function expandAllAssignments(page) {
+  console.log('Expanding assignments within each class (Next ... links) until exhausted...');
+  for (let i = 0; i < 50; i++) {
+    const clicked = await page.evaluate(() => {
+      const links = Array.from(document.querySelectorAll('a[id^="moreAssignmentsEvents_"]'));
+      const nextLink = links.find((link) => link.offsetParent !== null);
+      if (nextLink) {
+        nextLink.click();
+        return true;
+      }
+      return false;
+    });
+
+    if (!clicked) {
+      break;
+    }
+
+    await page.waitForTimeout(800);
+  }
+}
+
 async function getClassInfo(page) {
   console.log('Extracting class information...');
 
   return page.evaluate(() => {
     const classes = [];
+    const classIdMap = {};
+
+    const recordClass = (id, info) => {
+      if (!id) return;
+      classIdMap[id] = classIdMap[id]
+        ? { ...info, ...classIdMap[id] }
+        : info;
+    };
     const classTables = document.querySelectorAll('table[id^="classDesc_"]');
 
     classTables.forEach(table => {
@@ -159,16 +222,41 @@ async function getClassInfo(page) {
         }
       }
 
-      classes.push({
+      const entry = {
         className,
         teacher,
         period,
         groupId,
         currentGrade
-      });
+      };
+
+      classes.push(entry);
+      recordClass(groupId, entry);
     });
 
-    return classes;
+    // Map assignment class ids to class info when possible
+    document.querySelectorAll('a#showAssignmentInfo').forEach(link => {
+      const classId = link.getAttribute('data-gid');
+      if (!classId) return;
+
+      const row = link.closest('tr');
+      const container = row?.closest('table');
+      const classTable = container?.previousElementSibling?.matches?.('table[id^="classDesc_"]')
+        ? container.previousElementSibling
+        : container?.parentElement?.querySelector?.('table[id^="classDesc_"]');
+
+      const className = classTable?.querySelector?.('.classDesc a')?.textContent?.trim() || '';
+      const periodMatch = classTable?.textContent?.match(/Period\s*(\d+|[A-Z])/);
+      const period = periodMatch ? periodMatch[1] : '';
+      const teacherLink = classTable?.querySelector?.('tr:nth-of-type(3) a');
+      const teacher = teacherLink ? teacherLink.textContent.trim() : '';
+
+      if (className || teacher || period) {
+        recordClass(classId, { className, teacher, period, groupId: classId, currentGrade: null });
+      }
+    });
+
+    return { classes, classIdMap };
   });
 }
 
@@ -222,48 +310,53 @@ async function extractAssignmentDetails(page, assignmentIndex) {
 
     // Extract the assignment details from the modal
     const details = await page.evaluate(() => {
-      // Look for grade information in various possible locations
-      const possibleSelectors = [
-        // Common patterns for grade display
-        'div.sf_Section:has-text("Grade")',
-        'div:has-text("Points")',
-        'span:has-text("/")',
-        'td:has-text("/")',
-      ];
+      const dialog = document.querySelector('.sf_Dialog, .ui-dialog, [role="dialog"]');
+      const scope = dialog || document.body;
+      const text = scope.innerText || '';
 
-      // Try to find the grade fraction (e.g., "87/100" or "87 / 100")
-      const allText = document.body.innerText;
-      const gradeMatch = allText.match(/(\d+)\s*\/\s*(\d+)/);
+      // Points Earned: try patterns like "Points Earned: 25.0 / 30.0" or "Points Earned 25 / 30"
+      const pointsMatch =
+        text.match(/Points\s*Earned[^0-9*]*([*]|[\d.]+)\s*\/\s*([\d.]+)/i) ||
+        text.match(/Earned\s*Points[^0-9*]*([*]|[\d.]+)\s*\/\s*([\d.]+)/i);
 
-      if (gradeMatch) {
-        return {
-          earnedPoints: parseInt(gradeMatch[1]),
-          totalPoints: parseInt(gradeMatch[2]),
-          found: true
-        };
+      let earnedPoints = null;
+      let totalPoints = null;
+      let graded = false;
+      let hasStar = false;
+      if (pointsMatch) {
+        const earnedRaw = pointsMatch[1];
+        const totalRaw = pointsMatch[2];
+        hasStar = earnedRaw === '*';
+        graded = !hasStar && !Number.isNaN(parseFloat(earnedRaw));
+        earnedPoints = graded ? parseFloat(earnedRaw) : 0;
+        totalPoints = !Number.isNaN(parseFloat(totalRaw)) ? parseFloat(totalRaw) : null;
       }
 
-      // If no match found, look for specific elements
-      const gradeElements = document.querySelectorAll('td, div, span');
-      for (const el of gradeElements) {
-        const text = el.textContent.trim();
-        const match = text.match(/^(\d+)\s*\/\s*(\d+)$/);
-        if (match) {
-          return {
-            earnedPoints: parseInt(match[1]),
-            totalPoints: parseInt(match[2]),
-            found: true
-          };
-        }
-      }
+      // Weight: look for "Weight: 15%" or "Weight 15%"
+      const weightMatch = text.match(/Weight[^0-9]*([\d.]+)%?/i);
+      const weight = weightMatch ? parseFloat(weightMatch[1]) : null;
 
-      return { found: false };
+      const assignDateMatch = text.match(/Assign(?:ment)?\s*Date[^0-9]*([0-9/]+)/i);
+      const dateDueMatch =
+        text.match(/Date\s*Due[^0-9]*([0-9/]+)/i) ||
+        text.match(/Due\s*Date[^0-9]*([0-9/]+)/i);
+
+      return {
+        graded,
+        earnedPoints,
+        totalPoints,
+        weight,
+        assignDate: assignDateMatch ? assignDateMatch[1] : null,
+        dateDue: dateDueMatch ? dateDueMatch[1] : null,
+        hasStar
+      };
     });
 
     // Close the modal (try various close methods)
     try {
       // Look for close button
       const closeSelectors = [
+        '.sf_DialogClose',
         'button:has-text("Close")',
         'button:has-text("OK")',
         'a:has-text("Close")',
@@ -293,11 +386,19 @@ async function extractAssignmentDetails(page, assignmentIndex) {
 
   } catch (error) {
     console.error(`Error extracting details for assignment ${assignmentIndex}:`, error.message);
-    return { found: false };
+    return {
+      graded: false,
+      earnedPoints: 0,
+      totalPoints: null,
+      weight: null,
+      assignDate: null,
+      dateDue: null,
+      hasStar: false
+    };
   }
 }
 
-async function scrapeAllAssignments(page, classes) {
+async function scrapeAllAssignments(page, classes, cacheAssignments = {}, classIdMap = {}) {
   console.log('\nExtracting detailed assignment information...');
 
   // Get all assignment links
@@ -305,33 +406,79 @@ async function scrapeAllAssignments(page, classes) {
   console.log(`Found ${assignmentLinks.length} assignments total`);
 
   const assignmentDetails = [];
+  const updatedCache = { ...cacheAssignments };
+  let cacheHits = 0;
 
   // Process each assignment
   for (let i = 0; i < assignmentLinks.length; i++) {
     const assignment = assignmentLinks[i];
+    // Only keep Q2 (due date text typically contains (Q2))
+    if (!assignment.dueDate || !/\(Q2\)/i.test(assignment.dueDate)) {
+      continue;
+    }
+
     console.log(`Processing ${i + 1}/${assignmentLinks.length}: ${assignment.name}`);
 
-    // Extract detailed points by clicking the assignment
-    const details = await extractAssignmentDetails(page, i);
+    const cacheKeyParts = [assignment.assignmentId, assignment.classId, assignment.studentId].filter(Boolean);
+    const cacheKey = cacheKeyParts.join(':');
+    const cached = cacheKey ? cacheAssignments[cacheKey] : null;
+
+    let details = cached && cached.graded ? cached : null;
+    if (details) {
+      cacheHits += 1;
+    } else {
+      // Extract detailed points by clicking the assignment
+      details = await extractAssignmentDetails(page, i);
+    }
 
     // Find which class this assignment belongs to
-    const classInfo = classes.find(c => c.groupId === assignment.classId);
+    const classInfo =
+      classIdMap[assignment.classId] ||
+      classes.find(c => c.groupId === assignment.classId);
+
+    const className = classInfo?.className || cached?.className || assignment.classId || 'Unknown';
+    const teacher = classInfo?.teacher || cached?.teacher || '';
+    const period = classInfo?.period || cached?.period || '';
+    const dateDue = details.dateDue || assignment.dueDate || null;
+    const graded = Boolean(details.graded);
+    const earnedPoints = graded ? details.earnedPoints ?? 0 : 0;
+    const totalPoints = details.totalPoints ?? 0;
 
     const assignmentData = {
-      className: classInfo ? classInfo.className : 'Unknown',
-      teacher: classInfo ? classInfo.teacher : '',
-      period: classInfo ? classInfo.period : '',
+      classId: assignment.classId,
+      assignmentId: assignment.assignmentId,
+      studentId: assignment.studentId,
+      className,
+      teacher,
+      period,
+      currentGrade: classInfo?.currentGrade ?? cached?.currentGrade ?? null,
       assignmentName: assignment.name,
-      dueDate: assignment.dueDate,
-      earnedPoints: details.found ? details.earnedPoints : 0,
-      totalPoints: details.found ? details.totalPoints : 0,
-      graded: details.found
+      assignDate: details.assignDate || null,
+      dateDue,
+      dueDate: dateDue,
+      earnedPoints,
+      totalPoints,
+      weight: details.weight ?? null,
+      graded
     };
+
+    if (graded && cacheKey) {
+      updatedCache[cacheKey] = {
+        ...assignmentData,
+        graded: true,
+        cachedAt: new Date().toISOString()
+      };
+    } else if (cacheKey && updatedCache[cacheKey]) {
+      // Keep pending items uncached so they are refreshed when grades land
+      delete updatedCache[cacheKey];
+    }
 
     assignmentDetails.push(assignmentData);
   }
 
-  return assignmentDetails;
+  console.log(`Cache hits: ${cacheHits}`);
+
+  return { assignmentDetails, updatedCache };
 }
 
 function organizeByClass(assignments, classes) {
@@ -350,15 +497,26 @@ function organizeByClass(assignments, classes) {
 
   // Add assignments to their respective classes
   assignments.forEach(assignment => {
-    if (byClass[assignment.className]) {
-      byClass[assignment.className].assignments.push({
-        name: assignment.assignmentName,
-        dueDate: assignment.dueDate,
-        earnedPoints: assignment.earnedPoints,
-        totalPoints: assignment.totalPoints,
-        graded: assignment.graded
-      });
+    const key = assignment.className || 'Unknown';
+    if (!byClass[key]) {
+      byClass[key] = {
+        className: key,
+        teacher: assignment.teacher || '',
+        period: assignment.period || '',
+        currentGrade: assignment.currentGrade ?? null,
+        assignments: []
+      };
     }
+
+    byClass[key].assignments.push({
+      name: assignment.assignmentName,
+      assignDate: assignment.assignDate || null,
+      dueDate: assignment.dateDue || assignment.dueDate || null,
+      earnedPoints: assignment.earnedPoints,
+      totalPoints: assignment.totalPoints,
+      weight: assignment.weight,
+      graded: assignment.graded
+    });
   });
 
   return Object.values(byClass);
@@ -367,6 +525,7 @@ function organizeByClass(assignments, classes) {
 async function main() {
   let browser;
   let popup;
+  const cache = await loadCache();
 
   try {
     // Login and navigate
@@ -374,19 +533,25 @@ async function main() {
     browser = result.browser;
     popup = result.popup;
 
-    // Expand all classes to show assignments
+    // Expand all classes to show assignments and paginate within each class
     await expandAllClasses(popup);
+    await expandAllAssignments(popup);
 
     // Get class information
-    const classes = await getClassInfo(popup);
+    const { classes, classIdMap } = await getClassInfo(popup);
     console.log(`\nFound ${classes.length} classes`);
 
     // Scrape all assignment details
-    const assignments = await scrapeAllAssignments(popup, classes);
-    console.log(`\nSuccessfully extracted ${assignments.length} assignments`);
+    const { assignmentDetails, updatedCache } = await scrapeAllAssignments(
+      popup,
+      classes,
+      cache.assignments,
+      classIdMap
+    );
+    console.log(`\nSuccessfully extracted ${assignmentDetails.length} assignments`);
 
     // Organize data by class
-    const dataByClass = organizeByClass(assignments, classes);
+    const dataByClass = organizeByClass(assignmentDetails, classes);
 
     // Save to file
     const outputPath = path.join(__dirname, 'detailed-grades.json');
@@ -394,7 +559,7 @@ async function main() {
       metadata: {
         scrapedAt: new Date().toISOString(),
         totalClasses: classes.length,
-        totalAssignments: assignments.length
+        totalAssignments: assignmentDetails.length
       },
       classes: dataByClass
     };
@@ -404,8 +569,12 @@ async function main() {
 
     // Also save raw assignments for debugging
     const rawOutputPath = path.join(__dirname, 'detailed-grades-raw.json');
-    await fs.writeFile(rawOutputPath, JSON.stringify(assignments, null, 2));
+    await fs.writeFile(rawOutputPath, JSON.stringify(assignmentDetails, null, 2));
     console.log(`✓ Raw data saved to: ${rawOutputPath}`);
+
+    // Persist cache for future runs
+    await saveCache(cache.path, updatedCache);
+    console.log(`Cache updated at: ${cache.path}`);
 
     await browser.close();
     console.log('\n✓ Scraping complete!');
