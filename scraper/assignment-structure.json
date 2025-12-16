@@ -1,0 +1,565 @@
+{
+  "tables": [
+    {
+      "index": 0,
+      "id": "grid_districtLinks",
+      "className": null,
+      "headers": [
+        "AASD School Website"
+      ],
+      "rowCount": 3,
+      "sampleRows": [
+        [
+          {
+            "text": "MySchoolBucks",
+            "html": "<a id=\"link2\" name=\"link2\" alt=\"Food Service Account Information\" tooltip=\"Food Service Account Information\" data-href=\"//www.myschoolbucks.com\" href=\"javascript:void(0)\">MySchoolBucks</a>",
+            "classes": ""
+          }
+        ],
+        [
+          {
+            "text": "AASD YouTube Channel",
+            "html": "<a id=\"link4\" name=\"link4\" alt=\"AASD YouTube Channel\" tooltip=\"AASD YouTube Channel\" data-href=\"https://www.youtube.com/user/AltoonaSD\" href=\"javascript:void(0)\">AASD YouTube Channel</a>",
+            "classes": ""
+          }
+        ]
+      ]
+    },
+    {
+      "index": 1,
+      "id": "grid_missingAssignmentsModule",
+      "className": null,
+      "headers": [
+        "Missing Assignments  (Show All)"
+      ],
+      "rowCount": 7,
+      "sampleRows": [
+        [
+          {
+            "text": "Gavin has 5 missing assignments:\n\n\nDue:12/11/2025My Social Truth, HEALTH (Period 8) Amy Palfey\n 12/05/2025Vicksburg Summary, ENGLISH 10 (Period 1) Megan Leone",
+            "html": "<div style=\"overflow:auto;padding:2px;width:800px;\"><div id=\"grid_studentsMissingAssignments_1396_gridWrap\" class=\"gridWrap\">\n<div class=\"sf_gridTableWrap\"><table vpaginate=\"no\" id=\"grid_studentsMissi",
+            "classes": ""
+          },
+          {
+            "text": "Gavin has 5 missing assignments:",
+            "html": "Gavin has <span class=\"bld\" style=\"color:red;\">5</span> missing assignments:",
+            "classes": ""
+          },
+          {
+            "text": "Due:12/11/2025My Social Truth, HEALTH (Period 8) Amy Palfey\n 12/05/2025Vicksburg Summary, ENGLISH 10 (Period 1) Megan Leone",
+            "html": "<div id=\"grid_missingAssignments_1396_gridWrap\" class=\"gridWrap\">\n<div class=\"sf_gridTableWrap\"><table vpaginate=\"no\" id=\"grid_missingAssignments_1396\" grid-table=\"\" zebra=\"false\" style=\"width:auto\"><",
+            "classes": ""
+          },
+          {
+            "text": "Due:",
+            "html": "<label class=\"sf_labelRight\">Due:</label>",
+            "classes": "fXs fIl"
+          },
+          {
+            "text": "12/11/2025",
+            "html": "12/11/2025",
+            "classes": ""
+          },
+          {
+            "text": "My Social Truth, HEALTH (Period 8) Amy Palfey",
+            "html": "<a id=\"showAssignmentInfo\" name=\"showAssignmentInfo\" data-eid=\"STINdvlcaAkjkbaT\" data-sid=\"1396\" data-gid=\"42895\" data-aid=\"1541126\" data-pos=\"right\" data-type=\"default\" data-maxheight=\"550\" data-minw",
+            "classes": ""
+          },
+          {
+            "text": "",
+            "html": "&nbsp;",
+            "classes": ""
+          },
+          {
+            "text": "12/05/2025",
+            "html": "12/05/2025",
+            "classes": ""
+          },
+          {
+            "text": "Vicksburg Summary, ENGLISH 10 (Period 1) Megan Leone",
+            "html": "<a id=\"showAssignmentInfo\" name=\"showAssignmentInfo\" data-eid=\"diaJfkdbddajJibj\" data-sid=\"1396\" data-gid=\"43162\" data-aid=\"1538643\" data-pos=\"right\" data-type=\"default\" data-maxheight=\"550\" data-minw",
+            "classes": ""
+          }
+        ],
+        [
+          {
+            "text": "Gavin has 5 missing assignments:",
+            "html": "Gavin has <span class=\"bld\" style=\"color:red;\">5</span> missing assignments:",
+            "classes": ""
+          }
+        ],
+        [
+          {
+            "text": "Due:12/11/2025My Social Truth, HEALTH (Period 8) Amy Palfey\n 12/05/2025Vicksburg Summary, ENGLISH 10 (Period 1) Megan Leone",
+            "html": "<div id=\"grid_missingAssignments_1396_gridWrap\" class=\"gridWrap\">\n<div class=\"sf_gridTableWrap\"><table vpaginate=\"no\" id=\"grid_missingAssignments_1396\" grid-table=\"\" zebra=\"false\" style=\"width:auto\"><",
+            "classes": ""
+          },
+          {
+            "text": "Due:",
+            "html": "<label class=\"sf_labelRight\">Due:</label>",
+            "classes": "fXs fIl"
+          },
+          {
+            "text": "12/11/2025",
+            "html": "12/11/2025",
+            "classes": ""
+          },
+          {
+            "text": "My Social Truth, HEALTH (Period 8) Amy Palfey",
+            "html": "<a id=\"showAssignmentInfo\" name=\"showAssignmentInfo\" data-eid=\"STINdvlcaAkjkbaT\" data-sid=\"1396\" data-gid=\"42895\" data-aid=\"1541126\" data-pos=\"right\" data-type=\"default\" data-maxheight=\"550\" data-minw",
+            "classes": ""
+          },
+          {
+            "text": "",
+            "html": "&nbsp;",
+            "classes": ""
+          },
+          {
+            "text": "12/05/2025",
+            "html": "12/05/2025",
+            "classes": ""
+          },
+          {
+            "text": "Vicksburg Summary, ENGLISH 10 (Period 1) Megan Leone",
+            "html": "<a id=\"showAssignmentInfo\" name=\"showAssignmentInfo\" data-eid=\"diaJfkdbddajJibj\" data-sid=\"1396\" data-gid=\"43162\" data-aid=\"1538643\" data-pos=\"right\" data-type=\"default\" data-maxheight=\"550\" data-minw",
+            "classes": ""
+          }
+        ]
+      ]
+    },
+    {
+      "index": 2,
+      "id": "grid_studentsMissingAssignments_1396",
+      "className": null,
+      "headers": [
+        "Gavin has 5 missing assignments:"
+      ],
+      "rowCount": 5,
+      "sampleRows": [
+        [
+          {
+            "text": "Due:12/11/2025My Social Truth, HEALTH (Period 8) Amy Palfey\n 12/05/2025Vicksburg Summary, ENGLISH 10 (Period 1) Megan Leone",
+            "html": "<div id=\"grid_missingAssignments_1396_gridWrap\" class=\"gridWrap\">\n<div class=\"sf_gridTableWrap\"><table vpaginate=\"no\" id=\"grid_missingAssignments_1396\" grid-table=\"\" zebra=\"false\" style=\"width:auto\"><",
+            "classes": ""
+          },
+          {
+            "text": "Due:",
+            "html": "<label class=\"sf_labelRight\">Due:</label>",
+            "classes": "fXs fIl"
+          },
+          {
+            "text": "12/11/2025",
+            "html": "12/11/2025",
+            "classes": ""
+          },
+          {
+            "text": "My Social Truth, HEALTH (Period 8) Amy Palfey",
+            "html": "<a id=\"showAssignmentInfo\" name=\"showAssignmentInfo\" data-eid=\"STINdvlcaAkjkbaT\" data-sid=\"1396\" data-gid=\"42895\" data-aid=\"1541126\" data-pos=\"right\" data-type=\"default\" data-maxheight=\"550\" data-minw",
+            "classes": ""
+          },
+          {
+            "text": "",
+            "html": "&nbsp;",
+            "classes": ""
+          },
+          {
+            "text": "12/05/2025",
+            "html": "12/05/2025",
+            "classes": ""
+          },
+          {
+            "text": "Vicksburg Summary, ENGLISH 10 (Period 1) Megan Leone",
+            "html": "<a id=\"showAssignmentInfo\" name=\"showAssignmentInfo\" data-eid=\"diaJfkdbddajJibj\" data-sid=\"1396\" data-gid=\"43162\" data-aid=\"1538643\" data-pos=\"right\" data-type=\"default\" data-maxheight=\"550\" data-minw",
+            "classes": ""
+          }
+        ],
+        [
+          {
+            "text": "Due:",
+            "html": "<label class=\"sf_labelRight\">Due:</label>",
+            "classes": "fXs fIl"
+          },
+          {
+            "text": "12/11/2025",
+            "html": "12/11/2025",
+            "classes": ""
+          },
+          {
+            "text": "My Social Truth, HEALTH (Period 8) Amy Palfey",
+            "html": "<a id=\"showAssignmentInfo\" name=\"showAssignmentInfo\" data-eid=\"STINdvlcaAkjkbaT\" data-sid=\"1396\" data-gid=\"42895\" data-aid=\"1541126\" data-pos=\"right\" data-type=\"default\" data-maxheight=\"550\" data-minw",
+            "classes": ""
+          }
+        ],
+        [
+          {
+            "text": "",
+            "html": "&nbsp;",
+            "classes": ""
+          },
+          {
+            "text": "12/05/2025",
+            "html": "12/05/2025",
+            "classes": ""
+          },
+          {
+            "text": "Vicksburg Summary, ENGLISH 10 (Period 1) Megan Leone",
+            "html": "<a id=\"showAssignmentInfo\" name=\"showAssignmentInfo\" data-eid=\"diaJfkdbddajJibj\" data-sid=\"1396\" data-gid=\"43162\" data-aid=\"1538643\" data-pos=\"right\" data-type=\"default\" data-maxheight=\"550\" data-minw",
+            "classes": ""
+          }
+        ]
+      ]
+    },
+    {
+      "index": 3,
+      "id": "grid_missingAssignments_1396",
+      "className": null,
+      "headers": [
+        "Due:",
+        "12/11/2025",
+        "My Social Truth, HEALTH (Period 8) Amy Palfey"
+      ],
+      "rowCount": 3,
+      "sampleRows": [
+        [
+          {
+            "text": "",
+            "html": "&nbsp;",
+            "classes": ""
+          },
+          {
+            "text": "12/05/2025",
+            "html": "12/05/2025",
+            "classes": ""
+          },
+          {
+            "text": "Vicksburg Summary, ENGLISH 10 (Period 1) Megan Leone",
+            "html": "<a id=\"showAssignmentInfo\" name=\"showAssignmentInfo\" data-eid=\"diaJfkdbddajJibj\" data-sid=\"1396\" data-gid=\"43162\" data-aid=\"1538643\" data-pos=\"right\" data-type=\"default\" data-maxheight=\"550\" data-minw",
+            "classes": ""
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "index": 5,
+      "id": "grid_stuGradesGrid_1396_001",
+      "className": null,
+      "headers": [
+        "F",
+        "86",
+        "",
+        "",
+        ""
+      ],
+      "rowCount": 294,
+      "sampleRows": [
+        [
+          {
+            "text": "",
+            "html": "<div class=\"height26 gW_1396_001_all\">&nbsp;</div>",
+            "classes": "cPd tb3 uB "
+          },
+          {
+            "text": "100",
+            "html": "<div class=\"height26 gW_1396_001_all\">100</div>",
+            "classes": "cPd tb3  sf_highlightYellow "
+          },
+          {
+            "text": "",
+            "html": "<div class=\"height26 gW_1396_001_all\">&nbsp;</div>",
+            "classes": "cPd tb3 uB "
+          },
+          {
+            "text": "",
+            "html": "<div class=\"height26 gW_1396_001_all\">&nbsp;</div>",
+            "classes": "cPd tb3 uB "
+          },
+          {
+            "text": "",
+            "html": "<div class=\"height26 gW_1396_001_all\">&nbsp;</div>",
+            "classes": "cPd tb3 uB "
+          }
+        ],
+        [
+          {
+            "text": "",
+            "html": "<div class=\"height26 gW_1396_001_all\">&nbsp;</div>",
+            "classes": "cPd tb3 uB "
+          },
+          {
+            "text": "100",
+            "html": "<div class=\"height26 gW_1396_001_all\">100</div>",
+            "classes": "cPd tb3  sf_highlightYellow "
+          },
+          {
+            "text": "",
+            "html": "<div class=\"height26 gW_1396_001_all\">&nbsp;</div>",
+            "classes": "cPd tb3 uB "
+          },
+          {
+            "text": "",
+            "html": "<div class=\"height26 gW_1396_001_all\">&nbsp;</div>",
+            "classes": "cPd tb3 uB "
+          },
+          {
+            "text": "",
+            "html": "<div class=\"height26 gW_1396_001_all\">&nbsp;</div>",
+            "classes": "cPd tb3 uB "
+          }
+        ],
+        [
+          {
+            "text": "",
+            "html": "<div class=\"height26 gW_1396_001_all\">&nbsp;</div>",
+            "classes": "cPd tb3 uB "
+          },
+          {
+            "text": "100",
+            "html": "<div class=\"height26 gW_1396_001_all\">100</div>",
+            "classes": "cPd tb3  sf_highlightYellow "
+          },
+          {
+            "text": "",
+            "html": "<div class=\"height26 gW_1396_001_all\">&nbsp;</div>",
+            "classes": "cPd tb3 uB "
+          },
+          {
+            "text": "",
+            "html": "<div class=\"height26 gW_1396_001_all\">&nbsp;</div>",
+            "classes": "cPd tb3 uB "
+          },
+          {
+            "text": "",
+            "html": "<div class=\"height26 gW_1396_001_all\">&nbsp;</div>",
+            "classes": "cPd tb3 uB "
+          }
+        ]
+      ]
+    },
+    {
+      "index": 7,
+      "id": "grid_stuGradesGrid_1396_001",
+      "className": null,
+      "headers": [
+        "SOPHOMORE SEMINARPeriod0(7:40 AM - 8:05 AM)Victoria Good",
+        "",
+        "SOPHOMORE SEMINAR",
+        "Period0(7:40 AM - 8:05 AM)",
+        "Victoria Good"
+      ],
+      "rowCount": 333,
+      "sampleRows": [
+        [
+          {
+            "text": "",
+            "html": "<a id=\"exp_35985_0_20_1396\" name=\"exp_35985_0_20_1396\" class=\"sf_expander vAt sf_expandIcon sf_expanded\" style=\"margin: 0px; visibility: visible;\" data-sid=\"1396\" data-eid=\"001\" data-selector=\"\" href=",
+            "classes": "vAt"
+          },
+          {
+            "text": "SOPHOMORE SEMINAR",
+            "html": "<span class=\"bld classDesc\"><a id=\"TaurGDbFcIakdWWy\" name=\"TaurGDbFcIakdWWy\" href=\"javascript:void(0)\">SOPHOMORE SEMINAR</a></span>",
+            "classes": ""
+          }
+        ],
+        [
+          {
+            "text": "Period0(7:40 AM - 8:05 AM)",
+            "html": "<label class=\"sf_labelRight aLt\" style=\"padding-right:3px;width:auto\">Period</label>0<span class=\"fXs fWn\" style=\"padding-left:5px;\">(7:40 AM - 8:05 AM)</span>",
+            "classes": ""
+          }
+        ],
+        [
+          {
+            "text": "Victoria Good",
+            "html": "<a id=\"nldoilLlhwJhbcKp\" name=\"nldoilLlhwJhbcKp\" href=\"javascript:void(0)\">Victoria Good</a>",
+            "classes": ""
+          }
+        ]
+      ]
+    },
+    {
+      "index": 21,
+      "id": "grid_missAssignDialog_1396_001",
+      "className": null,
+      "headers": [
+        "Due",
+        "Assignment",
+        "Class",
+        "Teacher",
+        "Category",
+        "Max Points",
+        "Absent"
+      ],
+      "rowCount": 6,
+      "sampleRows": [
+        [
+          {
+            "text": "12/11/2025  (Q2)",
+            "html": "12/11/2025&nbsp;&nbsp;<span class=\"fIl\">(Q2)</span>",
+            "classes": "nWp"
+          },
+          {
+            "text": "My Social Truth",
+            "html": "<a id=\"showAssignmentInfo\" name=\"showAssignmentInfo\" data-eid=\"STINdvlcaAkjkbaT\" data-sid=\"1396\" data-gid=\"42895\" data-aid=\"1541126\" data-pos=\"right\" data-type=\"default\" data-maxheight=\"550\" data-minw",
+            "classes": ""
+          },
+          {
+            "text": "HEALTH",
+            "html": "<a id=\"dnJkdbmlciaisllk\" name=\"dnJkdbmlciaisllk\" href=\"javascript:void(0)\">HEALTH</a>",
+            "classes": ""
+          },
+          {
+            "text": "Amy Palfey",
+            "html": "<a id=\"aYicTdfpOkkbUdnd\" name=\"aYicTdfpOkkbUdnd\" href=\"javascript:void(0)\">Amy Palfey</a>",
+            "classes": ""
+          },
+          {
+            "text": "Project",
+            "html": "Project",
+            "classes": ""
+          },
+          {
+            "text": "10",
+            "html": "10",
+            "classes": "nWp aRt"
+          },
+          {
+            "text": "",
+            "html": "&nbsp;",
+            "classes": ""
+          }
+        ],
+        [
+          {
+            "text": "12/05/2025  (Q2)",
+            "html": "12/05/2025&nbsp;&nbsp;<span class=\"fIl\">(Q2)</span>",
+            "classes": "nWp"
+          },
+          {
+            "text": "Vicksburg Summary",
+            "html": "<a id=\"showAssignmentInfo\" name=\"showAssignmentInfo\" data-eid=\"diaJfkdbddajJibj\" data-sid=\"1396\" data-gid=\"43162\" data-aid=\"1538643\" data-pos=\"right\" data-type=\"default\" data-maxheight=\"550\" data-minw",
+            "classes": ""
+          },
+          {
+            "text": "ENGLISH 10",
+            "html": "<a id=\"ksjkFccOCdknoZHn\" name=\"ksjkFccOCdknoZHn\" href=\"javascript:void(0)\">ENGLISH 10</a>",
+            "classes": ""
+          },
+          {
+            "text": "Megan Leone",
+            "html": "<a id=\"yjglilbtjltaiaha\" name=\"yjglilbtjltaiaha\" href=\"javascript:void(0)\">Megan Leone</a>",
+            "classes": ""
+          },
+          {
+            "text": "Writing",
+            "html": "Writing",
+            "classes": ""
+          },
+          {
+            "text": "25",
+            "html": "25",
+            "classes": "nWp aRt"
+          },
+          {
+            "text": "",
+            "html": "&nbsp;",
+            "classes": ""
+          }
+        ],
+        [
+          {
+            "text": "12/04/2025  (Q2)",
+            "html": "12/04/2025&nbsp;&nbsp;<span class=\"fIl\">(Q2)</span>",
+            "classes": "nWp"
+          },
+          {
+            "text": "Notes Cell Organelles",
+            "html": "<a id=\"showAssignmentInfo\" name=\"showAssignmentInfo\" data-eid=\"lcRVVlbccjGZbzLt\" data-sid=\"1396\" data-gid=\"43424\" data-aid=\"1541018\" data-pos=\"right\" data-type=\"default\" data-maxheight=\"550\" data-minw",
+            "classes": ""
+          },
+          {
+            "text": "BIOLOGY            2",
+            "html": "<a id=\"bkljcjokFjhfdceb\" name=\"bkljcjokFjhfdceb\" href=\"javascript:void(0)\">BIOLOGY            2</a>",
+            "classes": ""
+          },
+          {
+            "text": "Denise Condo",
+            "html": "<a id=\"lcXzibolGQbbiTMK\" name=\"lcXzibolGQbbiTMK\" href=\"javascript:void(0)\">Denise Condo</a>",
+            "classes": ""
+          },
+          {
+            "text": "Class Work",
+            "html": "Class Work",
+            "classes": ""
+          },
+          {
+            "text": "5",
+            "html": "5",
+            "classes": "nWp aRt"
+          },
+          {
+            "text": "",
+            "html": "&nbsp;",
+            "classes": ""
+          }
+        ]
+      ]
+    }
+  ],
+  "assignments": [
+    {
+      "selector": "table[id*=\"grid\"]",
+      "count": 9,
+      "samples": [
+        {
+          "tag": "TABLE",
+          "id": "grid_districtLinks",
+          "className": "",
+          "textContent": "AASD School Website\nMySchoolBucks\nAASD YouTube Channel"
+        },
+        {
+          "tag": "TABLE",
+          "id": "grid_missingAssignmentsModule",
+          "className": "",
+          "textContent": "Missing Assignments  (Show All)\n\n\n\n\nGavin has 5 missing assignments:\n\n\nDue:12/11/2025My Social Truth, HEALTH (Period 8) Amy Palfey\n 12/05/2025Vicksburg Summary, ENGLISH 10 (Period 1) Megan Leone"
+        }
+      ]
+    },
+    {
+      "selector": "table[id*=\"Grade\"]",
+      "count": 4,
+      "samples": [
+        {
+          "tag": "TABLE",
+          "id": "grid_stuGradesGrid_1396_001",
+          "className": "",
+          "textContent": "Q1Q2Q3Q4FIN"
+        },
+        {
+          "tag": "TABLE",
+          "id": "grid_stuGradesGrid_1396_001",
+          "className": "",
+          "textContent": "F86 100    100    100    0    87   0    100    0    50    74    0    0    100    100    0    0         7071      0    100    100    88    0    0    100    100    100    96    20    93    80   100    0"
+        }
+      ]
+    },
+    {
+      "selector": "div[id*=\"Assignment\"]",
+      "count": 6,
+      "samples": [
+        {
+          "tag": "DIV",
+          "id": "missingAssignmentsModuleWrapper",
+          "className": "",
+          "textContent": "Missing Assignments  (Show All)\n\n\n\n\nGavin has 5 missing assignments:\n\n\nDue:12/11/2025My Social Truth, HEALTH (Period 8) Amy Palfey\n 12/05/2025Vicksburg Summary, ENGLISH 10 (Period 1) Megan Leone"
+        },
+        {
+          "tag": "DIV",
+          "id": "grid_missingAssignmentsModule_gridWrap",
+          "className": "gridWrap",
+          "textContent": "Missing Assignments  (Show All)\n\n\n\n\nGavin has 5 missing assignments:\n\n\nDue:12/11/2025My Social Truth, HEALTH (Period 8) Amy Palfey\n 12/05/2025Vicksburg Summary, ENGLISH 10 (Period 1) Megan Leone"
+        }
+      ]
+    }
+  ]
+}

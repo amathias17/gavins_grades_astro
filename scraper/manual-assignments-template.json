@@ -1,0 +1,115 @@
+{
+  "instructions": "For each class, list all assignments with their details. Copy this template for each class.",
+  "classes": [
+    {
+      "class_name": "SOPHOMORE SEMINAR",
+      "teacher": "Victoria Good",
+      "period": "0",
+      "assignments": [
+        {
+          "name": "Workbook Check",
+          "due_date": "11/25/2025",
+          "category": "Classwork",
+          "score": 100,
+          "max_points": 100,
+          "percentage": 100,
+          "status": "graded"
+        },
+        {
+          "name": "Weekly Participation",
+          "due_date": "11/24/2025",
+          "category": "Participation",
+          "score": 100,
+          "max_points": 100,
+          "percentage": 100,
+          "status": "graded"
+        }
+      ]
+    },
+    {
+      "class_name": "ENGLISH 10",
+      "teacher": "Megan Leone",
+      "period": "1",
+      "assignments": []
+    },
+    {
+      "class_name": "BIOLOGY 2",
+      "teacher": "Denise Condo",
+      "period": "2",
+      "assignments": []
+    },
+    {
+      "class_name": "HISTORY POP CULT 1",
+      "teacher": "Robyn Dixon",
+      "period": "3",
+      "assignments": []
+    },
+    {
+      "class_name": "GLOBAL AFFAIRS",
+      "teacher": "Heather Eckels",
+      "period": "3",
+      "assignments": []
+    },
+    {
+      "class_name": "ART 1",
+      "teacher": "Kathryn Curry",
+      "period": "4",
+      "assignments": []
+    },
+    {
+      "class_name": "ENG/DESIGN/ARCH",
+      "teacher": "Todd Bennett",
+      "period": "4",
+      "assignments": []
+    },
+    {
+      "class_name": "MONEY MATH",
+      "teacher": "Jennifer Weidley",
+      "period": "5B",
+      "assignments": []
+    },
+    {
+      "class_name": "PHYSICAL EDUC",
+      "teacher": "Bridget Feller",
+      "period": "5C",
+      "assignments": []
+    },
+    {
+      "class_name": "AMER STUDIES",
+      "teacher": "Brock Saese",
+      "period": "6",
+      "assignments": []
+    },
+    {
+      "class_name": "INTERMEDIATE GEOMETRY",
+      "teacher": "Caleb Marasco",
+      "period": "7",
+      "assignments": []
+    },
+    {
+      "class_name": "HEALTH",
+      "teacher": "Amy Palfey",
+      "period": "8",
+      "assignments": []
+    },
+    {
+      "class_name": "SOCIOLOGY",
+      "teacher": "Heather Eckels",
+      "period": "8",
+      "assignments": []
+    }
+  ],
+  "notes": [
+    "For each assignment, provide:",
+    "- name: Assignment name as shown in Skyward",
+    "- due_date: Due date in MM/DD/YYYY format",
+    "- category: Type (e.g., Homework, Quiz, Test, Project, Classwork)",
+    "- score: Points earned (null if not graded yet)",
+    "- max_points: Total points possible",
+    "- percentage: Calculated percentage (score/max_points * 100)",
+    "- status: 'graded', 'missing', or 'pending'",
+    "",
+    "For missing assignments, set score to null and status to 'missing'",
+    "Save the completed file as 'manual-assignments.json'"
+  ]
+}
