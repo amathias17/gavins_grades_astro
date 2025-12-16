@@ -1,9 +1,17 @@
 {
   "metadata": {
-    "last_updated": "12/16/2025, 12:04 PM",
-    "count": 6
+    "last_updated": "12/16/2025, 02:50 PM",
+    "count": 7
   },
   "missing_assignments": [
+    {
+      "due_date": "12/16/2025  (Q2)",
+      "assignment_name": "WWI Propaganda Poster",
+      "class_name": "AMER STUDIES",
+      "teacher": "Brock Seese",
+      "category": "Project",
+      "max_points": "50"
+    },
     {
       "due_date": "12/12/2025  (Q2)",
       "assignment_name": "Food Sketchbook",

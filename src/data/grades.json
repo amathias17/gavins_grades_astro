@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "12/16/2025, 12:04 PM",
+    "last_updated": "12/16/2025, 02:50 PM",
     "most_recent_date": "12/16/2025",
     "total_classes": 9
   },
@@ -77,10 +77,10 @@
       "period": "6",
       "q1_grade": 72,
       "q1_letter_grade": "C",
-      "q2_grade": 87,
-      "q2_letter_grade": "B",
-      "current_grade": 87,
-      "letter_grade": "B"
+      "q2_grade": 72,
+      "q2_letter_grade": "C",
+      "current_grade": 72,
+      "letter_grade": "C"
     },
     {
       "class_name": "Intermediate Geometry",
@@ -99,9 +99,9 @@
       "period": "8",
       "q1_grade": 78,
       "q1_letter_grade": "C",
-      "q2_grade": 77,
+      "q2_grade": 78,
       "q2_letter_grade": "C",
-      "current_grade": 77,
+      "current_grade": 78,
       "letter_grade": "C"
     }
   ],
@@ -279,7 +279,7 @@
       "12/13/2025": 87,
       "12/14/2025": 87,
       "12/15/2025": 87,
-      "12/16/2025": 87
+      "12/16/2025": 72
     },
     "Intermediate Geometry": {
       "11/24/2025": 69,
@@ -329,10 +329,10 @@
       "12/13/2025": 77,
       "12/14/2025": 77,
       "12/15/2025": 77,
-      "12/16/2025": 77
+      "12/16/2025": 78
     }
   },
-  "overall_average": 78,
+  "overall_average": 77,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -356,7 +356,7 @@
     "12/13/2025": 78,
     "12/14/2025": 78,
     "12/15/2025": 78,
-    "12/16/2025": 78
+    "12/16/2025": 77
   },
   "streak": 0,
   "streak_history": {
