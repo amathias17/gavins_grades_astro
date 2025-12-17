@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "12/17/2025, 06:36 AM",
+    "last_updated": "12/17/2025, 12:04 PM",
     "most_recent_date": "12/17/2025",
     "total_classes": 9
   },
@@ -33,9 +33,9 @@
       "period": "2",
       "q1_grade": 85,
       "q1_letter_grade": "B",
-      "q2_grade": 88,
+      "q2_grade": 89,
       "q2_letter_grade": "B",
-      "current_grade": 88,
+      "current_grade": 89,
       "letter_grade": "B"
     },
     {
@@ -44,9 +44,9 @@
       "period": "3",
       "q1_grade": 73,
       "q1_letter_grade": "C",
-      "q2_grade": 47,
+      "q2_grade": 52,
       "q2_letter_grade": "F",
-      "current_grade": 47,
+      "current_grade": 52,
       "letter_grade": "F"
     },
     {
@@ -182,7 +182,7 @@
       "12/14/2025": 88,
       "12/15/2025": 88,
       "12/16/2025": 88,
-      "12/17/2025": 88
+      "12/17/2025": 89
     },
     "History Pop Cult 1": {
       "11/24/2025": 90,
@@ -208,7 +208,7 @@
       "12/14/2025": 47,
       "12/15/2025": 47,
       "12/16/2025": 47,
-      "12/17/2025": 47
+      "12/17/2025": 52
     },
     "Art 1": {
       "11/24/2025": 84,
