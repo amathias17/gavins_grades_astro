@@ -38,7 +38,16 @@
       "Bash(node enhanced-scraper.cjs:*)",
       "Bash(cmd.exe /c \"cd scraper && run-enhanced-scraper.bat\")",
       "Bash(node test-enhanced.js:*)",
-      "Bash(node test-enhanced.cjs:*)"
+      "Bash(node test-enhanced.cjs:*)",
+      "Bash(go env:*)",
+      "Bash(setx PATH \"$Env:PATH;C:\\Users\\amathias\\go\\bin\")",
+      "Bash(npm uninstall:*)",
+      "Bash(where.exe:*)",
+      "Bash(Remove-Item \"C:\\Users\\amathias\\AppData\\Roaming\\npm\\bd\" -Force)",
+      "Bash(Remove-Item \"C:\\Users\\amathias\\AppData\\Roaming\\npm\\bd.cmd\" -Force)",
+      "Bash(Remove-Item \"C:\\Users\\amathias\\AppData\\Roaming\\npm\\node_modules\\@beads\" -Recurse -Force -ErrorAction SilentlyContinue)",
+      "Bash(del \"C:\\Users\\amathias\\AppData\\Roaming\\npm\\bd\" \"C:\\Users\\amathias\\AppData\\Roaming\\npm\\bd.cmd\")",
+      "Bash(bd version:*)"
     ],
     "deny": [],
     "ask": []
