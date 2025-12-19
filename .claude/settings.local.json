@@ -47,7 +47,15 @@
       "Bash(Remove-Item \"C:\\Users\\amathias\\AppData\\Roaming\\npm\\bd.cmd\" -Force)",
       "Bash(Remove-Item \"C:\\Users\\amathias\\AppData\\Roaming\\npm\\node_modules\\@beads\" -Recurse -Force -ErrorAction SilentlyContinue)",
       "Bash(del \"C:\\Users\\amathias\\AppData\\Roaming\\npm\\bd\" \"C:\\Users\\amathias\\AppData\\Roaming\\npm\\bd.cmd\")",
-      "Bash(bd version:*)"
+      "Bash(bd version:*)",
+      "Bash(bd onboard:*)",
+      "Bash(bd status:*)",
+      "Bash(bd list:*)",
+      "Bash(bd create:*)",
+      "Bash(bd update:*)",
+      "Bash(del detailed-grades-cache.json)",
+      "Bash(Remove-Item scraper/detailed-grades-cache.json -Force)",
+      "Bash(SKYWARD_USERNAME='amathias1' SKYWARD_PASSWORD='Hd#2WH7JhVt#!U' timeout 120 node:*)"
     ],
     "deny": [],
     "ask": []

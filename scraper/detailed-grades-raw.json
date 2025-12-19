@@ -8,13 +8,13 @@
     "period": "0",
     "currentGrade": null,
     "assignmentName": "Workbook Check",
-    "assignDate": "3",
-    "dateDue": "25",
-    "dueDate": "25",
-    "earnedPoints": 0,
-    "totalPoints": 0,
+    "assignDate": null,
+    "dateDue": "11/25/2025  (Q2)",
+    "dueDate": "11/25/2025  (Q2)",
+    "earnedPoints": 20,
+    "totalPoints": 20,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "44463",
@@ -25,13 +25,13 @@
     "period": "0",
     "currentGrade": null,
     "assignmentName": "Weekly Participation",
-    "assignDate": "24",
-    "dateDue": "24",
-    "dueDate": "24",
-    "earnedPoints": 0,
-    "totalPoints": 0,
+    "assignDate": null,
+    "dateDue": "11/24/2025  (Q2)",
+    "dueDate": "11/24/2025  (Q2)",
+    "earnedPoints": 20,
+    "totalPoints": 20,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "44463",
@@ -42,13 +42,13 @@
     "period": "0",
     "currentGrade": null,
     "assignmentName": "Weekly Part. in Class",
-    "assignDate": "10",
-    "dateDue": "14",
-    "dueDate": "14",
-    "earnedPoints": 0,
-    "totalPoints": 0,
+    "assignDate": null,
+    "dateDue": "Mon Nov 24, 2025",
+    "dueDate": "Mon Nov 24, 2025",
+    "earnedPoints": 30,
+    "totalPoints": 30,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "44463",
@@ -59,13 +59,13 @@
     "period": "0",
     "currentGrade": null,
     "assignmentName": "10/27-10/30 Part.",
-    "assignDate": "30",
-    "dateDue": "30",
-    "dueDate": "30",
+    "assignDate": null,
+    "dateDue": "Thu Oct 30, 2025",
+    "dueDate": "Thu Oct 30, 2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
+    "totalPoints": 10,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "44463",
@@ -76,13 +76,13 @@
     "period": "0",
     "currentGrade": null,
     "assignmentName": "Workbook Check",
-    "assignDate": "30",
-    "dateDue": "30",
-    "dueDate": "30",
+    "assignDate": null,
+    "dateDue": "Thu Oct 30, 2025",
+    "dueDate": "Thu Oct 30, 2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
+    "totalPoints": 10,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "43162",
@@ -93,13 +93,13 @@
     "period": "0",
     "currentGrade": null,
     "assignmentName": "Nonfiction Crossword",
-    "assignDate": "11",
-    "dateDue": "11",
-    "dueDate": "11",
-    "earnedPoints": 0,
-    "totalPoints": 0,
+    "assignDate": null,
+    "dateDue": "Thu Oct 30, 2025",
+    "dueDate": "Thu Oct 30, 2025",
+    "earnedPoints": 13,
+    "totalPoints": 15,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "43162",
@@ -110,9 +110,9 @@
     "period": "0",
     "currentGrade": null,
     "assignmentName": "Vicksburg Summary",
-    "assignDate": "5",
-    "dateDue": "5",
-    "dueDate": "5",
+    "assignDate": null,
+    "dateDue": "12/05/2025  (Q2)",
+    "dueDate": "12/05/2025  (Q2)",
     "earnedPoints": 0,
     "totalPoints": 0,
     "weight": 1,
@@ -127,11 +127,28 @@
     "period": "0",
     "currentGrade": null,
     "assignmentName": "TMW Act I Reading",
-    "assignDate": "24",
-    "dateDue": "4",
-    "dueDate": "4",
+    "assignDate": null,
+    "dateDue": "Thu Dec 4, 2025",
+    "dueDate": "Thu Dec 4, 2025",
+    "earnedPoints": 15,
+    "totalPoints": 15,
+    "weight": 1,
+    "graded": true
+  },
+  {
+    "classId": "43162",
+    "assignmentId": "1535981",
+    "studentId": "1396",
+    "className": "SOPHOMORE SEMINAR",
+    "teacher": "Victoria Good",
+    "period": "0",
+    "currentGrade": null,
+    "assignmentName": "Bell Ringer 1",
+    "assignDate": null,
+    "dateDue": "11/21/2025  (Q2)",
+    "dueDate": "11/21/2025  (Q2)",
     "earnedPoints": 0,
-    "totalPoints": 0,
+    "totalPoints": 20,
     "weight": 1,
     "graded": false
   },
@@ -144,11 +161,11 @@
     "period": "0",
     "currentGrade": null,
     "assignmentName": "Historical Context",
-    "assignDate": "17",
-    "dateDue": "21",
-    "dueDate": "21",
+    "assignDate": null,
+    "dateDue": "11/21/2025  (Q2)",
+    "dueDate": "11/21/2025  (Q2)",
     "earnedPoints": 0,
-    "totalPoints": 0,
+    "totalPoints": 20,
     "weight": 1,
     "graded": false
   },
@@ -164,10 +181,10 @@
     "assignDate": null,
     "dateDue": "11/14/2025  (Q2)",
     "dueDate": "11/14/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "earnedPoints": 20,
+    "totalPoints": 20,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43162",
@@ -181,10 +198,10 @@
     "assignDate": null,
     "dateDue": "11/12/2025  (Q2)",
     "dueDate": "11/12/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "earnedPoints": 37,
+    "totalPoints": 42,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43162",
@@ -196,12 +213,12 @@
     "currentGrade": null,
     "assignmentName": "RACER Outline",
     "assignDate": null,
-    "dateDue": "11/05/2025  (Q2)",
-    "dueDate": "11/05/2025  (Q2)",
+    "dateDue": "Wed Nov 12, 2025",
+    "dueDate": "Wed Nov 12, 2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "totalPoints": 20,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43162",
@@ -213,12 +230,12 @@
     "currentGrade": null,
     "assignmentName": "Ch 4 Constructed Response",
     "assignDate": null,
-    "dateDue": "11/05/2025  (Q2)",
-    "dueDate": "11/05/2025  (Q2)",
+    "dateDue": "Wed Nov 5, 2025",
+    "dueDate": "Wed Nov 5, 2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "totalPoints": 10,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43162",
@@ -232,10 +249,10 @@
     "assignDate": null,
     "dateDue": "10/30/2025  (Q2)",
     "dueDate": "10/30/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "earnedPoints": 25,
+    "totalPoints": 25,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43162",
@@ -247,12 +264,12 @@
     "currentGrade": null,
     "assignmentName": "Group 2 Vocab Quiz",
     "assignDate": null,
-    "dateDue": "10/30/2025  (Q2)",
-    "dueDate": "10/30/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Thu Oct 30, 2025",
+    "dueDate": "Thu Oct 30, 2025",
+    "earnedPoints": 10,
+    "totalPoints": 10,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43162",
@@ -264,12 +281,12 @@
     "currentGrade": null,
     "assignmentName": "OMAM 1-3",
     "assignDate": null,
-    "dateDue": "10/30/2025  (Q2)",
-    "dueDate": "10/30/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Thu Oct 30, 2025",
+    "dueDate": "Thu Oct 30, 2025",
+    "earnedPoints": 27,
+    "totalPoints": 28,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43162",
@@ -281,12 +298,12 @@
     "currentGrade": null,
     "assignmentName": "Group 3 Vocab BR",
     "assignDate": null,
-    "dateDue": "10/30/2025  (Q2)",
-    "dueDate": "10/30/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Thu Oct 30, 2025",
+    "dueDate": "Thu Oct 30, 2025",
+    "earnedPoints": 27,
+    "totalPoints": 28,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43162",
@@ -298,12 +315,12 @@
     "currentGrade": null,
     "assignmentName": "Group 3 Vocab Quiz",
     "assignDate": null,
-    "dateDue": "10/30/2025  (Q2)",
-    "dueDate": "10/30/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Thu Oct 30, 2025",
+    "dueDate": "Thu Oct 30, 2025",
+    "earnedPoints": 2,
+    "totalPoints": 10,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43162",
@@ -315,12 +332,80 @@
     "currentGrade": null,
     "assignmentName": "OMAM Reading W3",
     "assignDate": null,
-    "dateDue": "10/29/2025  (Q2)",
-    "dueDate": "10/29/2025  (Q2)",
+    "dateDue": "Thu Oct 30, 2025",
+    "dueDate": "Thu Oct 30, 2025",
+    "earnedPoints": 14,
+    "totalPoints": 15,
+    "weight": 1,
+    "graded": true
+  },
+  {
+    "classId": "43424",
+    "assignmentId": "1547356",
+    "studentId": "1396",
+    "className": "SOPHOMORE SEMINAR",
+    "teacher": "Victoria Good",
+    "period": "0",
+    "currentGrade": null,
+    "assignmentName": "Cell Membrane Notes 1-4",
+    "assignDate": null,
+    "dateDue": "Wed Oct 29, 2025",
+    "dueDate": "Wed Oct 29, 2025",
+    "earnedPoints": 12,
+    "totalPoints": 15,
+    "weight": 1,
+    "graded": true
+  },
+  {
+    "classId": "43424",
+    "assignmentId": "1547385",
+    "studentId": "1396",
+    "className": "SOPHOMORE SEMINAR",
+    "teacher": "Victoria Good",
+    "period": "0",
+    "currentGrade": null,
+    "assignmentName": "Cell membrane Coloring Activit",
+    "assignDate": null,
+    "dateDue": "Fri Dec 19, 2025",
+    "dueDate": "Fri Dec 19, 2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
+    "totalPoints": 5,
+    "weight": 1,
     "graded": false
+  },
+  {
+    "classId": "43424",
+    "assignmentId": "1545940",
+    "studentId": "1396",
+    "className": "SOPHOMORE SEMINAR",
+    "teacher": "Victoria Good",
+    "period": "0",
+    "currentGrade": null,
+    "assignmentName": "Cell Diagrams",
+    "assignDate": null,
+    "dateDue": "Fri Dec 19, 2025",
+    "dueDate": "Fri Dec 19, 2025",
+    "earnedPoints": 0,
+    "totalPoints": 5,
+    "weight": 1,
+    "graded": false
+  },
+  {
+    "classId": "43424",
+    "assignmentId": "1545945",
+    "studentId": "1396",
+    "className": "SOPHOMORE SEMINAR",
+    "teacher": "Victoria Good",
+    "period": "0",
+    "currentGrade": null,
+    "assignmentName": "Cell Organelle Ornaments",
+    "assignDate": null,
+    "dateDue": "Wed Dec 17, 2025",
+    "dueDate": "Wed Dec 17, 2025",
+    "earnedPoints": 5,
+    "totalPoints": 5,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43424",
@@ -332,11 +417,11 @@
     "currentGrade": null,
     "assignmentName": "Cell Structure Lab",
     "assignDate": null,
-    "dateDue": "12/16/2025  (Q2)",
-    "dueDate": "12/16/2025  (Q2)",
+    "dateDue": "Tue Dec 16, 2025",
+    "dueDate": "Tue Dec 16, 2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
+    "totalPoints": 30,
+    "weight": 1,
     "graded": false
   },
   {
@@ -349,11 +434,11 @@
     "currentGrade": null,
     "assignmentName": "Gallery Walk- Cells",
     "assignDate": null,
-    "dateDue": "12/11/2025  (Q2)",
-    "dueDate": "12/11/2025  (Q2)",
+    "dateDue": "Tue Dec 16, 2025",
+    "dueDate": "Tue Dec 16, 2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
+    "totalPoints": 30,
+    "weight": 1,
     "graded": false
   },
   {
@@ -369,8 +454,8 @@
     "dateDue": "12/10/2025  (Q2)",
     "dueDate": "12/10/2025  (Q2)",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
+    "totalPoints": 20,
+    "weight": 1,
     "graded": false
   },
   {
@@ -383,11 +468,11 @@
     "currentGrade": null,
     "assignmentName": "Cell organelle labeling",
     "assignDate": null,
-    "dateDue": "12/10/2025  (Q2)",
-    "dueDate": "12/10/2025  (Q2)",
+    "dateDue": "Wed Dec 10, 2025",
+    "dueDate": "Wed Dec 10, 2025",
     "earnedPoints": 0,
     "totalPoints": 0,
-    "weight": null,
+    "weight": 1,
     "graded": false
   },
   {
@@ -400,12 +485,12 @@
     "currentGrade": null,
     "assignmentName": "Inside the cell -Edpuzzle",
     "assignDate": null,
-    "dateDue": "12/08/2025  (Q2)",
-    "dueDate": "12/08/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Wed Dec 10, 2025",
+    "dueDate": "Wed Dec 10, 2025",
+    "earnedPoints": 5,
+    "totalPoints": 5,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43424",
@@ -417,11 +502,11 @@
     "currentGrade": null,
     "assignmentName": "Endosymbiotic Theory Puzzle",
     "assignDate": null,
-    "dateDue": "12/05/2025  (Q2)",
-    "dueDate": "12/05/2025  (Q2)",
+    "dateDue": "Mon Dec 8, 2025",
+    "dueDate": "Mon Dec 8, 2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
+    "totalPoints": 10,
+    "weight": 1,
     "graded": false
   },
   {
@@ -434,11 +519,11 @@
     "currentGrade": null,
     "assignmentName": "Cell Organelles",
     "assignDate": null,
-    "dateDue": "12/04/2025  (Q2)",
-    "dueDate": "12/04/2025  (Q2)",
+    "dateDue": "Fri Dec 5, 2025",
+    "dueDate": "Fri Dec 5, 2025",
     "earnedPoints": 0,
     "totalPoints": 0,
-    "weight": null,
+    "weight": 1,
     "graded": false
   },
   {
@@ -451,12 +536,12 @@
     "currentGrade": null,
     "assignmentName": "Notes Cell Organelles",
     "assignDate": null,
-    "dateDue": "12/04/2025  (Q2)",
-    "dueDate": "12/04/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Thu Dec 4, 2025",
+    "dueDate": "Thu Dec 4, 2025",
+    "earnedPoints": 6,
+    "totalPoints": 5,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43424",
@@ -468,11 +553,11 @@
     "currentGrade": null,
     "assignmentName": "Notes Cell structures",
     "assignDate": null,
-    "dateDue": "12/03/2025  (Q2)",
-    "dueDate": "12/03/2025  (Q2)",
+    "dateDue": "Thu Dec 4, 2025",
+    "dueDate": "Thu Dec 4, 2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
+    "totalPoints": 5,
+    "weight": 1,
     "graded": false
   },
   {
@@ -485,12 +570,12 @@
     "currentGrade": null,
     "assignmentName": "Endosymbiosis",
     "assignDate": null,
-    "dateDue": "12/03/2025  (Q2)",
-    "dueDate": "12/03/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Wed Dec 3, 2025",
+    "dueDate": "Wed Dec 3, 2025",
+    "earnedPoints": 5,
+    "totalPoints": 5,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43424",
@@ -502,12 +587,12 @@
     "currentGrade": null,
     "assignmentName": "Gobble Gobble zzzz",
     "assignDate": null,
-    "dateDue": "11/25/2025  (Q2)",
-    "dueDate": "11/25/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Wed Dec 3, 2025",
+    "dueDate": "Wed Dec 3, 2025",
+    "earnedPoints": 5,
+    "totalPoints": 5,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43424",
@@ -519,12 +604,12 @@
     "currentGrade": null,
     "assignmentName": "Cell Theory and Types review",
     "assignDate": null,
-    "dateDue": "11/24/2025  (Q2)",
-    "dueDate": "11/24/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Mon Nov 24, 2025",
+    "dueDate": "Mon Nov 24, 2025",
+    "earnedPoints": 5,
+    "totalPoints": 5,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43424",
@@ -536,12 +621,12 @@
     "currentGrade": null,
     "assignmentName": "Cell theory and types",
     "assignDate": null,
-    "dateDue": "11/24/2025  (Q2)",
-    "dueDate": "11/24/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Mon Nov 24, 2025",
+    "dueDate": "Mon Nov 24, 2025",
+    "earnedPoints": 5,
+    "totalPoints": 5,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43424",
@@ -553,12 +638,12 @@
     "currentGrade": null,
     "assignmentName": "Modern Cell theory - edpuzzle",
     "assignDate": null,
-    "dateDue": "11/21/2025  (Q2)",
-    "dueDate": "11/21/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Mon Nov 24, 2025",
+    "dueDate": "Mon Nov 24, 2025",
+    "earnedPoints": 14,
+    "totalPoints": 15,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43424",
@@ -570,12 +655,12 @@
     "currentGrade": null,
     "assignmentName": "Cell Theory Study Guide",
     "assignDate": null,
-    "dateDue": "11/21/2025  (Q2)",
-    "dueDate": "11/21/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Fri Nov 21, 2025",
+    "dueDate": "Fri Nov 21, 2025",
+    "earnedPoints": 6,
+    "totalPoints": 5,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43424",
@@ -587,12 +672,12 @@
     "currentGrade": null,
     "assignmentName": "Enzymes Quiz",
     "assignDate": null,
-    "dateDue": "11/19/2025  (Q2)",
-    "dueDate": "11/19/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Wed Nov 19, 2025",
+    "dueDate": "Wed Nov 19, 2025",
+    "earnedPoints": 35,
+    "totalPoints": 35,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43424",
@@ -604,11 +689,11 @@
     "currentGrade": null,
     "assignmentName": "Enzyme OPen ended practice",
     "assignDate": null,
-    "dateDue": "11/19/2025  (Q2)",
-    "dueDate": "11/19/2025  (Q2)",
+    "dateDue": "Wed Nov 19, 2025",
+    "dueDate": "Wed Nov 19, 2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
+    "totalPoints": 10,
+    "weight": 1,
     "graded": false
   },
   {
@@ -621,11 +706,11 @@
     "currentGrade": null,
     "assignmentName": "It's Enzymatic!",
     "assignDate": null,
-    "dateDue": "11/18/2025  (Q2)",
-    "dueDate": "11/18/2025  (Q2)",
+    "dateDue": "Wed Nov 19, 2025",
+    "dueDate": "Wed Nov 19, 2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
+    "totalPoints": 10,
+    "weight": 1,
     "graded": false
   },
   {
@@ -638,12 +723,12 @@
     "currentGrade": null,
     "assignmentName": "Catalase Lab",
     "assignDate": null,
-    "dateDue": "11/17/2025  (Q2)",
-    "dueDate": "11/17/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Tue Nov 18, 2025",
+    "dueDate": "Tue Nov 18, 2025",
+    "earnedPoints": 5,
+    "totalPoints": 5,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43424",
@@ -655,11 +740,11 @@
     "currentGrade": null,
     "assignmentName": "Enzyme CR- Graph&data analysis",
     "assignDate": null,
-    "dateDue": "11/13/2025  (Q2)",
-    "dueDate": "11/13/2025  (Q2)",
+    "dateDue": "Mon Nov 17, 2025",
+    "dueDate": "Mon Nov 17, 2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
+    "totalPoints": 45,
+    "weight": 1,
     "graded": false
   },
   {
@@ -672,12 +757,12 @@
     "currentGrade": null,
     "assignmentName": "Enzyme Amobea Sisters",
     "assignDate": null,
-    "dateDue": "11/13/2025  (Q2)",
-    "dueDate": "11/13/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Thu Nov 13, 2025",
+    "dueDate": "Thu Nov 13, 2025",
+    "earnedPoints": 19,
+    "totalPoints": 20,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43424",
@@ -689,11 +774,11 @@
     "currentGrade": null,
     "assignmentName": "Folable Macromolecules",
     "assignDate": null,
-    "dateDue": "11/10/2025  (Q2)",
-    "dueDate": "11/10/2025  (Q2)",
+    "dateDue": "Thu Nov 13, 2025",
+    "dueDate": "Thu Nov 13, 2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
+    "totalPoints": 5,
+    "weight": 1,
     "graded": false
   },
   {
@@ -706,12 +791,12 @@
     "currentGrade": null,
     "assignmentName": "Macromolecule Comparison Table",
     "assignDate": null,
-    "dateDue": "11/07/2025  (Q2)",
-    "dueDate": "11/07/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Mon Nov 10, 2025",
+    "dueDate": "Mon Nov 10, 2025",
+    "earnedPoints": 4,
+    "totalPoints": 10,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43424",
@@ -723,12 +808,12 @@
     "currentGrade": null,
     "assignmentName": "Collins Words #2",
     "assignDate": null,
-    "dateDue": "11/06/2025  (Q2)",
-    "dueDate": "11/06/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Fri Nov 7, 2025",
+    "dueDate": "Fri Nov 7, 2025",
+    "earnedPoints": 10,
+    "totalPoints": 10,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43424",
@@ -740,12 +825,12 @@
     "currentGrade": null,
     "assignmentName": "Macromolecule Simulation",
     "assignDate": null,
-    "dateDue": "11/05/2025  (Q2)",
-    "dueDate": "11/05/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Wed Nov 5, 2025",
+    "dueDate": "Wed Nov 5, 2025",
+    "earnedPoints": 23,
+    "totalPoints": 45,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43424",
@@ -757,12 +842,12 @@
     "currentGrade": null,
     "assignmentName": "Dehydration Synthesis Edpuzzle",
     "assignDate": null,
-    "dateDue": "11/03/2025  (Q2)",
-    "dueDate": "11/03/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Wed Nov 5, 2025",
+    "dueDate": "Wed Nov 5, 2025",
+    "earnedPoints": 23,
+    "totalPoints": 45,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43424",
@@ -774,12 +859,12 @@
     "currentGrade": null,
     "assignmentName": "Biochemistry- what is it",
     "assignDate": null,
-    "dateDue": "10/29/2025  (Q2)",
-    "dueDate": "10/29/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Mon Nov 3, 2025",
+    "dueDate": "Mon Nov 3, 2025",
+    "earnedPoints": 6,
+    "totalPoints": 5,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43424",
@@ -791,11 +876,11 @@
     "currentGrade": null,
     "assignmentName": "Nucleic Acid /Proteins SG",
     "assignDate": null,
-    "dateDue": "10/29/2025  (Q2)",
-    "dueDate": "10/29/2025  (Q2)",
+    "dateDue": "Wed Oct 29, 2025",
+    "dueDate": "Wed Oct 29, 2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
+    "totalPoints": 5,
+    "weight": 1,
     "graded": false
   },
   {
@@ -808,11 +893,11 @@
     "currentGrade": null,
     "assignmentName": "Carbohydrate Worksheet",
     "assignDate": null,
-    "dateDue": "10/28/2025  (Q2)",
-    "dueDate": "10/28/2025  (Q2)",
+    "dateDue": "Wed Oct 29, 2025",
+    "dueDate": "Wed Oct 29, 2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
+    "totalPoints": 15,
+    "weight": 1,
     "graded": false
   },
   {
@@ -825,11 +910,11 @@
     "currentGrade": null,
     "assignmentName": "Unique Properties of Water Lab",
     "assignDate": null,
-    "dateDue": "10/28/2025  (Q2)",
-    "dueDate": "10/28/2025  (Q2)",
+    "dateDue": "Tue Oct 28, 2025",
+    "dueDate": "Tue Oct 28, 2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
+    "totalPoints": 5,
+    "weight": 1,
     "graded": false
   },
   {
@@ -845,8 +930,25 @@
     "dateDue": "12/18/2025  (Q2)",
     "dueDate": "12/18/2025  (Q2)",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
+    "totalPoints": 30,
+    "weight": 1,
+    "graded": false
+  },
+  {
+    "classId": "42889",
+    "assignmentId": "1546211",
+    "studentId": "1396",
+    "className": "SOPHOMORE SEMINAR",
+    "teacher": "Victoria Good",
+    "period": "0",
+    "currentGrade": null,
+    "assignmentName": "INTRO TO TZ CHOICE BOARD",
+    "assignDate": null,
+    "dateDue": "12/17/2025  (Q2)",
+    "dueDate": "12/17/2025  (Q2)",
+    "earnedPoints": 0,
+    "totalPoints": 25,
+    "weight": 1,
     "graded": false
   },
   {
@@ -862,8 +964,8 @@
     "dateDue": "12/16/2025  (Q2)",
     "dueDate": "12/16/2025  (Q2)",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
+    "totalPoints": 25,
+    "weight": 1,
     "graded": false
   },
   {
@@ -879,60 +981,26 @@
     "dateDue": "12/16/2025  (Q2)",
     "dueDate": "12/16/2025  (Q2)",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "totalPoints": 25,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "42889",
-    "assignmentId": "1544805",
+    "assignmentId": "1546851",
     "studentId": "1396",
     "className": "SOPHOMORE SEMINAR",
     "teacher": "Victoria Good",
     "period": "0",
     "currentGrade": null,
-    "assignmentName": "TWILIGHT ZONE-READING COMP",
+    "assignmentName": "PBS BROCHURE",
     "assignDate": null,
-    "dateDue": "12/15/2025  (Q2)",
-    "dueDate": "12/15/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
-  },
-  {
-    "classId": "42889",
-    "assignmentId": "1537850",
-    "studentId": "1396",
-    "className": "SOPHOMORE SEMINAR",
-    "teacher": "Victoria Good",
-    "period": "0",
-    "currentGrade": null,
-    "assignmentName": "PBS EDUCATIONAL TV PROJECT",
-    "assignDate": null,
-    "dateDue": "12/10/2025  (Q2)",
-    "dueDate": "12/10/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
-  },
-  {
-    "classId": "42889",
-    "assignmentId": "1541863",
-    "studentId": "1396",
-    "className": "SOPHOMORE SEMINAR",
-    "teacher": "Victoria Good",
-    "period": "0",
-    "currentGrade": null,
-    "assignmentName": "PBS READING ACTIVITY",
-    "assignDate": null,
-    "dateDue": "12/09/2025  (Q2)",
-    "dueDate": "12/09/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Tue Dec 16, 2025",
+    "dueDate": "Tue Dec 16, 2025",
+    "earnedPoints": 20,
+    "totalPoints": 25,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "42889",
@@ -944,12 +1012,12 @@
     "currentGrade": null,
     "assignmentName": "TV INTRODUCTION NOTES",
     "assignDate": null,
-    "dateDue": "12/05/2025  (Q2)",
-    "dueDate": "12/05/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Fri Dec 5, 2025",
+    "dueDate": "Fri Dec 5, 2025",
+    "earnedPoints": 25,
+    "totalPoints": 25,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "42889",
@@ -961,12 +1029,12 @@
     "currentGrade": null,
     "assignmentName": "FOOD THAT BUILT AMERICA-EP 3",
     "assignDate": null,
-    "dateDue": "11/25/2025  (Q2)",
-    "dueDate": "11/25/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Tue Nov 25, 2025",
+    "dueDate": "Tue Nov 25, 2025",
+    "earnedPoints": 10,
+    "totalPoints": 10,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "42889",
@@ -978,12 +1046,12 @@
     "currentGrade": null,
     "assignmentName": "NOVEMBER 14TH ASSIGNMENT",
     "assignDate": null,
-    "dateDue": "11/18/2025  (Q2)",
-    "dueDate": "11/18/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Tue Nov 25, 2025",
+    "dueDate": "Tue Nov 25, 2025",
+    "earnedPoints": 10,
+    "totalPoints": 10,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "42889",
@@ -998,9 +1066,9 @@
     "dateDue": "11/17/2025  (Q2)",
     "dueDate": "11/17/2025  (Q2)",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "totalPoints": 60,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "42889",
@@ -1012,12 +1080,12 @@
     "currentGrade": null,
     "assignmentName": "RADIO TOPIC",
     "assignDate": null,
-    "dateDue": "11/12/2025  (Q2)",
-    "dueDate": "11/12/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Mon Nov 17, 2025",
+    "dueDate": "Mon Nov 17, 2025",
+    "earnedPoints": 6.7,
+    "totalPoints": 10,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "42889",
@@ -1029,11 +1097,11 @@
     "currentGrade": null,
     "assignmentName": "RADIO SHOW-LISTENING SKILLS",
     "assignDate": null,
-    "dateDue": "11/05/2025  (Q2)",
-    "dueDate": "11/05/2025  (Q2)",
+    "dateDue": "Wed Nov 12, 2025",
+    "dueDate": "Wed Nov 12, 2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
+    "totalPoints": 10,
+    "weight": 1,
     "graded": false
   },
   {
@@ -1048,10 +1116,10 @@
     "assignDate": null,
     "dateDue": "10/30/2025  (Q2)",
     "dueDate": "10/30/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "earnedPoints": 20,
+    "totalPoints": 25,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "44014",
@@ -1065,10 +1133,10 @@
     "assignDate": null,
     "dateDue": "12/16/2025  (Q2)",
     "dueDate": "12/16/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "earnedPoints": 25,
+    "totalPoints": 25,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "44014",
@@ -1083,8 +1151,8 @@
     "dateDue": "12/12/2025  (Q2)",
     "dueDate": "12/12/2025  (Q2)",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
+    "totalPoints": 10,
+    "weight": 1,
     "graded": false
   },
   {
@@ -1100,8 +1168,8 @@
     "dateDue": "11/21/2025  (Q2)",
     "dueDate": "11/21/2025  (Q2)",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
+    "totalPoints": 10,
+    "weight": 1,
     "graded": false
   },
   {
@@ -1116,10 +1184,10 @@
     "assignDate": null,
     "dateDue": "11/21/2025  (Q2)",
     "dueDate": "11/21/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "earnedPoints": 44,
+    "totalPoints": 60,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "44014",
@@ -1133,10 +1201,10 @@
     "assignDate": null,
     "dateDue": "11/12/2025  (Q2)",
     "dueDate": "11/12/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "earnedPoints": 23,
+    "totalPoints": 25,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "44014",
@@ -1150,10 +1218,10 @@
     "assignDate": null,
     "dateDue": "11/12/2025  (Q2)",
     "dueDate": "11/12/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "earnedPoints": 23,
+    "totalPoints": 25,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "44014",
@@ -1167,10 +1235,10 @@
     "assignDate": null,
     "dateDue": "11/06/2025  (Q2)",
     "dueDate": "11/06/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "earnedPoints": 7,
+    "totalPoints": 10,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "44014",
@@ -1184,10 +1252,27 @@
     "assignDate": null,
     "dateDue": "10/30/2025  (Q2)",
     "dueDate": "10/30/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "earnedPoints": 10,
+    "totalPoints": 10,
+    "weight": 1,
+    "graded": true
+  },
+  {
+    "classId": "44290",
+    "assignmentId": "1546808",
+    "studentId": "1396",
+    "className": "SOPHOMORE SEMINAR",
+    "teacher": "Victoria Good",
+    "period": "0",
+    "currentGrade": null,
+    "assignmentName": "Class Participation and Dress",
+    "assignDate": null,
+    "dateDue": "12/19/2025  (Q2)",
+    "dueDate": "12/19/2025  (Q2)",
+    "earnedPoints": 6,
+    "totalPoints": 10,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "44290",
@@ -1202,8 +1287,8 @@
     "dateDue": "12/12/2025  (Q2)",
     "dueDate": "12/12/2025  (Q2)",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
+    "totalPoints": 50,
+    "weight": 1,
     "graded": false
   },
   {
@@ -1218,10 +1303,10 @@
     "assignDate": null,
     "dateDue": "12/05/2025  (Q2)",
     "dueDate": "12/05/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "earnedPoints": 50,
+    "totalPoints": 50,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "44290",
@@ -1235,10 +1320,10 @@
     "assignDate": null,
     "dateDue": "11/25/2025  (Q2)",
     "dueDate": "11/25/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "earnedPoints": 30,
+    "totalPoints": 30,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "44290",
@@ -1252,10 +1337,10 @@
     "assignDate": null,
     "dateDue": "11/21/2025  (Q2)",
     "dueDate": "11/21/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "earnedPoints": 20,
+    "totalPoints": 20,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "44290",
@@ -1269,10 +1354,10 @@
     "assignDate": null,
     "dateDue": "11/14/2025  (Q2)",
     "dueDate": "11/14/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "earnedPoints": 50,
+    "totalPoints": 50,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "44290",
@@ -1286,10 +1371,10 @@
     "assignDate": null,
     "dateDue": "11/07/2025  (Q2)",
     "dueDate": "11/07/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "earnedPoints": 40,
+    "totalPoints": 40,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "44290",
@@ -1303,10 +1388,10 @@
     "assignDate": null,
     "dateDue": "10/30/2025  (Q2)",
     "dueDate": "10/30/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "earnedPoints": 40,
+    "totalPoints": 40,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43049",
@@ -1320,10 +1405,10 @@
     "assignDate": null,
     "dateDue": "12/16/2025  (Q2)",
     "dueDate": "12/16/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "earnedPoints": 40,
+    "totalPoints": 40,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43049",
@@ -1335,12 +1420,12 @@
     "currentGrade": null,
     "assignmentName": "World War 1 Quiz",
     "assignDate": null,
-    "dateDue": "12/12/2025  (Q2)",
-    "dueDate": "12/12/2025  (Q2)",
+    "dateDue": "Tue Dec 16, 2025",
+    "dueDate": "Tue Dec 16, 2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "totalPoints": 50,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43049",
@@ -1352,12 +1437,12 @@
     "currentGrade": null,
     "assignmentName": "WWI Propaganda Gallery Walk",
     "assignDate": null,
-    "dateDue": "12/08/2025  (Q2)",
-    "dueDate": "12/08/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Fri Dec 12, 2025",
+    "dueDate": "Fri Dec 12, 2025",
+    "earnedPoints": 36,
+    "totalPoints": 40,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43049",
@@ -1369,12 +1454,12 @@
     "currentGrade": null,
     "assignmentName": "WWI Trenches Accounts",
     "assignDate": null,
-    "dateDue": "12/04/2025  (Q2)",
-    "dueDate": "12/04/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Mon Dec 8, 2025",
+    "dueDate": "Mon Dec 8, 2025",
+    "earnedPoints": 20,
+    "totalPoints": 20,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43049",
@@ -1386,12 +1471,12 @@
     "currentGrade": null,
     "assignmentName": "EdPuzzle Propaganda",
     "assignDate": null,
-    "dateDue": "11/24/2025  (Q2)",
-    "dueDate": "11/24/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Thu Dec 4, 2025",
+    "dueDate": "Thu Dec 4, 2025",
+    "earnedPoints": 20,
+    "totalPoints": 20,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43049",
@@ -1403,12 +1488,12 @@
     "currentGrade": null,
     "assignmentName": "Ed Puzzle US Before WWI",
     "assignDate": null,
-    "dateDue": "11/24/2025  (Q2)",
-    "dueDate": "11/24/2025  (Q2)",
+    "dateDue": "Mon Nov 24, 2025",
+    "dueDate": "Mon Nov 24, 2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "totalPoints": 10,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43049",
@@ -1420,12 +1505,12 @@
     "currentGrade": null,
     "assignmentName": "WWI July Crisis Scenario",
     "assignDate": null,
-    "dateDue": "11/18/2025  (Q2)",
-    "dueDate": "11/18/2025  (Q2)",
+    "dateDue": "Mon Nov 24, 2025",
+    "dueDate": "Mon Nov 24, 2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "totalPoints": 15,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43049",
@@ -1437,12 +1522,12 @@
     "currentGrade": null,
     "assignmentName": "WebQuest Causes of WWI",
     "assignDate": null,
-    "dateDue": "11/12/2025  (Q2)",
-    "dueDate": "11/12/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Tue Nov 18, 2025",
+    "dueDate": "Tue Nov 18, 2025",
+    "earnedPoints": 20,
+    "totalPoints": 20,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43049",
@@ -1454,12 +1539,12 @@
     "currentGrade": null,
     "assignmentName": "WebQuest WWI Weapons",
     "assignDate": null,
-    "dateDue": "11/12/2025  (Q2)",
-    "dueDate": "11/12/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Wed Nov 12, 2025",
+    "dueDate": "Wed Nov 12, 2025",
+    "earnedPoints": 20,
+    "totalPoints": 20,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43049",
@@ -1471,12 +1556,12 @@
     "currentGrade": null,
     "assignmentName": "WWI Weapons",
     "assignDate": null,
-    "dateDue": "11/12/2025  (Q2)",
-    "dueDate": "11/12/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Wed Nov 12, 2025",
+    "dueDate": "Wed Nov 12, 2025",
+    "earnedPoints": 20,
+    "totalPoints": 20,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43049",
@@ -1488,12 +1573,12 @@
     "currentGrade": null,
     "assignmentName": "M.A.I.N Causes",
     "assignDate": null,
-    "dateDue": "11/12/2025  (Q2)",
-    "dueDate": "11/12/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Wed Nov 12, 2025",
+    "dueDate": "Wed Nov 12, 2025",
+    "earnedPoints": 10,
+    "totalPoints": 10,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43049",
@@ -1505,12 +1590,12 @@
     "currentGrade": null,
     "assignmentName": "1914 Map",
     "assignDate": null,
-    "dateDue": "10/29/2025  (Q2)",
-    "dueDate": "10/29/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Wed Nov 12, 2025",
+    "dueDate": "Wed Nov 12, 2025",
+    "earnedPoints": 5,
+    "totalPoints": 5,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43049",
@@ -1522,12 +1607,12 @@
     "currentGrade": null,
     "assignmentName": "American Imperialism.",
     "assignDate": null,
-    "dateDue": "10/28/2025  (Q2)",
-    "dueDate": "10/28/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Wed Oct 29, 2025",
+    "dueDate": "Wed Oct 29, 2025",
+    "earnedPoints": 10,
+    "totalPoints": 10,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43049",
@@ -1539,11 +1624,11 @@
     "currentGrade": null,
     "assignmentName": "Chapter 7 Vocabulary",
     "assignDate": null,
-    "dateDue": "10/28/2025  (Q2)",
-    "dueDate": "10/28/2025  (Q2)",
+    "dateDue": "Tue Oct 28, 2025",
+    "dueDate": "Tue Oct 28, 2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
+    "totalPoints": 25,
+    "weight": 1,
     "graded": false
   },
   {
@@ -1556,12 +1641,46 @@
     "currentGrade": null,
     "assignmentName": "Test Review",
     "assignDate": null,
-    "dateDue": "10/28/2025  (Q2)",
-    "dueDate": "10/28/2025  (Q2)",
+    "dateDue": "Tue Oct 28, 2025",
+    "dueDate": "Tue Oct 28, 2025",
+    "earnedPoints": 28,
+    "totalPoints": 28,
+    "weight": 1,
+    "graded": true
+  },
+  {
+    "classId": "43666",
+    "assignmentId": "1547675",
+    "studentId": "1396",
+    "className": "SOPHOMORE SEMINAR",
+    "teacher": "Victoria Good",
+    "period": "0",
+    "currentGrade": null,
+    "assignmentName": "Get More Math: 10pts Slopes",
+    "assignDate": null,
+    "dateDue": "Tue Oct 28, 2025",
+    "dueDate": "Tue Oct 28, 2025",
+    "earnedPoints": 10,
+    "totalPoints": 10,
+    "weight": 1,
+    "graded": true
+  },
+  {
+    "classId": "43666",
+    "assignmentId": "1547676",
+    "studentId": "1396",
+    "className": "SOPHOMORE SEMINAR",
+    "teacher": "Victoria Good",
+    "period": "0",
+    "currentGrade": null,
+    "assignmentName": "Delta Math",
+    "assignDate": null,
+    "dateDue": "Fri Dec 19, 2025",
+    "dueDate": "Fri Dec 19, 2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "totalPoints": 10,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43666",
@@ -1573,12 +1692,12 @@
     "currentGrade": null,
     "assignmentName": "City Project",
     "assignDate": null,
-    "dateDue": "12/10/2025  (Q2)",
-    "dueDate": "12/10/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Fri Dec 19, 2025",
+    "dueDate": "Fri Dec 19, 2025",
+    "earnedPoints": 65,
+    "totalPoints": 100,
+    "weight": 5,
+    "graded": true
   },
   {
     "classId": "43666",
@@ -1590,12 +1709,12 @@
     "currentGrade": null,
     "assignmentName": "Thanksgiving Bonus",
     "assignDate": null,
-    "dateDue": "12/01/2025  (Q2)",
-    "dueDate": "12/01/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Wed Dec 10, 2025",
+    "dueDate": "Wed Dec 10, 2025",
+    "earnedPoints": 39,
+    "totalPoints": 40,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43666",
@@ -1611,8 +1730,8 @@
     "dueDate": "11/18/2025  (Q2)",
     "earnedPoints": 0,
     "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43666",
@@ -1624,12 +1743,12 @@
     "currentGrade": null,
     "assignmentName": "Transversals WS",
     "assignDate": null,
-    "dateDue": "11/13/2025  (Q2)",
-    "dueDate": "11/13/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Tue Nov 18, 2025",
+    "dueDate": "Tue Nov 18, 2025",
+    "earnedPoints": 10,
+    "totalPoints": 15,
+    "weight": 0.5,
+    "graded": true
   },
   {
     "classId": "43666",
@@ -1641,12 +1760,12 @@
     "currentGrade": null,
     "assignmentName": "GMM Naming & Solving Ang Pairs",
     "assignDate": null,
-    "dateDue": "11/12/2025  (Q2)",
-    "dueDate": "11/12/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Thu Nov 13, 2025",
+    "dueDate": "Thu Nov 13, 2025",
+    "earnedPoints": 12,
+    "totalPoints": 15,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43666",
@@ -1658,12 +1777,12 @@
     "currentGrade": null,
     "assignmentName": "GMM: Identifying Ang Pairs",
     "assignDate": null,
-    "dateDue": "11/07/2025  (Q2)",
-    "dueDate": "11/07/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Wed Nov 12, 2025",
+    "dueDate": "Wed Nov 12, 2025",
+    "earnedPoints": 11,
+    "totalPoints": 12.5,
+    "weight": 0.5,
+    "graded": true
   },
   {
     "classId": "43666",
@@ -1675,12 +1794,12 @@
     "currentGrade": null,
     "assignmentName": "Lesson 2-1 Notes/Ex Worksheet",
     "assignDate": null,
-    "dateDue": "11/06/2025  (Q2)",
-    "dueDate": "11/06/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Fri Nov 7, 2025",
+    "dueDate": "Fri Nov 7, 2025",
+    "earnedPoints": 0.5,
+    "totalPoints": 12.5,
+    "weight": 0.5,
+    "graded": true
   },
   {
     "classId": "43666",
@@ -1694,10 +1813,10 @@
     "assignDate": null,
     "dateDue": "11/03/2025  (Q2)",
     "dueDate": "11/03/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "earnedPoints": 24,
+    "totalPoints": 24,
+    "weight": 0.5,
+    "graded": true
   },
   {
     "classId": "43666",
@@ -1711,10 +1830,27 @@
     "assignDate": null,
     "dateDue": "10/30/2025  (Q2)",
     "dueDate": "10/30/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "earnedPoints": 24,
+    "totalPoints": 24,
+    "weight": 0.5,
+    "graded": true
+  },
+  {
+    "classId": "42895",
+    "assignmentId": "1546633",
+    "studentId": "1396",
+    "className": "SOPHOMORE SEMINAR",
+    "teacher": "Victoria Good",
+    "period": "0",
+    "currentGrade": null,
+    "assignmentName": "Thankful Thursday",
+    "assignDate": null,
+    "dateDue": "Thu Oct 30, 2025",
+    "dueDate": "Thu Oct 30, 2025",
+    "earnedPoints": 15,
+    "totalPoints": 31,
+    "weight": 0.5,
+    "graded": true
   },
   {
     "classId": "42895",
@@ -1726,12 +1862,12 @@
     "currentGrade": null,
     "assignmentName": "Ch 6 Sec 1 Quiz",
     "assignDate": null,
-    "dateDue": "12/17/2025  (Q2)",
-    "dueDate": "12/17/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Thu Dec 18, 2025",
+    "dueDate": "Thu Dec 18, 2025",
+    "earnedPoints": 5,
+    "totalPoints": 5,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "42895",
@@ -1743,12 +1879,12 @@
     "currentGrade": null,
     "assignmentName": "My Social Truth",
     "assignDate": null,
-    "dateDue": "12/11/2025  (Q2)",
-    "dueDate": "12/11/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Wed Dec 17, 2025",
+    "dueDate": "Wed Dec 17, 2025",
+    "earnedPoints": 10,
+    "totalPoints": 10,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "42895",
@@ -1760,12 +1896,12 @@
     "currentGrade": null,
     "assignmentName": "Peaks and Valleys",
     "assignDate": null,
-    "dateDue": "12/04/2025  (Q2)",
-    "dueDate": "12/04/2025  (Q2)",
+    "dateDue": "Thu Dec 11, 2025",
+    "dueDate": "Thu Dec 11, 2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "totalPoints": 10,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "42895",
@@ -1777,12 +1913,12 @@
     "currentGrade": null,
     "assignmentName": "Ch 9 Packets",
     "assignDate": null,
-    "dateDue": "12/04/2025  (Q2)",
-    "dueDate": "12/04/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Thu Dec 4, 2025",
+    "dueDate": "Thu Dec 4, 2025",
+    "earnedPoints": 5,
+    "totalPoints": 5,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "42895",
@@ -1794,12 +1930,12 @@
     "currentGrade": null,
     "assignmentName": "Ch 9 Sec 1 Quiz",
     "assignDate": null,
-    "dateDue": "11/25/2025  (Q2)",
-    "dueDate": "11/25/2025  (Q2)",
+    "dateDue": "Thu Dec 4, 2025",
+    "dueDate": "Thu Dec 4, 2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "totalPoints": 15,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "42895",
@@ -1811,12 +1947,12 @@
     "currentGrade": null,
     "assignmentName": "My Plate Thanksgiving Style",
     "assignDate": null,
-    "dateDue": "11/19/2025  (Q2)",
-    "dueDate": "11/19/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Tue Nov 25, 2025",
+    "dueDate": "Tue Nov 25, 2025",
+    "earnedPoints": 9,
+    "totalPoints": 10,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "42895",
@@ -1828,12 +1964,12 @@
     "currentGrade": null,
     "assignmentName": "Bonus Points",
     "assignDate": null,
-    "dateDue": "11/19/2025  (Q2)",
-    "dueDate": "11/19/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Wed Nov 19, 2025",
+    "dueDate": "Wed Nov 19, 2025",
+    "earnedPoints": 23,
+    "totalPoints": 24,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "42895",
@@ -1845,11 +1981,11 @@
     "currentGrade": null,
     "assignmentName": "Ch 8 Packet (8 3 Google form)",
     "assignDate": null,
-    "dateDue": "11/18/2025  (Q2)",
-    "dueDate": "11/18/2025  (Q2)",
+    "dateDue": "Wed Nov 19, 2025",
+    "dueDate": "Wed Nov 19, 2025",
     "earnedPoints": 0,
     "totalPoints": 0,
-    "weight": null,
+    "weight": 1,
     "graded": false
   },
   {
@@ -1862,12 +1998,12 @@
     "currentGrade": null,
     "assignmentName": "Ch 8 Sec 3 Google Form",
     "assignDate": null,
-    "dateDue": "11/14/2025  (Q2)",
-    "dueDate": "11/14/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Tue Nov 18, 2025",
+    "dueDate": "Tue Nov 18, 2025",
+    "earnedPoints": 10,
+    "totalPoints": 10,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "42895",
@@ -1879,12 +2015,12 @@
     "currentGrade": null,
     "assignmentName": "Ch 8 Sec 1 and 2",
     "assignDate": null,
-    "dateDue": "11/12/2025  (Q2)",
-    "dueDate": "11/12/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Fri Nov 14, 2025",
+    "dueDate": "Fri Nov 14, 2025",
+    "earnedPoints": 10,
+    "totalPoints": 10,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "42895",
@@ -1896,12 +2032,12 @@
     "currentGrade": null,
     "assignmentName": "Peaks and Valleys",
     "assignDate": null,
-    "dateDue": "11/10/2025  (Q2)",
-    "dueDate": "11/10/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Wed Nov 12, 2025",
+    "dueDate": "Wed Nov 12, 2025",
+    "earnedPoints": 16,
+    "totalPoints": 20,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "42895",
@@ -1913,12 +2049,12 @@
     "currentGrade": null,
     "assignmentName": "Work It Out Wednesday",
     "assignDate": null,
-    "dateDue": "11/05/2025  (Q2)",
-    "dueDate": "11/05/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Mon Nov 10, 2025",
+    "dueDate": "Mon Nov 10, 2025",
+    "earnedPoints": 5,
+    "totalPoints": 5,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "42895",
@@ -1930,12 +2066,12 @@
     "currentGrade": null,
     "assignmentName": "Natural High-Queen Video",
     "assignDate": null,
-    "dateDue": "10/30/2025  (Q2)",
-    "dueDate": "10/30/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Wed Nov 5, 2025",
+    "dueDate": "Wed Nov 5, 2025",
+    "earnedPoints": 5,
+    "totalPoints": 5,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "42895",
@@ -1947,12 +2083,12 @@
     "currentGrade": null,
     "assignmentName": "Bonus",
     "assignDate": null,
-    "dateDue": "10/29/2025  (Q2)",
-    "dueDate": "10/29/2025  (Q2)",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "Thu Oct 30, 2025",
+    "dueDate": "Thu Oct 30, 2025",
+    "earnedPoints": 9.5,
+    "totalPoints": 10,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "42895",
@@ -1964,11 +2100,11 @@
     "currentGrade": null,
     "assignmentName": "CPR Skills Test",
     "assignDate": null,
-    "dateDue": "10/29/2025  (Q2)",
-    "dueDate": "10/29/2025  (Q2)",
+    "dateDue": "Wed Oct 29, 2025",
+    "dueDate": "Wed Oct 29, 2025",
     "earnedPoints": 0,
     "totalPoints": 0,
-    "weight": null,
+    "weight": 1,
     "graded": false
   }
 ]

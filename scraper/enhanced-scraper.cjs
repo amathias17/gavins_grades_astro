@@ -54,8 +54,7 @@ async function loginAndNavigateToGradebook() {
 
   console.log('Launching browser...');
   const browser = await chromium.launch({
-    headless: false,  // Set to true for automation
-    slowMo: 100
+    headless: true
   });
 
   const context = await browser.newContext();
@@ -133,7 +132,7 @@ async function expandAllClasses(page) {
     expanders.forEach(expander => expander.click());
   });
 
-  await page.waitForTimeout(1500);
+  await page.waitForTimeout(500);
 }
 
 async function expandAllAssignments(page) {
@@ -153,7 +152,7 @@ async function expandAllAssignments(page) {
       break;
     }
 
-    await page.waitForTimeout(800);
+    await page.waitForTimeout(300);
   }
 }
 
@@ -306,7 +305,8 @@ async function extractAssignmentDetails(page, assignmentIndex) {
     await link.click();
 
     // Wait for the detail modal/popup to appear
-    await page.waitForTimeout(1000);
+    const dialogLocator = page.locator('.sf_Dialog, .ui-dialog, [role="dialog"]').first();
+    await dialogLocator.waitFor({ state: 'visible', timeout: 5000 });
 
     // Extract the assignment details from the modal
     const details = await page.evaluate(() => {
@@ -314,22 +314,125 @@ async function extractAssignmentDetails(page, assignmentIndex) {
       const scope = dialog || document.body;
       const text = scope.innerText || '';
 
-      // Points Earned: try patterns like "Points Earned: 25.0 / 30.0" or "Points Earned 25 / 30"
-      const pointsMatch =
-        text.match(/Points\s*Earned[^0-9*]*([*]|[\d.]+)\s*\/\s*([\d.]+)/i) ||
-        text.match(/Earned\s*Points[^0-9*]*([*]|[\d.]+)\s*\/\s*([\d.]+)/i);
+      const getTextAtXPath = (xpath) => {
+        try {
+          const result = document.evaluate(xpath, document, null, XPathResult.STRING_TYPE, null);
+          const value = result.stringValue?.trim();
+          return value || null;
+        } catch (e) {
+          return null;
+        }
+      };
 
-      let earnedPoints = null;
-      let totalPoints = null;
-      let graded = false;
-      let hasStar = false;
-      if (pointsMatch) {
-        const earnedRaw = pointsMatch[1];
-        const totalRaw = pointsMatch[2];
-        hasStar = earnedRaw === '*';
-        graded = !hasStar && !Number.isNaN(parseFloat(earnedRaw));
-        earnedPoints = graded ? parseFloat(earnedRaw) : 0;
-        totalPoints = !Number.isNaN(parseFloat(totalRaw)) ? parseFloat(totalRaw) : null;
+      const parseNumber = (raw) => {
+        if (!raw) return { value: null, hasStar: false };
+        const trimmed = raw.trim();
+        const hasStar = trimmed === '*';
+        const numeric = parseFloat(trimmed.replace(/[^0-9.]/g, ''));
+        if (Number.isNaN(numeric)) {
+          return { value: null, hasStar };
+        }
+        return { value: numeric, hasStar };
+      };
+
+      // Strategy: Try multiple approaches to extract points earned and total
+      let earnedRaw = null;
+      let totalRaw = null;
+
+      // Approach 1: Search for "Points Earned" or similar labels in the full dialog text
+      const pointsPatterns = [
+        /Points\s*Earned[:\s]*([*]|[\d.]+)\s*(?:\/|out\s*of)\s*([\d.]+)/i,
+        /Earned\s*Points[:\s]*([*]|[\d.]+)\s*(?:\/|out\s*of)\s*([\d.]+)/i,
+        /Score[:\s]*([*]|[\d.]+)\s*(?:\/|out\s*of)\s*([\d.]+)/i,
+        /Grade[:\s]*([*]|[\d.]+)\s*(?:\/|out\s*of)\s*([\d.]+)/i,
+        // More generic: any number/star followed by slash and another number
+        // But only if it appears AFTER "Points" or similar keyword
+        /(?:Points|Earned|Score)[^0-9*]{0,50}([*]|[\d.]+)\s*\/\s*([\d.]+)/i
+      ];
+
+      for (const pattern of pointsPatterns) {
+        const match = text.match(pattern);
+        if (match) {
+          earnedRaw = match[1];
+          totalRaw = match[2];
+          break;
+        }
+      }
+
+      // Approach 2: Look in specific table cells
+      if (!earnedRaw || !totalRaw) {
+        // Try to find the points cell more reliably
+        const allTables = scope.querySelectorAll('table');
+        for (const table of allTables) {
+          const rows = table.querySelectorAll('tr');
+          for (const row of rows) {
+            const rowText = row.textContent || '';
+            // If this row mentions "Points" or "Earned", look for the pattern
+            if (/Points|Earned|Score/i.test(rowText)) {
+              const cellMatch = rowText.match(/([*]|[\d.]+)\s*\/\s*([\d.]+)/);
+              if (cellMatch && !earnedRaw && !totalRaw) {
+                earnedRaw = cellMatch[1];
+                totalRaw = cellMatch[2];
+                break;
+              }
+            }
+          }
+          if (earnedRaw && totalRaw) break;
+        }
+      }
+
+      // Approach 3: Generic slash pattern as last resort (but filter out dates)
+      if (!earnedRaw || !totalRaw) {
+        // Find all X / Y patterns and pick the first one that doesn't look like a date
+        const allMatches = text.matchAll(/(\d+(?:\.\d+)?)\s*\/\s*(\d+(?:\.\d+)?)/g);
+        for (const match of allMatches) {
+          const val1 = parseFloat(match[1]);
+          const val2 = parseFloat(match[2]);
+          // Filter out dates (numbers > 2000 are likely years)
+          // Also filter out ratios that don't make sense for grades (e.g., > 1000)
+          if (val1 < 1000 && val2 < 1000 && val2 > 0) {
+            earnedRaw = match[1];
+            totalRaw = match[2];
+            break;
+          }
+        }
+      }
+
+      // Get dates from selectors (but validate they look like dates, not points)
+      const assignDateRaw = scope.querySelector('div:nth-of-type(2) div table tbody tr:nth-of-type(2) td:nth-of-type(1) label')?.textContent?.trim() || null;
+      const dueDateRaw = scope.querySelector('div:nth-of-type(2) div table tbody tr:nth-of-type(2) td:nth-of-type(4)')?.textContent?.trim() || null;
+
+      const normalizeDate = (raw) => {
+        if (!raw) return null;
+        const val = raw.trim();
+        const looksLikeDate =
+          /[0-9]{1,2}\/[0-9]{1,2}/.test(val) ||
+          /[A-Za-z]{3}/.test(val) ||
+          /[0-9]{4}/.test(val);
+        const looksLikePointsOnly = /^[0-9]+(\.[0-9]+)?$/.test(val);
+        if (looksLikePointsOnly && !looksLikeDate) return null;
+        if (/Assign\s*Date/i.test(val) || /Points\s*Earned/i.test(val)) return null;
+        return val;
+      };
+
+      const earnedParsed = parseNumber(earnedRaw);
+      const totalParsed = parseNumber(totalRaw);
+
+      let earnedPoints = earnedParsed.value;
+      let totalPoints = totalParsed.value;
+      let graded = Boolean(earnedPoints !== null && !earnedParsed.hasStar);
+      let hasStar = earnedParsed.hasStar;
+
+      // If we still don't have totalPoints, it's truly missing
+      if (totalPoints === null || totalPoints === 0) {
+        // Keep as null - this assignment doesn't have a total points value
+        totalPoints = null;
+      }
+
+      // Explicitly mark star rows as ungraded 0 out of X so they do not cache
+      if (hasStar) {
+        graded = false;
+        earnedPoints = 0;
       }
 
       // Weight: look for "Weight: 15%" or "Weight 15%"
@@ -346,8 +449,8 @@ async function extractAssignmentDetails(page, assignmentIndex) {
         earnedPoints,
         totalPoints,
         weight,
-        assignDate: assignDateMatch ? assignDateMatch[1] : null,
-        dateDue: dateDueMatch ? dateDueMatch[1] : null,
+        assignDate: normalizeDate(assignDateRaw) || (assignDateMatch ? normalizeDate(assignDateMatch[1]) : null),
+        dateDue: normalizeDate(dueDateRaw) || (dateDueMatch ? normalizeDate(dateDueMatch[1]) : null),
         hasStar
       };
     });
@@ -380,7 +483,12 @@ async function extractAssignmentDetails(page, assignmentIndex) {
       // Modal might have auto-closed
     }
 
-    await page.waitForTimeout(500);
+    try {
+      const dialogLocator = page.locator('.sf_Dialog, .ui-dialog, [role="dialog"]').first();
+      await dialogLocator.waitFor({ state: 'hidden', timeout: 2000 });
+    } catch (e) {
+      await page.waitForTimeout(200);
+    }
 
     return details;
 
@@ -519,7 +627,7 @@ function organizeByClass(assignments, classes) {
     });
   });
 
-  return Object.values(byClass);
+  return Object.values(byClass).filter(entry => entry.assignments.length > 0);
 }
 
 async function main() {
