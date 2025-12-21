@@ -12,6 +12,31 @@ const path = require('path');
 
 const CACHE_FILENAME = 'detailed-grades-cache.json';
 
+function normalizeDueDate(raw) {
+  if (!raw) return null;
+  const value = raw.trim();
+  const dateMatch = value.match(/(\d{1,2})\/(\d{1,2})\/(\d{2,4})/);
+  if (dateMatch) {
+    const month = dateMatch[1].padStart(2, '0');
+    const day = dateMatch[2].padStart(2, '0');
+    let year = dateMatch[3];
+    if (year.length === 2) {
+      year = `20${year}`;
+    }
+    return `${month}/${day}/${year}`;
+  }
+
+  const parsed = Date.parse(value);
+  if (!Number.isNaN(parsed)) {
+    const date = new Date(parsed);
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    return `${month}/${day}/${date.getFullYear()}`;
+  }
+
+  return null;
+}
+
 async function readJsonIfExists(filePath) {
   try {
     const content = await fs.readFile(filePath, 'utf8');
@@ -399,7 +424,6 @@ async function extractAssignmentDetails(page, assignmentIndex) {
       }
 
       // Get dates from selectors (but validate they look like dates, not points)
-      const assignDateRaw = scope.querySelector('div:nth-of-type(2) div table tbody tr:nth-of-type(2) td:nth-of-type(1) label')?.textContent?.trim() || null;
       const dueDateRaw = scope.querySelector('div:nth-of-type(2) div table tbody tr:nth-of-type(2) td:nth-of-type(4)')?.textContent?.trim() || null;
 
       const normalizeDate = (raw) => {
@@ -439,7 +463,6 @@ async function extractAssignmentDetails(page, assignmentIndex) {
       const weightMatch = text.match(/Weight[^0-9]*([\d.]+)%?/i);
       const weight = weightMatch ? parseFloat(weightMatch[1]) : null;
 
-      const assignDateMatch = text.match(/Assign(?:ment)?\s*Date[^0-9]*([0-9/]+)/i);
       const dateDueMatch =
         text.match(/Date\s*Due[^0-9]*([0-9/]+)/i) ||
         text.match(/Due\s*Date[^0-9]*([0-9/]+)/i);
@@ -449,7 +472,6 @@ async function extractAssignmentDetails(page, assignmentIndex) {
         earnedPoints,
         totalPoints,
         weight,
-        assignDate: normalizeDate(assignDateRaw) || (assignDateMatch ? normalizeDate(assignDateMatch[1]) : null),
         dateDue: normalizeDate(dueDateRaw) || (dateDueMatch ? normalizeDate(dateDueMatch[1]) : null),
         hasStar
       };
@@ -499,7 +521,6 @@ async function extractAssignmentDetails(page, assignmentIndex) {
       earnedPoints: 0,
       totalPoints: null,
       weight: null,
-      assignDate: null,
       dateDue: null,
       hasStar: false
     };
@@ -554,7 +575,7 @@ async function scrapeAllAssignments(page, classes, cacheAssignments = {}, classI
     const className = classInfo?.className || cached?.className || assignment.classId || 'Unknown';
     const teacher = classInfo?.teacher || cached?.teacher || '';
     const period = classInfo?.period || cached?.period || '';
-    const dateDue = details.dateDue || assignment.dueDate || null;
+    const dateDue = normalizeDueDate(details.dateDue || assignment.dueDate || null);
     const graded = Boolean(details.graded);
     const earnedPoints = graded ? details.earnedPoints ?? 0 : 0;
     const totalPoints = details.totalPoints ?? 0;
@@ -568,7 +589,6 @@ async function scrapeAllAssignments(page, classes, cacheAssignments = {}, classI
       period,
       currentGrade: classInfo?.currentGrade ?? cached?.currentGrade ?? null,
       assignmentName: assignment.name,
-      assignDate: details.assignDate || null,
       dateDue,
       dueDate: dateDue,
       earnedPoints,
@@ -625,7 +645,6 @@ function organizeByClass(assignments, classes) {
 
     byClass[key].assignments.push({
       name: assignment.assignmentName,
-      assignDate: assignment.assignDate || null,
       dueDate: assignment.dateDue || assignment.dueDate || null,
       earnedPoints: assignment.earnedPoints,
       totalPoints: assignment.totalPoints,
