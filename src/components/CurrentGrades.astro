@@ -25,6 +25,7 @@ const missingAssignments = missingAssignmentsData.missing_assignments?.map(
         max_points: assignment.max_points,
     }),
 ) ?? [];
+const missingAssignmentsCount = missingAssignments.length;
 
 function getGradeColor(grade: number): string {
     if (grade >= 90) return "grade-a";
@@ -130,7 +131,9 @@ function getGradeColor(grade: number): string {
                 >
                     ⚔️
                 </div>
-                <div class="text-[0.7em] text-[#00ff00]">MISSING.QUESTS</div>
+                <div class="text-[0.7em] text-[#00ff00]">
+                    MISSING.QUESTS ({missingAssignmentsCount})
+                </div>
             </div>
 
             {
