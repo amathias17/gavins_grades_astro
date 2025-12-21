@@ -3,13 +3,14 @@
 ## Project Structure & Data
 - Astro 5 + Tailwind 4.1 (@tailwindcss/vite); layout in src/layouts/BaseLayout.astro imports src/styles/global.css and retro neon-green/black theme.
 - Pages: src/pages/index.astro (dashboard), src/pages/classes/[classId].astro (per-class + GradeCalculator), src/pages/calculator.astro (dashboard-style calculator); legacy prototypes in src/pages/new.astro and src/pages/old.astro.
-- Class pages read scraped assignment data from scraper/detailed-grades.json at build time when available.
+- Class pages read scraped assignment data from scraper/detailed-grades.json at build time when available, matching by period and normalized class name.
 - Components in src/components/ (CurrentGrades.astro, GradeCalculator.astro, etc.); utilities in src/utils/gradeCalculator.ts; data in src/data/grades.json and src/data/missing_assignments.json (class_id may be absent; use period). Encoding artifacts exist; do not "clean" without source confirmation.
 - CurrentGrades missing quests card shows a dynamic Missing.Quests count sourced from missing_assignments.json.
 - Tests: Playwright E2E in tests/e2e/; reports under playwright-report/ and test-results/. Docs in docs/ and DELIVERABLES.md. Scraper scripts in scraper/ (Skyward login/data fetch). Build/test artifacts, debug screenshots, and temp outputs are not tracked (dist/, playwright-report/, test-results/, debug images/html).
 - Scraper updates: scraper/enhanced-scraper.cjs now clicks sf_expander, exhausts all "Next" pagination links (moreAssignmentsEvents_*) per class, filters Q2 assignments, opens showAssignmentInfo dialogs, and pulls Points Earned/Total Points/Due Date via document XPaths with dialog DOM fallbacks before closing via sf_DialogClose. Date fields are normalized to drop numeric-only or label-only values. Runtime sped up with headless launch, no slowMo, shorter waits, and dialog-visible/hidden waits instead of fixed sleeps. Output remains detailed-grades.json (per class with assignment weights/points) plus raw. Graded assignments cache to scraper/detailed-grades-cache.json (gitignored) to skip re-scraping; "* out of x" are kept as 0/out-of-X and left uncached until graded; raw output now includes class names plus due dates; organized output omits classes with no assignments.
 - Scraper supports SKYWARD_MAX_ASSIGNMENTS to cap assignment detail scraping for quick checks.
 - Scraper outputs omit assignDate and normalize dueDate to MM/DD/YYYY format.
+- Scraper fix (12/21/2025): extractAssignmentDetails now clicks assignments by unique data attributes (data-aid, data-gid) instead of DOM index to prevent mis-matching after pagination. organizeByClass groups by classId first, correctly separating 9 classes instead of lumping all into one. Known issue: classIdMap DOM traversal fails post-expansion; output uses classId as className (e.g., "42889" instead of "Biology 2"). See issue gavins_grades_astro-orf.
 
 ## Build, Test, and Development
 - npm install - install deps (Astro, Tailwind, Playwright).

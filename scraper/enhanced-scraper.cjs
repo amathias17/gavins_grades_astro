@@ -258,25 +258,32 @@ async function getClassInfo(page) {
       recordClass(groupId, entry);
     });
 
-    // Map assignment class ids to class info when possible
-    document.querySelectorAll('a#showAssignmentInfo').forEach(link => {
-      const classId = link.getAttribute('data-gid');
-      if (!classId) return;
+    // Map assignment class ids to class info by finding parent class for each assignment
+    const assignmentsByClass = new Map();
 
-      const row = link.closest('tr');
-      const container = row?.closest('table');
-      const classTable = container?.previousElementSibling?.matches?.('table[id^="classDesc_"]')
-        ? container.previousElementSibling
-        : container?.parentElement?.querySelector?.('table[id^="classDesc_"]');
+    // Group assignment links by their parent class table
+    classTables.forEach(table => {
+      const tableId = table.getAttribute('id');
+      const groupId = tableId.replace('classDesc_', '');
 
-      const className = classTable?.querySelector?.('.classDesc a')?.textContent?.trim() || '';
-      const periodMatch = classTable?.textContent?.match(/Period\s*(\d+|[A-Z])/);
-      const period = periodMatch ? periodMatch[1] : '';
-      const teacherLink = classTable?.querySelector?.('tr:nth-of-type(3) a');
-      const teacher = teacherLink ? teacherLink.textContent.trim() : '';
+      // Find all assignment links that belong to this class
+      // Assignments are in a grid/table that follows the class description table
+      let nextEl = table.nextElementSibling;
+      while (nextEl) {
+        const assignments = nextEl.querySelectorAll('a#showAssignmentInfo');
+        assignments.forEach(link => {
+          const classId = link.getAttribute('data-gid');
+          if (classId) {
+            const classInfo = classIdMap[groupId];
+            if (classInfo) {
+              recordClass(classId, classInfo);
+            }
+          }
+        });
 
-      if (className || teacher || period) {
-        recordClass(classId, { className, teacher, period, groupId: classId, currentGrade: null });
+        // Stop when we hit another class description table
+        if (nextEl.matches?.('table[id^="classDesc_"]')) break;
+        nextEl = nextEl.nextElementSibling;
       }
     });
 
@@ -305,13 +312,42 @@ async function getAssignmentLinks(page) {
       const dueSpan = row.querySelector('span.fXs');
       const dueDate = dueSpan ? dueSpan.textContent.trim() : null;
 
+      // Try to find the class name from nearby DOM elements
+      // Look for the closest class description table above this assignment
+      let classNameFromDOM = '';
+      let periodFromDOM = '';
+      let teacherFromDOM = '';
+
+      // Walk up from the row to find the parent class section
+      let current = row;
+      while (current && !classNameFromDOM) {
+        // Look backwards for a class description table
+        let prev = current.previousElementSibling;
+        while (prev) {
+          if (prev.matches && prev.matches('table[id^="classDesc_"]')) {
+            const classLink = prev.querySelector('.classDesc a');
+            if (classLink) classNameFromDOM = classLink.textContent.trim();
+            const periodMatch = prev.textContent.match(/Period\s*(\d+|[A-Z])/);
+            if (periodMatch) periodFromDOM = periodMatch[1];
+            const teacherLink = prev.querySelector('tr:nth-of-type(3) a');
+            if (teacherLink) teacherFromDOM = teacherLink.textContent.trim();
+            break;
+          }
+          prev = prev.previousElementSibling;
+        }
+        current = current.parentElement;
+      }
+
       assignments.push({
         index,
         assignmentId,
         classId,
         studentId,
         name,
-        dueDate
+        dueDate,
+        classNameHint: classNameFromDOM,
+        periodHint: periodFromDOM,
+        teacherHint: teacherFromDOM
       });
     });
 
@@ -319,11 +355,11 @@ async function getAssignmentLinks(page) {
   });
 }
 
-async function extractAssignmentDetails(page, assignmentIndex) {
+async function extractAssignmentDetails(page, assignmentId, classId) {
   try {
-    // Click the assignment link at the specified index
-    const assignmentLinks = page.locator('a#showAssignmentInfo');
-    const link = assignmentLinks.nth(assignmentIndex);
+    // Click the assignment link with matching data attributes
+    const selector = `a#showAssignmentInfo[data-aid="${assignmentId}"][data-gid="${classId}"]`;
+    const link = page.locator(selector).first();
 
     // Wait for the link to be visible and click it
     await link.waitFor({ state: 'visible', timeout: 5000 });
@@ -515,7 +551,7 @@ async function extractAssignmentDetails(page, assignmentIndex) {
     return details;
 
   } catch (error) {
-    console.error(`Error extracting details for assignment ${assignmentIndex}:`, error.message);
+    console.error(`Error extracting details for assignment ${assignmentId}:`, error.message);
     return {
       graded: false,
       earnedPoints: 0,
@@ -533,6 +569,10 @@ async function scrapeAllAssignments(page, classes, cacheAssignments = {}, classI
   // Get all assignment links
   const assignmentLinks = await getAssignmentLinks(page);
   console.log(`Found ${assignmentLinks.length} assignments total`);
+  const classIdCounts = {};
+  assignmentLinks.forEach(a => { classIdCounts[a.classId] = (classIdCounts[a.classId] || 0) + 1; });
+  console.log('Assignment links by classId:', Object.entries(classIdCounts).map(([id, count]) => `${id}:${count}`).join(', '));
+  console.log('Sample assignment links with hints:', assignmentLinks.slice(0, 5).map(a => `${a.name} (classId=${a.classId}, hint="${a.classNameHint}", period=${a.periodHint})`).join('; '));
   const maxAssignments = parseInt(process.env.SKYWARD_MAX_ASSIGNMENTS || '', 10);
   const assignmentLimit = Number.isFinite(maxAssignments) && maxAssignments > 0
     ? Math.min(maxAssignments, assignmentLinks.length)
@@ -548,12 +588,21 @@ async function scrapeAllAssignments(page, classes, cacheAssignments = {}, classI
   // Process each assignment
   for (let i = 0; i < assignmentLimit; i++) {
     const assignment = assignmentLinks[i];
+
+    if (i < 5) {
+      console.log(`DEBUG: Index ${i}, assignment from array:`, JSON.stringify({name: assignment.name, classId: assignment.classId, assignmentId: assignment.assignmentId}));
+    }
+
     // Only keep Q2 (due date text typically contains (Q2))
     if (!assignment.dueDate || !/\(Q2\)/i.test(assignment.dueDate)) {
       continue;
     }
 
-    console.log(`Processing ${i + 1}/${assignmentLinks.length}: ${assignment.name}`);
+    if (i < 10 || i % 50 === 0) {
+      console.log(`Processing ${i + 1}/${assignmentLinks.length}: ${assignment.name} (classId=${assignment.classId})`);
+    } else {
+      console.log(`Processing ${i + 1}/${assignmentLinks.length}: ${assignment.name}`);
+    }
 
     const cacheKeyParts = [assignment.assignmentId, assignment.classId, assignment.studentId].filter(Boolean);
     const cacheKey = cacheKeyParts.join(':');
@@ -564,17 +613,24 @@ async function scrapeAllAssignments(page, classes, cacheAssignments = {}, classI
       cacheHits += 1;
     } else {
       // Extract detailed points by clicking the assignment
-      details = await extractAssignmentDetails(page, i);
+      details = await extractAssignmentDetails(page, assignment.assignmentId, assignment.classId);
     }
 
     // Find which class this assignment belongs to
-    const classInfo =
-      classIdMap[assignment.classId] ||
-      classes.find(c => c.groupId === assignment.classId);
+    const fromMap = classIdMap[assignment.classId];
+    const fromArray = classes.find(c => c.groupId === assignment.classId);
+    const classInfo = fromMap || fromArray;
 
-    const className = classInfo?.className || cached?.className || assignment.classId || 'Unknown';
-    const teacher = classInfo?.teacher || cached?.teacher || '';
-    const period = classInfo?.period || cached?.period || '';
+    if (assignmentDetails.length < 10) {
+      console.log(`  Assignment classId=${assignment.classId}:`);
+      console.log(`    - classIdMap[${assignment.classId}]:`, fromMap ? `${fromMap.className} (period ${fromMap.period})` : 'NOT IN MAP');
+      console.log(`    - classes.find(groupId=${assignment.classId}):`, fromArray ? `${fromArray.className} (period ${fromArray.period})` : 'NOT IN ARRAY');
+      console.log(`    - final classInfo:`, classInfo ? `${classInfo.className} (period ${classInfo.period})` : 'NOT FOUND');
+    }
+
+    const className = classInfo?.className || cached?.className || assignment.classNameHint || assignment.classId || 'Unknown';
+    const teacher = classInfo?.teacher || cached?.teacher || assignment.teacherHint || '';
+    const period = classInfo?.period || cached?.period || assignment.periodHint || '';
     const dateDue = normalizeDueDate(details.dateDue || assignment.dueDate || null);
     const graded = Boolean(details.graded);
     const earnedPoints = graded ? details.earnedPoints ?? 0 : 0;
@@ -631,25 +687,41 @@ function organizeByClass(assignments, classes) {
   });
 
   // Add assignments to their respective classes
+  // Group by classId first to handle cases where className lookup failed
+  const byClassId = {};
   assignments.forEach(assignment => {
-    const key = assignment.className || 'Unknown';
-    if (!byClass[key]) {
-      byClass[key] = {
-        className: key,
-        teacher: assignment.teacher || '',
-        period: assignment.period || '',
-        currentGrade: assignment.currentGrade ?? null,
+    const classIdKey = assignment.classId;
+    if (!byClassId[classIdKey]) {
+      byClassId[classIdKey] = [];
+    }
+    byClassId[classIdKey].push(assignment);
+  });
+
+  // Now organize each classId group
+  Object.entries(byClassId).forEach(([classId, assignmentGroup]) => {
+    // Use the first assignment's class info as representative
+    const rep = assignmentGroup[0];
+    const className = rep.className || classId;
+
+    if (!byClass[className]) {
+      byClass[className] = {
+        className,
+        teacher: rep.teacher || '',
+        period: rep.period || '',
+        currentGrade: rep.currentGrade ?? null,
         assignments: []
       };
     }
 
-    byClass[key].assignments.push({
-      name: assignment.assignmentName,
-      dueDate: assignment.dateDue || assignment.dueDate || null,
-      earnedPoints: assignment.earnedPoints,
-      totalPoints: assignment.totalPoints,
-      weight: assignment.weight,
-      graded: assignment.graded
+    assignmentGroup.forEach(assignment => {
+      byClass[className].assignments.push({
+        name: assignment.assignmentName,
+        dueDate: assignment.dateDue || assignment.dueDate || null,
+        earnedPoints: assignment.earnedPoints,
+        totalPoints: assignment.totalPoints,
+        weight: assignment.weight,
+        graded: assignment.graded
+      });
     });
   });
 
@@ -674,6 +746,8 @@ async function main() {
     // Get class information
     const { classes, classIdMap } = await getClassInfo(popup);
     console.log(`\nFound ${classes.length} classes`);
+    console.log('Classes:', classes.map(c => `Period ${c.period}: ${c.className} (groupId: ${c.groupId})`).join(', '));
+    console.log('ClassIdMap keys:', Object.keys(classIdMap).join(', '));
 
     // Scrape all assignment details
     const { assignmentDetails, updatedCache } = await scrapeAllAssignments(
