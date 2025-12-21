@@ -512,13 +512,20 @@ async function scrapeAllAssignments(page, classes, cacheAssignments = {}, classI
   // Get all assignment links
   const assignmentLinks = await getAssignmentLinks(page);
   console.log(`Found ${assignmentLinks.length} assignments total`);
+  const maxAssignments = parseInt(process.env.SKYWARD_MAX_ASSIGNMENTS || '', 10);
+  const assignmentLimit = Number.isFinite(maxAssignments) && maxAssignments > 0
+    ? Math.min(maxAssignments, assignmentLinks.length)
+    : assignmentLinks.length;
+  if (assignmentLimit !== assignmentLinks.length) {
+    console.log(`Limiting assignment detail scrape to ${assignmentLimit} items (SKYWARD_MAX_ASSIGNMENTS).`);
+  }
 
   const assignmentDetails = [];
   const updatedCache = { ...cacheAssignments };
   let cacheHits = 0;
 
   // Process each assignment
-  for (let i = 0; i < assignmentLinks.length; i++) {
+  for (let i = 0; i < assignmentLimit; i++) {
     const assignment = assignmentLinks[i];
     // Only keep Q2 (due date text typically contains (Q2))
     if (!assignment.dueDate || !/\(Q2\)/i.test(assignment.dueDate)) {

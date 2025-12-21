@@ -7,6 +7,7 @@
 - CurrentGrades missing quests card shows a dynamic Missing.Quests count sourced from missing_assignments.json.
 - Tests: Playwright E2E in tests/e2e/; reports under playwright-report/ and test-results/. Docs in docs/ and DELIVERABLES.md. Scraper scripts in scraper/ (Skyward login/data fetch). Build/test artifacts, debug screenshots, and temp outputs are not tracked (dist/, playwright-report/, test-results/, debug images/html).
 - Scraper updates: scraper/enhanced-scraper.cjs now clicks sf_expander, exhausts all "Next" pagination links (moreAssignmentsEvents_*) per class, filters Q2 assignments, opens showAssignmentInfo dialogs, and pulls Points Earned/Total Points/Assign Date/Due Date via document XPaths with dialog DOM fallbacks before closing via sf_DialogClose. Date fields are normalized to drop numeric-only or label-only values. Runtime sped up with headless launch, no slowMo, shorter waits, and dialog-visible/hidden waits instead of fixed sleeps. Output remains detailed-grades.json (per class with assignment weights/points) plus raw. Graded assignments cache to scraper/detailed-grades-cache.json (gitignored) to skip re-scraping; "* out of x" are kept as 0/out-of-X and left uncached until graded; raw output now includes class names plus assign/due dates; organized output omits classes with no assignments.
+- Scraper supports SKYWARD_MAX_ASSIGNMENTS to cap assignment detail scraping for quick checks.
 
 ## Build, Test, and Development
 - npm install - install deps (Astro, Tailwind, Playwright).
