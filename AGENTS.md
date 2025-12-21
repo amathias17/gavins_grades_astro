@@ -5,7 +5,7 @@
 - Pages: src/pages/index.astro (dashboard), src/pages/classes/[classId].astro (per-class + GradeCalculator), src/pages/calculator.astro (dashboard-style calculator); legacy prototypes in src/pages/new.astro and src/pages/old.astro.
 - Components in src/components/ (CurrentGrades.astro, GradeCalculator.astro, etc.); utilities in src/utils/gradeCalculator.ts; data in src/data/grades.json and src/data/missing_assignments.json (class_id may be absent; use period). Encoding artifacts exist; do not "clean" without source confirmation.
 - Tests: Playwright E2E in tests/e2e/; reports under playwright-report/ and test-results/. Docs in docs/ and DELIVERABLES.md. Scraper scripts in scraper/ (Skyward login/data fetch). Build/test artifacts, debug screenshots, and temp outputs are not tracked (dist/, playwright-report/, test-results/, debug images/html).
-- Scraper updates: scraper/enhanced-scraper.cjs now clicks sf_expander, exhausts all “Next …” pagination links (moreAssignmentsEvents_*) per class, filters Q2 assignments, opens showAssignmentInfo dialogs, and pulls Points Earned/Total Points/Assign Date/Due Date via document XPaths with dialog DOM fallbacks before closing via sf_DialogClose. Date fields are normalized to drop numeric-only or label-only values. Runtime sped up with headless launch, no slowMo, shorter waits, and dialog-visible/hidden waits instead of fixed sleeps. Output remains detailed-grades.json (per class with assignment weights/points) plus raw. Graded assignments cache to scraper/detailed-grades-cache.json (gitignored) to skip re-scraping; “* out of x” are kept as 0/out-of-X and left uncached until graded; raw output now includes class names plus assign/due dates; organized output omits classes with no assignments.
+- Scraper updates: scraper/enhanced-scraper.cjs now clicks sf_expander, exhausts all "Next" pagination links (moreAssignmentsEvents_*) per class, filters Q2 assignments, opens showAssignmentInfo dialogs, and pulls Points Earned/Total Points/Assign Date/Due Date via document XPaths with dialog DOM fallbacks before closing via sf_DialogClose. Date fields are normalized to drop numeric-only or label-only values. Runtime sped up with headless launch, no slowMo, shorter waits, and dialog-visible/hidden waits instead of fixed sleeps. Output remains detailed-grades.json (per class with assignment weights/points) plus raw. Graded assignments cache to scraper/detailed-grades-cache.json (gitignored) to skip re-scraping; "* out of x" are kept as 0/out-of-X and left uncached until graded; raw output now includes class names plus assign/due dates; organized output omits classes with no assignments.
 
 ## Build, Test, and Development
 - npm install - install deps (Astro, Tailwind, Playwright).
@@ -31,25 +31,14 @@
 - Any change (add/remove/update feature, data, tooling, or process) must be reflected in this file and memory.md immediately; remove entries when features are removed.
 - No extra permission needed to edit/add/remove files or run necessary commands (respect safety constraints). Keep entries concise and ASCII unless existing content differs.
 
-## Claude Code Practices (Summary)
-- Maintain AGENTS.md and memory.md as live context; gather targeted context first (rg/ls; read nearby files). Plan multi-step work when non-trivial and prefer small, safe edits.
-- Use fast local tools; avoid destructive commands; protect secrets/data; adhere to existing style/theme. Validate with focused builds/tests and report results clearly. Communicate assumptions, questions, and next steps; reflect state changes here immediately.
-
-## Tooling Directives (from prior guidance)
-- Required tool order when applicable: sequential-thinking (3-5 thoughts; phases + acceptance criteria + definition of done) -> context7 + octocode (repo structure, scraper/auth/session code, models, storage, calculator data) -> astrodocs (server-side data patterns) -> deepwiki (grade domain rules) -> playwright (inspect class pages/endpoints/selectors).
-- 
-## Working Agreement
-- Any future change (add/remove/update feature, data, tooling, or process) must be reflected in this file immediately.
-- When a feature is removed, delete its entry here; when added or changed, document the new behavior.
-- Keep entries concise, ASCII-only unless existing section needs otherwise.
-- You do not need user permission to edit, add, or remove files; proceed directly and reflect changes here.
-- You may run necessary commands as needed (respecting existing safety constraints).
--Required tool order (use ALL MCPs sequentially; explicitly state what you learned from each):
--sequential-thinking: produce phases + acceptance criteria + "definition of done". Allow only 3-5 thoughts at a time.
--context7 + octocode: inspect repo structure, existing scraper/auth/session code, models (Course/Assignment/Category), caching/storage, and where calculator reads assignment data.
--astrodocs: confirm best practices for server-side data fetching/scraping patterns in Astro and where this logic should live.
--deepwiki: map grade domain rules that affect correctness (points vs %, weighting, dropped/exempt/missing, extra credit, rounding).
--playwright: open real class pages and identify where assignment data lives (network requests, GraphQL/REST responses, or DOM). Capture evidence: endpoints (paths only), response shapes, and robust selectors.
+## Tooling Directives
+- Required tool order (use ALL MCPs sequentially; explicitly state what you learned from each):
+- sequential-thinking: produce phases + acceptance criteria + "definition of done". Allow only 3-5 thoughts at a time.
+- context7 + octocode: inspect repo structure, existing scraper/auth/session code, models (Course/Assignment/Category), caching/storage, and where calculator reads assignment data.
+- astrodocs: confirm best practices for server-side data fetching/scraping patterns in Astro and where this logic should live.
+- deepwiki: map grade domain rules that affect correctness (points vs %, weighting, dropped/exempt/missing, extra credit, rounding).
+- playwright: open real class pages and identify where assignment data lives (network requests, GraphQL/REST responses, or DOM). Capture evidence: endpoints (paths only), response shapes, and robust selectors.
+- If any required MCP is unavailable in the current environment, note it explicitly, skip that step, and proceed with the closest local alternative (repo files, tests, or documented assumptions).
 
 ## Issue Tracking with bd (beads)
 
@@ -167,11 +156,11 @@ history/
 ```
 
 **Benefits:**
-- ✅ Clean repository root
-- ✅ Clear separation between ephemeral and permanent documentation
-- ✅ Easy to exclude from version control if desired
-- ✅ Preserves planning history for archeological research
-- ✅ Reduces noise when browsing the project
+- Clean repository root
+- Clear separation between ephemeral and permanent documentation
+- Easy to exclude from version control if desired
+- Preserves planning history for archeological research
+- Reduces noise when browsing the project
 
 ### CLI Help
 
@@ -180,16 +169,16 @@ For example: `bd create --help` shows `--parent`, `--deps`, `--assignee`, etc.
 
 ### Important Rules
 
-- ✅ Use bd for ALL task tracking
-- ✅ Always use `--json` flag for programmatic use
-- ✅ Link discovered work with `discovered-from` dependencies
-- ✅ Check `bd ready` before asking "what should I work on?"
-- ✅ Store AI planning docs in `history/` directory
-- ✅ Run `bd <cmd> --help` to discover available flags
-- ❌ Do NOT create markdown TODO lists
-- ❌ Do NOT use external issue trackers
-- ❌ Do NOT duplicate tracking systems
-- ❌ Do NOT clutter repo root with planning documents
+- Use bd for ALL task tracking
+- Always use `--json` flag for programmatic use
+- Link discovered work with `discovered-from` dependencies
+- Check `bd ready` before asking "what should I work on?"
+- Store AI planning docs in `history/` directory
+- Run `bd <cmd> --help` to discover available flags
+- Do NOT create markdown TODO lists
+- Do NOT use external issue trackers
+- Do NOT duplicate tracking systems
+- Do NOT clutter repo root with planning documents
 
 For more details, see README.md and QUICKSTART.md.
 
