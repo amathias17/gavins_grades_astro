@@ -3,16 +3,85 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import GradeCalculator from "../../components/GradeCalculator.astro";
 import gradesData from "../../data/grades.json";
 import type { Class, Assignment } from "../../types/grades";
+import fs from "node:fs/promises";
+import path from "node:path";
 
-export function getStaticPaths() {
+type ScrapedAssignment = {
+  name: string;
+  dueDate: string | null;
+  earnedPoints: number;
+  totalPoints: number;
+  graded: boolean;
+};
+
+type ScrapedClass = {
+  className: string;
+  period: string;
+  assignments: ScrapedAssignment[];
+};
+
+type ScrapedGrades = {
+  classes?: ScrapedClass[];
+};
+
+export async function getStaticPaths() {
   const classes = gradesData.classes as Class[];
+  let scrapedClasses: ScrapedClass[] = [];
+  try {
+    const scrapedPath = path.resolve("scraper", "detailed-grades.json");
+    const raw = await fs.readFile(scrapedPath, "utf8");
+    const parsed = JSON.parse(raw) as ScrapedGrades;
+    scrapedClasses = parsed?.classes ?? [];
+  } catch (error) {
+    scrapedClasses = [];
+  }
   return classes.map((classInfo) => ({
     params: { classId: classInfo.class_id || classInfo.period },
-    props: { classInfo },
+    props: {
+      classInfo,
+      scrapedAssignments:
+        scrapedClasses
+          .find((entry) => entry.period === classInfo.period)
+          ?.assignments ??
+        scrapedClasses
+          .find((entry) => entry.className === classInfo.class_name)
+          ?.assignments ??
+        [],
+    },
   }));
 }
 
-const { classInfo } = Astro.props as { classInfo: Class };
+function toAssignment(
+  scraped: ScrapedAssignment,
+  classInfo: Class
+): Assignment {
+  const maxPoints = Number.isFinite(scraped.totalPoints) ? scraped.totalPoints : 0;
+  const hasScore = scraped.graded && maxPoints > 0;
+  const percentage = hasScore
+    ? Math.round((scraped.earnedPoints / maxPoints) * 10000) / 100
+    : null;
+  const dueDate = scraped.dueDate ?? "N/A";
+  const idParts = [classInfo.class_id || classInfo.period, scraped.name, dueDate];
+
+  return {
+    id: idParts.filter(Boolean).join(":"),
+    name: scraped.name,
+    category: "Scraped",
+    dueDate,
+    score: hasScore ? scraped.earnedPoints : null,
+    maxPoints,
+    percentage,
+    status: hasScore ? "graded" : "pending",
+  };
+}
+
+const { classInfo, scrapedAssignments } = Astro.props as {
+  classInfo: Class;
+  scrapedAssignments: ScrapedAssignment[];
+};
+const scrapedAssignmentRows = scrapedAssignments.map((assignment) =>
+  toAssignment(assignment, classInfo)
+);
 
 function getGradeColor(grade: number): string {
   if (grade >= 90) return "grade-a";
@@ -36,8 +105,11 @@ function getPercentageDisplay(assignment: Assignment): string {
   return `${assignment.percentage}%`;
 }
 
-const assignments = classInfo.assignments || [];
+const assignments = scrapedAssignmentRows.length > 0
+  ? scrapedAssignmentRows
+  : classInfo.assignments || [];
 const hasAssignments = assignments.length > 0;
+const classInfoWithAssignments = { ...classInfo, assignments };
 ---
 
 <BaseLayout>
@@ -145,7 +217,7 @@ const hasAssignments = assignments.length > 0;
     </div>
 
     <!-- Grade Calculator -->
-    <GradeCalculator classInfo={classInfo} />
+    <GradeCalculator classInfo={classInfoWithAssignments} />
 
     <!-- Assignments Section -->
     <div
