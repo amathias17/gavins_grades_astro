@@ -255,14 +255,11 @@ const classInfoWithAssignments = { ...classInfo, assignments };
           </div>
         ) : (
           <div class="overflow-x-auto">
-            <table class="w-full border-collapse">
+            <table class="assignments-table w-full border-collapse">
               <thead>
                 <tr class="border-b-[3px] border-b-[#555]">
                   <th class="text-left p-3 text-[0.5em] text-[#00ff00] uppercase">
                     Assignment
-                  </th>
-                  <th class="text-left p-3 text-[0.5em] text-[#00ff00] uppercase">
-                    Category
                   </th>
                   <th class="text-left p-3 text-[0.5em] text-[#00ff00] uppercase">
                     Due Date
@@ -280,22 +277,19 @@ const classInfoWithAssignments = { ...classInfo, assignments };
               </thead>
               <tbody>
                 {assignments.map((assignment) => (
-                  <tr class="border-b border-b-[#333] hover:bg-[#1a1a1a] transition-colors">
-                    <td class="p-3 text-[0.5em] text-white">
+                  <tr class="assignments-row border-b border-b-[#333] hover:bg-[#1a1a1a] transition-colors">
+                    <td class="assignments-cell p-3 text-[0.5em] text-white" data-label="Assignment">
                       {assignment.name}
                     </td>
-                    <td class="p-3 text-[0.5em] text-[#aaa]">
-                      {assignment.category}
-                    </td>
-                    <td class="p-3 text-[0.5em] text-[#aaa]">
+                    <td class="assignments-cell p-3 text-[0.5em] text-[#aaa]" data-label="Due Date">
                       {assignment.dueDate}
                     </td>
                     <td
-                      class={`p-3 text-right text-[0.5em] ${assignment.status === "missing" ? "text-[#E60A18]" : "text-white"}`}
+                      class={`assignments-cell p-3 text-right text-[0.5em] ${assignment.status === "missing" ? "text-[#E60A18]" : "text-white"}`} data-label="Score"
                     >
                       {getScoreDisplay(assignment)}
                     </td>
-                    <td class="p-3 text-right">
+                    <td class="assignments-cell p-3 text-right" data-label="Percentage">
                       {assignment.percentage !== null ? (
                         <span
                           class={`grade-badge ${getGradeColor(assignment.percentage)}`}
@@ -308,7 +302,7 @@ const classInfoWithAssignments = { ...classInfo, assignments };
                         </span>
                       )}
                     </td>
-                    <td class="p-3 text-center">
+                    <td class="assignments-cell p-3 text-center" data-label="Status">
                       {assignment.status === "missing" ? (
                         <span class="text-[0.5em] px-3 py-1 bg-[#E60A18] text-white border-2 border-white uppercase">
                           ❌ Missing
@@ -332,4 +326,49 @@ const classInfoWithAssignments = { ...classInfo, assignments };
       }
     </div>
   </div>
+
+  <style>
+    @media (max-width: 640px) {
+      .assignments-table thead {
+        display: none;
+      }
+
+      .assignments-table,
+      .assignments-table tbody,
+      .assignments-table tr,
+      .assignments-table td {
+        display: block;
+        width: 100%;
+      }
+
+      .assignments-row {
+        border: 2px solid #333;
+        padding: 10px;
+        margin-bottom: 12px;
+        background: #000;
+      }
+
+      .assignments-cell {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 10px;
+        padding: 6px 0;
+        text-align: left;
+      }
+
+      .assignments-cell::before {
+        content: attr(data-label);
+        flex: 0 0 auto;
+        color: #00ff00;
+        text-transform: uppercase;
+        font-size: 0.45em;
+        letter-spacing: 0.08em;
+      }
+
+      .assignments-cell .grade-badge {
+        font-size: 0.5em;
+      }
+    }
+  </style>
 </BaseLayout>

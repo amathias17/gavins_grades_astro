@@ -12,6 +12,7 @@
 - Scraper supports SKYWARD_MAX_ASSIGNMENTS to cap assignment detail scraping for quick verification runs.
 - Scraper fix (12/21/2025): extractAssignmentDetails now clicks by data-aid/data-gid instead of index; organizeByClass groups by classId first, yielding 9 separate classes. classIdMap now also attempts assignment row group-child/group-parent mapping with classDesc fallbacks so className/period/teacher can be restored; classId remains a last-resort fallback if mapping fails.
 - Verified scraper output (12/22/2025): detailed-grades.json has 9 classes with names/periods/teachers; class pages match scraped assignments by period.
+- Mobile layout: assignments log table now stacks into labeled cards on small screens using data-label cells; Category column removed.
 - Commands: npm run dev/build/preview; npx playwright test (installs browsers per playwright.config.ts). Data files include non-ASCII artifacts, so prefer ASCII in new edits.
 
 ## Working Agreement

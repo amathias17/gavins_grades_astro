@@ -1,2 +1,2 @@
 - feature : create a page for stats. It should be fun and engaging stats. We have a daily history of grades, so a chart would be nice. 
-- issue: Assignments.log doesn't look good on mobile view. I want this website to be most efficient on mobile. 
+- issue: Assignments.log doesn't look good on mobile view. I want this website to be most efficient on mobile. Remove the catagory from the table. 
