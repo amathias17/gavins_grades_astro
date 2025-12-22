@@ -25,6 +25,10 @@ type ScrapedGrades = {
 };
 
 export async function getStaticPaths() {
+  const normalizeClassName = (value: string): string =>
+    value.trim().toLowerCase().replace(/[^a-z0-9]+/g, " ");
+  const normalizePeriod = (value: string): string => value.trim();
+
   const classes = gradesData.classes as Class[];
   let scrapedClasses: ScrapedClass[] = [];
   try {
@@ -35,19 +39,24 @@ export async function getStaticPaths() {
   } catch (error) {
     scrapedClasses = [];
   }
+  const scrapedByPeriod = new Map(
+    scrapedClasses.map((entry) => [normalizePeriod(entry.period), entry])
+  );
+  const scrapedByName = new Map(
+    scrapedClasses.map((entry) => [normalizeClassName(entry.className), entry])
+  );
   return classes.map((classInfo) => ({
     params: { classId: classInfo.class_id || classInfo.period },
-    props: {
-      classInfo,
-      scrapedAssignments:
-        scrapedClasses
-          .find((entry) => entry.period === classInfo.period)
-          ?.assignments ??
-        scrapedClasses
-          .find((entry) => entry.className === classInfo.class_name)
-          ?.assignments ??
-        [],
-    },
+    props: (() => {
+      const periodKey = normalizePeriod(classInfo.period);
+      const nameKey = normalizeClassName(classInfo.class_name);
+      const scrapedMatch =
+        scrapedByPeriod.get(periodKey) ?? scrapedByName.get(nameKey);
+      return {
+        classInfo,
+        scrapedAssignments: scrapedMatch?.assignments ?? [],
+      };
+    })(),
   }));
 }
 

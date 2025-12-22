@@ -187,6 +187,7 @@ async function getClassInfo(page) {
   return page.evaluate(() => {
     const classes = [];
     const classIdMap = {};
+    const classInfoByGroupId = new Map();
 
     const recordClass = (id, info) => {
       if (!id) return;
@@ -255,35 +256,46 @@ async function getClassInfo(page) {
       };
 
       classes.push(entry);
+      classInfoByGroupId.set(groupId, entry);
       recordClass(groupId, entry);
     });
 
-    // Map assignment class ids to class info by finding parent class for each assignment
-    const assignmentsByClass = new Map();
+    // Map assignment class ids to class info using row group attributes or nearby class tables.
+    const assignmentLinks = document.querySelectorAll('a#showAssignmentInfo');
+    assignmentLinks.forEach(link => {
+      const classId = link.getAttribute('data-gid');
+      if (!classId) return;
 
-    // Group assignment links by their parent class table
-    classTables.forEach(table => {
-      const tableId = table.getAttribute('id');
-      const groupId = tableId.replace('classDesc_', '');
+      const row = link.closest('tr');
+      let classInfo = null;
 
-      // Find all assignment links that belong to this class
-      // Assignments are in a grid/table that follows the class description table
-      let nextEl = table.nextElementSibling;
-      while (nextEl) {
-        const assignments = nextEl.querySelectorAll('a#showAssignmentInfo');
-        assignments.forEach(link => {
-          const classId = link.getAttribute('data-gid');
-          if (classId) {
-            const classInfo = classIdMap[groupId];
-            if (classInfo) {
-              recordClass(classId, classInfo);
+      if (row) {
+        const groupId = row.getAttribute('group-child') || row.getAttribute('group-parent');
+        if (groupId) {
+          classInfo = classInfoByGroupId.get(groupId) || null;
+        }
+
+        if (!classInfo) {
+          let current = row;
+          while (current) {
+            let prev = current.previousElementSibling;
+            while (prev) {
+              if (prev.matches?.('table[id^="classDesc_"]')) {
+                const tableId = prev.getAttribute('id') || '';
+                const lookupId = tableId.replace('classDesc_', '');
+                classInfo = classInfoByGroupId.get(lookupId) || null;
+                break;
+              }
+              prev = prev.previousElementSibling;
             }
+            if (classInfo) break;
+            current = current.parentElement;
           }
-        });
+        }
+      }
 
-        // Stop when we hit another class description table
-        if (nextEl.matches?.('table[id^="classDesc_"]')) break;
-        nextEl = nextEl.nextElementSibling;
+      if (classInfo) {
+        recordClass(classId, classInfo);
       }
     });
 
@@ -317,6 +329,19 @@ async function getAssignmentLinks(page) {
       let classNameFromDOM = '';
       let periodFromDOM = '';
       let teacherFromDOM = '';
+      const groupIdHint = row.getAttribute('group-child') || row.getAttribute('group-parent') || '';
+
+      if (groupIdHint) {
+        const classTable = document.getElementById(`classDesc_${groupIdHint}`);
+        if (classTable) {
+          const classLink = classTable.querySelector('.classDesc a');
+          if (classLink) classNameFromDOM = classLink.textContent.trim();
+          const periodMatch = classTable.textContent.match(/Period\s*(\d+|[A-Z])/);
+          if (periodMatch) periodFromDOM = periodMatch[1];
+          const teacherLink = classTable.querySelector('tr:nth-of-type(3) a');
+          if (teacherLink) teacherFromDOM = teacherLink.textContent.trim();
+        }
+      }
 
       // Walk up from the row to find the parent class section
       let current = row;
@@ -347,7 +372,8 @@ async function getAssignmentLinks(page) {
         dueDate,
         classNameHint: classNameFromDOM,
         periodHint: periodFromDOM,
-        teacherHint: teacherFromDOM
+        teacherHint: teacherFromDOM,
+        groupIdHint
       });
     });
 
@@ -618,8 +644,11 @@ async function scrapeAllAssignments(page, classes, cacheAssignments = {}, classI
 
     // Find which class this assignment belongs to
     const fromMap = classIdMap[assignment.classId];
+    const fromGroupHint = assignment.groupIdHint
+      ? classes.find(c => c.groupId === assignment.groupIdHint)
+      : null;
     const fromArray = classes.find(c => c.groupId === assignment.classId);
-    const classInfo = fromMap || fromArray;
+    const classInfo = fromMap || fromGroupHint || fromArray;
 
     if (assignmentDetails.length < 10) {
       console.log(`  Assignment classId=${assignment.classId}:`);
