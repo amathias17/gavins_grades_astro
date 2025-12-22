@@ -22,6 +22,7 @@
 ## Coding Style & UX
 - TypeScript + ESM; avoid any. Reuse BaseLayout, design tokens, and getGradeColor helpers; keep retro border-heavy aesthetic. Prefer small incremental edits (apply_patch); stay ASCII unless the file already uses other characters.
 - Assignments log table uses a mobile card layout at small breakpoints for readability; Category column removed.
+- Primary navigation lives in src/components/Header.astro with links to Home, Stats Room, and Calculator plus placeholders for future pages.
 
 ## Testing Guidance
 - Playwright is primary; add/adjust E2E when behavior changes. Place specs in tests/e2e/ and favor stable, accessible selectors. Build (npm run build) should pass before delivery; run targeted tests during iteration.
