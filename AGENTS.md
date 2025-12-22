@@ -2,7 +2,7 @@
 
 ## Project Structure & Data
 - Astro 5 + Tailwind 4.1 (@tailwindcss/vite); layout in src/layouts/BaseLayout.astro imports src/styles/global.css and retro neon-green/black theme.
-- Pages: src/pages/index.astro (dashboard), src/pages/classes/[classId].astro (per-class + GradeCalculator), src/pages/calculator.astro (dashboard-style calculator); legacy prototypes in src/pages/new.astro and src/pages/old.astro.
+- Pages: src/pages/index.astro (dashboard), src/pages/classes/[classId].astro (per-class + GradeCalculator), src/pages/calculator.astro (dashboard-style calculator), src/pages/stats.astro (grade history stats); legacy prototypes in src/pages/new.astro and src/pages/old.astro.
 - Class pages read scraped assignment data from scraper/detailed-grades.json at build time when available, matching by period and normalized class name.
 - Components in src/components/ (CurrentGrades.astro, GradeCalculator.astro, etc.); utilities in src/utils/gradeCalculator.ts; data in src/data/grades.json and src/data/missing_assignments.json (class_id may be absent; use period). Encoding artifacts exist; do not "clean" without source confirmation.
 - CurrentGrades missing quests card shows a dynamic Missing.Quests count sourced from missing_assignments.json.
