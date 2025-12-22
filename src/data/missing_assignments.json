@@ -1,9 +1,25 @@
 {
   "metadata": {
-    "last_updated": "12/22/2025, 06:35 AM",
+    "last_updated": "12/22/2025, 12:02 PM",
     "count": 8
   },
   "missing_assignments": [
+    {
+      "due_date": "12/19/2025  (Q2)",
+      "assignment_name": "Cell Membrane Notes 1-4",
+      "class_name": "BIOLOGY            2",
+      "teacher": "Denise Condo",
+      "category": "Class Work",
+      "max_points": "5"
+    },
+    {
+      "due_date": "12/19/2025  (Q2)",
+      "assignment_name": "Cell membrane Coloring Activit",
+      "class_name": "BIOLOGY            2",
+      "teacher": "Denise Condo",
+      "category": "Class Work",
+      "max_points": "5"
+    },
     {
       "due_date": "12/16/2025  (Q2)",
       "assignment_name": "WWI Propaganda Poster",
@@ -11,22 +27,6 @@
       "teacher": "Brock Seese",
       "category": "Project",
       "max_points": "50"
-    },
-    {
-      "due_date": "12/16/2025  (Q2)",
-      "assignment_name": "TWILIGHT ZONE READING",
-      "class_name": "HISTORY POP CULT   1",
-      "teacher": "Robyn Dixon",
-      "category": "Class Work",
-      "max_points": "25"
-    },
-    {
-      "due_date": "12/12/2025  (Q2)",
-      "assignment_name": "Food Sketchbook",
-      "class_name": "ART 1",
-      "teacher": "Kathryn Curry",
-      "category": "Homework",
-      "max_points": "10"
     },
     {
       "due_date": "12/11/2025  (Q2)",

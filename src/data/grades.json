@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "12/22/2025, 06:35 AM",
+    "last_updated": "12/22/2025, 12:02 PM",
     "most_recent_date": "12/22/2025",
     "total_classes": 9
   },
@@ -33,9 +33,9 @@
       "period": "2",
       "q1_grade": 85,
       "q1_letter_grade": "B",
-      "q2_grade": 89,
+      "q2_grade": 84,
       "q2_letter_grade": "B",
-      "current_grade": 89,
+      "current_grade": 84,
       "letter_grade": "B"
     },
     {
@@ -44,9 +44,9 @@
       "period": "3",
       "q1_grade": 73,
       "q1_letter_grade": "C",
-      "q2_grade": 54,
+      "q2_grade": 47,
       "q2_letter_grade": "F",
-      "current_grade": 54,
+      "current_grade": 47,
       "letter_grade": "F"
     },
     {
@@ -55,10 +55,10 @@
       "period": "4",
       "q1_grade": 55,
       "q1_letter_grade": "F",
-      "q2_grade": 80,
-      "q2_letter_grade": "B",
-      "current_grade": 80,
-      "letter_grade": "B"
+      "q2_grade": 74,
+      "q2_letter_grade": "C",
+      "current_grade": 74,
+      "letter_grade": "C"
     },
     {
       "class_name": "Physical Educ",
@@ -88,10 +88,10 @@
       "period": "7",
       "q1_grade": 70,
       "q1_letter_grade": "C",
-      "q2_grade": 69,
-      "q2_letter_grade": "D",
-      "current_grade": 69,
-      "letter_grade": "D"
+      "q2_grade": 71,
+      "q2_letter_grade": "C",
+      "current_grade": 71,
+      "letter_grade": "C"
     },
     {
       "class_name": "Health",
@@ -197,7 +197,7 @@
       "12/19/2025": 89,
       "12/20/2025": 89,
       "12/21/2025": 89,
-      "12/22/2025": 89
+      "12/22/2025": 84
     },
     "History Pop Cult 1": {
       "11/24/2025": 90,
@@ -228,7 +228,7 @@
       "12/19/2025": 54,
       "12/20/2025": 54,
       "12/21/2025": 54,
-      "12/22/2025": 54
+      "12/22/2025": 47
     },
     "Art 1": {
       "11/24/2025": 84,
@@ -259,7 +259,7 @@
       "12/19/2025": 80,
       "12/20/2025": 80,
       "12/21/2025": 80,
-      "12/22/2025": 80
+      "12/22/2025": 74
     },
     "Physical Educ": {
       "11/24/2025": 100,
@@ -352,7 +352,7 @@
       "12/19/2025": 69,
       "12/20/2025": 69,
       "12/21/2025": 69,
-      "12/22/2025": 69
+      "12/22/2025": 71
     },
     "Health": {
       "11/24/2025": 94,
@@ -386,7 +386,7 @@
       "12/22/2025": 79
     }
   },
-  "overall_average": 78,
+  "overall_average": 76,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -416,7 +416,7 @@
     "12/19/2025": 78,
     "12/20/2025": 78,
     "12/21/2025": 78,
-    "12/22/2025": 78
+    "12/22/2025": 76
   },
   "streak": 0,
   "streak_history": {
