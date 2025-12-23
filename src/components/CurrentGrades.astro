@@ -227,6 +227,7 @@ function getGradeColor(grade: number): string {
                             class="missing-quest-button w-full text-left bg-[#000] p-[15px] mb-[12px] border-[3px] border-[#00ffff] flex items-center gap-[15px] hover:border-[#00ff00] hover:shadow-[0_0_10px_rgba(0,255,0,0.3)] transition-all"
                             data-quest-index={index}
                             aria-haspopup="dialog"
+                            aria-controls="missing-quest-modal"
                             aria-label={`Show grade impact for ${a.assignment} in ${a.className}`}
                         >
                             <div class="text-[1.5em] flex-shrink-0">👎</div>
@@ -255,6 +256,9 @@ function getGradeColor(grade: number): string {
     role="dialog"
     aria-modal="true"
     aria-labelledby="missing-quest-title"
+    aria-describedby="missing-quest-desc"
+    aria-hidden="true"
+    tabindex="-1"
 >
     <div class="w-full max-w-xl bg-[#000] border-4 border-solid border-white p-5 shadow-[0_0_0_4px_#000,0_0_0_8px_#fff,8px_8px_0_8px_rgba(255,255,255,0.3)]">
         <div class="flex items-center justify-between gap-4 mb-4 pb-4 border-b-[3px] border-b-[#555] border-dashed">
@@ -278,9 +282,9 @@ function getGradeColor(grade: number): string {
             </button>
         </div>
 
-        <div class="space-y-4">
-            <div class="bg-[#111] p-4 border-[2px] border-[#555]">
-                <div class="text-[0.4em] text-[#aaa] uppercase mb-2">Quest Details</div>
+            <div class="space-y-4" id="missing-quest-desc">
+                <div class="bg-[#111] p-4 border-[2px] border-[#555]">
+                    <div class="text-[0.4em] text-[#aaa] uppercase mb-2">Quest Details</div>
                 <div class="text-[0.5em] text-white">
                     <span id="missing-quest-class"></span>
                     <span class="text-[#777]"> | </span>
@@ -352,10 +356,13 @@ function getGradeColor(grade: number): string {
         return "F";
     }
 
+    let lastFocusedElement = null;
+
     function openModal(index) {
         const quest = quests[index];
         if (!quest || !modal) return;
 
+        lastFocusedElement = document.activeElement;
         if (assignmentEl) assignmentEl.textContent = quest.assignment;
         if (classEl) classEl.textContent = quest.className;
         if (dueEl) dueEl.textContent = quest.due;
@@ -423,11 +430,21 @@ function getGradeColor(grade: number): string {
         }
 
         modal.classList.remove("hidden");
+        modal.setAttribute("aria-hidden", "false");
+        if (closeButton) {
+            closeButton.focus();
+        } else {
+            modal.focus();
+        }
     }
 
     function closeModal() {
         if (!modal) return;
         modal.classList.add("hidden");
+        modal.setAttribute("aria-hidden", "true");
+        if (lastFocusedElement && lastFocusedElement.focus) {
+            lastFocusedElement.focus();
+        }
     }
 
     document.querySelectorAll(".missing-quest-button").forEach((button) => {
@@ -445,9 +462,28 @@ function getGradeColor(grade: number): string {
         }
     });
 
+    function trapFocus(event) {
+        if (!modal || modal.classList.contains("hidden")) return;
+        if (event.key !== "Tab") return;
+        const focusable = modal.querySelectorAll(
+            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+        );
+        if (!focusable.length) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+            event.preventDefault();
+            last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+            event.preventDefault();
+            first.focus();
+        }
+    }
+
     document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") {
+        if (event.key === "Escape" && modal && !modal.classList.contains("hidden")) {
             closeModal();
         }
+        trapFocus(event);
     });
 </script>
