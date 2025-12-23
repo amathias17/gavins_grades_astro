@@ -11,7 +11,7 @@
 - Components and utils: gradeCalculator.ts exports pure validation + calculateWithAssignments/calculateWithoutAssignments + getLetterGrade; deltas treated as meaningful only past +/-0.5. GradeCalculator.astro wires dataset props into client script for validation, accessibility messages, progress bar, and reset behavior. CurrentGrades.astro builds cards from grades data and missing_assignments, with Missing.Quests showing a dynamic count. GradeTable and gradeTrends components exist but are commented out on home.
 - Grade calculators now render a calculation breakdown: current totals, hypothetical add, and projected totals, using new total fields from gradeCalculator.ts in both class and /calculator views.
 - Class assignments normalize past-due pending items as missing with 0/total and include them in calculator totals.
-- Missing assignment checkbox simulation now runs in an inline script with data-astro-rerun to ensure handlers rebind after view transitions.
+- Assignment log now uses click-to-view impact modal with a 100% projection, replacing simulate checkboxes.
 - Missing.Quests cards on the home page open a modal showing projected class grade if the assignment is turned in at 100%, using scraped class points when available.
 - new.astro now renders missing assignments data for layout preview.
 - Missing.Quests modal now sets aria-hidden/aria-describedby and restores focus on close with a basic focus trap.

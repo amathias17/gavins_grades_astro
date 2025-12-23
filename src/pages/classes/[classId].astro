@@ -187,10 +187,10 @@ const classInfoWithAssignments = { ...classInfo, assignments };
     <!-- Class Header Card -->
     <div
       class="shadow-[0_0_0_4px_#000,0_0_0_8px_#fff,8px_8px_0_8px_rgba(255,255,255,0.3)] relative p-5 border-4 border-solid border-white card mb-8"
-    >
-      <div
-        class="flex items-center gap-[15px] mb-5 pb-[15px] border-b-[3px] border-b-[#555] border-dashed"
       >
+        <div
+          class="flex items-center gap-[15px] mb-5 pb-[15px] border-b-[3px] border-b-[#555] border-dashed"
+        >
         <div
           class="w-12 h-12 flex items-center justify-center text-[1.2em] border-[3px] border-solid border-[#00ff00] bg-[#000]"
         >
@@ -293,6 +293,9 @@ const classInfoWithAssignments = { ...classInfo, assignments };
         </div>
         <div class="text-[0.7em] text-[#00ff00]">ASSIGNMENTS.LOG</div>
       </div>
+      <div class="text-[0.5em] text-[#aaa] mb-4">
+        Click an assignment to see how it could change the class grade.
+      </div>
 
       {
         !hasAssignments ? (
@@ -309,9 +312,6 @@ const classInfoWithAssignments = { ...classInfo, assignments };
             <table class="assignments-table w-full border-collapse">
               <thead>
                 <tr class="border-b-[3px] border-b-[#555]">
-                  <th class="text-center p-3 text-[0.5em] text-[#00ff00] uppercase w-12">
-                    Simulate
-                  </th>
                   <th class="text-left p-3 text-[0.5em] text-[#00ff00] uppercase">
                     Assignment
                   </th>
@@ -331,24 +331,17 @@ const classInfoWithAssignments = { ...classInfo, assignments };
               </thead>
               <tbody>
                 {assignments.map((assignment) => {
-                  const isMissingOrPending = assignment.status === "missing" || assignment.status === "pending";
-                  const canSimulate = isMissingOrPending && assignment.maxPoints > 0;
                   return (
                   <tr class="assignments-row border-b border-b-[#333] hover:bg-[#1a1a1a] transition-colors" data-assignment-id={assignment.id}>
-                    <td class="assignments-cell p-3 text-center" data-label="Simulate">
-                      {canSimulate ? (
-                        <input
-                          type="checkbox"
-                          class="assignment-simulate-checkbox w-4 h-4 border-2 border-[#00ff00] bg-[#000] text-[#00ff00] focus:ring-2 focus:ring-[#00ff00] cursor-pointer"
-                          data-assignment-id={assignment.id}
-                          aria-label={`Simulate ${assignment.name} at 100%`}
-                        />
-                      ) : (
-                        <span class="text-[0.4em] text-[#555]">-</span>
-                      )}
-                    </td>
                     <td class="assignments-cell p-3 text-[0.5em] text-white" data-label="Assignment">
-                      {assignment.name}
+                      <button
+                        type="button"
+                        class="assignment-impact-button text-left text-[#00ffff] hover:text-[#00ff00] transition-colors underline decoration-[#00ffff] hover:decoration-[#00ff00]"
+                        data-assignment-id={assignment.id}
+                        aria-label={`View grade impact for ${assignment.name}`}
+                      >
+                        {assignment.name}
+                      </button>
                     </td>
                     <td class="assignments-cell p-3 text-[0.5em] text-[#aaa]" data-label="Due Date">
                       {assignment.dueDate}
@@ -397,224 +390,191 @@ const classInfoWithAssignments = { ...classInfo, assignments };
     </div>
   </div>
 
+  <div
+    id="assignment-impact-modal"
+    class="fixed inset-0 bg-black/70 hidden items-center justify-center p-4 z-50"
+    role="dialog"
+    aria-modal="true"
+    aria-hidden="true"
+    aria-labelledby="assignment-impact-title"
+    aria-describedby="assignment-impact-desc"
+  >
+    <div class="bg-[#111] border-4 border-white shadow-[0_0_0_4px_#000,0_0_0_8px_#fff,8px_8px_0_8px_rgba(0,255,255,0.3)] max-w-xl w-full p-5">
+      <div class="flex items-start justify-between gap-4 mb-4 border-b-2 border-dashed border-[#555] pb-3">
+        <div>
+          <div id="assignment-impact-title" class="text-[0.7em] text-[#00ff00] uppercase">
+            ASSIGNMENT IMPACT
+          </div>
+          <div id="assignment-impact-name" class="text-[0.65em] text-white mt-1"></div>
+        </div>
+        <button
+          id="assignment-impact-close"
+          type="button"
+          class="border-2 border-white px-3 py-2 text-[0.55em] uppercase text-white hover:border-[#00ff00] hover:text-[#00ff00] transition-colors"
+        >
+          Close
+        </button>
+      </div>
+      <div id="assignment-impact-desc" class="space-y-4 text-[0.55em] text-white">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div class="bg-black p-3 border-2 border-[#555]">
+            <div class="text-[#aaa] uppercase mb-1">Due Date</div>
+            <div id="assignment-impact-due"></div>
+          </div>
+          <div class="bg-black p-3 border-2 border-[#555]">
+            <div class="text-[#aaa] uppercase mb-1">Current Score</div>
+            <div id="assignment-impact-score"></div>
+          </div>
+          <div class="bg-black p-3 border-2 border-[#555]">
+            <div class="text-[#aaa] uppercase mb-1">Worth</div>
+            <div id="assignment-impact-worth"></div>
+          </div>
+          <div class="bg-black p-3 border-2 border-[#555]">
+            <div class="text-[#aaa] uppercase mb-1">Status</div>
+            <div id="assignment-impact-status"></div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <div class="bg-black p-3 border-2 border-[#555]">
+            <div class="text-[#aaa] uppercase mb-1">Current Grade</div>
+            <div id="assignment-impact-current"></div>
+          </div>
+          <div class="bg-black p-3 border-2 border-[#00ff00]">
+            <div class="text-[#aaa] uppercase mb-1">If 100%</div>
+            <div id="assignment-impact-projected"></div>
+          </div>
+          <div class="bg-black p-3 border-2 border-[#555]">
+            <div class="text-[#aaa] uppercase mb-1">Change</div>
+            <div id="assignment-impact-delta"></div>
+          </div>
+        </div>
+        <div class="text-[0.45em] text-[#aaa] uppercase">
+          Projection assumes full points on this assignment.
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script define:vars={{ assignmentsData: JSON.stringify(assignments) }} data-astro-rerun>
-    // Wait for DOM to be fully ready
-    function initCheckboxSimulation() {
-      // Get assignments data from Astro
+    function initAssignmentImpact() {
       const assignments = JSON.parse(assignmentsData);
-      const calculatorElement = document.getElementById('grade-calculator');
-      
-      if (!calculatorElement) {
-        console.error('Calculator element not found');
+      const modal = document.getElementById('assignment-impact-modal');
+      const closeButton = document.getElementById('assignment-impact-close');
+      const nameEl = document.getElementById('assignment-impact-name');
+      const dueEl = document.getElementById('assignment-impact-due');
+      const scoreEl = document.getElementById('assignment-impact-score');
+      const worthEl = document.getElementById('assignment-impact-worth');
+      const statusEl = document.getElementById('assignment-impact-status');
+      const currentEl = document.getElementById('assignment-impact-current');
+      const projectedEl = document.getElementById('assignment-impact-projected');
+      const deltaEl = document.getElementById('assignment-impact-delta');
+      const buttons = document.querySelectorAll('.assignment-impact-button');
+
+      if (!modal || !closeButton) {
         return;
       }
 
-    // Track checked assignment IDs
-    const checkedAssignmentIds = new Set();
+      let lastFocused = null;
 
-      // Helper function to simulate checked assignments at 100%
-      function simulateAssignments(originalAssignments, checkedIds) {
-      return originalAssignments.map((assignment) => {
-        // If this assignment is checked and is missing/pending, simulate it at 100%
-        if (checkedIds.has(assignment.id) && (assignment.status === 'missing' || assignment.status === 'pending') && assignment.maxPoints > 0) {
-          return {
-            ...assignment,
-            score: assignment.maxPoints,
-            percentage: 100,
-            status: 'graded',
-          };
+      function computeTotals(list) {
+        return list.reduce(
+          (totals, assignment) => {
+            if (assignment.maxPoints <= 0) {
+              return totals;
+            }
+            const earned = assignment.score === null ? 0 : assignment.score;
+            totals.earned += earned;
+            totals.possible += assignment.maxPoints;
+            return totals;
+          },
+          { earned: 0, possible: 0 }
+        );
+      }
+
+      function formatGrade(value) {
+        if (value === null || Number.isNaN(value)) {
+          return 'N/A';
         }
-        return assignment;
+        return `${value.toFixed(1)}%`;
+      }
+
+      function calculateGrade(earned, possible) {
+        if (!possible) {
+          return null;
+        }
+        return Math.round((earned / possible) * 1000) / 10;
+      }
+
+      function openModal(assignment) {
+        const totals = computeTotals(assignments);
+        const currentGrade = calculateGrade(totals.earned, totals.possible);
+        const currentScore = assignment.score === null ? 0 : assignment.score;
+        const projectedEarned = totals.earned - currentScore + assignment.maxPoints;
+        const projectedGrade =
+          assignment.maxPoints > 0 ? calculateGrade(projectedEarned, totals.possible) : null;
+        const delta = projectedGrade === null || currentGrade === null ? null : projectedGrade - currentGrade;
+
+        nameEl.textContent = assignment.name;
+        dueEl.textContent = assignment.dueDate;
+        scoreEl.textContent =
+          assignment.score === null ? 'PENDING' : `${assignment.score}/${assignment.maxPoints}`;
+        worthEl.textContent = `${assignment.maxPoints} pts`;
+        statusEl.textContent = assignment.status.toUpperCase();
+        currentEl.textContent = formatGrade(currentGrade);
+        projectedEl.textContent = formatGrade(projectedGrade);
+        deltaEl.textContent = delta === null ? 'N/A' : `${delta >= 0 ? '+' : ''}${delta.toFixed(1)}%`;
+        deltaEl.style.color =
+          delta === null ? '#aaa' : delta > 0.5 ? '#01BC61' : delta < -0.5 ? '#E60A18' : '#aaa';
+
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        modal.setAttribute('aria-hidden', 'false');
+        lastFocused = document.activeElement;
+        closeButton.focus();
+      }
+
+      function closeModal() {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        modal.setAttribute('aria-hidden', 'true');
+        if (lastFocused instanceof HTMLElement) {
+          lastFocused.focus();
+        }
+      }
+
+      closeButton.addEventListener('click', closeModal);
+      modal.addEventListener('click', (event) => {
+        if (event.target === modal) {
+          closeModal();
+        }
+      });
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+          closeModal();
+        }
+      });
+
+      buttons.forEach((button) => {
+        if (button.dataset.listenerAttached === 'true') {
+          return;
+        }
+        button.dataset.listenerAttached = 'true';
+        button.addEventListener('click', () => {
+          const assignmentId = button.dataset.assignmentId;
+          const assignment = assignments.find((item) => item.id === assignmentId);
+          if (!assignment) {
+            return;
+          }
+          openModal(assignment);
+        });
       });
     }
 
-      // Calculate grade with simulated assignments (no hypothetical assignment)
-      function calculateGradeWithSimulatedAssignments() {
-      const simulatedAssignments = simulateAssignments(assignments, checkedAssignmentIds);
-      
-      // Filter to graded assignments (including simulated ones)
-      const gradedAssignments = simulatedAssignments.filter(
-        (a) => a.score !== null && a.percentage !== null && a.maxPoints > 0
-      );
-
-      if (gradedAssignments.length === 0) {
-        return null;
-      }
-
-      // Calculate totals
-      const totalEarned = gradedAssignments.reduce((sum, a) => sum + (a.score ?? 0), 0);
-      const totalPossible = gradedAssignments.reduce((sum, a) => sum + a.maxPoints, 0);
-
-      if (totalPossible === 0) {
-        return null;
-      }
-
-      const calculatedGrade = Math.min(100, (totalEarned / totalPossible) * 100);
-      return Math.round(calculatedGrade * 100) / 100;
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initAssignmentImpact);
+    } else {
+      setTimeout(initAssignmentImpact, 50);
     }
-
-      // Update calculator with simulated assignments
-      function updateCalculatorAssignments() {
-      const simulatedAssignments = simulateAssignments(assignments, checkedAssignmentIds);
-      if (calculatorElement) {
-        calculatorElement.setAttribute('data-assignments', JSON.stringify(simulatedAssignments));
-        calculatorElement.setAttribute('data-has-assignments', simulatedAssignments.length > 0 ? 'true' : 'false');
-      }
-    }
-
-      // Update displayed grade when checkboxes change
-      function updateGradeDisplay() {
-      const simulatedGrade = calculateGradeWithSimulatedAssignments();
-      const originalGrade = parseFloat(calculatorElement?.dataset.currentGrade || '0');
-      
-      // Always try to update calculator results if they exist
-      const resultsContainer = document.getElementById('results-container');
-      const calculateBtn = document.getElementById('calculate-btn');
-      
-      if (
-        resultsContainer &&
-        !resultsContainer.classList.contains('hidden') &&
-        calculateBtn instanceof HTMLButtonElement &&
-        !calculateBtn.disabled
-      ) {
-        // If calculator has results, trigger recalculation to update them
-        calculateBtn.click();
-      } else if (simulatedGrade !== null && checkedAssignmentIds.size > 0) {
-        // Show a preview card above the calculator
-        const delta = simulatedGrade - originalGrade;
-        const deltaSign = delta >= 0 ? '+' : '';
-        const deltaColor = delta > 0.5 ? '#01BC61' : delta < -0.5 ? '#E60A18' : '#aaa';
-        const deltaIcon = delta > 0.5 ? '▲' : delta < -0.5 ? '▼' : '●';
-        
-        // Get letter grade
-        function getLetterGrade(grade: number): string {
-          if (grade >= 90) return 'A';
-          if (grade >= 80) return 'B';
-          if (grade >= 70) return 'C';
-          if (grade >= 60) return 'D';
-          return 'F';
-        }
-        
-        // Create or update a preview element
-        let previewElement = document.getElementById('simulated-grade-preview');
-        if (!previewElement) {
-          previewElement = document.createElement('div');
-          previewElement.id = 'simulated-grade-preview';
-          previewElement.className = 'shadow-[0_0_0_4px_#000,0_0_0_8px_#fff,8px_8px_0_8px_rgba(255,255,255,0.3)] relative p-5 border-4 border-solid border-white card mb-4';
-        }
-        
-        previewElement.innerHTML = `
-          <div class="flex items-center gap-[15px] mb-4 pb-[15px] border-b-[3px] border-b-[#555] border-dashed">
-            <div class="w-10 h-10 flex items-center justify-center text-[1em] border-[3px] border-solid border-[#00ff00] bg-[#000]">
-              📊
-            </div>
-            <div class="text-[0.6em] text-[#00ff00] uppercase font-bold">SIMULATED GRADE PREVIEW</div>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="bg-[#000] p-3 border-[2px] border-[#555]">
-              <div class="text-[0.4em] text-[#aaa] uppercase mb-2">Current Grade</div>
-              <div class="text-[0.7em] text-white font-bold">${originalGrade.toFixed(1)}%</div>
-            </div>
-            <div class="bg-[#000] p-3 border-[2px] border-[#00ff00]">
-              <div class="text-[0.4em] text-[#aaa] uppercase mb-2">With Checked Assignments</div>
-              <div class="flex items-center gap-2">
-                <span class="text-[0.6em] text-white font-bold">${getLetterGrade(simulatedGrade)}</span>
-                <span class="text-[0.7em] text-white font-bold">${simulatedGrade.toFixed(1)}%</span>
-              </div>
-            </div>
-            <div class="bg-[#000] p-3 border-[2px] border-[#555]">
-              <div class="text-[0.4em] text-[#aaa] uppercase mb-2">Change</div>
-              <div class="text-[0.7em] font-bold" style="color: ${deltaColor}">
-                ${deltaIcon} ${deltaSign}${delta.toFixed(1)}%
-              </div>
-            </div>
-          </div>
-        `;
-        
-        // Insert before calculator if not already there
-        if (!previewElement.parentNode) {
-          calculatorElement?.parentNode?.insertBefore(previewElement, calculatorElement);
-        }
-      } else {
-        // Remove preview if no assignments are checked
-        const previewElement = document.getElementById('simulated-grade-preview');
-        if (previewElement) {
-          previewElement.remove();
-        }
-      }
-    }
-
-      // Handle checkbox changes
-      function setupCheckboxes() {
-        const checkboxes = document.querySelectorAll('.assignment-simulate-checkbox');
-        console.log(`Found ${checkboxes.length} checkboxes to setup`);
-        
-        checkboxes.forEach((checkbox) => {
-          const checkboxElement = checkbox;
-          const assignmentId = checkboxElement.dataset.assignmentId;
-
-          if (!assignmentId) {
-            console.error('No assignment ID found on checkbox');
-            return;
-          }
-
-          if (checkboxElement.dataset.listenerAttached === 'true') {
-            return;
-          }
-
-          checkboxElement.dataset.listenerAttached = 'true';
-          
-          // Add event listener
-          checkboxElement.addEventListener('change', (event) => {
-            const target = event.target;
-            if (!(target instanceof HTMLInputElement)) {
-              return;
-            }
-            const id = target.dataset.assignmentId;
-            
-            console.log('Checkbox changed:', id, target.checked);
-            
-            if (!id) {
-              console.error('No assignment ID found on checkbox');
-              return;
-            }
-
-            if (target.checked) {
-              checkedAssignmentIds.add(id);
-            } else {
-              checkedAssignmentIds.delete(id);
-            }
-
-            console.log('Checked IDs:', Array.from(checkedAssignmentIds));
-
-            // Update calculator with new simulated assignments
-            updateCalculatorAssignments();
-
-            // Update grade display
-            updateGradeDisplay();
-          });
-        });
-      }
-
-      // Wait for DOM to be ready
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', () => {
-          setupCheckboxes();
-          updateCalculatorAssignments();
-          updateGradeDisplay();
-        });
-      } else {
-        // Use setTimeout to ensure all elements are rendered
-        setTimeout(() => {
-          setupCheckboxes();
-          updateCalculatorAssignments();
-          updateGradeDisplay();
-        }, 100);
-      }
-    }
-
-    // Initialize when script loads
-    initCheckboxSimulation();
   </script>
 
   <style>
@@ -659,10 +619,8 @@ const classInfoWithAssignments = { ...classInfo, assignments };
       .assignments-cell .grade-badge {
         font-size: 0.5em;
       }
-
-      /* Hide simulate column label on mobile for cleaner display */
-      .assignments-cell[data-label="Simulate"]::before {
-        display: none;
+      .assignment-impact-button {
+        font-size: 1em;
       }
     }
   </style>
