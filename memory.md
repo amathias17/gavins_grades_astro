@@ -17,6 +17,7 @@
 - Verified scraper output (12/22/2025): detailed-grades.json has 9 classes with names/periods/teachers; class pages match scraped assignments by period.
 - Mobile layout: assignments log table now stacks into labeled cards on small screens using data-label cells; Category column removed.
 - Assignment log percentages display as rounded whole numbers.
+- Missing assignment simulation (12/23/2025): Class pages show checkboxes in a "Simulate" column for missing/pending assignments. When checked, assignments are simulated at 100% (full points) and grade updates automatically. A preview card shows simulated grade with delta. Calculator automatically recalculates if results are displayed. Client script tracks checked IDs, simulates assignments, updates calculator data attributes, and displays grade changes in real-time.
 - Commands: npm run dev/build/preview; npx playwright test (installs browsers per playwright.config.ts). Data files include non-ASCII artifacts, so prefer ASCII in new edits.
 
 ## Working Agreement
