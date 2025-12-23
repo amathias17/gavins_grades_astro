@@ -23,7 +23,7 @@ const missingAssignments = missingAssignmentsData.missing_assignments?.map(
     (assignment) => ({
         assignment: assignment.assignment_name,
         class: assignment.class_name,
-        due: assignment.due_date,
+        due: assignment.due_date.replace(/\u00a0/g, " ").replace(/\s*\(Q\d+\)/i, "").trim(),
         points: assignment.max_points,
     }),
 ) ?? [];

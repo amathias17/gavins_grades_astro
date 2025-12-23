@@ -1,7 +1,10 @@
 ---
 import missingAssignmentsData from '../data/missing_assignments.json';
 
-const assignments = missingAssignmentsData.assignments;
+const assignments = missingAssignmentsData.assignments?.map((item) => ({
+    ...item,
+    due_date: item.due_date?.replace(/\u00a0/g, " ").replace(/\s*\(Q\d+\)/i, "").trim(),
+})) ?? [];
 ---
 <!-- 
 <section class="mb-16" aria-labelledby="missing-assignments-heading">

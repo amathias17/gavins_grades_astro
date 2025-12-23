@@ -37,6 +37,9 @@ const classLookup = new Map(
     data.map((entry) => [normalizeClassName(entry.class), entry]),
 );
 
+const normalizeMissingDate = (value: string): string =>
+    value.replace(/\u00a0/g, " ").replace(/\s*\(Q\d+\)/i, "").trim();
+
 let scrapedClasses: ScrapedClass[] = [];
 try {
     const scrapedPath = path.resolve("scraper", "detailed-grades.json");
@@ -95,7 +98,7 @@ const missingAssignments = missingAssignmentsData.missing_assignments?.map(
         return {
             assignment: assignment.assignment_name,
             className: assignment.class_name,
-            due: assignment.due_date,
+            due: normalizeMissingDate(assignment.due_date),
             maxPoints: Number.isFinite(maxPoints) ? maxPoints : 0,
             classGrade: classInfo?.grade ?? null,
             classLetterGrade: classInfo?.lettergrade ?? null,

@@ -296,14 +296,19 @@ async function scrapeGrades(username, password) {
                             // Skip rows that don't have a date pattern (should have "/" or "Q")
                             if (!date.match(/\d+\/\d+\/\d+/) && !date.includes('Q')) return;
 
+                            const normalizedDate = date
+                                .replace(/\u00a0/g, ' ')
+                                .replace(/\s*\(Q\d+\)/i, '')
+                                .trim();
+
                             // Create a unique key to check for duplicates
-                            const uniqueKey = `${date}|${className}|${assignmentName}`;
+                            const uniqueKey = `${normalizedDate}|${className}|${assignmentName}`;
 
                             // Only add if we haven't seen this exact assignment before
                             if (!seen.has(uniqueKey)) {
                                 seen.add(uniqueKey);
                                 const assignment = {
-                                    due_date: date,
+                                    due_date: normalizedDate,
                                     assignment_name: assignmentName,
                                     class_name: className,
                                     teacher: teacher
