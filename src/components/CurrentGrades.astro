@@ -296,7 +296,7 @@ function getGradeColor(grade: number): string {
                     <div id="missing-quest-current-grade" class="grade-badge"></div>
                 </div>
                 <div class="bg-[#111] p-3 border-[2px] border-[#00ff00] text-center">
-                    <div class="text-[#aaa] uppercase mb-2">Projected (50%)</div>
+                    <div class="text-[#aaa] uppercase mb-2">Projected (100%)</div>
                     <div id="missing-quest-projected-grade" class="grade-badge"></div>
                 </div>
                 <div class="bg-[#111] p-3 border-[2px] border-[#555] text-center">
@@ -382,7 +382,7 @@ function getGradeColor(grade: number): string {
                 assumptionEl.textContent = "No grade data available for this class.";
             }
         } else {
-            const scoreEarned = Math.round(quest.maxPoints * 0.5 * 10) / 10;
+            const scoreEarned = quest.maxPoints;
             const currentEarned = hasPoints
                 ? quest.classPoints.earned
                 : (quest.classGrade / 100) * 100;
@@ -416,10 +416,9 @@ function getGradeColor(grade: number): string {
                 deltaEl.style.color = deltaColor;
             }
             if (assumptionEl) {
-                const percent = Math.round((scoreEarned / quest.maxPoints) * 100);
                 assumptionEl.textContent = hasPoints
-                    ? `Based on ${Math.round(currentEarned)}/${Math.round(currentPossible)} points. Assumes ${scoreEarned}/${quest.maxPoints} (${percent}%).`
-                    : `Estimate treats current grade as 100 points. Assumes ${scoreEarned}/${quest.maxPoints} (${percent}%).`;
+                    ? `Based on ${Math.round(currentEarned)}/${Math.round(currentPossible)} points. Assumes ${scoreEarned}/${quest.maxPoints} (100%).`
+                    : `Estimate treats current grade as 100 points. Assumes ${scoreEarned}/${quest.maxPoints} (100%).`;
             }
         }
 
