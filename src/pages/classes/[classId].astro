@@ -65,11 +65,14 @@ function toAssignment(
   classInfo: Class
 ): Assignment {
   const maxPoints = Number.isFinite(scraped.totalPoints) ? scraped.totalPoints : 0;
+  const dueDate = scraped.dueDate ?? "N/A";
+  const isMissing = !scraped.graded && maxPoints > 0 && isPastDue(dueDate);
   const hasScore = scraped.graded && maxPoints > 0;
   const percentage = hasScore
     ? Math.round((scraped.earnedPoints / maxPoints) * 10000) / 100
+    : isMissing
+    ? 0
     : null;
-  const dueDate = scraped.dueDate ?? "N/A";
   const idParts = [classInfo.class_id || classInfo.period, scraped.name, dueDate];
 
   return {
@@ -77,10 +80,10 @@ function toAssignment(
     name: scraped.name,
     category: "Scraped",
     dueDate,
-    score: hasScore ? scraped.earnedPoints : null,
+    score: hasScore ? scraped.earnedPoints : isMissing ? 0 : null,
     maxPoints,
     percentage,
-    status: hasScore ? "graded" : "pending",
+    status: hasScore ? "graded" : isMissing ? "missing" : "pending",
   };
 }
 
@@ -100,9 +103,55 @@ function getGradeColor(grade: number): string {
   return "grade-f";
 }
 
+function parseDueDate(value: string): Date | null {
+  const match = value.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
+  if (!match) return null;
+  const month = Number(match[1]);
+  const day = Number(match[2]);
+  const year = Number(match[3]);
+  if (!month || !day || !year) return null;
+  const date = new Date(year, month - 1, day);
+  return Number.isNaN(date.getTime()) ? null : date;
+}
+
+function isPastDue(value: string): boolean {
+  const parsed = parseDueDate(value);
+  if (!parsed) return false;
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  return parsed.getTime() <= today.getTime();
+}
+
+function normalizeAssignments(items: Assignment[]): Assignment[] {
+  return items.map((assignment) => {
+    const inferredStatus =
+      assignment.status ?? (assignment.score !== null ? "graded" : "pending");
+    const isMissing =
+      (inferredStatus === "missing" ||
+        (inferredStatus === "pending" &&
+          assignment.maxPoints > 0 &&
+          isPastDue(assignment.dueDate))) &&
+      assignment.maxPoints > 0;
+
+    if (!isMissing) {
+      return { ...assignment, status: inferredStatus };
+    }
+
+    return {
+      ...assignment,
+      status: "missing",
+      score: assignment.score ?? 0,
+      percentage: assignment.percentage ?? 0,
+    };
+  });
+}
+
 function getScoreDisplay(assignment: Assignment): string {
+  if (assignment.status === "missing" && assignment.maxPoints > 0) {
+    return `0/${assignment.maxPoints}`;
+  }
   if (assignment.score === null) {
-    return "MISSING";
+    return "PENDING";
   }
   return `${assignment.score}/${assignment.maxPoints}`;
 }
@@ -114,9 +163,11 @@ function getPercentageDisplay(assignment: Assignment): string {
   return `${Math.round(assignment.percentage)}%`;
 }
 
-const assignments = scrapedAssignmentRows.length > 0
-  ? scrapedAssignmentRows
-  : classInfo.assignments || [];
+const assignments = normalizeAssignments(
+  scrapedAssignmentRows.length > 0
+    ? scrapedAssignmentRows
+    : classInfo.assignments || []
+);
 const hasAssignments = assignments.length > 0;
 const classInfoWithAssignments = { ...classInfo, assignments };
 ---

@@ -92,8 +92,19 @@ export function calculateWithAssignments(
   hypothetical: HypotheticalAssignment,
   currentGrade: number
 ): GradeImpactResult {
-  // Filter to graded assignments only (skip missing/pending)
-  const gradedAssignments = assignments.filter(
+  const normalizedAssignments = assignments.map((assignment) => {
+    if (assignment.status === "missing" && assignment.maxPoints > 0) {
+      return {
+        ...assignment,
+        score: assignment.score ?? 0,
+        percentage: assignment.percentage ?? 0,
+      };
+    }
+    return assignment;
+  });
+
+  // Filter to graded assignments only (skip missing/pending unless normalized)
+  const gradedAssignments = normalizedAssignments.filter(
     (a) => a.score !== null && a.percentage !== null && a.maxPoints > 0
   );
 
