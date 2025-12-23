@@ -12,6 +12,7 @@
 - Grade calculators now render a calculation breakdown: current totals, hypothetical add, and projected totals, using new total fields from gradeCalculator.ts in both class and /calculator views.
 - Class assignments normalize past-due pending items as missing with 0/total and include them in calculator totals.
 - Assignment log now uses click-to-view impact modal with a 100% projection, replacing simulate checkboxes.
+- Assignment score display shows 0/total when max points are known, including pending items.
 - Missing.Quests cards on the home page open a modal showing projected class grade if the assignment is turned in at 100%, using scraped class points when available.
 - new.astro now renders missing assignments data for layout preview.
 - Missing.Quests modal now sets aria-hidden/aria-describedby and restores focus on close with a basic focus trap.

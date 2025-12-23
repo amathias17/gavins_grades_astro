@@ -147,7 +147,7 @@ function normalizeAssignments(items: Assignment[]): Assignment[] {
 }
 
 function getScoreDisplay(assignment: Assignment): string {
-  if (assignment.status === "missing" && assignment.maxPoints > 0) {
+  if (assignment.maxPoints > 0 && (assignment.score === null || assignment.status !== "graded")) {
     return `0/${assignment.maxPoints}`;
   }
   if (assignment.score === null) {
