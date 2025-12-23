@@ -17,13 +17,27 @@ const metadata = {
     last_updated: gradesData.metadata.last_updated,
 };
 
+const normalizeClassName = (value: string): string =>
+    value.trim().toLowerCase().replace(/[^a-z0-9]+/g, " ");
+const classLookup = new Map(
+    data.map((entry) => [normalizeClassName(entry.class), entry]),
+);
+
 const missingAssignments = missingAssignmentsData.missing_assignments?.map(
-    (assignment) => ({
-        assignment: assignment.assignment_name,
-        class: assignment.class_name,
-        due: assignment.due_date,
-        max_points: assignment.max_points,
-    }),
+    (assignment) => {
+        const classKey = normalizeClassName(assignment.class_name);
+        const classInfo = classLookup.get(classKey);
+        const maxPoints = Number(assignment.max_points);
+        return {
+            assignment: assignment.assignment_name,
+            className: assignment.class_name,
+            due: assignment.due_date,
+            maxPoints: Number.isFinite(maxPoints) ? maxPoints : 0,
+            classGrade: classInfo?.grade ?? null,
+            classLetterGrade: classInfo?.lettergrade ?? null,
+            classPeriod: classInfo?.period ?? null,
+        };
+    },
 ) ?? [];
 const missingAssignmentsCount = missingAssignments.length;
 
@@ -142,19 +156,25 @@ function getGradeColor(grade: number): string {
                         <div class="mb-8 ">🤘🤘🤘🤘 <span class="text-green-500 uppercase">NO</span> MISSING ASSIGNMENTS 🤘🤘🤘🤘</div>
                     </div>
                 ) : (
-                    missingAssignments.map((a) => (
-                        <div class="bg-[#000] p-[15px] mb-[12px] border-[3px] border-[#00ffff] flex items-center gap-[15px]">
+                    missingAssignments.map((a, index) => (
+                        <button
+                            type="button"
+                            class="missing-quest-button w-full text-left bg-[#000] p-[15px] mb-[12px] border-[3px] border-[#00ffff] flex items-center gap-[15px] hover:border-[#00ff00] hover:shadow-[0_0_10px_rgba(0,255,0,0.3)] transition-all"
+                            data-quest-index={index}
+                            aria-haspopup="dialog"
+                            aria-label={`Show grade impact for ${a.assignment} in ${a.className}`}
+                        >
                             <div class="text-[1.5em] flex-shrink-0">👎</div>
                             <div class="flex-[1]">
                                 <strong class="text-[0.5em] text-[#fff] block mb-[8px] uppercase">
                                     {a.assignment}
                                 </strong>
                                 <p class="text-[0.4em] text-[#aaa] uppercase">
-                                    {a.class} - DUE: {a.due}
+                                    {a.className} - DUE: {a.due}
                                 </p>
                             </div>
-                            <div class="quest-reward">+{a.max_points} XP</div>
-                        </div>
+                            <div class="quest-reward">+{a.maxPoints} XP</div>
+                        </button>
                     ))
                 )
             }
@@ -162,3 +182,200 @@ function getGradeColor(grade: number): string {
 
     </div>
 </section>
+
+<!-- Missing Quest Impact Modal -->
+<div
+    id="missing-quest-modal"
+    class="fixed inset-0 bg-black/80 flex items-center justify-center p-4 hidden"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="missing-quest-title"
+>
+    <div class="w-full max-w-xl bg-[#000] border-4 border-solid border-white p-5 shadow-[0_0_0_4px_#000,0_0_0_8px_#fff,8px_8px_0_8px_rgba(255,255,255,0.3)]">
+        <div class="flex items-center justify-between gap-4 mb-4 pb-4 border-b-[3px] border-b-[#555] border-dashed">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 flex items-center justify-center text-[1em] border-[3px] border-solid border-[#00ff00] bg-[#000]">
+                    dY"S
+                </div>
+                <div>
+                    <div id="missing-quest-title" class="text-[0.7em] text-[#00ff00] uppercase">
+                        MISSING QUEST IMPACT
+                    </div>
+                    <div id="missing-quest-assignment" class="text-[0.55em] text-white uppercase mt-1"></div>
+                </div>
+            </div>
+            <button
+                type="button"
+                id="missing-quest-close"
+                class="text-[0.6em] uppercase text-white border-2 border-white px-3 py-2 hover:bg-[#1a1a1a] transition-colors"
+            >
+                Close
+            </button>
+        </div>
+
+        <div class="space-y-4">
+            <div class="bg-[#111] p-4 border-[2px] border-[#555]">
+                <div class="text-[0.4em] text-[#aaa] uppercase mb-2">Quest Details</div>
+                <div class="text-[0.5em] text-white">
+                    <span id="missing-quest-class"></span>
+                    <span class="text-[#777]"> | </span>
+                    Due: <span id="missing-quest-due"></span>
+                    <span class="text-[#777]"> | </span>
+                    Worth: <span id="missing-quest-max"></span> pts
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-[0.5em]">
+                <div class="bg-[#111] p-3 border-[2px] border-[#555] text-center">
+                    <div class="text-[#aaa] uppercase mb-2">Current Grade</div>
+                    <div id="missing-quest-current-grade" class="grade-badge"></div>
+                </div>
+                <div class="bg-[#111] p-3 border-[2px] border-[#00ff00] text-center">
+                    <div class="text-[#aaa] uppercase mb-2">Projected (50%)</div>
+                    <div id="missing-quest-projected-grade" class="grade-badge"></div>
+                </div>
+                <div class="bg-[#111] p-3 border-[2px] border-[#555] text-center">
+                    <div class="text-[#aaa] uppercase mb-2">Change</div>
+                    <div id="missing-quest-delta" class="text-[1.2em] font-bold"></div>
+                </div>
+            </div>
+
+            <div class="text-[0.4em] text-[#777] uppercase">
+                <span id="missing-quest-assumption">
+                    Estimate based on current grade treated as 100 points.
+                </span>
+            </div>
+
+            <a
+                id="missing-quest-class-link"
+                class="inline-flex items-center gap-2 text-[#00ff00] hover:text-[#00cc00] transition-colors text-[0.5em] uppercase border-2 border-[#00ff00] hover:border-[#00cc00] px-4 py-2 bg-[#000] hidden"
+                href="/"
+            >
+                View Class Details
+            </a>
+        </div>
+    </div>
+</div>
+
+<script type="module" define:vars={{ missingQuestsData: JSON.stringify(missingAssignments) }}>
+    const quests = JSON.parse(missingQuestsData);
+    const modal = document.getElementById("missing-quest-modal");
+    const closeButton = document.getElementById("missing-quest-close");
+    const assignmentEl = document.getElementById("missing-quest-assignment");
+    const classEl = document.getElementById("missing-quest-class");
+    const dueEl = document.getElementById("missing-quest-due");
+    const maxEl = document.getElementById("missing-quest-max");
+    const currentGradeEl = document.getElementById("missing-quest-current-grade");
+    const projectedGradeEl = document.getElementById("missing-quest-projected-grade");
+    const deltaEl = document.getElementById("missing-quest-delta");
+    const assumptionEl = document.getElementById("missing-quest-assumption");
+    const classLink = document.getElementById("missing-quest-class-link");
+
+    function getGradeColorClass(grade) {
+        if (grade >= 90) return "grade-a";
+        if (grade >= 80) return "grade-b";
+        if (grade >= 70) return "grade-c";
+        if (grade >= 60) return "grade-d";
+        return "grade-f";
+    }
+
+    function getLetterGrade(grade) {
+        if (grade >= 90) return "A";
+        if (grade >= 80) return "B";
+        if (grade >= 70) return "C";
+        if (grade >= 60) return "D";
+        return "F";
+    }
+
+    function openModal(index) {
+        const quest = quests[index];
+        if (!quest || !modal) return;
+
+        if (assignmentEl) assignmentEl.textContent = quest.assignment;
+        if (classEl) classEl.textContent = quest.className;
+        if (dueEl) dueEl.textContent = quest.due;
+        if (maxEl) maxEl.textContent = quest.maxPoints ? quest.maxPoints.toString() : "N/A";
+
+        if (classLink) {
+            if (quest.classPeriod) {
+                classLink.href = `/classes/${quest.classPeriod}`;
+                classLink.classList.remove("hidden");
+            } else {
+                classLink.classList.add("hidden");
+            }
+        }
+
+        if (
+            quest.classGrade === null ||
+            !Number.isFinite(quest.classGrade) ||
+            quest.maxPoints <= 0
+        ) {
+            if (currentGradeEl) currentGradeEl.textContent = "N/A";
+            if (projectedGradeEl) projectedGradeEl.textContent = "N/A";
+            if (deltaEl) deltaEl.textContent = "N/A";
+            if (assumptionEl) {
+                assumptionEl.textContent = "No grade data available for this class.";
+            }
+        } else {
+            const scoreEarned = Math.round(quest.maxPoints * 0.5 * 10) / 10;
+            const currentPoints = quest.classGrade;
+            const currentPossible = 100;
+            const projectedTotalEarned = currentPoints + scoreEarned;
+            const projectedTotalPossible = currentPossible + quest.maxPoints;
+            const projectedGrade = Math.min(
+                100,
+                (projectedTotalEarned / projectedTotalPossible) * 100,
+            );
+            const delta = projectedGrade - quest.classGrade;
+            const isImprovement = delta > 0.5;
+            const isDecline = delta < -0.5;
+            const deltaSign = delta >= 0 ? "+" : "";
+            const deltaColor = isImprovement ? "#01BC61" : isDecline ? "#E60A18" : "#aaa";
+            const deltaIcon = isImprovement ? "ƒ-ı" : isDecline ? "ƒ-¬" : "ƒ-?";
+
+            if (currentGradeEl) {
+                currentGradeEl.textContent = `${getLetterGrade(quest.classGrade)} ${quest.classGrade.toFixed(1)}%`;
+                currentGradeEl.className = `grade-badge ${getGradeColorClass(quest.classGrade)}`;
+            }
+            if (projectedGradeEl) {
+                projectedGradeEl.textContent = `${getLetterGrade(projectedGrade)} ${projectedGrade.toFixed(1)}%`;
+                projectedGradeEl.className = `grade-badge ${getGradeColorClass(projectedGrade)}`;
+            }
+            if (deltaEl) {
+                deltaEl.textContent = `${deltaIcon} ${deltaSign}${delta.toFixed(1)}%`;
+                deltaEl.style.color = deltaColor;
+            }
+            if (assumptionEl) {
+                assumptionEl.textContent = `Assumes ${scoreEarned}/${quest.maxPoints} (${Math.round((scoreEarned / quest.maxPoints) * 100)}%).`;
+            }
+        }
+
+        modal.classList.remove("hidden");
+    }
+
+    function closeModal() {
+        if (!modal) return;
+        modal.classList.add("hidden");
+    }
+
+    document.querySelectorAll(".missing-quest-button").forEach((button) => {
+        button.addEventListener("click", () => {
+            const index = Number(button.dataset.questIndex);
+            if (Number.isNaN(index)) return;
+            openModal(index);
+        });
+    });
+
+    closeButton?.addEventListener("click", closeModal);
+    modal?.addEventListener("click", (event) => {
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            closeModal();
+        }
+    });
+</script>
