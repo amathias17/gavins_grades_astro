@@ -397,13 +397,11 @@ const classInfoWithAssignments = { ...classInfo, assignments };
     </div>
   </div>
 
-  <script define:vars={{ assignmentsData: JSON.stringify(assignments) }}>
-    import type { Assignment } from "../../types/grades";
-
+  <script define:vars={{ assignmentsData: JSON.stringify(assignments) }} data-astro-rerun>
     // Wait for DOM to be fully ready
     function initCheckboxSimulation() {
       // Get assignments data from Astro
-      const assignments: Assignment[] = JSON.parse(assignmentsData);
+      const assignments = JSON.parse(assignmentsData);
       const calculatorElement = document.getElementById('grade-calculator');
       
       if (!calculatorElement) {
@@ -412,10 +410,10 @@ const classInfoWithAssignments = { ...classInfo, assignments };
       }
 
     // Track checked assignment IDs
-    const checkedAssignmentIds = new Set<string>();
+    const checkedAssignmentIds = new Set();
 
       // Helper function to simulate checked assignments at 100%
-      function simulateAssignments(originalAssignments: Assignment[], checkedIds: Set<string>): Assignment[] {
+      function simulateAssignments(originalAssignments, checkedIds) {
       return originalAssignments.map((assignment) => {
         // If this assignment is checked and is missing/pending, simulate it at 100%
         if (checkedIds.has(assignment.id) && (assignment.status === 'missing' || assignment.status === 'pending') && assignment.maxPoints > 0) {
@@ -423,7 +421,7 @@ const classInfoWithAssignments = { ...classInfo, assignments };
             ...assignment,
             score: assignment.maxPoints,
             percentage: 100,
-            status: 'graded' as const,
+            status: 'graded',
           };
         }
         return assignment;
@@ -471,9 +469,14 @@ const classInfoWithAssignments = { ...classInfo, assignments };
       
       // Always try to update calculator results if they exist
       const resultsContainer = document.getElementById('results-container');
-      const calculateBtn = document.getElementById('calculate-btn') as HTMLButtonElement;
+      const calculateBtn = document.getElementById('calculate-btn');
       
-      if (resultsContainer && !resultsContainer.classList.contains('hidden') && calculateBtn && !calculateBtn.disabled) {
+      if (
+        resultsContainer &&
+        !resultsContainer.classList.contains('hidden') &&
+        calculateBtn instanceof HTMLButtonElement &&
+        !calculateBtn.disabled
+      ) {
         // If calculator has results, trigger recalculation to update them
         calculateBtn.click();
       } else if (simulatedGrade !== null && checkedAssignmentIds.size > 0) {
@@ -547,17 +550,26 @@ const classInfoWithAssignments = { ...classInfo, assignments };
         console.log(`Found ${checkboxes.length} checkboxes to setup`);
         
         checkboxes.forEach((checkbox) => {
-          const checkboxElement = checkbox as HTMLInputElement;
+          const checkboxElement = checkbox;
           const assignmentId = checkboxElement.dataset.assignmentId;
-          
+
           if (!assignmentId) {
             console.error('No assignment ID found on checkbox');
             return;
           }
+
+          if (checkboxElement.dataset.listenerAttached === 'true') {
+            return;
+          }
+
+          checkboxElement.dataset.listenerAttached = 'true';
           
           // Add event listener
           checkboxElement.addEventListener('change', (event) => {
-            const target = event.target as HTMLInputElement;
+            const target = event.target;
+            if (!(target instanceof HTMLInputElement)) {
+              return;
+            }
             const id = target.dataset.assignmentId;
             
             console.log('Checkbox changed:', id, target.checked);

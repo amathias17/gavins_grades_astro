@@ -8,6 +8,7 @@
 - Components in src/components/ (CurrentGrades.astro, GradeCalculator.astro, etc.); utilities in src/utils/gradeCalculator.ts; data in src/data/grades.json and src/data/missing_assignments.json (class_id may be absent; use period). Encoding artifacts exist; do not "clean" without source confirmation.
 - Grade impact calculators now show a calculation breakdown with current totals, hypothetical add, and projected totals on class pages and /calculator.
 - Class assignments treat past-due pending items as missing, display 0/total, and include them in calculator totals.
+- Missing assignment checkbox simulation runs in an inline script with data-astro-rerun to rebind after view transitions.
 - Missing.Quests items on the home page open a modal with a 100% score impact estimate that uses scraped class points when available.
 - Prototype page src/pages/new.astro now renders missing assignments data for visual review.
 - Missing.Quests modal includes aria-describedby, focus handling, and basic focus trap for accessibility.
