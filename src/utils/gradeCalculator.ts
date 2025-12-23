@@ -90,7 +90,7 @@ export function calculateWithAssignments(
 ): GradeImpactResult {
   // Filter to graded assignments only (skip missing/pending)
   const gradedAssignments = assignments.filter(
-    (a) => a.score !== null && a.percentage !== null
+    (a) => a.score !== null && a.percentage !== null && a.maxPoints > 0
   );
 
   if (gradedAssignments.length === 0) {
@@ -108,9 +108,27 @@ export function calculateWithAssignments(
     0
   );
 
+  // Safety check: ensure we don't divide by zero
+  if (currentTotalPossible === 0) {
+    // Fall back to simple calculation if no valid assignments
+    return calculateWithoutAssignments(currentGrade, hypothetical);
+  }
+
+  // Recalculate current grade from actual assignments for accuracy
+  // This ensures the calculator uses the same basis as the projected grade
+  const calculatedCurrentGrade = Math.min(
+    100,
+    (currentTotalEarned / currentTotalPossible) * 100
+  );
+
   // Add hypothetical assignment
   const projectedTotalEarned = currentTotalEarned + hypothetical.scoreEarned;
   const projectedTotalPossible = currentTotalPossible + hypothetical.maxPoints;
+
+  // Safety check: ensure projected total is valid
+  if (projectedTotalPossible === 0) {
+    throw new Error("Cannot calculate projected grade: total possible points is zero");
+  }
 
   // Calculate projected grade (cap at 100%)
   const projectedGrade = Math.min(
@@ -118,13 +136,14 @@ export function calculateWithAssignments(
     (projectedTotalEarned / projectedTotalPossible) * 100
   );
 
-  const delta = projectedGrade - currentGrade;
+  // Use calculated current grade for delta calculation to ensure consistency
+  const delta = projectedGrade - calculatedCurrentGrade;
 
   return {
-    currentGrade,
+    currentGrade: Math.round(calculatedCurrentGrade * 100) / 100, // Use calculated grade for consistency
     projectedGrade: Math.round(projectedGrade * 100) / 100, // Round to 2 decimals
     delta: Math.round(delta * 100) / 100,
-    currentLetterGrade: getLetterGrade(currentGrade),
+    currentLetterGrade: getLetterGrade(calculatedCurrentGrade),
     projectedLetterGrade: getLetterGrade(projectedGrade),
     isImprovement: delta > 0.5, // Threshold to avoid showing insignificant changes
     isDecline: delta < -0.5,
