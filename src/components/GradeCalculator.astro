@@ -42,7 +42,7 @@ const dataProps = {
   </div>
 
   <!-- Input Form -->
-  <form id="calculator-form" class="mb-5" aria-label="Grade impact calculator">
+  <form id="calculator-form" class="mb-5" aria-label="Grade impact calculator" novalidate>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
       <!-- Score Earned Input -->
       <div class="bg-[#000] p-4 border-[3px] border-solid border-[#555]">
@@ -153,6 +153,27 @@ const dataProps = {
         </div>
         <div id="result-progress-label" class="absolute inset-0 flex items-center justify-center text-[0.5em] font-bold z-10"></div>
       </div>
+
+      <!-- Calculation Breakdown -->
+      <div class="bg-[#111] p-4 border-[2px] border-[#555] mt-4">
+        <div class="text-[0.4em] text-[#aaa] uppercase mb-3">Calculation Breakdown</div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-[0.5em] text-[#ddd]">
+          <div>
+            Current: <span id="result-current-earned"></span> /
+            <span id="result-current-possible"></span>
+            = <span id="result-current-grade"></span>
+          </div>
+          <div>
+            Hypothetical: +<span id="result-hypothetical-earned"></span> /
+            +<span id="result-hypothetical-possible"></span>
+          </div>
+          <div class="md:col-span-2">
+            Projected: <span id="result-projected-earned"></span> /
+            <span id="result-projected-possible"></span>
+            = <span id="result-projected-grade"></span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -180,6 +201,14 @@ const dataProps = {
   const resultDelta = document.getElementById("result-delta") as HTMLSpanElement;
   const resultProgress = document.getElementById("result-progress") as HTMLDivElement;
   const resultProgressLabel = document.getElementById("result-progress-label") as HTMLDivElement;
+  const resultCurrentEarned = document.getElementById("result-current-earned") as HTMLSpanElement;
+  const resultCurrentPossible = document.getElementById("result-current-possible") as HTMLSpanElement;
+  const resultCurrentGrade = document.getElementById("result-current-grade") as HTMLSpanElement;
+  const resultHypotheticalEarned = document.getElementById("result-hypothetical-earned") as HTMLSpanElement;
+  const resultHypotheticalPossible = document.getElementById("result-hypothetical-possible") as HTMLSpanElement;
+  const resultProjectedEarned = document.getElementById("result-projected-earned") as HTMLSpanElement;
+  const resultProjectedPossible = document.getElementById("result-projected-possible") as HTMLSpanElement;
+  const resultProjectedGrade = document.getElementById("result-projected-grade") as HTMLSpanElement;
 
   if (!calculator) throw new Error("Calculator element not found");
 
@@ -216,8 +245,12 @@ const dataProps = {
     resultsContainer.classList.add("hidden");
   }
 
+  function formatPoints(value: number): string {
+    return Number.isInteger(value) ? value.toString() : value.toFixed(1);
+  }
+
   // Display calculation results
-  function displayResults(result: GradeImpactResult) {
+  function displayResults(result: GradeImpactResult, hypothetical: { scoreEarned: number; maxPoints: number }) {
     // Current grade
     resultCurrentLetter.textContent = result.currentLetterGrade;
     resultCurrentLetter.className = `grade-badge ${getGradeColorClass(result.currentGrade)} text-[0.7em]`;
@@ -250,6 +283,28 @@ const dataProps = {
     resultProgress.style.width = `${Math.min(100, result.projectedGrade)}%`;
 
     resultProgressLabel.textContent = `${Math.round(result.projectedGrade)}%`;
+
+    if (
+      resultCurrentEarned &&
+      resultCurrentPossible &&
+      resultCurrentGrade &&
+      resultHypotheticalEarned &&
+      resultHypotheticalPossible &&
+      resultProjectedEarned &&
+      resultProjectedPossible &&
+      resultProjectedGrade
+    ) {
+      resultCurrentEarned.textContent = formatPoints(result.currentTotalEarned);
+      resultCurrentPossible.textContent = formatPoints(result.currentTotalPossible);
+      resultCurrentGrade.textContent = `${result.currentGrade.toFixed(1)}%`;
+
+      resultHypotheticalEarned.textContent = formatPoints(hypothetical.scoreEarned);
+      resultHypotheticalPossible.textContent = formatPoints(hypothetical.maxPoints);
+
+      resultProjectedEarned.textContent = formatPoints(result.projectedTotalEarned);
+      resultProjectedPossible.textContent = formatPoints(result.projectedTotalPossible);
+      resultProjectedGrade.textContent = `${result.projectedGrade.toFixed(1)}%`;
+    }
 
     // Show results with fade-in
     resultsContainer.classList.remove("hidden");
@@ -304,7 +359,7 @@ const dataProps = {
         currentAssignments
       );
 
-      displayResults(result);
+      displayResults(result, { scoreEarned, maxPoints });
     } catch (error) {
       const errorMessage = error instanceof Error ? error.message : "Invalid input";
       showError(errorMessage);

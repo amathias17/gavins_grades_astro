@@ -18,6 +18,10 @@ export interface GradeImpactResult {
   currentLetterGrade: string;
   isImprovement: boolean;
   isDecline: boolean;
+  currentTotalEarned: number;
+  currentTotalPossible: number;
+  projectedTotalEarned: number;
+  projectedTotalPossible: number;
 }
 
 /**
@@ -147,6 +151,10 @@ export function calculateWithAssignments(
     projectedLetterGrade: getLetterGrade(projectedGrade),
     isImprovement: delta > 0.5, // Threshold to avoid showing insignificant changes
     isDecline: delta < -0.5,
+    currentTotalEarned,
+    currentTotalPossible,
+    projectedTotalEarned,
+    projectedTotalPossible,
   };
 }
 
@@ -185,6 +193,10 @@ export function calculateWithoutAssignments(
     projectedLetterGrade: getLetterGrade(projectedGrade),
     isImprovement: delta > 0.5,
     isDecline: delta < -0.5,
+    currentTotalEarned: currentPoints,
+    currentTotalPossible: currentPossible,
+    projectedTotalEarned,
+    projectedTotalPossible,
   };
 }
 

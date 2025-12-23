@@ -142,6 +142,10 @@ test.describe("Grade Impact Calculator Dashboard", () => {
     await expect(page.locator("#result-projected-letter")).toBeVisible();
     await expect(page.locator("#result-projected-percent")).toBeVisible();
     await expect(page.locator("#result-delta")).toBeVisible();
+    await expect(page.locator("#result-current-earned")).toBeVisible();
+    await expect(page.locator("#result-current-possible")).toBeVisible();
+    await expect(page.locator("#result-projected-earned")).toBeVisible();
+    await expect(page.locator("#result-projected-possible")).toBeVisible();
 
     // Progress bar should be visible and have width
     const progressBar = page.locator("#result-progress");

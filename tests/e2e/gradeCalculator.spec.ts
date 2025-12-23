@@ -41,6 +41,10 @@ test.describe("Grade Impact Calculator", () => {
     await expect(page.locator("#result-current-percent")).toBeVisible();
     await expect(page.locator("#result-projected-percent")).toBeVisible();
     await expect(page.locator("#result-delta")).toBeVisible();
+    await expect(page.locator("#result-current-earned")).toBeVisible();
+    await expect(page.locator("#result-current-possible")).toBeVisible();
+    await expect(page.locator("#result-projected-earned")).toBeVisible();
+    await expect(page.locator("#result-projected-possible")).toBeVisible();
 
     // Verify current grade shows (English 10 should be around 79%)
     const currentGrade = await page.locator("#result-current-percent").textContent();

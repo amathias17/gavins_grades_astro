@@ -325,6 +325,31 @@ function getGradeColor(grade: number): string {
           </div>
         </div>
 
+        <!-- Calculation Breakdown -->
+        <div
+          class="shadow-[0_0_0_4px_#000,0_0_0_8px_#fff,8px_8px_0_8px_rgba(255,255,255,0.3)] relative p-5 border-4 border-solid border-white card"
+        >
+          <div class="text-[0.5em] text-[#aaa] uppercase mb-3 text-center">
+            Calculation Breakdown
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-[0.5em] text-[#ddd]">
+            <div>
+              Current: <span id="result-current-earned"></span> /
+              <span id="result-current-possible"></span>
+              = <span id="result-current-grade"></span>
+            </div>
+            <div>
+              Hypothetical: +<span id="result-hypothetical-earned"></span> /
+              +<span id="result-hypothetical-possible"></span>
+            </div>
+            <div class="md:col-span-2">
+              Projected: <span id="result-projected-earned"></span> /
+              <span id="result-projected-possible"></span>
+              = <span id="result-projected-grade"></span>
+            </div>
+          </div>
+        </div>
+
         <!-- Assumptions Card (Collapsible) -->
         <details
           class="shadow-[0_0_0_4px_#000,0_0_0_8px_#fff,8px_8px_0_8px_rgba(255,255,255,0.3)] relative border-4 border-solid border-white card"
@@ -398,6 +423,14 @@ function getGradeColor(grade: number): string {
   const resultDeltaLabel = document.getElementById("result-delta-label");
   const resultProgress = document.getElementById("result-progress");
   const resultProgressLabel = document.getElementById("result-progress-label");
+  const resultCurrentEarned = document.getElementById("result-current-earned");
+  const resultCurrentPossible = document.getElementById("result-current-possible");
+  const resultCurrentGrade = document.getElementById("result-current-grade");
+  const resultHypotheticalEarned = document.getElementById("result-hypothetical-earned");
+  const resultHypotheticalPossible = document.getElementById("result-hypothetical-possible");
+  const resultProjectedEarned = document.getElementById("result-projected-earned");
+  const resultProjectedPossible = document.getElementById("result-projected-possible");
+  const resultProjectedGrade = document.getElementById("result-projected-grade");
 
   // State
   let selectedClass: Class | null = null;
@@ -435,6 +468,10 @@ function getGradeColor(grade: number): string {
     announcement.textContent = message;
     document.body.appendChild(announcement);
     setTimeout(() => document.body.removeChild(announcement), 1000);
+  }
+
+  function formatPoints(value: number): string {
+    return Number.isInteger(value) ? value.toString() : value.toFixed(1);
   }
 
   // Event handlers
@@ -493,7 +530,7 @@ function getGradeColor(grade: number): string {
         selectedClass.assignments
       );
 
-      displayResults(result);
+      displayResults(result, { scoreEarned, maxPoints });
     } catch (error) {
       const errorMessage =
         error instanceof Error ? error.message : "Invalid input";
@@ -501,7 +538,10 @@ function getGradeColor(grade: number): string {
     }
   }
 
-  function displayResults(result: any) {
+  function displayResults(
+    result: any,
+    hypothetical: { scoreEarned: number; maxPoints: number }
+  ) {
     // Hide empty state, show results
     emptyState?.classList.add("hidden");
     resultsDisplay?.classList.remove("hidden");
@@ -561,6 +601,28 @@ function getGradeColor(grade: number): string {
       resultProgress.style.width = `${Math.min(100, result.projectedGrade)}%`;
 
       resultProgressLabel.textContent = `${Math.round(result.projectedGrade)}%`;
+    }
+
+    if (
+      resultCurrentEarned &&
+      resultCurrentPossible &&
+      resultCurrentGrade &&
+      resultHypotheticalEarned &&
+      resultHypotheticalPossible &&
+      resultProjectedEarned &&
+      resultProjectedPossible &&
+      resultProjectedGrade
+    ) {
+      resultCurrentEarned.textContent = formatPoints(result.currentTotalEarned);
+      resultCurrentPossible.textContent = formatPoints(result.currentTotalPossible);
+      resultCurrentGrade.textContent = `${result.currentGrade.toFixed(1)}%`;
+
+      resultHypotheticalEarned.textContent = formatPoints(hypothetical.scoreEarned);
+      resultHypotheticalPossible.textContent = formatPoints(hypothetical.maxPoints);
+
+      resultProjectedEarned.textContent = formatPoints(result.projectedTotalEarned);
+      resultProjectedPossible.textContent = formatPoints(result.projectedTotalPossible);
+      resultProjectedGrade.textContent = `${result.projectedGrade.toFixed(1)}%`;
     }
 
     // Announce to screen readers
