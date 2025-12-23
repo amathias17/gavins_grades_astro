@@ -5,6 +5,7 @@
 - AGENTS.md now states that unavailable MCPs must be explicitly noted, skipped, and replaced with closest local alternatives.
 - Data: src/data/grades.json holds metadata/overall averages/grade_history; class_id may be missing (period used for routing); assignments optional per class. src/data/missing_assignments.json uses key missing_assignments and due_date strings carry encoding artifacts ("A??A??").
 - Routes: / (index.astro) renders CurrentGrades with links to /classes/{period} plus missing assignments card; /classes/[classId].astro builds static paths from class_id or period, embeds GradeCalculator and assignments table with status chips, and pulls scraped assignments from scraper/detailed-grades.json when available (matching by period and normalized class name); /calculator (calculator.astro) is the new 2-column dashboard with class selector, form, and results panels; legacy prototypes live in src/pages/new.astro and old.astro.
+- Routes: /lab (lab.astro) is a dev-only layout lab for visual experiments and is not linked in navigation.
 - Routes: /stats (stats.astro) shows grade history stats with an SVG trend chart and class highlights.
 - Navigation links to /stats are now in the header nav; the home dashboard no longer shows a Stats Room card.
 - Components and utils: gradeCalculator.ts exports pure validation + calculateWithAssignments/calculateWithoutAssignments + getLetterGrade; deltas treated as meaningful only past +/-0.5. GradeCalculator.astro wires dataset props into client script for validation, accessibility messages, progress bar, and reset behavior. CurrentGrades.astro builds cards from grades data and missing_assignments, with Missing.Quests showing a dynamic count. GradeTable and gradeTrends components exist but are commented out on home.
@@ -15,6 +16,7 @@
 - Scraper fix (12/21/2025): extractAssignmentDetails now clicks by data-aid/data-gid instead of index; organizeByClass groups by classId first, yielding 9 separate classes. classIdMap now also attempts assignment row group-child/group-parent mapping with classDesc fallbacks so className/period/teacher can be restored; classId remains a last-resort fallback if mapping fails.
 - Verified scraper output (12/22/2025): detailed-grades.json has 9 classes with names/periods/teachers; class pages match scraped assignments by period.
 - Mobile layout: assignments log table now stacks into labeled cards on small screens using data-label cells; Category column removed.
+- Assignment log percentages display as rounded whole numbers.
 - Commands: npm run dev/build/preview; npx playwright test (installs browsers per playwright.config.ts). Data files include non-ASCII artifacts, so prefer ASCII in new edits.
 
 ## Working Agreement

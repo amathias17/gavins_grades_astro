@@ -3,6 +3,7 @@
 ## Project Structure & Data
 - Astro 5 + Tailwind 4.1 (@tailwindcss/vite); layout in src/layouts/BaseLayout.astro imports src/styles/global.css and retro neon-green/black theme.
 - Pages: src/pages/index.astro (dashboard), src/pages/classes/[classId].astro (per-class + GradeCalculator), src/pages/calculator.astro (dashboard-style calculator), src/pages/stats.astro (grade history stats); legacy prototypes in src/pages/new.astro and src/pages/old.astro.
+- Layout lab lives at src/pages/lab.astro for dev-only visual experiments and is not linked in navigation.
 - Class pages read scraped assignment data from scraper/detailed-grades.json at build time when available, matching by period and normalized class name.
 - Components in src/components/ (CurrentGrades.astro, GradeCalculator.astro, etc.); utilities in src/utils/gradeCalculator.ts; data in src/data/grades.json and src/data/missing_assignments.json (class_id may be absent; use period). Encoding artifacts exist; do not "clean" without source confirmation.
 - CurrentGrades missing quests card shows a dynamic Missing.Quests count sourced from missing_assignments.json.
@@ -22,6 +23,7 @@
 ## Coding Style & UX
 - TypeScript + ESM; avoid any. Reuse BaseLayout, design tokens, and getGradeColor helpers; keep retro border-heavy aesthetic. Prefer small incremental edits (apply_patch); stay ASCII unless the file already uses other characters.
 - Assignments log table uses a mobile card layout at small breakpoints for readability; Category column removed.
+- Assignments log percentage display rounds to whole numbers.
 - Primary navigation lives in src/components/Header.astro with links to Home, Stats Room, and Calculator plus placeholders for future pages.
 
 ## Testing Guidance

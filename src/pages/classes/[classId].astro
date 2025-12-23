@@ -111,7 +111,7 @@ function getPercentageDisplay(assignment: Assignment): string {
   if (assignment.percentage === null) {
     return "0%";
   }
-  return `${assignment.percentage}%`;
+  return `${Math.round(assignment.percentage)}%`;
 }
 
 const assignments = scrapedAssignmentRows.length > 0
@@ -292,7 +292,7 @@ const classInfoWithAssignments = { ...classInfo, assignments };
                     <td class="assignments-cell p-3 text-right" data-label="Percentage">
                       {assignment.percentage !== null ? (
                         <span
-                          class={`grade-badge ${getGradeColor(assignment.percentage)}`}
+                          class={`grade-badge ${getGradeColor(Math.round(assignment.percentage))}`}
                         >
                           {getPercentageDisplay(assignment)}
                         </span>

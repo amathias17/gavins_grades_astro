@@ -1,0 +1,58 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const isDev = import.meta.env.DEV;
+---
+
+<BaseLayout>
+  <div class="max-w-[1400px] mx-auto">
+    <div class="shadow-[0_0_0_4px_#000,0_0_0_8px_#fff,8px_8px_0_8px_rgba(255,255,255,0.3)] relative p-5 border-4 border-solid border-white card mb-8">
+      <div class="flex items-center gap-[15px] mb-5 pb-[15px] border-b-[3px] border-b-[#555] border-dashed">
+        <div class="w-12 h-12 flex items-center justify-center text-[1.2em] border-[3px] border-solid border-[#00ff00] bg-[#000]">
+          LAB
+        </div>
+        <div class="text-[0.7em] text-[#00ff00]">LAYOUT.LAB</div>
+      </div>
+      <div class="text-[0.6em] text-[#aaa] uppercase">
+        Visual layout experiments live here. This page is not linked in nav.
+      </div>
+    </div>
+
+    {!isDev ? (
+      <div class="bg-[#000] p-5 border-[3px] border-solid border-[#555] text-center">
+        <div class="text-[0.6em] text-[#E60A18] uppercase mb-2">
+          Lab disabled outside dev.
+        </div>
+        <div class="text-[0.5em] text-[#aaa]">
+          Run the dev server to use layout experiments.
+        </div>
+      </div>
+    ) : (
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-[#000] p-5 border-[3px] border-solid border-[#555]">
+          <div class="text-[0.5em] text-[#00ff00] uppercase mb-3">
+            Experiment Slot A
+          </div>
+          <div class="text-[0.6em] text-white mb-2">
+            Replace this section with new layout markup.
+          </div>
+          <div class="text-[0.5em] text-[#aaa]">
+            Keep changes scoped to this page.
+          </div>
+        </div>
+
+        <div class="bg-[#000] p-5 border-[3px] border-solid border-[#555]">
+          <div class="text-[0.5em] text-[#00ff00] uppercase mb-3">
+            Experiment Slot B
+          </div>
+          <div class="text-[0.6em] text-white mb-2">
+            Drop in alternative card layouts or grids here.
+          </div>
+          <div class="text-[0.5em] text-[#aaa]">
+            This page is safe to iterate on.
+          </div>
+        </div>
+      </div>
+    )}
+  </div>
+</BaseLayout>
