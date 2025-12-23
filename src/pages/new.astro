@@ -38,57 +38,41 @@ function getGradeColor(grade: number): string {
 ---
 
 <BaseLayout>
-    
-    <div class="grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-5 mb-5">
-        <!-- Current Grades -->
-        <div
-            class="shadow-[0_0_0_4px_#000,0_0_0_8px_#fff,8px_8px_0_8px_rgba(255,255,255,0.3)] relative p-5 border-4 border-solid border-white card"
-        >
-            <div
-                class="flex items-center gap-[15px] mb-5 pb-[15px] border-b-[3px] border-b-[#555] border-dashed"
-            >
-                <div
-                    class="w-12 h-12 flex items-center justify-center text-[1.2em] border-[3px] border-solid border-[#00ff00] bg-[#000] bg-[#000]"
-                >
-                    📚
-                </div>
-                <div class="text-[0.7em] text-[#00ff00]">CURRENT.GRADES - UPDATED {metadata.last_updated}</div>
+    <section class="py-16">
+        <div class="container px-4 mx-auto">
+            <div class="mb-8">
+                <h1 class="text-3xl font-bold font-heading text-white mb-2">
+                    Missing Assignments
+                </h1>
+                <p class="text-gray-300">
+                    Updated {metadata.last_updated}. Total missing: {missingAssignments.length}
+                </p>
             </div>
-            {
-                data.map((i) => (
-                    <div class="mb-[15px] p-[15px] border-[3px] border-solid border-[#555] bg-[#000]">
-                        <div class="flex justify-between items-center flex-wrap gap-2.5 mb-[15px]">
-                            <>
-                                <span class="text-[0.6em] text-white uppercase">
-                                    {i.class} - {i.teacher}
-                                </span>
 
-                                <div class="flex gap-2.5 items-center">
-                                    <span
-                                        class={`grade-badge ${getGradeColor(i.grade)}`}
-                                    >
-                                        {i.lettergrade}
-                                    </span>
-                                    <span
-                                        class={`grade-badge ${getGradeColor(i.grade)}`}
-                                    >
-                                        {i.grade}%
-                                    </span>
-                                </div>
-                            </>
+            {missingAssignments.length === 0 ? (
+                <div class="bg-[#000] border-2 border-white p-6 text-center text-white">
+                    No missing assignments found.
+                </div>
+            ) : (
+                <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                    {missingAssignments.map((item) => (
+                        <div class="bg-[#000] border-2 border-[#00ffff] p-5">
+                            <div class="text-sm uppercase text-[#00ffff] mb-2">
+                                {item.class}
+                            </div>
+                            <div class="text-lg font-bold text-white mb-2">
+                                {item.assignment}
+                            </div>
+                            <div class="text-sm text-gray-300 mb-3">
+                                Due: {item.due}
+                            </div>
+                            <div class="inline-flex items-center gap-2 text-sm uppercase text-white border border-white px-3 py-1">
+                                {item.points} pts
+                            </div>
                         </div>
-                        <div class="w-full h-6 relative overflow-hidden border-[3px] border-solid border-white bg-[#000]">
-                            <div
-                                class={`progress-fill ${getGradeColor(i.grade)} h-full transition-[width] duration-[1s] ease-[steps(20)] relative after:content-[''] after:absolute after:w-1 after:h-full after:animate-[blink_0.5s_step-start_infinite] after:right-0 after:top-0;`}
-                                style={`width: ${i.grade}%`}
-                            />
-                       
-                        </div>
-                    </div>
-                ))
-            }
+                    ))}
+                </div>
+            )}
         </div>
-    </div>
-
-    
+    </section>
 </BaseLayout>
