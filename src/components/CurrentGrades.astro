@@ -1,6 +1,20 @@
 ---
 import gradesData from "../data/grades.json";
 import missingAssignmentsData from "../data/missing_assignments.json";
+import fs from "node:fs/promises";
+import path from "node:path";
+
+type ScrapedAssignment = {
+    earnedPoints: number;
+    totalPoints: number;
+    graded: boolean;
+};
+
+type ScrapedClass = {
+    className: string;
+    period: string;
+    assignments: ScrapedAssignment[];
+};
 
 const data = gradesData.classes.map((classInfo) => ({
     class: classInfo.class_name,
@@ -23,11 +37,61 @@ const classLookup = new Map(
     data.map((entry) => [normalizeClassName(entry.class), entry]),
 );
 
+let scrapedClasses: ScrapedClass[] = [];
+try {
+    const scrapedPath = path.resolve("scraper", "detailed-grades.json");
+    const raw = await fs.readFile(scrapedPath, "utf8");
+    const parsed = JSON.parse(raw) as { classes?: ScrapedClass[] };
+    scrapedClasses = parsed?.classes ?? [];
+} catch (error) {
+    scrapedClasses = [];
+}
+const scrapedByName = new Map(
+    scrapedClasses.map((entry) => [normalizeClassName(entry.className), entry]),
+);
+const scrapedByPeriod = new Map(
+    scrapedClasses.map((entry) => [entry.period.trim(), entry]),
+);
+
+function getClassPoints(className: string, classPeriod: string | null) {
+    const normalizedName = normalizeClassName(className);
+    const scraped =
+        (classPeriod ? scrapedByPeriod.get(classPeriod) : undefined) ??
+        scrapedByName.get(normalizedName);
+    if (!scraped || !scraped.assignments?.length) {
+        return null;
+    }
+
+    const totals = scraped.assignments.reduce(
+        (acc, assignment) => {
+            if (!Number.isFinite(assignment.totalPoints) || assignment.totalPoints <= 0) {
+                return acc;
+            }
+            const earned = assignment.graded ? assignment.earnedPoints : 0;
+            return {
+                earned: acc.earned + (Number.isFinite(earned) ? earned : 0),
+                possible: acc.possible + assignment.totalPoints,
+            };
+        },
+        { earned: 0, possible: 0 },
+    );
+
+    if (totals.possible <= 0) {
+        return null;
+    }
+
+    return totals;
+}
+
 const missingAssignments = missingAssignmentsData.missing_assignments?.map(
     (assignment) => {
         const classKey = normalizeClassName(assignment.class_name);
         const classInfo = classLookup.get(classKey);
         const maxPoints = Number(assignment.max_points);
+        const classPoints = getClassPoints(
+            assignment.class_name,
+            classInfo?.period ?? null,
+        );
         return {
             assignment: assignment.assignment_name,
             className: assignment.class_name,
@@ -36,6 +100,7 @@ const missingAssignments = missingAssignmentsData.missing_assignments?.map(
             classGrade: classInfo?.grade ?? null,
             classLetterGrade: classInfo?.lettergrade ?? null,
             classPeriod: classInfo?.period ?? null,
+            classPoints,
         };
     },
 ) ?? [];
@@ -305,11 +370,11 @@ function getGradeColor(grade: number): string {
             }
         }
 
-        if (
-            quest.classGrade === null ||
-            !Number.isFinite(quest.classGrade) ||
-            quest.maxPoints <= 0
-        ) {
+        const hasPoints = quest.classPoints && quest.classPoints.possible > 0;
+        const canEstimate =
+            (quest.classGrade !== null && Number.isFinite(quest.classGrade)) || hasPoints;
+
+        if (!canEstimate || quest.maxPoints <= 0) {
             if (currentGradeEl) currentGradeEl.textContent = "N/A";
             if (projectedGradeEl) projectedGradeEl.textContent = "N/A";
             if (deltaEl) deltaEl.textContent = "N/A";
@@ -318,35 +383,43 @@ function getGradeColor(grade: number): string {
             }
         } else {
             const scoreEarned = Math.round(quest.maxPoints * 0.5 * 10) / 10;
-            const currentPoints = quest.classGrade;
-            const currentPossible = 100;
-            const projectedTotalEarned = currentPoints + scoreEarned;
+            const currentEarned = hasPoints
+                ? quest.classPoints.earned
+                : (quest.classGrade / 100) * 100;
+            const currentPossible = hasPoints ? quest.classPoints.possible : 100;
+            const currentGrade = Math.min(
+                100,
+                (currentEarned / currentPossible) * 100,
+            );
+            const projectedTotalEarned = currentEarned + scoreEarned;
             const projectedTotalPossible = currentPossible + quest.maxPoints;
             const projectedGrade = Math.min(
                 100,
                 (projectedTotalEarned / projectedTotalPossible) * 100,
             );
-            const delta = projectedGrade - quest.classGrade;
+            const delta = projectedGrade - currentGrade;
             const isImprovement = delta > 0.5;
             const isDecline = delta < -0.5;
             const deltaSign = delta >= 0 ? "+" : "";
             const deltaColor = isImprovement ? "#01BC61" : isDecline ? "#E60A18" : "#aaa";
-            const deltaIcon = isImprovement ? "ƒ-ı" : isDecline ? "ƒ-¬" : "ƒ-?";
 
             if (currentGradeEl) {
-                currentGradeEl.textContent = `${getLetterGrade(quest.classGrade)} ${quest.classGrade.toFixed(1)}%`;
-                currentGradeEl.className = `grade-badge ${getGradeColorClass(quest.classGrade)}`;
+                currentGradeEl.textContent = `${getLetterGrade(currentGrade)} ${currentGrade.toFixed(1)}%`;
+                currentGradeEl.className = `grade-badge ${getGradeColorClass(currentGrade)}`;
             }
             if (projectedGradeEl) {
                 projectedGradeEl.textContent = `${getLetterGrade(projectedGrade)} ${projectedGrade.toFixed(1)}%`;
                 projectedGradeEl.className = `grade-badge ${getGradeColorClass(projectedGrade)}`;
             }
             if (deltaEl) {
-                deltaEl.textContent = `${deltaIcon} ${deltaSign}${delta.toFixed(1)}%`;
+                deltaEl.textContent = `${deltaSign}${delta.toFixed(1)}%`;
                 deltaEl.style.color = deltaColor;
             }
             if (assumptionEl) {
-                assumptionEl.textContent = `Assumes ${scoreEarned}/${quest.maxPoints} (${Math.round((scoreEarned / quest.maxPoints) * 100)}%).`;
+                const percent = Math.round((scoreEarned / quest.maxPoints) * 100);
+                assumptionEl.textContent = hasPoints
+                    ? `Based on ${Math.round(currentEarned)}/${Math.round(currentPossible)} points. Assumes ${scoreEarned}/${quest.maxPoints} (${percent}%).`
+                    : `Estimate treats current grade as 100 points. Assumes ${scoreEarned}/${quest.maxPoints} (${percent}%).`;
             }
         }
 
