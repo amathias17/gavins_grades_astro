@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2025-12-23T20:32:13.834Z",
+    "scrapedAt": "2025-12-24T12:18:29.586Z",
     "totalClasses": 13,
     "totalAssignments": 124
   },
@@ -37,8 +37,8 @@
         },
         {
           "name": "10/27-10/30 Part.",
-          "dueDate": "10/30/2025",
-          "earnedPoints": 0,
+          "dueDate": "11/14/2025",
+          "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
           "graded": true
@@ -46,8 +46,8 @@
         {
           "name": "Workbook Check",
           "dueDate": "10/30/2025",
-          "earnedPoints": 0,
-          "totalPoints": 10,
+          "earnedPoints": 13,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         }
@@ -72,11 +72,19 @@
           "dueDate": "12/05/2025",
           "earnedPoints": 0,
           "totalPoints": 0,
-          "weight": null,
+          "weight": 1,
           "graded": false
         },
         {
           "name": "TMW Act I Reading",
+          "dueDate": "12/05/2025",
+          "earnedPoints": 0,
+          "totalPoints": 25,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Bell Ringer 1",
           "dueDate": "12/04/2025",
           "earnedPoints": 15,
           "totalPoints": 15,
@@ -84,19 +92,11 @@
           "graded": true
         },
         {
-          "name": "Bell Ringer 1",
-          "dueDate": "11/21/2025",
-          "earnedPoints": 0,
-          "totalPoints": 0,
-          "weight": null,
-          "graded": false
-        },
-        {
           "name": "Historical Context",
           "dueDate": "11/21/2025",
           "earnedPoints": 0,
-          "totalPoints": 0,
-          "weight": null,
+          "totalPoints": 20,
+          "weight": 1,
           "graded": false
         },
         {
@@ -189,9 +189,9 @@
       "assignments": [
         {
           "name": "Cell Membrane Notes 1-4",
-          "dueDate": "10/29/2025",
-          "earnedPoints": 12,
-          "totalPoints": 15,
+          "dueDate": "12/19/2025",
+          "earnedPoints": 0,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         },
@@ -199,17 +199,17 @@
           "name": "Cell membrane Coloring Activit",
           "dueDate": "12/19/2025",
           "earnedPoints": 0,
-          "totalPoints": 0,
-          "weight": null,
-          "graded": false
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": true
         },
         {
           "name": "Cell Diagrams",
-          "dueDate": "12/17/2025",
+          "dueDate": "12/19/2025",
           "earnedPoints": 0,
-          "totalPoints": 0,
-          "weight": null,
-          "graded": false
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": true
         },
         {
           "name": "Cell Organelle Ornaments",
@@ -221,26 +221,26 @@
         },
         {
           "name": "Cell Structure Lab",
-          "dueDate": "12/16/2025",
+          "dueDate": "12/17/2025",
           "earnedPoints": 0,
-          "totalPoints": 0,
-          "weight": null,
+          "totalPoints": 15,
+          "weight": 1,
           "graded": false
         },
         {
           "name": "Gallery Walk- Cells",
-          "dueDate": "12/11/2025",
+          "dueDate": "12/16/2025",
           "earnedPoints": 0,
-          "totalPoints": 0,
-          "weight": null,
+          "totalPoints": 30,
+          "weight": 1,
           "graded": false
         },
         {
           "name": "Hoiliday food drive",
           "dueDate": "12/10/2025",
           "earnedPoints": 0,
-          "totalPoints": 0,
-          "weight": null,
+          "totalPoints": 20,
+          "weight": 1,
           "graded": false
         },
         {
@@ -248,7 +248,7 @@
           "dueDate": "12/10/2025",
           "earnedPoints": 0,
           "totalPoints": 0,
-          "weight": null,
+          "weight": 1,
           "graded": false
         },
         {
@@ -261,18 +261,18 @@
         },
         {
           "name": "Endosymbiotic Theory Puzzle",
-          "dueDate": "12/05/2025",
+          "dueDate": "12/08/2025",
           "earnedPoints": 0,
-          "totalPoints": 0,
-          "weight": null,
+          "totalPoints": 10,
+          "weight": 1,
           "graded": false
         },
         {
           "name": "Cell Organelles",
-          "dueDate": "12/04/2025",
+          "dueDate": "12/05/2025",
           "earnedPoints": 0,
           "totalPoints": 0,
-          "weight": null,
+          "weight": 1,
           "graded": false
         },
         {
@@ -286,10 +286,10 @@
         {
           "name": "Notes Cell structures",
           "dueDate": "12/03/2025",
-          "earnedPoints": 0,
-          "totalPoints": 0,
-          "weight": null,
-          "graded": false
+          "earnedPoints": 5,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": true
         },
         {
           "name": "Endosymbiosis",
@@ -309,9 +309,9 @@
         },
         {
           "name": "Cell Theory and Types review",
-          "dueDate": "11/24/2025",
-          "earnedPoints": 5,
-          "totalPoints": 5,
+          "dueDate": "11/25/2025",
+          "earnedPoints": 7,
+          "totalPoints": 0,
           "weight": 1,
           "graded": true
         },
@@ -341,6 +341,14 @@
         },
         {
           "name": "Enzymes Quiz",
+          "dueDate": "11/21/2025",
+          "earnedPoints": 4,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Enzyme OPen ended practice",
           "dueDate": "11/19/2025",
           "earnedPoints": 35,
           "totalPoints": 35,
@@ -348,23 +356,7 @@
           "graded": true
         },
         {
-          "name": "Enzyme OPen ended practice",
-          "dueDate": "11/19/2025",
-          "earnedPoints": 0,
-          "totalPoints": 0,
-          "weight": null,
-          "graded": false
-        },
-        {
           "name": "It's Enzymatic!",
-          "dueDate": "11/18/2025",
-          "earnedPoints": 0,
-          "totalPoints": 0,
-          "weight": null,
-          "graded": false
-        },
-        {
-          "name": "Catalase Lab",
           "dueDate": "11/18/2025",
           "earnedPoints": 5,
           "totalPoints": 5,
@@ -372,11 +364,19 @@
           "graded": true
         },
         {
-          "name": "Enzyme CR- Graph&data analysis",
-          "dueDate": "11/13/2025",
+          "name": "Catalase Lab",
+          "dueDate": "11/17/2025",
           "earnedPoints": 0,
-          "totalPoints": 0,
-          "weight": null,
+          "totalPoints": 45,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Enzyme CR- Graph&data analysis",
+          "dueDate": "11/17/2025",
+          "earnedPoints": 0,
+          "totalPoints": 45,
+          "weight": 1,
           "graded": false
         },
         {
@@ -389,10 +389,10 @@
         },
         {
           "name": "Folable Macromolecules",
-          "dueDate": "11/10/2025",
+          "dueDate": "11/13/2025",
           "earnedPoints": 0,
-          "totalPoints": 0,
-          "weight": null,
+          "totalPoints": 5,
+          "weight": 1,
           "graded": false
         },
         {
@@ -414,10 +414,10 @@
         {
           "name": "Macromolecule Simulation",
           "dueDate": "11/05/2025",
-          "earnedPoints": 23,
-          "totalPoints": 45,
+          "earnedPoints": 0,
+          "totalPoints": 15,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "Dehydration Synthesis Edpuzzle",
@@ -439,24 +439,24 @@
           "name": "Nucleic Acid /Proteins SG",
           "dueDate": "10/29/2025",
           "earnedPoints": 0,
-          "totalPoints": 0,
-          "weight": null,
+          "totalPoints": 15,
+          "weight": 1,
           "graded": false
         },
         {
           "name": "Carbohydrate Worksheet",
           "dueDate": "10/28/2025",
           "earnedPoints": 0,
-          "totalPoints": 0,
-          "weight": null,
+          "totalPoints": 5,
+          "weight": 1,
           "graded": false
         },
         {
           "name": "Unique Properties of Water Lab",
           "dueDate": "10/28/2025",
           "earnedPoints": 0,
-          "totalPoints": 0,
-          "weight": null,
+          "totalPoints": 5,
+          "weight": 1,
           "graded": false
         }
       ]
@@ -471,41 +471,41 @@
           "name": "TO SERVE MAN-WRITING ASSIGNMENT",
           "dueDate": "12/19/2025",
           "earnedPoints": 0,
-          "totalPoints": 0,
-          "weight": null,
+          "totalPoints": 30,
+          "weight": 1,
           "graded": false
         },
         {
           "name": "INTRO TO TZ CHOICE BOARD",
           "dueDate": "12/17/2025",
           "earnedPoints": 0,
-          "totalPoints": 0,
-          "weight": null,
-          "graded": false
+          "totalPoints": 40,
+          "weight": 1,
+          "graded": true
         },
         {
           "name": "TWILIGHT ZONE READING",
           "dueDate": "12/16/2025",
           "earnedPoints": 0,
-          "totalPoints": 0,
-          "weight": null,
-          "graded": false
+          "totalPoints": 25,
+          "weight": 1,
+          "graded": true
         },
         {
           "name": "PBS BROCHURE",
-          "dueDate": "12/16/2025",
-          "earnedPoints": 20,
-          "totalPoints": 25,
+          "dueDate": "12/12/2025",
+          "earnedPoints": 25,
+          "totalPoints": 40,
           "weight": 1,
           "graded": true
         },
         {
           "name": "PBS- DUE AT THE END OF THE PERIOD",
           "dueDate": "12/09/2025",
-          "earnedPoints": 0,
-          "totalPoints": 0,
-          "weight": null,
-          "graded": false
+          "earnedPoints": 25,
+          "totalPoints": 40,
+          "weight": 1,
+          "graded": true
         },
         {
           "name": "TV INTRODUCTION NOTES",
@@ -517,17 +517,17 @@
         },
         {
           "name": "FOOD THAT BUILT AMERICA-EP 3",
-          "dueDate": "11/25/2025",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "dueDate": "12/05/2025",
+          "earnedPoints": 25,
+          "totalPoints": 25,
           "weight": 1,
           "graded": true
         },
         {
           "name": "NOVEMBER 14TH ASSIGNMENT",
-          "dueDate": "11/25/2025",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "dueDate": "11/18/2025",
+          "earnedPoints": 0,
+          "totalPoints": 60,
           "weight": 1,
           "graded": true
         },
@@ -549,16 +549,16 @@
         },
         {
           "name": "RADIO SHOW-LISTENING SKILLS",
-          "dueDate": "11/05/2025",
+          "dueDate": "11/12/2025",
           "earnedPoints": 0,
-          "totalPoints": 0,
-          "weight": null,
+          "totalPoints": 10,
+          "weight": 1,
           "graded": false
         },
         {
           "name": "WAR OF THE WORLDS-RADIO",
           "dueDate": "10/30/2025",
-          "earnedPoints": 20,
+          "earnedPoints": 25,
           "totalPoints": 25,
           "weight": 1,
           "graded": true
@@ -583,23 +583,23 @@
           "name": "Food Sketchbook",
           "dueDate": "12/12/2025",
           "earnedPoints": 0,
-          "totalPoints": 0,
-          "weight": null,
+          "totalPoints": 15,
+          "weight": 1,
           "graded": false
         },
         {
           "name": "Still Life Drawing",
           "dueDate": "11/21/2025",
           "earnedPoints": 0,
-          "totalPoints": 0,
-          "weight": null,
-          "graded": false
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
         },
         {
           "name": "Thankful Sketchbook",
           "dueDate": "11/21/2025",
-          "earnedPoints": 44,
-          "totalPoints": 60,
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
@@ -630,7 +630,7 @@
         {
           "name": "Music Sketchbook",
           "dueDate": "10/30/2025",
-          "earnedPoints": 10,
+          "earnedPoints": 6,
           "totalPoints": 10,
           "weight": 1,
           "graded": true
@@ -654,10 +654,10 @@
         {
           "name": "Class Participation and Dress",
           "dueDate": "12/12/2025",
-          "earnedPoints": 0,
-          "totalPoints": 0,
-          "weight": null,
-          "graded": false
+          "earnedPoints": 50,
+          "totalPoints": 50,
+          "weight": 1,
+          "graded": true
         },
         {
           "name": "Class Participation and Dress",
@@ -823,8 +823,8 @@
           "name": "Chapter 7 Vocabulary",
           "dueDate": "10/28/2025",
           "earnedPoints": 0,
-          "totalPoints": 0,
-          "weight": null,
+          "totalPoints": 25,
+          "weight": 1,
           "graded": false
         },
         {
@@ -862,9 +862,9 @@
         {
           "name": "City Project",
           "dueDate": "12/19/2025",
-          "earnedPoints": 65,
-          "totalPoints": 100,
-          "weight": 5,
+          "earnedPoints": 6.5,
+          "totalPoints": 10,
+          "weight": 0.5,
           "graded": true
         },
         {
@@ -917,10 +917,10 @@
         },
         {
           "name": "Delta Math Chapter 1 Review",
-          "dueDate": "11/03/2025",
-          "earnedPoints": 24,
-          "totalPoints": 24,
-          "weight": 0.5,
+          "dueDate": "11/06/2025",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
           "graded": true
         },
         {
@@ -1005,10 +1005,10 @@
         },
         {
           "name": "Ch 8 Packet (8 3 Google form)",
-          "dueDate": "11/18/2025",
+          "dueDate": "11/19/2025",
           "earnedPoints": 0,
           "totalPoints": 0,
-          "weight": null,
+          "weight": 1,
           "graded": false
         },
         {
@@ -1064,7 +1064,7 @@
           "dueDate": "10/29/2025",
           "earnedPoints": 0,
           "totalPoints": 0,
-          "weight": null,
+          "weight": 1,
           "graded": false
         }
       ]

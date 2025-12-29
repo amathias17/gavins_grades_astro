@@ -56,9 +56,9 @@
     "period": "0",
     "currentGrade": 86,
     "assignmentName": "10/27-10/30 Part.",
-    "dateDue": "10/30/2025",
-    "dueDate": "10/30/2025",
-    "earnedPoints": 0,
+    "dateDue": "11/14/2025",
+    "dueDate": "11/14/2025",
+    "earnedPoints": 10,
     "totalPoints": 10,
     "weight": 1,
     "graded": true
@@ -74,8 +74,8 @@
     "assignmentName": "Workbook Check",
     "dateDue": "10/30/2025",
     "dueDate": "10/30/2025",
-    "earnedPoints": 0,
-    "totalPoints": 10,
+    "earnedPoints": 13,
+    "totalPoints": 15,
     "weight": 1,
     "graded": true
   },
@@ -108,7 +108,7 @@
     "dueDate": "12/05/2025",
     "earnedPoints": 0,
     "totalPoints": 0,
-    "weight": null,
+    "weight": 1,
     "graded": false
   },
   {
@@ -120,10 +120,10 @@
     "period": "1",
     "currentGrade": 71,
     "assignmentName": "TMW Act I Reading",
-    "dateDue": "12/04/2025",
-    "dueDate": "12/04/2025",
-    "earnedPoints": 15,
-    "totalPoints": 15,
+    "dateDue": "12/05/2025",
+    "dueDate": "12/05/2025",
+    "earnedPoints": 0,
+    "totalPoints": 25,
     "weight": 1,
     "graded": true
   },
@@ -136,12 +136,12 @@
     "period": "1",
     "currentGrade": 71,
     "assignmentName": "Bell Ringer 1",
-    "dateDue": "11/21/2025",
-    "dueDate": "11/21/2025",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "dateDue": "12/04/2025",
+    "dueDate": "12/04/2025",
+    "earnedPoints": 15,
+    "totalPoints": 15,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43162",
@@ -155,8 +155,8 @@
     "dateDue": "11/21/2025",
     "dueDate": "11/21/2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
+    "totalPoints": 20,
+    "weight": 1,
     "graded": false
   },
   {
@@ -328,10 +328,10 @@
     "period": "2",
     "currentGrade": 84,
     "assignmentName": "Cell Membrane Notes 1-4",
-    "dateDue": "10/29/2025",
-    "dueDate": "10/29/2025",
-    "earnedPoints": 12,
-    "totalPoints": 15,
+    "dateDue": "12/19/2025",
+    "dueDate": "12/19/2025",
+    "earnedPoints": 0,
+    "totalPoints": 5,
     "weight": 1,
     "graded": true
   },
@@ -347,9 +347,9 @@
     "dateDue": "12/19/2025",
     "dueDate": "12/19/2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "totalPoints": 5,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43424",
@@ -360,12 +360,12 @@
     "period": "2",
     "currentGrade": 84,
     "assignmentName": "Cell Diagrams",
-    "dateDue": "12/17/2025",
-    "dueDate": "12/17/2025",
+    "dateDue": "12/19/2025",
+    "dueDate": "12/19/2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "totalPoints": 5,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43424",
@@ -392,11 +392,11 @@
     "period": "2",
     "currentGrade": 84,
     "assignmentName": "Cell Structure Lab",
-    "dateDue": "12/16/2025",
-    "dueDate": "12/16/2025",
+    "dateDue": "12/17/2025",
+    "dueDate": "12/17/2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
+    "totalPoints": 15,
+    "weight": 1,
     "graded": false
   },
   {
@@ -408,11 +408,11 @@
     "period": "2",
     "currentGrade": 84,
     "assignmentName": "Gallery Walk- Cells",
-    "dateDue": "12/11/2025",
-    "dueDate": "12/11/2025",
+    "dateDue": "12/16/2025",
+    "dueDate": "12/16/2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
+    "totalPoints": 30,
+    "weight": 1,
     "graded": false
   },
   {
@@ -427,8 +427,8 @@
     "dateDue": "12/10/2025",
     "dueDate": "12/10/2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
+    "totalPoints": 20,
+    "weight": 1,
     "graded": false
   },
   {
@@ -444,7 +444,7 @@
     "dueDate": "12/10/2025",
     "earnedPoints": 0,
     "totalPoints": 0,
-    "weight": null,
+    "weight": 1,
     "graded": false
   },
   {
@@ -472,11 +472,11 @@
     "period": "2",
     "currentGrade": 84,
     "assignmentName": "Endosymbiotic Theory Puzzle",
-    "dateDue": "12/05/2025",
-    "dueDate": "12/05/2025",
+    "dateDue": "12/08/2025",
+    "dueDate": "12/08/2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
+    "totalPoints": 10,
+    "weight": 1,
     "graded": false
   },
   {
@@ -488,11 +488,11 @@
     "period": "2",
     "currentGrade": 84,
     "assignmentName": "Cell Organelles",
-    "dateDue": "12/04/2025",
-    "dueDate": "12/04/2025",
+    "dateDue": "12/05/2025",
+    "dueDate": "12/05/2025",
     "earnedPoints": 0,
     "totalPoints": 0,
-    "weight": null,
+    "weight": 1,
     "graded": false
   },
   {
@@ -522,10 +522,10 @@
     "assignmentName": "Notes Cell structures",
     "dateDue": "12/03/2025",
     "dueDate": "12/03/2025",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "earnedPoints": 5,
+    "totalPoints": 5,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43424",
@@ -568,10 +568,10 @@
     "period": "2",
     "currentGrade": 84,
     "assignmentName": "Cell Theory and Types review",
-    "dateDue": "11/24/2025",
-    "dueDate": "11/24/2025",
-    "earnedPoints": 5,
-    "totalPoints": 5,
+    "dateDue": "11/25/2025",
+    "dueDate": "11/25/2025",
+    "earnedPoints": 7,
+    "totalPoints": 0,
     "weight": 1,
     "graded": true
   },
@@ -632,10 +632,10 @@
     "period": "2",
     "currentGrade": 84,
     "assignmentName": "Enzymes Quiz",
-    "dateDue": "11/19/2025",
-    "dueDate": "11/19/2025",
-    "earnedPoints": 35,
-    "totalPoints": 35,
+    "dateDue": "11/21/2025",
+    "dueDate": "11/21/2025",
+    "earnedPoints": 4,
+    "totalPoints": 5,
     "weight": 1,
     "graded": true
   },
@@ -650,10 +650,10 @@
     "assignmentName": "Enzyme OPen ended practice",
     "dateDue": "11/19/2025",
     "dueDate": "11/19/2025",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "earnedPoints": 35,
+    "totalPoints": 35,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43424",
@@ -666,10 +666,10 @@
     "assignmentName": "It's Enzymatic!",
     "dateDue": "11/18/2025",
     "dueDate": "11/18/2025",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "earnedPoints": 5,
+    "totalPoints": 5,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43424",
@@ -680,12 +680,12 @@
     "period": "2",
     "currentGrade": 84,
     "assignmentName": "Catalase Lab",
-    "dateDue": "11/18/2025",
-    "dueDate": "11/18/2025",
-    "earnedPoints": 5,
-    "totalPoints": 5,
+    "dateDue": "11/17/2025",
+    "dueDate": "11/17/2025",
+    "earnedPoints": 0,
+    "totalPoints": 45,
     "weight": 1,
-    "graded": true
+    "graded": false
   },
   {
     "classId": "43424",
@@ -696,11 +696,11 @@
     "period": "2",
     "currentGrade": 84,
     "assignmentName": "Enzyme CR- Graph&data analysis",
-    "dateDue": "11/13/2025",
-    "dueDate": "11/13/2025",
+    "dateDue": "11/17/2025",
+    "dueDate": "11/17/2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
+    "totalPoints": 45,
+    "weight": 1,
     "graded": false
   },
   {
@@ -728,11 +728,11 @@
     "period": "2",
     "currentGrade": 84,
     "assignmentName": "Folable Macromolecules",
-    "dateDue": "11/10/2025",
-    "dueDate": "11/10/2025",
+    "dateDue": "11/13/2025",
+    "dueDate": "11/13/2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
+    "totalPoints": 5,
+    "weight": 1,
     "graded": false
   },
   {
@@ -778,10 +778,10 @@
     "assignmentName": "Macromolecule Simulation",
     "dateDue": "11/05/2025",
     "dueDate": "11/05/2025",
-    "earnedPoints": 23,
-    "totalPoints": 45,
+    "earnedPoints": 0,
+    "totalPoints": 15,
     "weight": 1,
-    "graded": true
+    "graded": false
   },
   {
     "classId": "43424",
@@ -827,8 +827,8 @@
     "dateDue": "10/29/2025",
     "dueDate": "10/29/2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
+    "totalPoints": 15,
+    "weight": 1,
     "graded": false
   },
   {
@@ -843,8 +843,8 @@
     "dateDue": "10/28/2025",
     "dueDate": "10/28/2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
+    "totalPoints": 5,
+    "weight": 1,
     "graded": false
   },
   {
@@ -859,8 +859,8 @@
     "dateDue": "10/28/2025",
     "dueDate": "10/28/2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
+    "totalPoints": 5,
+    "weight": 1,
     "graded": false
   },
   {
@@ -875,8 +875,8 @@
     "dateDue": "12/19/2025",
     "dueDate": "12/19/2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
+    "totalPoints": 30,
+    "weight": 1,
     "graded": false
   },
   {
@@ -891,9 +891,9 @@
     "dateDue": "12/17/2025",
     "dueDate": "12/17/2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "totalPoints": 40,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "42889",
@@ -907,9 +907,9 @@
     "dateDue": "12/16/2025",
     "dueDate": "12/16/2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "totalPoints": 25,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "42889",
@@ -920,10 +920,10 @@
     "period": "3",
     "currentGrade": 44,
     "assignmentName": "PBS BROCHURE",
-    "dateDue": "12/16/2025",
-    "dueDate": "12/16/2025",
-    "earnedPoints": 20,
-    "totalPoints": 25,
+    "dateDue": "12/12/2025",
+    "dueDate": "12/12/2025",
+    "earnedPoints": 25,
+    "totalPoints": 40,
     "weight": 1,
     "graded": true
   },
@@ -938,10 +938,10 @@
     "assignmentName": "PBS- DUE AT THE END OF THE PERIOD",
     "dateDue": "12/09/2025",
     "dueDate": "12/09/2025",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "earnedPoints": 25,
+    "totalPoints": 40,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "42889",
@@ -968,10 +968,10 @@
     "period": "3",
     "currentGrade": 44,
     "assignmentName": "FOOD THAT BUILT AMERICA-EP 3",
-    "dateDue": "11/25/2025",
-    "dueDate": "11/25/2025",
-    "earnedPoints": 10,
-    "totalPoints": 10,
+    "dateDue": "12/05/2025",
+    "dueDate": "12/05/2025",
+    "earnedPoints": 25,
+    "totalPoints": 25,
     "weight": 1,
     "graded": true
   },
@@ -984,10 +984,10 @@
     "period": "3",
     "currentGrade": 44,
     "assignmentName": "NOVEMBER 14TH ASSIGNMENT",
-    "dateDue": "11/25/2025",
-    "dueDate": "11/25/2025",
-    "earnedPoints": 10,
-    "totalPoints": 10,
+    "dateDue": "11/18/2025",
+    "dueDate": "11/18/2025",
+    "earnedPoints": 0,
+    "totalPoints": 60,
     "weight": 1,
     "graded": true
   },
@@ -1032,11 +1032,11 @@
     "period": "3",
     "currentGrade": 44,
     "assignmentName": "RADIO SHOW-LISTENING SKILLS",
-    "dateDue": "11/05/2025",
-    "dueDate": "11/05/2025",
+    "dateDue": "11/12/2025",
+    "dueDate": "11/12/2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
+    "totalPoints": 10,
+    "weight": 1,
     "graded": false
   },
   {
@@ -1050,7 +1050,7 @@
     "assignmentName": "WAR OF THE WORLDS-RADIO",
     "dateDue": "10/30/2025",
     "dueDate": "10/30/2025",
-    "earnedPoints": 20,
+    "earnedPoints": 25,
     "totalPoints": 25,
     "weight": 1,
     "graded": true
@@ -1083,8 +1083,8 @@
     "dateDue": "12/12/2025",
     "dueDate": "12/12/2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
+    "totalPoints": 15,
+    "weight": 1,
     "graded": false
   },
   {
@@ -1099,9 +1099,9 @@
     "dateDue": "11/21/2025",
     "dueDate": "11/21/2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "totalPoints": 10,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "44014",
@@ -1114,8 +1114,8 @@
     "assignmentName": "Thankful Sketchbook",
     "dateDue": "11/21/2025",
     "dueDate": "11/21/2025",
-    "earnedPoints": 44,
-    "totalPoints": 60,
+    "earnedPoints": 10,
+    "totalPoints": 10,
     "weight": 1,
     "graded": true
   },
@@ -1178,7 +1178,7 @@
     "assignmentName": "Music Sketchbook",
     "dateDue": "10/30/2025",
     "dueDate": "10/30/2025",
-    "earnedPoints": 10,
+    "earnedPoints": 6,
     "totalPoints": 10,
     "weight": 1,
     "graded": true
@@ -1210,10 +1210,10 @@
     "assignmentName": "Class Participation and Dress",
     "dateDue": "12/12/2025",
     "dueDate": "12/12/2025",
-    "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
-    "graded": false
+    "earnedPoints": 50,
+    "totalPoints": 50,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "44290",
@@ -1531,8 +1531,8 @@
     "dateDue": "10/28/2025",
     "dueDate": "10/28/2025",
     "earnedPoints": 0,
-    "totalPoints": 0,
-    "weight": null,
+    "totalPoints": 25,
+    "weight": 1,
     "graded": false
   },
   {
@@ -1594,9 +1594,9 @@
     "assignmentName": "City Project",
     "dateDue": "12/19/2025",
     "dueDate": "12/19/2025",
-    "earnedPoints": 65,
-    "totalPoints": 100,
-    "weight": 5,
+    "earnedPoints": 6.5,
+    "totalPoints": 10,
+    "weight": 0.5,
     "graded": true
   },
   {
@@ -1704,11 +1704,11 @@
     "period": "7",
     "currentGrade": 71,
     "assignmentName": "Delta Math Chapter 1 Review",
-    "dateDue": "11/03/2025",
-    "dueDate": "11/03/2025",
-    "earnedPoints": 24,
-    "totalPoints": 24,
-    "weight": 0.5,
+    "dateDue": "11/06/2025",
+    "dueDate": "11/06/2025",
+    "earnedPoints": 10,
+    "totalPoints": 10,
+    "weight": 1,
     "graded": true
   },
   {
@@ -1864,11 +1864,11 @@
     "period": "8",
     "currentGrade": 79,
     "assignmentName": "Ch 8 Packet (8 3 Google form)",
-    "dateDue": "11/18/2025",
-    "dueDate": "11/18/2025",
+    "dateDue": "11/19/2025",
+    "dueDate": "11/19/2025",
     "earnedPoints": 0,
     "totalPoints": 0,
-    "weight": null,
+    "weight": 1,
     "graded": false
   },
   {
@@ -1980,7 +1980,7 @@
     "dueDate": "10/29/2025",
     "earnedPoints": 0,
     "totalPoints": 0,
-    "weight": null,
+    "weight": 1,
     "graded": false
   }
 ]
