@@ -75,7 +75,9 @@
       "Bash(git pull:*)",
       "Bash(bd sync:*)",
       "Bash(git push)",
-      "Bash(git stash push:*)"
+      "Bash(git stash push:*)",
+      "Bash(echo:*)",
+      "Bash(bd close:*)"
     ],
     "deny": [],
     "ask": []

@@ -1,0 +1,62 @@
+---
+import gradesData from "../data/grades.json";
+import { countDragonBalls } from "../utils/dragonBalls";
+
+const overallAverage = gradesData.overall_average;
+const streak = gradesData.streak || 0;
+const dragonBalls = countDragonBalls(gradesData.classes);
+---
+
+<!-- Dragon Ball Z Themed Header for Anime Page -->
+<div class="m-auto max-w-[1400px] border-4 border-[#f78a1d] border-solid flex header mb-5 p-5 relative shadow-[0_0_0_4px_#000,0_0_0_8px_#f78a1d,8px_8px_0_8px_rgba(247,138,29,0.3)]">
+    <div class="flex flex-wrap gap-5 header-content">
+        <div class="ml-auto mr-auto player-info">
+            <h1 class="text-[1.5em] text-[#ffd24a] mb-[15px]">SAIYAN ACADEMY<span class="blink">_</span></h1>
+            <p class="text-[0.6em] text-[#f78a1d]">&gt; WARRIOR - GAVIN</p>
+        </div>
+        <div class="flex gap-1" data-pg-collapsed>
+            <div class="border-[3px] border-solid border-white min-w-[100px] px-[15px] py-3 text-center bg-[#0e0b0a]">
+                <div class="text-[0.4em] text-[#aaa] mb-2">POWER LVL</div>
+                <div class="text-[0.8em] text-[#ffd24a]">{Math.round(overallAverage * 100)}</div>
+            </div>
+            <div class="border-[3px] border-solid border-white min-w-[100px] px-[15px] py-3 text-center bg-[#0e0b0a]">
+                <div class="text-[0.4em] text-[#aaa] mb-2">ZENKAI</div>
+                <div class="text-[0.8em] text-[#1a4fd6]">{streak}</div>
+            </div>
+            <div class="border-[3px] border-solid border-white min-w-[100px] px-[15px] py-3 text-center bg-[#0e0b0a]">
+                <div class="text-[0.4em] text-[#aaa] mb-2">DRAGON BALLS</div>
+                <div class="text-[0.8em] text-[#f78a1d]" title={`${dragonBalls} / 7 Dragon Balls collected`}>{dragonBalls === 7 ? '🐉' : dragonBalls}</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<nav class="m-auto max-w-[1400px] mb-8 border-[3px] border-[#f78a1d] border-dashed p-4 bg-[#0e0b0a]" aria-label="Primary">
+    <div class="text-[0.5em] text-[#ffd24a] uppercase mb-3">CAPSULE.CORP.NAVIGATOR</div>
+    <div class="flex flex-wrap gap-3">
+        <a
+            href="/"
+            class="nav-link text-[0.55em] uppercase border-2 border-[#ffd24a] text-[#ffd24a] px-4 py-2 bg-[#000] hover:text-[#000] hover:bg-[#ffd24a] transition-colors"
+        >
+            Earth HQ
+        </a>
+        <a
+            href="/stats"
+            class="nav-link text-[0.55em] uppercase border-2 border-[#1a4fd6] text-[#1a4fd6] px-4 py-2 bg-[#000] hover:text-[#000] hover:bg-[#1a4fd6] transition-colors"
+        >
+            Scouter Stats
+        </a>
+        <a
+            href="/calculator"
+            class="nav-link text-[0.55em] uppercase border-2 border-[#f78a1d] text-[#f78a1d] px-4 py-2 bg-[#000] hover:text-[#000] hover:bg-[#f78a1d] transition-colors"
+        >
+            Power Calculator
+        </a>
+        <a
+            href="/anime"
+            class="nav-link text-[0.55em] uppercase border-2 border-[#e4362a] text-[#e4362a] px-4 py-2 bg-[#e4362a] text-[#000] font-bold"
+        >
+            Training Lab
+        </a>
+    </div>
+</nav>
