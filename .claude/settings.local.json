@@ -77,7 +77,8 @@
       "Bash(git push)",
       "Bash(git stash push:*)",
       "Bash(echo:*)",
-      "Bash(bd close:*)"
+      "Bash(bd close:*)",
+      "Bash(bd show:*)"
     ],
     "deny": [],
     "ask": []

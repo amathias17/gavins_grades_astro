@@ -25,7 +25,10 @@ const dragonBalls = countDragonBalls(gradesData.classes);
             </div>
             <div class="border-[3px] border-solid border-white min-w-[100px] px-[15px] py-3 text-center bg-[#0e0b0a]">
                 <div class="text-[0.4em] text-[#aaa] mb-2">DRAGON BALLS</div>
-                <div class="text-[0.8em] text-[#f78a1d]" title={`${dragonBalls} / 7 Dragon Balls collected`}>{dragonBalls === 7 ? '🐉' : dragonBalls}</div>
+                <div class="flex items-center justify-center gap-2">
+                    <img src="/dbs/Ball 4 Stars.png" alt="Dragon Ball" class="dragon-ball-icon" />
+                    <div class="text-[0.8em] text-[#f78a1d]" title={`${dragonBalls} / 7 Dragon Balls collected`}>{dragonBalls === 7 ? '🐉' : dragonBalls}</div>
+                </div>
             </div>
         </div>
     </div>
@@ -60,3 +63,12 @@ const dragonBalls = countDragonBalls(gradesData.classes);
         </a>
     </div>
 </nav>
+
+<style>
+  .dragon-ball-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    filter: drop-shadow(0 0 4px rgba(255, 170, 0, 0.6));
+  }
+</style>
