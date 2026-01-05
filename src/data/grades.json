@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "01/05/2026, 06:37 AM",
+    "last_updated": "01/05/2026, 12:04 PM",
     "most_recent_date": "1/5/2026",
     "total_classes": 9
   },
@@ -55,10 +55,10 @@
       "period": "4",
       "q1_grade": 55,
       "q1_letter_grade": "F",
-      "q2_grade": 74,
-      "q2_letter_grade": "C",
-      "current_grade": 74,
-      "letter_grade": "C"
+      "q2_grade": 63,
+      "q2_letter_grade": "D",
+      "current_grade": 63,
+      "letter_grade": "D"
     },
     {
       "class_name": "Physical Educ",
@@ -329,7 +329,7 @@
       "1/2/2026": 74,
       "1/3/2026": 74,
       "1/4/2026": 74,
-      "1/5/2026": 74
+      "1/5/2026": 63
     },
     "Physical Educ": {
       "11/24/2025": 100,
@@ -512,7 +512,7 @@
       "1/5/2026": 79
     }
   },
-  "overall_average": 76,
+  "overall_average": 74,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -556,7 +556,7 @@
     "1/2/2026": 76,
     "1/3/2026": 76,
     "1/4/2026": 76,
-    "1/5/2026": 76
+    "1/5/2026": 74
   },
   "streak": 0,
   "streak_history": {

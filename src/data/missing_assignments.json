@@ -1,9 +1,17 @@
 {
   "metadata": {
-    "last_updated": "01/05/2026, 06:37 AM",
-    "count": 8
+    "last_updated": "01/05/2026, 12:04 PM",
+    "count": 10
   },
   "missing_assignments": [
+    {
+      "due_date": "12/19/2025",
+      "assignment_name": "Holiday Sketchbook",
+      "class_name": "ART 1",
+      "teacher": "Kathryn Curry",
+      "category": "Homework",
+      "max_points": "10"
+    },
     {
       "due_date": "12/19/2025",
       "assignment_name": "Cell Membrane Notes 1-4",
@@ -27,6 +35,14 @@
       "teacher": "Brock Seese",
       "category": "Project",
       "max_points": "50"
+    },
+    {
+      "due_date": "12/16/2025",
+      "assignment_name": "Color Wheel Sketch",
+      "class_name": "ART 1",
+      "teacher": "Kathryn Curry",
+      "category": "Class Work",
+      "max_points": "15"
     },
     {
       "due_date": "12/11/2025",
