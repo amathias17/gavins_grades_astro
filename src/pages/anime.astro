@@ -1,0 +1,482 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <section class="anime-shell" aria-labelledby="dbz-title">
+    <header class="hero">
+      <p class="hero-badge">Capsule Corp Field Log</p>
+      <h1 id="dbz-title" class="hero-title">DRAGON BALL Z: SAIYAN TRAINING LAB</h1>
+      <p class="hero-sub">Static concept page. No live grade data.</p>
+      <div class="hero-stats">
+        <div class="stat-card">
+          <span class="stat-label">Current Form</span>
+          <span class="stat-value">Super Saiyan</span>
+          <span class="stat-meta">Aura: Gold Burst</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Power Level</span>
+          <span class="stat-value">9001</span>
+          <span class="stat-meta">Overclocked</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Gravity Room</span>
+          <span class="stat-value">120x</span>
+          <span class="stat-meta">Core Stability: 86%</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <article class="panel power-panel">
+        <div class="panel-title">Power Level Monitor</div>
+        <div class="meter">
+          <div class="meter-fill" style="width: 92%;"></div>
+          <div class="meter-glow"></div>
+        </div>
+        <div class="panel-row">
+          <span>Ki Output</span>
+          <span class="chip">92%</span>
+        </div>
+        <div class="panel-row">
+          <span>Stamina</span>
+          <span class="chip chip-blue">78%</span>
+        </div>
+        <div class="panel-row">
+          <span>Focus</span>
+          <span class="chip chip-red">63%</span>
+        </div>
+      </article>
+
+      <article class="panel scouter-panel">
+        <div class="panel-title">Scouter Readout</div>
+        <div class="scouter">
+          <div class="scouter-ring"></div>
+          <div class="scouter-center">
+            <span class="scouter-label">Target</span>
+            <span class="scouter-value">Gohan</span>
+            <span class="scouter-meta">Signal: Locked</span>
+          </div>
+        </div>
+        <div class="scouter-grid">
+          <div>
+            <span class="stat-label">Range</span>
+            <span class="stat-value">12 km</span>
+          </div>
+          <div>
+            <span class="stat-label">Threat</span>
+            <span class="stat-value">Medium</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="panel training-panel">
+        <div class="panel-title">Training Modules</div>
+        <ul class="module-list">
+          <li>
+            <span>Ki Control Drills</span>
+            <span class="chip">A+</span>
+          </li>
+          <li>
+            <span>Instant Transmission Steps</span>
+            <span class="chip chip-blue">B</span>
+          </li>
+          <li>
+            <span>Vegeta Sparring</span>
+            <span class="chip chip-red">S+</span>
+          </li>
+          <li>
+            <span>Spirit Bomb Focus</span>
+            <span class="chip">A</span>
+          </li>
+        </ul>
+        <div class="panel-foot">Next: Hyperbolic Time Chamber</div>
+      </article>
+
+      <article class="panel timeline-panel">
+        <div class="panel-title">Arc Timeline</div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-name">Saiyan Arrival</div>
+            <div class="timeline-bar"><span style="width: 100%;"></span></div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-name">Namek Pursuit</div>
+            <div class="timeline-bar"><span style="width: 78%;"></span></div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-name">Android Assault</div>
+            <div class="timeline-bar"><span style="width: 56%;"></span></div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-name">Cell Games</div>
+            <div class="timeline-bar"><span style="width: 32%;"></span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="panel fusion-panel">
+        <div class="panel-title">Fusion Chamber</div>
+        <div class="fusion-grid">
+          <div class="fusion-card">
+            <span class="stat-label">Left Sync</span>
+            <span class="stat-value">Goku</span>
+            <span class="stat-meta">Rhythm: Stable</span>
+          </div>
+          <div class="fusion-card">
+            <span class="stat-label">Right Sync</span>
+            <span class="stat-value">Vegeta</span>
+            <span class="stat-meta">Rhythm: Volatile</span>
+          </div>
+        </div>
+        <div class="fusion-result">
+          <span class="stat-label">Fusion Output</span>
+          <span class="stat-value">Gogeta</span>
+          <span class="stat-meta">Success Rate: 84%</span>
+        </div>
+      </article>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .anime-shell {
+    --dbz-orange: #f78a1d;
+    --dbz-gold: #ffd24a;
+    --dbz-blue: #1a4fd6;
+    --dbz-red: #e4362a;
+    --dbz-ink: #0e0b0a;
+    --dbz-steel: #1c222e;
+    position: relative;
+    border: 4px solid #ffffff;
+    background: radial-gradient(circle at top, rgba(255, 210, 74, 0.2), transparent 55%),
+      linear-gradient(135deg, rgba(247, 138, 29, 0.2), rgba(26, 79, 214, 0.25) 50%, rgba(14, 11, 10, 0.9));
+    padding: 32px;
+    overflow: hidden;
+  }
+
+  .anime-shell::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.08) 0,
+      rgba(255, 255, 255, 0.08) 2px,
+      transparent 2px,
+      transparent 12px
+    );
+    mix-blend-mode: screen;
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  .anime-shell::after {
+    content: "";
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 210, 74, 0.4);
+    box-shadow: 0 0 40px rgba(255, 210, 74, 0.4),
+      0 0 80px rgba(247, 138, 29, 0.3);
+    animation: auraPulse 4s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  .hero {
+    position: relative;
+    padding: 24px;
+    border: 3px solid #ffffff;
+    background: linear-gradient(120deg, rgba(14, 11, 10, 0.9), rgba(26, 79, 214, 0.4));
+    box-shadow: 0 0 0 4px #000000, 12px 12px 0 rgba(0, 0, 0, 0.6);
+    margin-bottom: 32px;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: var(--dbz-red);
+    color: #ffffff;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    padding: 6px 10px;
+    text-transform: uppercase;
+  }
+
+  .hero-title {
+    margin-top: 16px;
+    font-size: clamp(1.6rem, 4vw, 2.8rem);
+    line-height: 1.3;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 0 0 18px rgba(255, 210, 74, 0.6);
+  }
+
+  .hero-sub {
+    margin-top: 12px;
+    max-width: 520px;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.75rem;
+  }
+
+  .hero-stats {
+    display: grid;
+    gap: 16px;
+    margin-top: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .stat-card {
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    background: rgba(12, 12, 12, 0.8);
+    padding: 12px 14px;
+  }
+
+  .stat-label {
+    font-size: 0.55rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .stat-value {
+    display: block;
+    margin-top: 8px;
+    font-size: 1rem;
+    color: var(--dbz-gold);
+  }
+
+  .stat-meta {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.55rem;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .grid {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+  .panel {
+    border: 3px solid #ffffff;
+    padding: 18px;
+    background: rgba(10, 10, 10, 0.9);
+    box-shadow: 0 0 0 4px #000000, 10px 10px 0 rgba(0, 0, 0, 0.55);
+  }
+
+  .panel-title {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    color: var(--dbz-gold);
+  }
+
+  .panel-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+    font-size: 0.7rem;
+  }
+
+  .panel-row:last-child {
+    border-bottom: none;
+  }
+
+  .meter {
+    position: relative;
+    height: 16px;
+    background: #101010;
+    border: 2px solid #ffffff;
+    overflow: hidden;
+    margin-bottom: 12px;
+  }
+
+  .meter-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--dbz-orange), var(--dbz-gold));
+  }
+
+  .meter-glow {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+    animation: scanSweep 3s linear infinite;
+  }
+
+  .chip {
+    background: var(--dbz-orange);
+    padding: 4px 8px;
+    border: 2px solid #ffffff;
+    font-size: 0.6rem;
+    color: #0b0b0b;
+  }
+
+  .chip-blue {
+    background: var(--dbz-blue);
+    color: #ffffff;
+  }
+
+  .chip-red {
+    background: var(--dbz-red);
+    color: #ffffff;
+  }
+
+  .scouter {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 16px;
+  }
+
+  .scouter-ring {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 3px solid rgba(230, 54, 42, 0.8);
+    box-shadow: 0 0 16px rgba(230, 54, 42, 0.6);
+  }
+
+  .scouter-center {
+    position: absolute;
+    inset: 18px;
+    border-radius: 50%;
+    background: rgba(14, 11, 10, 0.9);
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    text-align: center;
+  }
+
+  .scouter-label {
+    font-size: 0.5rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+  }
+
+  .scouter-value {
+    font-size: 0.85rem;
+    color: var(--dbz-red);
+  }
+
+  .scouter-meta {
+    font-size: 0.5rem;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .scouter-grid {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .training-panel .module-list {
+    display: grid;
+    gap: 10px;
+    font-size: 0.7rem;
+  }
+
+  .training-panel li {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+    padding-bottom: 6px;
+  }
+
+  .training-panel li:last-child {
+    border-bottom: none;
+  }
+
+  .panel-foot {
+    margin-top: 16px;
+    font-size: 0.6rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+  }
+
+  .timeline {
+    display: grid;
+    gap: 16px;
+  }
+
+  .timeline-name {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .timeline-bar {
+    height: 10px;
+    border: 2px solid #ffffff;
+    background: #121212;
+  }
+
+  .timeline-bar span {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, var(--dbz-blue), var(--dbz-gold));
+  }
+
+  .fusion-grid {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    margin-bottom: 12px;
+  }
+
+  .fusion-card {
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    background: rgba(18, 18, 18, 0.8);
+  }
+
+  .fusion-result {
+    border: 2px solid var(--dbz-gold);
+    padding: 12px;
+    background: rgba(26, 79, 214, 0.2);
+  }
+
+  @keyframes auraPulse {
+    0%,
+    100% {
+      transform: scale(0.96);
+      opacity: 0.6;
+    }
+    50% {
+      transform: scale(1.02);
+      opacity: 1;
+    }
+  }
+
+  @keyframes scanSweep {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .anime-shell {
+      padding: 20px;
+    }
+
+    .hero {
+      padding: 18px;
+    }
+
+    .hero-title {
+      font-size: 1.5rem;
+    }
+  }
+</style>
