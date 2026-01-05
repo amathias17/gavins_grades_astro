@@ -1,10 +1,12 @@
 ---
 import gradesData from "../data/grades.json";
+import missingData from "../data/missing_assignments.json";
 import { countDragonBalls } from "../utils/dragonBalls";
 
 const overallAverage = gradesData.overall_average;
 const streak = gradesData.streak || 0;
 const dragonBalls = countDragonBalls(gradesData.classes);
+const missingCount = missingData.metadata.count || 0;
 ---
 
 <!-- Dragon Ball Z Themed Header for Anime Page -->
@@ -29,6 +31,10 @@ const dragonBalls = countDragonBalls(gradesData.classes);
                     <img src="/dbs/Ball 4 Stars.png" alt="Dragon Ball" class="dragon-ball-icon" />
                     <div class="text-[0.8em] text-[#f78a1d]" title={`${dragonBalls} / 7 Dragon Balls collected`}>{dragonBalls === 7 ? '🐉' : dragonBalls}</div>
                 </div>
+            </div>
+            <div class="border-[3px] border-solid border-white min-w-[100px] px-[15px] py-3 text-center bg-[#0e0b0a]">
+                <div class="text-[0.4em] text-[#aaa] mb-2">MISSING</div>
+                <div class="text-[0.8em] text-[#e4362a]" title={`${missingCount} missing assignments`}>{missingCount}</div>
             </div>
         </div>
     </div>
@@ -70,5 +76,30 @@ const dragonBalls = countDragonBalls(gradesData.classes);
     height: 20px;
     flex-shrink: 0;
     filter: drop-shadow(0 0 4px rgba(255, 170, 0, 0.6));
+  }
+
+  @media (max-width: 640px) {
+    .header {
+      padding: 15px !important;
+    }
+
+    .player-info h1 {
+      font-size: 1.2em !important;
+      margin-bottom: 10px !important;
+    }
+
+    .player-info p {
+      font-size: 0.5em !important;
+    }
+
+    .header-content > div:last-child {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .header-content > div:last-child > div {
+      min-width: 80px;
+      padding: 10px 12px !important;
+    }
   }
 </style>
