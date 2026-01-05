@@ -1,9 +1,17 @@
 {
   "metadata": {
-    "last_updated": "01/05/2026, 12:04 PM",
-    "count": 10
+    "last_updated": "01/05/2026, 02:50 PM",
+    "count": 11
   },
   "missing_assignments": [
+    {
+      "due_date": "01/05/2026",
+      "assignment_name": "Ch 6 Packet",
+      "class_name": "HEALTH",
+      "teacher": "Amy Palfey",
+      "category": "Class Work",
+      "max_points": "20"
+    },
     {
       "due_date": "12/19/2025",
       "assignment_name": "Holiday Sketchbook",
