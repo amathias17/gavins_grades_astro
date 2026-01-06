@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "01/06/2026, 06:36 AM",
-    "count": 11
+    "last_updated": "01/06/2026, 12:04 PM",
+    "count": 10
   },
   "missing_assignments": [
     {
@@ -19,14 +19,6 @@
       "teacher": "Kathryn Curry",
       "category": "Homework",
       "max_points": "10"
-    },
-    {
-      "due_date": "12/19/2025",
-      "assignment_name": "Cell Membrane Notes 1-4",
-      "class_name": "BIOLOGY            2",
-      "teacher": "Denise Condo",
-      "category": "Class Work",
-      "max_points": "5"
     },
     {
       "due_date": "12/19/2025",
