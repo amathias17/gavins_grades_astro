@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "01/07/2026, 06:37 AM",
-    "count": 10
+    "last_updated": "01/07/2026, 12:17 PM",
+    "count": 9
   },
   "missing_assignments": [
     {
@@ -11,14 +11,6 @@
       "teacher": "Amy Palfey",
       "category": "Class Work",
       "max_points": "20"
-    },
-    {
-      "due_date": "12/19/2025",
-      "assignment_name": "Holiday Sketchbook",
-      "class_name": "ART 1",
-      "teacher": "Kathryn Curry",
-      "category": "Homework",
-      "max_points": "10"
     },
     {
       "due_date": "12/19/2025",
