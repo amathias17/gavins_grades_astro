@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "01/09/2026, 06:36 AM",
-    "count": 8
+    "last_updated": "01/09/2026, 12:04 PM",
+    "count": 7
   },
   "missing_assignments": [
     {
@@ -19,14 +19,6 @@
       "teacher": "Denise Condo",
       "category": "Class Work",
       "max_points": "5"
-    },
-    {
-      "due_date": "12/16/2025",
-      "assignment_name": "WWI Propaganda Poster",
-      "class_name": "AMER STUDIES",
-      "teacher": "Brock Seese",
-      "category": "Project",
-      "max_points": "50"
     },
     {
       "due_date": "12/11/2025",
