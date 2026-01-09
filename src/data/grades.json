@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "01/08/2026, 07:39 PM",
+    "last_updated": "01/09/2026, 12:06 AM",
     "most_recent_date": "1/9/2026",
     "total_classes": 9
   },
@@ -22,9 +22,9 @@
       "period": "1",
       "q1_grade": 70,
       "q1_letter_grade": "C",
-      "q2_grade": 76,
+      "q2_grade": 77,
       "q2_letter_grade": "C",
-      "current_grade": 76,
+      "current_grade": 77,
       "letter_grade": "C"
     },
     {
@@ -202,7 +202,7 @@
       "1/6/2026": 71,
       "1/7/2026": 70,
       "1/8/2026": 70,
-      "1/9/2026": 76
+      "1/9/2026": 77
     },
     "Biology 2": {
       "11/24/2025": 82,
@@ -548,7 +548,7 @@
       "1/9/2026": 74
     }
   },
-  "overall_average": 76,
+  "overall_average": 77,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -596,7 +596,7 @@
     "1/6/2026": 73,
     "1/7/2026": 75,
     "1/8/2026": 75,
-    "1/9/2026": 76
+    "1/9/2026": 77
   },
   "streak": 0,
   "streak_history": {
