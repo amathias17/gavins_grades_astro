@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "01/09/2026, 12:04 PM",
+    "last_updated": "01/09/2026, 02:50 PM",
     "most_recent_date": "1/9/2026",
     "total_classes": 9
   },
@@ -77,9 +77,9 @@
       "period": "6",
       "q1_grade": 72,
       "q1_letter_grade": "C",
-      "q2_grade": 87,
+      "q2_grade": 88,
       "q2_letter_grade": "B",
-      "current_grade": 87,
+      "current_grade": 88,
       "letter_grade": "B"
     },
     {
@@ -447,7 +447,7 @@
       "1/6/2026": 72,
       "1/7/2026": 72,
       "1/8/2026": 72,
-      "1/9/2026": 87
+      "1/9/2026": 88
     },
     "Intermediate Geometry": {
       "11/24/2025": 69,
