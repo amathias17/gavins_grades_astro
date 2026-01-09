@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "01/08/2026, 02:50 PM",
-    "count": 9
+    "last_updated": "01/08/2026, 07:39 PM",
+    "count": 8
   },
   "missing_assignments": [
     {
@@ -27,14 +27,6 @@
       "teacher": "Brock Seese",
       "category": "Project",
       "max_points": "50"
-    },
-    {
-      "due_date": "12/16/2025",
-      "assignment_name": "Color Wheel Sketch",
-      "class_name": "ART 1",
-      "teacher": "Kathryn Curry",
-      "category": "Class Work",
-      "max_points": "15"
     },
     {
       "due_date": "12/11/2025",
