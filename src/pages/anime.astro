@@ -1,6 +1,7 @@
 ---
 import { ClientRouter } from "astro:transitions";
 import AnimeHeader from "../components/AnimeHeader.astro";
+import DragonRadarLoader from "../components/DragonRadarLoader.astro";
 import gradesData from "../data/grades.json";
 import missingData from "../data/missing_assignments.json";
 import "../styles/global.css";
@@ -38,6 +39,7 @@ const totalMissingPoints = missingAssignments.reduce((sum, assignment) => {
     <title>DBZ Training Lab - Gavin's Grades</title>
   </head>
   <body class="font-player leading-normal min-w-screen p-5 text-white dragon-radar-bg">
+    <DragonRadarLoader />
     <div class="fixed h-full left-0 dragon-radar-grid top-0 w-full z-0"></div>
     <div class="fixed h-full left-0 dragon-radar-triangle top-0 w-full z-0"></div>
     <div class="fixed h-full left-0 dragon-radar-dots top-0 w-full z-0">
