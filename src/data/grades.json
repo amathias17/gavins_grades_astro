@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "01/13/2026, 12:05 PM",
+    "last_updated": "01/13/2026, 02:50 PM",
     "most_recent_date": "1/13/2026",
     "total_classes": 9
   },
@@ -22,9 +22,9 @@
       "period": "1",
       "q1_grade": 70,
       "q1_letter_grade": "C",
-      "q2_grade": 77,
+      "q2_grade": 79,
       "q2_letter_grade": "C",
-      "current_grade": 77,
+      "current_grade": 79,
       "letter_grade": "C"
     },
     {
@@ -88,9 +88,9 @@
       "period": "7",
       "q1_grade": 70,
       "q1_letter_grade": "C",
-      "q2_grade": 74,
+      "q2_grade": 72,
       "q2_letter_grade": "C",
-      "current_grade": 74,
+      "current_grade": 72,
       "letter_grade": "C"
     },
     {
@@ -210,7 +210,7 @@
       "1/10/2026": 77,
       "1/11/2026": 77,
       "1/12/2026": 77,
-      "1/13/2026": 77
+      "1/13/2026": 79
     },
     "Biology 2": {
       "11/24/2025": 82,
@@ -528,7 +528,7 @@
       "1/10/2026": 74,
       "1/11/2026": 74,
       "1/12/2026": 74,
-      "1/13/2026": 74
+      "1/13/2026": 72
     },
     "Health": {
       "11/24/2025": 94,
