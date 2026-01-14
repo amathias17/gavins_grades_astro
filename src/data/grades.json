@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "01/14/2026, 06:38 AM",
+    "last_updated": "01/14/2026, 12:05 PM",
     "most_recent_date": "1/14/2026",
     "total_classes": 9
   },
@@ -11,9 +11,9 @@
       "period": "0",
       "q1_grade": null,
       "q1_letter_grade": null,
-      "q2_grade": 77,
+      "q2_grade": 71,
       "q2_letter_grade": "C",
-      "current_grade": 77,
+      "current_grade": 71,
       "letter_grade": "C"
     },
     {
@@ -158,7 +158,7 @@
       "1/11/2026": 86,
       "1/12/2026": 77,
       "1/13/2026": 77,
-      "1/14/2026": 77
+      "1/14/2026": 71
     },
     "English 10": {
       "11/24/2025": 75,
@@ -593,7 +593,7 @@
       "1/14/2026": 74
     }
   },
-  "overall_average": 77,
+  "overall_average": 76,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -646,7 +646,7 @@
     "1/11/2026": 78,
     "1/12/2026": 77,
     "1/13/2026": 77,
-    "1/14/2026": 77
+    "1/14/2026": 76
   },
   "streak": 0,
   "streak_history": {
