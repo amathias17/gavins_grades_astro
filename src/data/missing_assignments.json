@@ -1,9 +1,17 @@
 {
   "metadata": {
-    "last_updated": "01/15/2026, 12:08 PM",
-    "count": 7
+    "last_updated": "01/15/2026, 02:51 PM",
+    "count": 8
   },
   "missing_assignments": [
+    {
+      "due_date": "01/15/2026",
+      "assignment_name": "Depression Gallery Walk",
+      "class_name": "AMER STUDIES",
+      "teacher": "Brock Seese",
+      "category": "Class Work",
+      "max_points": "10"
+    },
     {
       "due_date": "01/05/2026",
       "assignment_name": "Ch 6 Packet",
