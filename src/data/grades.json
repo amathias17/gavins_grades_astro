@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "01/15/2026, 06:36 AM",
+    "last_updated": "01/15/2026, 12:08 PM",
     "most_recent_date": "1/15/2026",
     "total_classes": 9
   },
@@ -11,9 +11,9 @@
       "period": "0",
       "q1_grade": null,
       "q1_letter_grade": null,
-      "q2_grade": 71,
+      "q2_grade": 73,
       "q2_letter_grade": "C",
-      "current_grade": 71,
+      "current_grade": 73,
       "letter_grade": "C"
     },
     {
@@ -33,9 +33,9 @@
       "period": "2",
       "q1_grade": 85,
       "q1_letter_grade": "B",
-      "q2_grade": 80,
+      "q2_grade": 81,
       "q2_letter_grade": "B",
-      "current_grade": 80,
+      "current_grade": 81,
       "letter_grade": "B"
     },
     {
@@ -159,7 +159,7 @@
       "1/12/2026": 77,
       "1/13/2026": 77,
       "1/14/2026": 71,
-      "1/15/2026": 71
+      "1/15/2026": 73
     },
     "English 10": {
       "11/24/2025": 75,
@@ -269,7 +269,7 @@
       "1/12/2026": 84,
       "1/13/2026": 80,
       "1/14/2026": 80,
-      "1/15/2026": 80
+      "1/15/2026": 81
     },
     "History Pop Cult 1": {
       "11/24/2025": 90,
@@ -602,7 +602,7 @@
       "1/15/2026": 74
     }
   },
-  "overall_average": 76,
+  "overall_average": 77,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -656,7 +656,7 @@
     "1/12/2026": 77,
     "1/13/2026": 77,
     "1/14/2026": 76,
-    "1/15/2026": 76
+    "1/15/2026": 77
   },
   "streak": 0,
   "streak_history": {
