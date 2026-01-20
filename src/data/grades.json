@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "01/20/2026, 06:38 AM",
+    "last_updated": "01/20/2026, 12:06 PM",
     "most_recent_date": "1/20/2026",
     "total_classes": 9
   },
@@ -22,9 +22,9 @@
       "period": "1",
       "q1_grade": 70,
       "q1_letter_grade": "C",
-      "q2_grade": 78,
+      "q2_grade": 79,
       "q2_letter_grade": "C",
-      "current_grade": 78,
+      "current_grade": 79,
       "letter_grade": "C"
     },
     {
@@ -44,9 +44,9 @@
       "period": "3",
       "q1_grade": 73,
       "q1_letter_grade": "C",
-      "q2_grade": 46,
+      "q2_grade": 33,
       "q2_letter_grade": "F",
-      "current_grade": 46,
+      "current_grade": 33,
       "letter_grade": "F"
     },
     {
@@ -224,7 +224,7 @@
       "1/17/2026": 78,
       "1/18/2026": 78,
       "1/19/2026": 78,
-      "1/20/2026": 78
+      "1/20/2026": 79
     },
     "Biology 2": {
       "11/24/2025": 82,
@@ -344,7 +344,7 @@
       "1/17/2026": 46,
       "1/18/2026": 46,
       "1/19/2026": 46,
-      "1/20/2026": 46
+      "1/20/2026": 33
     },
     "Art 1": {
       "11/24/2025": 84,
@@ -647,7 +647,7 @@
       "1/20/2026": 76
     }
   },
-  "overall_average": 77,
+  "overall_average": 75,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -706,7 +706,7 @@
     "1/17/2026": 76,
     "1/18/2026": 76,
     "1/19/2026": 77,
-    "1/20/2026": 77
+    "1/20/2026": 75
   },
   "streak": 0,
   "streak_history": {
