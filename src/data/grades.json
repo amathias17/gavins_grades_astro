@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "01/21/2026, 06:39 AM",
+    "last_updated": "01/21/2026, 12:20 PM",
     "most_recent_date": "1/21/2026",
     "total_classes": 9
   },
@@ -33,9 +33,9 @@
       "period": "2",
       "q1_grade": 85,
       "q1_letter_grade": "B",
-      "q2_grade": 83,
+      "q2_grade": 88,
       "q2_letter_grade": "B",
-      "current_grade": 83,
+      "current_grade": 88,
       "letter_grade": "B"
     },
     {
@@ -55,10 +55,10 @@
       "period": "4",
       "q1_grade": 55,
       "q1_letter_grade": "F",
-      "q2_grade": 74,
-      "q2_letter_grade": "C",
-      "current_grade": 74,
-      "letter_grade": "C"
+      "q2_grade": 59,
+      "q2_letter_grade": "F",
+      "current_grade": 59,
+      "letter_grade": "F"
     },
     {
       "class_name": "Physical Educ",
@@ -99,9 +99,9 @@
       "period": "8",
       "q1_grade": 78,
       "q1_letter_grade": "C",
-      "q2_grade": 76,
+      "q2_grade": 78,
       "q2_letter_grade": "C",
-      "current_grade": 76,
+      "current_grade": 78,
       "letter_grade": "C"
     }
   ],
@@ -287,7 +287,7 @@
       "1/18/2026": 81,
       "1/19/2026": 81,
       "1/20/2026": 81,
-      "1/21/2026": 83
+      "1/21/2026": 88
     },
     "History Pop Cult 1": {
       "11/24/2025": 90,
@@ -409,7 +409,7 @@
       "1/18/2026": 74,
       "1/19/2026": 74,
       "1/20/2026": 74,
-      "1/21/2026": 74
+      "1/21/2026": 59
     },
     "Physical Educ": {
       "11/24/2025": 100,
@@ -653,7 +653,7 @@
       "1/18/2026": 74,
       "1/19/2026": 76,
       "1/20/2026": 76,
-      "1/21/2026": 76
+      "1/21/2026": 78
     }
   },
   "overall_average": 75,
