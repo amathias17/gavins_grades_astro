@@ -1,21 +1,10 @@
 {
   "metadata": {
-    "last_updated": "01/21/2026, 12:20 PM",
+    "last_updated": "01/21/2026, 02:55 PM",
     "most_recent_date": "1/21/2026",
-    "total_classes": 9
+    "total_classes": 8
   },
   "classes": [
-    {
-      "class_name": "Sophomore Seminar",
-      "teacher": "Victoria Good",
-      "period": "0",
-      "q1_grade": null,
-      "q1_letter_grade": null,
-      "q2_grade": 76,
-      "q2_letter_grade": "C",
-      "current_grade": 76,
-      "letter_grade": "C"
-    },
     {
       "class_name": "English 10",
       "teacher": "Megan Leone",
@@ -656,7 +645,7 @@
       "1/21/2026": 78
     }
   },
-  "overall_average": 75,
+  "overall_average": 74,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -716,7 +705,7 @@
     "1/18/2026": 76,
     "1/19/2026": 77,
     "1/20/2026": 75,
-    "1/21/2026": 75
+    "1/21/2026": 74
   },
   "streak": 0,
   "streak_history": {
