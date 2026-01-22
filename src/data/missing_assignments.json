@@ -1,64 +1,7 @@
 {
   "metadata": {
-    "last_updated": "01/21/2026, 07:40 PM",
-    "count": 7
+    "last_updated": "01/22/2026, 12:08 AM",
+    "count": 0
   },
-  "missing_assignments": [
-    {
-      "due_date": "01/15/2026",
-      "assignment_name": "Depression Gallery Walk",
-      "class_name": "AMER STUDIES",
-      "teacher": "Brock Seese",
-      "category": "Class Work",
-      "max_points": "10"
-    },
-    {
-      "due_date": "01/12/2026",
-      "assignment_name": "DECADE OF MUSIC PRESENTATION",
-      "class_name": "HISTORY POP CULT   1",
-      "teacher": "Robyn Dixon",
-      "category": "Class Work",
-      "max_points": "60"
-    },
-    {
-      "due_date": "01/05/2026",
-      "assignment_name": "Ch 6 Packet",
-      "class_name": "HEALTH",
-      "teacher": "Amy Palfey",
-      "category": "Class Work",
-      "max_points": "20"
-    },
-    {
-      "due_date": "12/11/2025",
-      "assignment_name": "My Social Truth",
-      "class_name": "HEALTH",
-      "teacher": "Amy Palfey",
-      "category": "Project",
-      "max_points": "10"
-    },
-    {
-      "due_date": "12/05/2025",
-      "assignment_name": "Vicksburg Summary",
-      "class_name": "ENGLISH 10",
-      "teacher": "Megan Leone",
-      "category": "Writing",
-      "max_points": "25"
-    },
-    {
-      "due_date": "12/04/2025",
-      "assignment_name": "Ch 9 Packets",
-      "class_name": "HEALTH",
-      "teacher": "Amy Palfey",
-      "category": "Class Work",
-      "max_points": "15"
-    },
-    {
-      "due_date": "11/24/2025",
-      "assignment_name": "Ed Puzzle US Before WWI",
-      "class_name": "AMER STUDIES",
-      "teacher": "Brock Seese",
-      "category": "Class Work",
-      "max_points": "15"
-    }
-  ]
+  "missing_assignments": []
 }
