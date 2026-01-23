@@ -451,6 +451,14 @@ async function extractAssignmentDetails(page, assignmentId, classId) {
         }
       }
 
+      // If we still don't have totalRaw but see "out of X", capture X
+      if (!totalRaw) {
+        const outOfMatch = text.match(/out\s*of\s*([\d.]+)/i);
+        if (outOfMatch) {
+          totalRaw = outOfMatch[1];
+        }
+      }
+
       // Approach 2: Look in specific table cells
       if (!earnedRaw || !totalRaw) {
         // Try to find the points cell more reliably
@@ -506,6 +514,9 @@ async function extractAssignmentDetails(page, assignmentId, classId) {
         return val;
       };
 
+      const percentMatch = text.match(/([0-9]{1,3})\s*%/);
+      const percentValue = percentMatch ? Number(percentMatch[1]) : null;
+
       const earnedParsed = parseNumber(earnedRaw);
       const totalParsed = parseNumber(totalRaw);
 
@@ -527,15 +538,20 @@ async function extractAssignmentDetails(page, assignmentId, classId) {
       }
 
       // Fallback: derive earned from percentage when points aren't parsed
-      if (!graded && totalPoints !== null) {
-        const percentMatch = text.match(/([0-9]{1,3})\s*%/);
-        if (percentMatch) {
-          const pct = Number(percentMatch[1]);
-          if (Number.isFinite(pct)) {
-            earnedPoints = Math.round((pct / 100) * totalPoints * 100) / 100;
-            graded = true;
-          }
-        }
+      if (!graded && totalPoints !== null && Number.isFinite(percentValue)) {
+        earnedPoints = Math.round((percentValue / 100) * totalPoints * 100) / 100;
+        graded = true;
+      }
+
+      // If points parsed as 0 but percentage indicates credit, recompute from percent
+      if (
+        totalPoints !== null &&
+        Number.isFinite(percentValue) &&
+        percentValue >= 0 &&
+        (earnedPoints === null || (earnedPoints === 0 && percentValue > 0))
+      ) {
+        earnedPoints = Math.round((percentValue / 100) * totalPoints * 100) / 100;
+        graded = true;
       }
 
       // Weight: look for "Weight: 15%" or "Weight 15%"

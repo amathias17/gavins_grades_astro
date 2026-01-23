@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "01/23/2026, 01:53 PM",
+    "last_updated": "01/23/2026, 02:13 PM",
     "most_recent_date": "1/23/2026",
     "total_classes": 9
   },
@@ -104,9 +104,9 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q3_grade": 0,
+      "q3_grade": 50,
       "q3_letter_grade": "F",
-      "current_grade": 0,
+      "current_grade": 50,
       "letter_grade": "F"
     },
     {
@@ -625,7 +625,7 @@
       "1/20/2026": 70,
       "1/21/2026": 70,
       "1/22/2026": 70,
-      "1/23/2026": 0
+      "1/23/2026": 50
     },
     "Health": {
       "11/24/2025": 94,
@@ -703,7 +703,7 @@
       "1/23/2026": 0
     }
   },
-  "overall_average": 100,
+  "overall_average": 83,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -765,7 +765,7 @@
     "1/20/2026": 75,
     "1/21/2026": 74,
     "1/22/2026": 74,
-    "1/23/2026": 100
+    "1/23/2026": 83
   },
   "streak": 2,
   "streak_history": {

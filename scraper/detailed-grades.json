@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-01-23T18:53:54.285Z",
+    "scrapedAt": "2026-01-23T19:13:21.937Z",
     "totalClasses": 9,
     "totalAssignments": 6
   },
@@ -29,8 +29,8 @@
       "assignments": [
         {
           "name": "Green Solar Cells:Photo Synthe",
-          "dueDate": "01/23/2026",
-          "earnedPoints": 0,
+          "dueDate": "01/22/2026",
+          "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
           "graded": true
@@ -57,15 +57,15 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 0,
+      "currentGrade": 50,
       "assignments": [
         {
           "name": "Get More Math",
           "dueDate": "01/23/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 8,
           "totalPoints": 16,
           "weight": 2,
-          "graded": false
+          "graded": true
         }
       ]
     },
@@ -78,10 +78,10 @@
         {
           "name": "Where to Go - Social Norms",
           "dueDate": "01/23/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 8,
           "totalPoints": 16,
           "weight": 2,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Classroom Expectations",
