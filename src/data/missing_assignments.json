@@ -1,7 +1,144 @@
 {
   "metadata": {
-    "last_updated": "01/22/2026, 02:52 PM",
-    "count": 0
+    "last_updated": "01/22/2026, 07:40 PM",
+    "count": 17
   },
-  "missing_assignments": []
+  "missing_assignments": [
+    {
+      "due_date": "01/15/2026",
+      "assignment_name": "Depression Gallery Walk",
+      "class_name": "AMER STUDIES",
+      "teacher": "Brock Seese",
+      "category": "Class Work",
+      "max_points": "10"
+    },
+    {
+      "due_date": "01/12/2026",
+      "assignment_name": "DECADE OF MUSIC PRESENTATION",
+      "class_name": "HISTORY POP CULT   1",
+      "teacher": "Robyn Dixon",
+      "category": "Class Work",
+      "max_points": "60"
+    },
+    {
+      "due_date": "01/05/2026",
+      "assignment_name": "Ch 6 Packet",
+      "class_name": "HEALTH",
+      "teacher": "Amy Palfey",
+      "category": "Class Work",
+      "max_points": "20"
+    },
+    {
+      "due_date": "12/11/2025",
+      "assignment_name": "My Social Truth",
+      "class_name": "HEALTH",
+      "teacher": "Amy Palfey",
+      "category": "Project",
+      "max_points": "10"
+    },
+    {
+      "due_date": "12/05/2025",
+      "assignment_name": "Vicksburg Summary",
+      "class_name": "ENGLISH 10",
+      "teacher": "Megan Leone",
+      "category": "Writing",
+      "max_points": "25"
+    },
+    {
+      "due_date": "12/04/2025",
+      "assignment_name": "Ch 9 Packets",
+      "class_name": "HEALTH",
+      "teacher": "Amy Palfey",
+      "category": "Class Work",
+      "max_points": "15"
+    },
+    {
+      "due_date": "11/24/2025",
+      "assignment_name": "Ed Puzzle US Before WWI",
+      "class_name": "AMER STUDIES",
+      "teacher": "Brock Seese",
+      "category": "Class Work",
+      "max_points": "15"
+    },
+    {
+      "due_date": "10/17/2025",
+      "assignment_name": "Bellringer Vocab 10/13-10/16",
+      "class_name": "ENGLISH 10",
+      "teacher": "Megan Leone",
+      "category": "Bell Ringer",
+      "max_points": "10"
+    },
+    {
+      "due_date": "10/07/2025",
+      "assignment_name": "Ch 3 Packet",
+      "class_name": "HEALTH",
+      "teacher": "Amy Palfey",
+      "category": "Class Work",
+      "max_points": "20"
+    },
+    {
+      "due_date": "09/30/2025",
+      "assignment_name": "Mustache One-Pager",
+      "class_name": "ENGLISH 10",
+      "teacher": "Megan Leone",
+      "category": "Project",
+      "max_points": "75"
+    },
+    {
+      "due_date": "09/23/2025",
+      "assignment_name": "Ch 2 Packet",
+      "class_name": "HEALTH",
+      "teacher": "Amy Palfey",
+      "category": "Class Work",
+      "max_points": "15"
+    },
+    {
+      "due_date": "09/19/2025",
+      "assignment_name": "Turn of the Century Ad",
+      "class_name": "AMER STUDIES",
+      "teacher": "Brock Seese",
+      "category": "Project",
+      "max_points": "20"
+    },
+    {
+      "due_date": "09/17/2025",
+      "assignment_name": "The Jungle Reading",
+      "class_name": "AMER STUDIES",
+      "teacher": "Brock Seese",
+      "category": "Reading",
+      "max_points": "25"
+    },
+    {
+      "due_date": "09/17/2025",
+      "assignment_name": "Name Acrostic",
+      "class_name": "HEALTH",
+      "teacher": "Amy Palfey",
+      "category": "Project",
+      "max_points": "15"
+    },
+    {
+      "due_date": "09/12/2025",
+      "assignment_name": "2 Point Perspective Cubes",
+      "class_name": "ART 1",
+      "teacher": "Kathryn Curry",
+      "category": "Class Work",
+      "max_points": "25"
+    },
+    {
+      "due_date": "09/09/2025",
+      "assignment_name": "Chapter 1 Packet",
+      "class_name": "HEALTH",
+      "teacher": "Amy Palfey",
+      "category": "Class Work",
+      "max_points": "20"
+    },
+    {
+      "due_date": "09/05/2025",
+      "assignment_name": "Ch 1 Sec 3",
+      "class_name": "HEALTH",
+      "teacher": "Amy Palfey",
+      "category": "Quiz",
+      "max_points": "10"
+    }
+  ]
 }
