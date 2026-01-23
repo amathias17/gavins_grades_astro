@@ -6,7 +6,7 @@ export interface Assignment {
   score: number | null;
   maxPoints: number;
   percentage: number | null;
-  status?: "graded" | "missing" | "pending";
+  status?: "graded" | "missing" | "pending" | "not-graded";
   notes?: string;
 }
 
