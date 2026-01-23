@@ -1,78 +1,361 @@
 ---
-import gradesData from "../data/grades.json";
-import missingAssignmentsData from "../data/missing_assignments.json";
+import CurrentGrades from "../components/CurrentGrades.astro";
+import MissingAssignments from "../components/MissingAssignments.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-
-const data = gradesData.classes.map((classInfo) => ({
-    class: classInfo.class_name,
-    teacher: classInfo.teacher,
-    q1_grade: classInfo.q1_grade,
-    q1_letter_grade: classInfo.q1_letter_grade,
-    q2_grade: classInfo.q2_grade,
-    q2_letter_grade: classInfo.q2_letter_grade,
-    period: classInfo.period,
-    grade: classInfo.current_grade,
-    lettergrade: classInfo.letter_grade,
-}));
-
-const metadata = {
-    last_updated: gradesData.metadata.last_updated
-};
-
-const missingAssignments = missingAssignmentsData.missing_assignments?.map(
-    (assignment) => ({
-        assignment: assignment.assignment_name,
-        class: assignment.class_name,
-        due: assignment.due_date.replace(/\u00a0/g, " ").replace(/\s*\(Q\d+\)/i, "").trim(),
-        points: assignment.max_points,
-    }),
-) ?? [];
-
-function getGradeColor(grade: number): string {
-    if (grade >= 90) return "grade-a";
-    if (grade >= 80) return "grade-b";
-    if (grade >= 70) return "grade-c";
-    if (grade >= 60) return "grade-d";
-    return "grade-f";
-}
 ---
 
 <BaseLayout>
-    <section class="py-16">
-        <div class="container px-4 mx-auto">
-            <div class="mb-8">
-                <h1 class="text-3xl font-bold font-heading text-white mb-2">
-                    Missing Assignments
-                </h1>
-                <p class="text-gray-300">
-                    Updated {metadata.last_updated}. Total missing: {missingAssignments.length}
-                </p>
+    <div class="dashboard-container">
+        <!-- Header Section -->
+        <header class="dashboard-header">
+            <div class="header-content">
+                <h1 class="main-title">Academic Performance</h1>
+                <div class="subtitle-group">
+                    <span class="academic-term">Winter 2025</span>
+                    <span class="divider">•</span>
+                    <span class="last-updated">Updated Today</span>
+                </div>
             </div>
+            <div class="decorative-line"></div>
+        </header>
 
-            {missingAssignments.length === 0 ? (
-                <div class="bg-[#000] border-2 border-white p-6 text-center text-white">
-                    No missing assignments found.
+        <!-- Main Grid Layout -->
+        <main class="dashboard-grid">
+            <!-- Primary Column: Current Grades -->
+            <section class="grades-section">
+                <div class="section-header">
+                    <h2 class="section-title">Current Standing</h2>
+                    <div class="section-accent"></div>
                 </div>
-            ) : (
-                <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-                    {missingAssignments.map((item) => (
-                        <div class="bg-[#000] border-2 border-[#00ffff] p-5">
-                            <div class="text-sm uppercase text-[#00ffff] mb-2">
-                                {item.class}
-                            </div>
-                            <div class="text-lg font-bold text-white mb-2">
-                                {item.assignment}
-                            </div>
-                            <div class="text-sm text-gray-300 mb-3">
-                                Due: {item.due}
-                            </div>
-                            <div class="inline-flex items-center gap-2 text-sm uppercase text-white border border-white px-3 py-1">
-                                {item.points} pts
-                            </div>
-                        </div>
-                    ))}
+                <div class="content-card grades-card">
+                    <CurrentGrades />
                 </div>
-            )}
-        </div>
-    </section>
+            </section>
+
+            <!-- Secondary Column: Missing Assignments -->
+            <aside class="assignments-section">
+                <div class="section-header">
+                    <h2 class="section-title">Action Required</h2>
+                    <div class="section-accent accent-warn"></div>
+                </div>
+                <div class="content-card assignments-card">
+                    <MissingAssignments />
+                </div>
+            </aside>
+        </main>
+
+        <!-- Decorative Background Elements -->
+        <div class="bg-decoration bg-decoration-1"></div>
+        <div class="bg-decoration bg-decoration-2"></div>
+    </div>
 </BaseLayout>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap');
+
+    :root {
+        /* Color Palette - Refined Academic */
+        --cream-bg: #fdfbf7;
+        --warm-white: #faf8f4;
+        --soft-shadow: rgba(85, 70, 55, 0.08);
+        --deep-navy: #1a2332;
+        --slate-text: #4a5568;
+        --accent-amber: #d97706;
+        --accent-green: #047857;
+        --accent-burgundy: #991b1b;
+        --border-subtle: rgba(120, 100, 80, 0.12);
+
+        /* Typography */
+        --font-display: 'Crimson Pro', serif;
+        --font-body: 'DM Sans', sans-serif;
+
+        /* Spacing */
+        --space-xs: 0.5rem;
+        --space-sm: 1rem;
+        --space-md: 1.5rem;
+        --space-lg: 2.5rem;
+        --space-xl: 4rem;
+    }
+
+    .dashboard-container {
+        min-height: 100vh;
+        background: var(--cream-bg);
+        padding: var(--space-lg) var(--space-md);
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Header Styling */
+    .dashboard-header {
+        max-width: 1400px;
+        margin: 0 auto var(--space-xl);
+        animation: fadeSlideDown 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .header-content {
+        margin-bottom: var(--space-md);
+    }
+
+    .main-title {
+        font-family: var(--font-display);
+        font-size: clamp(2.5rem, 5vw, 4.5rem);
+        font-weight: 700;
+        color: var(--deep-navy);
+        letter-spacing: -0.03em;
+        line-height: 1.1;
+        margin: 0 0 var(--space-sm);
+    }
+
+    .subtitle-group {
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        font-family: var(--font-body);
+        font-size: 0.95rem;
+        color: var(--slate-text);
+        font-weight: 500;
+        letter-spacing: 0.02em;
+    }
+
+    .academic-term {
+        color: var(--accent-amber);
+        font-weight: 600;
+    }
+
+    .divider {
+        color: var(--border-subtle);
+    }
+
+    .decorative-line {
+        height: 3px;
+        background: linear-gradient(
+            to right,
+            var(--accent-amber) 0%,
+            var(--accent-amber) 40%,
+            transparent 100%
+        );
+        border-radius: 2px;
+        animation: expandLine 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s backwards;
+    }
+
+    /* Main Grid Layout */
+    .dashboard-grid {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+        position: relative;
+        z-index: 1;
+    }
+
+    @media (min-width: 1024px) {
+        .dashboard-grid {
+            grid-template-columns: 1.5fr 1fr;
+            gap: var(--space-xl);
+        }
+    }
+
+    /* Section Headers */
+    .section-header {
+        margin-bottom: var(--space-md);
+    }
+
+    .section-title {
+        font-family: var(--font-display);
+        font-size: clamp(1.75rem, 3vw, 2.25rem);
+        font-weight: 600;
+        color: var(--deep-navy);
+        margin: 0 0 var(--space-xs);
+        letter-spacing: -0.02em;
+    }
+
+    .section-accent {
+        width: 60px;
+        height: 2px;
+        background: var(--accent-green);
+        border-radius: 1px;
+        transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .section-accent.accent-warn {
+        background: var(--accent-amber);
+    }
+
+    .section-header:hover .section-accent {
+        width: 90px;
+    }
+
+    /* Content Cards */
+    .content-card {
+        background: var(--warm-white);
+        border: 1px solid var(--border-subtle);
+        border-radius: 16px;
+        padding: var(--space-lg);
+        box-shadow:
+            0 1px 3px var(--soft-shadow),
+            0 8px 24px rgba(85, 70, 55, 0.04);
+        position: relative;
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .content-card::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 16px;
+        background: linear-gradient(
+            135deg,
+            rgba(217, 119, 6, 0.03) 0%,
+            transparent 50%
+        );
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        pointer-events: none;
+    }
+
+    .content-card:hover {
+        transform: translateY(-4px);
+        box-shadow:
+            0 4px 6px var(--soft-shadow),
+            0 16px 48px rgba(85, 70, 55, 0.08);
+    }
+
+    .content-card:hover::before {
+        opacity: 1;
+    }
+
+    /* Grades Section */
+    .grades-section {
+        animation: fadeSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s backwards;
+    }
+
+    .grades-card {
+        min-height: 400px;
+    }
+
+    /* Assignments Section */
+    .assignments-section {
+        animation: fadeSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s backwards;
+    }
+
+    .assignments-card {
+        background: linear-gradient(
+            to bottom,
+            var(--warm-white) 0%,
+            #fffcf8 100%
+        );
+        border-left: 3px solid var(--accent-amber);
+    }
+
+    /* Decorative Background Elements */
+    .bg-decoration {
+        position: fixed;
+        border-radius: 50%;
+        pointer-events: none;
+        opacity: 0.4;
+        filter: blur(60px);
+        z-index: 0;
+    }
+
+    .bg-decoration-1 {
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(
+            circle,
+            rgba(217, 119, 6, 0.08) 0%,
+            transparent 70%
+        );
+        top: -150px;
+        right: -100px;
+        animation: float 20s ease-in-out infinite;
+    }
+
+    .bg-decoration-2 {
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(
+            circle,
+            rgba(4, 120, 87, 0.06) 0%,
+            transparent 70%
+        );
+        bottom: -100px;
+        left: -80px;
+        animation: float 25s ease-in-out infinite reverse;
+    }
+
+    /* Animations */
+    @keyframes fadeSlideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeSlideUp {
+        from {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes expandLine {
+        from {
+            transform: scaleX(0);
+            transform-origin: left;
+        }
+        to {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+    }
+
+    @keyframes float {
+        0%, 100% {
+            transform: translate(0, 0) scale(1);
+        }
+        33% {
+            transform: translate(30px, -30px) scale(1.05);
+        }
+        66% {
+            transform: translate(-20px, 20px) scale(0.95);
+        }
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .dashboard-container {
+            padding: var(--space-md) var(--space-sm);
+        }
+
+        .content-card {
+            padding: var(--space-md);
+        }
+
+        .dashboard-header {
+            margin-bottom: var(--space-lg);
+        }
+    }
+
+    /* Ensure component content inherits proper styling */
+    .content-card :global(h3),
+    .content-card :global(h4) {
+        font-family: var(--font-display);
+        color: var(--deep-navy);
+    }
+
+    .content-card :global(p),
+    .content-card :global(span),
+    .content-card :global(td),
+    .content-card :global(th) {
+        font-family: var(--font-body);
+    }
+</style>

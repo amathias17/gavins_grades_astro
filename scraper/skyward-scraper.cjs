@@ -171,39 +171,55 @@ async function scrapeGrades(username, password) {
                 // Now find the corresponding grade row in the right table using the group ID
                 const gradeRow = document.querySelector(`tr[group-parent="${groupId}"]`);
 
+                // We only care about the current marking period (Q3). Keep placeholders for schema compatibility.
                 let q1Grade = null;
                 let q2Grade = null;
+                let q3Grade = null;
+                let isQ3Highlighted = false;
 
                 if (gradeRow) {
+                    isQ3Highlighted = gradeRow.querySelector('.sf_highlightYellow') !== null;
+
                     const gradeCells = gradeRow.querySelectorAll('td');
 
-                    // First td contains Q1 grade
-                    if (gradeCells.length > 0) {
-                        const q1Link = gradeCells[0].querySelector('a[id="showGradeInfo"]');
-                        if (q1Link) {
-                            const gradeText = q1Link.textContent.trim();
-                            const grade = parseInt(gradeText);
-                            if (!isNaN(grade) && grade >= 0 && grade <= 100) {
-                                q1Grade = grade;
-                            }
+                    // Grab Q1/Q2 if present (for compatibility, but not used for current)
+                    const q1Link = gradeCells[0]?.querySelector('a[id="showGradeInfo"]');
+                    if (q1Link) {
+                        const gradeText = q1Link.textContent?.trim().replace(/%/g, '');
+                        const grade = Number(gradeText);
+                        if (Number.isFinite(grade) && grade >= 0 && grade <= 100) {
+                            q1Grade = grade;
                         }
                     }
 
-                    // Second td contains Q2 grade
-                    if (gradeCells.length > 1) {
-                        const q2Link = gradeCells[1].querySelector('a[id="showGradeInfo"]');
-                        if (q2Link) {
-                            const gradeText = q2Link.textContent.trim();
-                            const grade = parseInt(gradeText);
-                            if (!isNaN(grade) && grade >= 0 && grade <= 100) {
-                                q2Grade = grade;
-                            }
+                    const q2Link = gradeCells[1]?.querySelector('a[id="showGradeInfo"]');
+                    if (q2Link) {
+                        const gradeText = q2Link.textContent?.trim().replace(/%/g, '');
+                        const grade = Number(gradeText);
+                        if (Number.isFinite(grade) && grade >= 0 && grade <= 100) {
+                            q2Grade = grade;
                         }
+                    }
+
+                    // Q3: if cell exists, parse; if highlighted but empty, default to 0
+                    const q3Link = gradeCells[2]?.querySelector('a[id="showGradeInfo"]');
+                    if (q3Link) {
+                        const gradeText = q3Link.textContent?.trim().replace(/%/g, '');
+                        const grade = Number(gradeText);
+                        if (Number.isFinite(grade) && grade >= 0 && grade <= 100) {
+                            q3Grade = grade;
+                        }
+                    } else if (isQ3Highlighted) {
+                        q3Grade = 0;
                     }
                 }
 
-                // Only include classes that have at least one grade
-                if (q1Grade !== null || q2Grade !== null) {
+                // Only include classes marked as current (highlighted), even if no grade yet
+                if (isQ3Highlighted) {
+                    // Default empty Q3 to 0 so current classes surface with a placeholder grade
+                    if (q3Grade === null) {
+                        q3Grade = 0;
+                    }
                     // Calculate letter grades
                     let q1LetterGrade = null;
                     if (q1Grade !== null) {
@@ -223,6 +239,15 @@ async function scrapeGrades(username, password) {
                         else q2LetterGrade = 'F';
                     }
 
+                    let q3LetterGrade = null;
+                    if (q3Grade !== null) {
+                        if (q3Grade >= 90) q3LetterGrade = 'A';
+                        else if (q3Grade >= 80) q3LetterGrade = 'B';
+                        else if (q3Grade >= 70) q3LetterGrade = 'C';
+                        else if (q3Grade >= 60) q3LetterGrade = 'D';
+                        else q3LetterGrade = 'F';
+                    }
+
                     classes.push({
                         class_name: className,
                         teacher: teacher,
@@ -230,7 +255,9 @@ async function scrapeGrades(username, password) {
                         q1_grade: q1Grade,
                         q1_letter_grade: q1LetterGrade,
                         q2_grade: q2Grade,
-                        q2_letter_grade: q2LetterGrade
+                        q2_letter_grade: q2LetterGrade,
+                        q3_grade: q3Grade,
+                        q3_letter_grade: q3LetterGrade
                     });
                 }
             });
@@ -280,13 +307,17 @@ async function scrapeGrades(username, password) {
                             // We need at least 4 cells for a valid assignment row
                             if (cells.length < 4) return;
 
-                            const date = cells[0]?.textContent.trim() || '';
+                            const dateRaw = cells[0]?.textContent.trim() || '';
+                            const date = dateRaw;
                             const assignmentName = cells[1]?.textContent.trim() || '';
                             const className = cells[2]?.textContent.trim() || '';
                             const teacher = cells[3]?.textContent.trim() || '';
                             const category = cells.length >= 5 ? cells[4]?.textContent.trim() || '' : '';
                             const maxPoints = cells.length >= 6 ? cells[5]?.textContent.trim() || '' : '';
                             const absent = cells.length >= 7 ? cells[6]?.textContent.trim() || '' : '';
+
+                            // Only keep Q3-marked rows
+                            if (!dateRaw.toLowerCase().includes('q3')) return;
 
                             // Skip if this looks like header text or empty
                             if (!date || !assignmentName || !className) return;
@@ -398,9 +429,13 @@ async function saveGradesToFile(grades, missingAssignments = []) {
         q1_letter_grade: cls.q1_letter_grade,
         q2_grade: cls.q2_grade,
         q2_letter_grade: cls.q2_letter_grade,
-        // Use Q2 grade if available, otherwise Q1
-        current_grade: cls.q2_grade !== null ? cls.q2_grade : cls.q1_grade,
-        letter_grade: cls.q2_letter_grade !== null ? cls.q2_letter_grade : cls.q1_letter_grade
+        q3_grade: cls.q3_grade,
+        q3_letter_grade: cls.q3_letter_grade,
+        // Use Q3 grade if available, otherwise Q2 then Q1
+        current_grade: cls.q3_grade !== null ? cls.q3_grade : (cls.q2_grade !== null ? cls.q2_grade : cls.q1_grade),
+        letter_grade: cls.q3_letter_grade !== null
+            ? cls.q3_letter_grade
+            : (cls.q2_letter_grade !== null ? cls.q2_letter_grade : cls.q1_letter_grade)
     }));
 
     // Update grade history

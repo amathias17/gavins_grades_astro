@@ -222,42 +222,47 @@ async function getClassInfo(page) {
         }
       }
 
-      // Get current grade from the grade row
+      // Get current grade from the grade row (Q3 column)
       const gradeRow = document.querySelector(`tr[group-parent="${groupId}"]`);
       let currentGrade = null;
+      let q3Grade = null;
+      let isHighlighted = false;
 
       if (gradeRow) {
+        isHighlighted = gradeRow.querySelector('.sf_highlightYellow') !== null;
         const gradeCells = gradeRow.querySelectorAll('td');
-        // Try Q2 first (second cell), then Q1 (first cell)
-        if (gradeCells.length > 1) {
-          const q2Link = gradeCells[1].querySelector('a[id="showGradeInfo"]');
-          if (q2Link) {
-            const gradeText = q2Link.textContent.trim();
-            const grade = parseInt(gradeText);
-            if (!isNaN(grade)) currentGrade = grade;
+        const q3Link = gradeCells[2]?.querySelector('a[id="showGradeInfo"]');
+
+        if (q3Link) {
+          const gradeText = q3Link.textContent?.trim().replace(/%/g, '');
+          const grade = Number(gradeText);
+          if (Number.isFinite(grade) && grade >= 0 && grade <= 100) {
+            q3Grade = grade;
+            currentGrade = grade;
           }
         }
-        if (currentGrade === null && gradeCells.length > 0) {
-          const q1Link = gradeCells[0].querySelector('a[id="showGradeInfo"]');
-          if (q1Link) {
-            const gradeText = q1Link.textContent.trim();
-            const grade = parseInt(gradeText);
-            if (!isNaN(grade)) currentGrade = grade;
-          }
+
+        // Highlighted but no Q3 value present: treat as 0 until posted
+        if (isHighlighted && q3Grade === null) {
+          q3Grade = 0;
+          currentGrade = 0;
         }
       }
 
-      const entry = {
-        className,
-        teacher,
-        period,
-        groupId,
-        currentGrade
-      };
+      if (isHighlighted) {
+        const entry = {
+          className,
+          teacher,
+          period,
+          groupId,
+          currentGrade,
+          q3_grade: q3Grade
+        };
 
-      classes.push(entry);
-      classInfoByGroupId.set(groupId, entry);
-      recordClass(groupId, entry);
+        classes.push(entry);
+        classInfoByGroupId.set(groupId, entry);
+        recordClass(groupId, entry);
+      }
     });
 
     // Map assignment class ids to class info using row group attributes or nearby class tables.
@@ -521,6 +526,18 @@ async function extractAssignmentDetails(page, assignmentId, classId) {
         earnedPoints = 0;
       }
 
+      // Fallback: derive earned from percentage when points aren't parsed
+      if (!graded && totalPoints !== null) {
+        const percentMatch = text.match(/([0-9]{1,3})\s*%/);
+        if (percentMatch) {
+          const pct = Number(percentMatch[1]);
+          if (Number.isFinite(pct)) {
+            earnedPoints = Math.round((pct / 100) * totalPoints * 100) / 100;
+            graded = true;
+          }
+        }
+      }
+
       // Weight: look for "Weight: 15%" or "Weight 15%"
       const weightMatch = text.match(/Weight[^0-9]*([\d.]+)%?/i);
       const weight = weightMatch ? parseFloat(weightMatch[1]) : null;
@@ -619,8 +636,8 @@ async function scrapeAllAssignments(page, classes, cacheAssignments = {}, classI
       console.log(`DEBUG: Index ${i}, assignment from array:`, JSON.stringify({name: assignment.name, classId: assignment.classId, assignmentId: assignment.assignmentId}));
     }
 
-    // Only keep Q2 (due date text typically contains (Q2))
-    if (!assignment.dueDate || !/\(Q2\)/i.test(assignment.dueDate)) {
+    // Only keep Q3 (due date text typically contains (Q3))
+    if (!assignment.dueDate || !/\(Q3\)/i.test(assignment.dueDate)) {
       continue;
     }
 
@@ -757,6 +774,227 @@ function organizeByClass(assignments, classes) {
   return Object.values(byClass).filter(entry => entry.assignments.length > 0);
 }
 
+async function scrapeMissingAssignments(page) {
+  console.log('\nChecking for missing assignments (Q3 only)...');
+  let missingAssignments = [];
+
+  try {
+    const missingButton = await page.locator('#missingAssignments');
+    if (await missingButton.isVisible({ timeout: 5000 })) {
+      await missingButton.click();
+      await page.waitForTimeout(2000);
+
+      const noMissingText = await page.locator('text=No Missing Assignments!').count();
+      if (noMissingText > 0) {
+        console.log('No missing assignments found');
+      } else {
+        missingAssignments = await page.evaluate(() => {
+          const assignments = [];
+          const seen = new Set();
+          const rows = document.querySelectorAll('table tr');
+
+          rows.forEach(row => {
+            const cells = row.querySelectorAll('td');
+            if (cells.length < 4) return;
+
+            const rawDate = cells[0]?.textContent.trim() || '';
+            if (!rawDate.toLowerCase().includes('q3')) return;
+
+            const assignmentName = cells[1]?.textContent.trim() || '';
+            const className = cells[2]?.textContent.trim() || '';
+            const teacher = cells[3]?.textContent.trim() || '';
+            const category = cells.length >= 5 ? cells[4]?.textContent.trim() || '' : '';
+            const maxPoints = cells.length >= 6 ? cells[5]?.textContent.trim() || '' : '';
+            const absent = cells.length >= 7 ? cells[6]?.textContent.trim() || '' : '';
+
+            if (!rawDate || !assignmentName || !className) return;
+            if (rawDate.toLowerCase().includes('due') || rawDate.toLowerCase().includes('gavin')) return;
+            if (assignmentName.toLowerCase().includes('due') || assignmentName.toLowerCase().includes('gavin')) return;
+            if (!rawDate.match(/\d+\/\d+\/\d+/) && !rawDate.includes('Q')) return;
+
+            const normalizedDate = rawDate
+              .replace(/\u00a0/g, ' ')
+              .replace(/\s*\(Q\d+\)/i, '')
+              .trim();
+
+            const uniqueKey = `${normalizedDate}|${className}|${assignmentName}`;
+            if (!seen.has(uniqueKey)) {
+              seen.add(uniqueKey);
+              const assignment = {
+                due_date: normalizedDate,
+                assignment_name: assignmentName,
+                class_name: className,
+                teacher: teacher
+              };
+              if (category) assignment.category = category;
+              if (maxPoints) assignment.max_points = maxPoints;
+              if (absent) assignment.absent = absent;
+              assignments.push(assignment);
+            }
+          });
+
+          return assignments;
+        });
+        console.log(`Found ${missingAssignments.length} missing assignments (Q3)`);
+      }
+    } else {
+      console.log('Missing assignments button not found');
+    }
+  } catch (error) {
+    console.log('Error checking missing assignments:', error.message);
+  }
+
+  return missingAssignments;
+}
+
+async function saveGradesToFile(grades, missingAssignments = []) {
+  const gradesOutputPath = path.join(__dirname, '../src/data/grades.json');
+  const missingOutputPath = path.join(__dirname, '../src/data/missing_assignments.json');
+
+  let existingData = {
+    metadata: {},
+    classes: [],
+    grade_history: {},
+    overall_average: 0,
+    average_history: {}
+  };
+
+  try {
+    const existingContent = await fs.readFile(gradesOutputPath, 'utf-8');
+    existingData = JSON.parse(existingContent);
+  } catch (error) {
+    console.log('No existing grades.json found, creating new file...');
+  }
+
+  const now = new Date();
+  const dateKey = `${now.getMonth() + 1}/${now.getDate()}/${now.getFullYear()}`;
+  const timestamp = now.toLocaleString('en-US', {
+    month: '2-digit',
+    day: '2-digit',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true,
+    timeZone: 'America/New_York'
+  });
+
+  const toTitleCase = (str) => {
+    return str
+      .toLowerCase()
+      .split(' ')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ')
+      .trim()
+      .replace(/\s+/g, ' ');
+  };
+
+  const letter = (n) => {
+    if (n === null || n === undefined) return null;
+    if (n >= 90) return 'A';
+    if (n >= 80) return 'B';
+    if (n >= 70) return 'C';
+    if (n >= 60) return 'D';
+    return 'F';
+  };
+
+  const transformedClasses = grades.map(cls => ({
+    class_name: toTitleCase(cls.class_name),
+    teacher: cls.teacher,
+    period: cls.period,
+    q1_grade: cls.q1_grade ?? null,
+    q1_letter_grade: cls.q1_grade !== undefined ? letter(cls.q1_grade) : null,
+    q2_grade: cls.q2_grade ?? null,
+    q2_letter_grade: cls.q2_grade !== undefined ? letter(cls.q2_grade) : null,
+    q3_grade: cls.q3_grade ?? null,
+    q3_letter_grade: cls.q3_grade !== undefined ? letter(cls.q3_grade) : null,
+    current_grade: cls.q3_grade !== null && cls.q3_grade !== undefined
+      ? cls.q3_grade
+      : (cls.q2_grade !== null && cls.q2_grade !== undefined ? cls.q2_grade : cls.q1_grade),
+    letter_grade: cls.q3_grade !== null && cls.q3_grade !== undefined
+      ? letter(cls.q3_grade)
+      : (cls.q2_grade !== null && cls.q2_grade !== undefined ? letter(cls.q2_grade) : letter(cls.q1_grade))
+  }));
+
+  const gradeHistory = existingData.grade_history || {};
+  transformedClasses.forEach(cls => {
+    if (!gradeHistory[cls.class_name]) {
+      gradeHistory[cls.class_name] = {};
+    }
+    gradeHistory[cls.class_name][dateKey] = cls.current_grade;
+  });
+
+  const validGrades = transformedClasses
+    .map(c => c.current_grade)
+    .filter(g => g !== null && g > 0);
+  const overallAverage = validGrades.length > 0
+    ? Math.round(validGrades.reduce((a, b) => a + b, 0) / validGrades.length)
+    : 0;
+
+  const averageHistory = existingData.average_history || {};
+  averageHistory[dateKey] = overallAverage;
+
+  const streakHistory = existingData.streak_history || {};
+  const hasMissingAssignments = missingAssignments.length > 0;
+  const allDates = Object.keys(averageHistory).sort((a, b) => {
+    return new Date(a) - new Date(b);
+  });
+
+  let currentStreak = 0;
+  for (let i = allDates.length - 1; i >= 0; i--) {
+    const date = allDates[i];
+    const missingStat = streakHistory[date];
+
+    if (date === dateKey) {
+      streakHistory[date] = hasMissingAssignments ? 0 : (i > 0 && streakHistory[allDates[i-1]] !== undefined ? streakHistory[allDates[i-1]] + 1 : 1);
+      if (!hasMissingAssignments) {
+        currentStreak = streakHistory[date];
+      }
+      break;
+    }
+
+    if (missingStat === undefined || missingStat === 0) {
+      break;
+    }
+    currentStreak = missingStat;
+  }
+
+  if (hasMissingAssignments) {
+    currentStreak = 0;
+    streakHistory[dateKey] = 0;
+  } else if (streakHistory[dateKey] === undefined) {
+    const previousDate = allDates[allDates.indexOf(dateKey) - 1];
+    const previousStreak = previousDate && streakHistory[previousDate] !== undefined ? streakHistory[previousDate] : 0;
+    currentStreak = previousStreak === 0 ? 1 : previousStreak + 1;
+    streakHistory[dateKey] = currentStreak;
+  }
+
+  const gradesOutputData = {
+    metadata: {
+      last_updated: timestamp,
+      most_recent_date: dateKey,
+      total_classes: transformedClasses.length
+    },
+    classes: transformedClasses,
+    grade_history: gradeHistory,
+    overall_average: overallAverage,
+    average_history: averageHistory,
+    streak: currentStreak,
+    streak_history: streakHistory
+  };
+
+  const missingAssignmentsData = {
+    metadata: {
+      last_updated: timestamp,
+      count: missingAssignments.length
+    },
+    missing_assignments: missingAssignments
+  };
+
+  await fs.writeFile(gradesOutputPath, JSON.stringify(gradesOutputData, null, 2));
+  await fs.writeFile(missingOutputPath, JSON.stringify(missingAssignmentsData, null, 2));
+  console.log(`Grades saved to ${gradesOutputPath} and missing assignments saved to ${missingOutputPath}`);
+}
+
 async function main() {
   let browser;
   let popup;
@@ -786,6 +1024,20 @@ async function main() {
       classIdMap
     );
     console.log(`\nSuccessfully extracted ${assignmentDetails.length} assignments`);
+
+    // Missing assignments (Q3 only)
+    const missingAssignments = await scrapeMissingAssignments(popup);
+
+    // Persist grades.json using Q3-only classes
+    const gradeClasses = classes.map(c => ({
+      class_name: c.className,
+      teacher: c.teacher,
+      period: c.period,
+      q1_grade: null,
+      q2_grade: null,
+      q3_grade: c.q3_grade ?? null
+    }));
+    await saveGradesToFile(gradeClasses, missingAssignments);
 
     // Organize data by class
     const dataByClass = organizeByClass(assignmentDetails, classes);

@@ -1,97 +1,126 @@
 {
   "metadata": {
-    "last_updated": "01/23/2026, 12:05 PM",
+    "last_updated": "01/23/2026, 01:53 PM",
     "most_recent_date": "1/23/2026",
-    "total_classes": 8
+    "total_classes": 9
   },
   "classes": [
+    {
+      "class_name": "Sophomore Seminar",
+      "teacher": "Victoria Good",
+      "period": "0",
+      "q1_grade": null,
+      "q1_letter_grade": null,
+      "q2_grade": null,
+      "q2_letter_grade": null,
+      "q3_grade": 0,
+      "q3_letter_grade": "F",
+      "current_grade": 0,
+      "letter_grade": "F"
+    },
     {
       "class_name": "English 10",
       "teacher": "Megan Leone",
       "period": "1",
-      "q1_grade": 70,
-      "q1_letter_grade": "C",
-      "q2_grade": 79,
-      "q2_letter_grade": "C",
-      "current_grade": 79,
-      "letter_grade": "C"
+      "q1_grade": null,
+      "q1_letter_grade": null,
+      "q2_grade": null,
+      "q2_letter_grade": null,
+      "q3_grade": 0,
+      "q3_letter_grade": "F",
+      "current_grade": 0,
+      "letter_grade": "F"
     },
     {
       "class_name": "Biology 2",
       "teacher": "Denise Condo",
       "period": "2",
-      "q1_grade": 86,
-      "q1_letter_grade": "B",
-      "q2_grade": 88,
-      "q2_letter_grade": "B",
-      "current_grade": 88,
-      "letter_grade": "B"
-    },
-    {
-      "class_name": "History Pop Cult 1",
-      "teacher": "Robyn Dixon",
-      "period": "3",
-      "q1_grade": 73,
-      "q1_letter_grade": "C",
-      "q2_grade": 33,
-      "q2_letter_grade": "F",
-      "current_grade": 33,
-      "letter_grade": "F"
-    },
-    {
-      "class_name": "Art 1",
-      "teacher": "Kathryn Curry",
-      "period": "4",
-      "q1_grade": 55,
-      "q1_letter_grade": "F",
-      "q2_grade": 59,
-      "q2_letter_grade": "F",
-      "current_grade": 59,
-      "letter_grade": "F"
-    },
-    {
-      "class_name": "Physical Educ",
-      "teacher": "Brandon Lingenfelter",
-      "period": "5",
-      "q1_grade": 79,
-      "q1_letter_grade": "C",
-      "q2_grade": 100,
-      "q2_letter_grade": "A",
+      "q1_grade": null,
+      "q1_letter_grade": null,
+      "q2_grade": null,
+      "q2_letter_grade": null,
+      "q3_grade": 100,
+      "q3_letter_grade": "A",
       "current_grade": 100,
       "letter_grade": "A"
+    },
+    {
+      "class_name": "Food Challenges",
+      "teacher": "Misty Finnegan",
+      "period": "3",
+      "q1_grade": null,
+      "q1_letter_grade": null,
+      "q2_grade": null,
+      "q2_letter_grade": null,
+      "q3_grade": 0,
+      "q3_letter_grade": "F",
+      "current_grade": 0,
+      "letter_grade": "F"
+    },
+    {
+      "class_name": "Eng/design/arch",
+      "teacher": "Todd Bennett",
+      "period": "4",
+      "q1_grade": null,
+      "q1_letter_grade": null,
+      "q2_grade": null,
+      "q2_letter_grade": null,
+      "q3_grade": 0,
+      "q3_letter_grade": "F",
+      "current_grade": 0,
+      "letter_grade": "F"
+    },
+    {
+      "class_name": "Money Math",
+      "teacher": "Jennifer Weidley",
+      "period": "5",
+      "q1_grade": null,
+      "q1_letter_grade": null,
+      "q2_grade": null,
+      "q2_letter_grade": null,
+      "q3_grade": 0,
+      "q3_letter_grade": "F",
+      "current_grade": 0,
+      "letter_grade": "F"
     },
     {
       "class_name": "Amer Studies",
       "teacher": "Brock Seese",
       "period": "6",
-      "q1_grade": 72,
-      "q1_letter_grade": "C",
-      "q2_grade": 88,
-      "q2_letter_grade": "B",
-      "current_grade": 88,
-      "letter_grade": "B"
+      "q1_grade": null,
+      "q1_letter_grade": null,
+      "q2_grade": null,
+      "q2_letter_grade": null,
+      "q3_grade": 0,
+      "q3_letter_grade": "F",
+      "current_grade": 0,
+      "letter_grade": "F"
     },
     {
       "class_name": "Intermediate Geometry",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "q1_grade": 70,
-      "q1_letter_grade": "C",
-      "q2_grade": 70,
-      "q2_letter_grade": "C",
-      "current_grade": 70,
-      "letter_grade": "C"
+      "q1_grade": null,
+      "q1_letter_grade": null,
+      "q2_grade": null,
+      "q2_letter_grade": null,
+      "q3_grade": 0,
+      "q3_letter_grade": "F",
+      "current_grade": 0,
+      "letter_grade": "F"
     },
     {
-      "class_name": "Health",
-      "teacher": "Amy Palfey",
+      "class_name": "Sociology",
+      "teacher": "Heather Eckels",
       "period": "8",
-      "q1_grade": 78,
-      "q1_letter_grade": "C",
-      "q2_grade": 78,
-      "q2_letter_grade": "C",
-      "current_grade": 78,
-      "letter_grade": "C"
+      "q1_grade": null,
+      "q1_letter_grade": null,
+      "q2_grade": null,
+      "q2_letter_grade": null,
+      "q3_grade": 100,
+      "q3_letter_grade": "A",
+      "current_grade": 100,
+      "letter_grade": "A"
     }
   ],
   "grade_history": {
@@ -154,7 +183,8 @@
       "1/18/2026": 76,
       "1/19/2026": 76,
       "1/20/2026": 76,
-      "1/21/2026": 76
+      "1/21/2026": 76,
+      "1/23/2026": 0
     },
     "English 10": {
       "11/24/2025": 75,
@@ -217,7 +247,7 @@
       "1/20/2026": 79,
       "1/21/2026": 79,
       "1/22/2026": 79,
-      "1/23/2026": 79
+      "1/23/2026": 0
     },
     "Biology 2": {
       "11/24/2025": 82,
@@ -280,7 +310,7 @@
       "1/20/2026": 81,
       "1/21/2026": 88,
       "1/22/2026": 88,
-      "1/23/2026": 88
+      "1/23/2026": 100
     },
     "History Pop Cult 1": {
       "11/24/2025": 90,
@@ -343,7 +373,7 @@
       "1/20/2026": 33,
       "1/21/2026": 33,
       "1/22/2026": 33,
-      "1/23/2026": 33
+      "1/23/2026": 53
     },
     "Art 1": {
       "11/24/2025": 84,
@@ -406,7 +436,7 @@
       "1/20/2026": 74,
       "1/21/2026": 59,
       "1/22/2026": 59,
-      "1/23/2026": 59
+      "1/23/2026": 57
     },
     "Physical Educ": {
       "11/24/2025": 100,
@@ -469,7 +499,7 @@
       "1/20/2026": 100,
       "1/21/2026": 100,
       "1/22/2026": 100,
-      "1/23/2026": 100
+      "1/23/2026": 90
     },
     "Amer Studies": {
       "11/24/2025": 100,
@@ -532,7 +562,7 @@
       "1/20/2026": 88,
       "1/21/2026": 88,
       "1/22/2026": 88,
-      "1/23/2026": 88
+      "1/23/2026": 0
     },
     "Intermediate Geometry": {
       "11/24/2025": 69,
@@ -595,7 +625,7 @@
       "1/20/2026": 70,
       "1/21/2026": 70,
       "1/22/2026": 70,
-      "1/23/2026": 70
+      "1/23/2026": 0
     },
     "Health": {
       "11/24/2025": 94,
@@ -659,9 +689,21 @@
       "1/21/2026": 78,
       "1/22/2026": 78,
       "1/23/2026": 78
+    },
+    "Sociology": {
+      "1/23/2026": 100
+    },
+    "Food Challenges": {
+      "1/23/2026": 0
+    },
+    "Eng/design/arch": {
+      "1/23/2026": 0
+    },
+    "Money Math": {
+      "1/23/2026": 0
     }
   },
-  "overall_average": 74,
+  "overall_average": 100,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -723,9 +765,9 @@
     "1/20/2026": 75,
     "1/21/2026": 74,
     "1/22/2026": 74,
-    "1/23/2026": 74
+    "1/23/2026": 100
   },
-  "streak": 0,
+  "streak": 2,
   "streak_history": {
     "11/24/2025": 0,
     "11/25/2025": 0,
@@ -787,6 +829,6 @@
     "1/20/2026": 0,
     "1/21/2026": 0,
     "1/22/2026": 1,
-    "1/23/2026": 0
+    "1/23/2026": 2
   }
 }

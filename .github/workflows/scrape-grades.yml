@@ -36,12 +36,12 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps chromium
 
-      # Run the scraper
-      - name: Run grade scraper
+      # Run the enhanced scraper (grades + detailed assignments)
+      - name: Run scraper
         env:
           SKYWARD_USERNAME: ${{ secrets.SKYWARD_USERNAME }}
           SKYWARD_PASSWORD: ${{ secrets.SKYWARD_PASSWORD }}
-        run: node scraper/skyward-scraper.cjs
+        run: node scraper/enhanced-scraper.cjs
 
       # Commit and push changes if there are any
       - name: Commit and push changes
