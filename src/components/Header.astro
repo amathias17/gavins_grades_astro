@@ -1,10 +1,8 @@
 ---
 import gradesData from "../data/grades.json";
-import { countDragonBalls } from "../utils/dragonBalls";
 
 const overallAverage = gradesData.overall_average;
 const streak = gradesData.streak || 0;
-const dragonBalls = countDragonBalls(gradesData.classes);
 ---
 
 <!-- <div class="fixed h-full left-0 scanlines top-0 w-full z-1000"></div>
@@ -98,10 +96,6 @@ const dragonBalls = countDragonBalls(gradesData.classes);
                         <div class="border-[3px] border-solid border-white min-w-[100px] px-[15px] py-3 text-center">
                             <div class="text-[0.4em] text-[#aaa] mb-2">STREAK</div>
                             <div class="text-[0.8em] text-[#00ffff]">{streak}</div>
-                        </div>
-                        <div class="border-[3px] border-solid border-white min-w-[100px] px-[15px] py-3 text-center">
-                            <div class="text-[0.4em] text-[#aaa] mb-2">DRAGON BALLS</div>
-                            <div class="text-[0.8em] text-[#ffaa00]" title={`${dragonBalls} / 7 Dragon Balls collected`}>{dragonBalls === 7 ? '🐉' : dragonBalls}</div>
                         </div>
                         <!-- <div class="border-[3px] border-solid border-white min-w-[100px] px-[15px] py-3 text-center">
                             <div class="text-[0.4em] text-[#aaa] mb-2">QUARTER</div>
