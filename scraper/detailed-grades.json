@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-01-23T19:51:21.934Z",
+    "scrapedAt": "2026-01-24T00:39:00.512Z",
     "totalClasses": 9,
     "totalAssignments": 6
   },
@@ -62,10 +62,10 @@
         {
           "name": "Get More Math",
           "dueDate": "01/23/2026",
-          "earnedPoints": 8,
-          "totalPoints": 16,
-          "weight": 2,
-          "graded": true
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": false
         }
       ]
     },
