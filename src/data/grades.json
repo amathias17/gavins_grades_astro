@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "01/24/2026, 07:44 PM",
+    "last_updated": "01/25/2026, 12:10 AM",
     "most_recent_date": "1/25/2026",
     "total_classes": 9
   },
@@ -65,10 +65,10 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q3_grade": 0,
-      "q3_letter_grade": "F",
-      "current_grade": 0,
-      "letter_grade": "F"
+      "q3_grade": 100,
+      "q3_letter_grade": "A",
+      "current_grade": 100,
+      "letter_grade": "A"
     },
     {
       "class_name": "Money Math",
@@ -713,7 +713,7 @@
     "Eng/design/arch": {
       "1/23/2026": 0,
       "1/24/2026": 0,
-      "1/25/2026": 0
+      "1/25/2026": 100
     },
     "Money Math": {
       "1/23/2026": 0,
@@ -721,7 +721,7 @@
       "1/25/2026": 0
     }
   },
-  "overall_average": 83,
+  "overall_average": 88,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -785,7 +785,7 @@
     "1/22/2026": 74,
     "1/23/2026": 83,
     "1/24/2026": 83,
-    "1/25/2026": 83
+    "1/25/2026": 88
   },
   "streak": 4,
   "streak_history": {
