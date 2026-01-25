@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-01-25T17:02:04.503Z",
+    "scrapedAt": "2026-01-25T19:50:59.845Z",
     "totalClasses": 9,
     "totalAssignments": 7
   },
@@ -62,10 +62,10 @@
         {
           "name": "Chapter 9 Study Guide Pt 1",
           "dueDate": "01/23/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "earnedPoints": 0,
+          "totalPoints": 20,
           "weight": 1,
-          "graded": true
+          "graded": false
         }
       ]
     },
@@ -101,11 +101,11 @@
         },
         {
           "name": "Classroom Expectations",
-          "dueDate": "01/23/2026",
-          "earnedPoints": 0,
-          "totalPoints": 18,
+          "dueDate": "01/22/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         }
       ]
     }
