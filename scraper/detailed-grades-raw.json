@@ -74,10 +74,10 @@
     "assignmentName": "Where to Go - Social Norms",
     "dateDue": "01/23/2026",
     "dueDate": "01/23/2026",
-    "earnedPoints": 8,
-    "totalPoints": 16,
-    "weight": 2,
-    "graded": true
+    "earnedPoints": 0,
+    "totalPoints": 18,
+    "weight": 1,
+    "graded": false
   },
   {
     "classId": "44615",
@@ -88,11 +88,11 @@
     "period": "8",
     "currentGrade": 100,
     "assignmentName": "Classroom Expectations",
-    "dateDue": "01/22/2026",
-    "dueDate": "01/22/2026",
-    "earnedPoints": 10,
-    "totalPoints": 10,
+    "dateDue": "01/23/2026",
+    "dueDate": "01/23/2026",
+    "earnedPoints": 0,
+    "totalPoints": 18,
     "weight": 1,
-    "graded": true
+    "graded": false
   }
 ]
