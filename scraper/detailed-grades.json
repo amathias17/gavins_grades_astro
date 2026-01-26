@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-01-26T11:37:55.962Z",
+    "scrapedAt": "2026-01-26T17:07:30.939Z",
     "totalClasses": 9,
-    "totalAssignments": 7
+    "totalAssignments": 9
   },
   "classes": [
     {
@@ -28,10 +28,18 @@
       "currentGrade": 100,
       "assignments": [
         {
-          "name": "Green Solar Cells:Photo Synthe",
+          "name": "Attendende Live Google meet",
           "dueDate": "01/23/2026",
           "earnedPoints": 0,
           "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Green Solar Cells:Photo Synthe",
+          "dueDate": "01/26/2026",
+          "earnedPoints": 1,
+          "totalPoints": 0,
           "weight": 1,
           "graded": true
         }
@@ -92,7 +100,7 @@
       "currentGrade": 100,
       "assignments": [
         {
-          "name": "Where to Go - Social Norms",
+          "name": "EdPuzzle What is Sociology",
           "dueDate": "01/23/2026",
           "earnedPoints": 8,
           "totalPoints": 16,
@@ -100,12 +108,20 @@
           "graded": true
         },
         {
-          "name": "Classroom Expectations",
-          "dueDate": "01/23/2026",
+          "name": "Where to Go - Social Norms",
+          "dueDate": "01/26/2026",
           "earnedPoints": 0,
-          "totalPoints": 18,
+          "totalPoints": 10,
           "weight": 1,
           "graded": false
+        },
+        {
+          "name": "Classroom Expectations",
+          "dueDate": "01/22/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
         }
       ]
     }

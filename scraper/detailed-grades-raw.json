@@ -17,6 +17,22 @@
   },
   {
     "classId": "43424",
+    "assignmentId": "1562766",
+    "studentId": "1396",
+    "className": "BIOLOGY            2",
+    "teacher": "Denise Condo",
+    "period": "2",
+    "currentGrade": 100,
+    "assignmentName": "Attendende Live Google meet",
+    "dateDue": "01/23/2026",
+    "dueDate": "01/23/2026",
+    "earnedPoints": 0,
+    "totalPoints": 10,
+    "weight": 1,
+    "graded": true
+  },
+  {
+    "classId": "43424",
     "assignmentId": "1556975",
     "studentId": "1396",
     "className": "BIOLOGY            2",
@@ -24,10 +40,10 @@
     "period": "2",
     "currentGrade": 100,
     "assignmentName": "Green Solar Cells:Photo Synthe",
-    "dateDue": "01/23/2026",
-    "dueDate": "01/23/2026",
-    "earnedPoints": 0,
-    "totalPoints": 10,
+    "dateDue": "01/26/2026",
+    "dueDate": "01/26/2026",
+    "earnedPoints": 1,
+    "totalPoints": 0,
     "weight": 1,
     "graded": true
   },
@@ -81,6 +97,22 @@
   },
   {
     "classId": "44615",
+    "assignmentId": "1562839",
+    "studentId": "1396",
+    "className": "SOCIOLOGY",
+    "teacher": "Heather Eckels",
+    "period": "8",
+    "currentGrade": 100,
+    "assignmentName": "EdPuzzle What is Sociology",
+    "dateDue": "01/23/2026",
+    "dueDate": "01/23/2026",
+    "earnedPoints": 8,
+    "totalPoints": 16,
+    "weight": 2,
+    "graded": true
+  },
+  {
+    "classId": "44615",
     "assignmentId": "1561967",
     "studentId": "1396",
     "className": "SOCIOLOGY",
@@ -88,12 +120,12 @@
     "period": "8",
     "currentGrade": 100,
     "assignmentName": "Where to Go - Social Norms",
-    "dateDue": "01/23/2026",
-    "dueDate": "01/23/2026",
-    "earnedPoints": 8,
-    "totalPoints": 16,
-    "weight": 2,
-    "graded": true
+    "dateDue": "01/26/2026",
+    "dueDate": "01/26/2026",
+    "earnedPoints": 0,
+    "totalPoints": 10,
+    "weight": 1,
+    "graded": false
   },
   {
     "classId": "44615",
@@ -104,11 +136,11 @@
     "period": "8",
     "currentGrade": 100,
     "assignmentName": "Classroom Expectations",
-    "dateDue": "01/23/2026",
-    "dueDate": "01/23/2026",
-    "earnedPoints": 0,
-    "totalPoints": 18,
+    "dateDue": "01/22/2026",
+    "dueDate": "01/22/2026",
+    "earnedPoints": 10,
+    "totalPoints": 10,
     "weight": 1,
-    "graded": false
+    "graded": true
   }
 ]
