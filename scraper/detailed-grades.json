@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-01-26T05:12:48.768Z",
+    "scrapedAt": "2026-01-26T11:37:55.962Z",
     "totalClasses": 9,
     "totalAssignments": 7
   },
@@ -101,11 +101,11 @@
         },
         {
           "name": "Classroom Expectations",
-          "dueDate": "01/22/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "dueDate": "01/23/2026",
+          "earnedPoints": 0,
+          "totalPoints": 18,
           "weight": 1,
-          "graded": true
+          "graded": false
         }
       ]
     }
