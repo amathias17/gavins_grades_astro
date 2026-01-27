@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-01-27T05:09:04.331Z",
+    "scrapedAt": "2026-01-27T11:39:26.244Z",
     "totalClasses": 9,
     "totalAssignments": 9
   },
@@ -53,7 +53,7 @@
       "assignments": [
         {
           "name": "Week 1 Participation",
-          "dueDate": "01/23/2026",
+          "dueDate": "01/22/2026",
           "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
@@ -86,10 +86,10 @@
         {
           "name": "Get More Math",
           "dueDate": "01/23/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
-          "weight": 1,
-          "graded": false
+          "earnedPoints": 8,
+          "totalPoints": 16,
+          "weight": 2,
+          "graded": true
         }
       ]
     },
@@ -117,11 +117,11 @@
         },
         {
           "name": "Classroom Expectations",
-          "dueDate": "01/22/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "dueDate": "01/23/2026",
+          "earnedPoints": 0,
+          "totalPoints": 18,
           "weight": 1,
-          "graded": true
+          "graded": false
         }
       ]
     }
