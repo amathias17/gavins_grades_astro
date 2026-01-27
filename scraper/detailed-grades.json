@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-01-27T11:39:26.244Z",
+    "scrapedAt": "2026-01-27T17:06:41.284Z",
     "totalClasses": 9,
-    "totalAssignments": 9
+    "totalAssignments": 11
   },
   "classes": [
     {
@@ -28,12 +28,20 @@
       "currentGrade": 100,
       "assignments": [
         {
-          "name": "Attendende Live Google meet",
+          "name": "Attendance FID",
           "dueDate": "01/23/2026",
           "earnedPoints": 0,
           "totalPoints": 10,
           "weight": 1,
           "graded": true
+        },
+        {
+          "name": "Attendende Live Google meet",
+          "dueDate": "01/27/2026",
+          "earnedPoints": 0,
+          "totalPoints": 0,
+          "weight": 1,
+          "graded": false
         },
         {
           "name": "Green Solar Cells:Photo Synthe",
@@ -70,10 +78,10 @@
         {
           "name": "Chapter 9 Study Guide Pt 1",
           "dueDate": "01/23/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "earnedPoints": 0,
+          "totalPoints": 20,
           "weight": 1,
-          "graded": true
+          "graded": false
         }
       ]
     },
@@ -100,28 +108,36 @@
       "currentGrade": 100,
       "assignments": [
         {
+          "name": "Intro to Soc Reading & ?s",
+          "dueDate": "01/23/2026",
+          "earnedPoints": 8,
+          "totalPoints": 16,
+          "weight": 2,
+          "graded": true
+        },
+        {
           "name": "EdPuzzle What is Sociology",
-          "dueDate": "01/26/2026",
+          "dueDate": "01/27/2026",
           "earnedPoints": 0,
-          "totalPoints": 10,
+          "totalPoints": 20,
           "weight": 1,
           "graded": false
         },
         {
           "name": "Where to Go - Social Norms",
           "dueDate": "01/26/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Classroom Expectations",
           "dueDate": "01/23/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 18,
           "totalPoints": 18,
           "weight": 1,
-          "graded": false
+          "graded": true
         }
       ]
     }
