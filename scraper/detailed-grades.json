@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-01-27T00:43:08.355Z",
+    "scrapedAt": "2026-01-27T05:09:04.331Z",
     "totalClasses": 9,
     "totalAssignments": 9
   },
@@ -53,7 +53,7 @@
       "assignments": [
         {
           "name": "Week 1 Participation",
-          "dueDate": "01/22/2026",
+          "dueDate": "01/23/2026",
           "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
@@ -70,10 +70,10 @@
         {
           "name": "Chapter 9 Study Guide Pt 1",
           "dueDate": "01/23/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         }
       ]
     },
@@ -101,11 +101,11 @@
       "assignments": [
         {
           "name": "EdPuzzle What is Sociology",
-          "dueDate": "01/23/2026",
-          "earnedPoints": 8,
-          "totalPoints": 16,
-          "weight": 2,
-          "graded": true
+          "dueDate": "01/26/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
         },
         {
           "name": "Where to Go - Social Norms",
