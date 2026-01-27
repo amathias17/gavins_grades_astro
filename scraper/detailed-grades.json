@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-01-27T17:06:41.284Z",
+    "scrapedAt": "2026-01-27T19:53:40.361Z",
     "totalClasses": 9,
-    "totalAssignments": 11
+    "totalAssignments": 13
   },
   "classes": [
     {
@@ -61,7 +61,7 @@
       "assignments": [
         {
           "name": "Week 1 Participation",
-          "dueDate": "01/22/2026",
+          "dueDate": "01/23/2026",
           "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
@@ -78,10 +78,10 @@
         {
           "name": "Chapter 9 Study Guide Pt 1",
           "dueDate": "01/23/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         }
       ]
     },
@@ -89,14 +89,30 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 50,
+      "currentGrade": 100,
       "assignments": [
         {
-          "name": "Get More Math",
+          "name": "Monday(1/26/26): FID Assignment",
           "dueDate": "01/23/2026",
-          "earnedPoints": 8,
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Friday(1/23/26): Delta Math",
+          "dueDate": "01/23/2026",
+          "earnedPoints": 15,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Thursday(1/22/26):Get More Math!",
+          "dueDate": "01/23/2026",
+          "earnedPoints": 16,
           "totalPoints": 16,
-          "weight": 2,
+          "weight": 1,
           "graded": true
         }
       ]
@@ -109,10 +125,10 @@
       "assignments": [
         {
           "name": "Intro to Soc Reading & ?s",
-          "dueDate": "01/23/2026",
-          "earnedPoints": 8,
+          "dueDate": "01/27/2026",
+          "earnedPoints": 16,
           "totalPoints": 16,
-          "weight": 2,
+          "weight": 1,
           "graded": true
         },
         {
@@ -133,9 +149,9 @@
         },
         {
           "name": "Classroom Expectations",
-          "dueDate": "01/23/2026",
-          "earnedPoints": 18,
-          "totalPoints": 18,
+          "dueDate": "01/22/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         }

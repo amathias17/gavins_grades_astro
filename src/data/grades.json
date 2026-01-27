@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "01/27/2026, 12:06 PM",
+    "last_updated": "01/27/2026, 02:53 PM",
     "most_recent_date": "1/27/2026",
     "total_classes": 9
   },
@@ -104,10 +104,10 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q3_grade": 50,
-      "q3_letter_grade": "F",
-      "current_grade": 50,
-      "letter_grade": "F"
+      "q3_grade": 100,
+      "q3_letter_grade": "A",
+      "current_grade": 100,
+      "letter_grade": "A"
     },
     {
       "class_name": "Sociology",
@@ -645,7 +645,7 @@
       "1/24/2026": 50,
       "1/25/2026": 50,
       "1/26/2026": 50,
-      "1/27/2026": 50
+      "1/27/2026": 100
     },
     "Health": {
       "11/24/2025": 94,
@@ -739,7 +739,7 @@
       "1/27/2026": 0
     }
   },
-  "overall_average": 88,
+  "overall_average": 100,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -805,7 +805,7 @@
     "1/24/2026": 83,
     "1/25/2026": 88,
     "1/26/2026": 88,
-    "1/27/2026": 88
+    "1/27/2026": 100
   },
   "streak": 6,
   "streak_history": {
