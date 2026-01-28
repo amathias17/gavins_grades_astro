@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-01-28T05:08:54.951Z",
+    "scrapedAt": "2026-01-28T11:40:03.229Z",
     "totalClasses": 9,
     "totalAssignments": 13
   },
@@ -45,9 +45,9 @@
         },
         {
           "name": "Green Solar Cells:Photo Synthe",
-          "dueDate": "01/22/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "dueDate": "01/26/2026",
+          "earnedPoints": 1,
+          "totalPoints": 0,
           "weight": 1,
           "graded": true
         }
@@ -61,7 +61,7 @@
       "assignments": [
         {
           "name": "Week 1 Participation",
-          "dueDate": "01/22/2026",
+          "dueDate": "01/23/2026",
           "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
@@ -126,10 +126,10 @@
         {
           "name": "Intro to Soc Reading & ?s",
           "dueDate": "01/27/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
+          "earnedPoints": 16,
+          "totalPoints": 16,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "EdPuzzle What is Sociology",
