@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-01-28T17:11:10.106Z",
+    "scrapedAt": "2026-01-28T19:55:30.475Z",
     "totalClasses": 9,
-    "totalAssignments": 15
+    "totalAssignments": 16
   },
   "classes": [
     {
@@ -93,9 +93,9 @@
         },
         {
           "name": "Chapter 9 Study Guide Pt 1",
-          "dueDate": "01/28/2026",
+          "dueDate": "01/23/2026",
           "earnedPoints": 0,
-          "totalPoints": 40,
+          "totalPoints": 20,
           "weight": 1,
           "graded": false
         }
@@ -105,15 +105,23 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 100,
+      "currentGrade": 98,
       "assignments": [
         {
-          "name": "Monday(1/26/26): FID Assignment",
+          "name": "Tuesday(1/27/26): Triangle Inequality Theorem",
           "dueDate": "01/23/2026",
           "earnedPoints": 0,
           "totalPoints": 20,
           "weight": 1,
           "graded": false
+        },
+        {
+          "name": "Monday(1/26/26): FID Assignment",
+          "dueDate": "01/26/2026",
+          "earnedPoints": 14,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": true
         },
         {
           "name": "Friday(1/23/26): Delta Math",
