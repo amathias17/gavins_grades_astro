@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-01-27T19:53:40.361Z",
+    "scrapedAt": "2026-01-28T00:40:38.236Z",
     "totalClasses": 9,
     "totalAssignments": 13
   },
@@ -61,7 +61,7 @@
       "assignments": [
         {
           "name": "Week 1 Participation",
-          "dueDate": "01/23/2026",
+          "dueDate": "01/22/2026",
           "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
@@ -78,10 +78,10 @@
         {
           "name": "Chapter 9 Study Guide Pt 1",
           "dueDate": "01/23/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "earnedPoints": 0,
+          "totalPoints": 20,
           "weight": 1,
-          "graded": true
+          "graded": false
         }
       ]
     },
@@ -93,11 +93,11 @@
       "assignments": [
         {
           "name": "Monday(1/26/26): FID Assignment",
-          "dueDate": "01/23/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
+          "dueDate": "01/26/2026",
+          "earnedPoints": 15,
+          "totalPoints": 15,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Friday(1/23/26): Delta Math",
@@ -110,8 +110,8 @@
         {
           "name": "Thursday(1/22/26):Get More Math!",
           "dueDate": "01/23/2026",
-          "earnedPoints": 16,
-          "totalPoints": 16,
+          "earnedPoints": 18,
+          "totalPoints": 18,
           "weight": 1,
           "graded": true
         }
@@ -126,10 +126,10 @@
         {
           "name": "Intro to Soc Reading & ?s",
           "dueDate": "01/27/2026",
-          "earnedPoints": 16,
-          "totalPoints": 16,
+          "earnedPoints": 0,
+          "totalPoints": 20,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "EdPuzzle What is Sociology",
