@@ -1,7 +1,16 @@
 {
   "metadata": {
-    "last_updated": "01/28/2026, 06:40 AM",
-    "count": 0
+    "last_updated": "01/28/2026, 12:11 PM",
+    "count": 1
   },
-  "missing_assignments": []
+  "missing_assignments": [
+    {
+      "due_date": "01/27/2026",
+      "assignment_name": "Intro to Soc Reading & ?s",
+      "class_name": "SOCIOLOGY",
+      "teacher": "Heather Eckels",
+      "category": "Class Work",
+      "max_points": "20"
+    }
+  ]
 }

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "01/28/2026, 06:40 AM",
+    "last_updated": "01/28/2026, 12:11 PM",
     "most_recent_date": "1/28/2026",
     "total_classes": 9
   },
@@ -117,10 +117,10 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q3_grade": 100,
-      "q3_letter_grade": "A",
-      "current_grade": 100,
-      "letter_grade": "A"
+      "q3_grade": 66,
+      "q3_letter_grade": "D",
+      "current_grade": 66,
+      "letter_grade": "D"
     }
   ],
   "grade_history": {
@@ -721,7 +721,7 @@
       "1/25/2026": 100,
       "1/26/2026": 100,
       "1/27/2026": 100,
-      "1/28/2026": 100
+      "1/28/2026": 66
     },
     "Food Challenges": {
       "1/23/2026": 0,
@@ -748,7 +748,7 @@
       "1/28/2026": 0
     }
   },
-  "overall_average": 100,
+  "overall_average": 92,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -815,9 +815,9 @@
     "1/25/2026": 88,
     "1/26/2026": 88,
     "1/27/2026": 100,
-    "1/28/2026": 100
+    "1/28/2026": 92
   },
-  "streak": 7,
+  "streak": 0,
   "streak_history": {
     "11/24/2025": 0,
     "11/25/2025": 0,
@@ -884,6 +884,6 @@
     "1/25/2026": 4,
     "1/26/2026": 5,
     "1/27/2026": 6,
-    "1/28/2026": 7
+    "1/28/2026": 0
   }
 }
