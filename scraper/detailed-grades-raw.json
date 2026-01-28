@@ -56,10 +56,10 @@
     "period": "2",
     "currentGrade": 100,
     "assignmentName": "Green Solar Cells:Photo Synthe",
-    "dateDue": "01/26/2026",
-    "dueDate": "01/26/2026",
-    "earnedPoints": 1,
-    "totalPoints": 0,
+    "dateDue": "01/22/2026",
+    "dueDate": "01/22/2026",
+    "earnedPoints": 10,
+    "totalPoints": 10,
     "weight": 1,
     "graded": true
   },
@@ -90,10 +90,10 @@
     "assignmentName": "Chapter 9 Study Guide Pt 1",
     "dateDue": "01/23/2026",
     "dueDate": "01/23/2026",
-    "earnedPoints": 0,
-    "totalPoints": 20,
+    "earnedPoints": 10,
+    "totalPoints": 10,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "43666",
@@ -104,12 +104,12 @@
     "period": "7",
     "currentGrade": 100,
     "assignmentName": "Monday(1/26/26): FID Assignment",
-    "dateDue": "01/26/2026",
-    "dueDate": "01/26/2026",
-    "earnedPoints": 15,
-    "totalPoints": 15,
+    "dateDue": "01/23/2026",
+    "dueDate": "01/23/2026",
+    "earnedPoints": 0,
+    "totalPoints": 20,
     "weight": 1,
-    "graded": true
+    "graded": false
   },
   {
     "classId": "43666",
@@ -138,8 +138,8 @@
     "assignmentName": "Thursday(1/22/26):Get More Math!",
     "dateDue": "01/23/2026",
     "dueDate": "01/23/2026",
-    "earnedPoints": 18,
-    "totalPoints": 18,
+    "earnedPoints": 16,
+    "totalPoints": 16,
     "weight": 1,
     "graded": true
   },
