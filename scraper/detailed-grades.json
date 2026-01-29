@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-01-28T19:55:30.475Z",
+    "scrapedAt": "2026-01-29T00:46:08.146Z",
     "totalClasses": 9,
     "totalAssignments": 16
   },
@@ -45,9 +45,9 @@
         },
         {
           "name": "Green Solar Cells:Photo Synthe",
-          "dueDate": "01/22/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "dueDate": "01/26/2026",
+          "earnedPoints": 1,
+          "totalPoints": 0,
           "weight": 1,
           "graded": true
         }
@@ -61,7 +61,7 @@
       "assignments": [
         {
           "name": "Week 1 Participation",
-          "dueDate": "01/22/2026",
+          "dueDate": "01/23/2026",
           "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
@@ -93,9 +93,9 @@
         },
         {
           "name": "Chapter 9 Study Guide Pt 1",
-          "dueDate": "01/23/2026",
+          "dueDate": "01/28/2026",
           "earnedPoints": 0,
-          "totalPoints": 20,
+          "totalPoints": 40,
           "weight": 1,
           "graded": false
         }
@@ -109,11 +109,11 @@
       "assignments": [
         {
           "name": "Tuesday(1/27/26): Triangle Inequality Theorem",
-          "dueDate": "01/23/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
+          "dueDate": "01/27/2026",
+          "earnedPoints": 14,
+          "totalPoints": 15,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Monday(1/26/26): FID Assignment",
@@ -126,16 +126,16 @@
         {
           "name": "Friday(1/23/26): Delta Math",
           "dueDate": "01/23/2026",
-          "earnedPoints": 18,
-          "totalPoints": 18,
+          "earnedPoints": 15,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Thursday(1/22/26):Get More Math!",
           "dueDate": "01/23/2026",
-          "earnedPoints": 18,
-          "totalPoints": 18,
+          "earnedPoints": 16,
+          "totalPoints": 16,
           "weight": 1,
           "graded": true
         }
@@ -145,7 +145,7 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 66,
+      "currentGrade": 93,
       "assignments": [
         {
           "name": "Intro to Soc Reading & ?s",
@@ -157,9 +157,9 @@
         },
         {
           "name": "EdPuzzle What is Sociology",
-          "dueDate": "01/26/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "dueDate": "01/27/2026",
+          "earnedPoints": 16,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         },
@@ -173,9 +173,9 @@
         },
         {
           "name": "Classroom Expectations",
-          "dueDate": "01/23/2026",
-          "earnedPoints": 18,
-          "totalPoints": 18,
+          "dueDate": "01/22/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         }
