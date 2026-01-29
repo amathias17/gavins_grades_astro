@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-01-29T17:12:51.861Z",
+    "scrapedAt": "2026-01-29T19:56:02.674Z",
     "totalClasses": 9,
     "totalAssignments": 16
   },
@@ -45,9 +45,9 @@
         },
         {
           "name": "Green Solar Cells:Photo Synthe",
-          "dueDate": "01/22/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "dueDate": "01/26/2026",
+          "earnedPoints": 1,
+          "totalPoints": 0,
           "weight": 1,
           "graded": true
         }
@@ -61,7 +61,7 @@
       "assignments": [
         {
           "name": "Week 1 Participation",
-          "dueDate": "01/22/2026",
+          "dueDate": "01/23/2026",
           "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
@@ -73,7 +73,7 @@
       "className": "AMER STUDIES",
       "teacher": "Brock Seese",
       "period": "6",
-      "currentGrade": 0,
+      "currentGrade": 77,
       "assignments": [
         {
           "name": "AI Interview",
@@ -87,17 +87,17 @@
           "name": "1930's Quiz",
           "dueDate": "01/28/2026",
           "earnedPoints": 0,
-          "totalPoints": 30,
+          "totalPoints": 40,
           "weight": 1,
           "graded": false
         },
         {
           "name": "Chapter 9 Study Guide Pt 1",
           "dueDate": "01/28/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 23,
           "totalPoints": 30,
           "weight": 1,
-          "graded": false
+          "graded": true
         }
       ]
     },
@@ -126,8 +126,8 @@
         {
           "name": "Friday(1/23/26): Delta Math",
           "dueDate": "01/23/2026",
-          "earnedPoints": 15,
-          "totalPoints": 15,
+          "earnedPoints": 18,
+          "totalPoints": 18,
           "weight": 1,
           "graded": true
         },
@@ -151,7 +151,7 @@
           "name": "Intro to Soc Reading & ?s",
           "dueDate": "01/27/2026",
           "earnedPoints": 16,
-          "totalPoints": 20,
+          "totalPoints": 16,
           "weight": 1,
           "graded": true
         },
