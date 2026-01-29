@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-01-29T00:46:08.146Z",
+    "scrapedAt": "2026-01-29T05:19:52.172Z",
     "totalClasses": 9,
     "totalAssignments": 16
   },
@@ -45,9 +45,9 @@
         },
         {
           "name": "Green Solar Cells:Photo Synthe",
-          "dueDate": "01/26/2026",
-          "earnedPoints": 1,
-          "totalPoints": 0,
+          "dueDate": "01/22/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         }
@@ -61,7 +61,7 @@
       "assignments": [
         {
           "name": "Week 1 Participation",
-          "dueDate": "01/23/2026",
+          "dueDate": "01/22/2026",
           "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
@@ -109,16 +109,16 @@
       "assignments": [
         {
           "name": "Tuesday(1/27/26): Triangle Inequality Theorem",
-          "dueDate": "01/27/2026",
-          "earnedPoints": 14,
-          "totalPoints": 15,
+          "dueDate": "01/23/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "Monday(1/26/26): FID Assignment",
           "dueDate": "01/26/2026",
-          "earnedPoints": 14,
+          "earnedPoints": 15,
           "totalPoints": 15,
           "weight": 1,
           "graded": true
@@ -134,8 +134,8 @@
         {
           "name": "Thursday(1/22/26):Get More Math!",
           "dueDate": "01/23/2026",
-          "earnedPoints": 16,
-          "totalPoints": 16,
+          "earnedPoints": 18,
+          "totalPoints": 18,
           "weight": 1,
           "graded": true
         }
@@ -151,7 +151,7 @@
           "name": "Intro to Soc Reading & ?s",
           "dueDate": "01/27/2026",
           "earnedPoints": 16,
-          "totalPoints": 16,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         },
