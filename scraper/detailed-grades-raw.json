@@ -56,10 +56,10 @@
     "period": "2",
     "currentGrade": 100,
     "assignmentName": "Green Solar Cells:Photo Synthe",
-    "dateDue": "01/26/2026",
-    "dueDate": "01/26/2026",
-    "earnedPoints": 1,
-    "totalPoints": 0,
+    "dateDue": "01/22/2026",
+    "dueDate": "01/22/2026",
+    "earnedPoints": 10,
+    "totalPoints": 10,
     "weight": 1,
     "graded": true
   },
@@ -88,12 +88,12 @@
     "period": "6",
     "currentGrade": 0,
     "assignmentName": "AI Interview",
-    "dateDue": "01/28/2026",
-    "dueDate": "01/28/2026",
-    "earnedPoints": 0,
-    "totalPoints": 40,
+    "dateDue": "01/23/2026",
+    "dueDate": "01/23/2026",
+    "earnedPoints": 10,
+    "totalPoints": 10,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "43049",
@@ -107,7 +107,7 @@
     "dateDue": "01/28/2026",
     "dueDate": "01/28/2026",
     "earnedPoints": 0,
-    "totalPoints": 40,
+    "totalPoints": 30,
     "weight": 1,
     "graded": false
   },
@@ -123,7 +123,7 @@
     "dateDue": "01/28/2026",
     "dueDate": "01/28/2026",
     "earnedPoints": 0,
-    "totalPoints": 40,
+    "totalPoints": 30,
     "weight": 1,
     "graded": false
   },

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "01/29/2026, 06:44 AM",
+    "last_updated": "01/29/2026, 12:12 PM",
     "most_recent_date": "1/29/2026",
     "total_classes": 9
   },
@@ -71,8 +71,8 @@
       "letter_grade": "A"
     },
     {
-      "class_name": "Money Math",
-      "teacher": "Jennifer Weidley",
+      "class_name": "Greek Mythology",
+      "teacher": "Alex Ray",
       "period": "5",
       "q1_grade": null,
       "q1_letter_grade": null,
@@ -754,6 +754,9 @@
       "1/26/2026": 0,
       "1/27/2026": 0,
       "1/28/2026": 0,
+      "1/29/2026": 0
+    },
+    "Greek Mythology": {
       "1/29/2026": 0
     }
   },
