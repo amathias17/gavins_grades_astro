@@ -106,10 +106,10 @@
     "assignmentName": "1930's Quiz",
     "dateDue": "01/28/2026",
     "dueDate": "01/28/2026",
-    "earnedPoints": 23,
-    "totalPoints": 30,
+    "earnedPoints": 0,
+    "totalPoints": 40,
     "weight": 1,
-    "graded": true
+    "graded": false
   },
   {
     "classId": "43049",
@@ -154,7 +154,7 @@
     "assignmentName": "Monday(1/26/26): FID Assignment",
     "dateDue": "01/26/2026",
     "dueDate": "01/26/2026",
-    "earnedPoints": 15,
+    "earnedPoints": 14,
     "totalPoints": 15,
     "weight": 1,
     "graded": true
@@ -170,8 +170,8 @@
     "assignmentName": "Friday(1/23/26): Delta Math",
     "dateDue": "01/23/2026",
     "dueDate": "01/23/2026",
-    "earnedPoints": 15,
-    "totalPoints": 15,
+    "earnedPoints": 18,
+    "totalPoints": 18,
     "weight": 1,
     "graded": true
   },
@@ -203,7 +203,7 @@
     "dateDue": "01/27/2026",
     "dueDate": "01/27/2026",
     "earnedPoints": 16,
-    "totalPoints": 20,
+    "totalPoints": 16,
     "weight": 1,
     "graded": true
   },
@@ -216,10 +216,10 @@
     "period": "8",
     "currentGrade": 93,
     "assignmentName": "EdPuzzle What is Sociology",
-    "dateDue": "01/27/2026",
-    "dueDate": "01/27/2026",
-    "earnedPoints": 16,
-    "totalPoints": 20,
+    "dateDue": "01/26/2026",
+    "dueDate": "01/26/2026",
+    "earnedPoints": 10,
+    "totalPoints": 10,
     "weight": 1,
     "graded": true
   },
@@ -248,10 +248,10 @@
     "period": "8",
     "currentGrade": 93,
     "assignmentName": "Classroom Expectations",
-    "dateDue": "01/22/2026",
-    "dueDate": "01/22/2026",
-    "earnedPoints": 10,
-    "totalPoints": 10,
+    "dateDue": "01/23/2026",
+    "dueDate": "01/23/2026",
+    "earnedPoints": 18,
+    "totalPoints": 18,
     "weight": 1,
     "graded": true
   }
