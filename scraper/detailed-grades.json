@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-01-30T17:10:58.298Z",
+    "scrapedAt": "2026-01-30T19:57:25.664Z",
     "totalClasses": 9,
-    "totalAssignments": 17
+    "totalAssignments": 19
   },
   "classes": [
     {
@@ -25,13 +25,21 @@
       "className": "ENGLISH 10",
       "teacher": "Megan Leone",
       "period": "1",
-      "currentGrade": 100,
+      "currentGrade": 91,
       "assignments": [
         {
           "name": "213 Myrtle Questions",
           "dueDate": "01/23/2026",
           "earnedPoints": 0,
           "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Comma Quiz",
+          "dueDate": "01/30/2026",
+          "earnedPoints": 20,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         }
@@ -45,11 +53,11 @@
       "assignments": [
         {
           "name": "Attendance FID",
-          "dueDate": "01/30/2026",
-          "earnedPoints": 20,
-          "totalPoints": 20,
+          "dueDate": "01/27/2026",
+          "earnedPoints": 0,
+          "totalPoints": 0,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "Attendende Live Google meet",
@@ -77,7 +85,7 @@
       "assignments": [
         {
           "name": "Week 1 Participation",
-          "dueDate": "01/22/2026",
+          "dueDate": "01/23/2026",
           "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
@@ -109,11 +117,11 @@
         },
         {
           "name": "Chapter 9 Study Guide Pt 1",
-          "dueDate": "01/28/2026",
-          "earnedPoints": 23,
-          "totalPoints": 30,
+          "dueDate": "01/23/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
           "weight": 1,
-          "graded": true
+          "graded": false
         }
       ]
     },
@@ -142,8 +150,8 @@
         {
           "name": "Friday(1/23/26): Delta Math",
           "dueDate": "01/23/2026",
-          "earnedPoints": 15,
-          "totalPoints": 15,
+          "earnedPoints": 18,
+          "totalPoints": 18,
           "weight": 1,
           "graded": true
         },
@@ -164,10 +172,18 @@
       "currentGrade": 93,
       "assignments": [
         {
+          "name": "Day 3 Notes",
+          "dueDate": "01/30/2026",
+          "earnedPoints": 16,
+          "totalPoints": 16,
+          "weight": 1,
+          "graded": true
+        },
+        {
           "name": "Intro to Soc Reading & ?s",
           "dueDate": "01/27/2026",
           "earnedPoints": 16,
-          "totalPoints": 16,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         },
@@ -189,9 +205,9 @@
         },
         {
           "name": "Classroom Expectations",
-          "dueDate": "01/23/2026",
-          "earnedPoints": 18,
-          "totalPoints": 18,
+          "dueDate": "01/22/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         }
