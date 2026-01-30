@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-01-30T11:43:35.552Z",
+    "scrapedAt": "2026-01-30T14:45:18.450Z",
     "totalClasses": 9,
     "totalAssignments": 16
   },
@@ -29,25 +29,25 @@
       "assignments": [
         {
           "name": "Attendance FID",
-          "dueDate": "01/23/2026",
-          "earnedPoints": 0,
+          "dueDate": "08/25/2025",
+          "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Attendende Live Google meet",
-          "dueDate": "01/27/2026",
+          "dueDate": "12/05/2025",
           "earnedPoints": 0,
-          "totalPoints": 0,
+          "totalPoints": 25,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Green Solar Cells:Photo Synthe",
-          "dueDate": "01/22/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "dueDate": "01/26/2026",
+          "earnedPoints": 1,
+          "totalPoints": 0,
           "weight": 1,
           "graded": true
         }
@@ -61,9 +61,9 @@
       "assignments": [
         {
           "name": "Week 1 Participation",
-          "dueDate": "01/22/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "dueDate": "01/23/2026",
+          "earnedPoints": 25,
+          "totalPoints": 25,
           "weight": 1,
           "graded": true
         }
@@ -77,17 +77,17 @@
       "assignments": [
         {
           "name": "AI Interview",
-          "dueDate": "01/23/2026",
-          "earnedPoints": 10,
+          "dueDate": "08/25/2025",
+          "earnedPoints": 0,
           "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
         {
           "name": "1930's Quiz",
-          "dueDate": "01/28/2026",
-          "earnedPoints": 23,
-          "totalPoints": 30,
+          "dueDate": "12/10/2025",
+          "earnedPoints": 5,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         },
@@ -109,16 +109,16 @@
       "assignments": [
         {
           "name": "Tuesday(1/27/26): Triangle Inequality Theorem",
-          "dueDate": "01/23/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
+          "dueDate": "08/25/2025",
+          "earnedPoints": 100,
+          "totalPoints": 100,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Monday(1/26/26): FID Assignment",
           "dueDate": "01/26/2026",
-          "earnedPoints": 15,
+          "earnedPoints": 14,
           "totalPoints": 15,
           "weight": 1,
           "graded": true
@@ -149,9 +149,9 @@
       "assignments": [
         {
           "name": "Intro to Soc Reading & ?s",
-          "dueDate": "01/27/2026",
-          "earnedPoints": 16,
-          "totalPoints": 20,
+          "dueDate": "08/27/2025",
+          "earnedPoints": 12,
+          "totalPoints": 12,
           "weight": 1,
           "graded": true
         },
@@ -173,9 +173,9 @@
         },
         {
           "name": "Classroom Expectations",
-          "dueDate": "01/22/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "dueDate": "01/23/2026",
+          "earnedPoints": 18,
+          "totalPoints": 18,
           "weight": 1,
           "graded": true
         }

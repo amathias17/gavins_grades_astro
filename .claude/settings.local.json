@@ -78,7 +78,9 @@
       "Bash(git stash push:*)",
       "Bash(echo:*)",
       "Bash(bd close:*)",
-      "Bash(bd show:*)"
+      "Bash(bd show:*)",
+      "Bash(bun:*)",
+      "mcp__plugin_claude-mem_mcp-search__search"
     ],
     "deny": [],
     "ask": []
