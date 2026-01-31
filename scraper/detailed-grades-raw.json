@@ -56,12 +56,12 @@
     "period": "2",
     "currentGrade": 100,
     "assignmentName": "Attendance FID",
-    "dateDue": "01/27/2026",
-    "dueDate": "01/27/2026",
-    "earnedPoints": 0,
-    "totalPoints": 0,
+    "dateDue": "01/28/2026",
+    "dueDate": "01/28/2026",
+    "earnedPoints": 10,
+    "totalPoints": 13,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "43424",
@@ -72,12 +72,12 @@
     "period": "2",
     "currentGrade": 100,
     "assignmentName": "Attendende Live Google meet",
-    "dateDue": "01/27/2026",
-    "dueDate": "01/27/2026",
-    "earnedPoints": 0,
+    "dateDue": "01/26/2026",
+    "dueDate": "01/26/2026",
+    "earnedPoints": 1,
     "totalPoints": 0,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "43424",
@@ -104,8 +104,8 @@
     "period": "4",
     "currentGrade": 100,
     "assignmentName": "Week 1 Participation",
-    "dateDue": "01/23/2026",
-    "dueDate": "01/23/2026",
+    "dateDue": "01/22/2026",
+    "dueDate": "01/22/2026",
     "earnedPoints": 10,
     "totalPoints": 10,
     "weight": 1,
@@ -120,12 +120,12 @@
     "period": "6",
     "currentGrade": 77,
     "assignmentName": "AI Interview",
-    "dateDue": "01/23/2026",
-    "dueDate": "01/23/2026",
-    "earnedPoints": 10,
-    "totalPoints": 10,
+    "dateDue": "01/28/2026",
+    "dueDate": "01/28/2026",
+    "earnedPoints": 0,
+    "totalPoints": 40,
     "weight": 1,
-    "graded": true
+    "graded": false
   },
   {
     "classId": "43049",
@@ -152,12 +152,12 @@
     "period": "6",
     "currentGrade": 77,
     "assignmentName": "Chapter 9 Study Guide Pt 1",
-    "dateDue": "01/23/2026",
-    "dueDate": "01/23/2026",
-    "earnedPoints": 0,
-    "totalPoints": 20,
+    "dateDue": "01/28/2026",
+    "dueDate": "01/28/2026",
+    "earnedPoints": 23,
+    "totalPoints": 30,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "43666",
@@ -168,12 +168,12 @@
     "period": "7",
     "currentGrade": 98,
     "assignmentName": "Tuesday(1/27/26): Triangle Inequality Theorem",
-    "dateDue": "01/23/2026",
-    "dueDate": "01/23/2026",
-    "earnedPoints": 0,
-    "totalPoints": 20,
+    "dateDue": "01/27/2026",
+    "dueDate": "01/27/2026",
+    "earnedPoints": 14,
+    "totalPoints": 15,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "43666",
@@ -202,8 +202,8 @@
     "assignmentName": "Friday(1/23/26): Delta Math",
     "dateDue": "01/23/2026",
     "dueDate": "01/23/2026",
-    "earnedPoints": 18,
-    "totalPoints": 18,
+    "earnedPoints": 15,
+    "totalPoints": 15,
     "weight": 1,
     "graded": true
   },
@@ -218,8 +218,8 @@
     "assignmentName": "Thursday(1/22/26):Get More Math!",
     "dateDue": "01/23/2026",
     "dueDate": "01/23/2026",
-    "earnedPoints": 18,
-    "totalPoints": 18,
+    "earnedPoints": 16,
+    "totalPoints": 16,
     "weight": 1,
     "graded": true
   },
@@ -248,12 +248,12 @@
     "period": "8",
     "currentGrade": 93,
     "assignmentName": "Intro to Soc Reading & ?s",
-    "dateDue": "01/27/2026",
-    "dueDate": "01/27/2026",
-    "earnedPoints": 16,
-    "totalPoints": 20,
+    "dateDue": "01/30/2026",
+    "dueDate": "01/30/2026",
+    "earnedPoints": 0,
+    "totalPoints": 10,
     "weight": 1,
-    "graded": true
+    "graded": false
   },
   {
     "classId": "44615",
@@ -280,10 +280,10 @@
     "period": "8",
     "currentGrade": 93,
     "assignmentName": "Where to Go - Social Norms",
-    "dateDue": "01/26/2026",
-    "dueDate": "01/26/2026",
-    "earnedPoints": 10,
-    "totalPoints": 10,
+    "dateDue": "01/23/2026",
+    "dueDate": "01/23/2026",
+    "earnedPoints": 18,
+    "totalPoints": 18,
     "weight": 1,
     "graded": true
   },
@@ -296,10 +296,10 @@
     "period": "8",
     "currentGrade": 93,
     "assignmentName": "Classroom Expectations",
-    "dateDue": "01/22/2026",
-    "dueDate": "01/22/2026",
-    "earnedPoints": 10,
-    "totalPoints": 10,
+    "dateDue": "01/23/2026",
+    "dueDate": "01/23/2026",
+    "earnedPoints": 18,
+    "totalPoints": 18,
     "weight": 1,
     "graded": true
   }
