@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-01-31T00:45:03.093Z",
+    "scrapedAt": "2026-01-31T19:52:41.821Z",
     "totalClasses": 9,
-    "totalAssignments": 19
+    "totalAssignments": 20
   },
   "classes": [
     {
@@ -53,19 +53,19 @@
       "assignments": [
         {
           "name": "Attendance FID",
-          "dueDate": "01/28/2026",
-          "earnedPoints": 10,
-          "totalPoints": 13,
+          "dueDate": "01/27/2026",
+          "earnedPoints": 0,
+          "totalPoints": 0,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "Attendende Live Google meet",
-          "dueDate": "01/26/2026",
-          "earnedPoints": 1,
+          "dueDate": "01/27/2026",
+          "earnedPoints": 0,
           "totalPoints": 0,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "Green Solar Cells:Photo Synthe",
@@ -84,8 +84,16 @@
       "currentGrade": 100,
       "assignments": [
         {
+          "name": "Week 2 Participation",
+          "dueDate": "01/30/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
           "name": "Week 1 Participation",
-          "dueDate": "01/22/2026",
+          "dueDate": "01/30/2026",
           "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
@@ -101,19 +109,19 @@
       "assignments": [
         {
           "name": "AI Interview",
-          "dueDate": "01/28/2026",
-          "earnedPoints": 0,
-          "totalPoints": 40,
+          "dueDate": "01/23/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "1930's Quiz",
           "dueDate": "01/28/2026",
-          "earnedPoints": 0,
-          "totalPoints": 40,
+          "earnedPoints": 23,
+          "totalPoints": 30,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Chapter 9 Study Guide Pt 1",
@@ -133,16 +141,16 @@
       "assignments": [
         {
           "name": "Tuesday(1/27/26): Triangle Inequality Theorem",
-          "dueDate": "01/27/2026",
-          "earnedPoints": 14,
-          "totalPoints": 15,
+          "dueDate": "01/23/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "Monday(1/26/26): FID Assignment",
           "dueDate": "01/26/2026",
-          "earnedPoints": 14,
+          "earnedPoints": 15,
           "totalPoints": 15,
           "weight": 1,
           "graded": true
@@ -158,8 +166,8 @@
         {
           "name": "Thursday(1/22/26):Get More Math!",
           "dueDate": "01/23/2026",
-          "earnedPoints": 16,
-          "totalPoints": 16,
+          "earnedPoints": 18,
+          "totalPoints": 18,
           "weight": 1,
           "graded": true
         }
@@ -174,10 +182,10 @@
         {
           "name": "Day 3 Notes",
           "dueDate": "01/30/2026",
-          "earnedPoints": 16,
-          "totalPoints": 16,
+          "earnedPoints": 0,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "Intro to Soc Reading & ?s",
