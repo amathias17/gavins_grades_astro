@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-02-01T00:55:34.379Z",
+    "scrapedAt": "2026-02-01T17:06:41.020Z",
     "totalClasses": 9,
     "totalAssignments": 20
   },
@@ -53,19 +53,19 @@
       "assignments": [
         {
           "name": "Attendance FID",
-          "dueDate": "01/28/2026",
-          "earnedPoints": 10,
-          "totalPoints": 13,
+          "dueDate": "01/27/2026",
+          "earnedPoints": 0,
+          "totalPoints": 0,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "Attendende Live Google meet",
-          "dueDate": "01/26/2026",
-          "earnedPoints": 1,
+          "dueDate": "01/27/2026",
+          "earnedPoints": 0,
           "totalPoints": 0,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "Green Solar Cells:Photo Synthe",
@@ -85,7 +85,7 @@
       "assignments": [
         {
           "name": "Week 2 Participation",
-          "dueDate": "01/22/2026",
+          "dueDate": "01/30/2026",
           "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
@@ -108,7 +108,7 @@
       "currentGrade": 77,
       "assignments": [
         {
-          "name": "1930's Quiz",
+          "name": "AI Interview",
           "dueDate": "01/23/2026",
           "earnedPoints": 10,
           "totalPoints": 10,
@@ -116,7 +116,7 @@
           "graded": true
         },
         {
-          "name": "AI Interview",
+          "name": "1930's Quiz",
           "dueDate": "01/28/2026",
           "earnedPoints": 23,
           "totalPoints": 30,
@@ -126,10 +126,10 @@
         {
           "name": "Chapter 9 Study Guide Pt 1",
           "dueDate": "01/28/2026",
-          "earnedPoints": 0,
-          "totalPoints": 40,
+          "earnedPoints": 23,
+          "totalPoints": 30,
           "weight": 1,
-          "graded": false
+          "graded": true
         }
       ]
     },
@@ -150,7 +150,7 @@
         {
           "name": "Monday(1/26/26): FID Assignment",
           "dueDate": "01/26/2026",
-          "earnedPoints": 14,
+          "earnedPoints": 15,
           "totalPoints": 15,
           "weight": 1,
           "graded": true
@@ -189,11 +189,11 @@
         },
         {
           "name": "Intro to Soc Reading & ?s",
-          "dueDate": "01/27/2026",
-          "earnedPoints": 16,
-          "totalPoints": 20,
+          "dueDate": "01/30/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "EdPuzzle What is Sociology",
@@ -205,17 +205,17 @@
         },
         {
           "name": "Where to Go - Social Norms",
-          "dueDate": "01/26/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "dueDate": "01/23/2026",
+          "earnedPoints": 18,
+          "totalPoints": 18,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Classroom Expectations",
-          "dueDate": "01/22/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "dueDate": "01/23/2026",
+          "earnedPoints": 18,
+          "totalPoints": 18,
           "weight": 1,
           "graded": true
         }
