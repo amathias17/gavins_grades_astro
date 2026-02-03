@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-02-03T00:50:02.501Z",
+    "scrapedAt": "2026-02-03T05:24:40.061Z",
     "totalClasses": 9,
     "totalAssignments": 22
   },
@@ -53,19 +53,19 @@
       "assignments": [
         {
           "name": "Attendance FID",
-          "dueDate": "01/27/2026",
-          "earnedPoints": 0,
-          "totalPoints": 0,
+          "dueDate": "01/28/2026",
+          "earnedPoints": 10,
+          "totalPoints": 13,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Attendende Live Google meet",
-          "dueDate": "01/27/2026",
-          "earnedPoints": 0,
+          "dueDate": "01/26/2026",
+          "earnedPoints": 1,
           "totalPoints": 0,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Green Solar Cells:Photo Synthe",
@@ -85,7 +85,7 @@
       "assignments": [
         {
           "name": "Week 2 Participation",
-          "dueDate": "01/30/2026",
+          "dueDate": "01/22/2026",
           "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
@@ -118,10 +118,10 @@
         {
           "name": "1930's Quiz",
           "dueDate": "01/28/2026",
-          "earnedPoints": 23,
-          "totalPoints": 30,
+          "earnedPoints": 0,
+          "totalPoints": 40,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "Chapter 9 Study Guide Pt 1",
@@ -149,9 +149,9 @@
         },
         {
           "name": "Tuesday(1/27/26): Triangle Inequality Theorem",
-          "dueDate": "01/27/2026",
-          "earnedPoints": 14,
-          "totalPoints": 15,
+          "dueDate": "01/28/2026",
+          "earnedPoints": 19,
+          "totalPoints": 19,
           "weight": 1,
           "graded": true
         },
@@ -166,16 +166,16 @@
         {
           "name": "Friday(1/23/26): Delta Math",
           "dueDate": "01/23/2026",
-          "earnedPoints": 15,
-          "totalPoints": 15,
+          "earnedPoints": 18,
+          "totalPoints": 18,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Thursday(1/22/26):Get More Math!",
           "dueDate": "01/23/2026",
-          "earnedPoints": 16,
-          "totalPoints": 16,
+          "earnedPoints": 18,
+          "totalPoints": 18,
           "weight": 1,
           "graded": true
         }
@@ -197,17 +197,17 @@
         },
         {
           "name": "Day 3 Notes",
-          "dueDate": "02/02/2026",
-          "earnedPoints": 21,
-          "totalPoints": 21,
+          "dueDate": "01/30/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Intro to Soc Reading & ?s",
-          "dueDate": "01/27/2026",
-          "earnedPoints": 16,
-          "totalPoints": 20,
+          "dueDate": "01/30/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
@@ -229,9 +229,9 @@
         },
         {
           "name": "Classroom Expectations",
-          "dueDate": "01/22/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "dueDate": "01/23/2026",
+          "earnedPoints": 18,
+          "totalPoints": 18,
           "weight": 1,
           "graded": true
         }
