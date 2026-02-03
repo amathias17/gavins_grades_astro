@@ -1,13 +1,10 @@
 name: Scrape Grades
 
 on:
-  # Run on a schedule at specific times each day (EST)
+  # Run twice daily at 7:00am and 7:00pm Eastern Standard Time (EST, UTC-5)
   schedule:
-    - cron: '30 11 * * *'  # 6:30am EST (11:30 UTC)
-    - cron: '0 17 * * *'   # 12:00pm EST (17:00 UTC)
-    - cron: '45 19 * * *'  # 2:45pm EST (19:45 UTC)
+    - cron: '0 12 * * *'   # 7:00am EST (12:00 UTC)
     - cron: '0 0 * * *'    # 7:00pm EST (00:00 UTC next day)
-    - cron: '0 5 * * *'    # 12:00am EST (05:00 UTC)
 
   # Allow manual triggering from GitHub Actions tab
   workflow_dispatch:
