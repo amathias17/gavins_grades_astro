@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-02-03T11:47:21.871Z",
+    "scrapedAt": "2026-02-04T00:46:11.884Z",
     "totalClasses": 9,
-    "totalAssignments": 22
+    "totalAssignments": 26
   },
   "classes": [
     {
@@ -69,9 +69,9 @@
         },
         {
           "name": "Green Solar Cells:Photo Synthe",
-          "dueDate": "01/26/2026",
-          "earnedPoints": 1,
-          "totalPoints": 0,
+          "dueDate": "01/22/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         }
@@ -102,13 +102,13 @@
       ]
     },
     {
-      "className": "AMER STUDIES",
-      "teacher": "Brock Seese",
-      "period": "6",
-      "currentGrade": 77,
+      "className": "GREEK MYTHOLOGY",
+      "teacher": "Alex Ray",
+      "period": "5",
+      "currentGrade": 93,
       "assignments": [
         {
-          "name": "AI Interview",
+          "name": "Zeus Trading Card",
           "dueDate": "01/23/2026",
           "earnedPoints": 10,
           "totalPoints": 10,
@@ -116,9 +116,41 @@
           "graded": true
         },
         {
+          "name": "All About Zeus Worksheet",
+          "dueDate": "01/28/2026",
+          "earnedPoints": 20,
+          "totalPoints": 23,
+          "weight": 1,
+          "graded": true
+        }
+      ]
+    },
+    {
+      "className": "AMER STUDIES",
+      "teacher": "Brock Seese",
+      "period": "6",
+      "currentGrade": 87,
+      "assignments": [
+        {
+          "name": "New Deal Vocab",
+          "dueDate": "01/28/2026",
+          "earnedPoints": 20,
+          "totalPoints": 23,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "AI Interview",
+          "dueDate": "02/03/2026",
+          "earnedPoints": 0,
+          "totalPoints": 22,
+          "weight": 1,
+          "graded": false
+        },
+        {
           "name": "1930's Quiz",
           "dueDate": "01/28/2026",
-          "earnedPoints": 23,
+          "earnedPoints": 26,
           "totalPoints": 30,
           "weight": 1,
           "graded": true
@@ -126,7 +158,7 @@
         {
           "name": "Chapter 9 Study Guide Pt 1",
           "dueDate": "01/28/2026",
-          "earnedPoints": 23,
+          "earnedPoints": 26,
           "totalPoints": 30,
           "weight": 1,
           "graded": true
@@ -188,18 +220,26 @@
       "currentGrade": 96,
       "assignments": [
         {
-          "name": "Theoretical Perspectives Analy",
-          "dueDate": "02/02/2026",
+          "name": "Social Psychology Experiments",
+          "dueDate": "02/03/2026",
           "earnedPoints": 16,
           "totalPoints": 16,
           "weight": 1,
           "graded": true
         },
         {
+          "name": "Theoretical Perspectives Analy",
+          "dueDate": "02/03/2026",
+          "earnedPoints": 0,
+          "totalPoints": 18,
+          "weight": 1,
+          "graded": false
+        },
+        {
           "name": "Day 3 Notes",
-          "dueDate": "02/02/2026",
-          "earnedPoints": 21,
-          "totalPoints": 21,
+          "dueDate": "01/30/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
@@ -229,9 +269,9 @@
         },
         {
           "name": "Classroom Expectations",
-          "dueDate": "01/22/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "dueDate": "01/23/2026",
+          "earnedPoints": 18,
+          "totalPoints": 18,
           "weight": 1,
           "graded": true
         }
