@@ -1,20 +1,28 @@
 {
   "metadata": {
-    "scrapedAt": "2026-02-04T12:16:32.812Z",
+    "scrapedAt": "2026-02-04T22:02:43.897Z",
     "totalClasses": 9,
-    "totalAssignments": 26
+    "totalAssignments": 35
   },
   "classes": [
     {
       "className": "SOPHOMORE SEMINAR",
       "teacher": "Victoria Good",
       "period": "0",
-      "currentGrade": 0,
+      "currentGrade": 50,
       "assignments": [
         {
+          "name": "Week of 2/2 Part.",
+          "dueDate": "02/04/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
           "name": "Week of 1/19",
-          "dueDate": "01/23/2026",
-          "earnedPoints": 0,
+          "dueDate": "02/04/2026",
+          "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
           "graded": true
@@ -28,12 +36,20 @@
       "currentGrade": 91,
       "assignments": [
         {
-          "name": "213 Myrtle Questions",
+          "name": "Speak Blooket",
           "dueDate": "01/23/2026",
           "earnedPoints": 0,
           "totalPoints": 10,
           "weight": 1,
           "graded": true
+        },
+        {
+          "name": "213 Myrtle Questions",
+          "dueDate": "02/04/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
         },
         {
           "name": "Comma Quiz",
@@ -49,8 +65,40 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 100,
+      "currentGrade": 83,
       "assignments": [
+        {
+          "name": "Notes fermentation",
+          "dueDate": "02/04/2026",
+          "earnedPoints": 0,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Fermentation Quiz",
+          "dueDate": "02/04/2026",
+          "earnedPoints": 9,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Collins Vocab Cards",
+          "dueDate": "02/04/2026",
+          "earnedPoints": 9,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Fermentation -",
+          "dueDate": "02/03/2026",
+          "earnedPoints": 0,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Attendance FID",
           "dueDate": "01/27/2026",
@@ -78,6 +126,30 @@
       ]
     },
     {
+      "className": "FOOD CHALLENGES",
+      "teacher": "Misty Finnegan",
+      "period": "3",
+      "currentGrade": 0,
+      "assignments": [
+        {
+          "name": "Pre-Test (Food Safety)",
+          "dueDate": "01/28/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Student Information WS",
+          "dueDate": "01/23/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        }
+      ]
+    },
+    {
       "className": "ENG/DESIGN/ARCH",
       "teacher": "Todd Bennett",
       "period": "4",
@@ -86,14 +158,14 @@
         {
           "name": "Week 2 Participation",
           "dueDate": "01/30/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "earnedPoints": 0,
+          "totalPoints": 15,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "Week 1 Participation",
-          "dueDate": "01/30/2026",
+          "dueDate": "01/23/2026",
           "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
@@ -117,9 +189,9 @@
         },
         {
           "name": "All About Zeus Worksheet",
-          "dueDate": "01/28/2026",
-          "earnedPoints": 20,
-          "totalPoints": 23,
+          "dueDate": "02/03/2026",
+          "earnedPoints": 34,
+          "totalPoints": 35,
           "weight": 1,
           "graded": true
         }
@@ -141,19 +213,19 @@
         },
         {
           "name": "AI Interview",
-          "dueDate": "02/03/2026",
+          "dueDate": "01/28/2026",
           "earnedPoints": 0,
-          "totalPoints": 22,
+          "totalPoints": 40,
           "weight": 1,
           "graded": false
         },
         {
           "name": "1930's Quiz",
           "dueDate": "01/28/2026",
-          "earnedPoints": 26,
-          "totalPoints": 30,
+          "earnedPoints": 0,
+          "totalPoints": 40,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "Chapter 9 Study Guide Pt 1",
@@ -173,17 +245,17 @@
       "assignments": [
         {
           "name": "Wednesday(1/28/26): Delta Math",
-          "dueDate": "01/23/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
+          "dueDate": "01/28/2026",
+          "earnedPoints": 19,
+          "totalPoints": 19,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Tuesday(1/27/26): Triangle Inequality Theorem",
-          "dueDate": "01/27/2026",
-          "earnedPoints": 14,
-          "totalPoints": 15,
+          "dueDate": "01/28/2026",
+          "earnedPoints": 19,
+          "totalPoints": 19,
           "weight": 1,
           "graded": true
         },
@@ -198,16 +270,16 @@
         {
           "name": "Friday(1/23/26): Delta Math",
           "dueDate": "01/23/2026",
-          "earnedPoints": 15,
-          "totalPoints": 15,
+          "earnedPoints": 18,
+          "totalPoints": 18,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Thursday(1/22/26):Get More Math!",
           "dueDate": "01/23/2026",
-          "earnedPoints": 16,
-          "totalPoints": 16,
+          "earnedPoints": 18,
+          "totalPoints": 18,
           "weight": 1,
           "graded": true
         }
@@ -220,34 +292,42 @@
       "currentGrade": 96,
       "assignments": [
         {
-          "name": "Social Psychology Experiments",
-          "dueDate": "02/03/2026",
+          "name": "Lesson Plan Day 1",
+          "dueDate": "02/04/2026",
           "earnedPoints": 16,
           "totalPoints": 16,
           "weight": 1,
           "graded": true
         },
         {
-          "name": "Theoretical Perspectives Analy",
+          "name": "Social Psychology Experiments",
           "dueDate": "02/03/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 18,
           "totalPoints": 18,
           "weight": 1,
-          "graded": false
+          "graded": true
+        },
+        {
+          "name": "Theoretical Perspectives Analy",
+          "dueDate": "02/03/2026",
+          "earnedPoints": 18,
+          "totalPoints": 18,
+          "weight": 1,
+          "graded": true
         },
         {
           "name": "Day 3 Notes",
-          "dueDate": "01/30/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "dueDate": "02/02/2026",
+          "earnedPoints": 21,
+          "totalPoints": 21,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Intro to Soc Reading & ?s",
-          "dueDate": "01/30/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "dueDate": "01/27/2026",
+          "earnedPoints": 16,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         },
@@ -261,9 +341,9 @@
         },
         {
           "name": "Where to Go - Social Norms",
-          "dueDate": "01/23/2026",
-          "earnedPoints": 18,
-          "totalPoints": 18,
+          "dueDate": "01/26/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
