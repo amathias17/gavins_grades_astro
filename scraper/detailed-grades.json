@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-02-04T00:46:11.884Z",
+    "scrapedAt": "2026-02-04T12:16:32.812Z",
     "totalClasses": 9,
     "totalAssignments": 26
   },
@@ -69,9 +69,9 @@
         },
         {
           "name": "Green Solar Cells:Photo Synthe",
-          "dueDate": "01/22/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "dueDate": "01/26/2026",
+          "earnedPoints": 1,
+          "totalPoints": 0,
           "weight": 1,
           "graded": true
         }
