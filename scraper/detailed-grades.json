@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-02-04T22:02:43.897Z",
+    "scrapedAt": "2026-02-05T00:50:05.634Z",
     "totalClasses": 9,
     "totalAssignments": 35
   },
@@ -69,17 +69,17 @@
       "assignments": [
         {
           "name": "Notes fermentation",
-          "dueDate": "02/04/2026",
-          "earnedPoints": 0,
-          "totalPoints": 5,
+          "dueDate": "01/28/2026",
+          "earnedPoints": 10,
+          "totalPoints": 13,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Fermentation Quiz",
           "dueDate": "02/04/2026",
-          "earnedPoints": 9,
-          "totalPoints": 10,
+          "earnedPoints": 0,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         },
@@ -101,11 +101,11 @@
         },
         {
           "name": "Attendance FID",
-          "dueDate": "01/27/2026",
-          "earnedPoints": 0,
-          "totalPoints": 0,
+          "dueDate": "02/03/2026",
+          "earnedPoints": 9,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Attendende Live Google meet",
@@ -213,19 +213,19 @@
         },
         {
           "name": "AI Interview",
-          "dueDate": "01/28/2026",
+          "dueDate": "02/03/2026",
           "earnedPoints": 0,
-          "totalPoints": 40,
+          "totalPoints": 22,
           "weight": 1,
           "graded": false
         },
         {
           "name": "1930's Quiz",
           "dueDate": "01/28/2026",
-          "earnedPoints": 0,
-          "totalPoints": 40,
+          "earnedPoints": 26,
+          "totalPoints": 30,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Chapter 9 Study Guide Pt 1",
@@ -245,17 +245,17 @@
       "assignments": [
         {
           "name": "Wednesday(1/28/26): Delta Math",
-          "dueDate": "01/28/2026",
-          "earnedPoints": 19,
-          "totalPoints": 19,
+          "dueDate": "01/23/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "Tuesday(1/27/26): Triangle Inequality Theorem",
-          "dueDate": "01/28/2026",
-          "earnedPoints": 19,
-          "totalPoints": 19,
+          "dueDate": "01/27/2026",
+          "earnedPoints": 14,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
@@ -270,16 +270,16 @@
         {
           "name": "Friday(1/23/26): Delta Math",
           "dueDate": "01/23/2026",
-          "earnedPoints": 18,
-          "totalPoints": 18,
+          "earnedPoints": 15,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Thursday(1/22/26):Get More Math!",
           "dueDate": "01/23/2026",
-          "earnedPoints": 18,
-          "totalPoints": 18,
+          "earnedPoints": 16,
+          "totalPoints": 16,
           "weight": 1,
           "graded": true
         }
@@ -301,9 +301,9 @@
         },
         {
           "name": "Social Psychology Experiments",
-          "dueDate": "02/03/2026",
-          "earnedPoints": 18,
-          "totalPoints": 18,
+          "dueDate": "02/04/2026",
+          "earnedPoints": 7,
+          "totalPoints": 7,
           "weight": 1,
           "graded": true
         },
@@ -333,9 +333,9 @@
         },
         {
           "name": "EdPuzzle What is Sociology",
-          "dueDate": "01/27/2026",
-          "earnedPoints": 16,
-          "totalPoints": 20,
+          "dueDate": "01/26/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
