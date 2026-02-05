@@ -56,12 +56,12 @@
     "period": "1",
     "currentGrade": 91,
     "assignmentName": "213 Myrtle Questions",
-    "dateDue": "02/04/2026",
-    "dueDate": "02/04/2026",
-    "earnedPoints": 0,
-    "totalPoints": 10,
+    "dateDue": "01/30/2026",
+    "dueDate": "01/30/2026",
+    "earnedPoints": 20,
+    "totalPoints": 20,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "43162",
@@ -106,8 +106,8 @@
     "assignmentName": "Fermentation Quiz",
     "dateDue": "02/04/2026",
     "dueDate": "02/04/2026",
-    "earnedPoints": 0,
-    "totalPoints": 5,
+    "earnedPoints": 9,
+    "totalPoints": 10,
     "weight": 1,
     "graded": true
   },
@@ -152,12 +152,12 @@
     "period": "2",
     "currentGrade": 83,
     "assignmentName": "Attendance FID",
-    "dateDue": "02/03/2026",
-    "dueDate": "02/03/2026",
-    "earnedPoints": 9,
-    "totalPoints": 10,
+    "dateDue": "01/27/2026",
+    "dueDate": "01/27/2026",
+    "earnedPoints": 0,
+    "totalPoints": 0,
     "weight": 1,
-    "graded": true
+    "graded": false
   },
   {
     "classId": "43424",
@@ -296,12 +296,12 @@
     "period": "6",
     "currentGrade": 87,
     "assignmentName": "New Deal Vocab",
-    "dateDue": "01/28/2026",
-    "dueDate": "01/28/2026",
-    "earnedPoints": 20,
-    "totalPoints": 23,
+    "dateDue": "02/03/2026",
+    "dueDate": "02/03/2026",
+    "earnedPoints": 0,
+    "totalPoints": 22,
     "weight": 1,
-    "graded": true
+    "graded": false
   },
   {
     "classId": "43049",
@@ -330,10 +330,10 @@
     "assignmentName": "1930's Quiz",
     "dateDue": "01/28/2026",
     "dueDate": "01/28/2026",
-    "earnedPoints": 26,
-    "totalPoints": 30,
+    "earnedPoints": 0,
+    "totalPoints": 40,
     "weight": 1,
-    "graded": true
+    "graded": false
   },
   {
     "classId": "43049",
@@ -344,12 +344,12 @@
     "period": "6",
     "currentGrade": 87,
     "assignmentName": "Chapter 9 Study Guide Pt 1",
-    "dateDue": "01/28/2026",
-    "dueDate": "01/28/2026",
-    "earnedPoints": 26,
-    "totalPoints": 30,
+    "dateDue": "01/23/2026",
+    "dueDate": "01/23/2026",
+    "earnedPoints": 0,
+    "totalPoints": 20,
     "weight": 1,
-    "graded": true
+    "graded": false
   },
   {
     "classId": "43666",
@@ -376,10 +376,10 @@
     "period": "7",
     "currentGrade": 99,
     "assignmentName": "Tuesday(1/27/26): Triangle Inequality Theorem",
-    "dateDue": "01/27/2026",
-    "dueDate": "01/27/2026",
-    "earnedPoints": 14,
-    "totalPoints": 15,
+    "dateDue": "01/28/2026",
+    "dueDate": "01/28/2026",
+    "earnedPoints": 19,
+    "totalPoints": 19,
     "weight": 1,
     "graded": true
   },
@@ -394,7 +394,7 @@
     "assignmentName": "Monday(1/26/26): FID Assignment",
     "dateDue": "01/26/2026",
     "dueDate": "01/26/2026",
-    "earnedPoints": 14,
+    "earnedPoints": 15,
     "totalPoints": 15,
     "weight": 1,
     "graded": true
@@ -426,8 +426,8 @@
     "assignmentName": "Thursday(1/22/26):Get More Math!",
     "dateDue": "01/23/2026",
     "dueDate": "01/23/2026",
-    "earnedPoints": 16,
-    "totalPoints": 16,
+    "earnedPoints": 18,
+    "totalPoints": 18,
     "weight": 1,
     "graded": true
   },
@@ -442,8 +442,8 @@
     "assignmentName": "Lesson Plan Day 1",
     "dateDue": "02/04/2026",
     "dueDate": "02/04/2026",
-    "earnedPoints": 16,
-    "totalPoints": 16,
+    "earnedPoints": 7,
+    "totalPoints": 7,
     "weight": 1,
     "graded": true
   },
@@ -504,10 +504,10 @@
     "period": "8",
     "currentGrade": 96,
     "assignmentName": "Intro to Soc Reading & ?s",
-    "dateDue": "01/27/2026",
-    "dueDate": "01/27/2026",
-    "earnedPoints": 16,
-    "totalPoints": 20,
+    "dateDue": "01/30/2026",
+    "dueDate": "01/30/2026",
+    "earnedPoints": 10,
+    "totalPoints": 10,
     "weight": 1,
     "graded": true
   },
@@ -520,10 +520,10 @@
     "period": "8",
     "currentGrade": 96,
     "assignmentName": "EdPuzzle What is Sociology",
-    "dateDue": "01/26/2026",
-    "dueDate": "01/26/2026",
-    "earnedPoints": 10,
-    "totalPoints": 10,
+    "dateDue": "01/27/2026",
+    "dueDate": "01/27/2026",
+    "earnedPoints": 16,
+    "totalPoints": 20,
     "weight": 1,
     "graded": true
   },
