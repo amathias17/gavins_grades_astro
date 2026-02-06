@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-02-05T12:18:41.493Z",
+    "scrapedAt": "2026-02-06T00:49:10.224Z",
     "totalClasses": 9,
-    "totalAssignments": 35
+    "totalAssignments": 38
   },
   "classes": [
     {
@@ -201,39 +201,55 @@
       "className": "AMER STUDIES",
       "teacher": "Brock Seese",
       "period": "6",
-      "currentGrade": 87,
+      "currentGrade": 94,
       "assignments": [
         {
-          "name": "New Deal Vocab",
-          "dueDate": "02/03/2026",
+          "name": "FDR Poster",
+          "dueDate": "02/05/2026",
           "earnedPoints": 0,
-          "totalPoints": 22,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Great Depression Study Guide",
+          "dueDate": "02/05/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "New Deal Vocab",
+          "dueDate": "02/05/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
           "weight": 1,
           "graded": false
         },
         {
           "name": "AI Interview",
-          "dueDate": "02/03/2026",
-          "earnedPoints": 0,
-          "totalPoints": 22,
+          "dueDate": "01/28/2026",
+          "earnedPoints": 40,
+          "totalPoints": 40,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "1930's Quiz",
           "dueDate": "01/28/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 40,
           "totalPoints": 40,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Chapter 9 Study Guide Pt 1",
-          "dueDate": "01/23/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
+          "dueDate": "01/28/2026",
+          "earnedPoints": 26,
+          "totalPoints": 30,
           "weight": 1,
-          "graded": false
+          "graded": true
         }
       ]
     },
@@ -245,11 +261,11 @@
       "assignments": [
         {
           "name": "Wednesday(1/28/26): Delta Math",
-          "dueDate": "01/23/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
+          "dueDate": "01/28/2026",
+          "earnedPoints": 19,
+          "totalPoints": 19,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Tuesday(1/27/26): Triangle Inequality Theorem",
@@ -262,7 +278,7 @@
         {
           "name": "Monday(1/26/26): FID Assignment",
           "dueDate": "01/26/2026",
-          "earnedPoints": 15,
+          "earnedPoints": 14,
           "totalPoints": 15,
           "weight": 1,
           "graded": true
@@ -270,8 +286,8 @@
         {
           "name": "Friday(1/23/26): Delta Math",
           "dueDate": "01/23/2026",
-          "earnedPoints": 15,
-          "totalPoints": 15,
+          "earnedPoints": 18,
+          "totalPoints": 18,
           "weight": 1,
           "graded": true
         },
@@ -292,12 +308,20 @@
       "currentGrade": 96,
       "assignments": [
         {
-          "name": "Lesson Plan Day 1",
-          "dueDate": "02/04/2026",
-          "earnedPoints": 7,
-          "totalPoints": 7,
+          "name": "Lesson Plan Day 2",
+          "dueDate": "02/05/2026",
+          "earnedPoints": 16,
+          "totalPoints": 16,
           "weight": 1,
           "graded": true
+        },
+        {
+          "name": "Lesson Plan Day 1",
+          "dueDate": "02/05/2026",
+          "earnedPoints": 0,
+          "totalPoints": 7,
+          "weight": 1,
+          "graded": false
         },
         {
           "name": "Social Psychology Experiments",
