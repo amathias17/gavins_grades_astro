@@ -1,7 +1,24 @@
 {
   "metadata": {
-    "last_updated": "02/06/2026, 07:16 AM",
-    "count": 0
+    "last_updated": "02/06/2026, 07:49 PM",
+    "count": 2
   },
-  "missing_assignments": []
+  "missing_assignments": [
+    {
+      "due_date": "02/06/2026",
+      "assignment_name": "Third Wave Essay",
+      "class_name": "SOCIOLOGY",
+      "teacher": "Heather Eckels",
+      "category": "Class Work",
+      "max_points": "50"
+    },
+    {
+      "due_date": "01/23/2026",
+      "assignment_name": "Chapter 9 Study Guide Pt 1",
+      "class_name": "AMER STUDIES",
+      "teacher": "Brock Seese",
+      "category": "Class Work",
+      "max_points": "20"
+    }
+  ]
 }

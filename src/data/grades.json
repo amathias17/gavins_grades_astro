@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "02/06/2026, 07:16 AM",
-    "most_recent_date": "2/6/2026",
+    "last_updated": "02/06/2026, 07:49 PM",
+    "most_recent_date": "2/7/2026",
     "total_classes": 9
   },
   "classes": [
@@ -26,9 +26,9 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q3_grade": 91,
+      "q3_grade": 93,
       "q3_letter_grade": "A",
-      "current_grade": 91,
+      "current_grade": 93,
       "letter_grade": "A"
     },
     {
@@ -39,10 +39,10 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q3_grade": 83,
-      "q3_letter_grade": "B",
-      "current_grade": 83,
-      "letter_grade": "B"
+      "q3_grade": 73,
+      "q3_letter_grade": "C",
+      "current_grade": 73,
+      "letter_grade": "C"
     },
     {
       "class_name": "Food Challenges",
@@ -52,10 +52,10 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q3_grade": 0,
-      "q3_letter_grade": "F",
-      "current_grade": 0,
-      "letter_grade": "F"
+      "q3_grade": 100,
+      "q3_letter_grade": "A",
+      "current_grade": 100,
+      "letter_grade": "A"
     },
     {
       "class_name": "Eng/design/arch",
@@ -78,9 +78,9 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q3_grade": 93,
+      "q3_grade": 92,
       "q3_letter_grade": "A",
-      "current_grade": 93,
+      "current_grade": 92,
       "letter_grade": "A"
     },
     {
@@ -91,10 +91,10 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q3_grade": 94,
-      "q3_letter_grade": "A",
-      "current_grade": 94,
-      "letter_grade": "A"
+      "q3_grade": 73,
+      "q3_letter_grade": "C",
+      "current_grade": 73,
+      "letter_grade": "C"
     },
     {
       "class_name": "Intermediate Geometry",
@@ -117,10 +117,10 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q3_grade": 96,
-      "q3_letter_grade": "A",
-      "current_grade": 96,
-      "letter_grade": "A"
+      "q3_grade": 68,
+      "q3_letter_grade": "D",
+      "current_grade": 68,
+      "letter_grade": "D"
     }
   ],
   "grade_history": {
@@ -197,7 +197,8 @@
       "2/3/2026": 0,
       "2/4/2026": 50,
       "2/5/2026": 50,
-      "2/6/2026": 50
+      "2/6/2026": 50,
+      "2/7/2026": 50
     },
     "English 10": {
       "11/24/2025": 75,
@@ -273,7 +274,8 @@
       "2/3/2026": 91,
       "2/4/2026": 91,
       "2/5/2026": 91,
-      "2/6/2026": 91
+      "2/6/2026": 91,
+      "2/7/2026": 93
     },
     "Biology 2": {
       "11/24/2025": 82,
@@ -349,7 +351,8 @@
       "2/3/2026": 100,
       "2/4/2026": 83,
       "2/5/2026": 83,
-      "2/6/2026": 83
+      "2/6/2026": 83,
+      "2/7/2026": 73
     },
     "History Pop Cult 1": {
       "11/24/2025": 90,
@@ -614,7 +617,8 @@
       "2/3/2026": 77,
       "2/4/2026": 87,
       "2/5/2026": 87,
-      "2/6/2026": 94
+      "2/6/2026": 94,
+      "2/7/2026": 73
     },
     "Intermediate Geometry": {
       "11/24/2025": 69,
@@ -690,7 +694,8 @@
       "2/3/2026": 99,
       "2/4/2026": 99,
       "2/5/2026": 99,
-      "2/6/2026": 99
+      "2/6/2026": 99,
+      "2/7/2026": 99
     },
     "Health": {
       "11/24/2025": 94,
@@ -769,7 +774,8 @@
       "2/3/2026": 96,
       "2/4/2026": 96,
       "2/5/2026": 96,
-      "2/6/2026": 96
+      "2/6/2026": 96,
+      "2/7/2026": 68
     },
     "Food Challenges": {
       "1/23/2026": 0,
@@ -785,7 +791,8 @@
       "2/3/2026": 0,
       "2/4/2026": 0,
       "2/5/2026": 0,
-      "2/6/2026": 0
+      "2/6/2026": 0,
+      "2/7/2026": 100
     },
     "Eng/design/arch": {
       "1/23/2026": 0,
@@ -801,7 +808,8 @@
       "2/3/2026": 100,
       "2/4/2026": 100,
       "2/5/2026": 100,
-      "2/6/2026": 100
+      "2/6/2026": 100,
+      "2/7/2026": 100
     },
     "Money Math": {
       "1/23/2026": 0,
@@ -820,10 +828,11 @@
       "2/3/2026": 0,
       "2/4/2026": 93,
       "2/5/2026": 93,
-      "2/6/2026": 93
+      "2/6/2026": 93,
+      "2/7/2026": 92
     }
   },
-  "overall_average": 88,
+  "overall_average": 83,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -899,9 +908,10 @@
     "2/3/2026": 94,
     "2/4/2026": 87,
     "2/5/2026": 87,
-    "2/6/2026": 88
+    "2/6/2026": 88,
+    "2/7/2026": 83
   },
-  "streak": 9,
+  "streak": 0,
   "streak_history": {
     "11/24/2025": 0,
     "11/25/2025": 0,
@@ -977,6 +987,7 @@
     "2/3/2026": 6,
     "2/4/2026": 7,
     "2/5/2026": 8,
-    "2/6/2026": 9
+    "2/6/2026": 9,
+    "2/7/2026": 0
   }
 }

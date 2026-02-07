@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-02-06T12:16:48.187Z",
+    "scrapedAt": "2026-02-07T00:49:51.192Z",
     "totalClasses": 9,
-    "totalAssignments": 38
+    "totalAssignments": 42
   },
   "classes": [
     {
@@ -33,7 +33,7 @@
       "className": "ENGLISH 10",
       "teacher": "Megan Leone",
       "period": "1",
-      "currentGrade": 91,
+      "currentGrade": 93,
       "assignments": [
         {
           "name": "Speak Blooket",
@@ -45,17 +45,17 @@
         },
         {
           "name": "213 Myrtle Questions",
-          "dueDate": "02/04/2026",
-          "earnedPoints": 0,
+          "dueDate": "02/02/2026",
+          "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Comma Quiz",
-          "dueDate": "01/30/2026",
-          "earnedPoints": 20,
-          "totalPoints": 20,
+          "dueDate": "01/28/2026",
+          "earnedPoints": 10,
+          "totalPoints": 13,
           "weight": 1,
           "graded": true
         }
@@ -65,21 +65,37 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 83,
+      "currentGrade": 73,
       "assignments": [
         {
-          "name": "Notes fermentation",
-          "dueDate": "02/04/2026",
-          "earnedPoints": 0,
+          "name": "Types of Reproduction-EdPuzzle",
+          "dueDate": "01/28/2026",
+          "earnedPoints": 10,
+          "totalPoints": 13,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Tyoes of reproduction SG",
+          "dueDate": "02/06/2026",
+          "earnedPoints": 5,
           "totalPoints": 5,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Notes fermentation",
+          "dueDate": "02/06/2026",
+          "earnedPoints": 9,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Fermentation Quiz",
           "dueDate": "02/04/2026",
-          "earnedPoints": 0,
-          "totalPoints": 5,
+          "earnedPoints": 9,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
@@ -94,18 +110,18 @@
         {
           "name": "Fermentation -",
           "dueDate": "02/03/2026",
-          "earnedPoints": 9,
-          "totalPoints": 10,
+          "earnedPoints": 8,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Attendance FID",
-          "dueDate": "02/03/2026",
-          "earnedPoints": 9,
-          "totalPoints": 10,
+          "dueDate": "01/27/2026",
+          "earnedPoints": 0,
+          "totalPoints": 0,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "Attendende Live Google meet",
@@ -117,9 +133,9 @@
         },
         {
           "name": "Green Solar Cells:Photo Synthe",
-          "dueDate": "01/22/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "dueDate": "01/26/2026",
+          "earnedPoints": 1,
+          "totalPoints": 0,
           "weight": 1,
           "graded": true
         }
@@ -129,23 +145,31 @@
       "className": "FOOD CHALLENGES",
       "teacher": "Misty Finnegan",
       "period": "3",
-      "currentGrade": 0,
+      "currentGrade": 100,
       "assignments": [
         {
+          "name": "Syllabus Bonus",
+          "dueDate": "02/06/2026",
+          "earnedPoints": 0,
+          "totalPoints": 0,
+          "weight": 1,
+          "graded": true
+        },
+        {
           "name": "Pre-Test (Food Safety)",
-          "dueDate": "01/22/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "dueDate": "01/28/2026",
+          "earnedPoints": 0,
+          "totalPoints": 0,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Student Information WS",
           "dueDate": "01/23/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         }
       ]
     },
@@ -158,10 +182,10 @@
         {
           "name": "Week 2 Participation",
           "dueDate": "01/30/2026",
-          "earnedPoints": 0,
-          "totalPoints": 15,
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Week 1 Participation",
@@ -177,8 +201,16 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 93,
+      "currentGrade": 92,
       "assignments": [
+        {
+          "name": "All About Hera Worksheet",
+          "dueDate": "01/23/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Zeus Trading Card",
           "dueDate": "02/03/2026",
@@ -189,9 +221,9 @@
         },
         {
           "name": "All About Zeus Worksheet",
-          "dueDate": "01/28/2026",
-          "earnedPoints": 20,
-          "totalPoints": 23,
+          "dueDate": "02/03/2026",
+          "earnedPoints": 34,
+          "totalPoints": 35,
           "weight": 1,
           "graded": true
         }
@@ -201,7 +233,7 @@
       "className": "AMER STUDIES",
       "teacher": "Brock Seese",
       "period": "6",
-      "currentGrade": 94,
+      "currentGrade": 73,
       "assignments": [
         {
           "name": "FDR Poster",
@@ -212,18 +244,10 @@
           "graded": true
         },
         {
-          "name": "Great Depression Study Guide",
-          "dueDate": "02/05/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
-          "weight": 1,
-          "graded": false
-        },
-        {
           "name": "New Deal Vocab",
-          "dueDate": "02/05/2026",
+          "dueDate": "02/03/2026",
           "earnedPoints": 0,
-          "totalPoints": 20,
+          "totalPoints": 22,
           "weight": 1,
           "graded": false
         },
@@ -238,8 +262,8 @@
         {
           "name": "1930's Quiz",
           "dueDate": "01/28/2026",
-          "earnedPoints": 26,
-          "totalPoints": 30,
+          "earnedPoints": 40,
+          "totalPoints": 40,
           "weight": 1,
           "graded": true
         },
@@ -249,7 +273,7 @@
           "earnedPoints": 0,
           "totalPoints": 20,
           "weight": 1,
-          "graded": false
+          "graded": true
         }
       ]
     },
@@ -265,7 +289,7 @@
           "earnedPoints": 0,
           "totalPoints": 20,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Tuesday(1/27/26): Triangle Inequality Theorem",
@@ -278,7 +302,7 @@
         {
           "name": "Monday(1/26/26): FID Assignment",
           "dueDate": "01/26/2026",
-          "earnedPoints": 14,
+          "earnedPoints": 15,
           "totalPoints": 15,
           "weight": 1,
           "graded": true
@@ -294,8 +318,8 @@
         {
           "name": "Thursday(1/22/26):Get More Math!",
           "dueDate": "01/23/2026",
-          "earnedPoints": 16,
-          "totalPoints": 16,
+          "earnedPoints": 18,
+          "totalPoints": 18,
           "weight": 1,
           "graded": true
         }
@@ -305,23 +329,31 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 96,
+      "currentGrade": 68,
       "assignments": [
         {
-          "name": "Lesson Plan Day 2",
-          "dueDate": "02/05/2026",
-          "earnedPoints": 0,
-          "totalPoints": 7,
+          "name": "Third Wave Essay",
+          "dueDate": "02/06/2026",
+          "earnedPoints": 16,
+          "totalPoints": 16,
           "weight": 1,
-          "graded": false
+          "graded": true
+        },
+        {
+          "name": "Lesson Plan Day 2",
+          "dueDate": "02/06/2026",
+          "earnedPoints": 0,
+          "totalPoints": 50,
+          "weight": 1,
+          "graded": true
         },
         {
           "name": "Lesson Plan Day 1",
           "dueDate": "02/05/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 7,
           "totalPoints": 7,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Social Psychology Experiments",
@@ -333,9 +365,9 @@
         },
         {
           "name": "Theoretical Perspectives Analy",
-          "dueDate": "02/02/2026",
-          "earnedPoints": 21,
-          "totalPoints": 21,
+          "dueDate": "02/03/2026",
+          "earnedPoints": 18,
+          "totalPoints": 18,
           "weight": 1,
           "graded": true
         },
@@ -357,9 +389,9 @@
         },
         {
           "name": "EdPuzzle What is Sociology",
-          "dueDate": "01/26/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "dueDate": "01/27/2026",
+          "earnedPoints": 16,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         },
