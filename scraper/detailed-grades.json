@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-02-07T00:49:51.192Z",
+    "scrapedAt": "2026-02-07T12:15:03.671Z",
     "totalClasses": 9,
     "totalAssignments": 42
   },
@@ -45,17 +45,17 @@
         },
         {
           "name": "213 Myrtle Questions",
-          "dueDate": "02/02/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "dueDate": "01/30/2026",
+          "earnedPoints": 20,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Comma Quiz",
-          "dueDate": "01/28/2026",
-          "earnedPoints": 10,
-          "totalPoints": 13,
+          "dueDate": "01/30/2026",
+          "earnedPoints": 20,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         }
@@ -78,8 +78,8 @@
         {
           "name": "Tyoes of reproduction SG",
           "dueDate": "02/06/2026",
-          "earnedPoints": 5,
-          "totalPoints": 5,
+          "earnedPoints": 9,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
@@ -94,16 +94,16 @@
         {
           "name": "Fermentation Quiz",
           "dueDate": "02/04/2026",
-          "earnedPoints": 9,
-          "totalPoints": 10,
+          "earnedPoints": 0,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Collins Vocab Cards",
           "dueDate": "02/04/2026",
-          "earnedPoints": 9,
-          "totalPoints": 10,
+          "earnedPoints": 8,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
@@ -117,19 +117,19 @@
         },
         {
           "name": "Attendance FID",
-          "dueDate": "01/27/2026",
-          "earnedPoints": 0,
-          "totalPoints": 0,
+          "dueDate": "02/03/2026",
+          "earnedPoints": 9,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Attendende Live Google meet",
-          "dueDate": "01/27/2026",
-          "earnedPoints": 0,
+          "dueDate": "01/26/2026",
+          "earnedPoints": 1,
           "totalPoints": 0,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Green Solar Cells:Photo Synthe",
@@ -149,17 +149,17 @@
       "assignments": [
         {
           "name": "Syllabus Bonus",
-          "dueDate": "02/06/2026",
-          "earnedPoints": 0,
-          "totalPoints": 0,
+          "dueDate": "01/22/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Pre-Test (Food Safety)",
           "dueDate": "01/28/2026",
-          "earnedPoints": 0,
-          "totalPoints": 0,
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
@@ -182,14 +182,14 @@
         {
           "name": "Week 2 Participation",
           "dueDate": "01/30/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "earnedPoints": 0,
+          "totalPoints": 15,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "Week 1 Participation",
-          "dueDate": "01/30/2026",
+          "dueDate": "01/23/2026",
           "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
@@ -213,17 +213,17 @@
         },
         {
           "name": "Zeus Trading Card",
-          "dueDate": "02/03/2026",
-          "earnedPoints": 34,
-          "totalPoints": 35,
+          "dueDate": "02/04/2026",
+          "earnedPoints": 13,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
         {
           "name": "All About Zeus Worksheet",
-          "dueDate": "02/03/2026",
-          "earnedPoints": 34,
-          "totalPoints": 35,
+          "dueDate": "01/28/2026",
+          "earnedPoints": 20,
+          "totalPoints": 23,
           "weight": 1,
           "graded": true
         }
@@ -245,19 +245,19 @@
         },
         {
           "name": "New Deal Vocab",
-          "dueDate": "02/03/2026",
+          "dueDate": "02/05/2026",
           "earnedPoints": 0,
-          "totalPoints": 22,
+          "totalPoints": 20,
           "weight": 1,
           "graded": false
         },
         {
           "name": "AI Interview",
-          "dueDate": "02/03/2026",
-          "earnedPoints": 0,
-          "totalPoints": 22,
+          "dueDate": "01/28/2026",
+          "earnedPoints": 40,
+          "totalPoints": 40,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "1930's Quiz",
@@ -269,9 +269,9 @@
         },
         {
           "name": "Chapter 9 Study Guide Pt 1",
-          "dueDate": "01/23/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
+          "dueDate": "01/28/2026",
+          "earnedPoints": 26,
+          "totalPoints": 30,
           "weight": 1,
           "graded": true
         }
@@ -285,9 +285,9 @@
       "assignments": [
         {
           "name": "Wednesday(1/28/26): Delta Math",
-          "dueDate": "01/23/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
+          "dueDate": "01/28/2026",
+          "earnedPoints": 19,
+          "totalPoints": 19,
           "weight": 1,
           "graded": true
         },
@@ -302,7 +302,7 @@
         {
           "name": "Monday(1/26/26): FID Assignment",
           "dueDate": "01/26/2026",
-          "earnedPoints": 15,
+          "earnedPoints": 14,
           "totalPoints": 15,
           "weight": 1,
           "graded": true
