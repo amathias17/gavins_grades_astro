@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-02-07T12:15:03.671Z",
+    "scrapedAt": "2026-02-08T01:03:43.246Z",
     "totalClasses": 9,
-    "totalAssignments": 42
+    "totalAssignments": 43
   },
   "classes": [
     {
@@ -45,9 +45,9 @@
         },
         {
           "name": "213 Myrtle Questions",
-          "dueDate": "01/30/2026",
-          "earnedPoints": 20,
-          "totalPoints": 20,
+          "dueDate": "02/02/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
@@ -69,9 +69,9 @@
       "assignments": [
         {
           "name": "Types of Reproduction-EdPuzzle",
-          "dueDate": "01/28/2026",
-          "earnedPoints": 10,
-          "totalPoints": 13,
+          "dueDate": "02/06/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         },
@@ -177,19 +177,27 @@
       "className": "ENG/DESIGN/ARCH",
       "teacher": "Todd Bennett",
       "period": "4",
-      "currentGrade": 100,
+      "currentGrade": 61,
       "assignments": [
         {
-          "name": "Week 2 Participation",
-          "dueDate": "01/30/2026",
+          "name": "Internet-Based Architecture Scavenger Hunt",
+          "dueDate": "02/06/2026",
           "earnedPoints": 0,
           "totalPoints": 15,
           "weight": 1,
           "graded": false
         },
         {
+          "name": "Week 2 Participation",
+          "dueDate": "01/30/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
           "name": "Week 1 Participation",
-          "dueDate": "01/23/2026",
+          "dueDate": "01/30/2026",
           "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
@@ -213,17 +221,17 @@
         },
         {
           "name": "Zeus Trading Card",
-          "dueDate": "02/04/2026",
-          "earnedPoints": 13,
-          "totalPoints": 15,
+          "dueDate": "02/03/2026",
+          "earnedPoints": 34,
+          "totalPoints": 35,
           "weight": 1,
           "graded": true
         },
         {
           "name": "All About Zeus Worksheet",
-          "dueDate": "01/28/2026",
-          "earnedPoints": 20,
-          "totalPoints": 23,
+          "dueDate": "02/03/2026",
+          "earnedPoints": 34,
+          "totalPoints": 35,
           "weight": 1,
           "graded": true
         }
@@ -245,19 +253,19 @@
         },
         {
           "name": "New Deal Vocab",
-          "dueDate": "02/05/2026",
+          "dueDate": "02/03/2026",
           "earnedPoints": 0,
-          "totalPoints": 20,
+          "totalPoints": 22,
           "weight": 1,
           "graded": false
         },
         {
           "name": "AI Interview",
-          "dueDate": "01/28/2026",
-          "earnedPoints": 40,
-          "totalPoints": 40,
+          "dueDate": "02/03/2026",
+          "earnedPoints": 0,
+          "totalPoints": 22,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "1930's Quiz",
@@ -269,9 +277,9 @@
         },
         {
           "name": "Chapter 9 Study Guide Pt 1",
-          "dueDate": "01/28/2026",
-          "earnedPoints": 26,
-          "totalPoints": 30,
+          "dueDate": "01/23/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         }
@@ -285,9 +293,9 @@
       "assignments": [
         {
           "name": "Wednesday(1/28/26): Delta Math",
-          "dueDate": "01/28/2026",
-          "earnedPoints": 19,
-          "totalPoints": 19,
+          "dueDate": "01/23/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         },
@@ -302,7 +310,7 @@
         {
           "name": "Monday(1/26/26): FID Assignment",
           "dueDate": "01/26/2026",
-          "earnedPoints": 14,
+          "earnedPoints": 15,
           "totalPoints": 15,
           "weight": 1,
           "graded": true
