@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "02/08/2026, 07:53 PM",
-    "count": 2
+    "last_updated": "02/09/2026, 07:23 AM",
+    "count": 3
   },
   "missing_assignments": [
     {
@@ -11,6 +11,14 @@
       "teacher": "Heather Eckels",
       "category": "Class Work",
       "max_points": "50"
+    },
+    {
+      "due_date": "02/03/2026",
+      "assignment_name": "New Deal Vocab",
+      "class_name": "AMER STUDIES",
+      "teacher": "Brock Seese",
+      "category": "Class Work",
+      "max_points": "22"
     },
     {
       "due_date": "01/23/2026",
