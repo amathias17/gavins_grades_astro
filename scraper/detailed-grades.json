@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-02-09T12:23:13.777Z",
+    "scrapedAt": "2026-02-09T20:10:45.907Z",
     "totalClasses": 9,
-    "totalAssignments": 43
+    "totalAssignments": 45
   },
   "classes": [
     {
@@ -33,13 +33,29 @@
       "className": "ENGLISH 10",
       "teacher": "Megan Leone",
       "period": "1",
-      "currentGrade": 93,
+      "currentGrade": 84,
       "assignments": [
         {
-          "name": "Speak Blooket",
+          "name": "Comma Quiz & Comma Rules Slides",
           "dueDate": "01/23/2026",
           "earnedPoints": 0,
           "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Comma Quiz & Comma Rules Slides",
+          "dueDate": "02/09/2026",
+          "earnedPoints": 8,
+          "totalPoints": 14,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Speak Blooket",
+          "dueDate": "02/02/2026",
+          "earnedPoints": 8,
+          "totalPoints": 14,
           "weight": 1,
           "graded": true
         },
@@ -48,14 +64,6 @@
           "dueDate": "02/02/2026",
           "earnedPoints": 10,
           "totalPoints": 10,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Comma Quiz",
-          "dueDate": "01/28/2026",
-          "earnedPoints": 10,
-          "totalPoints": 13,
           "weight": 1,
           "graded": true
         }
@@ -69,9 +77,9 @@
       "assignments": [
         {
           "name": "Types of Reproduction-EdPuzzle",
-          "dueDate": "01/28/2026",
-          "earnedPoints": 10,
-          "totalPoints": 13,
+          "dueDate": "02/06/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         },
@@ -197,7 +205,7 @@
         },
         {
           "name": "Week 1 Participation",
-          "dueDate": "01/30/2026",
+          "dueDate": "01/23/2026",
           "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
@@ -244,10 +252,18 @@
       "currentGrade": 73,
       "assignments": [
         {
-          "name": "FDR Poster",
-          "dueDate": "02/05/2026",
+          "name": "New Deal Gallery Walk",
+          "dueDate": "02/09/2026",
           "earnedPoints": 0,
-          "totalPoints": 20,
+          "totalPoints": 30,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "FDR Poster",
+          "dueDate": "02/09/2026",
+          "earnedPoints": 0,
+          "totalPoints": 30,
           "weight": 1,
           "graded": false
         },
@@ -261,11 +277,11 @@
         },
         {
           "name": "AI Interview",
-          "dueDate": "02/03/2026",
-          "earnedPoints": 0,
-          "totalPoints": 22,
+          "dueDate": "01/28/2026",
+          "earnedPoints": 40,
+          "totalPoints": 40,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "1930's Quiz",
@@ -318,8 +334,8 @@
         {
           "name": "Friday(1/23/26): Delta Math",
           "dueDate": "01/23/2026",
-          "earnedPoints": 18,
-          "totalPoints": 18,
+          "earnedPoints": 15,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
@@ -349,9 +365,9 @@
         },
         {
           "name": "Lesson Plan Day 2",
-          "dueDate": "02/05/2026",
-          "earnedPoints": 7,
-          "totalPoints": 7,
+          "dueDate": "02/06/2026",
+          "earnedPoints": 0,
+          "totalPoints": 50,
           "weight": 1,
           "graded": true
         },

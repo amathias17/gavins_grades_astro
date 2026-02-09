@@ -1,9 +1,17 @@
 {
   "metadata": {
-    "last_updated": "02/09/2026, 07:23 AM",
-    "count": 3
+    "last_updated": "02/09/2026, 03:10 PM",
+    "count": 4
   },
   "missing_assignments": [
+    {
+      "due_date": "02/09/2026",
+      "assignment_name": "New Deal Gallery Walk",
+      "class_name": "AMER STUDIES",
+      "teacher": "Brock Seese",
+      "category": "Participation",
+      "max_points": "30"
+    },
     {
       "due_date": "02/06/2026",
       "assignment_name": "Third Wave Essay",
