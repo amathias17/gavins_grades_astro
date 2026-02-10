@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-02-09T20:10:45.907Z",
+    "scrapedAt": "2026-02-10T00:57:54.264Z",
     "totalClasses": 9,
-    "totalAssignments": 45
+    "totalAssignments": 46
   },
   "classes": [
     {
@@ -46,8 +46,8 @@
         {
           "name": "Comma Quiz & Comma Rules Slides",
           "dueDate": "02/09/2026",
-          "earnedPoints": 8,
-          "totalPoints": 14,
+          "earnedPoints": 10,
+          "totalPoints": 13,
           "weight": 1,
           "graded": true
         },
@@ -77,17 +77,17 @@
       "assignments": [
         {
           "name": "Types of Reproduction-EdPuzzle",
-          "dueDate": "02/06/2026",
-          "earnedPoints": 5,
-          "totalPoints": 5,
+          "dueDate": "01/30/2026",
+          "earnedPoints": 20,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Tyoes of reproduction SG",
           "dueDate": "02/06/2026",
-          "earnedPoints": 5,
-          "totalPoints": 5,
+          "earnedPoints": 9,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
@@ -102,16 +102,16 @@
         {
           "name": "Fermentation Quiz",
           "dueDate": "02/04/2026",
-          "earnedPoints": 9,
-          "totalPoints": 10,
+          "earnedPoints": 0,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Collins Vocab Cards",
           "dueDate": "02/04/2026",
-          "earnedPoints": 9,
-          "totalPoints": 10,
+          "earnedPoints": 8,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
@@ -125,11 +125,11 @@
         },
         {
           "name": "Attendance FID",
-          "dueDate": "01/27/2026",
-          "earnedPoints": 0,
-          "totalPoints": 0,
+          "dueDate": "02/03/2026",
+          "earnedPoints": 9,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Attendende Live Google meet",
@@ -141,9 +141,9 @@
         },
         {
           "name": "Green Solar Cells:Photo Synthe",
-          "dueDate": "01/26/2026",
-          "earnedPoints": 1,
-          "totalPoints": 0,
+          "dueDate": "01/22/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         }
@@ -157,9 +157,9 @@
       "assignments": [
         {
           "name": "Syllabus Bonus",
-          "dueDate": "02/06/2026",
-          "earnedPoints": 0,
-          "totalPoints": 0,
+          "dueDate": "01/22/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
@@ -190,16 +190,16 @@
         {
           "name": "Internet-Based Architecture Scavenger Hunt",
           "dueDate": "02/06/2026",
-          "earnedPoints": 3,
-          "totalPoints": 18,
+          "earnedPoints": 0,
+          "totalPoints": 15,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "Week 2 Participation",
           "dueDate": "01/30/2026",
-          "earnedPoints": 3,
-          "totalPoints": 18,
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
@@ -221,9 +221,9 @@
       "assignments": [
         {
           "name": "All About Hera Worksheet",
-          "dueDate": "02/04/2026",
-          "earnedPoints": 13,
-          "totalPoints": 15,
+          "dueDate": "01/23/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
@@ -237,9 +237,9 @@
         },
         {
           "name": "All About Zeus Worksheet",
-          "dueDate": "02/03/2026",
-          "earnedPoints": 34,
-          "totalPoints": 35,
+          "dueDate": "01/28/2026",
+          "earnedPoints": 20,
+          "totalPoints": 23,
           "weight": 1,
           "graded": true
         }
@@ -253,11 +253,11 @@
       "assignments": [
         {
           "name": "New Deal Gallery Walk",
-          "dueDate": "02/09/2026",
-          "earnedPoints": 0,
-          "totalPoints": 30,
+          "dueDate": "01/28/2026",
+          "earnedPoints": 20,
+          "totalPoints": 23,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "FDR Poster",
@@ -277,25 +277,25 @@
         },
         {
           "name": "AI Interview",
-          "dueDate": "01/28/2026",
-          "earnedPoints": 40,
-          "totalPoints": 40,
+          "dueDate": "02/03/2026",
+          "earnedPoints": 0,
+          "totalPoints": 22,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "1930's Quiz",
           "dueDate": "01/28/2026",
-          "earnedPoints": 40,
-          "totalPoints": 40,
+          "earnedPoints": 26,
+          "totalPoints": 30,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Chapter 9 Study Guide Pt 1",
-          "dueDate": "01/28/2026",
-          "earnedPoints": 26,
-          "totalPoints": 30,
+          "dueDate": "01/23/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         }
@@ -342,8 +342,8 @@
         {
           "name": "Thursday(1/22/26):Get More Math!",
           "dueDate": "01/23/2026",
-          "earnedPoints": 18,
-          "totalPoints": 18,
+          "earnedPoints": 16,
+          "totalPoints": 16,
           "weight": 1,
           "graded": true
         }
@@ -353,27 +353,35 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 68,
+      "currentGrade": 93,
       "assignments": [
         {
+          "name": "Culture Day 1 Notes",
+          "dueDate": "02/09/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
           "name": "Third Wave Essay",
-          "dueDate": "02/06/2026",
-          "earnedPoints": 16,
-          "totalPoints": 16,
+          "dueDate": "02/09/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Lesson Plan Day 2",
           "dueDate": "02/06/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 42,
           "totalPoints": 50,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Lesson Plan Day 1",
-          "dueDate": "02/05/2026",
+          "dueDate": "02/04/2026",
           "earnedPoints": 7,
           "totalPoints": 7,
           "weight": 1,
