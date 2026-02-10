@@ -24,4 +24,5 @@ pnpm-debug.log*
 .idea/
 
 # scraper caches (student data)
-scraper/detailed-grades-cache.json
+.custom-mem
+.claude
