@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-02-10T00:57:54.264Z",
+    "scrapedAt": "2026-02-10T12:26:27.423Z",
     "totalClasses": 9,
     "totalAssignments": 46
   },
@@ -46,8 +46,8 @@
         {
           "name": "Comma Quiz & Comma Rules Slides",
           "dueDate": "02/09/2026",
-          "earnedPoints": 10,
-          "totalPoints": 13,
+          "earnedPoints": 8,
+          "totalPoints": 14,
           "weight": 1,
           "graded": true
         },
@@ -125,14 +125,6 @@
         },
         {
           "name": "Attendance FID",
-          "dueDate": "02/03/2026",
-          "earnedPoints": 9,
-          "totalPoints": 10,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Attendende Live Google meet",
           "dueDate": "01/27/2026",
           "earnedPoints": 0,
           "totalPoints": 0,
@@ -140,10 +132,18 @@
           "graded": false
         },
         {
+          "name": "Attendende Live Google meet",
+          "dueDate": "01/26/2026",
+          "earnedPoints": 1,
+          "totalPoints": 0,
+          "weight": 1,
+          "graded": true
+        },
+        {
           "name": "Green Solar Cells:Photo Synthe",
-          "dueDate": "01/22/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "dueDate": "01/26/2026",
+          "earnedPoints": 1,
+          "totalPoints": 0,
           "weight": 1,
           "graded": true
         }
@@ -166,8 +166,8 @@
         {
           "name": "Pre-Test (Food Safety)",
           "dueDate": "01/28/2026",
-          "earnedPoints": 0,
-          "totalPoints": 0,
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
@@ -205,7 +205,7 @@
         },
         {
           "name": "Week 1 Participation",
-          "dueDate": "01/23/2026",
+          "dueDate": "01/30/2026",
           "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
@@ -269,9 +269,9 @@
         },
         {
           "name": "New Deal Vocab",
-          "dueDate": "02/05/2026",
+          "dueDate": "02/03/2026",
           "earnedPoints": 0,
-          "totalPoints": 20,
+          "totalPoints": 22,
           "weight": 1,
           "graded": false
         },
@@ -286,8 +286,8 @@
         {
           "name": "1930's Quiz",
           "dueDate": "01/28/2026",
-          "earnedPoints": 26,
-          "totalPoints": 30,
+          "earnedPoints": 40,
+          "totalPoints": 40,
           "weight": 1,
           "graded": true
         },
@@ -342,8 +342,8 @@
         {
           "name": "Thursday(1/22/26):Get More Math!",
           "dueDate": "01/23/2026",
-          "earnedPoints": 16,
-          "totalPoints": 16,
+          "earnedPoints": 18,
+          "totalPoints": 18,
           "weight": 1,
           "graded": true
         }
@@ -358,8 +358,8 @@
         {
           "name": "Culture Day 1 Notes",
           "dueDate": "02/09/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "earnedPoints": 16,
+          "totalPoints": 16,
           "weight": 1,
           "graded": true
         },
@@ -381,7 +381,7 @@
         },
         {
           "name": "Lesson Plan Day 1",
-          "dueDate": "02/04/2026",
+          "dueDate": "02/05/2026",
           "earnedPoints": 7,
           "totalPoints": 7,
           "weight": 1,
