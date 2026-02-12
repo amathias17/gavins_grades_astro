@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-02-11T12:20:06.501Z",
+    "scrapedAt": "2026-02-12T00:48:37.827Z",
     "totalClasses": 9,
-    "totalAssignments": 49
+    "totalAssignments": 48
   },
   "classes": [
     {
@@ -153,7 +153,7 @@
       "className": "FOOD CHALLENGES",
       "teacher": "Misty Finnegan",
       "period": "3",
-      "currentGrade": 100,
+      "currentGrade": 73,
       "assignments": [
         {
           "name": "Find the Hazards WS",
@@ -257,7 +257,7 @@
       "className": "AMER STUDIES",
       "teacher": "Brock Seese",
       "period": "6",
-      "currentGrade": 73,
+      "currentGrade": 78,
       "assignments": [
         {
           "name": "New Deal Gallery Walk",
@@ -270,18 +270,18 @@
         {
           "name": "FDR Poster",
           "dueDate": "02/05/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 20,
           "totalPoints": 20,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "New Deal Vocab",
           "dueDate": "02/05/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 20,
           "totalPoints": 20,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "AI Interview",
@@ -361,31 +361,23 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 93,
+      "currentGrade": 94,
       "assignments": [
         {
           "name": "Culture Day 2 Notes",
           "dueDate": "02/10/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
-          "graded": false
-        },
-        {
-          "name": "World Languages",
-          "dueDate": "02/10/2026",
-          "earnedPoints": 0,
-          "totalPoints": 10,
-          "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Culture Day 1 Notes",
           "dueDate": "02/10/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Third Wave Essay",
