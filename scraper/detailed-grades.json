@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-02-12T12:17:28.271Z",
+    "scrapedAt": "2026-02-12T20:17:17.688Z",
     "totalClasses": 9,
-    "totalAssignments": 48
+    "totalAssignments": 51
   },
   "classes": [
     {
@@ -35,6 +35,22 @@
       "period": "1",
       "currentGrade": 84,
       "assignments": [
+        {
+          "name": "Speak MP1 Packet",
+          "dueDate": "02/12/2026",
+          "earnedPoints": 0,
+          "totalPoints": 26,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Speak M1 Novel + Vocab Quiz",
+          "dueDate": "02/12/2026",
+          "earnedPoints": 0,
+          "totalPoints": 26,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Comma Quiz & Comma Rules Slides",
           "dueDate": "02/04/2026",
@@ -259,6 +275,14 @@
       "period": "6",
       "currentGrade": 78,
       "assignments": [
+        {
+          "name": "FDR Court-Packing Plan Debate",
+          "dueDate": "02/11/2026",
+          "earnedPoints": 22,
+          "totalPoints": 26,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "New Deal Gallery Walk",
           "dueDate": "01/28/2026",
