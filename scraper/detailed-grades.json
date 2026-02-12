@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-02-12T00:48:37.827Z",
+    "scrapedAt": "2026-02-12T12:17:28.271Z",
     "totalClasses": 9,
     "totalAssignments": 48
   },
@@ -317,11 +317,11 @@
       "assignments": [
         {
           "name": "Wednesday(1/28/26): Delta Math",
-          "dueDate": "02/03/2026",
-          "earnedPoints": 0,
-          "totalPoints": 22,
+          "dueDate": "01/28/2026",
+          "earnedPoints": 19,
+          "totalPoints": 19,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Tuesday(1/27/26): Triangle Inequality Theorem",

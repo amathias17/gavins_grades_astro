@@ -504,12 +504,12 @@
     "period": "7",
     "currentGrade": 99,
     "assignmentName": "Wednesday(1/28/26): Delta Math",
-    "dateDue": "02/03/2026",
-    "dueDate": "02/03/2026",
-    "earnedPoints": 0,
-    "totalPoints": 22,
+    "dateDue": "01/28/2026",
+    "dueDate": "01/28/2026",
+    "earnedPoints": 19,
+    "totalPoints": 19,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "43666",
