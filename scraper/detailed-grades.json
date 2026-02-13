@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-02-13T12:13:40.952Z",
+    "scrapedAt": "2026-02-13T20:31:32.609Z",
     "totalClasses": 9,
-    "totalAssignments": 51
+    "totalAssignments": 52
   },
   "classes": [
     {
@@ -209,8 +209,16 @@
       "className": "ENG/DESIGN/ARCH",
       "teacher": "Todd Bennett",
       "period": "4",
-      "currentGrade": 61,
+      "currentGrade": 74,
       "assignments": [
+        {
+          "name": "Participation",
+          "dueDate": "02/11/2026",
+          "earnedPoints": 22,
+          "totalPoints": 26,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Internet-Based Architecture Scavenger Hunt",
           "dueDate": "02/06/2026",
