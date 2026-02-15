@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-02-14T12:10:07.005Z",
+    "scrapedAt": "2026-02-15T00:51:26.256Z",
     "totalClasses": 9,
-    "totalAssignments": 52
+    "totalAssignments": 53
   },
   "classes": [
     {
@@ -209,10 +209,18 @@
       "className": "ENG/DESIGN/ARCH",
       "teacher": "Todd Bennett",
       "period": "4",
-      "currentGrade": 74,
+      "currentGrade": 79,
       "assignments": [
         {
           "name": "Participation",
+          "dueDate": "02/11/2026",
+          "earnedPoints": 22,
+          "totalPoints": 26,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Week 4 Layouts and Flows Activity",
           "dueDate": "02/11/2026",
           "earnedPoints": 22,
           "totalPoints": 26,
