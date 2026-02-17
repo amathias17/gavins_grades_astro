@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-02-16T12:16:06.881Z",
+    "scrapedAt": "2026-02-17T12:16:05.893Z",
     "totalClasses": 9,
-    "totalAssignments": 53
+    "totalAssignments": 54
   },
   "classes": [
     {
@@ -353,8 +353,16 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 99,
+      "currentGrade": 84,
       "assignments": [
+        {
+          "name": "Thursday(2/12/26): Isos and Equilateral Triangles",
+          "dueDate": "02/11/2026",
+          "earnedPoints": 22,
+          "totalPoints": 26,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Wednesday(1/28/26): Delta Math",
           "dueDate": "01/28/2026",
