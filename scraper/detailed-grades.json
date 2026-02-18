@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-02-17T12:16:05.893Z",
+    "scrapedAt": "2026-02-18T12:16:13.692Z",
     "totalClasses": 9,
-    "totalAssignments": 54
+    "totalAssignments": 56
   },
   "classes": [
     {
@@ -33,15 +33,23 @@
       "className": "ENGLISH 10",
       "teacher": "Megan Leone",
       "period": "1",
-      "currentGrade": 84,
+      "currentGrade": 86,
       "assignments": [
         {
-          "name": "Speak MP1 Packet",
-          "dueDate": "02/12/2026",
-          "earnedPoints": 0,
-          "totalPoints": 26,
+          "name": "IXL Diagnostic Day 1",
+          "dueDate": "02/17/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
+        },
+        {
+          "name": "Speak MP1 Packet",
+          "dueDate": "02/17/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
         },
         {
           "name": "Speak M1 Novel + Vocab Quiz",
@@ -257,8 +265,16 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 92,
+      "currentGrade": 90,
       "assignments": [
+        {
+          "name": "Athena Worksheet",
+          "dueDate": "02/12/2026",
+          "earnedPoints": 13,
+          "totalPoints": 16,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "All About Hera Worksheet",
           "dueDate": "01/30/2026",
