@@ -1,9 +1,17 @@
 {
   "metadata": {
-    "last_updated": "02/18/2026, 07:16 AM",
-    "count": 4
+    "last_updated": "02/18/2026, 03:25 PM",
+    "count": 5
   },
   "missing_assignments": [
+    {
+      "due_date": "02/12/2026",
+      "assignment_name": "Zeus, Hera, Athena Guided Qs",
+      "class_name": "GREEK MYTHOLOGY",
+      "teacher": "Alex Ray",
+      "category": "Class Work",
+      "max_points": "18"
+    },
     {
       "due_date": "02/12/2026",
       "assignment_name": "Thursday(2/12/26): Isos and Equilateral Triangles",

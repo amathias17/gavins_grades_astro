@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "02/18/2026, 07:16 AM",
+    "last_updated": "02/18/2026, 03:25 PM",
     "most_recent_date": "2/18/2026",
     "total_classes": 9
   },
@@ -13,10 +13,10 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q3_grade": 50,
-      "q3_letter_grade": "F",
-      "current_grade": 50,
-      "letter_grade": "F"
+      "q3_grade": 80,
+      "q3_letter_grade": "B",
+      "current_grade": 80,
+      "letter_grade": "B"
     },
     {
       "class_name": "English 10",
@@ -26,9 +26,9 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q3_grade": 86,
+      "q3_grade": 85,
       "q3_letter_grade": "B",
-      "current_grade": 86,
+      "current_grade": 85,
       "letter_grade": "B"
     },
     {
@@ -78,10 +78,10 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q3_grade": 90,
-      "q3_letter_grade": "A",
-      "current_grade": 90,
-      "letter_grade": "A"
+      "q3_grade": 75,
+      "q3_letter_grade": "C",
+      "current_grade": 75,
+      "letter_grade": "C"
     },
     {
       "class_name": "Amer Studies",
@@ -209,7 +209,7 @@
       "2/15/2026": 50,
       "2/16/2026": 50,
       "2/17/2026": 50,
-      "2/18/2026": 50
+      "2/18/2026": 80
     },
     "English 10": {
       "11/24/2025": 75,
@@ -297,7 +297,7 @@
       "2/15/2026": 84,
       "2/16/2026": 84,
       "2/17/2026": 84,
-      "2/18/2026": 86
+      "2/18/2026": 85
     },
     "Biology 2": {
       "11/24/2025": 82,
@@ -928,10 +928,10 @@
       "2/15/2026": 92,
       "2/16/2026": 92,
       "2/17/2026": 92,
-      "2/18/2026": 90
+      "2/18/2026": 75
     }
   },
-  "overall_average": 79,
+  "overall_average": 81,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -1019,7 +1019,7 @@
     "2/15/2026": 81,
     "2/16/2026": 81,
     "2/17/2026": 79,
-    "2/18/2026": 79
+    "2/18/2026": 81
   },
   "streak": 0,
   "streak_history": {

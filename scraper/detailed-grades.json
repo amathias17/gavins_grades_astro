@@ -1,16 +1,32 @@
 {
   "metadata": {
-    "scrapedAt": "2026-02-18T12:16:13.692Z",
+    "scrapedAt": "2026-02-18T20:25:25.572Z",
     "totalClasses": 9,
-    "totalAssignments": 56
+    "totalAssignments": 60
   },
   "classes": [
     {
       "className": "SOPHOMORE SEMINAR",
       "teacher": "Victoria Good",
       "period": "0",
-      "currentGrade": 50,
+      "currentGrade": 80,
       "assignments": [
+        {
+          "name": "Workbok Check",
+          "dueDate": "02/18/2026",
+          "earnedPoints": 40,
+          "totalPoints": 45,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Leader in Me",
+          "dueDate": "02/17/2026",
+          "earnedPoints": 40,
+          "totalPoints": 45,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Week of 2/2 Part.",
           "dueDate": "02/04/2026",
@@ -33,8 +49,16 @@
       "className": "ENGLISH 10",
       "teacher": "Megan Leone",
       "period": "1",
-      "currentGrade": 86,
+      "currentGrade": 85,
       "assignments": [
+        {
+          "name": "IXL Diagnostic Day 2",
+          "dueDate": "02/17/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "IXL Diagnostic Day 1",
           "dueDate": "02/17/2026",
@@ -53,11 +77,11 @@
         },
         {
           "name": "Speak M1 Novel + Vocab Quiz",
-          "dueDate": "02/12/2026",
-          "earnedPoints": 0,
+          "dueDate": "02/11/2026",
+          "earnedPoints": 22,
           "totalPoints": 26,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Comma Quiz & Comma Rules Slides",
@@ -265,13 +289,21 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 90,
+      "currentGrade": 75,
       "assignments": [
         {
           "name": "Athena Worksheet",
           "dueDate": "02/12/2026",
           "earnedPoints": 13,
           "totalPoints": 16,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Zeus, Hera, Athena Guided Qs",
+          "dueDate": "02/11/2026",
+          "earnedPoints": 22,
+          "totalPoints": 26,
           "weight": 1,
           "graded": true
         },
