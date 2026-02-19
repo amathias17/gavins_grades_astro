@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-02-19T12:16:36.072Z",
+    "scrapedAt": "2026-02-19T20:18:58.724Z",
     "totalClasses": 9,
-    "totalAssignments": 60
+    "totalAssignments": 61
   },
   "classes": [
     {
@@ -289,7 +289,7 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 75,
+      "currentGrade": 88,
       "assignments": [
         {
           "name": "Athena Worksheet",
@@ -337,8 +337,16 @@
       "className": "AMER STUDIES",
       "teacher": "Brock Seese",
       "period": "6",
-      "currentGrade": 83,
+      "currentGrade": 85,
       "assignments": [
+        {
+          "name": "New Deal Test",
+          "dueDate": "02/19/2026",
+          "earnedPoints": 25,
+          "totalPoints": 25,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "FDR Court-Packing Plan Debate",
           "dueDate": "02/11/2026",
@@ -401,7 +409,7 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 84,
+      "currentGrade": 91,
       "assignments": [
         {
           "name": "Thursday(2/12/26): Isos and Equilateral Triangles",
