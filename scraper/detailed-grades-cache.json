@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-02-20T12:14:07.758Z",
+  "updatedAt": "2026-02-21T00:45:31.394Z",
   "assignments": {
     "1561854:44463:1396": {
       "classId": "44463",
@@ -16,7 +16,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.664Z"
+      "cachedAt": "2026-02-21T00:44:52.953Z"
     },
     "1557583:44463:1396": {
       "classId": "44463",
@@ -1138,7 +1138,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.666Z"
+      "cachedAt": "2026-02-21T00:44:52.954Z"
     },
     "1556975:43424:1396": {
       "classId": "43424",
@@ -1155,7 +1155,7 @@
       "totalPoints": 0,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.666Z"
+      "cachedAt": "2026-02-21T00:44:52.954Z"
     },
     "1560684:43424:1396": {
       "classId": "43424",
@@ -3263,7 +3263,7 @@
       "totalPoints": 25,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.666Z"
+      "cachedAt": "2026-02-21T00:45:02.561Z"
     },
     "1557822:44290:1396": {
       "classId": "44290",
@@ -3671,7 +3671,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.667Z"
+      "cachedAt": "2026-02-21T00:45:19.303Z"
     },
     "1561998:43049:1396": {
       "classId": "43049",
@@ -3688,7 +3688,7 @@
       "totalPoints": 30,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.667Z"
+      "cachedAt": "2026-02-21T00:45:19.303Z"
     },
     "1556957:43049:1396": {
       "classId": "43049",
@@ -4266,7 +4266,7 @@
       "totalPoints": 100,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.667Z"
+      "cachedAt": "2026-02-21T00:45:29.172Z"
     },
     "1564116:43666:1396": {
       "classId": "43666",
@@ -4283,7 +4283,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.667Z"
+      "cachedAt": "2026-02-21T00:45:29.172Z"
     },
     "1564122:43666:1396": {
       "classId": "43666",
@@ -4300,7 +4300,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.667Z"
+      "cachedAt": "2026-02-21T00:45:29.172Z"
     },
     "1564125:43666:1396": {
       "classId": "43666",
@@ -4317,7 +4317,7 @@
       "totalPoints": 18,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.667Z"
+      "cachedAt": "2026-02-21T00:45:29.172Z"
     },
     "1558377:43666:1396": {
       "classId": "43666",
@@ -5601,7 +5601,7 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 94,
+      "currentGrade": 95,
       "assignmentName": "Intro to Soc Reading & ?s",
       "dateDue": "08/27/2025",
       "dueDate": "08/27/2025",
@@ -5609,7 +5609,7 @@
       "totalPoints": 12,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.668Z"
+      "cachedAt": "2026-02-21T00:45:29.286Z"
     },
     "1562839:44615:1396": {
       "classId": "44615",
@@ -5618,7 +5618,7 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 94,
+      "currentGrade": 95,
       "assignmentName": "EdPuzzle What is Sociology",
       "dateDue": "01/27/2026",
       "dueDate": "01/27/2026",
@@ -5626,7 +5626,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.668Z"
+      "cachedAt": "2026-02-21T00:45:29.286Z"
     },
     "1561967:44615:1396": {
       "classId": "44615",
@@ -5635,7 +5635,7 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 94,
+      "currentGrade": 95,
       "assignmentName": "Where to Go - Social Norms",
       "dateDue": "01/26/2026",
       "dueDate": "01/26/2026",
@@ -5643,7 +5643,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.668Z"
+      "cachedAt": "2026-02-21T00:45:29.286Z"
     },
     "1561441:44615:1396": {
       "classId": "44615",
@@ -5652,7 +5652,7 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 94,
+      "currentGrade": 95,
       "assignmentName": "Classroom Expectations",
       "dateDue": "01/23/2026",
       "dueDate": "01/23/2026",
@@ -5660,7 +5660,7 @@
       "totalPoints": 18,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.668Z"
+      "cachedAt": "2026-02-21T00:45:29.286Z"
     },
     "1556821:43162:1396": {
       "classId": "43162",
@@ -5711,7 +5711,7 @@
       "totalPoints": 25,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.666Z"
+      "cachedAt": "2026-02-21T00:44:52.954Z"
     },
     "1541834:43424:1396": {
       "classId": "43424",
@@ -5745,7 +5745,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.667Z"
+      "cachedAt": "2026-02-21T00:45:19.303Z"
     },
     "1559402:43049:1396": {
       "classId": "43049",
@@ -5830,7 +5830,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.664Z"
+      "cachedAt": "2026-02-21T00:44:52.953Z"
     },
     "1572198:43162:1396": {
       "classId": "43162",
@@ -5847,7 +5847,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.665Z"
+      "cachedAt": "2026-02-21T00:44:52.953Z"
     },
     "1572226:43162:1396": {
       "classId": "43162",
@@ -5864,7 +5864,7 @@
       "totalPoints": 13,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.665Z"
+      "cachedAt": "2026-02-21T00:44:52.954Z"
     },
     "1571347:43162:1396": {
       "classId": "43162",
@@ -5881,7 +5881,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.665Z"
+      "cachedAt": "2026-02-21T00:44:52.954Z"
     },
     "1566141:43162:1396": {
       "classId": "43162",
@@ -5898,7 +5898,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.665Z"
+      "cachedAt": "2026-02-21T00:44:52.954Z"
     },
     "1571003:43424:1396": {
       "classId": "43424",
@@ -5915,7 +5915,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.666Z"
+      "cachedAt": "2026-02-21T00:44:52.954Z"
     },
     "1571008:43424:1396": {
       "classId": "43424",
@@ -5932,7 +5932,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.666Z"
+      "cachedAt": "2026-02-21T00:44:52.954Z"
     },
     "1569283:43424:1396": {
       "classId": "43424",
@@ -5949,7 +5949,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.666Z"
+      "cachedAt": "2026-02-21T00:44:52.954Z"
     },
     "1569548:43424:1396": {
       "classId": "43424",
@@ -5966,7 +5966,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.666Z"
+      "cachedAt": "2026-02-21T00:44:52.954Z"
     },
     "1569712:43424:1396": {
       "classId": "43424",
@@ -5983,7 +5983,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.666Z"
+      "cachedAt": "2026-02-21T00:44:52.954Z"
     },
     "1569288:43424:1396": {
       "classId": "43424",
@@ -6000,7 +6000,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.666Z"
+      "cachedAt": "2026-02-21T00:44:52.954Z"
     },
     "1572560:45003:1396": {
       "classId": "45003",
@@ -6009,7 +6009,7 @@
       "className": "FOOD CHALLENGES",
       "teacher": "Misty Finnegan",
       "period": "3",
-      "currentGrade": 73,
+      "currentGrade": 44,
       "assignmentName": "Find the Hazards WS",
       "dateDue": "02/03/2026",
       "dueDate": "02/03/2026",
@@ -6017,7 +6017,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.666Z"
+      "cachedAt": "2026-02-21T00:45:02.561Z"
     },
     "1571019:45003:1396": {
       "classId": "45003",
@@ -6026,7 +6026,7 @@
       "className": "FOOD CHALLENGES",
       "teacher": "Misty Finnegan",
       "period": "3",
-      "currentGrade": 73,
+      "currentGrade": 44,
       "assignmentName": "Syllabus Bonus",
       "dateDue": "02/06/2026",
       "dueDate": "02/06/2026",
@@ -6034,7 +6034,7 @@
       "totalPoints": 0,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.666Z"
+      "cachedAt": "2026-02-21T00:45:02.561Z"
     },
     "1569537:45003:1396": {
       "classId": "45003",
@@ -6043,7 +6043,7 @@
       "className": "FOOD CHALLENGES",
       "teacher": "Misty Finnegan",
       "period": "3",
-      "currentGrade": 73,
+      "currentGrade": 44,
       "assignmentName": "Pre-Test (Food Safety)",
       "dateDue": "01/28/2026",
       "dueDate": "01/28/2026",
@@ -6051,7 +6051,7 @@
       "totalPoints": 0,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.666Z"
+      "cachedAt": "2026-02-21T00:45:02.561Z"
     },
     "1569532:45003:1396": {
       "classId": "45003",
@@ -6060,7 +6060,7 @@
       "className": "FOOD CHALLENGES",
       "teacher": "Misty Finnegan",
       "period": "3",
-      "currentGrade": 73,
+      "currentGrade": 44,
       "assignmentName": "Student Information WS",
       "dateDue": "01/23/2026",
       "dueDate": "01/23/2026",
@@ -6068,7 +6068,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.666Z"
+      "cachedAt": "2026-02-21T00:45:02.561Z"
     },
     "1571637:43341:1396": {
       "classId": "43341",
@@ -6085,7 +6085,7 @@
       "totalPoints": 18,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.666Z"
+      "cachedAt": "2026-02-21T00:45:02.561Z"
     },
     "1566638:43341:1396": {
       "classId": "43341",
@@ -6102,7 +6102,7 @@
       "totalPoints": 18,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.666Z"
+      "cachedAt": "2026-02-21T00:45:02.561Z"
     },
     "1571246:44979:1396": {
       "classId": "44979",
@@ -6111,7 +6111,7 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 88,
+      "currentGrade": 86,
       "assignmentName": "All About Hera Worksheet",
       "dateDue": "01/30/2026",
       "dueDate": "01/30/2026",
@@ -6119,7 +6119,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.667Z"
+      "cachedAt": "2026-02-21T00:45:09.681Z"
     },
     "1568561:44979:1396": {
       "classId": "44979",
@@ -6128,7 +6128,7 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 88,
+      "currentGrade": 86,
       "assignmentName": "Zeus Trading Card",
       "dateDue": "02/03/2026",
       "dueDate": "02/03/2026",
@@ -6136,7 +6136,7 @@
       "totalPoints": 35,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.667Z"
+      "cachedAt": "2026-02-21T00:45:09.681Z"
     },
     "1568559:44979:1396": {
       "classId": "44979",
@@ -6145,7 +6145,7 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 88,
+      "currentGrade": 86,
       "assignmentName": "All About Zeus Worksheet",
       "dateDue": "02/03/2026",
       "dueDate": "02/03/2026",
@@ -6153,7 +6153,7 @@
       "totalPoints": 35,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.667Z"
+      "cachedAt": "2026-02-21T00:45:09.681Z"
     },
     "1572012:43049:1396": {
       "classId": "43049",
@@ -6170,7 +6170,7 @@
       "totalPoints": 23,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.667Z"
+      "cachedAt": "2026-02-21T00:45:19.303Z"
     },
     "1571502:44615:1396": {
       "classId": "44615",
@@ -6179,7 +6179,7 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 94,
+      "currentGrade": 95,
       "assignmentName": "Third Wave Essay",
       "dateDue": "02/06/2026",
       "dueDate": "02/06/2026",
@@ -6187,7 +6187,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.667Z"
+      "cachedAt": "2026-02-21T00:45:29.286Z"
     },
     "1570062:44615:1396": {
       "classId": "44615",
@@ -6196,7 +6196,7 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 94,
+      "currentGrade": 95,
       "assignmentName": "Lesson Plan Day 2",
       "dateDue": "02/06/2026",
       "dueDate": "02/06/2026",
@@ -6204,7 +6204,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.667Z"
+      "cachedAt": "2026-02-21T00:45:29.286Z"
     },
     "1569610:44615:1396": {
       "classId": "44615",
@@ -6213,7 +6213,7 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 94,
+      "currentGrade": 95,
       "assignmentName": "Lesson Plan Day 1",
       "dateDue": "02/05/2026",
       "dueDate": "02/05/2026",
@@ -6221,7 +6221,7 @@
       "totalPoints": 7,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.667Z"
+      "cachedAt": "2026-02-21T00:45:29.286Z"
     },
     "1568621:44615:1396": {
       "classId": "44615",
@@ -6230,7 +6230,7 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 94,
+      "currentGrade": 95,
       "assignmentName": "Social Psychology Experiments",
       "dateDue": "02/04/2026",
       "dueDate": "02/04/2026",
@@ -6238,7 +6238,7 @@
       "totalPoints": 7,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.667Z"
+      "cachedAt": "2026-02-21T00:45:29.286Z"
     },
     "1567708:44615:1396": {
       "classId": "44615",
@@ -6247,7 +6247,7 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 94,
+      "currentGrade": 95,
       "assignmentName": "Theoretical Perspectives Analy",
       "dateDue": "02/03/2026",
       "dueDate": "02/03/2026",
@@ -6255,7 +6255,7 @@
       "totalPoints": 18,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.667Z"
+      "cachedAt": "2026-02-21T00:45:29.286Z"
     },
     "1566577:44615:1396": {
       "classId": "44615",
@@ -6264,7 +6264,7 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 94,
+      "currentGrade": 95,
       "assignmentName": "Day 3 Notes",
       "dateDue": "02/02/2026",
       "dueDate": "02/02/2026",
@@ -6272,7 +6272,7 @@
       "totalPoints": 21,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.668Z"
+      "cachedAt": "2026-02-21T00:45:29.286Z"
     },
     "1569986:43049:1396": {
       "classId": "43049",
@@ -6289,7 +6289,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.667Z"
+      "cachedAt": "2026-02-21T00:45:19.303Z"
     },
     "1568236:43049:1396": {
       "classId": "43049",
@@ -6306,7 +6306,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.667Z"
+      "cachedAt": "2026-02-21T00:45:19.303Z"
     },
     "1573050:44615:1396": {
       "classId": "44615",
@@ -6315,7 +6315,7 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 94,
+      "currentGrade": 95,
       "assignmentName": "Culture Day 2 Notes",
       "dateDue": "02/10/2026",
       "dueDate": "02/10/2026",
@@ -6323,7 +6323,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.667Z"
+      "cachedAt": "2026-02-21T00:45:29.286Z"
     },
     "1572388:44615:1396": {
       "classId": "44615",
@@ -6332,7 +6332,7 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 94,
+      "currentGrade": 95,
       "assignmentName": "Culture Day 1 Notes",
       "dateDue": "02/10/2026",
       "dueDate": "02/10/2026",
@@ -6340,7 +6340,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.667Z"
+      "cachedAt": "2026-02-21T00:45:29.286Z"
     },
     "1567640:43666:1396": {
       "classId": "43666",
@@ -6357,7 +6357,7 @@
       "totalPoints": 19,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.667Z"
+      "cachedAt": "2026-02-21T00:45:29.172Z"
     },
     "1574711:43049:1396": {
       "classId": "43049",
@@ -6374,7 +6374,7 @@
       "totalPoints": 26,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.667Z"
+      "cachedAt": "2026-02-21T00:45:19.303Z"
     },
     "1575257:43341:1396": {
       "classId": "43341",
@@ -6391,7 +6391,7 @@
       "totalPoints": 26,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.666Z"
+      "cachedAt": "2026-02-21T00:45:02.561Z"
     },
     "1575293:43341:1396": {
       "classId": "43341",
@@ -6408,7 +6408,7 @@
       "totalPoints": 26,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.666Z"
+      "cachedAt": "2026-02-21T00:45:02.561Z"
     },
     "1575490:43666:1396": {
       "classId": "43666",
@@ -6425,7 +6425,7 @@
       "totalPoints": 26,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.667Z"
+      "cachedAt": "2026-02-21T00:45:29.172Z"
     },
     "1576168:43162:1396": {
       "classId": "43162",
@@ -6442,7 +6442,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.665Z"
+      "cachedAt": "2026-02-21T00:44:52.953Z"
     },
     "1574257:43162:1396": {
       "classId": "43162",
@@ -6459,7 +6459,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.665Z"
+      "cachedAt": "2026-02-21T00:44:52.953Z"
     },
     "1576002:44979:1396": {
       "classId": "44979",
@@ -6468,7 +6468,7 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 88,
+      "currentGrade": 86,
       "assignmentName": "Athena Worksheet",
       "dateDue": "02/12/2026",
       "dueDate": "02/12/2026",
@@ -6476,7 +6476,7 @@
       "totalPoints": 16,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.666Z"
+      "cachedAt": "2026-02-21T00:45:09.681Z"
     },
     "1576644:44463:1396": {
       "classId": "44463",
@@ -6493,7 +6493,7 @@
       "totalPoints": 45,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.664Z"
+      "cachedAt": "2026-02-21T00:44:52.952Z"
     },
     "1576638:44463:1396": {
       "classId": "44463",
@@ -6510,7 +6510,7 @@
       "totalPoints": 45,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.664Z"
+      "cachedAt": "2026-02-21T00:44:52.952Z"
     },
     "1577271:43162:1396": {
       "classId": "43162",
@@ -6527,7 +6527,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.665Z"
+      "cachedAt": "2026-02-21T00:44:52.953Z"
     },
     "1574427:43162:1396": {
       "classId": "43162",
@@ -6544,7 +6544,7 @@
       "totalPoints": 26,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.665Z"
+      "cachedAt": "2026-02-21T00:44:52.953Z"
     },
     "1576777:44979:1396": {
       "classId": "44979",
@@ -6553,7 +6553,7 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 88,
+      "currentGrade": 86,
       "assignmentName": "Zeus, Hera, Athena Guided Qs",
       "dateDue": "02/11/2026",
       "dueDate": "02/11/2026",
@@ -6561,7 +6561,7 @@
       "totalPoints": 26,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.666Z"
+      "cachedAt": "2026-02-21T00:45:09.681Z"
     },
     "1577654:43049:1396": {
       "classId": "43049",
@@ -6578,7 +6578,75 @@
       "totalPoints": 25,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-20T12:14:05.667Z"
+      "cachedAt": "2026-02-21T00:45:19.303Z"
+    },
+    "1579108:45003:1396": {
+      "classId": "45003",
+      "assignmentId": "1579108",
+      "studentId": "1396",
+      "className": "FOOD CHALLENGES",
+      "teacher": "Misty Finnegan",
+      "period": "3",
+      "currentGrade": 44,
+      "assignmentName": "Kitchen Safety Quiz",
+      "dateDue": "02/17/2026",
+      "dueDate": "02/17/2026",
+      "earnedPoints": 13,
+      "totalPoints": 15,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-02-21T00:45:02.459Z"
+    },
+    "1579093:45003:1396": {
+      "classId": "45003",
+      "assignmentId": "1579093",
+      "studentId": "1396",
+      "className": "FOOD CHALLENGES",
+      "teacher": "Misty Finnegan",
+      "period": "3",
+      "currentGrade": 44,
+      "assignmentName": "Kitchen Safety Posters",
+      "dateDue": "02/12/2026",
+      "dueDate": "02/12/2026",
+      "earnedPoints": 13,
+      "totalPoints": 15,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-02-21T00:45:02.561Z"
+    },
+    "1579146:44979:1396": {
+      "classId": "44979",
+      "assignmentId": "1579146",
+      "studentId": "1396",
+      "className": "GREEK MYTHOLOGY",
+      "teacher": "Alex Ray",
+      "period": "5",
+      "currentGrade": 86,
+      "assignmentName": "Poseidon Myth Questions",
+      "dateDue": "02/20/2026",
+      "dueDate": "02/20/2026",
+      "earnedPoints": 0,
+      "totalPoints": 50,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-02-21T00:45:09.681Z"
+    },
+    "1579005:43666:1396": {
+      "classId": "43666",
+      "assignmentId": "1579005",
+      "studentId": "1396",
+      "className": "INTERMEDIATE GEOMETRY",
+      "teacher": "Caleb Marasco",
+      "period": "7",
+      "currentGrade": 91,
+      "assignmentName": "Isos and Equi Triangle WS",
+      "dateDue": "02/20/2026",
+      "dueDate": "02/20/2026",
+      "earnedPoints": 10,
+      "totalPoints": 10,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-02-21T00:45:19.634Z"
     }
   }
 }

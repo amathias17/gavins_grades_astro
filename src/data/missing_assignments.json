@@ -1,9 +1,17 @@
 {
   "metadata": {
-    "last_updated": "02/20/2026, 07:14 AM",
-    "count": 3
+    "last_updated": "02/20/2026, 07:45 PM",
+    "count": 4
   },
   "missing_assignments": [
+    {
+      "due_date": "02/20/2026",
+      "assignment_name": "Causes to WWII Vocab",
+      "class_name": "AMER STUDIES",
+      "teacher": "Brock Seese",
+      "category": "Class Work",
+      "max_points": "14"
+    },
     {
       "due_date": "02/09/2026",
       "assignment_name": "New Deal Gallery Walk",

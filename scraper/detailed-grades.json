@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-02-20T12:14:07.757Z",
+    "scrapedAt": "2026-02-21T00:45:31.393Z",
     "totalClasses": 9,
-    "totalAssignments": 61
+    "totalAssignments": 70
   },
   "classes": [
     {
@@ -201,8 +201,24 @@
       "className": "FOOD CHALLENGES",
       "teacher": "Misty Finnegan",
       "period": "3",
-      "currentGrade": 73,
+      "currentGrade": 44,
       "assignments": [
+        {
+          "name": "Kitchen Safety Quiz",
+          "dueDate": "02/17/2026",
+          "earnedPoints": 13,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Kitchen Safety Posters",
+          "dueDate": "02/12/2026",
+          "earnedPoints": 13,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Find the Hazards WS",
           "dueDate": "02/03/2026",
@@ -289,8 +305,16 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 88,
+      "currentGrade": 86,
       "assignments": [
+        {
+          "name": "Poseidon Myth Questions",
+          "dueDate": "02/20/2026",
+          "earnedPoints": 0,
+          "totalPoints": 50,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Athena Worksheet",
           "dueDate": "02/12/2026",
@@ -339,6 +363,22 @@
       "period": "6",
       "currentGrade": 85,
       "assignments": [
+        {
+          "name": "Causes to WWII Vocab",
+          "dueDate": "02/20/2026",
+          "earnedPoints": 0,
+          "totalPoints": 14,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "WWII Word Search",
+          "dueDate": "02/20/2026",
+          "earnedPoints": 0,
+          "totalPoints": 14,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "New Deal Test",
           "dueDate": "02/19/2026",
@@ -412,6 +452,30 @@
       "currentGrade": 91,
       "assignments": [
         {
+          "name": "Isos and Equi Scavenger Hunt",
+          "dueDate": "02/20/2026",
+          "earnedPoints": 0,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Isos and Equi Triangle WS",
+          "dueDate": "02/20/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Isos & Equi Triangles",
+          "dueDate": "02/20/2026",
+          "earnedPoints": 0,
+          "totalPoints": 27,
+          "weight": 1,
+          "graded": false
+        },
+        {
           "name": "Thursday(2/12/26): Isos and Equilateral Triangles",
           "dueDate": "02/11/2026",
           "earnedPoints": 22,
@@ -465,8 +529,16 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 94,
+      "currentGrade": 95,
       "assignments": [
+        {
+          "name": "Young Woman and the Sea",
+          "dueDate": "02/20/2026",
+          "earnedPoints": 0,
+          "totalPoints": 27,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Culture Day 2 Notes",
           "dueDate": "02/10/2026",
