@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-02-22T00:49:18.790Z",
+    "scrapedAt": "2026-02-22T12:10:06.675Z",
     "totalClasses": 9,
     "totalAssignments": 71
   },
@@ -383,7 +383,7 @@
           "name": "WWII Word Search",
           "dueDate": "02/20/2026",
           "earnedPoints": 0,
-          "totalPoints": 14,
+          "totalPoints": 5,
           "weight": 1,
           "graded": false
         },
@@ -543,7 +543,7 @@
           "name": "Young Woman and the Sea",
           "dueDate": "02/20/2026",
           "earnedPoints": 0,
-          "totalPoints": 27,
+          "totalPoints": 5,
           "weight": 1,
           "graded": false
         },
