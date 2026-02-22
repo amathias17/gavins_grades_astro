@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-02-21T12:10:28.379Z",
+    "scrapedAt": "2026-02-22T00:49:18.790Z",
     "totalClasses": 9,
-    "totalAssignments": 70
+    "totalAssignments": 71
   },
   "classes": [
     {
@@ -257,10 +257,18 @@
       "className": "ENG/DESIGN/ARCH",
       "teacher": "Todd Bennett",
       "period": "4",
-      "currentGrade": 79,
+      "currentGrade": 84,
       "assignments": [
         {
-          "name": "Participation",
+          "name": "Week 5 Participation",
+          "dueDate": "02/20/2026",
+          "earnedPoints": 20,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Week 4 Participation",
           "dueDate": "02/11/2026",
           "earnedPoints": 22,
           "totalPoints": 26,
@@ -366,10 +374,10 @@
         {
           "name": "Causes to WWII Vocab",
           "dueDate": "02/20/2026",
-          "earnedPoints": 0,
-          "totalPoints": 14,
+          "earnedPoints": 20,
+          "totalPoints": 20,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "WWII Word Search",
@@ -454,10 +462,10 @@
         {
           "name": "Isos and Equi Scavenger Hunt",
           "dueDate": "02/20/2026",
-          "earnedPoints": 0,
-          "totalPoints": 5,
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Isos and Equi Triangle WS",
@@ -470,10 +478,10 @@
         {
           "name": "Isos & Equi Triangles",
           "dueDate": "02/20/2026",
-          "earnedPoints": 0,
-          "totalPoints": 27,
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Thursday(2/12/26): Isos and Equilateral Triangles",
