@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "02/23/2026, 07:24 AM",
-    "count": 4
+    "last_updated": "02/23/2026, 03:16 PM",
+    "count": 1
   },
   "missing_assignments": [
     {
@@ -11,30 +11,6 @@
       "teacher": "Brock Seese",
       "category": "Class Work",
       "max_points": "14"
-    },
-    {
-      "due_date": "02/09/2026",
-      "assignment_name": "New Deal Gallery Walk",
-      "class_name": "AMER STUDIES",
-      "teacher": "Brock Seese",
-      "category": "Participation",
-      "max_points": "30"
-    },
-    {
-      "due_date": "02/03/2026",
-      "assignment_name": "New Deal Vocab",
-      "class_name": "AMER STUDIES",
-      "teacher": "Brock Seese",
-      "category": "Class Work",
-      "max_points": "22"
-    },
-    {
-      "due_date": "01/23/2026",
-      "assignment_name": "Chapter 9 Study Guide Pt 1",
-      "class_name": "AMER STUDIES",
-      "teacher": "Brock Seese",
-      "category": "Class Work",
-      "max_points": "20"
     }
   ]
 }

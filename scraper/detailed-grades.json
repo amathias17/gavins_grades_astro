@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-02-23T12:24:42.759Z",
+    "scrapedAt": "2026-02-23T20:16:04.042Z",
     "totalClasses": 9,
-    "totalAssignments": 71
+    "totalAssignments": 74
   },
   "classes": [
     {
@@ -121,8 +121,16 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 73,
+      "currentGrade": 75,
       "assignments": [
+        {
+          "name": "Animal/Plant Mitosis",
+          "dueDate": "02/23/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Types of Reproduction-EdPuzzle",
           "dueDate": "01/30/2026",
@@ -369,7 +377,7 @@
       "className": "AMER STUDIES",
       "teacher": "Brock Seese",
       "period": "6",
-      "currentGrade": 85,
+      "currentGrade": 98,
       "assignments": [
         {
           "name": "Causes to WWII Vocab",
@@ -381,11 +389,11 @@
         },
         {
           "name": "WWII Word Search",
-          "dueDate": "02/20/2026",
-          "earnedPoints": 0,
+          "dueDate": "02/23/2026",
+          "earnedPoints": 5,
           "totalPoints": 5,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "New Deal Test",
@@ -457,7 +465,7 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 91,
+      "currentGrade": 93,
       "assignments": [
         {
           "name": "Isos and Equi Scavenger Hunt",
@@ -488,6 +496,22 @@
           "dueDate": "02/11/2026",
           "earnedPoints": 22,
           "totalPoints": 26,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Monday(2/9/26): Complete 6pts GMM",
+          "dueDate": "02/20/2026",
+          "earnedPoints": 0,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Monday(2/2/26): Delta Math",
+          "dueDate": "02/04/2026",
+          "earnedPoints": 33,
+          "totalPoints": 33,
           "weight": 1,
           "graded": true
         },
@@ -541,11 +565,11 @@
       "assignments": [
         {
           "name": "Young Woman and the Sea",
-          "dueDate": "02/20/2026",
-          "earnedPoints": 0,
-          "totalPoints": 5,
+          "dueDate": "02/04/2026",
+          "earnedPoints": 33,
+          "totalPoints": 33,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Culture Day 2 Notes",

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "02/23/2026, 07:24 AM",
+    "last_updated": "02/23/2026, 03:16 PM",
     "most_recent_date": "2/23/2026",
     "total_classes": 9
   },
@@ -39,9 +39,9 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q3_grade": 73,
+      "q3_grade": 75,
       "q3_letter_grade": "C",
-      "current_grade": 73,
+      "current_grade": 75,
       "letter_grade": "C"
     },
     {
@@ -91,10 +91,10 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q3_grade": 85,
-      "q3_letter_grade": "B",
-      "current_grade": 85,
-      "letter_grade": "B"
+      "q3_grade": 98,
+      "q3_letter_grade": "A",
+      "current_grade": 98,
+      "letter_grade": "A"
     },
     {
       "class_name": "Intermediate Geometry",
@@ -104,9 +104,9 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q3_grade": 91,
+      "q3_grade": 93,
       "q3_letter_grade": "A",
-      "current_grade": 91,
+      "current_grade": 93,
       "letter_grade": "A"
     },
     {
@@ -400,7 +400,7 @@
       "2/20/2026": 73,
       "2/21/2026": 73,
       "2/22/2026": 73,
-      "2/23/2026": 73
+      "2/23/2026": 75
     },
     "History Pop Cult 1": {
       "11/24/2025": 90,
@@ -682,7 +682,7 @@
       "2/20/2026": 85,
       "2/21/2026": 85,
       "2/22/2026": 85,
-      "2/23/2026": 85
+      "2/23/2026": 98
     },
     "Intermediate Geometry": {
       "11/24/2025": 69,
@@ -775,7 +775,7 @@
       "2/20/2026": 91,
       "2/21/2026": 91,
       "2/22/2026": 91,
-      "2/23/2026": 91
+      "2/23/2026": 93
     },
     "Health": {
       "11/24/2025": 94,
@@ -976,7 +976,7 @@
       "2/23/2026": 86
     }
   },
-  "overall_average": 80,
+  "overall_average": 82,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -1069,7 +1069,7 @@
     "2/20/2026": 83,
     "2/21/2026": 80,
     "2/22/2026": 80,
-    "2/23/2026": 80
+    "2/23/2026": 82
   },
   "streak": 0,
   "streak_history": {
