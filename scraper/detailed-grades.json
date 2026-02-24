@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-02-24T00:47:47.799Z",
+    "scrapedAt": "2026-02-24T18:28:48.089Z",
     "totalClasses": 9,
-    "totalAssignments": 74
+    "totalAssignments": 76
   },
   "classes": [
     {
@@ -124,6 +124,14 @@
       "currentGrade": 75,
       "assignments": [
         {
+          "name": "Cell Size Lab",
+          "dueDate": "02/24/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": false
+        },
+        {
           "name": "Animal/Plant Mitosis",
           "dueDate": "02/23/2026",
           "earnedPoints": 5,
@@ -209,8 +217,16 @@
       "className": "FOOD CHALLENGES",
       "teacher": "Misty Finnegan",
       "period": "3",
-      "currentGrade": 44,
+      "currentGrade": 46,
       "assignments": [
+        {
+          "name": "Ticket In- Food Safety",
+          "dueDate": "02/24/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Kitchen Safety Quiz",
           "dueDate": "02/17/2026",
@@ -276,7 +292,7 @@
           "graded": true
         },
         {
-          "name": "Week 4 Layouts and Flows Activity",
+          "name": "Week 4 Participation",
           "dueDate": "02/11/2026",
           "earnedPoints": 22,
           "totalPoints": 26,
@@ -284,7 +300,7 @@
           "graded": true
         },
         {
-          "name": "Week 4 Participation",
+          "name": "Week 4 Layouts and Flows Activity",
           "dueDate": "02/11/2026",
           "earnedPoints": 22,
           "totalPoints": 26,
