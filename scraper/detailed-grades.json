@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-02-23T20:16:04.042Z",
+    "scrapedAt": "2026-02-24T00:47:47.799Z",
     "totalClasses": 9,
     "totalAssignments": 74
   },
@@ -276,7 +276,7 @@
           "graded": true
         },
         {
-          "name": "Week 4 Participation",
+          "name": "Week 4 Layouts and Flows Activity",
           "dueDate": "02/11/2026",
           "earnedPoints": 22,
           "totalPoints": 26,
@@ -284,7 +284,7 @@
           "graded": true
         },
         {
-          "name": "Week 4 Layouts and Flows Activity",
+          "name": "Week 4 Participation",
           "dueDate": "02/11/2026",
           "earnedPoints": 22,
           "totalPoints": 26,
@@ -501,11 +501,11 @@
         },
         {
           "name": "Monday(2/9/26): Complete 6pts GMM",
-          "dueDate": "02/20/2026",
-          "earnedPoints": 0,
-          "totalPoints": 5,
+          "dueDate": "02/10/2026",
+          "earnedPoints": 12,
+          "totalPoints": 12,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Monday(2/2/26): Delta Math",
