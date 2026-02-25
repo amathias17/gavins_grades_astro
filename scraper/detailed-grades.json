@@ -1,16 +1,24 @@
 {
   "metadata": {
-    "scrapedAt": "2026-02-25T12:16:29.266Z",
+    "scrapedAt": "2026-02-25T21:13:17.015Z",
     "totalClasses": 9,
-    "totalAssignments": 76
+    "totalAssignments": 80
   },
   "classes": [
     {
       "className": "SOPHOMORE SEMINAR",
       "teacher": "Victoria Good",
       "period": "0",
-      "currentGrade": 80,
+      "currentGrade": 82,
       "assignments": [
+        {
+          "name": "MP3 Grade Tracking",
+          "dueDate": "02/25/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Workbok Check",
           "dueDate": "02/18/2026",
@@ -121,15 +129,23 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 75,
+      "currentGrade": 78,
       "assignments": [
         {
-          "name": "Cell Size Lab",
-          "dueDate": "02/24/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
+          "name": "Cell cycle and Mitosis",
+          "dueDate": "02/25/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
+        },
+        {
+          "name": "Cell Size Lab",
+          "dueDate": "02/25/2026",
+          "earnedPoints": 38,
+          "totalPoints": 50,
+          "weight": 1,
+          "graded": true
         },
         {
           "name": "Animal/Plant Mitosis",
@@ -220,10 +236,26 @@
       "currentGrade": 46,
       "assignments": [
         {
-          "name": "Ticket In- Food Safety",
-          "dueDate": "02/24/2026",
+          "name": "Safely Separate Lab",
+          "dueDate": "02/25/2026",
           "earnedPoints": 0,
-          "totalPoints": 20,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Ticket In-The Core Four",
+          "dueDate": "02/25/2026",
+          "earnedPoints": 0,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Ticket In- Food Safety",
+          "dueDate": "02/20/2026",
+          "earnedPoints": 0,
+          "totalPoints": 5,
           "weight": 1,
           "graded": false
         },
