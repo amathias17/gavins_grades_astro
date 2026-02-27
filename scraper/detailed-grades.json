@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-02-27T00:48:15.755Z",
+    "scrapedAt": "2026-02-27T12:14:33.975Z",
     "totalClasses": 9,
     "totalAssignments": 85
   },
@@ -261,17 +261,17 @@
       "assignments": [
         {
           "name": "Safely Separate Lab",
-          "dueDate": "02/25/2026",
-          "earnedPoints": 0,
-          "totalPoints": 15,
+          "dueDate": "02/26/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Ticket In-The Core Four",
           "dueDate": "02/25/2026",
           "earnedPoints": 0,
-          "totalPoints": 15,
+          "totalPoints": 5,
           "weight": 1,
           "graded": false
         },
@@ -542,18 +542,18 @@
         {
           "name": "Finding Hypotenuse",
           "dueDate": "02/26/2026",
-          "earnedPoints": 0,
-          "totalPoints": 10,
+          "earnedPoints": 5,
+          "totalPoints": 5,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Relationships in Triangles",
-          "dueDate": "02/26/2026",
-          "earnedPoints": 0,
-          "totalPoints": 10,
+          "dueDate": "02/24/2026",
+          "earnedPoints": 11,
+          "totalPoints": 24,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Isos and Equi Scavenger Hunt",

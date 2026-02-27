@@ -456,12 +456,12 @@
     "period": "3",
     "currentGrade": 46,
     "assignmentName": "Safely Separate Lab",
-    "dateDue": "02/25/2026",
-    "dueDate": "02/25/2026",
-    "earnedPoints": 0,
-    "totalPoints": 15,
+    "dateDue": "02/26/2026",
+    "dueDate": "02/26/2026",
+    "earnedPoints": 5,
+    "totalPoints": 5,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "45003",
@@ -475,7 +475,7 @@
     "dateDue": "02/25/2026",
     "dueDate": "02/25/2026",
     "earnedPoints": 0,
-    "totalPoints": 15,
+    "totalPoints": 5,
     "weight": 1,
     "graded": false
   },
@@ -954,10 +954,10 @@
     "assignmentName": "Finding Hypotenuse",
     "dateDue": "02/26/2026",
     "dueDate": "02/26/2026",
-    "earnedPoints": 0,
-    "totalPoints": 10,
+    "earnedPoints": 5,
+    "totalPoints": 5,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "43666",
@@ -968,12 +968,12 @@
     "period": "7",
     "currentGrade": 88,
     "assignmentName": "Relationships in Triangles",
-    "dateDue": "02/26/2026",
-    "dueDate": "02/26/2026",
-    "earnedPoints": 0,
-    "totalPoints": 10,
+    "dateDue": "02/24/2026",
+    "dueDate": "02/24/2026",
+    "earnedPoints": 11,
+    "totalPoints": 24,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "43666",
