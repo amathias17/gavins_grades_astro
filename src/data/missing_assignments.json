@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "02/26/2026, 07:17 AM",
-    "count": 2
+    "last_updated": "02/26/2026, 07:48 PM",
+    "count": 1
   },
   "missing_assignments": [
     {
@@ -11,14 +11,6 @@
       "teacher": "Brock Seese",
       "category": "Class Work",
       "max_points": "14"
-    },
-    {
-      "due_date": "02/09/2026",
-      "assignment_name": "New Deal Gallery Walk",
-      "class_name": "AMER STUDIES",
-      "teacher": "Brock Seese",
-      "category": "Participation",
-      "max_points": "30"
     }
   ]
 }

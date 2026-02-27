@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-02-26T12:17:14.539Z",
+    "scrapedAt": "2026-02-27T00:48:15.755Z",
     "totalClasses": 9,
-    "totalAssignments": 80
+    "totalAssignments": 85
   },
   "classes": [
     {
@@ -129,8 +129,32 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 78,
+      "currentGrade": 79,
       "assignments": [
+        {
+          "name": "Meiosis Microslide Lab",
+          "dueDate": "02/27/2026",
+          "earnedPoints": 0,
+          "totalPoints": 30,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Notes Meiosis",
+          "dueDate": "02/27/2026",
+          "earnedPoints": 0,
+          "totalPoints": 30,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Meiosis - Amobea Sisters Edpuz",
+          "dueDate": "02/26/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Cell cycle and Mitosis",
           "dueDate": "02/25/2026",
@@ -425,7 +449,7 @@
       "className": "AMER STUDIES",
       "teacher": "Brock Seese",
       "period": "6",
-      "currentGrade": 84,
+      "currentGrade": 98,
       "assignments": [
         {
           "name": "Causes to WWII Vocab",
@@ -513,8 +537,24 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 93,
+      "currentGrade": 88,
       "assignments": [
+        {
+          "name": "Finding Hypotenuse",
+          "dueDate": "02/26/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Relationships in Triangles",
+          "dueDate": "02/26/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Isos and Equi Scavenger Hunt",
           "dueDate": "02/20/2026",
