@@ -1,16 +1,24 @@
 {
   "metadata": {
-    "scrapedAt": "2026-02-27T12:14:33.975Z",
+    "scrapedAt": "2026-02-28T00:42:40.984Z",
     "totalClasses": 9,
-    "totalAssignments": 85
+    "totalAssignments": 93
   },
   "classes": [
     {
       "className": "SOPHOMORE SEMINAR",
       "teacher": "Victoria Good",
       "period": "0",
-      "currentGrade": 82,
+      "currentGrade": 74,
       "assignments": [
+        {
+          "name": "2/23-2/27",
+          "dueDate": "02/27/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "MP3 Grade Tracking",
           "dueDate": "02/25/2026",
@@ -135,6 +143,14 @@
           "name": "Meiosis Microslide Lab",
           "dueDate": "02/27/2026",
           "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Meiosis Lab - Microviewer",
+          "dueDate": "02/27/2026",
+          "earnedPoints": 0,
           "totalPoints": 30,
           "weight": 1,
           "graded": false
@@ -142,10 +158,10 @@
         {
           "name": "Notes Meiosis",
           "dueDate": "02/27/2026",
-          "earnedPoints": 0,
-          "totalPoints": 30,
+          "earnedPoints": 16,
+          "totalPoints": 20,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Meiosis - Amobea Sisters Edpuz",
@@ -257,7 +273,7 @@
       "className": "FOOD CHALLENGES",
       "teacher": "Misty Finnegan",
       "period": "3",
-      "currentGrade": 46,
+      "currentGrade": 51,
       "assignments": [
         {
           "name": "Safely Separate Lab",
@@ -270,18 +286,18 @@
         {
           "name": "Ticket In-The Core Four",
           "dueDate": "02/25/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 5,
           "totalPoints": 5,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Ticket In- Food Safety",
           "dueDate": "02/20/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 5,
           "totalPoints": 5,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Kitchen Safety Quiz",
@@ -337,8 +353,24 @@
       "className": "ENG/DESIGN/ARCH",
       "teacher": "Todd Bennett",
       "period": "4",
-      "currentGrade": 84,
+      "currentGrade": 87,
       "assignments": [
+        {
+          "name": "Do you want to present today for 10 Bonus Points?",
+          "dueDate": "02/27/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Week 6 Participation",
+          "dueDate": "02/27/2026",
+          "earnedPoints": 25,
+          "totalPoints": 25,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Week 5 Participation",
           "dueDate": "02/20/2026",
@@ -393,8 +425,16 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 86,
+      "currentGrade": 87,
       "assignments": [
+        {
+          "name": "Poseidon Trading Card",
+          "dueDate": "02/23/2026",
+          "earnedPoints": 25,
+          "totalPoints": 25,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Poseidon Myth Questions",
           "dueDate": "02/20/2026",
@@ -651,6 +691,30 @@
       "period": "8",
       "currentGrade": 95,
       "assignments": [
+        {
+          "name": "My Agents of Socialization",
+          "dueDate": "02/23/2026",
+          "earnedPoints": 32,
+          "totalPoints": 35,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "The Chameleon Career Project",
+          "dueDate": "02/27/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Socialization Scavenger Hunt",
+          "dueDate": "02/27/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Young Woman and the Sea",
           "dueDate": "02/04/2026",

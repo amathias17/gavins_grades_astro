@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-02-27T12:14:33.976Z",
+  "updatedAt": "2026-02-28T00:42:40.985Z",
   "assignments": {
     "1561854:44463:1396": {
       "classId": "44463",
@@ -8,7 +8,7 @@
       "className": "SOPHOMORE SEMINAR",
       "teacher": "Victoria Good",
       "period": "0",
-      "currentGrade": 82,
+      "currentGrade": 74,
       "assignmentName": "Week of 1/19",
       "dateDue": "01/23/2026",
       "dueDate": "01/23/2026",
@@ -16,7 +16,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:13:48.981Z"
+      "cachedAt": "2026-02-28T00:41:57.704Z"
     },
     "1557583:44463:1396": {
       "classId": "44463",
@@ -1138,7 +1138,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:13:58.549Z"
+      "cachedAt": "2026-02-28T00:41:58.116Z"
     },
     "1556975:43424:1396": {
       "classId": "43424",
@@ -1155,7 +1155,7 @@
       "totalPoints": 0,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:13:58.549Z"
+      "cachedAt": "2026-02-28T00:41:58.116Z"
     },
     "1560684:43424:1396": {
       "classId": "43424",
@@ -3255,7 +3255,7 @@
       "className": "ENG/DESIGN/ARCH",
       "teacher": "Todd Bennett",
       "period": "4",
-      "currentGrade": 84,
+      "currentGrade": 87,
       "assignmentName": "Week 1 Participation",
       "dateDue": "01/23/2026",
       "dueDate": "01/23/2026",
@@ -3263,7 +3263,7 @@
       "totalPoints": 25,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:15.265Z"
+      "cachedAt": "2026-02-28T00:42:24.194Z"
     },
     "1557822:44290:1396": {
       "classId": "44290",
@@ -3671,7 +3671,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:15.266Z"
+      "cachedAt": "2026-02-28T00:42:24.291Z"
     },
     "1561998:43049:1396": {
       "classId": "43049",
@@ -3688,7 +3688,7 @@
       "totalPoints": 30,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:15.266Z"
+      "cachedAt": "2026-02-28T00:42:24.291Z"
     },
     "1556957:43049:1396": {
       "classId": "43049",
@@ -4266,7 +4266,7 @@
       "totalPoints": 100,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:31.891Z"
+      "cachedAt": "2026-02-28T00:42:24.292Z"
     },
     "1564116:43666:1396": {
       "classId": "43666",
@@ -4283,7 +4283,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:31.891Z"
+      "cachedAt": "2026-02-28T00:42:24.292Z"
     },
     "1564122:43666:1396": {
       "classId": "43666",
@@ -4300,7 +4300,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:31.891Z"
+      "cachedAt": "2026-02-28T00:42:24.292Z"
     },
     "1564125:43666:1396": {
       "classId": "43666",
@@ -4317,7 +4317,7 @@
       "totalPoints": 18,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:31.891Z"
+      "cachedAt": "2026-02-28T00:42:24.292Z"
     },
     "1558377:43666:1396": {
       "classId": "43666",
@@ -5609,7 +5609,7 @@
       "totalPoints": 12,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:31.891Z"
+      "cachedAt": "2026-02-28T00:42:40.942Z"
     },
     "1562839:44615:1396": {
       "classId": "44615",
@@ -5626,7 +5626,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:31.891Z"
+      "cachedAt": "2026-02-28T00:42:40.942Z"
     },
     "1561967:44615:1396": {
       "classId": "44615",
@@ -5643,7 +5643,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:31.891Z"
+      "cachedAt": "2026-02-28T00:42:40.942Z"
     },
     "1561441:44615:1396": {
       "classId": "44615",
@@ -5660,7 +5660,7 @@
       "totalPoints": 18,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:31.891Z"
+      "cachedAt": "2026-02-28T00:42:40.942Z"
     },
     "1556821:43162:1396": {
       "classId": "43162",
@@ -5711,7 +5711,7 @@
       "totalPoints": 25,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:13:58.549Z"
+      "cachedAt": "2026-02-28T00:41:58.116Z"
     },
     "1541834:43424:1396": {
       "classId": "43424",
@@ -5745,7 +5745,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:15.266Z"
+      "cachedAt": "2026-02-28T00:42:24.291Z"
     },
     "1559402:43049:1396": {
       "classId": "43049",
@@ -5822,7 +5822,7 @@
       "className": "SOPHOMORE SEMINAR",
       "teacher": "Victoria Good",
       "period": "0",
-      "currentGrade": 82,
+      "currentGrade": 74,
       "assignmentName": "Week of 2/2 Part.",
       "dateDue": "02/04/2026",
       "dueDate": "02/04/2026",
@@ -5830,7 +5830,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:13:48.981Z"
+      "cachedAt": "2026-02-28T00:41:57.704Z"
     },
     "1572198:43162:1396": {
       "classId": "43162",
@@ -5847,7 +5847,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:13:48.982Z"
+      "cachedAt": "2026-02-28T00:41:57.705Z"
     },
     "1572226:43162:1396": {
       "classId": "43162",
@@ -5864,7 +5864,7 @@
       "totalPoints": 13,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:13:48.982Z"
+      "cachedAt": "2026-02-28T00:41:57.705Z"
     },
     "1571347:43162:1396": {
       "classId": "43162",
@@ -5881,7 +5881,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:13:48.982Z"
+      "cachedAt": "2026-02-28T00:41:57.705Z"
     },
     "1566141:43162:1396": {
       "classId": "43162",
@@ -5898,7 +5898,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:13:48.982Z"
+      "cachedAt": "2026-02-28T00:41:57.705Z"
     },
     "1571003:43424:1396": {
       "classId": "43424",
@@ -5915,7 +5915,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:13:58.549Z"
+      "cachedAt": "2026-02-28T00:41:58.116Z"
     },
     "1571008:43424:1396": {
       "classId": "43424",
@@ -5932,7 +5932,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:13:58.549Z"
+      "cachedAt": "2026-02-28T00:41:58.116Z"
     },
     "1569283:43424:1396": {
       "classId": "43424",
@@ -5949,7 +5949,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:13:58.549Z"
+      "cachedAt": "2026-02-28T00:41:58.116Z"
     },
     "1569548:43424:1396": {
       "classId": "43424",
@@ -5966,7 +5966,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:13:58.549Z"
+      "cachedAt": "2026-02-28T00:41:58.116Z"
     },
     "1569712:43424:1396": {
       "classId": "43424",
@@ -5983,7 +5983,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:13:58.549Z"
+      "cachedAt": "2026-02-28T00:41:58.116Z"
     },
     "1569288:43424:1396": {
       "classId": "43424",
@@ -6000,7 +6000,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:13:58.549Z"
+      "cachedAt": "2026-02-28T00:41:58.116Z"
     },
     "1572560:45003:1396": {
       "classId": "45003",
@@ -6009,7 +6009,7 @@
       "className": "FOOD CHALLENGES",
       "teacher": "Misty Finnegan",
       "period": "3",
-      "currentGrade": 46,
+      "currentGrade": 51,
       "assignmentName": "Find the Hazards WS",
       "dateDue": "02/03/2026",
       "dueDate": "02/03/2026",
@@ -6017,7 +6017,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:15.265Z"
+      "cachedAt": "2026-02-28T00:42:07.608Z"
     },
     "1571019:45003:1396": {
       "classId": "45003",
@@ -6026,7 +6026,7 @@
       "className": "FOOD CHALLENGES",
       "teacher": "Misty Finnegan",
       "period": "3",
-      "currentGrade": 46,
+      "currentGrade": 51,
       "assignmentName": "Syllabus Bonus",
       "dateDue": "02/06/2026",
       "dueDate": "02/06/2026",
@@ -6034,7 +6034,7 @@
       "totalPoints": 0,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:15.265Z"
+      "cachedAt": "2026-02-28T00:42:07.608Z"
     },
     "1569537:45003:1396": {
       "classId": "45003",
@@ -6043,7 +6043,7 @@
       "className": "FOOD CHALLENGES",
       "teacher": "Misty Finnegan",
       "period": "3",
-      "currentGrade": 46,
+      "currentGrade": 51,
       "assignmentName": "Pre-Test (Food Safety)",
       "dateDue": "01/28/2026",
       "dueDate": "01/28/2026",
@@ -6051,7 +6051,7 @@
       "totalPoints": 0,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:15.265Z"
+      "cachedAt": "2026-02-28T00:42:07.608Z"
     },
     "1569532:45003:1396": {
       "classId": "45003",
@@ -6060,7 +6060,7 @@
       "className": "FOOD CHALLENGES",
       "teacher": "Misty Finnegan",
       "period": "3",
-      "currentGrade": 46,
+      "currentGrade": 51,
       "assignmentName": "Student Information WS",
       "dateDue": "01/23/2026",
       "dueDate": "01/23/2026",
@@ -6068,7 +6068,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:15.265Z"
+      "cachedAt": "2026-02-28T00:42:07.608Z"
     },
     "1571637:43341:1396": {
       "classId": "43341",
@@ -6077,7 +6077,7 @@
       "className": "ENG/DESIGN/ARCH",
       "teacher": "Todd Bennett",
       "period": "4",
-      "currentGrade": 84,
+      "currentGrade": 87,
       "assignmentName": "Internet-Based Architecture Scavenger Hunt",
       "dateDue": "02/06/2026",
       "dueDate": "02/06/2026",
@@ -6085,7 +6085,7 @@
       "totalPoints": 18,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:15.265Z"
+      "cachedAt": "2026-02-28T00:42:24.194Z"
     },
     "1566638:43341:1396": {
       "classId": "43341",
@@ -6094,7 +6094,7 @@
       "className": "ENG/DESIGN/ARCH",
       "teacher": "Todd Bennett",
       "period": "4",
-      "currentGrade": 84,
+      "currentGrade": 87,
       "assignmentName": "Week 2 Participation",
       "dateDue": "01/30/2026",
       "dueDate": "01/30/2026",
@@ -6102,7 +6102,7 @@
       "totalPoints": 18,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:15.265Z"
+      "cachedAt": "2026-02-28T00:42:24.194Z"
     },
     "1571246:44979:1396": {
       "classId": "44979",
@@ -6111,7 +6111,7 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 86,
+      "currentGrade": 87,
       "assignmentName": "All About Hera Worksheet",
       "dateDue": "01/30/2026",
       "dueDate": "01/30/2026",
@@ -6119,7 +6119,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:15.265Z"
+      "cachedAt": "2026-02-28T00:42:24.291Z"
     },
     "1568561:44979:1396": {
       "classId": "44979",
@@ -6128,7 +6128,7 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 86,
+      "currentGrade": 87,
       "assignmentName": "Zeus Trading Card",
       "dateDue": "02/03/2026",
       "dueDate": "02/03/2026",
@@ -6136,7 +6136,7 @@
       "totalPoints": 35,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:15.265Z"
+      "cachedAt": "2026-02-28T00:42:24.291Z"
     },
     "1568559:44979:1396": {
       "classId": "44979",
@@ -6145,7 +6145,7 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 86,
+      "currentGrade": 87,
       "assignmentName": "All About Zeus Worksheet",
       "dateDue": "02/03/2026",
       "dueDate": "02/03/2026",
@@ -6153,7 +6153,7 @@
       "totalPoints": 35,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:15.266Z"
+      "cachedAt": "2026-02-28T00:42:24.291Z"
     },
     "1572012:43049:1396": {
       "classId": "43049",
@@ -6170,7 +6170,7 @@
       "totalPoints": 23,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:15.266Z"
+      "cachedAt": "2026-02-28T00:42:24.291Z"
     },
     "1571502:44615:1396": {
       "classId": "44615",
@@ -6187,7 +6187,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:31.891Z"
+      "cachedAt": "2026-02-28T00:42:40.942Z"
     },
     "1570062:44615:1396": {
       "classId": "44615",
@@ -6204,7 +6204,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:31.891Z"
+      "cachedAt": "2026-02-28T00:42:40.942Z"
     },
     "1569610:44615:1396": {
       "classId": "44615",
@@ -6221,7 +6221,7 @@
       "totalPoints": 7,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:31.891Z"
+      "cachedAt": "2026-02-28T00:42:40.942Z"
     },
     "1568621:44615:1396": {
       "classId": "44615",
@@ -6238,7 +6238,7 @@
       "totalPoints": 7,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:31.891Z"
+      "cachedAt": "2026-02-28T00:42:40.942Z"
     },
     "1567708:44615:1396": {
       "classId": "44615",
@@ -6255,7 +6255,7 @@
       "totalPoints": 18,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:31.891Z"
+      "cachedAt": "2026-02-28T00:42:40.942Z"
     },
     "1566577:44615:1396": {
       "classId": "44615",
@@ -6272,7 +6272,7 @@
       "totalPoints": 21,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:31.891Z"
+      "cachedAt": "2026-02-28T00:42:40.942Z"
     },
     "1569986:43049:1396": {
       "classId": "43049",
@@ -6289,7 +6289,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:15.266Z"
+      "cachedAt": "2026-02-28T00:42:24.291Z"
     },
     "1568236:43049:1396": {
       "classId": "43049",
@@ -6306,7 +6306,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:15.266Z"
+      "cachedAt": "2026-02-28T00:42:24.291Z"
     },
     "1573050:44615:1396": {
       "classId": "44615",
@@ -6323,7 +6323,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:31.891Z"
+      "cachedAt": "2026-02-28T00:42:40.942Z"
     },
     "1572388:44615:1396": {
       "classId": "44615",
@@ -6340,7 +6340,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:31.891Z"
+      "cachedAt": "2026-02-28T00:42:40.942Z"
     },
     "1567640:43666:1396": {
       "classId": "43666",
@@ -6357,7 +6357,7 @@
       "totalPoints": 19,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:31.891Z"
+      "cachedAt": "2026-02-28T00:42:24.292Z"
     },
     "1574711:43049:1396": {
       "classId": "43049",
@@ -6374,7 +6374,7 @@
       "totalPoints": 26,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:15.266Z"
+      "cachedAt": "2026-02-28T00:42:24.291Z"
     },
     "1575257:43341:1396": {
       "classId": "43341",
@@ -6383,7 +6383,7 @@
       "className": "ENG/DESIGN/ARCH",
       "teacher": "Todd Bennett",
       "period": "4",
-      "currentGrade": 84,
+      "currentGrade": 87,
       "assignmentName": "Week 4 Participation",
       "dateDue": "02/11/2026",
       "dueDate": "02/11/2026",
@@ -6391,7 +6391,7 @@
       "totalPoints": 26,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:15.265Z"
+      "cachedAt": "2026-02-28T00:42:24.194Z"
     },
     "1575293:43341:1396": {
       "classId": "43341",
@@ -6400,7 +6400,7 @@
       "className": "ENG/DESIGN/ARCH",
       "teacher": "Todd Bennett",
       "period": "4",
-      "currentGrade": 84,
+      "currentGrade": 87,
       "assignmentName": "Week 4 Layouts and Flows Activity",
       "dateDue": "02/11/2026",
       "dueDate": "02/11/2026",
@@ -6408,7 +6408,7 @@
       "totalPoints": 26,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:15.265Z"
+      "cachedAt": "2026-02-28T00:42:24.194Z"
     },
     "1575490:43666:1396": {
       "classId": "43666",
@@ -6425,7 +6425,7 @@
       "totalPoints": 26,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:31.890Z"
+      "cachedAt": "2026-02-28T00:42:24.291Z"
     },
     "1576168:43162:1396": {
       "classId": "43162",
@@ -6442,7 +6442,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:13:48.981Z"
+      "cachedAt": "2026-02-28T00:41:57.705Z"
     },
     "1574257:43162:1396": {
       "classId": "43162",
@@ -6459,7 +6459,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:13:48.981Z"
+      "cachedAt": "2026-02-28T00:41:57.705Z"
     },
     "1576002:44979:1396": {
       "classId": "44979",
@@ -6468,7 +6468,7 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 86,
+      "currentGrade": 87,
       "assignmentName": "Athena Worksheet",
       "dateDue": "02/12/2026",
       "dueDate": "02/12/2026",
@@ -6476,7 +6476,7 @@
       "totalPoints": 16,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:15.265Z"
+      "cachedAt": "2026-02-28T00:42:24.291Z"
     },
     "1576644:44463:1396": {
       "classId": "44463",
@@ -6485,7 +6485,7 @@
       "className": "SOPHOMORE SEMINAR",
       "teacher": "Victoria Good",
       "period": "0",
-      "currentGrade": 82,
+      "currentGrade": 74,
       "assignmentName": "Workbok Check",
       "dateDue": "02/18/2026",
       "dueDate": "02/18/2026",
@@ -6493,7 +6493,7 @@
       "totalPoints": 45,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:13:48.980Z"
+      "cachedAt": "2026-02-28T00:41:57.704Z"
     },
     "1576638:44463:1396": {
       "classId": "44463",
@@ -6502,7 +6502,7 @@
       "className": "SOPHOMORE SEMINAR",
       "teacher": "Victoria Good",
       "period": "0",
-      "currentGrade": 82,
+      "currentGrade": 74,
       "assignmentName": "Leader in Me",
       "dateDue": "02/17/2026",
       "dueDate": "02/17/2026",
@@ -6510,7 +6510,7 @@
       "totalPoints": 45,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:13:48.981Z"
+      "cachedAt": "2026-02-28T00:41:57.704Z"
     },
     "1577271:43162:1396": {
       "classId": "43162",
@@ -6527,7 +6527,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:13:48.981Z"
+      "cachedAt": "2026-02-28T00:41:57.705Z"
     },
     "1574427:43162:1396": {
       "classId": "43162",
@@ -6544,7 +6544,7 @@
       "totalPoints": 26,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:13:48.981Z"
+      "cachedAt": "2026-02-28T00:41:57.705Z"
     },
     "1576777:44979:1396": {
       "classId": "44979",
@@ -6553,7 +6553,7 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 86,
+      "currentGrade": 87,
       "assignmentName": "Zeus, Hera, Athena Guided Qs",
       "dateDue": "02/11/2026",
       "dueDate": "02/11/2026",
@@ -6561,7 +6561,7 @@
       "totalPoints": 26,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:15.265Z"
+      "cachedAt": "2026-02-28T00:42:24.291Z"
     },
     "1577654:43049:1396": {
       "classId": "43049",
@@ -6578,7 +6578,7 @@
       "totalPoints": 25,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:15.266Z"
+      "cachedAt": "2026-02-28T00:42:24.291Z"
     },
     "1579108:45003:1396": {
       "classId": "45003",
@@ -6587,7 +6587,7 @@
       "className": "FOOD CHALLENGES",
       "teacher": "Misty Finnegan",
       "period": "3",
-      "currentGrade": 46,
+      "currentGrade": 51,
       "assignmentName": "Kitchen Safety Quiz",
       "dateDue": "02/17/2026",
       "dueDate": "02/17/2026",
@@ -6595,7 +6595,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:15.265Z"
+      "cachedAt": "2026-02-28T00:42:07.608Z"
     },
     "1579093:45003:1396": {
       "classId": "45003",
@@ -6604,7 +6604,7 @@
       "className": "FOOD CHALLENGES",
       "teacher": "Misty Finnegan",
       "period": "3",
-      "currentGrade": 46,
+      "currentGrade": 51,
       "assignmentName": "Kitchen Safety Posters",
       "dateDue": "02/12/2026",
       "dueDate": "02/12/2026",
@@ -6612,7 +6612,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:15.265Z"
+      "cachedAt": "2026-02-28T00:42:07.608Z"
     },
     "1579146:44979:1396": {
       "classId": "44979",
@@ -6621,7 +6621,7 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 86,
+      "currentGrade": 87,
       "assignmentName": "Poseidon Myth Questions",
       "dateDue": "02/20/2026",
       "dueDate": "02/20/2026",
@@ -6629,7 +6629,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:15.265Z"
+      "cachedAt": "2026-02-28T00:42:24.291Z"
     },
     "1579005:43666:1396": {
       "classId": "43666",
@@ -6646,7 +6646,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:31.890Z"
+      "cachedAt": "2026-02-28T00:42:24.291Z"
     },
     "1579291:43341:1396": {
       "classId": "43341",
@@ -6655,7 +6655,7 @@
       "className": "ENG/DESIGN/ARCH",
       "teacher": "Todd Bennett",
       "period": "4",
-      "currentGrade": 84,
+      "currentGrade": 87,
       "assignmentName": "Week 5 Participation",
       "dateDue": "02/20/2026",
       "dueDate": "02/20/2026",
@@ -6663,7 +6663,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:15.265Z"
+      "cachedAt": "2026-02-28T00:42:24.194Z"
     },
     "1578503:43049:1396": {
       "classId": "43049",
@@ -6680,7 +6680,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:15.266Z"
+      "cachedAt": "2026-02-28T00:42:24.291Z"
     },
     "1579004:43666:1396": {
       "classId": "43666",
@@ -6697,7 +6697,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:31.890Z"
+      "cachedAt": "2026-02-28T00:42:24.291Z"
     },
     "1579153:43666:1396": {
       "classId": "43666",
@@ -6714,7 +6714,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:31.890Z"
+      "cachedAt": "2026-02-28T00:42:24.291Z"
     },
     "1580281:43424:1396": {
       "classId": "43424",
@@ -6731,7 +6731,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:13:58.549Z"
+      "cachedAt": "2026-02-28T00:41:58.116Z"
     },
     "1578541:43049:1396": {
       "classId": "43049",
@@ -6748,7 +6748,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:15.266Z"
+      "cachedAt": "2026-02-28T00:42:24.291Z"
     },
     "1580248:43666:1396": {
       "classId": "43666",
@@ -6765,7 +6765,7 @@
       "totalPoints": 33,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:31.890Z"
+      "cachedAt": "2026-02-28T00:42:24.292Z"
     },
     "1578652:44615:1396": {
       "classId": "44615",
@@ -6782,7 +6782,7 @@
       "totalPoints": 33,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:31.891Z"
+      "cachedAt": "2026-02-28T00:42:40.942Z"
     },
     "1580260:43666:1396": {
       "classId": "43666",
@@ -6799,7 +6799,7 @@
       "totalPoints": 12,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:31.890Z"
+      "cachedAt": "2026-02-28T00:42:24.292Z"
     },
     "1582828:44463:1396": {
       "classId": "44463",
@@ -6808,7 +6808,7 @@
       "className": "SOPHOMORE SEMINAR",
       "teacher": "Victoria Good",
       "period": "0",
-      "currentGrade": 82,
+      "currentGrade": 74,
       "assignmentName": "MP3 Grade Tracking",
       "dateDue": "02/25/2026",
       "dueDate": "02/25/2026",
@@ -6816,7 +6816,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:13:48.980Z"
+      "cachedAt": "2026-02-28T00:41:57.704Z"
     },
     "1582622:43424:1396": {
       "classId": "43424",
@@ -6833,7 +6833,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:13:58.549Z"
+      "cachedAt": "2026-02-28T00:41:58.116Z"
     },
     "1581886:43424:1396": {
       "classId": "43424",
@@ -6850,7 +6850,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:13:58.549Z"
+      "cachedAt": "2026-02-28T00:41:58.116Z"
     },
     "1583422:43424:1396": {
       "classId": "43424",
@@ -6867,7 +6867,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:13:58.549Z"
+      "cachedAt": "2026-02-28T00:41:58.116Z"
     },
     "1582904:45003:1396": {
       "classId": "45003",
@@ -6876,7 +6876,7 @@
       "className": "FOOD CHALLENGES",
       "teacher": "Misty Finnegan",
       "period": "3",
-      "currentGrade": 46,
+      "currentGrade": 51,
       "assignmentName": "Safely Separate Lab",
       "dateDue": "02/26/2026",
       "dueDate": "02/26/2026",
@@ -6884,7 +6884,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:05.726Z"
+      "cachedAt": "2026-02-28T00:41:58.116Z"
     },
     "1583831:43666:1396": {
       "classId": "43666",
@@ -6901,7 +6901,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:22.439Z"
+      "cachedAt": "2026-02-28T00:42:24.291Z"
     },
     "1583829:43666:1396": {
       "classId": "43666",
@@ -6918,7 +6918,160 @@
       "totalPoints": 24,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-02-27T12:14:31.890Z"
+      "cachedAt": "2026-02-28T00:42:24.291Z"
+    },
+    "1583962:44463:1396": {
+      "classId": "44463",
+      "assignmentId": "1583962",
+      "studentId": "1396",
+      "className": "SOPHOMORE SEMINAR",
+      "teacher": "Victoria Good",
+      "period": "0",
+      "currentGrade": 74,
+      "assignmentName": "2/23-2/27",
+      "dateDue": "02/27/2026",
+      "dueDate": "02/27/2026",
+      "earnedPoints": 0,
+      "totalPoints": 10,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-02-28T00:41:57.703Z"
+    },
+    "1583426:43424:1396": {
+      "classId": "43424",
+      "assignmentId": "1583426",
+      "studentId": "1396",
+      "className": "BIOLOGY            2",
+      "teacher": "Denise Condo",
+      "period": "2",
+      "currentGrade": 79,
+      "assignmentName": "Meiosis Microslide Lab",
+      "dateDue": "02/27/2026",
+      "dueDate": "02/27/2026",
+      "earnedPoints": 0,
+      "totalPoints": 10,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-02-28T00:41:57.816Z"
+    },
+    "1583414:43424:1396": {
+      "classId": "43424",
+      "assignmentId": "1583414",
+      "studentId": "1396",
+      "className": "BIOLOGY            2",
+      "teacher": "Denise Condo",
+      "period": "2",
+      "currentGrade": 79,
+      "assignmentName": "Notes Meiosis",
+      "dateDue": "02/27/2026",
+      "dueDate": "02/27/2026",
+      "earnedPoints": 16,
+      "totalPoints": 20,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-02-28T00:41:58.116Z"
+    },
+    "1582909:45003:1396": {
+      "classId": "45003",
+      "assignmentId": "1582909",
+      "studentId": "1396",
+      "className": "FOOD CHALLENGES",
+      "teacher": "Misty Finnegan",
+      "period": "3",
+      "currentGrade": 51,
+      "assignmentName": "Ticket In-The Core Four",
+      "dateDue": "02/25/2026",
+      "dueDate": "02/25/2026",
+      "earnedPoints": 5,
+      "totalPoints": 5,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-02-28T00:42:07.527Z"
+    },
+    "1581931:45003:1396": {
+      "classId": "45003",
+      "assignmentId": "1581931",
+      "studentId": "1396",
+      "className": "FOOD CHALLENGES",
+      "teacher": "Misty Finnegan",
+      "period": "3",
+      "currentGrade": 51,
+      "assignmentName": "Ticket In- Food Safety",
+      "dateDue": "02/20/2026",
+      "dueDate": "02/20/2026",
+      "earnedPoints": 5,
+      "totalPoints": 5,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-02-28T00:42:07.608Z"
+    },
+    "1584345:43341:1396": {
+      "classId": "43341",
+      "assignmentId": "1584345",
+      "studentId": "1396",
+      "className": "ENG/DESIGN/ARCH",
+      "teacher": "Todd Bennett",
+      "period": "4",
+      "currentGrade": 87,
+      "assignmentName": "Do you want to present today for 10 Bonus Points?",
+      "dateDue": "02/27/2026",
+      "dueDate": "02/27/2026",
+      "earnedPoints": 5,
+      "totalPoints": 5,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-02-28T00:42:14.736Z"
+    },
+    "1584351:43341:1396": {
+      "classId": "43341",
+      "assignmentId": "1584351",
+      "studentId": "1396",
+      "className": "ENG/DESIGN/ARCH",
+      "teacher": "Todd Bennett",
+      "period": "4",
+      "currentGrade": 87,
+      "assignmentName": "Week 6 Participation",
+      "dateDue": "02/27/2026",
+      "dueDate": "02/27/2026",
+      "earnedPoints": 25,
+      "totalPoints": 25,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-02-28T00:42:24.194Z"
+    },
+    "1584248:44979:1396": {
+      "classId": "44979",
+      "assignmentId": "1584248",
+      "studentId": "1396",
+      "className": "GREEK MYTHOLOGY",
+      "teacher": "Alex Ray",
+      "period": "5",
+      "currentGrade": 87,
+      "assignmentName": "Poseidon Trading Card",
+      "dateDue": "02/23/2026",
+      "dueDate": "02/23/2026",
+      "earnedPoints": 25,
+      "totalPoints": 25,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-02-28T00:42:24.291Z"
+    },
+    "1584117:44615:1396": {
+      "classId": "44615",
+      "assignmentId": "1584117",
+      "studentId": "1396",
+      "className": "SOCIOLOGY",
+      "teacher": "Heather Eckels",
+      "period": "8",
+      "currentGrade": 95,
+      "assignmentName": "My Agents of Socialization",
+      "dateDue": "02/23/2026",
+      "dueDate": "02/23/2026",
+      "earnedPoints": 32,
+      "totalPoints": 35,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-02-28T00:42:31.402Z"
     }
   }
 }
