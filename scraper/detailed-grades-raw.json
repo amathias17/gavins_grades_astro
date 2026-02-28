@@ -250,10 +250,10 @@
     "assignmentName": "Meiosis Lab - Microviewer",
     "dateDue": "02/27/2026",
     "dueDate": "02/27/2026",
-    "earnedPoints": 0,
-    "totalPoints": 30,
+    "earnedPoints": 16,
+    "totalPoints": 20,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "43424",
@@ -1258,10 +1258,10 @@
     "assignmentName": "The Chameleon Career Project",
     "dateDue": "02/27/2026",
     "dueDate": "02/27/2026",
-    "earnedPoints": 0,
+    "earnedPoints": 16,
     "totalPoints": 20,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "44615",
