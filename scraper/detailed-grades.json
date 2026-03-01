@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-02-28T12:09:49.658Z",
+    "scrapedAt": "2026-03-01T00:53:48.060Z",
     "totalClasses": 9,
-    "totalAssignments": 93
+    "totalAssignments": 94
   },
   "classes": [
     {
@@ -353,7 +353,7 @@
       "className": "ENG/DESIGN/ARCH",
       "teacher": "Todd Bennett",
       "period": "4",
-      "currentGrade": 87,
+      "currentGrade": 84,
       "assignments": [
         {
           "name": "Do you want to present today for 10 Bonus Points?",
@@ -368,6 +368,14 @@
           "dueDate": "02/27/2026",
           "earnedPoints": 25,
           "totalPoints": 25,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Housing Style Slideshows",
+          "dueDate": "02/27/2026",
+          "earnedPoints": 38,
+          "totalPoints": 50,
           "weight": 1,
           "graded": true
         },
@@ -709,11 +717,11 @@
         },
         {
           "name": "Socialization Scavenger Hunt",
-          "dueDate": "02/27/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
+          "dueDate": "02/26/2026",
+          "earnedPoints": 38,
+          "totalPoints": 50,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Young Woman and the Sea",
