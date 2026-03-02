@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-01T12:09:57.651Z",
+    "scrapedAt": "2026-03-02T00:47:36.674Z",
     "totalClasses": 9,
-    "totalAssignments": 94
+    "totalAssignments": 97
   },
   "classes": [
     {
@@ -499,6 +499,30 @@
       "period": "6",
       "currentGrade": 98,
       "assignments": [
+        {
+          "name": "WWII Video Guide",
+          "dueDate": "03/01/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "America WWII Gallery WalK",
+          "dueDate": "03/01/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Pearl Harbor Newspaper",
+          "dueDate": "03/01/2026",
+          "earnedPoints": 0,
+          "totalPoints": 30,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Causes to WWII Vocab",
           "dueDate": "02/20/2026",

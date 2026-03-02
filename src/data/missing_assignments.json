@@ -1,7 +1,24 @@
 {
   "metadata": {
-    "last_updated": "03/01/2026, 07:09 AM",
-    "count": 0
+    "last_updated": "03/01/2026, 07:47 PM",
+    "count": 2
   },
-  "missing_assignments": []
+  "missing_assignments": [
+    {
+      "due_date": "03/01/2026",
+      "assignment_name": "WWII Video Guide",
+      "class_name": "AMER STUDIES",
+      "teacher": "Brock Seese",
+      "category": "Class Work",
+      "max_points": "20"
+    },
+    {
+      "due_date": "03/01/2026",
+      "assignment_name": "America WWII Gallery WalK",
+      "class_name": "AMER STUDIES",
+      "teacher": "Brock Seese",
+      "category": "Participation",
+      "max_points": "30"
+    }
+  ]
 }
