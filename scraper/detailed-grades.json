@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-02T12:14:44.109Z",
+    "scrapedAt": "2026-03-03T00:48:41.567Z",
     "totalClasses": 9,
     "totalAssignments": 97
   },
@@ -139,6 +139,14 @@
       "period": "2",
       "currentGrade": 79,
       "assignments": [
+        {
+          "name": "Cell Division -mitosis/Meiosis",
+          "dueDate": "03/02/2026",
+          "earnedPoints": 0,
+          "totalPoints": 25,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Meiosis Microslide Lab",
           "dueDate": "02/27/2026",
@@ -501,9 +509,9 @@
       "assignments": [
         {
           "name": "WWII Video Guide",
-          "dueDate": "03/01/2026",
+          "dueDate": "03/02/2026",
           "earnedPoints": 0,
-          "totalPoints": 20,
+          "totalPoints": 25,
           "weight": 1,
           "graded": false
         },
@@ -519,7 +527,7 @@
           "name": "Pearl Harbor Newspaper",
           "dueDate": "03/01/2026",
           "earnedPoints": 0,
-          "totalPoints": 30,
+          "totalPoints": 20,
           "weight": 1,
           "graded": false
         },
@@ -609,7 +617,7 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 88,
+      "currentGrade": 83,
       "assignments": [
         {
           "name": "Finding Hypotenuse",
@@ -721,21 +729,13 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 95,
+      "currentGrade": 96,
       "assignments": [
         {
           "name": "My Agents of Socialization",
           "dueDate": "02/23/2026",
           "earnedPoints": 32,
           "totalPoints": 35,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "The Chameleon Career Project",
-          "dueDate": "02/27/2026",
-          "earnedPoints": 16,
-          "totalPoints": 20,
           "weight": 1,
           "graded": true
         },

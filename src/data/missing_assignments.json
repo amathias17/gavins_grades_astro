@@ -1,9 +1,17 @@
 {
   "metadata": {
-    "last_updated": "03/02/2026, 07:14 AM",
-    "count": 2
+    "last_updated": "03/02/2026, 07:48 PM",
+    "count": 4
   },
   "missing_assignments": [
+    {
+      "due_date": "03/02/2026",
+      "assignment_name": "Cell Division -mitosis/Meiosis",
+      "class_name": "BIOLOGY            2",
+      "teacher": "Denise Condo",
+      "category": "Quiz",
+      "max_points": "25"
+    },
     {
       "due_date": "03/01/2026",
       "assignment_name": "WWII Video Guide",
@@ -19,6 +27,14 @@
       "teacher": "Brock Seese",
       "category": "Participation",
       "max_points": "30"
+    },
+    {
+      "due_date": "02/26/2026",
+      "assignment_name": "Finding Hypotenuse",
+      "class_name": "INTERMEDIATE GEOMETRY",
+      "teacher": "Caleb Marasco",
+      "category": "Class Work",
+      "max_points": "10"
     }
   ]
 }
