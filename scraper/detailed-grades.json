@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-03T12:14:19.681Z",
+    "scrapedAt": "2026-03-04T00:46:37.601Z",
     "totalClasses": 9,
-    "totalAssignments": 97
+    "totalAssignments": 100
   },
   "classes": [
     {
@@ -65,8 +65,16 @@
       "className": "ENGLISH 10",
       "teacher": "Megan Leone",
       "period": "1",
-      "currentGrade": 85,
+      "currentGrade": 86,
       "assignments": [
+        {
+          "name": "Speak MP2 Quiz",
+          "dueDate": "02/27/2026",
+          "earnedPoints": 21,
+          "totalPoints": 23,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "IXL Diagnostic Day 2",
           "dueDate": "02/17/2026",
@@ -108,7 +116,7 @@
           "graded": true
         },
         {
-          "name": "Comma Quiz & Comma Rules Slides",
+          "name": "Comma Packet",
           "dueDate": "02/09/2026",
           "earnedPoints": 10,
           "totalPoints": 13,
@@ -140,12 +148,20 @@
       "currentGrade": 79,
       "assignments": [
         {
-          "name": "Cell Division -mitosis/Meiosis",
-          "dueDate": "03/02/2026",
-          "earnedPoints": 0,
-          "totalPoints": 25,
+          "name": "Fid day meet 3/3",
+          "dueDate": "02/27/2026",
+          "earnedPoints": 21,
+          "totalPoints": 23,
           "weight": 1,
-          "graded": false
+          "graded": true
+        },
+        {
+          "name": "Cell Division -mitosis/Meiosis",
+          "dueDate": "03/03/2026",
+          "earnedPoints": 1,
+          "totalPoints": 0,
+          "weight": 1,
+          "graded": true
         },
         {
           "name": "Meiosis Microslide Lab",
@@ -283,6 +299,14 @@
       "period": "3",
       "currentGrade": 51,
       "assignments": [
+        {
+          "name": "Storage Solutions WS",
+          "dueDate": "02/26/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Safely Separate Lab",
           "dueDate": "02/26/2026",
@@ -509,9 +533,9 @@
       "assignments": [
         {
           "name": "WWII Video Guide",
-          "dueDate": "03/02/2026",
+          "dueDate": "03/01/2026",
           "earnedPoints": 0,
-          "totalPoints": 25,
+          "totalPoints": 20,
           "weight": 1,
           "graded": false
         },
