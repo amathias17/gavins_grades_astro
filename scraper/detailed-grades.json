@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-04T12:13:53.332Z",
+    "scrapedAt": "2026-03-05T00:48:15.836Z",
     "totalClasses": 9,
-    "totalAssignments": 100
+    "totalAssignments": 104
   },
   "classes": [
     {
@@ -145,8 +145,16 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 79,
+      "currentGrade": 82,
       "assignments": [
+        {
+          "name": "HeLa Cancer Cells",
+          "dueDate": "03/04/2026",
+          "earnedPoints": 0,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Fid day meet 3/3",
           "dueDate": "02/27/2026",
@@ -154,6 +162,14 @@
           "totalPoints": 23,
           "weight": 1,
           "graded": true
+        },
+        {
+          "name": "Cell Cycle and Cancer",
+          "dueDate": "03/04/2026",
+          "earnedPoints": 0,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": false
         },
         {
           "name": "Cell Division -mitosis/Meiosis",
@@ -301,11 +317,11 @@
       "assignments": [
         {
           "name": "Storage Solutions WS",
-          "dueDate": "02/26/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
+          "dueDate": "03/03/2026",
+          "earnedPoints": 9,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Safely Separate Lab",
@@ -387,6 +403,14 @@
       "period": "4",
       "currentGrade": 84,
       "assignments": [
+        {
+          "name": "Architecture & Design Vocabulary Quiz #1",
+          "dueDate": "03/04/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Do you want to present today for 10 Bonus Points?",
           "dueDate": "02/27/2026",
@@ -755,6 +779,14 @@
       "period": "8",
       "currentGrade": 96,
       "assignments": [
+        {
+          "name": "Edpuzzle - Social Groups and I",
+          "dueDate": "03/01/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "My Agents of Socialization",
           "dueDate": "02/23/2026",
