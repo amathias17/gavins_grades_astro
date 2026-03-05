@@ -728,12 +728,12 @@
     "period": "4",
     "currentGrade": 84,
     "assignmentName": "Architecture & Design Vocabulary Quiz #1",
-    "dateDue": "03/04/2026",
-    "dueDate": "03/04/2026",
-    "earnedPoints": 0,
-    "totalPoints": 20,
+    "dateDue": "03/03/2026",
+    "dueDate": "03/03/2026",
+    "earnedPoints": 9,
+    "totalPoints": 10,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "43341",
@@ -1035,7 +1035,7 @@
     "dateDue": "03/01/2026",
     "dueDate": "03/01/2026",
     "earnedPoints": 0,
-    "totalPoints": 20,
+    "totalPoints": 30,
     "weight": 1,
     "graded": false
   },

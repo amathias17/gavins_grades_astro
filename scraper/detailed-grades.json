@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-05T00:48:15.836Z",
+    "scrapedAt": "2026-03-05T12:14:39.866Z",
     "totalClasses": 9,
     "totalAssignments": 104
   },
@@ -405,11 +405,11 @@
       "assignments": [
         {
           "name": "Architecture & Design Vocabulary Quiz #1",
-          "dueDate": "03/04/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
+          "dueDate": "03/03/2026",
+          "earnedPoints": 9,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Do you want to present today for 10 Bonus Points?",
@@ -575,7 +575,7 @@
           "name": "Pearl Harbor Newspaper",
           "dueDate": "03/01/2026",
           "earnedPoints": 0,
-          "totalPoints": 20,
+          "totalPoints": 30,
           "weight": 1,
           "graded": false
         },
