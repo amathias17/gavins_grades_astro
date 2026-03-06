@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-05T12:14:39.866Z",
+    "scrapedAt": "2026-03-06T12:14:00.071Z",
     "totalClasses": 9,
-    "totalAssignments": 104
+    "totalAssignments": 111
   },
   "classes": [
     {
@@ -65,8 +65,24 @@
       "className": "ENGLISH 10",
       "teacher": "Megan Leone",
       "period": "1",
-      "currentGrade": 86,
+      "currentGrade": 82,
       "assignments": [
+        {
+          "name": "Packet 2",
+          "dueDate": "03/05/2026",
+          "earnedPoints": 11,
+          "totalPoints": 22,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "MP 2 Constructed Response",
+          "dueDate": "03/05/2026",
+          "earnedPoints": 11,
+          "totalPoints": 22,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Speak MP2 Quiz",
           "dueDate": "02/27/2026",
@@ -147,6 +163,14 @@
       "period": "2",
       "currentGrade": 82,
       "assignments": [
+        {
+          "name": "Cancer - Cell cycle scenario Q",
+          "dueDate": "03/05/2026",
+          "earnedPoints": 0,
+          "totalPoints": 50,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "HeLa Cancer Cells",
           "dueDate": "03/04/2026",
@@ -401,10 +425,18 @@
       "className": "ENG/DESIGN/ARCH",
       "teacher": "Todd Bennett",
       "period": "4",
-      "currentGrade": 84,
+      "currentGrade": 79,
       "assignments": [
         {
           "name": "Architecture & Design Vocabulary Quiz #1",
+          "dueDate": "03/03/2026",
+          "earnedPoints": 9,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Housing Style & LEGO Design Reflection",
           "dueDate": "03/03/2026",
           "earnedPoints": 9,
           "totalPoints": 10,
@@ -553,8 +585,16 @@
       "className": "AMER STUDIES",
       "teacher": "Brock Seese",
       "period": "6",
-      "currentGrade": 98,
+      "currentGrade": 96,
       "assignments": [
+        {
+          "name": "Causes to WWII Test",
+          "dueDate": "03/05/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "WWII Video Guide",
           "dueDate": "03/01/2026",
@@ -665,8 +705,24 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 83,
+      "currentGrade": 77,
       "assignments": [
+        {
+          "name": "Monday(3/2/26): Pythagorean Theorem Day 2",
+          "dueDate": "03/03/2026",
+          "earnedPoints": 0,
+          "totalPoints": 18,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Tuesday(3/3/26): FID ASSIGNMENT",
+          "dueDate": "03/03/2026",
+          "earnedPoints": 0,
+          "totalPoints": 18,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Finding Hypotenuse",
           "dueDate": "02/26/2026",
@@ -684,14 +740,6 @@
           "graded": true
         },
         {
-          "name": "Isos and Equi Scavenger Hunt",
-          "dueDate": "02/20/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
-          "weight": 1,
-          "graded": true
-        },
-        {
           "name": "Isos and Equi Triangle WS",
           "dueDate": "02/20/2026",
           "earnedPoints": 10,
@@ -701,6 +749,14 @@
         },
         {
           "name": "Isos & Equi Triangles",
+          "dueDate": "02/20/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Isos and Equi Scavenger Hunt",
           "dueDate": "02/20/2026",
           "earnedPoints": 10,
           "totalPoints": 10,
@@ -781,11 +837,11 @@
       "assignments": [
         {
           "name": "Edpuzzle - Social Groups and I",
-          "dueDate": "03/01/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
+          "dueDate": "03/03/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "My Agents of Socialization",

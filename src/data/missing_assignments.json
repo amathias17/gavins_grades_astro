@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "03/05/2026, 07:14 AM",
-    "count": 5
+    "last_updated": "03/06/2026, 07:14 AM",
+    "count": 7
   },
   "missing_assignments": [
     {
@@ -14,12 +14,28 @@
       "absent": "Absent"
     },
     {
+      "due_date": "03/03/2026",
+      "assignment_name": "Monday(3/2/26): Pythagorean Theorem Day 2",
+      "class_name": "INTERMEDIATE GEOMETRY",
+      "teacher": "Caleb Marasco",
+      "category": "Class Work",
+      "max_points": "18"
+    },
+    {
       "due_date": "03/02/2026",
       "assignment_name": "Cell Division -mitosis/Meiosis",
       "class_name": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "category": "Quiz",
       "max_points": "25"
+    },
+    {
+      "due_date": "03/02/2026",
+      "assignment_name": "Housing Style & LEGO Design Reflection",
+      "class_name": "ENG/DESIGN/ARCH",
+      "teacher": "Todd Bennett",
+      "category": "Class Work",
+      "max_points": "10"
     },
     {
       "due_date": "03/01/2026",
