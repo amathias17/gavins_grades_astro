@@ -312,12 +312,12 @@
     "period": "2",
     "currentGrade": 82,
     "assignmentName": "Cancer - Cell cycle scenario Q",
-    "dateDue": "03/06/2026",
-    "dueDate": "03/06/2026",
-    "earnedPoints": 0,
-    "totalPoints": 30,
+    "dateDue": "03/05/2026",
+    "dueDate": "03/05/2026",
+    "earnedPoints": 5,
+    "totalPoints": 5,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "43424",
@@ -328,12 +328,12 @@
     "period": "2",
     "currentGrade": 82,
     "assignmentName": "HeLa Cancer Cells",
-    "dateDue": "03/04/2026",
-    "dueDate": "03/04/2026",
-    "earnedPoints": 0,
+    "dateDue": "03/05/2026",
+    "dueDate": "03/05/2026",
+    "earnedPoints": 5,
     "totalPoints": 5,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "43424",
@@ -1176,12 +1176,12 @@
     "period": "6",
     "currentGrade": 96,
     "assignmentName": "America WWII Gallery WalK",
-    "dateDue": "03/01/2026",
-    "dueDate": "03/01/2026",
-    "earnedPoints": 0,
-    "totalPoints": 30,
+    "dateDue": "03/02/2026",
+    "dueDate": "03/02/2026",
+    "earnedPoints": 13,
+    "totalPoints": 16,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "43049",
@@ -1195,7 +1195,7 @@
     "dateDue": "03/01/2026",
     "dueDate": "03/01/2026",
     "earnedPoints": 0,
-    "totalPoints": 30,
+    "totalPoints": 20,
     "weight": 1,
     "graded": false
   },
