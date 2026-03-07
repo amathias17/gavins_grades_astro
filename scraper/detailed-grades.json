@@ -1,16 +1,24 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-06T12:14:00.071Z",
+    "scrapedAt": "2026-03-07T00:45:50.898Z",
     "totalClasses": 9,
-    "totalAssignments": 111
+    "totalAssignments": 117
   },
   "classes": [
     {
       "className": "SOPHOMORE SEMINAR",
       "teacher": "Victoria Good",
       "period": "0",
-      "currentGrade": 74,
+      "currentGrade": 67,
       "assignments": [
+        {
+          "name": "2/2-2/6 Part.",
+          "dueDate": "03/06/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "2/23-2/27",
           "dueDate": "02/27/2026",
@@ -65,7 +73,7 @@
       "className": "ENGLISH 10",
       "teacher": "Megan Leone",
       "period": "1",
-      "currentGrade": 82,
+      "currentGrade": 63,
       "assignments": [
         {
           "name": "Packet 2",
@@ -164,10 +172,18 @@
       "currentGrade": 82,
       "assignments": [
         {
-          "name": "Cancer - Cell cycle scenario Q",
-          "dueDate": "03/05/2026",
+          "name": "Cancer Presentation/Project",
+          "dueDate": "03/06/2026",
           "earnedPoints": 0,
-          "totalPoints": 50,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Cancer - Cell cycle scenario Q",
+          "dueDate": "03/06/2026",
+          "earnedPoints": 0,
+          "totalPoints": 30,
           "weight": 1,
           "graded": false
         },
@@ -425,10 +441,18 @@
       "className": "ENG/DESIGN/ARCH",
       "teacher": "Todd Bennett",
       "period": "4",
-      "currentGrade": 79,
+      "currentGrade": 71,
       "assignments": [
         {
           "name": "Architecture & Design Vocabulary Quiz #1",
+          "dueDate": "03/03/2026",
+          "earnedPoints": 9,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Snow Day Engineering Mini-Challenge",
           "dueDate": "03/03/2026",
           "earnedPoints": 9,
           "totalPoints": 10,
@@ -524,6 +548,22 @@
       "currentGrade": 87,
       "assignments": [
         {
+          "name": "Hades Trading Card",
+          "dueDate": "03/04/2026",
+          "earnedPoints": 0,
+          "totalPoints": 35,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Map of the Underworld",
+          "dueDate": "03/04/2026",
+          "earnedPoints": 0,
+          "totalPoints": 35,
+          "weight": 1,
+          "graded": false
+        },
+        {
           "name": "Poseidon Trading Card",
           "dueDate": "02/23/2026",
           "earnedPoints": 25,
@@ -597,17 +637,17 @@
         },
         {
           "name": "WWII Video Guide",
-          "dueDate": "03/01/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
+          "dueDate": "03/02/2026",
+          "earnedPoints": 13,
+          "totalPoints": 16,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "America WWII Gallery WalK",
           "dueDate": "03/01/2026",
           "earnedPoints": 0,
-          "totalPoints": 20,
+          "totalPoints": 30,
           "weight": 1,
           "graded": false
         },
@@ -708,6 +748,14 @@
       "currentGrade": 77,
       "assignments": [
         {
+          "name": "Word Problem Worksheet",
+          "dueDate": "03/01/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": false
+        },
+        {
           "name": "Monday(3/2/26): Pythagorean Theorem Day 2",
           "dueDate": "03/03/2026",
           "earnedPoints": 0,
@@ -740,6 +788,14 @@
           "graded": true
         },
         {
+          "name": "Isos and Equi Scavenger Hunt",
+          "dueDate": "02/20/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
           "name": "Isos and Equi Triangle WS",
           "dueDate": "02/20/2026",
           "earnedPoints": 10,
@@ -749,14 +805,6 @@
         },
         {
           "name": "Isos & Equi Triangles",
-          "dueDate": "02/20/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Isos and Equi Scavenger Hunt",
           "dueDate": "02/20/2026",
           "earnedPoints": 10,
           "totalPoints": 10,

@@ -1,9 +1,17 @@
 {
   "metadata": {
-    "last_updated": "03/06/2026, 07:14 AM",
-    "count": 7
+    "last_updated": "03/06/2026, 07:45 PM",
+    "count": 9
   },
   "missing_assignments": [
+    {
+      "due_date": "03/05/2026",
+      "assignment_name": "MP 2 Constructed Response",
+      "class_name": "ENGLISH 10",
+      "teacher": "Megan Leone",
+      "category": "Writing",
+      "max_points": "50"
+    },
     {
       "due_date": "03/04/2026",
       "assignment_name": "HeLa Cancer Cells",
@@ -11,6 +19,15 @@
       "teacher": "Denise Condo",
       "category": "Class Work",
       "max_points": "5",
+      "absent": "Absent"
+    },
+    {
+      "due_date": "03/04/2026",
+      "assignment_name": "Architecture & Design Vocabulary Quiz #1",
+      "class_name": "ENG/DESIGN/ARCH",
+      "teacher": "Todd Bennett",
+      "category": "Class Work",
+      "max_points": "20",
       "absent": "Absent"
     },
     {
