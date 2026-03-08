@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-08T00:48:51.425Z",
+    "scrapedAt": "2026-03-08T12:10:55.484Z",
     "totalClasses": 9,
-    "totalAssignments": 117
+    "totalAssignments": 118
   },
   "classes": [
     {
@@ -557,11 +557,11 @@
         },
         {
           "name": "Map of the Underworld",
-          "dueDate": "03/04/2026",
-          "earnedPoints": 0,
-          "totalPoints": 35,
+          "dueDate": "03/02/2026",
+          "earnedPoints": 13,
+          "totalPoints": 16,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Poseidon Trading Card",
@@ -749,11 +749,11 @@
       "assignments": [
         {
           "name": "Word Problem Worksheet",
-          "dueDate": "03/06/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
+          "dueDate": "03/02/2026",
+          "earnedPoints": 13,
+          "totalPoints": 16,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Monday(3/2/26): Pythagorean Theorem Day 2",
@@ -883,6 +883,14 @@
       "period": "8",
       "currentGrade": 96,
       "assignments": [
+        {
+          "name": "Truman Show Writing Assignment",
+          "dueDate": "03/06/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Edpuzzle - Social Groups and I",
           "dueDate": "03/03/2026",
