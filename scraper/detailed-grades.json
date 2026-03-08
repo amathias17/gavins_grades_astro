@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-07T12:10:30.139Z",
+    "scrapedAt": "2026-03-08T00:48:51.425Z",
     "totalClasses": 9,
     "totalAssignments": 117
   },
@@ -205,11 +205,11 @@
         },
         {
           "name": "Cell Cycle and Cancer",
-          "dueDate": "03/04/2026",
-          "earnedPoints": 0,
-          "totalPoints": 5,
+          "dueDate": "03/03/2026",
+          "earnedPoints": 9,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Cell Division -mitosis/Meiosis",
@@ -549,11 +549,11 @@
       "assignments": [
         {
           "name": "Hades Trading Card",
-          "dueDate": "03/04/2026",
-          "earnedPoints": 0,
-          "totalPoints": 35,
+          "dueDate": "03/03/2026",
+          "earnedPoints": 9,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Map of the Underworld",
@@ -653,11 +653,11 @@
         },
         {
           "name": "Pearl Harbor Newspaper",
-          "dueDate": "03/01/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
+          "dueDate": "03/02/2026",
+          "earnedPoints": 13,
+          "totalPoints": 16,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Causes to WWII Vocab",
@@ -749,7 +749,7 @@
       "assignments": [
         {
           "name": "Word Problem Worksheet",
-          "dueDate": "03/01/2026",
+          "dueDate": "03/06/2026",
           "earnedPoints": 0,
           "totalPoints": 20,
           "weight": 1,

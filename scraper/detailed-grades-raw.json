@@ -360,12 +360,12 @@
     "period": "2",
     "currentGrade": 82,
     "assignmentName": "Cell Cycle and Cancer",
-    "dateDue": "03/04/2026",
-    "dueDate": "03/04/2026",
-    "earnedPoints": 0,
-    "totalPoints": 5,
+    "dateDue": "03/03/2026",
+    "dueDate": "03/03/2026",
+    "earnedPoints": 9,
+    "totalPoints": 10,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "43424",
@@ -1000,12 +1000,12 @@
     "period": "5",
     "currentGrade": 87,
     "assignmentName": "Hades Trading Card",
-    "dateDue": "03/04/2026",
-    "dueDate": "03/04/2026",
-    "earnedPoints": 0,
-    "totalPoints": 35,
+    "dateDue": "03/03/2026",
+    "dueDate": "03/03/2026",
+    "earnedPoints": 9,
+    "totalPoints": 10,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "44979",
@@ -1192,12 +1192,12 @@
     "period": "6",
     "currentGrade": 96,
     "assignmentName": "Pearl Harbor Newspaper",
-    "dateDue": "03/01/2026",
-    "dueDate": "03/01/2026",
-    "earnedPoints": 0,
-    "totalPoints": 20,
+    "dateDue": "03/02/2026",
+    "dueDate": "03/02/2026",
+    "earnedPoints": 13,
+    "totalPoints": 16,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "43049",
@@ -1368,8 +1368,8 @@
     "period": "7",
     "currentGrade": 77,
     "assignmentName": "Word Problem Worksheet",
-    "dateDue": "03/01/2026",
-    "dueDate": "03/01/2026",
+    "dateDue": "03/06/2026",
+    "dueDate": "03/06/2026",
     "earnedPoints": 0,
     "totalPoints": 20,
     "weight": 1,
