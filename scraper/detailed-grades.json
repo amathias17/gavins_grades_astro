@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-09T00:48:02.200Z",
+    "scrapedAt": "2026-03-09T12:14:48.319Z",
     "totalClasses": 9,
-    "totalAssignments": 118
+    "totalAssignments": 119
   },
   "classes": [
     {
@@ -627,6 +627,14 @@
       "period": "6",
       "currentGrade": 96,
       "assignments": [
+        {
+          "name": "World War II Vocab",
+          "dueDate": "03/09/2026",
+          "earnedPoints": 0,
+          "totalPoints": 14,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Causes to WWII Test",
           "dueDate": "03/05/2026",
