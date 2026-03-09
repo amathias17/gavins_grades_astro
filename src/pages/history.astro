@@ -1,0 +1,338 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import gradesData from "../data/grades.json";
+
+// ── Types ──────────────────────────────────────────────────────────────────
+interface ClassEntry {
+  class_name: string;
+  teacher: string;
+  period: string;
+  current_grade: number;
+  letter_grade: string;
+  q3_grade: number | null;
+}
+
+// ── Raw data ───────────────────────────────────────────────────────────────
+const currentClasses = (gradesData.classes ?? []) as ClassEntry[];
+const gradeHistory = (gradesData.grade_history ?? {}) as Record<
+  string,
+  Record<string, number>
+>;
+
+// ── Helpers ────────────────────────────────────────────────────────────────
+const parseDate = (d: string) => {
+  const p = Date.parse(d);
+  return Number.isNaN(p) ? 0 : p;
+};
+
+function getGradeColor(grade: number): string {
+  if (grade >= 90) return "#00ff00";
+  if (grade >= 80) return "#00ffff";
+  if (grade >= 70) return "#ffff00";
+  if (grade >= 60) return "#ff8800";
+  return "#E60A18";
+}
+
+/**
+ * Detect the Q3 start for a class from its grade history.
+ * Strategy: find the first non-zero value that appears after a drop to 0
+ * (quarter reset). If no such transition exists, use the first date.
+ * Returns the start date string or null if no history.
+ */
+function detectQ3Start(
+  history: Record<string, number>
+): string | null {
+  const entries = Object.entries(history).sort(
+    ([a], [b]) => parseDate(a) - parseDate(b)
+  );
+  if (entries.length === 0) return null;
+
+  // Look for a 0-transition (grade drops to 0 indicating quarter reset)
+  for (let i = 1; i < entries.length; i++) {
+    const [, prevVal] = entries[i - 1];
+    const [, curVal] = entries[i];
+    if (prevVal > 10 && curVal === 0) {
+      // Find first non-zero after this point
+      for (let j = i + 1; j < entries.length; j++) {
+        if (entries[j][1] > 0) {
+          return entries[j][0];
+        }
+      }
+      // If everything after is 0 or missing, use this point
+      return entries[i][0];
+    }
+  }
+
+  // No transition — use first available date
+  return entries[0][0];
+}
+
+// ── Build per-class data ───────────────────────────────────────────────────
+interface ClassHistoryData {
+  class_name: string;
+  teacher: string;
+  period: string;
+  currentGrade: number;
+  letterGrade: string;
+  q3StartGrade: number;
+  q3StartDate: string;
+  delta: number;
+  series: { date: string; value: number }[];
+}
+
+const classHistories: ClassHistoryData[] = currentClasses
+  .map((cls) => {
+    const history = gradeHistory[cls.class_name] ?? {};
+    const q3StartDate = detectQ3Start(history);
+    if (!q3StartDate) return null;
+
+    const allEntries = Object.entries(history).sort(
+      ([a], [b]) => parseDate(a) - parseDate(b)
+    );
+    const q3StartTs = parseDate(q3StartDate);
+
+    // Build series from Q3 start onward, skipping 0-valued reset gaps
+    const series = allEntries
+      .filter(([date, val]) => parseDate(date) >= q3StartTs && val > 0)
+      .map(([date, value]) => ({ date, value }));
+
+    if (series.length === 0) return null;
+
+    const q3StartGrade = series[0].value;
+    const delta = cls.current_grade - q3StartGrade;
+
+    return {
+      class_name: cls.class_name,
+      teacher: cls.teacher,
+      period: cls.period,
+      currentGrade: cls.current_grade,
+      letterGrade: cls.letter_grade,
+      q3StartGrade,
+      q3StartDate: series[0].date,
+      delta,
+      series,
+    } satisfies ClassHistoryData;
+  })
+  .filter((c): c is ClassHistoryData => c !== null);
+
+// ── SVG Sparkline generator ─────────────────────────────────────────────────
+interface SparklineResult {
+  path: string;
+  points: { x: number; y: number; value: number; date: string }[];
+  yMin: number;
+  yMax: number;
+}
+
+function buildSparkline(
+  series: { date: string; value: number }[],
+  width = 280,
+  height = 70,
+  padX = 10,
+  padY = 10
+): SparklineResult {
+  const values = series.map((s) => s.value);
+  const rawMin = Math.min(...values);
+  const rawMax = Math.max(...values);
+  const range = rawMax - rawMin;
+
+  // Expand range so flat lines still show nicely
+  const yMin = range < 2 ? Math.max(0, rawMin - 5) : rawMin - 2;
+  const yMax = range < 2 ? Math.min(100, rawMax + 5) : rawMax + 2;
+  const yRange = yMax - yMin || 1;
+
+  const plotW = width - 2 * padX;
+  const plotH = height - 2 * padY;
+
+  const points = series.map((s, i) => {
+    const progress = series.length > 1 ? i / (series.length - 1) : 0;
+    const x = padX + progress * plotW;
+    const y = padY + (1 - (s.value - yMin) / yRange) * plotH;
+    return { x, y, value: s.value, date: s.date };
+  });
+
+  const path = points
+    .map((p, i) => `${i === 0 ? "M" : "L"}${p.x.toFixed(1)} ${p.y.toFixed(1)}`)
+    .join(" ");
+
+  return { path, points, yMin, yMax };
+}
+
+// ── Summary stats ──────────────────────────────────────────────────────────
+const mostImproved = classHistories.reduce((best, c) =>
+  c.delta > (best?.delta ?? -Infinity) ? c : best
+, classHistories[0]);
+
+const mostDeclined = classHistories.reduce((worst, c) =>
+  c.delta < (worst?.delta ?? Infinity) ? c : worst
+, classHistories[0]);
+
+// Earliest Q3 start and latest date across all classes
+const allQ3Dates = classHistories.map((c) => c.q3StartDate);
+const allLastDates = classHistories.map((c) => c.series[c.series.length - 1]?.date ?? "");
+const q3WindowStart = allQ3Dates.sort((a, b) => parseDate(a) - parseDate(b))[0] ?? "";
+const q3WindowEnd = allLastDates.sort((a, b) => parseDate(b) - parseDate(a))[0] ?? "";
+
+// ── Pre-compute sparklines ─────────────────────────────────────────────────
+const sparklines = classHistories.map((c) => buildSparkline(c.series));
+---
+
+<BaseLayout>
+  <div class="max-w-[1400px] mx-auto">
+    <!-- Back link -->
+    <div class="mb-6">
+      <a
+        href="/"
+        class="inline-flex items-center gap-2 text-[#00ff00] hover:text-[#00cc00] transition-colors text-[0.6em] uppercase border-2 border-[#00ff00] hover:border-[#00cc00] px-4 py-2 bg-[#000]"
+      >
+        <span>BACK TO GRADES</span>
+      </a>
+    </div>
+
+    <!-- Page header -->
+    <div class="shadow-[0_0_0_4px_#000,0_0_0_8px_#fff,8px_8px_0_8px_rgba(255,255,255,0.3)] relative p-6 border-4 border-solid border-white card mb-8">
+      <div class="flex items-center gap-[15px] mb-5 pb-[15px] border-b-[3px] border-b-[#555] border-dashed">
+        <div class="w-12 h-12 flex items-center justify-center text-[1.2em] border-[3px] border-solid border-[#ff00ff] bg-[#000]">
+          GL
+        </div>
+        <div>
+          <h1 class="text-[0.8em] text-[#ff00ff] uppercase mb-2">GRADE.LOG</h1>
+          <p class="text-[0.6em] text-[#aaa]">Q3 GRADE HISTORY — ALL CURRENT CLASSES</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="bg-[#000] p-4 border-[3px] border-solid border-[#555]">
+          <div class="text-[0.5em] text-[#aaa] uppercase mb-2">Most Improved</div>
+          <div class="text-[0.6em] text-white uppercase truncate">{mostImproved?.class_name ?? "--"}</div>
+          <div class="text-[1em] text-[#00ff00] mt-1">
+            {mostImproved && mostImproved.delta >= 0 ? "▲" : "▼"}
+            {mostImproved ? `${mostImproved.delta >= 0 ? "+" : ""}${Math.round(mostImproved.delta)}%` : "--"}
+          </div>
+        </div>
+        <div class="bg-[#000] p-4 border-[3px] border-solid border-[#555]">
+          <div class="text-[0.5em] text-[#aaa] uppercase mb-2">Most Declined</div>
+          <div class="text-[0.6em] text-white uppercase truncate">{mostDeclined?.class_name ?? "--"}</div>
+          <div class="text-[1em] text-[#E60A18] mt-1">
+            {mostDeclined && mostDeclined.delta < 0 ? "▼" : "▲"}
+            {mostDeclined ? `${mostDeclined.delta >= 0 ? "+" : ""}${Math.round(mostDeclined.delta)}%` : "--"}
+          </div>
+        </div>
+        <div class="bg-[#000] p-4 border-[3px] border-solid border-[#555]">
+          <div class="text-[0.5em] text-[#aaa] uppercase mb-2">Q3 Tracking Window</div>
+          <div class="text-[0.6em] text-[#aaa]">{q3WindowStart} → {q3WindowEnd}</div>
+          <div class="text-[0.6em] text-[#00ffff] mt-1">{classHistories.length} classes tracked</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Class cards grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+      {classHistories.map((cls, idx) => {
+        const spark = sparklines[idx];
+        const gradeColor = getGradeColor(cls.currentGrade);
+        const deltaPositive = cls.delta > 0.5;
+        const deltaNegative = cls.delta < -0.5;
+        const deltaColor = deltaPositive ? "#00ff00" : deltaNegative ? "#E60A18" : "#ffff00";
+        const deltaSymbol = deltaPositive ? "▲" : deltaNegative ? "▼" : "●";
+        const deltaLabel = `${cls.delta >= 0 ? "+" : ""}${Math.round(cls.delta)}%`;
+        // Sparkline line color follows overall trend
+        const sparkColor = deltaPositive ? "#00ff00" : deltaNegative ? "#E60A18" : "#00ffff";
+        const firstPoint = spark.points[0];
+        const lastPoint = spark.points[spark.points.length - 1];
+
+        return (
+          <div class="shadow-[0_0_0_4px_#000,0_0_0_8px_#fff,8px_8px_0_8px_rgba(255,255,255,0.3)] relative p-5 border-4 border-solid border-white card">
+            <!-- Class header -->
+            <div class="flex items-start justify-between mb-4 pb-3 border-b-[2px] border-b-[#333] border-dashed">
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-[0.45em] bg-[#000] border border-[#555] text-[#aaa] px-2 py-0.5">P{cls.period}</span>
+                  <h2 class="text-[0.6em] text-white uppercase font-bold truncate">{cls.class_name}</h2>
+                </div>
+                <p class="text-[0.5em] text-[#555] uppercase">{cls.teacher}</p>
+              </div>
+              <!-- Delta badge -->
+              <div
+                class="ml-3 flex-shrink-0 text-center px-3 py-2 border-2"
+                style={`border-color: ${deltaColor}; color: ${deltaColor};`}
+              >
+                <div class="text-[0.9em] leading-none">{deltaSymbol}</div>
+                <div class="text-[0.5em] mt-1 whitespace-nowrap">{deltaLabel}</div>
+              </div>
+            </div>
+
+            <!-- Current grade -->
+            <div class="flex items-center gap-3 mb-4">
+              <div
+                class="text-[1.6em] font-bold leading-none"
+                style={`color: ${gradeColor};`}
+              >
+                {cls.currentGrade}%
+              </div>
+              <div
+                class="text-[0.9em] border-[3px] px-2 py-1"
+                style={`border-color: ${gradeColor}; color: ${gradeColor};`}
+              >
+                {cls.letterGrade}
+              </div>
+            </div>
+
+            <!-- Sparkline -->
+            <div class="bg-[#000] border-[2px] border-[#333] p-2 mb-3">
+              <svg
+                viewBox="0 0 280 70"
+                class="w-full h-[70px]"
+                role="img"
+                aria-label={`Grade trend for ${cls.class_name}`}
+              >
+                <rect width="280" height="70" fill="#000" />
+                <!-- Horizontal guide lines -->
+                <line x1="10" y1="15" x2="270" y2="15" stroke="#1a1a1a" stroke-width="1" />
+                <line x1="10" y1="35" x2="270" y2="35" stroke="#1a1a1a" stroke-width="1" />
+                <line x1="10" y1="55" x2="270" y2="55" stroke="#1a1a1a" stroke-width="1" />
+                <!-- Trend line -->
+                <path
+                  d={spark.path}
+                  stroke={sparkColor}
+                  stroke-width="2"
+                  fill="none"
+                  opacity="0.9"
+                />
+                <!-- Start dot -->
+                {firstPoint && (
+                  <circle cx={firstPoint.x} cy={firstPoint.y} r="4" fill="#555" />
+                )}
+                <!-- End dot -->
+                {lastPoint && (
+                  <circle cx={lastPoint.x} cy={lastPoint.y} r="5" fill={sparkColor} class="end-dot" />
+                )}
+                <!-- Y-axis labels -->
+                <text x="0" y="14" fill="#444" font-size="9" text-anchor="start">{Math.round(spark.yMax)}%</text>
+                <text x="0" y="68" fill="#444" font-size="9" text-anchor="start">{Math.round(spark.yMin)}%</text>
+              </svg>
+            </div>
+
+            <!-- Footer: Q3 start → current -->
+            <div class="flex items-center justify-between text-[0.45em] text-[#555] uppercase">
+              <span>{cls.q3StartDate}: {cls.q3StartGrade}%</span>
+              <span class="text-[#333]">→</span>
+              <span style={`color: ${gradeColor};`}>{cls.series[cls.series.length - 1]?.date ?? ""}: {cls.currentGrade}%</span>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+
+  <style>
+    .end-dot {
+      animation: pulse-end 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-end {
+      0% { r: 4; opacity: 0.7; }
+      50% { r: 7; opacity: 1; }
+      100% { r: 4; opacity: 0.7; }
+    }
+  </style>
+</BaseLayout>

@@ -12,9 +12,62 @@ const parseDate = (value: string): number => {
   return Number.isNaN(parsed) ? 0 : parsed;
 };
 
+/**
+ * Detect Q3 start. Returns { date, hasReset } where hasReset=true means a
+ * quarter-reset (drop to 0) was found. Classes without a reset are "continuous"
+ * and need a fallback floor date.
+ */
+function detectQ3Start(history: Record<string, number>): { date: string; hasReset: boolean } | null {
+  const entries = Object.entries(history).sort(
+    ([a], [b]) => parseDate(a) - parseDate(b)
+  );
+  if (entries.length === 0) return null;
+  for (let i = 1; i < entries.length; i++) {
+    if (entries[i - 1][1] > 10 && entries[i][1] === 0) {
+      for (let j = i + 1; j < entries.length; j++) {
+        if (entries[j][1] > 0) return { date: entries[j][0], hasReset: true };
+      }
+      return { date: entries[i][0], hasReset: true };
+    }
+  }
+  return { date: entries[0][0], hasReset: false };
+}
+
+// Build per-class Q3 start timestamps.
+// Classes with a confirmed reset use their own start.
+// Classes with no reset (continuous data) get the floor from reset-confirmed classes.
+const currentClassNames = new Set((gradesData.classes ?? []).map((c: { class_name: string }) => c.class_name));
+
+const resetStarts: number[] = [];
+const rawQ3 = new Map<string, { ts: number; hasReset: boolean }>();
+
+Object.entries(gradeHistory).forEach(([name, history]) => {
+  if (!currentClassNames.has(name)) return;
+  const result = detectQ3Start(history as Record<string, number>);
+  if (!result) return;
+  const ts = parseDate(result.date);
+  rawQ3.set(name, { ts, hasReset: result.hasReset });
+  if (result.hasReset) resetStarts.push(ts);
+});
+
+// Floor = earliest confirmed-reset Q3 start; fallback to earliest of all if none
+const q3Floor = resetStarts.length
+  ? Math.min(...resetStarts)
+  : Math.min(...Array.from(rawQ3.values()).map((v) => v.ts));
+
+const classQ3StartTs = new Map<string, number>();
+rawQ3.forEach(({ ts, hasReset }, name) => {
+  classQ3StartTs.set(name, hasReset ? ts : q3Floor);
+});
+
+// Only include a date if at least one current class has non-zero Q3 data on that date
 const allDates = new Set<string>();
-Object.values(gradeHistory).forEach((history) => {
-  Object.keys(history ?? {}).forEach((date) => allDates.add(date));
+Object.entries(gradeHistory).forEach(([name, history]) => {
+  if (!currentClassNames.has(name)) return;
+  const classQ3Ts = classQ3StartTs.get(name) ?? Infinity;
+  Object.entries(history ?? {}).forEach(([date, val]) => {
+    if (parseDate(date) >= classQ3Ts && (val as number) > 0) allDates.add(date);
+  });
 });
 
 const sortedDates = Array.from(allDates).sort(
@@ -23,11 +76,16 @@ const sortedDates = Array.from(allDates).sort(
 
 const averageSeries = sortedDates
   .map((date) => {
+    const dateTs = parseDate(date);
     let sum = 0;
     let count = 0;
-    Object.values(gradeHistory).forEach((history) => {
-      const value = history?.[date];
-      if (typeof value === "number") {
+    Object.entries(gradeHistory).forEach(([name, history]) => {
+      if (!currentClassNames.has(name)) return;
+      // Only include this class if the date is within its Q3 window
+      const classQ3Ts = classQ3StartTs.get(name) ?? Infinity;
+      if (dateTs < classQ3Ts) return;
+      const value = (history as Record<string, number>)?.[date];
+      if (typeof value === "number" && value > 0) {
         sum += value;
         count += 1;
       }
@@ -135,7 +193,7 @@ const lastDate = averageSeries.length ? averageSeries[averageSeries.length - 1].
           <div class="w-12 h-12 flex items-center justify-center text-[1.2em] border-[3px] border-solid border-[#00ff00] bg-[#000]">
             CH
           </div>
-          <div class="text-[0.7em] text-[#00ff00]">GRADE SIGNAL</div>
+          <div class="text-[0.7em] text-[#00ff00]">GRADE SIGNAL — Q3</div>
         </div>
 
         <div class="bg-[#000] border-[3px] border-solid border-[#555] p-4">
@@ -143,7 +201,7 @@ const lastDate = averageSeries.length ? averageSeries[averageSeries.length - 1].
             viewBox={`0 0 ${viewBoxWidth} ${viewBoxHeight}`}
             class="w-full h-[260px]"
             role="img"
-            aria-label="Average grade trend over time"
+            aria-label="Average grade trend for Q3"
           >
             <rect x="0" y="0" width="100%" height="100%" fill="#000" />
             <g stroke="#1f2933" stroke-width="2">
