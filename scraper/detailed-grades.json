@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-08T12:10:55.484Z",
+    "scrapedAt": "2026-03-09T00:48:02.200Z",
     "totalClasses": 9,
     "totalAssignments": 118
   },
@@ -881,15 +881,15 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 96,
+      "currentGrade": 82,
       "assignments": [
         {
           "name": "Truman Show Writing Assignment",
           "dueDate": "03/06/2026",
           "earnedPoints": 0,
-          "totalPoints": 20,
+          "totalPoints": 50,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Edpuzzle - Social Groups and I",

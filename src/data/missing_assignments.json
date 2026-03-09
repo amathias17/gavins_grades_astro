@@ -1,9 +1,17 @@
 {
   "metadata": {
-    "last_updated": "03/08/2026, 08:10 AM",
-    "count": 9
+    "last_updated": "03/08/2026, 08:48 PM",
+    "count": 10
   },
   "missing_assignments": [
+    {
+      "due_date": "03/06/2026",
+      "assignment_name": "Truman Show Writing Assignment",
+      "class_name": "SOCIOLOGY",
+      "teacher": "Heather Eckels",
+      "category": "Class Work",
+      "max_points": "50"
+    },
     {
       "due_date": "03/05/2026",
       "assignment_name": "MP 2 Constructed Response",
