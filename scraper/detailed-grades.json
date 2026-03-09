@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-09T12:14:48.319Z",
+    "scrapedAt": "2026-03-09T17:54:46.646Z",
     "totalClasses": 9,
-    "totalAssignments": 119
+    "totalAssignments": 121
   },
   "classes": [
     {
@@ -75,6 +75,14 @@
       "period": "1",
       "currentGrade": 63,
       "assignments": [
+        {
+          "name": "IXL 3/9",
+          "dueDate": "03/09/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Packet 2",
           "dueDate": "03/05/2026",
@@ -292,6 +300,14 @@
           "graded": true
         },
         {
+          "name": "Collins Vocab Cards",
+          "dueDate": "02/04/2026",
+          "earnedPoints": 8,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": true
+        },
+        {
           "name": "Notes fermentation",
           "dueDate": "02/06/2026",
           "earnedPoints": 9,
@@ -304,14 +320,6 @@
           "dueDate": "02/04/2026",
           "earnedPoints": 0,
           "totalPoints": 5,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Collins Vocab Cards",
-          "dueDate": "02/04/2026",
-          "earnedPoints": 8,
-          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
@@ -631,7 +639,7 @@
           "name": "World War II Vocab",
           "dueDate": "03/09/2026",
           "earnedPoints": 0,
-          "totalPoints": 14,
+          "totalPoints": 10,
           "weight": 1,
           "graded": false
         },
@@ -891,6 +899,14 @@
       "period": "8",
       "currentGrade": 82,
       "assignments": [
+        {
+          "name": "Social Structure",
+          "dueDate": "03/09/2026",
+          "earnedPoints": 0,
+          "totalPoints": 14,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Truman Show Writing Assignment",
           "dueDate": "03/06/2026",
