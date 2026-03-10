@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "03/10/2026, 10:19 AM",
-    "count": 12
+    "last_updated": "03/10/2026, 02:49 PM",
+    "count": 11
   },
   "missing_assignments": [
     {
@@ -29,21 +29,13 @@
       "max_points": "50"
     },
     {
-      "due_date": "03/05/2026",
-      "assignment_name": "MP 2 Constructed Response",
-      "class_name": "ENGLISH 10",
-      "teacher": "Megan Leone",
-      "category": "Writing",
-      "max_points": "50"
-    },
-    {
       "due_date": "03/04/2026",
       "assignment_name": "HeLa Cancer Cells",
       "class_name": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "category": "Class Work",
       "max_points": "5",
-      "absent": "Absent"
+      "absent": "Illegal"
     },
     {
       "due_date": "03/04/2026",
@@ -52,7 +44,7 @@
       "teacher": "Todd Bennett",
       "category": "Class Work",
       "max_points": "20",
-      "absent": "Absent"
+      "absent": "Illegal"
     },
     {
       "due_date": "03/03/2026",
@@ -80,19 +72,19 @@
     },
     {
       "due_date": "03/01/2026",
-      "assignment_name": "America WWII Gallery WalK",
-      "class_name": "AMER STUDIES",
-      "teacher": "Brock Seese",
-      "category": "Participation",
-      "max_points": "30"
-    },
-    {
-      "due_date": "03/01/2026",
       "assignment_name": "WWII Video Guide",
       "class_name": "AMER STUDIES",
       "teacher": "Brock Seese",
       "category": "Class Work",
       "max_points": "20"
+    },
+    {
+      "due_date": "03/01/2026",
+      "assignment_name": "America WWII Gallery WalK",
+      "class_name": "AMER STUDIES",
+      "teacher": "Brock Seese",
+      "category": "Participation",
+      "max_points": "30"
     },
     {
       "due_date": "02/26/2026",

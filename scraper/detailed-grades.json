@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-10T14:19:07.429Z",
+    "scrapedAt": "2026-03-10T18:49:36.694Z",
     "totalClasses": 9,
-    "totalAssignments": 123
+    "totalAssignments": 125
   },
   "classes": [
     {
@@ -142,10 +142,10 @@
         {
           "name": "Comma Quiz & Comma Rules Slides",
           "dueDate": "02/09/2026",
-          "earnedPoints": 0,
-          "totalPoints": 0,
-          "weight": null,
-          "graded": false
+          "earnedPoints": 11,
+          "totalPoints": 22,
+          "weight": 1,
+          "graded": true
         },
         {
           "name": "Comma Packet",
@@ -177,8 +177,16 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 82,
+      "currentGrade": 81,
       "assignments": [
+        {
+          "name": "DNA Structure",
+          "dueDate": "03/10/2026",
+          "earnedPoints": 10,
+          "totalPoints": 13,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Cancer Presentation/Project",
           "dueDate": "02/02/2026",
@@ -189,19 +197,19 @@
         },
         {
           "name": "Cancer - Cell cycle scenario Q",
-          "dueDate": "03/06/2026",
-          "earnedPoints": 0,
-          "totalPoints": 30,
+          "dueDate": "03/10/2026",
+          "earnedPoints": 7,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "HeLa Cancer Cells",
-          "dueDate": "03/04/2026",
-          "earnedPoints": 0,
+          "dueDate": "03/05/2026",
+          "earnedPoints": 5,
           "totalPoints": 5,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Fid day meet 3/3",
@@ -221,11 +229,11 @@
         },
         {
           "name": "Cell Division -mitosis/Meiosis",
-          "dueDate": "03/02/2026",
-          "earnedPoints": 0,
-          "totalPoints": 25,
+          "dueDate": "03/03/2026",
+          "earnedPoints": 1,
+          "totalPoints": 0,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Meiosis Microslide Lab",
@@ -300,14 +308,6 @@
           "graded": true
         },
         {
-          "name": "Notes fermentation",
-          "dueDate": "02/06/2026",
-          "earnedPoints": 9,
-          "totalPoints": 15,
-          "weight": 1,
-          "graded": true
-        },
-        {
           "name": "Fermentation Quiz",
           "dueDate": "02/04/2026",
           "earnedPoints": 0,
@@ -320,6 +320,14 @@
           "dueDate": "02/04/2026",
           "earnedPoints": 9,
           "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Notes fermentation",
+          "dueDate": "02/06/2026",
+          "earnedPoints": 9,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
@@ -341,11 +349,11 @@
         },
         {
           "name": "Attendende Live Google meet",
-          "dueDate": "01/27/2026",
-          "earnedPoints": 0,
-          "totalPoints": 0,
+          "dueDate": "02/27/2026",
+          "earnedPoints": 16,
+          "totalPoints": 20,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Green Solar Cells:Photo Synthe",
@@ -373,11 +381,11 @@
         },
         {
           "name": "Safely Separate Lab",
-          "dueDate": "02/25/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
+          "dueDate": "01/26/2026",
+          "earnedPoints": 1,
+          "totalPoints": 0,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Ticket In-The Core Four",
@@ -470,10 +478,10 @@
         {
           "name": "Housing Style & LEGO Design Reflection",
           "dueDate": "03/02/2026",
-          "earnedPoints": 0,
-          "totalPoints": 0,
+          "earnedPoints": 11,
+          "totalPoints": 15,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Do you want to present today for 10 Bonus Points?",
@@ -565,11 +573,11 @@
         },
         {
           "name": "Map of the Underworld",
-          "dueDate": "03/04/2026",
+          "dueDate": "03/02/2026",
           "earnedPoints": 0,
-          "totalPoints": 35,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Poseidon Trading Card",
@@ -645,11 +653,11 @@
         },
         {
           "name": "Causes to WWII Study Guide",
-          "dueDate": "03/09/2026",
-          "earnedPoints": 0,
-          "totalPoints": 14,
+          "dueDate": "03/02/2026",
+          "earnedPoints": 13,
+          "totalPoints": 16,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Causes to WWII Test",
@@ -916,12 +924,20 @@
       "currentGrade": 83,
       "assignments": [
         {
-          "name": "Social Structure",
-          "dueDate": "03/09/2026",
-          "earnedPoints": 0,
-          "totalPoints": 12,
+          "name": "Social Structure Day 2 Notes",
+          "dueDate": "03/10/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
+        },
+        {
+          "name": "Social Structure",
+          "dueDate": "03/10/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
         },
         {
           "name": "Truman Show Writing Assignment",
