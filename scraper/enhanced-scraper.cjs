@@ -537,14 +537,17 @@ async function extractAssignmentDetails(page, assignmentId, classId) {
         earnedPoints = 0;
       }
 
-      // Fallback: derive earned from percentage when points aren't parsed
-      if (!graded && totalPoints !== null && Number.isFinite(percentValue)) {
+      // Fallback: derive earned from percentage when points aren't parsed.
+      // Never apply this to ungraded (*) assignments — hasStar takes precedence.
+      if (!graded && !hasStar && totalPoints !== null && Number.isFinite(percentValue)) {
         earnedPoints = Math.round((percentValue / 100) * totalPoints * 100) / 100;
         graded = true;
       }
 
-      // If points parsed as 0 but percentage indicates credit, recompute from percent
+      // If points parsed as 0 but percentage indicates credit, recompute from percent.
+      // Skip if the earned value was explicitly a star (ungraded).
       if (
+        !hasStar &&
         totalPoints !== null &&
         Number.isFinite(percentValue) &&
         percentValue >= 0 &&

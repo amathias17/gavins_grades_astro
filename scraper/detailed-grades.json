@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-10T12:14:36.486Z",
+    "scrapedAt": "2026-03-10T14:19:07.429Z",
     "totalClasses": 9,
     "totalAssignments": 123
   },
@@ -85,11 +85,11 @@
         },
         {
           "name": "Packet 2",
-          "dueDate": "03/05/2026",
-          "earnedPoints": 11,
-          "totalPoints": 22,
+          "dueDate": "03/09/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "MP 2 Constructed Response",
@@ -109,15 +109,15 @@
         },
         {
           "name": "IXL Diagnostic Day 2",
-          "dueDate": "02/17/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "dueDate": "02/27/2026",
+          "earnedPoints": 21,
+          "totalPoints": 23,
           "weight": 1,
           "graded": true
         },
         {
           "name": "IXL Diagnostic Day 1",
-          "dueDate": "02/17/2026",
+          "dueDate": "02/18/2026",
           "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
@@ -125,14 +125,30 @@
         },
         {
           "name": "Speak MP1 Packet",
-          "dueDate": "02/17/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "dueDate": "02/12/2026",
+          "earnedPoints": 20,
+          "totalPoints": 26,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Speak M1 Novel + Vocab Quiz",
+          "dueDate": "02/12/2026",
+          "earnedPoints": 20,
+          "totalPoints": 26,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Comma Quiz & Comma Rules Slides",
+          "dueDate": "02/09/2026",
+          "earnedPoints": 0,
+          "totalPoints": 0,
+          "weight": null,
+          "graded": false
+        },
+        {
+          "name": "Comma Packet",
           "dueDate": "02/11/2026",
           "earnedPoints": 22,
           "totalPoints": 26,
@@ -140,26 +156,10 @@
           "graded": true
         },
         {
-          "name": "Comma Quiz & Comma Rules Slides",
-          "dueDate": "02/04/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Comma Packet",
-          "dueDate": "02/09/2026",
-          "earnedPoints": 10,
-          "totalPoints": 13,
-          "weight": 1,
-          "graded": true
-        },
-        {
           "name": "Speak Blooket",
           "dueDate": "02/02/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "earnedPoints": 8,
+          "totalPoints": 14,
           "weight": 1,
           "graded": true
         },
@@ -181,46 +181,38 @@
       "assignments": [
         {
           "name": "Cancer Presentation/Project",
-          "dueDate": "03/06/2026",
-          "earnedPoints": 0,
+          "dueDate": "02/02/2026",
+          "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Cancer - Cell cycle scenario Q",
-          "dueDate": "03/05/2026",
-          "earnedPoints": 5,
-          "totalPoints": 5,
+          "dueDate": "03/06/2026",
+          "earnedPoints": 0,
+          "totalPoints": 30,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "HeLa Cancer Cells",
-          "dueDate": "03/05/2026",
-          "earnedPoints": 5,
+          "dueDate": "03/04/2026",
+          "earnedPoints": 0,
           "totalPoints": 5,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "Fid day meet 3/3",
-          "dueDate": "02/27/2026",
-          "earnedPoints": 21,
-          "totalPoints": 23,
+          "dueDate": "03/04/2026",
+          "earnedPoints": 0,
+          "totalPoints": 5,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "Cell Cycle and Cancer",
-          "dueDate": "03/03/2026",
-          "earnedPoints": 9,
-          "totalPoints": 10,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Cell Division -mitosis/Meiosis",
           "dueDate": "03/03/2026",
           "earnedPoints": 1,
           "totalPoints": 0,
@@ -228,26 +220,34 @@
           "graded": true
         },
         {
-          "name": "Meiosis Microslide Lab",
-          "dueDate": "02/27/2026",
+          "name": "Cell Division -mitosis/Meiosis",
+          "dueDate": "03/02/2026",
           "earnedPoints": 0,
-          "totalPoints": 10,
+          "totalPoints": 25,
           "weight": 1,
-          "graded": true
+          "graded": false
+        },
+        {
+          "name": "Meiosis Microslide Lab",
+          "dueDate": "03/02/2026",
+          "earnedPoints": 0,
+          "totalPoints": 25,
+          "weight": 1,
+          "graded": false
         },
         {
           "name": "Meiosis Lab - Microviewer",
           "dueDate": "02/27/2026",
-          "earnedPoints": 16,
-          "totalPoints": 20,
+          "earnedPoints": 0,
+          "totalPoints": 30,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "Notes Meiosis",
-          "dueDate": "02/27/2026",
-          "earnedPoints": 16,
-          "totalPoints": 20,
+          "dueDate": "02/26/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         },
@@ -261,33 +261,33 @@
         },
         {
           "name": "Cell cycle and Mitosis",
-          "dueDate": "02/25/2026",
-          "earnedPoints": 10,
+          "dueDate": "02/26/2026",
+          "earnedPoints": 11,
           "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Cell Size Lab",
-          "dueDate": "02/25/2026",
-          "earnedPoints": 38,
-          "totalPoints": 50,
+          "dueDate": "02/24/2026",
+          "earnedPoints": 19,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Animal/Plant Mitosis",
-          "dueDate": "02/23/2026",
-          "earnedPoints": 5,
-          "totalPoints": 5,
+          "dueDate": "02/24/2026",
+          "earnedPoints": 19,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Types of Reproduction-EdPuzzle",
-          "dueDate": "01/30/2026",
-          "earnedPoints": 20,
-          "totalPoints": 20,
+          "dueDate": "02/23/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         },
@@ -318,8 +318,8 @@
         {
           "name": "Collins Vocab Cards",
           "dueDate": "02/04/2026",
-          "earnedPoints": 8,
-          "totalPoints": 15,
+          "earnedPoints": 9,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
@@ -333,19 +333,19 @@
         },
         {
           "name": "Attendance FID",
-          "dueDate": "08/25/2025",
-          "earnedPoints": 10,
+          "dueDate": "02/03/2026",
+          "earnedPoints": 9,
           "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Attendende Live Google meet",
-          "dueDate": "12/05/2025",
+          "dueDate": "01/27/2026",
           "earnedPoints": 0,
-          "totalPoints": 25,
+          "totalPoints": 0,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "Green Solar Cells:Photo Synthe",
@@ -365,25 +365,25 @@
       "assignments": [
         {
           "name": "Storage Solutions WS",
-          "dueDate": "03/03/2026",
-          "earnedPoints": 9,
+          "dueDate": "01/22/2026",
+          "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Safely Separate Lab",
-          "dueDate": "02/26/2026",
-          "earnedPoints": 5,
-          "totalPoints": 5,
+          "dueDate": "02/25/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "Ticket In-The Core Four",
           "dueDate": "02/25/2026",
-          "earnedPoints": 5,
-          "totalPoints": 5,
+          "earnedPoints": 11,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
@@ -398,8 +398,8 @@
         {
           "name": "Kitchen Safety Quiz",
           "dueDate": "02/17/2026",
-          "earnedPoints": 13,
-          "totalPoints": 15,
+          "earnedPoints": 5,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         },
@@ -413,17 +413,17 @@
         },
         {
           "name": "Find the Hazards WS",
-          "dueDate": "02/03/2026",
-          "earnedPoints": 9,
-          "totalPoints": 10,
+          "dueDate": "02/09/2026",
+          "earnedPoints": 0,
+          "totalPoints": 50,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Syllabus Bonus",
           "dueDate": "02/06/2026",
-          "earnedPoints": 0,
-          "totalPoints": 0,
+          "earnedPoints": 30,
+          "totalPoints": 30,
           "weight": 1,
           "graded": true
         },
@@ -453,38 +453,46 @@
       "assignments": [
         {
           "name": "Architecture & Design Vocabulary Quiz #1",
-          "dueDate": "03/03/2026",
-          "earnedPoints": 9,
-          "totalPoints": 10,
+          "dueDate": "03/04/2026",
+          "earnedPoints": 0,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Snow Day Engineering Mini-Challenge",
           "dueDate": "03/03/2026",
-          "earnedPoints": 9,
-          "totalPoints": 10,
+          "earnedPoints": 0,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Housing Style & LEGO Design Reflection",
-          "dueDate": "03/03/2026",
-          "earnedPoints": 9,
+          "dueDate": "03/02/2026",
+          "earnedPoints": 0,
+          "totalPoints": 0,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Do you want to present today for 10 Bonus Points?",
+          "dueDate": "02/27/2026",
+          "earnedPoints": 0,
           "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
         {
-          "name": "Do you want to present today for 10 Bonus Points?",
+          "name": "Week 6 Participation",
           "dueDate": "02/27/2026",
-          "earnedPoints": 5,
-          "totalPoints": 5,
+          "earnedPoints": 0,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
         {
-          "name": "Week 6 Participation",
+          "name": "Housing Style Slideshows",
           "dueDate": "02/27/2026",
           "earnedPoints": 25,
           "totalPoints": 25,
@@ -492,42 +500,34 @@
           "graded": true
         },
         {
-          "name": "Housing Style Slideshows",
-          "dueDate": "02/27/2026",
+          "name": "Week 5 Participation",
+          "dueDate": "02/20/2026",
           "earnedPoints": 38,
           "totalPoints": 50,
           "weight": 1,
           "graded": true
         },
         {
-          "name": "Week 5 Participation",
-          "dueDate": "02/20/2026",
+          "name": "Week 4 Participation",
+          "dueDate": "02/12/2026",
           "earnedPoints": 20,
           "totalPoints": 20,
           "weight": 1,
           "graded": true
         },
         {
-          "name": "Week 4 Participation",
-          "dueDate": "02/11/2026",
-          "earnedPoints": 22,
-          "totalPoints": 26,
-          "weight": 1,
-          "graded": true
-        },
-        {
           "name": "Week 4 Layouts and Flows Activity",
-          "dueDate": "02/11/2026",
-          "earnedPoints": 22,
-          "totalPoints": 26,
+          "dueDate": "02/12/2026",
+          "earnedPoints": 20,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Internet-Based Architecture Scavenger Hunt",
           "dueDate": "02/06/2026",
-          "earnedPoints": 3,
-          "totalPoints": 18,
+          "earnedPoints": 15,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
@@ -541,9 +541,9 @@
         },
         {
           "name": "Week 1 Participation",
-          "dueDate": "01/23/2026",
-          "earnedPoints": 25,
-          "totalPoints": 25,
+          "dueDate": "01/30/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         }
@@ -557,14 +557,22 @@
       "assignments": [
         {
           "name": "Hades Trading Card",
-          "dueDate": "03/03/2026",
-          "earnedPoints": 9,
+          "dueDate": "01/23/2026",
+          "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Map of the Underworld",
+          "dueDate": "03/04/2026",
+          "earnedPoints": 0,
+          "totalPoints": 35,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Poseidon Trading Card",
           "dueDate": "03/02/2026",
           "earnedPoints": 13,
           "totalPoints": 16,
@@ -572,23 +580,23 @@
           "graded": true
         },
         {
-          "name": "Poseidon Trading Card",
-          "dueDate": "02/23/2026",
-          "earnedPoints": 25,
-          "totalPoints": 25,
-          "weight": 1,
-          "graded": true
-        },
-        {
           "name": "Poseidon Myth Questions",
-          "dueDate": "02/20/2026",
-          "earnedPoints": 0,
-          "totalPoints": 50,
+          "dueDate": "02/23/2026",
+          "earnedPoints": 32,
+          "totalPoints": 35,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Athena Worksheet",
+          "dueDate": "02/20/2026",
+          "earnedPoints": 11,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Zeus, Hera, Athena Guided Qs",
           "dueDate": "02/12/2026",
           "earnedPoints": 13,
           "totalPoints": 16,
@@ -596,26 +604,18 @@
           "graded": true
         },
         {
-          "name": "Zeus, Hera, Athena Guided Qs",
-          "dueDate": "02/11/2026",
-          "earnedPoints": 22,
-          "totalPoints": 26,
-          "weight": 1,
-          "graded": true
-        },
-        {
           "name": "All About Hera Worksheet",
-          "dueDate": "01/30/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "dueDate": "02/12/2026",
+          "earnedPoints": 14,
+          "totalPoints": 18,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Zeus Trading Card",
-          "dueDate": "02/03/2026",
-          "earnedPoints": 34,
-          "totalPoints": 35,
+          "dueDate": "02/04/2026",
+          "earnedPoints": 13,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
@@ -637,11 +637,11 @@
       "assignments": [
         {
           "name": "World War II Vocab",
-          "dueDate": "03/09/2026",
-          "earnedPoints": 0,
-          "totalPoints": 10,
+          "dueDate": "01/28/2026",
+          "earnedPoints": 20,
+          "totalPoints": 23,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Causes to WWII Study Guide",
@@ -773,9 +773,9 @@
       "assignments": [
         {
           "name": "Worksheet #1 Word Problems Pyt",
-          "dueDate": "03/10/2026",
+          "dueDate": "03/09/2026",
           "earnedPoints": 0,
-          "totalPoints": 12,
+          "totalPoints": 20,
           "weight": 1,
           "graded": false
         },
