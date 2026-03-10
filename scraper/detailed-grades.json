@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-10T00:44:14.031Z",
+    "scrapedAt": "2026-03-10T12:14:36.486Z",
     "totalClasses": 9,
     "totalAssignments": 123
   },
@@ -647,7 +647,7 @@
           "name": "Causes to WWII Study Guide",
           "dueDate": "03/09/2026",
           "earnedPoints": 0,
-          "totalPoints": 20,
+          "totalPoints": 14,
           "weight": 1,
           "graded": false
         },
@@ -773,9 +773,9 @@
       "assignments": [
         {
           "name": "Worksheet #1 Word Problems Pyt",
-          "dueDate": "03/09/2026",
+          "dueDate": "03/10/2026",
           "earnedPoints": 0,
-          "totalPoints": 20,
+          "totalPoints": 12,
           "weight": 1,
           "graded": false
         },
@@ -892,18 +892,18 @@
           "graded": true
         },
         {
-          "name": "Thursday(1/22/26):Get More Math!",
-          "dueDate": "01/23/2026",
-          "earnedPoints": 18,
-          "totalPoints": 18,
-          "weight": 1,
-          "graded": true
-        },
-        {
           "name": "Friday(1/23/26): Delta Math",
           "dueDate": "01/23/2026",
           "earnedPoints": 15,
           "totalPoints": 15,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Thursday(1/22/26):Get More Math!",
+          "dueDate": "01/23/2026",
+          "earnedPoints": 18,
+          "totalPoints": 18,
           "weight": 1,
           "graded": true
         }
@@ -913,13 +913,13 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 82,
+      "currentGrade": 83,
       "assignments": [
         {
           "name": "Social Structure",
           "dueDate": "03/09/2026",
           "earnedPoints": 0,
-          "totalPoints": 20,
+          "totalPoints": 12,
           "weight": 1,
           "graded": false
         },
