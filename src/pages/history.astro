@@ -74,8 +74,8 @@ interface ClassHistoryData {
   period: string;
   currentGrade: number;
   letterGrade: string;
-  q3StartGrade: number;
-  q3StartDate: string;
+  prevGrade: number;
+  prevDate: string;
   delta: number;
   series: { date: string; value: number }[];
 }
@@ -98,8 +98,15 @@ const classHistories: ClassHistoryData[] = currentClasses
 
     if (series.length === 0) return null;
 
-    const q3StartGrade = series[0].value;
-    const delta = cls.current_grade - q3StartGrade;
+    // Weekly delta: compare current grade to the last entry >= 7 days ago
+    const SEVEN_DAYS_MS = 7 * 24 * 60 * 60 * 1000;
+    const last = series[series.length - 1];
+    const lastTs = parseDate(last.date);
+    const weekAgoEntry = [...series]
+      .reverse()
+      .find((s) => lastTs - parseDate(s.date) >= SEVEN_DAYS_MS);
+    const prev = weekAgoEntry ?? series[0];
+    const delta = last.value - prev.value;
 
     return {
       class_name: cls.class_name,
@@ -107,8 +114,8 @@ const classHistories: ClassHistoryData[] = currentClasses
       period: cls.period,
       currentGrade: cls.current_grade,
       letterGrade: cls.letter_grade,
-      q3StartGrade,
-      q3StartDate: series[0].date,
+      prevGrade: prev.value,
+      prevDate: prev.date,
       delta,
       series,
     } satisfies ClassHistoryData;
@@ -167,7 +174,7 @@ const mostDeclined = classHistories.reduce((worst, c) =>
 , classHistories[0]);
 
 // Earliest Q3 start and latest date across all classes
-const allQ3Dates = classHistories.map((c) => c.q3StartDate);
+const allQ3Dates = classHistories.map((c) => c.series[0]?.date ?? "");
 const allLastDates = classHistories.map((c) => c.series[c.series.length - 1]?.date ?? "");
 const q3WindowStart = allQ3Dates.sort((a, b) => parseDate(a) - parseDate(b))[0] ?? "";
 const q3WindowEnd = allLastDates.sort((a, b) => parseDate(b) - parseDate(a))[0] ?? "";
@@ -312,9 +319,9 @@ const sparklines = classHistories.map((c) => buildSparkline(c.series));
               </svg>
             </div>
 
-            <!-- Footer: Q3 start → current -->
+            <!-- Footer: prev → current -->
             <div class="flex items-center justify-between text-[0.45em] text-[#555] uppercase">
-              <span>{cls.q3StartDate}: {cls.q3StartGrade}%</span>
+              <span>{cls.prevDate}: {cls.prevGrade}%</span>
               <span class="text-[#333]">→</span>
               <span style={`color: ${gradeColor};`}>{cls.series[cls.series.length - 1]?.date ?? ""}: {cls.currentGrade}%</span>
             </div>
