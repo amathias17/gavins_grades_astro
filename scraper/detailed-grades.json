@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-09T17:54:46.646Z",
+    "scrapedAt": "2026-03-10T00:44:14.031Z",
     "totalClasses": 9,
-    "totalAssignments": 121
+    "totalAssignments": 123
   },
   "classes": [
     {
@@ -300,14 +300,6 @@
           "graded": true
         },
         {
-          "name": "Collins Vocab Cards",
-          "dueDate": "02/04/2026",
-          "earnedPoints": 8,
-          "totalPoints": 15,
-          "weight": 1,
-          "graded": true
-        },
-        {
           "name": "Notes fermentation",
           "dueDate": "02/06/2026",
           "earnedPoints": 9,
@@ -320,6 +312,14 @@
           "dueDate": "02/04/2026",
           "earnedPoints": 0,
           "totalPoints": 5,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Collins Vocab Cards",
+          "dueDate": "02/04/2026",
+          "earnedPoints": 8,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
@@ -644,6 +644,14 @@
           "graded": false
         },
         {
+          "name": "Causes to WWII Study Guide",
+          "dueDate": "03/09/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": false
+        },
+        {
           "name": "Causes to WWII Test",
           "dueDate": "03/05/2026",
           "earnedPoints": 0,
@@ -764,6 +772,14 @@
       "currentGrade": 77,
       "assignments": [
         {
+          "name": "Worksheet #1 Word Problems Pyt",
+          "dueDate": "03/09/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": false
+        },
+        {
           "name": "Word Problem Worksheet",
           "dueDate": "03/02/2026",
           "earnedPoints": 13,
@@ -876,18 +892,18 @@
           "graded": true
         },
         {
-          "name": "Friday(1/23/26): Delta Math",
-          "dueDate": "01/23/2026",
-          "earnedPoints": 15,
-          "totalPoints": 15,
-          "weight": 1,
-          "graded": true
-        },
-        {
           "name": "Thursday(1/22/26):Get More Math!",
           "dueDate": "01/23/2026",
           "earnedPoints": 18,
           "totalPoints": 18,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Friday(1/23/26): Delta Math",
+          "dueDate": "01/23/2026",
+          "earnedPoints": 15,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         }
@@ -903,7 +919,7 @@
           "name": "Social Structure",
           "dueDate": "03/09/2026",
           "earnedPoints": 0,
-          "totalPoints": 14,
+          "totalPoints": 20,
           "weight": 1,
           "graded": false
         },
