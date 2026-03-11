@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-10T18:49:36.694Z",
+    "scrapedAt": "2026-03-11T00:44:45.820Z",
     "totalClasses": 9,
     "totalAssignments": 125
   },
@@ -213,11 +213,11 @@
         },
         {
           "name": "Fid day meet 3/3",
-          "dueDate": "03/04/2026",
-          "earnedPoints": 0,
-          "totalPoints": 5,
+          "dueDate": "03/03/2026",
+          "earnedPoints": 11,
+          "totalPoints": 22,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Cell Cycle and Cancer",
@@ -237,9 +237,9 @@
         },
         {
           "name": "Meiosis Microslide Lab",
-          "dueDate": "03/02/2026",
+          "dueDate": "02/27/2026",
           "earnedPoints": 0,
-          "totalPoints": 25,
+          "totalPoints": 30,
           "weight": 1,
           "graded": false
         },
@@ -308,6 +308,14 @@
           "graded": true
         },
         {
+          "name": "Notes fermentation",
+          "dueDate": "02/06/2026",
+          "earnedPoints": 9,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": true
+        },
+        {
           "name": "Fermentation Quiz",
           "dueDate": "02/04/2026",
           "earnedPoints": 0,
@@ -320,14 +328,6 @@
           "dueDate": "02/04/2026",
           "earnedPoints": 9,
           "totalPoints": 10,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Notes fermentation",
-          "dueDate": "02/06/2026",
-          "earnedPoints": 9,
-          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
@@ -781,9 +781,9 @@
       "assignments": [
         {
           "name": "Worksheet #1 Word Problems Pyt",
-          "dueDate": "03/09/2026",
+          "dueDate": "03/10/2026",
           "earnedPoints": 0,
-          "totalPoints": 20,
+          "totalPoints": 12,
           "weight": 1,
           "graded": false
         },
