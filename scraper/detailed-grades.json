@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-11T12:14:39.820Z",
+    "scrapedAt": "2026-03-12T00:41:54.744Z",
     "totalClasses": 9,
-    "totalAssignments": 125
+    "totalAssignments": 126
   },
   "classes": [
     {
@@ -246,10 +246,10 @@
         {
           "name": "Meiosis Lab - Microviewer",
           "dueDate": "02/27/2026",
-          "earnedPoints": 0,
-          "totalPoints": 30,
+          "earnedPoints": 11,
+          "totalPoints": 22,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Notes Meiosis",
@@ -923,6 +923,14 @@
       "period": "8",
       "currentGrade": 83,
       "assignments": [
+        {
+          "name": "Agricultural Rev. Simulation",
+          "dueDate": "03/11/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Social Structure Day 2 Notes",
           "dueDate": "03/10/2026",
