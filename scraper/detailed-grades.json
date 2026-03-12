@@ -1,15 +1,15 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-12T12:14:19.196Z",
+    "scrapedAt": "2026-03-12T18:16:14.364Z",
     "totalClasses": 9,
-    "totalAssignments": 128
+    "totalAssignments": 129
   },
   "classes": [
     {
       "className": "SOPHOMORE SEMINAR",
       "teacher": "Victoria Good",
       "period": "0",
-      "currentGrade": 70,
+      "currentGrade": 75,
       "assignments": [
         {
           "name": "3/9-3/12 Part.",
@@ -89,15 +89,15 @@
       "className": "ENGLISH 10",
       "teacher": "Megan Leone",
       "period": "1",
-      "currentGrade": 63,
+      "currentGrade": 65,
       "assignments": [
         {
           "name": "IXL 3/9",
-          "dueDate": "03/12/2026",
-          "earnedPoints": 0,
-          "totalPoints": 25,
+          "dueDate": "03/09/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Packet 2",
@@ -193,8 +193,16 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 81,
+      "currentGrade": 84,
       "assignments": [
+        {
+          "name": "DNA/DNA replication K'Nex",
+          "dueDate": "03/09/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "DNA Structure",
           "dueDate": "03/10/2026",
@@ -577,7 +585,7 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 87,
+      "currentGrade": 88,
       "assignments": [
         {
           "name": "Hades Trading Card",

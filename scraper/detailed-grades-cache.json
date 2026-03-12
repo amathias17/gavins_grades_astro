@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-12T12:14:19.197Z",
+  "updatedAt": "2026-03-12T18:16:14.365Z",
   "assignments": {
     "1561854:44463:1396": {
       "classId": "44463",
@@ -8,7 +8,7 @@
       "className": "SOPHOMORE SEMINAR",
       "teacher": "Victoria Good",
       "period": "0",
-      "currentGrade": 70,
+      "currentGrade": 75,
       "assignmentName": "Week of 1/19",
       "dateDue": "01/23/2026",
       "dueDate": "01/23/2026",
@@ -16,7 +16,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:00.159Z"
+      "cachedAt": "2026-03-12T18:16:02.601Z"
     },
     "1557583:44463:1396": {
       "classId": "44463",
@@ -3620,7 +3620,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.733Z"
+      "cachedAt": "2026-03-12T18:16:12.230Z"
     },
     "1561998:43049:1396": {
       "classId": "43049",
@@ -3637,7 +3637,7 @@
       "totalPoints": 30,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.733Z"
+      "cachedAt": "2026-03-12T18:16:12.230Z"
     },
     "1556957:43049:1396": {
       "classId": "43049",
@@ -4215,7 +4215,7 @@
       "totalPoints": 100,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.734Z"
+      "cachedAt": "2026-03-12T18:16:12.230Z"
     },
     "1564116:43666:1396": {
       "classId": "43666",
@@ -4232,7 +4232,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.734Z"
+      "cachedAt": "2026-03-12T18:16:12.230Z"
     },
     "1564122:43666:1396": {
       "classId": "43666",
@@ -4249,7 +4249,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.734Z"
+      "cachedAt": "2026-03-12T18:16:12.230Z"
     },
     "1564125:43666:1396": {
       "classId": "43666",
@@ -4266,7 +4266,7 @@
       "totalPoints": 18,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.734Z"
+      "cachedAt": "2026-03-12T18:16:12.230Z"
     },
     "1558377:43666:1396": {
       "classId": "43666",
@@ -5558,7 +5558,7 @@
       "totalPoints": 12,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.852Z"
+      "cachedAt": "2026-03-12T18:16:12.231Z"
     },
     "1562839:44615:1396": {
       "classId": "44615",
@@ -5575,7 +5575,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.852Z"
+      "cachedAt": "2026-03-12T18:16:12.231Z"
     },
     "1561967:44615:1396": {
       "classId": "44615",
@@ -5592,7 +5592,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.852Z"
+      "cachedAt": "2026-03-12T18:16:12.231Z"
     },
     "1561441:44615:1396": {
       "classId": "44615",
@@ -5609,7 +5609,7 @@
       "totalPoints": 18,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.852Z"
+      "cachedAt": "2026-03-12T18:16:12.231Z"
     },
     "1556821:43162:1396": {
       "classId": "43162",
@@ -5677,7 +5677,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.733Z"
+      "cachedAt": "2026-03-12T18:16:12.230Z"
     },
     "1559402:43049:1396": {
       "classId": "43049",
@@ -5754,7 +5754,7 @@
       "className": "SOPHOMORE SEMINAR",
       "teacher": "Victoria Good",
       "period": "0",
-      "currentGrade": 70,
+      "currentGrade": 75,
       "assignmentName": "Week of 2/2 Part.",
       "dateDue": "02/04/2026",
       "dueDate": "02/04/2026",
@@ -5762,7 +5762,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:00.159Z"
+      "cachedAt": "2026-03-12T18:16:02.601Z"
     },
     "1572012:43049:1396": {
       "classId": "43049",
@@ -5779,7 +5779,7 @@
       "totalPoints": 23,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.733Z"
+      "cachedAt": "2026-03-12T18:16:12.230Z"
     },
     "1571502:44615:1396": {
       "classId": "44615",
@@ -5796,7 +5796,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.852Z"
+      "cachedAt": "2026-03-12T18:16:12.231Z"
     },
     "1570062:44615:1396": {
       "classId": "44615",
@@ -5813,7 +5813,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.852Z"
+      "cachedAt": "2026-03-12T18:16:12.231Z"
     },
     "1569610:44615:1396": {
       "classId": "44615",
@@ -5830,7 +5830,7 @@
       "totalPoints": 7,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.852Z"
+      "cachedAt": "2026-03-12T18:16:12.231Z"
     },
     "1568621:44615:1396": {
       "classId": "44615",
@@ -5847,7 +5847,7 @@
       "totalPoints": 7,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.852Z"
+      "cachedAt": "2026-03-12T18:16:12.231Z"
     },
     "1567708:44615:1396": {
       "classId": "44615",
@@ -5864,7 +5864,7 @@
       "totalPoints": 18,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.852Z"
+      "cachedAt": "2026-03-12T18:16:12.231Z"
     },
     "1566577:44615:1396": {
       "classId": "44615",
@@ -5881,7 +5881,7 @@
       "totalPoints": 21,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.852Z"
+      "cachedAt": "2026-03-12T18:16:12.231Z"
     },
     "1569986:43049:1396": {
       "classId": "43049",
@@ -5898,7 +5898,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.733Z"
+      "cachedAt": "2026-03-12T18:16:12.230Z"
     },
     "1568236:43049:1396": {
       "classId": "43049",
@@ -5915,7 +5915,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.733Z"
+      "cachedAt": "2026-03-12T18:16:12.230Z"
     },
     "1573050:44615:1396": {
       "classId": "44615",
@@ -5932,7 +5932,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.852Z"
+      "cachedAt": "2026-03-12T18:16:12.231Z"
     },
     "1572388:44615:1396": {
       "classId": "44615",
@@ -5949,7 +5949,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.852Z"
+      "cachedAt": "2026-03-12T18:16:12.231Z"
     },
     "1567640:43666:1396": {
       "classId": "43666",
@@ -5966,7 +5966,7 @@
       "totalPoints": 19,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.734Z"
+      "cachedAt": "2026-03-12T18:16:12.230Z"
     },
     "1574711:43049:1396": {
       "classId": "43049",
@@ -5983,7 +5983,7 @@
       "totalPoints": 26,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.733Z"
+      "cachedAt": "2026-03-12T18:16:12.230Z"
     },
     "1575490:43666:1396": {
       "classId": "43666",
@@ -6000,7 +6000,7 @@
       "totalPoints": 26,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.734Z"
+      "cachedAt": "2026-03-12T18:16:12.230Z"
     },
     "1576644:44463:1396": {
       "classId": "44463",
@@ -6009,7 +6009,7 @@
       "className": "SOPHOMORE SEMINAR",
       "teacher": "Victoria Good",
       "period": "0",
-      "currentGrade": 70,
+      "currentGrade": 75,
       "assignmentName": "Workbok Check",
       "dateDue": "02/18/2026",
       "dueDate": "02/18/2026",
@@ -6017,7 +6017,7 @@
       "totalPoints": 45,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:00.158Z"
+      "cachedAt": "2026-03-12T18:16:02.601Z"
     },
     "1576638:44463:1396": {
       "classId": "44463",
@@ -6026,7 +6026,7 @@
       "className": "SOPHOMORE SEMINAR",
       "teacher": "Victoria Good",
       "period": "0",
-      "currentGrade": 70,
+      "currentGrade": 75,
       "assignmentName": "Leader in Me",
       "dateDue": "02/17/2026",
       "dueDate": "02/17/2026",
@@ -6034,7 +6034,7 @@
       "totalPoints": 45,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:00.158Z"
+      "cachedAt": "2026-03-12T18:16:02.601Z"
     },
     "1577654:43049:1396": {
       "classId": "43049",
@@ -6051,7 +6051,7 @@
       "totalPoints": 25,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.733Z"
+      "cachedAt": "2026-03-12T18:16:12.230Z"
     },
     "1579005:43666:1396": {
       "classId": "43666",
@@ -6068,7 +6068,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.734Z"
+      "cachedAt": "2026-03-12T18:16:12.230Z"
     },
     "1578503:43049:1396": {
       "classId": "43049",
@@ -6085,7 +6085,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.733Z"
+      "cachedAt": "2026-03-12T18:16:12.230Z"
     },
     "1579004:43666:1396": {
       "classId": "43666",
@@ -6102,7 +6102,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.734Z"
+      "cachedAt": "2026-03-12T18:16:12.230Z"
     },
     "1579153:43666:1396": {
       "classId": "43666",
@@ -6119,7 +6119,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.734Z"
+      "cachedAt": "2026-03-12T18:16:12.230Z"
     },
     "1578541:43049:1396": {
       "classId": "43049",
@@ -6136,7 +6136,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.733Z"
+      "cachedAt": "2026-03-12T18:16:12.230Z"
     },
     "1580248:43666:1396": {
       "classId": "43666",
@@ -6153,7 +6153,7 @@
       "totalPoints": 33,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.734Z"
+      "cachedAt": "2026-03-12T18:16:12.230Z"
     },
     "1578652:44615:1396": {
       "classId": "44615",
@@ -6170,7 +6170,7 @@
       "totalPoints": 33,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.852Z"
+      "cachedAt": "2026-03-12T18:16:12.231Z"
     },
     "1580260:43666:1396": {
       "classId": "43666",
@@ -6187,7 +6187,7 @@
       "totalPoints": 12,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.734Z"
+      "cachedAt": "2026-03-12T18:16:12.230Z"
     },
     "1582828:44463:1396": {
       "classId": "44463",
@@ -6196,7 +6196,7 @@
       "className": "SOPHOMORE SEMINAR",
       "teacher": "Victoria Good",
       "period": "0",
-      "currentGrade": 70,
+      "currentGrade": 75,
       "assignmentName": "MP3 Grade Tracking",
       "dateDue": "02/25/2026",
       "dueDate": "02/25/2026",
@@ -6204,7 +6204,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:00.158Z"
+      "cachedAt": "2026-03-12T18:16:02.601Z"
     },
     "1583831:43666:1396": {
       "classId": "43666",
@@ -6221,7 +6221,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.734Z"
+      "cachedAt": "2026-03-12T18:16:12.230Z"
     },
     "1583829:43666:1396": {
       "classId": "43666",
@@ -6238,7 +6238,7 @@
       "totalPoints": 24,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.734Z"
+      "cachedAt": "2026-03-12T18:16:12.230Z"
     },
     "1583962:44463:1396": {
       "classId": "44463",
@@ -6247,7 +6247,7 @@
       "className": "SOPHOMORE SEMINAR",
       "teacher": "Victoria Good",
       "period": "0",
-      "currentGrade": 70,
+      "currentGrade": 75,
       "assignmentName": "2/23-2/27",
       "dateDue": "02/27/2026",
       "dueDate": "02/27/2026",
@@ -6255,7 +6255,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:00.158Z"
+      "cachedAt": "2026-03-12T18:16:02.601Z"
     },
     "1584117:44615:1396": {
       "classId": "44615",
@@ -6272,7 +6272,7 @@
       "totalPoints": 35,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.852Z"
+      "cachedAt": "2026-03-12T18:16:12.231Z"
     },
     "1584309:44615:1396": {
       "classId": "44615",
@@ -6306,7 +6306,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.852Z"
+      "cachedAt": "2026-03-12T18:16:12.231Z"
     },
     "1588659:43049:1396": {
       "classId": "43049",
@@ -6323,7 +6323,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.733Z"
+      "cachedAt": "2026-03-12T18:16:12.230Z"
     },
     "1588527:43666:1396": {
       "classId": "43666",
@@ -6340,7 +6340,7 @@
       "totalPoints": 18,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.734Z"
+      "cachedAt": "2026-03-12T18:16:12.230Z"
     },
     "1588529:43666:1396": {
       "classId": "43666",
@@ -6357,7 +6357,7 @@
       "totalPoints": 18,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.734Z"
+      "cachedAt": "2026-03-12T18:16:12.230Z"
     },
     "1587361:44615:1396": {
       "classId": "44615",
@@ -6374,7 +6374,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.852Z"
+      "cachedAt": "2026-03-12T18:16:12.231Z"
     },
     "1589483:44463:1396": {
       "classId": "44463",
@@ -6383,7 +6383,7 @@
       "className": "SOPHOMORE SEMINAR",
       "teacher": "Victoria Good",
       "period": "0",
-      "currentGrade": 70,
+      "currentGrade": 75,
       "assignmentName": "2/2-2/6 Part.",
       "dateDue": "03/06/2026",
       "dueDate": "03/06/2026",
@@ -6391,7 +6391,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:00.158Z"
+      "cachedAt": "2026-03-12T18:16:02.601Z"
     },
     "1584883:43049:1396": {
       "classId": "43049",
@@ -6408,7 +6408,7 @@
       "totalPoints": 16,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.733Z"
+      "cachedAt": "2026-03-12T18:16:12.230Z"
     },
     "1584889:43049:1396": {
       "classId": "43049",
@@ -6425,7 +6425,7 @@
       "totalPoints": 16,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.733Z"
+      "cachedAt": "2026-03-12T18:16:12.230Z"
     },
     "1584895:43049:1396": {
       "classId": "43049",
@@ -6442,7 +6442,7 @@
       "totalPoints": 16,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.733Z"
+      "cachedAt": "2026-03-12T18:16:12.230Z"
     },
     "1589602:43666:1396": {
       "classId": "43666",
@@ -6459,7 +6459,7 @@
       "totalPoints": 16,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.734Z"
+      "cachedAt": "2026-03-12T18:16:12.230Z"
     },
     "1589882:44615:1396": {
       "classId": "44615",
@@ -6476,7 +6476,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.852Z"
+      "cachedAt": "2026-03-12T18:16:12.231Z"
     },
     "1588493:43162:1396": {
       "classId": "43162",
@@ -6485,7 +6485,7 @@
       "className": "ENGLISH 10",
       "teacher": "Megan Leone",
       "period": "1",
-      "currentGrade": 63,
+      "currentGrade": 65,
       "assignmentName": "MP 2 Constructed Response",
       "dateDue": "03/05/2026",
       "dueDate": "03/05/2026",
@@ -6493,7 +6493,7 @@
       "totalPoints": 22,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.729Z"
+      "cachedAt": "2026-03-12T18:16:12.117Z"
     },
     "1586526:43162:1396": {
       "classId": "43162",
@@ -6502,7 +6502,7 @@
       "className": "ENGLISH 10",
       "teacher": "Megan Leone",
       "period": "1",
-      "currentGrade": 63,
+      "currentGrade": 65,
       "assignmentName": "Speak MP2 Quiz",
       "dateDue": "02/27/2026",
       "dueDate": "02/27/2026",
@@ -6510,7 +6510,7 @@
       "totalPoints": 23,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.729Z"
+      "cachedAt": "2026-03-12T18:16:12.117Z"
     },
     "1577271:43162:1396": {
       "classId": "43162",
@@ -6519,7 +6519,7 @@
       "className": "ENGLISH 10",
       "teacher": "Megan Leone",
       "period": "1",
-      "currentGrade": 63,
+      "currentGrade": 65,
       "assignmentName": "IXL Diagnostic Day 2",
       "dateDue": "02/27/2026",
       "dueDate": "02/27/2026",
@@ -6527,7 +6527,7 @@
       "totalPoints": 23,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.730Z"
+      "cachedAt": "2026-03-12T18:16:12.117Z"
     },
     "1576168:43162:1396": {
       "classId": "43162",
@@ -6536,7 +6536,7 @@
       "className": "ENGLISH 10",
       "teacher": "Megan Leone",
       "period": "1",
-      "currentGrade": 63,
+      "currentGrade": 65,
       "assignmentName": "IXL Diagnostic Day 1",
       "dateDue": "02/18/2026",
       "dueDate": "02/18/2026",
@@ -6544,7 +6544,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.730Z"
+      "cachedAt": "2026-03-12T18:16:12.117Z"
     },
     "1574257:43162:1396": {
       "classId": "43162",
@@ -6553,7 +6553,7 @@
       "className": "ENGLISH 10",
       "teacher": "Megan Leone",
       "period": "1",
-      "currentGrade": 63,
+      "currentGrade": 65,
       "assignmentName": "Speak MP1 Packet",
       "dateDue": "02/12/2026",
       "dueDate": "02/12/2026",
@@ -6561,7 +6561,7 @@
       "totalPoints": 26,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.730Z"
+      "cachedAt": "2026-03-12T18:16:12.117Z"
     },
     "1574427:43162:1396": {
       "classId": "43162",
@@ -6570,7 +6570,7 @@
       "className": "ENGLISH 10",
       "teacher": "Megan Leone",
       "period": "1",
-      "currentGrade": 63,
+      "currentGrade": 65,
       "assignmentName": "Speak M1 Novel + Vocab Quiz",
       "dateDue": "02/12/2026",
       "dueDate": "02/12/2026",
@@ -6578,7 +6578,7 @@
       "totalPoints": 26,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.730Z"
+      "cachedAt": "2026-03-12T18:16:12.117Z"
     },
     "1572226:43162:1396": {
       "classId": "43162",
@@ -6587,7 +6587,7 @@
       "className": "ENGLISH 10",
       "teacher": "Megan Leone",
       "period": "1",
-      "currentGrade": 63,
+      "currentGrade": 65,
       "assignmentName": "Comma Packet",
       "dateDue": "02/11/2026",
       "dueDate": "02/11/2026",
@@ -6595,7 +6595,7 @@
       "totalPoints": 26,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.730Z"
+      "cachedAt": "2026-03-12T18:16:12.117Z"
     },
     "1571347:43162:1396": {
       "classId": "43162",
@@ -6604,7 +6604,7 @@
       "className": "ENGLISH 10",
       "teacher": "Megan Leone",
       "period": "1",
-      "currentGrade": 63,
+      "currentGrade": 65,
       "assignmentName": "Speak Blooket",
       "dateDue": "02/02/2026",
       "dueDate": "02/02/2026",
@@ -6612,7 +6612,7 @@
       "totalPoints": 14,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.730Z"
+      "cachedAt": "2026-03-12T18:16:12.117Z"
     },
     "1566141:43162:1396": {
       "classId": "43162",
@@ -6621,7 +6621,7 @@
       "className": "ENGLISH 10",
       "teacher": "Megan Leone",
       "period": "1",
-      "currentGrade": 63,
+      "currentGrade": 65,
       "assignmentName": "213 Myrtle Questions",
       "dateDue": "02/02/2026",
       "dueDate": "02/02/2026",
@@ -6629,7 +6629,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.730Z"
+      "cachedAt": "2026-03-12T18:16:12.117Z"
     },
     "1589473:43424:1396": {
       "classId": "43424",
@@ -6638,7 +6638,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 81,
+      "currentGrade": 84,
       "assignmentName": "Cancer Presentation/Project",
       "dateDue": "02/02/2026",
       "dueDate": "02/02/2026",
@@ -6646,7 +6646,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.730Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1587259:43424:1396": {
       "classId": "43424",
@@ -6655,7 +6655,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 81,
+      "currentGrade": 84,
       "assignmentName": "Cell Cycle and Cancer",
       "dateDue": "03/03/2026",
       "dueDate": "03/03/2026",
@@ -6663,7 +6663,7 @@
       "totalPoints": 0,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.731Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1583414:43424:1396": {
       "classId": "43424",
@@ -6672,7 +6672,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 81,
+      "currentGrade": 84,
       "assignmentName": "Notes Meiosis",
       "dateDue": "02/26/2026",
       "dueDate": "02/26/2026",
@@ -6680,7 +6680,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.731Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1583422:43424:1396": {
       "classId": "43424",
@@ -6689,7 +6689,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 81,
+      "currentGrade": 84,
       "assignmentName": "Meiosis - Amobea Sisters Edpuz",
       "dateDue": "02/26/2026",
       "dueDate": "02/26/2026",
@@ -6697,7 +6697,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.731Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1582622:43424:1396": {
       "classId": "43424",
@@ -6706,7 +6706,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 81,
+      "currentGrade": 84,
       "assignmentName": "Cell cycle and Mitosis",
       "dateDue": "02/26/2026",
       "dueDate": "02/26/2026",
@@ -6714,7 +6714,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.731Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1581886:43424:1396": {
       "classId": "43424",
@@ -6723,7 +6723,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 81,
+      "currentGrade": 84,
       "assignmentName": "Cell Size Lab",
       "dateDue": "02/24/2026",
       "dueDate": "02/24/2026",
@@ -6731,7 +6731,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.731Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1580281:43424:1396": {
       "classId": "43424",
@@ -6740,7 +6740,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 81,
+      "currentGrade": 84,
       "assignmentName": "Animal/Plant Mitosis",
       "dateDue": "02/24/2026",
       "dueDate": "02/24/2026",
@@ -6748,7 +6748,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.731Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1571003:43424:1396": {
       "classId": "43424",
@@ -6757,7 +6757,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 81,
+      "currentGrade": 84,
       "assignmentName": "Types of Reproduction-EdPuzzle",
       "dateDue": "02/23/2026",
       "dueDate": "02/23/2026",
@@ -6765,7 +6765,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.731Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1571008:43424:1396": {
       "classId": "43424",
@@ -6774,7 +6774,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 81,
+      "currentGrade": 84,
       "assignmentName": "Tyoes of reproduction SG",
       "dateDue": "02/06/2026",
       "dueDate": "02/06/2026",
@@ -6782,7 +6782,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.731Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1569283:43424:1396": {
       "classId": "43424",
@@ -6791,7 +6791,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 81,
+      "currentGrade": 84,
       "assignmentName": "Notes fermentation",
       "dateDue": "02/06/2026",
       "dueDate": "02/06/2026",
@@ -6799,7 +6799,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.731Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1569548:43424:1396": {
       "classId": "43424",
@@ -6808,7 +6808,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 81,
+      "currentGrade": 84,
       "assignmentName": "Fermentation Quiz",
       "dateDue": "02/04/2026",
       "dueDate": "02/04/2026",
@@ -6816,7 +6816,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.732Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1569712:43424:1396": {
       "classId": "43424",
@@ -6825,7 +6825,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 81,
+      "currentGrade": 84,
       "assignmentName": "Collins Vocab Cards",
       "dateDue": "02/04/2026",
       "dueDate": "02/04/2026",
@@ -6833,7 +6833,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.732Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1569288:43424:1396": {
       "classId": "43424",
@@ -6842,7 +6842,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 81,
+      "currentGrade": 84,
       "assignmentName": "Fermentation -",
       "dateDue": "02/03/2026",
       "dueDate": "02/03/2026",
@@ -6850,7 +6850,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.732Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1563601:43424:1396": {
       "classId": "43424",
@@ -6859,7 +6859,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 81,
+      "currentGrade": 84,
       "assignmentName": "Attendance FID",
       "dateDue": "02/03/2026",
       "dueDate": "02/03/2026",
@@ -6867,7 +6867,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.732Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1556975:43424:1396": {
       "classId": "43424",
@@ -6876,7 +6876,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 81,
+      "currentGrade": 84,
       "assignmentName": "Green Solar Cells:Photo Synthe",
       "dateDue": "01/26/2026",
       "dueDate": "01/26/2026",
@@ -6884,7 +6884,7 @@
       "totalPoints": 0,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.732Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1586409:45003:1396": {
       "classId": "45003",
@@ -6901,7 +6901,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.732Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1582909:45003:1396": {
       "classId": "45003",
@@ -6918,7 +6918,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.732Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1581931:45003:1396": {
       "classId": "45003",
@@ -6935,7 +6935,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.732Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1579108:45003:1396": {
       "classId": "45003",
@@ -6952,7 +6952,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.732Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1579093:45003:1396": {
       "classId": "45003",
@@ -6969,7 +6969,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.732Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1572560:45003:1396": {
       "classId": "45003",
@@ -6986,7 +6986,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.732Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1571019:45003:1396": {
       "classId": "45003",
@@ -7003,7 +7003,7 @@
       "totalPoints": 30,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.732Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1569537:45003:1396": {
       "classId": "45003",
@@ -7020,7 +7020,7 @@
       "totalPoints": 0,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.732Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1569532:45003:1396": {
       "classId": "45003",
@@ -7037,7 +7037,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.732Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1587356:43341:1396": {
       "classId": "43341",
@@ -7054,7 +7054,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.732Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1588921:43341:1396": {
       "classId": "43341",
@@ -7071,7 +7071,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.732Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1584345:43341:1396": {
       "classId": "43341",
@@ -7088,7 +7088,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.732Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1584351:43341:1396": {
       "classId": "43341",
@@ -7105,7 +7105,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.732Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1584785:43341:1396": {
       "classId": "43341",
@@ -7122,7 +7122,7 @@
       "totalPoints": 25,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.732Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1579291:43341:1396": {
       "classId": "43341",
@@ -7139,7 +7139,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.732Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1575257:43341:1396": {
       "classId": "43341",
@@ -7156,7 +7156,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.732Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1575293:43341:1396": {
       "classId": "43341",
@@ -7173,7 +7173,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.732Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1571637:43341:1396": {
       "classId": "43341",
@@ -7190,7 +7190,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.732Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1566638:43341:1396": {
       "classId": "43341",
@@ -7207,7 +7207,7 @@
       "totalPoints": 18,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.733Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1562472:43341:1396": {
       "classId": "43341",
@@ -7224,7 +7224,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.733Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1589306:44979:1396": {
       "classId": "44979",
@@ -7233,7 +7233,7 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 87,
+      "currentGrade": 88,
       "assignmentName": "Hades Trading Card",
       "dateDue": "01/23/2026",
       "dueDate": "01/23/2026",
@@ -7241,7 +7241,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.733Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1584248:44979:1396": {
       "classId": "44979",
@@ -7250,7 +7250,7 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 87,
+      "currentGrade": 88,
       "assignmentName": "Poseidon Trading Card",
       "dateDue": "03/02/2026",
       "dueDate": "03/02/2026",
@@ -7258,7 +7258,7 @@
       "totalPoints": 16,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.733Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1579146:44979:1396": {
       "classId": "44979",
@@ -7267,7 +7267,7 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 87,
+      "currentGrade": 88,
       "assignmentName": "Poseidon Myth Questions",
       "dateDue": "02/23/2026",
       "dueDate": "02/23/2026",
@@ -7275,7 +7275,7 @@
       "totalPoints": 35,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.733Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1576002:44979:1396": {
       "classId": "44979",
@@ -7284,7 +7284,7 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 87,
+      "currentGrade": 88,
       "assignmentName": "Athena Worksheet",
       "dateDue": "02/20/2026",
       "dueDate": "02/20/2026",
@@ -7292,7 +7292,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.733Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1576777:44979:1396": {
       "classId": "44979",
@@ -7301,7 +7301,7 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 87,
+      "currentGrade": 88,
       "assignmentName": "Zeus, Hera, Athena Guided Qs",
       "dateDue": "02/12/2026",
       "dueDate": "02/12/2026",
@@ -7309,7 +7309,7 @@
       "totalPoints": 16,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.733Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1571246:44979:1396": {
       "classId": "44979",
@@ -7318,7 +7318,7 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 87,
+      "currentGrade": 88,
       "assignmentName": "All About Hera Worksheet",
       "dateDue": "02/12/2026",
       "dueDate": "02/12/2026",
@@ -7326,7 +7326,7 @@
       "totalPoints": 18,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.733Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1568561:44979:1396": {
       "classId": "44979",
@@ -7335,7 +7335,7 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 87,
+      "currentGrade": 88,
       "assignmentName": "Zeus Trading Card",
       "dateDue": "02/04/2026",
       "dueDate": "02/04/2026",
@@ -7343,7 +7343,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.733Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1568559:44979:1396": {
       "classId": "44979",
@@ -7352,7 +7352,7 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 87,
+      "currentGrade": 88,
       "assignmentName": "All About Zeus Worksheet",
       "dateDue": "02/03/2026",
       "dueDate": "02/03/2026",
@@ -7360,7 +7360,7 @@
       "totalPoints": 35,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.733Z"
+      "cachedAt": "2026-03-12T18:16:12.230Z"
     },
     "1590131:43049:1396": {
       "classId": "43049",
@@ -7377,7 +7377,7 @@
       "totalPoints": 23,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.733Z"
+      "cachedAt": "2026-03-12T18:16:12.230Z"
     },
     "1572198:43162:1396": {
       "classId": "43162",
@@ -7386,7 +7386,7 @@
       "className": "ENGLISH 10",
       "teacher": "Megan Leone",
       "period": "1",
-      "currentGrade": 63,
+      "currentGrade": 65,
       "assignmentName": "Comma Quiz & Comma Rules Slides",
       "dateDue": "02/09/2026",
       "dueDate": "02/09/2026",
@@ -7394,7 +7394,7 @@
       "totalPoints": 22,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.730Z"
+      "cachedAt": "2026-03-12T18:16:12.117Z"
     },
     "1591631:43424:1396": {
       "classId": "43424",
@@ -7403,7 +7403,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 81,
+      "currentGrade": 84,
       "assignmentName": "DNA Structure",
       "dateDue": "03/10/2026",
       "dueDate": "03/10/2026",
@@ -7411,7 +7411,7 @@
       "totalPoints": 13,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.730Z"
+      "cachedAt": "2026-03-12T18:16:12.228Z"
     },
     "1588131:43424:1396": {
       "classId": "43424",
@@ -7420,7 +7420,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 81,
+      "currentGrade": 84,
       "assignmentName": "Cancer - Cell cycle scenario Q",
       "dateDue": "03/10/2026",
       "dueDate": "03/10/2026",
@@ -7428,7 +7428,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.730Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1587245:43424:1396": {
       "classId": "43424",
@@ -7437,7 +7437,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 81,
+      "currentGrade": 84,
       "assignmentName": "HeLa Cancer Cells",
       "dateDue": "03/05/2026",
       "dueDate": "03/05/2026",
@@ -7445,7 +7445,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.730Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1585380:43424:1396": {
       "classId": "43424",
@@ -7454,7 +7454,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 81,
+      "currentGrade": 84,
       "assignmentName": "Cell Division -mitosis/Meiosis",
       "dateDue": "03/03/2026",
       "dueDate": "03/03/2026",
@@ -7462,7 +7462,7 @@
       "totalPoints": 0,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.731Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1562766:43424:1396": {
       "classId": "43424",
@@ -7471,7 +7471,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 81,
+      "currentGrade": 84,
       "assignmentName": "Attendende Live Google meet",
       "dateDue": "02/27/2026",
       "dueDate": "02/27/2026",
@@ -7479,7 +7479,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.732Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1582904:45003:1396": {
       "classId": "45003",
@@ -7496,7 +7496,7 @@
       "totalPoints": 0,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.732Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1588073:43341:1396": {
       "classId": "43341",
@@ -7513,7 +7513,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.732Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1589303:44979:1396": {
       "classId": "44979",
@@ -7522,7 +7522,7 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 87,
+      "currentGrade": 88,
       "assignmentName": "Map of the Underworld",
       "dateDue": "03/02/2026",
       "dueDate": "03/02/2026",
@@ -7530,7 +7530,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.733Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1590922:43049:1396": {
       "classId": "43049",
@@ -7547,7 +7547,7 @@
       "totalPoints": 16,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.733Z"
+      "cachedAt": "2026-03-12T18:16:12.230Z"
     },
     "1591658:44615:1396": {
       "classId": "44615",
@@ -7564,7 +7564,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.852Z"
+      "cachedAt": "2026-03-12T18:16:12.231Z"
     },
     "1590689:44615:1396": {
       "classId": "44615",
@@ -7581,7 +7581,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.852Z"
+      "cachedAt": "2026-03-12T18:16:12.231Z"
     },
     "1586023:43424:1396": {
       "classId": "43424",
@@ -7590,7 +7590,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 81,
+      "currentGrade": 84,
       "assignmentName": "Fid day meet 3/3",
       "dateDue": "03/03/2026",
       "dueDate": "03/03/2026",
@@ -7598,7 +7598,7 @@
       "totalPoints": 22,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.731Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1583426:43424:1396": {
       "classId": "43424",
@@ -7607,7 +7607,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 81,
+      "currentGrade": 84,
       "assignmentName": "Meiosis Microslide Lab",
       "dateDue": "02/27/2026",
       "dueDate": "02/27/2026",
@@ -7615,7 +7615,7 @@
       "totalPoints": 22,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.731Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1590767:43666:1396": {
       "classId": "43666",
@@ -7632,7 +7632,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.734Z"
+      "cachedAt": "2026-03-12T18:16:12.230Z"
     },
     "1584260:43424:1396": {
       "classId": "43424",
@@ -7641,7 +7641,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 81,
+      "currentGrade": 84,
       "assignmentName": "Meiosis Lab - Microviewer",
       "dateDue": "02/27/2026",
       "dueDate": "02/27/2026",
@@ -7649,7 +7649,7 @@
       "totalPoints": 22,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.731Z"
+      "cachedAt": "2026-03-12T18:16:12.229Z"
     },
     "1592729:44463:1396": {
       "classId": "44463",
@@ -7658,7 +7658,7 @@
       "className": "SOPHOMORE SEMINAR",
       "teacher": "Victoria Good",
       "period": "0",
-      "currentGrade": 70,
+      "currentGrade": 75,
       "assignmentName": "3/9-3/12 Part.",
       "dateDue": "03/12/2026",
       "dueDate": "03/12/2026",
@@ -7666,7 +7666,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:00.045Z"
+      "cachedAt": "2026-03-12T18:16:02.600Z"
     },
     "1592730:44463:1396": {
       "classId": "44463",
@@ -7675,7 +7675,7 @@
       "className": "SOPHOMORE SEMINAR",
       "teacher": "Victoria Good",
       "period": "0",
-      "currentGrade": 70,
+      "currentGrade": 75,
       "assignmentName": "First Aid Worksheet",
       "dateDue": "03/12/2026",
       "dueDate": "03/12/2026",
@@ -7683,7 +7683,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:00.157Z"
+      "cachedAt": "2026-03-12T18:16:02.601Z"
     },
     "1588105:43162:1396": {
       "classId": "43162",
@@ -7692,7 +7692,7 @@
       "className": "ENGLISH 10",
       "teacher": "Megan Leone",
       "period": "1",
-      "currentGrade": 63,
+      "currentGrade": 65,
       "assignmentName": "Packet 2",
       "dateDue": "03/05/2026",
       "dueDate": "03/05/2026",
@@ -7700,7 +7700,7 @@
       "totalPoints": 22,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.729Z"
+      "cachedAt": "2026-03-12T18:16:12.117Z"
     },
     "1592471:44615:1396": {
       "classId": "44615",
@@ -7717,7 +7717,41 @@
       "totalPoints": 22,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T12:14:16.852Z"
+      "cachedAt": "2026-03-12T18:16:12.231Z"
+    },
+    "1590653:43162:1396": {
+      "classId": "43162",
+      "assignmentId": "1590653",
+      "studentId": "1396",
+      "className": "ENGLISH 10",
+      "teacher": "Megan Leone",
+      "period": "1",
+      "currentGrade": 65,
+      "assignmentName": "IXL 3/9",
+      "dateDue": "03/09/2026",
+      "dueDate": "03/09/2026",
+      "earnedPoints": 10,
+      "totalPoints": 10,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-03-12T18:16:12.116Z"
+    },
+    "1593184:43424:1396": {
+      "classId": "43424",
+      "assignmentId": "1593184",
+      "studentId": "1396",
+      "className": "BIOLOGY            2",
+      "teacher": "Denise Condo",
+      "period": "2",
+      "currentGrade": 84,
+      "assignmentName": "DNA/DNA replication K'Nex",
+      "dateDue": "03/09/2026",
+      "dueDate": "03/09/2026",
+      "earnedPoints": 10,
+      "totalPoints": 10,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-03-12T18:16:12.228Z"
     }
   }
 }
