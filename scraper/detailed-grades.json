@@ -1,16 +1,32 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-12T00:41:54.744Z",
+    "scrapedAt": "2026-03-12T12:14:19.196Z",
     "totalClasses": 9,
-    "totalAssignments": 126
+    "totalAssignments": 128
   },
   "classes": [
     {
       "className": "SOPHOMORE SEMINAR",
       "teacher": "Victoria Good",
       "period": "0",
-      "currentGrade": 67,
+      "currentGrade": 70,
       "assignments": [
+        {
+          "name": "3/9-3/12 Part.",
+          "dueDate": "03/12/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "First Aid Worksheet",
+          "dueDate": "03/12/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "2/2-2/6 Part.",
           "dueDate": "03/06/2026",
@@ -77,19 +93,19 @@
       "assignments": [
         {
           "name": "IXL 3/9",
-          "dueDate": "03/09/2026",
+          "dueDate": "03/12/2026",
           "earnedPoints": 0,
-          "totalPoints": 10,
+          "totalPoints": 25,
           "weight": 1,
           "graded": false
         },
         {
           "name": "Packet 2",
-          "dueDate": "03/09/2026",
-          "earnedPoints": 0,
-          "totalPoints": 10,
+          "dueDate": "03/05/2026",
+          "earnedPoints": 11,
+          "totalPoints": 22,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "MP 2 Constructed Response",
@@ -921,15 +937,15 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 83,
+      "currentGrade": 84,
       "assignments": [
         {
           "name": "Agricultural Rev. Simulation",
           "dueDate": "03/11/2026",
-          "earnedPoints": 0,
-          "totalPoints": 10,
+          "earnedPoints": 11,
+          "totalPoints": 22,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Social Structure Day 2 Notes",

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "03/11/2026, 08:41 PM",
+    "last_updated": "03/12/2026, 08:14 AM",
     "most_recent_date": "3/12/2026",
     "total_classes": 9
   },
@@ -13,10 +13,10 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q3_grade": 67,
-      "q3_letter_grade": "D",
-      "current_grade": 67,
-      "letter_grade": "D"
+      "q3_grade": 70,
+      "q3_letter_grade": "C",
+      "current_grade": 70,
+      "letter_grade": "C"
     },
     {
       "class_name": "English 10",
@@ -117,9 +117,9 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q3_grade": 83,
+      "q3_grade": 84,
       "q3_letter_grade": "B",
-      "current_grade": 83,
+      "current_grade": 84,
       "letter_grade": "B"
     }
   ],
@@ -231,7 +231,7 @@
       "3/9/2026": 67,
       "3/10/2026": 67,
       "3/11/2026": 67,
-      "3/12/2026": 67
+      "3/12/2026": 70
     },
     "English 10": {
       "11/24/2025": 75,
@@ -973,7 +973,7 @@
       "3/9/2026": 82,
       "3/10/2026": 83,
       "3/11/2026": 83,
-      "3/12/2026": 83
+      "3/12/2026": 84
     },
     "Food Challenges": {
       "1/23/2026": 0,
@@ -1129,7 +1129,7 @@
       "3/12/2026": 87
     }
   },
-  "overall_average": 75,
+  "overall_average": 76,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -1239,7 +1239,7 @@
     "3/9/2026": 75,
     "3/10/2026": 75,
     "3/11/2026": 75,
-    "3/12/2026": 75
+    "3/12/2026": 76
   },
   "streak": 0,
   "streak_history": {
