@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-12T18:16:14.365Z",
+  "updatedAt": "2026-03-13T00:46:53.141Z",
   "assignments": {
     "1561854:44463:1396": {
       "classId": "44463",
@@ -16,7 +16,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:02.601Z"
+      "cachedAt": "2026-03-13T00:46:50.791Z"
     },
     "1557583:44463:1396": {
       "classId": "44463",
@@ -3620,7 +3620,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.230Z"
+      "cachedAt": "2026-03-13T00:46:50.795Z"
     },
     "1561998:43049:1396": {
       "classId": "43049",
@@ -3637,7 +3637,7 @@
       "totalPoints": 30,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.230Z"
+      "cachedAt": "2026-03-13T00:46:50.795Z"
     },
     "1556957:43049:1396": {
       "classId": "43049",
@@ -4215,7 +4215,7 @@
       "totalPoints": 100,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.230Z"
+      "cachedAt": "2026-03-13T00:46:50.796Z"
     },
     "1564116:43666:1396": {
       "classId": "43666",
@@ -4232,7 +4232,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.230Z"
+      "cachedAt": "2026-03-13T00:46:50.796Z"
     },
     "1564122:43666:1396": {
       "classId": "43666",
@@ -4249,7 +4249,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.230Z"
+      "cachedAt": "2026-03-13T00:46:50.796Z"
     },
     "1564125:43666:1396": {
       "classId": "43666",
@@ -4266,7 +4266,7 @@
       "totalPoints": 18,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.230Z"
+      "cachedAt": "2026-03-13T00:46:50.796Z"
     },
     "1558377:43666:1396": {
       "classId": "43666",
@@ -5558,7 +5558,7 @@
       "totalPoints": 12,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.231Z"
+      "cachedAt": "2026-03-13T00:46:50.797Z"
     },
     "1562839:44615:1396": {
       "classId": "44615",
@@ -5575,7 +5575,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.231Z"
+      "cachedAt": "2026-03-13T00:46:50.797Z"
     },
     "1561967:44615:1396": {
       "classId": "44615",
@@ -5592,7 +5592,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.231Z"
+      "cachedAt": "2026-03-13T00:46:50.797Z"
     },
     "1561441:44615:1396": {
       "classId": "44615",
@@ -5609,7 +5609,7 @@
       "totalPoints": 18,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.231Z"
+      "cachedAt": "2026-03-13T00:46:50.797Z"
     },
     "1556821:43162:1396": {
       "classId": "43162",
@@ -5677,7 +5677,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.230Z"
+      "cachedAt": "2026-03-13T00:46:50.795Z"
     },
     "1559402:43049:1396": {
       "classId": "43049",
@@ -5762,7 +5762,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:02.601Z"
+      "cachedAt": "2026-03-13T00:46:50.791Z"
     },
     "1572012:43049:1396": {
       "classId": "43049",
@@ -5779,7 +5779,7 @@
       "totalPoints": 23,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.230Z"
+      "cachedAt": "2026-03-13T00:46:50.795Z"
     },
     "1571502:44615:1396": {
       "classId": "44615",
@@ -5796,7 +5796,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.231Z"
+      "cachedAt": "2026-03-13T00:46:50.797Z"
     },
     "1570062:44615:1396": {
       "classId": "44615",
@@ -5813,7 +5813,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.231Z"
+      "cachedAt": "2026-03-13T00:46:50.797Z"
     },
     "1569610:44615:1396": {
       "classId": "44615",
@@ -5830,7 +5830,7 @@
       "totalPoints": 7,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.231Z"
+      "cachedAt": "2026-03-13T00:46:50.797Z"
     },
     "1568621:44615:1396": {
       "classId": "44615",
@@ -5847,7 +5847,7 @@
       "totalPoints": 7,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.231Z"
+      "cachedAt": "2026-03-13T00:46:50.797Z"
     },
     "1567708:44615:1396": {
       "classId": "44615",
@@ -5864,7 +5864,7 @@
       "totalPoints": 18,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.231Z"
+      "cachedAt": "2026-03-13T00:46:50.797Z"
     },
     "1566577:44615:1396": {
       "classId": "44615",
@@ -5881,7 +5881,7 @@
       "totalPoints": 21,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.231Z"
+      "cachedAt": "2026-03-13T00:46:50.797Z"
     },
     "1569986:43049:1396": {
       "classId": "43049",
@@ -5898,7 +5898,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.230Z"
+      "cachedAt": "2026-03-13T00:46:50.795Z"
     },
     "1568236:43049:1396": {
       "classId": "43049",
@@ -5915,7 +5915,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.230Z"
+      "cachedAt": "2026-03-13T00:46:50.795Z"
     },
     "1573050:44615:1396": {
       "classId": "44615",
@@ -5932,7 +5932,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.231Z"
+      "cachedAt": "2026-03-13T00:46:50.796Z"
     },
     "1572388:44615:1396": {
       "classId": "44615",
@@ -5949,7 +5949,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.231Z"
+      "cachedAt": "2026-03-13T00:46:50.797Z"
     },
     "1567640:43666:1396": {
       "classId": "43666",
@@ -5966,7 +5966,7 @@
       "totalPoints": 19,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.230Z"
+      "cachedAt": "2026-03-13T00:46:50.796Z"
     },
     "1574711:43049:1396": {
       "classId": "43049",
@@ -5983,7 +5983,7 @@
       "totalPoints": 26,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.230Z"
+      "cachedAt": "2026-03-13T00:46:50.795Z"
     },
     "1575490:43666:1396": {
       "classId": "43666",
@@ -6000,7 +6000,7 @@
       "totalPoints": 26,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.230Z"
+      "cachedAt": "2026-03-13T00:46:50.796Z"
     },
     "1576644:44463:1396": {
       "classId": "44463",
@@ -6017,7 +6017,7 @@
       "totalPoints": 45,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:02.601Z"
+      "cachedAt": "2026-03-13T00:46:50.791Z"
     },
     "1576638:44463:1396": {
       "classId": "44463",
@@ -6034,7 +6034,7 @@
       "totalPoints": 45,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:02.601Z"
+      "cachedAt": "2026-03-13T00:46:50.791Z"
     },
     "1577654:43049:1396": {
       "classId": "43049",
@@ -6051,7 +6051,7 @@
       "totalPoints": 25,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.230Z"
+      "cachedAt": "2026-03-13T00:46:50.795Z"
     },
     "1579005:43666:1396": {
       "classId": "43666",
@@ -6068,7 +6068,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.230Z"
+      "cachedAt": "2026-03-13T00:46:50.796Z"
     },
     "1578503:43049:1396": {
       "classId": "43049",
@@ -6085,7 +6085,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.230Z"
+      "cachedAt": "2026-03-13T00:46:50.795Z"
     },
     "1579004:43666:1396": {
       "classId": "43666",
@@ -6102,7 +6102,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.230Z"
+      "cachedAt": "2026-03-13T00:46:50.796Z"
     },
     "1579153:43666:1396": {
       "classId": "43666",
@@ -6119,7 +6119,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.230Z"
+      "cachedAt": "2026-03-13T00:46:50.796Z"
     },
     "1578541:43049:1396": {
       "classId": "43049",
@@ -6136,7 +6136,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.230Z"
+      "cachedAt": "2026-03-13T00:46:50.795Z"
     },
     "1580248:43666:1396": {
       "classId": "43666",
@@ -6153,7 +6153,7 @@
       "totalPoints": 33,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.230Z"
+      "cachedAt": "2026-03-13T00:46:50.796Z"
     },
     "1578652:44615:1396": {
       "classId": "44615",
@@ -6170,7 +6170,7 @@
       "totalPoints": 33,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.231Z"
+      "cachedAt": "2026-03-13T00:46:50.796Z"
     },
     "1580260:43666:1396": {
       "classId": "43666",
@@ -6187,7 +6187,7 @@
       "totalPoints": 12,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.230Z"
+      "cachedAt": "2026-03-13T00:46:50.796Z"
     },
     "1582828:44463:1396": {
       "classId": "44463",
@@ -6204,7 +6204,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:02.601Z"
+      "cachedAt": "2026-03-13T00:46:50.791Z"
     },
     "1583831:43666:1396": {
       "classId": "43666",
@@ -6221,7 +6221,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.230Z"
+      "cachedAt": "2026-03-13T00:46:50.796Z"
     },
     "1583829:43666:1396": {
       "classId": "43666",
@@ -6238,7 +6238,7 @@
       "totalPoints": 24,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.230Z"
+      "cachedAt": "2026-03-13T00:46:50.796Z"
     },
     "1583962:44463:1396": {
       "classId": "44463",
@@ -6255,7 +6255,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:02.601Z"
+      "cachedAt": "2026-03-13T00:46:50.790Z"
     },
     "1584117:44615:1396": {
       "classId": "44615",
@@ -6272,7 +6272,7 @@
       "totalPoints": 35,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.231Z"
+      "cachedAt": "2026-03-13T00:46:50.796Z"
     },
     "1584309:44615:1396": {
       "classId": "44615",
@@ -6306,7 +6306,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.231Z"
+      "cachedAt": "2026-03-13T00:46:50.796Z"
     },
     "1588659:43049:1396": {
       "classId": "43049",
@@ -6323,7 +6323,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.230Z"
+      "cachedAt": "2026-03-13T00:46:50.795Z"
     },
     "1588527:43666:1396": {
       "classId": "43666",
@@ -6340,7 +6340,7 @@
       "totalPoints": 18,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.230Z"
+      "cachedAt": "2026-03-13T00:46:50.795Z"
     },
     "1588529:43666:1396": {
       "classId": "43666",
@@ -6357,7 +6357,7 @@
       "totalPoints": 18,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.230Z"
+      "cachedAt": "2026-03-13T00:46:50.796Z"
     },
     "1587361:44615:1396": {
       "classId": "44615",
@@ -6374,7 +6374,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.231Z"
+      "cachedAt": "2026-03-13T00:46:50.796Z"
     },
     "1589483:44463:1396": {
       "classId": "44463",
@@ -6391,7 +6391,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:02.601Z"
+      "cachedAt": "2026-03-13T00:46:50.790Z"
     },
     "1584883:43049:1396": {
       "classId": "43049",
@@ -6408,7 +6408,7 @@
       "totalPoints": 16,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.230Z"
+      "cachedAt": "2026-03-13T00:46:50.795Z"
     },
     "1584889:43049:1396": {
       "classId": "43049",
@@ -6425,7 +6425,7 @@
       "totalPoints": 16,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.230Z"
+      "cachedAt": "2026-03-13T00:46:50.795Z"
     },
     "1584895:43049:1396": {
       "classId": "43049",
@@ -6442,7 +6442,7 @@
       "totalPoints": 16,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.230Z"
+      "cachedAt": "2026-03-13T00:46:50.795Z"
     },
     "1589602:43666:1396": {
       "classId": "43666",
@@ -6459,7 +6459,7 @@
       "totalPoints": 16,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.230Z"
+      "cachedAt": "2026-03-13T00:46:50.795Z"
     },
     "1589882:44615:1396": {
       "classId": "44615",
@@ -6476,7 +6476,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.231Z"
+      "cachedAt": "2026-03-13T00:46:50.796Z"
     },
     "1588493:43162:1396": {
       "classId": "43162",
@@ -6493,7 +6493,7 @@
       "totalPoints": 22,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.117Z"
+      "cachedAt": "2026-03-13T00:46:50.791Z"
     },
     "1586526:43162:1396": {
       "classId": "43162",
@@ -6510,7 +6510,7 @@
       "totalPoints": 23,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.117Z"
+      "cachedAt": "2026-03-13T00:46:50.791Z"
     },
     "1577271:43162:1396": {
       "classId": "43162",
@@ -6527,7 +6527,7 @@
       "totalPoints": 23,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.117Z"
+      "cachedAt": "2026-03-13T00:46:50.791Z"
     },
     "1576168:43162:1396": {
       "classId": "43162",
@@ -6544,7 +6544,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.117Z"
+      "cachedAt": "2026-03-13T00:46:50.792Z"
     },
     "1574257:43162:1396": {
       "classId": "43162",
@@ -6561,7 +6561,7 @@
       "totalPoints": 26,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.117Z"
+      "cachedAt": "2026-03-13T00:46:50.792Z"
     },
     "1574427:43162:1396": {
       "classId": "43162",
@@ -6578,7 +6578,7 @@
       "totalPoints": 26,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.117Z"
+      "cachedAt": "2026-03-13T00:46:50.792Z"
     },
     "1572226:43162:1396": {
       "classId": "43162",
@@ -6595,7 +6595,7 @@
       "totalPoints": 26,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.117Z"
+      "cachedAt": "2026-03-13T00:46:50.792Z"
     },
     "1571347:43162:1396": {
       "classId": "43162",
@@ -6612,7 +6612,7 @@
       "totalPoints": 14,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.117Z"
+      "cachedAt": "2026-03-13T00:46:50.792Z"
     },
     "1566141:43162:1396": {
       "classId": "43162",
@@ -6629,7 +6629,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.117Z"
+      "cachedAt": "2026-03-13T00:46:50.792Z"
     },
     "1589473:43424:1396": {
       "classId": "43424",
@@ -6646,7 +6646,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.792Z"
     },
     "1587259:43424:1396": {
       "classId": "43424",
@@ -6663,7 +6663,7 @@
       "totalPoints": 0,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.792Z"
     },
     "1583414:43424:1396": {
       "classId": "43424",
@@ -6680,7 +6680,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.792Z"
     },
     "1583422:43424:1396": {
       "classId": "43424",
@@ -6697,7 +6697,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.793Z"
     },
     "1582622:43424:1396": {
       "classId": "43424",
@@ -6714,7 +6714,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.793Z"
     },
     "1581886:43424:1396": {
       "classId": "43424",
@@ -6731,7 +6731,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.793Z"
     },
     "1580281:43424:1396": {
       "classId": "43424",
@@ -6748,7 +6748,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.793Z"
     },
     "1571003:43424:1396": {
       "classId": "43424",
@@ -6765,7 +6765,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.793Z"
     },
     "1571008:43424:1396": {
       "classId": "43424",
@@ -6782,7 +6782,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.793Z"
     },
     "1569283:43424:1396": {
       "classId": "43424",
@@ -6799,7 +6799,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.793Z"
     },
     "1569548:43424:1396": {
       "classId": "43424",
@@ -6816,7 +6816,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.793Z"
     },
     "1569712:43424:1396": {
       "classId": "43424",
@@ -6833,7 +6833,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.793Z"
     },
     "1569288:43424:1396": {
       "classId": "43424",
@@ -6850,7 +6850,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.793Z"
     },
     "1563601:43424:1396": {
       "classId": "43424",
@@ -6867,7 +6867,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.793Z"
     },
     "1556975:43424:1396": {
       "classId": "43424",
@@ -6884,7 +6884,7 @@
       "totalPoints": 0,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.793Z"
     },
     "1586409:45003:1396": {
       "classId": "45003",
@@ -6901,7 +6901,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.793Z"
     },
     "1582909:45003:1396": {
       "classId": "45003",
@@ -6918,7 +6918,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.793Z"
     },
     "1581931:45003:1396": {
       "classId": "45003",
@@ -6935,7 +6935,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.793Z"
     },
     "1579108:45003:1396": {
       "classId": "45003",
@@ -6952,7 +6952,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.793Z"
     },
     "1579093:45003:1396": {
       "classId": "45003",
@@ -6969,7 +6969,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.793Z"
     },
     "1572560:45003:1396": {
       "classId": "45003",
@@ -6986,7 +6986,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.793Z"
     },
     "1571019:45003:1396": {
       "classId": "45003",
@@ -7003,7 +7003,7 @@
       "totalPoints": 30,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.793Z"
     },
     "1569537:45003:1396": {
       "classId": "45003",
@@ -7020,7 +7020,7 @@
       "totalPoints": 0,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.793Z"
     },
     "1569532:45003:1396": {
       "classId": "45003",
@@ -7037,7 +7037,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.794Z"
     },
     "1587356:43341:1396": {
       "classId": "43341",
@@ -7054,7 +7054,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.794Z"
     },
     "1588921:43341:1396": {
       "classId": "43341",
@@ -7071,7 +7071,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.794Z"
     },
     "1584345:43341:1396": {
       "classId": "43341",
@@ -7088,7 +7088,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.794Z"
     },
     "1584351:43341:1396": {
       "classId": "43341",
@@ -7105,7 +7105,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.794Z"
     },
     "1584785:43341:1396": {
       "classId": "43341",
@@ -7122,7 +7122,7 @@
       "totalPoints": 25,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.794Z"
     },
     "1579291:43341:1396": {
       "classId": "43341",
@@ -7139,7 +7139,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.794Z"
     },
     "1575257:43341:1396": {
       "classId": "43341",
@@ -7156,7 +7156,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.794Z"
     },
     "1575293:43341:1396": {
       "classId": "43341",
@@ -7173,7 +7173,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.794Z"
     },
     "1571637:43341:1396": {
       "classId": "43341",
@@ -7190,7 +7190,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.794Z"
     },
     "1566638:43341:1396": {
       "classId": "43341",
@@ -7207,7 +7207,7 @@
       "totalPoints": 18,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.794Z"
     },
     "1562472:43341:1396": {
       "classId": "43341",
@@ -7224,7 +7224,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.794Z"
     },
     "1589306:44979:1396": {
       "classId": "44979",
@@ -7241,7 +7241,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.794Z"
     },
     "1584248:44979:1396": {
       "classId": "44979",
@@ -7258,7 +7258,7 @@
       "totalPoints": 16,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.794Z"
     },
     "1579146:44979:1396": {
       "classId": "44979",
@@ -7275,7 +7275,7 @@
       "totalPoints": 35,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.794Z"
     },
     "1576002:44979:1396": {
       "classId": "44979",
@@ -7292,7 +7292,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.794Z"
     },
     "1576777:44979:1396": {
       "classId": "44979",
@@ -7309,7 +7309,7 @@
       "totalPoints": 16,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.794Z"
     },
     "1571246:44979:1396": {
       "classId": "44979",
@@ -7326,7 +7326,7 @@
       "totalPoints": 18,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.794Z"
     },
     "1568561:44979:1396": {
       "classId": "44979",
@@ -7343,7 +7343,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.795Z"
     },
     "1568559:44979:1396": {
       "classId": "44979",
@@ -7360,7 +7360,7 @@
       "totalPoints": 35,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.230Z"
+      "cachedAt": "2026-03-13T00:46:50.795Z"
     },
     "1590131:43049:1396": {
       "classId": "43049",
@@ -7377,7 +7377,7 @@
       "totalPoints": 23,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.230Z"
+      "cachedAt": "2026-03-13T00:46:50.795Z"
     },
     "1572198:43162:1396": {
       "classId": "43162",
@@ -7394,7 +7394,7 @@
       "totalPoints": 22,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.117Z"
+      "cachedAt": "2026-03-13T00:46:50.792Z"
     },
     "1591631:43424:1396": {
       "classId": "43424",
@@ -7411,7 +7411,7 @@
       "totalPoints": 13,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.228Z"
+      "cachedAt": "2026-03-13T00:46:50.792Z"
     },
     "1588131:43424:1396": {
       "classId": "43424",
@@ -7428,7 +7428,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.792Z"
     },
     "1587245:43424:1396": {
       "classId": "43424",
@@ -7445,7 +7445,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.792Z"
     },
     "1585380:43424:1396": {
       "classId": "43424",
@@ -7462,7 +7462,7 @@
       "totalPoints": 0,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.792Z"
     },
     "1562766:43424:1396": {
       "classId": "43424",
@@ -7479,7 +7479,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.793Z"
     },
     "1582904:45003:1396": {
       "classId": "45003",
@@ -7496,7 +7496,7 @@
       "totalPoints": 0,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.793Z"
     },
     "1588073:43341:1396": {
       "classId": "43341",
@@ -7513,7 +7513,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.794Z"
     },
     "1589303:44979:1396": {
       "classId": "44979",
@@ -7530,7 +7530,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.794Z"
     },
     "1590922:43049:1396": {
       "classId": "43049",
@@ -7547,7 +7547,7 @@
       "totalPoints": 16,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.230Z"
+      "cachedAt": "2026-03-13T00:46:50.795Z"
     },
     "1591658:44615:1396": {
       "classId": "44615",
@@ -7564,7 +7564,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.231Z"
+      "cachedAt": "2026-03-13T00:46:50.796Z"
     },
     "1590689:44615:1396": {
       "classId": "44615",
@@ -7581,7 +7581,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.231Z"
+      "cachedAt": "2026-03-13T00:46:50.796Z"
     },
     "1586023:43424:1396": {
       "classId": "43424",
@@ -7598,7 +7598,7 @@
       "totalPoints": 22,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.792Z"
     },
     "1583426:43424:1396": {
       "classId": "43424",
@@ -7615,7 +7615,7 @@
       "totalPoints": 22,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.792Z"
     },
     "1590767:43666:1396": {
       "classId": "43666",
@@ -7632,7 +7632,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.230Z"
+      "cachedAt": "2026-03-13T00:46:50.795Z"
     },
     "1584260:43424:1396": {
       "classId": "43424",
@@ -7649,7 +7649,7 @@
       "totalPoints": 22,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.229Z"
+      "cachedAt": "2026-03-13T00:46:50.792Z"
     },
     "1592729:44463:1396": {
       "classId": "44463",
@@ -7666,7 +7666,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:02.600Z"
+      "cachedAt": "2026-03-13T00:46:50.790Z"
     },
     "1592730:44463:1396": {
       "classId": "44463",
@@ -7683,7 +7683,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:02.601Z"
+      "cachedAt": "2026-03-13T00:46:50.790Z"
     },
     "1588105:43162:1396": {
       "classId": "43162",
@@ -7700,7 +7700,7 @@
       "totalPoints": 22,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.117Z"
+      "cachedAt": "2026-03-13T00:46:50.791Z"
     },
     "1592471:44615:1396": {
       "classId": "44615",
@@ -7717,7 +7717,7 @@
       "totalPoints": 22,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.231Z"
+      "cachedAt": "2026-03-13T00:46:50.796Z"
     },
     "1590653:43162:1396": {
       "classId": "43162",
@@ -7734,7 +7734,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.116Z"
+      "cachedAt": "2026-03-13T00:46:50.791Z"
     },
     "1593184:43424:1396": {
       "classId": "43424",
@@ -7751,7 +7751,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-12T18:16:12.228Z"
+      "cachedAt": "2026-03-13T00:46:50.792Z"
     }
   }
 }
