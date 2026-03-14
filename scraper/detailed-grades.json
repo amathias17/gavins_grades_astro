@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-13T12:14:19.825Z",
+    "scrapedAt": "2026-03-14T00:45:30.481Z",
     "totalClasses": 9,
-    "totalAssignments": 129
+    "totalAssignments": 133
   },
   "classes": [
     {
@@ -395,6 +395,38 @@
       "period": "3",
       "currentGrade": 51,
       "assignments": [
+        {
+          "name": "Food Safety Test",
+          "dueDate": "03/10/2026",
+          "earnedPoints": 0,
+          "totalPoints": 50,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Student Created Quiz",
+          "dueDate": "03/04/2026",
+          "earnedPoints": 0,
+          "totalPoints": 50,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "What Not To Do In the Kitchen",
+          "dueDate": "03/02/2026",
+          "earnedPoints": 0,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Crispy,Crunchy,Fruits & Veggie",
+          "dueDate": "02/27/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Storage Solutions WS",
           "dueDate": "01/22/2026",
