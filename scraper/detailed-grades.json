@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-16T12:20:50.863Z",
+    "scrapedAt": "2026-03-16T18:16:01.822Z",
     "totalClasses": 9,
-    "totalAssignments": 135
+    "totalAssignments": 136
   },
   "classes": [
     {
@@ -89,8 +89,16 @@
       "className": "ENGLISH 10",
       "teacher": "Megan Leone",
       "period": "1",
-      "currentGrade": 65,
+      "currentGrade": 66,
       "assignments": [
+        {
+          "name": "IXL 3/16",
+          "dueDate": "03/16/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "IXL 3/9",
           "dueDate": "03/09/2026",
@@ -393,23 +401,23 @@
       "className": "FOOD CHALLENGES",
       "teacher": "Misty Finnegan",
       "period": "3",
-      "currentGrade": 51,
+      "currentGrade": 56,
       "assignments": [
         {
           "name": "Food Safety Test",
-          "dueDate": "03/10/2026",
-          "earnedPoints": 0,
-          "totalPoints": 50,
+          "dueDate": "03/16/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Student Created Quiz",
           "dueDate": "03/04/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 34,
           "totalPoints": 50,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "What Not To Do In the Kitchen",
@@ -422,10 +430,10 @@
         {
           "name": "Crispy,Crunchy,Fruits & Veggie",
           "dueDate": "02/27/2026",
-          "earnedPoints": 0,
-          "totalPoints": 10,
+          "earnedPoints": 20,
+          "totalPoints": 20,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Storage Solutions WS",
@@ -518,10 +526,10 @@
         {
           "name": "Week 8 Participation",
           "dueDate": "03/12/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 20,
           "totalPoints": 20,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Architecture & Design Vocabulary Quiz #1",
