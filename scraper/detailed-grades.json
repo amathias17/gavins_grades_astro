@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-16T00:54:00.321Z",
+    "scrapedAt": "2026-03-16T12:20:50.863Z",
     "totalClasses": 9,
-    "totalAssignments": 134
+    "totalAssignments": 135
   },
   "classes": [
     {
@@ -423,7 +423,7 @@
           "name": "Crispy,Crunchy,Fruits & Veggie",
           "dueDate": "02/27/2026",
           "earnedPoints": 0,
-          "totalPoints": 20,
+          "totalPoints": 10,
           "weight": 1,
           "graded": false
         },
@@ -843,6 +843,14 @@
       "period": "7",
       "currentGrade": 77,
       "assignments": [
+        {
+          "name": "PIE DAY",
+          "dueDate": "03/12/2026",
+          "earnedPoints": 20,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Worksheet #1 Word Problems Pyt",
           "dueDate": "02/27/2026",
