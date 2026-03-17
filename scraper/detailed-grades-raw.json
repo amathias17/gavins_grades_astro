@@ -778,10 +778,10 @@
     "assignmentName": "What Not To Do In the Kitchen",
     "dateDue": "03/02/2026",
     "dueDate": "03/02/2026",
-    "earnedPoints": 0,
-    "totalPoints": 5,
+    "earnedPoints": 10,
+    "totalPoints": 10,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "45003",
