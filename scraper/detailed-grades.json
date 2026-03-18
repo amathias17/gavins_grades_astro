@@ -1,16 +1,24 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-18T12:20:20.784Z",
+    "scrapedAt": "2026-03-18T19:30:37.958Z",
     "totalClasses": 9,
-    "totalAssignments": 142
+    "totalAssignments": 146
   },
   "classes": [
     {
       "className": "SOPHOMORE SEMINAR",
       "teacher": "Victoria Good",
       "period": "0",
-      "currentGrade": 77,
+      "currentGrade": 78,
       "assignments": [
+        {
+          "name": "Workbok Check",
+          "dueDate": "03/18/2026",
+          "earnedPoints": 29,
+          "totalPoints": 35,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "MP3 Grade Tracking",
           "dueDate": "03/17/2026",
@@ -97,8 +105,24 @@
       "className": "ENGLISH 10",
       "teacher": "Megan Leone",
       "period": "1",
-      "currentGrade": 66,
+      "currentGrade": 71,
       "assignments": [
+        {
+          "name": "Packet 3",
+          "dueDate": "03/18/2026",
+          "earnedPoints": 29,
+          "totalPoints": 35,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Speak MP 3 Quiz",
+          "dueDate": "03/18/2026",
+          "earnedPoints": 23,
+          "totalPoints": 24,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "IXL 3/16",
           "dueDate": "03/16/2026",
@@ -673,8 +697,16 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 88,
+      "currentGrade": 84,
       "assignments": [
+        {
+          "name": "Demeter and Birth of Twins Qs",
+          "dueDate": "03/10/2026",
+          "earnedPoints": 0,
+          "totalPoints": 11,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Hades Trading Card",
           "dueDate": "01/23/2026",
