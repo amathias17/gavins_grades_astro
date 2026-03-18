@@ -1,16 +1,24 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-17T12:19:28.818Z",
+    "scrapedAt": "2026-03-18T00:49:34.198Z",
     "totalClasses": 9,
-    "totalAssignments": 136
+    "totalAssignments": 142
   },
   "classes": [
     {
       "className": "SOPHOMORE SEMINAR",
       "teacher": "Victoria Good",
       "period": "0",
-      "currentGrade": 75,
+      "currentGrade": 77,
       "assignments": [
+        {
+          "name": "MP3 Grade Tracking",
+          "dueDate": "03/17/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "3/9-3/12 Part.",
           "dueDate": "03/12/2026",
@@ -201,8 +209,32 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 84,
+      "currentGrade": 85,
       "assignments": [
+        {
+          "name": "DNA Quiz",
+          "dueDate": "03/17/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Central Dogma of Life Edpuzzle",
+          "dueDate": "03/17/2026",
+          "earnedPoints": 17,
+          "totalPoints": 25,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Interactivity - DNA/ DNA Repli",
+          "dueDate": "03/17/2026",
+          "earnedPoints": 0,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "DNA/DNA replication K'Nex",
           "dueDate": "03/09/2026",
@@ -521,13 +553,21 @@
       "className": "ENG/DESIGN/ARCH",
       "teacher": "Todd Bennett",
       "period": "4",
-      "currentGrade": 74,
+      "currentGrade": 76,
       "assignments": [
         {
           "name": "Week 8 Participation",
           "dueDate": "03/12/2026",
           "earnedPoints": 20,
           "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Floor Plan - AutoCAD Initial Design + Images",
+          "dueDate": "03/16/2026",
+          "earnedPoints": 9,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
@@ -851,6 +891,14 @@
       "period": "7",
       "currentGrade": 77,
       "assignments": [
+        {
+          "name": "Monday(3/16/26): Pyth Thm Conv",
+          "dueDate": "03/17/2026",
+          "earnedPoints": 0,
+          "totalPoints": 14,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "PIE DAY",
           "dueDate": "03/12/2026",
