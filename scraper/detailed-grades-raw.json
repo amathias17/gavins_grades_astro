@@ -408,12 +408,12 @@
     "period": "2",
     "currentGrade": 85,
     "assignmentName": "Interactivity - DNA/ DNA Repli",
-    "dateDue": "03/17/2026",
-    "dueDate": "03/17/2026",
-    "earnedPoints": 0,
-    "totalPoints": 5,
+    "dateDue": "03/16/2026",
+    "dueDate": "03/16/2026",
+    "earnedPoints": 9,
+    "totalPoints": 10,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "43424",
@@ -1656,12 +1656,12 @@
     "period": "7",
     "currentGrade": 77,
     "assignmentName": "Monday(3/16/26): Pyth Thm Conv",
-    "dateDue": "03/17/2026",
-    "dueDate": "03/17/2026",
-    "earnedPoints": 0,
-    "totalPoints": 14,
+    "dateDue": "03/16/2026",
+    "dueDate": "03/16/2026",
+    "earnedPoints": 9,
+    "totalPoints": 10,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "43666",

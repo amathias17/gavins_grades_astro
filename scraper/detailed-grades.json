@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-18T00:49:34.198Z",
+    "scrapedAt": "2026-03-18T12:20:20.784Z",
     "totalClasses": 9,
     "totalAssignments": 142
   },
@@ -229,11 +229,11 @@
         },
         {
           "name": "Interactivity - DNA/ DNA Repli",
-          "dueDate": "03/17/2026",
-          "earnedPoints": 0,
-          "totalPoints": 5,
+          "dueDate": "03/16/2026",
+          "earnedPoints": 9,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "DNA/DNA replication K'Nex",
@@ -893,11 +893,11 @@
       "assignments": [
         {
           "name": "Monday(3/16/26): Pyth Thm Conv",
-          "dueDate": "03/17/2026",
-          "earnedPoints": 0,
-          "totalPoints": 14,
+          "dueDate": "03/16/2026",
+          "earnedPoints": 9,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "PIE DAY",
