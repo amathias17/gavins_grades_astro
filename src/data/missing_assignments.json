@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "03/19/2026, 08:15 AM",
-    "count": 12
+    "last_updated": "03/19/2026, 02:10 PM",
+    "count": 11
   },
   "missing_assignments": [
     {
@@ -38,15 +38,6 @@
     },
     {
       "due_date": "03/04/2026",
-      "assignment_name": "HeLa Cancer Cells",
-      "class_name": "BIOLOGY            2",
-      "teacher": "Denise Condo",
-      "category": "Class Work",
-      "max_points": "5",
-      "absent": "Illegal"
-    },
-    {
-      "due_date": "03/04/2026",
       "assignment_name": "Architecture & Design Vocabulary Quiz #1",
       "class_name": "ENG/DESIGN/ARCH",
       "teacher": "Todd Bennett",
@@ -80,19 +71,19 @@
     },
     {
       "due_date": "03/01/2026",
-      "assignment_name": "America WWII Gallery WalK",
-      "class_name": "AMER STUDIES",
-      "teacher": "Brock Seese",
-      "category": "Participation",
-      "max_points": "30"
-    },
-    {
-      "due_date": "03/01/2026",
       "assignment_name": "WWII Video Guide",
       "class_name": "AMER STUDIES",
       "teacher": "Brock Seese",
       "category": "Class Work",
       "max_points": "20"
+    },
+    {
+      "due_date": "03/01/2026",
+      "assignment_name": "America WWII Gallery WalK",
+      "class_name": "AMER STUDIES",
+      "teacher": "Brock Seese",
+      "category": "Participation",
+      "max_points": "30"
     },
     {
       "due_date": "02/26/2026",

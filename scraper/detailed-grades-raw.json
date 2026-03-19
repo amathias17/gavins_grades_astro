@@ -2017,6 +2017,22 @@
   },
   {
     "classId": "44615",
+    "assignmentId": "1597806",
+    "studentId": "1396",
+    "className": "SOCIOLOGY",
+    "teacher": "Heather Eckels",
+    "period": "8",
+    "currentGrade": 84,
+    "assignmentName": "Mazerunner Writing Assignment",
+    "dateDue": "03/19/2026",
+    "dueDate": "03/19/2026",
+    "earnedPoints": 0,
+    "totalPoints": 50,
+    "weight": 1,
+    "graded": false
+  },
+  {
+    "classId": "44615",
     "assignmentId": "1592471",
     "studentId": "1396",
     "className": "SOCIOLOGY",
