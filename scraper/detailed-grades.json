@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-19T18:13:03.088Z",
+    "scrapedAt": "2026-03-20T00:47:31.927Z",
     "totalClasses": 9,
-    "totalAssignments": 147
+    "totalAssignments": 149
   },
   "classes": [
     {
@@ -921,13 +921,29 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 77,
+      "currentGrade": 76,
       "assignments": [
+        {
+          "name": "Fence Activity",
+          "dueDate": "03/19/2026",
+          "earnedPoints": 10,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Monday(3/16/26): Pyth Thm Conv",
           "dueDate": "03/16/2026",
           "earnedPoints": 9,
           "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Pyth Thm Converse WS",
+          "dueDate": "03/19/2026",
+          "earnedPoints": 10,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
@@ -1085,11 +1101,11 @@
       "assignments": [
         {
           "name": "Mazerunner Writing Assignment",
-          "dueDate": "03/19/2026",
-          "earnedPoints": 0,
-          "totalPoints": 50,
+          "dueDate": "03/17/2026",
+          "earnedPoints": 9,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Agricultural Rev. Simulation",
