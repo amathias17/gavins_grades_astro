@@ -1,9 +1,17 @@
 {
   "metadata": {
-    "last_updated": "03/20/2026, 08:14 AM",
-    "count": 12
+    "last_updated": "03/20/2026, 08:45 PM",
+    "count": 13
   },
   "missing_assignments": [
+    {
+      "due_date": "03/20/2026",
+      "assignment_name": "ADA Floor Plan Challenge",
+      "class_name": "ENG/DESIGN/ARCH",
+      "teacher": "Todd Bennett",
+      "category": "Class Work",
+      "max_points": "20"
+    },
     {
       "due_date": "03/19/2026",
       "assignment_name": "Mazerunner Writing Assignment",

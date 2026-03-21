@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-20T12:14:04.742Z",
+    "scrapedAt": "2026-03-21T00:45:21.046Z",
     "totalClasses": 9,
-    "totalAssignments": 149
+    "totalAssignments": 154
   },
   "classes": [
     {
@@ -235,6 +235,30 @@
       "period": "2",
       "currentGrade": 85,
       "assignments": [
+        {
+          "name": "DNA&RNA&PS /A.S. Video recap",
+          "dueDate": "03/20/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Edpuzzle - DNA/RNA & PS questi",
+          "dueDate": "03/20/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Protein Sythesis and Words",
+          "dueDate": "03/20/2026",
+          "earnedPoints": 0,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "DNA Quiz",
           "dueDate": "03/17/2026",
@@ -577,8 +601,16 @@
       "className": "ENG/DESIGN/ARCH",
       "teacher": "Todd Bennett",
       "period": "4",
-      "currentGrade": 76,
+      "currentGrade": 70,
       "assignments": [
+        {
+          "name": "ADA Floor Plan Challenge",
+          "dueDate": "03/20/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Week 8 Participation",
           "dueDate": "03/12/2026",
@@ -921,8 +953,16 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 76,
+      "currentGrade": 75,
       "assignments": [
+        {
+          "name": "Friday(3/20/26): PYTHAGOREAN THEOREM QUIZ",
+          "dueDate": "03/20/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Fence Activity",
           "dueDate": "03/19/2026",
