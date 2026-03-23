@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "03/23/2026, 08:19 AM",
-    "count": 13
+    "last_updated": "03/23/2026, 02:16 PM",
+    "count": 12
   },
   "missing_assignments": [
     {
@@ -68,14 +68,6 @@
       "teacher": "Caleb Marasco",
       "category": "Class Work",
       "max_points": "18"
-    },
-    {
-      "due_date": "03/02/2026",
-      "assignment_name": "Cell Division -mitosis/Meiosis",
-      "class_name": "BIOLOGY            2",
-      "teacher": "Denise Condo",
-      "category": "Quiz",
-      "max_points": "25"
     },
     {
       "due_date": "03/02/2026",

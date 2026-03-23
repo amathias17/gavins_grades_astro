@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-23T12:19:42.296Z",
+  "updatedAt": "2026-03-23T18:16:13.919Z",
   "assignments": {
     "1561854:44463:1396": {
       "classId": "44463",
@@ -16,7 +16,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:23.462Z"
+      "cachedAt": "2026-03-23T18:14:55.278Z"
     },
     "1557583:44463:1396": {
       "classId": "44463",
@@ -3620,7 +3620,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.220Z"
+      "cachedAt": "2026-03-23T18:15:55.071Z"
     },
     "1561998:43049:1396": {
       "classId": "43049",
@@ -3637,7 +3637,7 @@
       "totalPoints": 30,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.220Z"
+      "cachedAt": "2026-03-23T18:15:55.071Z"
     },
     "1556957:43049:1396": {
       "classId": "43049",
@@ -4207,7 +4207,7 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 75,
+      "currentGrade": 77,
       "assignmentName": "Tuesday(1/27/26): Triangle Inequality Theorem",
       "dateDue": "08/25/2025",
       "dueDate": "08/25/2025",
@@ -4215,7 +4215,7 @@
       "totalPoints": 100,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.221Z"
+      "cachedAt": "2026-03-23T18:16:11.684Z"
     },
     "1564116:43666:1396": {
       "classId": "43666",
@@ -4224,7 +4224,7 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 75,
+      "currentGrade": 77,
       "assignmentName": "Monday(1/26/26): FID Assignment",
       "dateDue": "01/26/2026",
       "dueDate": "01/26/2026",
@@ -4232,7 +4232,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.221Z"
+      "cachedAt": "2026-03-23T18:16:11.684Z"
     },
     "1564122:43666:1396": {
       "classId": "43666",
@@ -4241,7 +4241,7 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 75,
+      "currentGrade": 77,
       "assignmentName": "Friday(1/23/26): Delta Math",
       "dateDue": "01/23/2026",
       "dueDate": "01/23/2026",
@@ -4249,7 +4249,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.221Z"
+      "cachedAt": "2026-03-23T18:16:11.684Z"
     },
     "1564125:43666:1396": {
       "classId": "43666",
@@ -4258,7 +4258,7 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 75,
+      "currentGrade": 77,
       "assignmentName": "Thursday(1/22/26):Get More Math!",
       "dateDue": "01/23/2026",
       "dueDate": "01/23/2026",
@@ -4266,7 +4266,7 @@
       "totalPoints": 18,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.221Z"
+      "cachedAt": "2026-03-23T18:16:11.684Z"
     },
     "1558377:43666:1396": {
       "classId": "43666",
@@ -5550,7 +5550,7 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 74,
+      "currentGrade": 75,
       "assignmentName": "Intro to Soc Reading & ?s",
       "dateDue": "08/27/2025",
       "dueDate": "08/27/2025",
@@ -5558,7 +5558,7 @@
       "totalPoints": 12,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.222Z"
+      "cachedAt": "2026-03-23T18:16:11.795Z"
     },
     "1562839:44615:1396": {
       "classId": "44615",
@@ -5567,7 +5567,7 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 74,
+      "currentGrade": 75,
       "assignmentName": "EdPuzzle What is Sociology",
       "dateDue": "01/27/2026",
       "dueDate": "01/27/2026",
@@ -5575,7 +5575,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.222Z"
+      "cachedAt": "2026-03-23T18:16:11.795Z"
     },
     "1561967:44615:1396": {
       "classId": "44615",
@@ -5584,7 +5584,7 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 74,
+      "currentGrade": 75,
       "assignmentName": "Where to Go - Social Norms",
       "dateDue": "01/26/2026",
       "dueDate": "01/26/2026",
@@ -5592,7 +5592,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.222Z"
+      "cachedAt": "2026-03-23T18:16:11.795Z"
     },
     "1561441:44615:1396": {
       "classId": "44615",
@@ -5601,7 +5601,7 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 74,
+      "currentGrade": 75,
       "assignmentName": "Classroom Expectations",
       "dateDue": "01/23/2026",
       "dueDate": "01/23/2026",
@@ -5609,7 +5609,7 @@
       "totalPoints": 18,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.222Z"
+      "cachedAt": "2026-03-23T18:16:11.795Z"
     },
     "1556821:43162:1396": {
       "classId": "43162",
@@ -5677,7 +5677,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.220Z"
+      "cachedAt": "2026-03-23T18:15:55.071Z"
     },
     "1559402:43049:1396": {
       "classId": "43049",
@@ -5762,7 +5762,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:23.462Z"
+      "cachedAt": "2026-03-23T18:14:55.278Z"
     },
     "1572012:43049:1396": {
       "classId": "43049",
@@ -5779,7 +5779,7 @@
       "totalPoints": 23,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.220Z"
+      "cachedAt": "2026-03-23T18:15:55.071Z"
     },
     "1571502:44615:1396": {
       "classId": "44615",
@@ -5788,7 +5788,7 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 74,
+      "currentGrade": 75,
       "assignmentName": "Third Wave Essay",
       "dateDue": "02/06/2026",
       "dueDate": "02/06/2026",
@@ -5796,7 +5796,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.221Z"
+      "cachedAt": "2026-03-23T18:16:11.795Z"
     },
     "1570062:44615:1396": {
       "classId": "44615",
@@ -5805,7 +5805,7 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 74,
+      "currentGrade": 75,
       "assignmentName": "Lesson Plan Day 2",
       "dateDue": "02/06/2026",
       "dueDate": "02/06/2026",
@@ -5813,7 +5813,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.221Z"
+      "cachedAt": "2026-03-23T18:16:11.795Z"
     },
     "1569610:44615:1396": {
       "classId": "44615",
@@ -5822,7 +5822,7 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 74,
+      "currentGrade": 75,
       "assignmentName": "Lesson Plan Day 1",
       "dateDue": "02/05/2026",
       "dueDate": "02/05/2026",
@@ -5830,7 +5830,7 @@
       "totalPoints": 7,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.221Z"
+      "cachedAt": "2026-03-23T18:16:11.795Z"
     },
     "1568621:44615:1396": {
       "classId": "44615",
@@ -5839,7 +5839,7 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 74,
+      "currentGrade": 75,
       "assignmentName": "Social Psychology Experiments",
       "dateDue": "02/04/2026",
       "dueDate": "02/04/2026",
@@ -5847,7 +5847,7 @@
       "totalPoints": 7,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.222Z"
+      "cachedAt": "2026-03-23T18:16:11.795Z"
     },
     "1567708:44615:1396": {
       "classId": "44615",
@@ -5856,7 +5856,7 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 74,
+      "currentGrade": 75,
       "assignmentName": "Theoretical Perspectives Analy",
       "dateDue": "02/03/2026",
       "dueDate": "02/03/2026",
@@ -5864,7 +5864,7 @@
       "totalPoints": 18,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.222Z"
+      "cachedAt": "2026-03-23T18:16:11.795Z"
     },
     "1566577:44615:1396": {
       "classId": "44615",
@@ -5873,7 +5873,7 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 74,
+      "currentGrade": 75,
       "assignmentName": "Day 3 Notes",
       "dateDue": "02/02/2026",
       "dueDate": "02/02/2026",
@@ -5881,7 +5881,7 @@
       "totalPoints": 21,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.222Z"
+      "cachedAt": "2026-03-23T18:16:11.795Z"
     },
     "1569986:43049:1396": {
       "classId": "43049",
@@ -5898,7 +5898,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.220Z"
+      "cachedAt": "2026-03-23T18:15:55.071Z"
     },
     "1568236:43049:1396": {
       "classId": "43049",
@@ -5915,7 +5915,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.220Z"
+      "cachedAt": "2026-03-23T18:15:55.071Z"
     },
     "1573050:44615:1396": {
       "classId": "44615",
@@ -5924,7 +5924,7 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 74,
+      "currentGrade": 75,
       "assignmentName": "Culture Day 2 Notes",
       "dateDue": "02/10/2026",
       "dueDate": "02/10/2026",
@@ -5932,7 +5932,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.221Z"
+      "cachedAt": "2026-03-23T18:16:11.794Z"
     },
     "1572388:44615:1396": {
       "classId": "44615",
@@ -5941,7 +5941,7 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 74,
+      "currentGrade": 75,
       "assignmentName": "Culture Day 1 Notes",
       "dateDue": "02/10/2026",
       "dueDate": "02/10/2026",
@@ -5949,7 +5949,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.221Z"
+      "cachedAt": "2026-03-23T18:16:11.794Z"
     },
     "1567640:43666:1396": {
       "classId": "43666",
@@ -5958,7 +5958,7 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 75,
+      "currentGrade": 77,
       "assignmentName": "Wednesday(1/28/26): Delta Math",
       "dateDue": "01/28/2026",
       "dueDate": "01/28/2026",
@@ -5966,7 +5966,7 @@
       "totalPoints": 19,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.221Z"
+      "cachedAt": "2026-03-23T18:16:11.684Z"
     },
     "1574711:43049:1396": {
       "classId": "43049",
@@ -5983,7 +5983,7 @@
       "totalPoints": 26,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.220Z"
+      "cachedAt": "2026-03-23T18:15:55.071Z"
     },
     "1575490:43666:1396": {
       "classId": "43666",
@@ -5992,7 +5992,7 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 75,
+      "currentGrade": 77,
       "assignmentName": "Thursday(2/12/26): Isos and Equilateral Triangles",
       "dateDue": "02/11/2026",
       "dueDate": "02/11/2026",
@@ -6000,7 +6000,7 @@
       "totalPoints": 26,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.221Z"
+      "cachedAt": "2026-03-23T18:16:11.684Z"
     },
     "1576644:44463:1396": {
       "classId": "44463",
@@ -6017,7 +6017,7 @@
       "totalPoints": 45,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:23.461Z"
+      "cachedAt": "2026-03-23T18:14:55.277Z"
     },
     "1576638:44463:1396": {
       "classId": "44463",
@@ -6034,7 +6034,7 @@
       "totalPoints": 45,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:23.461Z"
+      "cachedAt": "2026-03-23T18:14:55.278Z"
     },
     "1577654:43049:1396": {
       "classId": "43049",
@@ -6051,7 +6051,7 @@
       "totalPoints": 25,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.220Z"
+      "cachedAt": "2026-03-23T18:15:55.071Z"
     },
     "1579005:43666:1396": {
       "classId": "43666",
@@ -6060,7 +6060,7 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 75,
+      "currentGrade": 77,
       "assignmentName": "Isos and Equi Triangle WS",
       "dateDue": "02/20/2026",
       "dueDate": "02/20/2026",
@@ -6068,7 +6068,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.221Z"
+      "cachedAt": "2026-03-23T18:16:11.684Z"
     },
     "1578503:43049:1396": {
       "classId": "43049",
@@ -6085,7 +6085,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.220Z"
+      "cachedAt": "2026-03-23T18:15:55.071Z"
     },
     "1579004:43666:1396": {
       "classId": "43666",
@@ -6094,7 +6094,7 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 75,
+      "currentGrade": 77,
       "assignmentName": "Isos and Equi Scavenger Hunt",
       "dateDue": "02/20/2026",
       "dueDate": "02/20/2026",
@@ -6102,7 +6102,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.220Z"
+      "cachedAt": "2026-03-23T18:16:11.684Z"
     },
     "1579153:43666:1396": {
       "classId": "43666",
@@ -6111,7 +6111,7 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 75,
+      "currentGrade": 77,
       "assignmentName": "Isos & Equi Triangles",
       "dateDue": "02/20/2026",
       "dueDate": "02/20/2026",
@@ -6119,7 +6119,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.221Z"
+      "cachedAt": "2026-03-23T18:16:11.684Z"
     },
     "1578541:43049:1396": {
       "classId": "43049",
@@ -6136,7 +6136,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.220Z"
+      "cachedAt": "2026-03-23T18:15:55.071Z"
     },
     "1580248:43666:1396": {
       "classId": "43666",
@@ -6145,7 +6145,7 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 75,
+      "currentGrade": 77,
       "assignmentName": "Monday(2/2/26): Delta Math",
       "dateDue": "02/04/2026",
       "dueDate": "02/04/2026",
@@ -6153,7 +6153,7 @@
       "totalPoints": 33,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.221Z"
+      "cachedAt": "2026-03-23T18:16:11.684Z"
     },
     "1578652:44615:1396": {
       "classId": "44615",
@@ -6162,7 +6162,7 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 74,
+      "currentGrade": 75,
       "assignmentName": "Young Woman and the Sea",
       "dateDue": "02/04/2026",
       "dueDate": "02/04/2026",
@@ -6170,7 +6170,7 @@
       "totalPoints": 33,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.221Z"
+      "cachedAt": "2026-03-23T18:16:11.794Z"
     },
     "1580260:43666:1396": {
       "classId": "43666",
@@ -6179,7 +6179,7 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 75,
+      "currentGrade": 77,
       "assignmentName": "Monday(2/9/26): Complete 6pts GMM",
       "dateDue": "02/10/2026",
       "dueDate": "02/10/2026",
@@ -6187,7 +6187,7 @@
       "totalPoints": 12,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.221Z"
+      "cachedAt": "2026-03-23T18:16:11.684Z"
     },
     "1582828:44463:1396": {
       "classId": "44463",
@@ -6204,7 +6204,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:23.461Z"
+      "cachedAt": "2026-03-23T18:14:55.277Z"
     },
     "1583831:43666:1396": {
       "classId": "43666",
@@ -6213,7 +6213,7 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 75,
+      "currentGrade": 77,
       "assignmentName": "Finding Hypotenuse",
       "dateDue": "02/26/2026",
       "dueDate": "02/26/2026",
@@ -6221,7 +6221,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.220Z"
+      "cachedAt": "2026-03-23T18:16:02.211Z"
     },
     "1583829:43666:1396": {
       "classId": "43666",
@@ -6230,7 +6230,7 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 75,
+      "currentGrade": 77,
       "assignmentName": "Relationships in Triangles",
       "dateDue": "02/24/2026",
       "dueDate": "02/24/2026",
@@ -6238,7 +6238,7 @@
       "totalPoints": 24,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.220Z"
+      "cachedAt": "2026-03-23T18:16:11.684Z"
     },
     "1583962:44463:1396": {
       "classId": "44463",
@@ -6255,7 +6255,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:23.461Z"
+      "cachedAt": "2026-03-23T18:14:55.277Z"
     },
     "1584117:44615:1396": {
       "classId": "44615",
@@ -6264,7 +6264,7 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 74,
+      "currentGrade": 75,
       "assignmentName": "My Agents of Socialization",
       "dateDue": "02/23/2026",
       "dueDate": "02/23/2026",
@@ -6272,7 +6272,7 @@
       "totalPoints": 35,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.221Z"
+      "cachedAt": "2026-03-23T18:16:11.794Z"
     },
     "1584309:44615:1396": {
       "classId": "44615",
@@ -6298,7 +6298,7 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 74,
+      "currentGrade": 75,
       "assignmentName": "Socialization Scavenger Hunt",
       "dateDue": "02/26/2026",
       "dueDate": "02/26/2026",
@@ -6306,7 +6306,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.221Z"
+      "cachedAt": "2026-03-23T18:16:11.794Z"
     },
     "1588659:43049:1396": {
       "classId": "43049",
@@ -6323,7 +6323,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.219Z"
+      "cachedAt": "2026-03-23T18:15:55.071Z"
     },
     "1588527:43666:1396": {
       "classId": "43666",
@@ -6332,7 +6332,7 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 75,
+      "currentGrade": 77,
       "assignmentName": "Monday(3/2/26): Pythagorean Theorem Day 2",
       "dateDue": "03/03/2026",
       "dueDate": "03/03/2026",
@@ -6340,7 +6340,7 @@
       "totalPoints": 18,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.220Z"
+      "cachedAt": "2026-03-23T18:16:02.211Z"
     },
     "1588529:43666:1396": {
       "classId": "43666",
@@ -6349,7 +6349,7 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 75,
+      "currentGrade": 77,
       "assignmentName": "Tuesday(3/3/26): FID ASSIGNMENT",
       "dateDue": "03/03/2026",
       "dueDate": "03/03/2026",
@@ -6357,7 +6357,7 @@
       "totalPoints": 18,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.220Z"
+      "cachedAt": "2026-03-23T18:16:02.211Z"
     },
     "1587361:44615:1396": {
       "classId": "44615",
@@ -6366,7 +6366,7 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 74,
+      "currentGrade": 75,
       "assignmentName": "Edpuzzle - Social Groups and I",
       "dateDue": "03/03/2026",
       "dueDate": "03/03/2026",
@@ -6374,7 +6374,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.221Z"
+      "cachedAt": "2026-03-23T18:16:11.794Z"
     },
     "1589483:44463:1396": {
       "classId": "44463",
@@ -6391,7 +6391,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:23.461Z"
+      "cachedAt": "2026-03-23T18:14:55.277Z"
     },
     "1584883:43049:1396": {
       "classId": "43049",
@@ -6408,7 +6408,7 @@
       "totalPoints": 16,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.219Z"
+      "cachedAt": "2026-03-23T18:15:55.071Z"
     },
     "1584889:43049:1396": {
       "classId": "43049",
@@ -6425,7 +6425,7 @@
       "totalPoints": 16,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.219Z"
+      "cachedAt": "2026-03-23T18:15:55.071Z"
     },
     "1584895:43049:1396": {
       "classId": "43049",
@@ -6442,7 +6442,7 @@
       "totalPoints": 16,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.220Z"
+      "cachedAt": "2026-03-23T18:15:55.071Z"
     },
     "1589602:43666:1396": {
       "classId": "43666",
@@ -6451,7 +6451,7 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 75,
+      "currentGrade": 77,
       "assignmentName": "Word Problem Worksheet",
       "dateDue": "03/02/2026",
       "dueDate": "03/02/2026",
@@ -6459,7 +6459,7 @@
       "totalPoints": 16,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.220Z"
+      "cachedAt": "2026-03-23T18:16:02.211Z"
     },
     "1589882:44615:1396": {
       "classId": "44615",
@@ -6468,7 +6468,7 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 74,
+      "currentGrade": 75,
       "assignmentName": "Truman Show Writing Assignment",
       "dateDue": "03/06/2026",
       "dueDate": "03/06/2026",
@@ -6476,7 +6476,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.221Z"
+      "cachedAt": "2026-03-23T18:16:11.794Z"
     },
     "1588493:43162:1396": {
       "classId": "43162",
@@ -6493,7 +6493,7 @@
       "totalPoints": 22,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:23.462Z"
+      "cachedAt": "2026-03-23T18:14:55.278Z"
     },
     "1586526:43162:1396": {
       "classId": "43162",
@@ -6510,7 +6510,7 @@
       "totalPoints": 23,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:23.462Z"
+      "cachedAt": "2026-03-23T18:14:55.278Z"
     },
     "1577271:43162:1396": {
       "classId": "43162",
@@ -6527,7 +6527,7 @@
       "totalPoints": 23,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:23.462Z"
+      "cachedAt": "2026-03-23T18:14:55.278Z"
     },
     "1576168:43162:1396": {
       "classId": "43162",
@@ -6544,7 +6544,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:23.462Z"
+      "cachedAt": "2026-03-23T18:14:55.279Z"
     },
     "1574257:43162:1396": {
       "classId": "43162",
@@ -6561,7 +6561,7 @@
       "totalPoints": 26,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:23.462Z"
+      "cachedAt": "2026-03-23T18:14:55.279Z"
     },
     "1574427:43162:1396": {
       "classId": "43162",
@@ -6578,7 +6578,7 @@
       "totalPoints": 26,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:23.462Z"
+      "cachedAt": "2026-03-23T18:14:55.279Z"
     },
     "1572226:43162:1396": {
       "classId": "43162",
@@ -6595,7 +6595,7 @@
       "totalPoints": 26,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:23.463Z"
+      "cachedAt": "2026-03-23T18:14:55.279Z"
     },
     "1571347:43162:1396": {
       "classId": "43162",
@@ -6612,7 +6612,7 @@
       "totalPoints": 14,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:23.463Z"
+      "cachedAt": "2026-03-23T18:14:55.279Z"
     },
     "1566141:43162:1396": {
       "classId": "43162",
@@ -6629,7 +6629,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:23.463Z"
+      "cachedAt": "2026-03-23T18:14:55.279Z"
     },
     "1589473:43424:1396": {
       "classId": "43424",
@@ -6646,7 +6646,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.217Z"
+      "cachedAt": "2026-03-23T18:15:21.604Z"
     },
     "1587259:43424:1396": {
       "classId": "43424",
@@ -6663,7 +6663,7 @@
       "totalPoints": 0,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.217Z"
+      "cachedAt": "2026-03-23T18:15:21.604Z"
     },
     "1583414:43424:1396": {
       "classId": "43424",
@@ -6680,7 +6680,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.217Z"
+      "cachedAt": "2026-03-23T18:15:21.604Z"
     },
     "1583422:43424:1396": {
       "classId": "43424",
@@ -6697,7 +6697,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.217Z"
+      "cachedAt": "2026-03-23T18:15:21.604Z"
     },
     "1582622:43424:1396": {
       "classId": "43424",
@@ -6714,7 +6714,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.217Z"
+      "cachedAt": "2026-03-23T18:15:21.604Z"
     },
     "1581886:43424:1396": {
       "classId": "43424",
@@ -6731,7 +6731,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.217Z"
+      "cachedAt": "2026-03-23T18:15:21.604Z"
     },
     "1580281:43424:1396": {
       "classId": "43424",
@@ -6748,7 +6748,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.217Z"
+      "cachedAt": "2026-03-23T18:15:21.604Z"
     },
     "1571003:43424:1396": {
       "classId": "43424",
@@ -6765,7 +6765,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.217Z"
+      "cachedAt": "2026-03-23T18:15:21.604Z"
     },
     "1571008:43424:1396": {
       "classId": "43424",
@@ -6782,7 +6782,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.217Z"
+      "cachedAt": "2026-03-23T18:15:21.604Z"
     },
     "1569283:43424:1396": {
       "classId": "43424",
@@ -6799,7 +6799,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.217Z"
+      "cachedAt": "2026-03-23T18:15:21.604Z"
     },
     "1569548:43424:1396": {
       "classId": "43424",
@@ -6816,7 +6816,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.217Z"
+      "cachedAt": "2026-03-23T18:15:21.604Z"
     },
     "1569712:43424:1396": {
       "classId": "43424",
@@ -6833,7 +6833,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.217Z"
+      "cachedAt": "2026-03-23T18:15:21.604Z"
     },
     "1569288:43424:1396": {
       "classId": "43424",
@@ -6850,7 +6850,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.217Z"
+      "cachedAt": "2026-03-23T18:15:21.604Z"
     },
     "1563601:43424:1396": {
       "classId": "43424",
@@ -6867,7 +6867,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.217Z"
+      "cachedAt": "2026-03-23T18:15:21.604Z"
     },
     "1556975:43424:1396": {
       "classId": "43424",
@@ -6884,7 +6884,7 @@
       "totalPoints": 0,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.217Z"
+      "cachedAt": "2026-03-23T18:15:21.604Z"
     },
     "1586409:45003:1396": {
       "classId": "45003",
@@ -6901,7 +6901,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.218Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1582909:45003:1396": {
       "classId": "45003",
@@ -6918,7 +6918,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.218Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1581931:45003:1396": {
       "classId": "45003",
@@ -6935,7 +6935,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.218Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1579108:45003:1396": {
       "classId": "45003",
@@ -6952,7 +6952,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.218Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1579093:45003:1396": {
       "classId": "45003",
@@ -6969,7 +6969,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.218Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1572560:45003:1396": {
       "classId": "45003",
@@ -6986,7 +6986,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.218Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1571019:45003:1396": {
       "classId": "45003",
@@ -7003,7 +7003,7 @@
       "totalPoints": 30,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.218Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1569537:45003:1396": {
       "classId": "45003",
@@ -7020,7 +7020,7 @@
       "totalPoints": 0,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.218Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1569532:45003:1396": {
       "classId": "45003",
@@ -7037,7 +7037,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.218Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1587356:43341:1396": {
       "classId": "43341",
@@ -7054,7 +7054,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.218Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1588921:43341:1396": {
       "classId": "43341",
@@ -7071,7 +7071,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.218Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1584345:43341:1396": {
       "classId": "43341",
@@ -7088,7 +7088,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.218Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1584351:43341:1396": {
       "classId": "43341",
@@ -7105,7 +7105,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.219Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1584785:43341:1396": {
       "classId": "43341",
@@ -7122,7 +7122,7 @@
       "totalPoints": 25,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.219Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1579291:43341:1396": {
       "classId": "43341",
@@ -7139,7 +7139,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.219Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1575257:43341:1396": {
       "classId": "43341",
@@ -7156,7 +7156,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.219Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1575293:43341:1396": {
       "classId": "43341",
@@ -7173,7 +7173,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.219Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1571637:43341:1396": {
       "classId": "43341",
@@ -7190,7 +7190,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.219Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1566638:43341:1396": {
       "classId": "43341",
@@ -7207,7 +7207,7 @@
       "totalPoints": 18,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.219Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1562472:43341:1396": {
       "classId": "43341",
@@ -7224,7 +7224,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.219Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1589306:44979:1396": {
       "classId": "44979",
@@ -7241,7 +7241,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.219Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1584248:44979:1396": {
       "classId": "44979",
@@ -7258,7 +7258,7 @@
       "totalPoints": 16,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.219Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1579146:44979:1396": {
       "classId": "44979",
@@ -7275,7 +7275,7 @@
       "totalPoints": 35,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.219Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1576002:44979:1396": {
       "classId": "44979",
@@ -7292,7 +7292,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.219Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1576777:44979:1396": {
       "classId": "44979",
@@ -7309,7 +7309,7 @@
       "totalPoints": 16,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.219Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1571246:44979:1396": {
       "classId": "44979",
@@ -7326,7 +7326,7 @@
       "totalPoints": 18,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.219Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1568561:44979:1396": {
       "classId": "44979",
@@ -7343,7 +7343,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.219Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1568559:44979:1396": {
       "classId": "44979",
@@ -7360,7 +7360,7 @@
       "totalPoints": 35,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.219Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1590131:43049:1396": {
       "classId": "43049",
@@ -7377,7 +7377,7 @@
       "totalPoints": 23,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.219Z"
+      "cachedAt": "2026-03-23T18:15:55.071Z"
     },
     "1572198:43162:1396": {
       "classId": "43162",
@@ -7394,7 +7394,7 @@
       "totalPoints": 22,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:23.463Z"
+      "cachedAt": "2026-03-23T18:14:55.279Z"
     },
     "1591631:43424:1396": {
       "classId": "43424",
@@ -7411,7 +7411,7 @@
       "totalPoints": 13,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.217Z"
+      "cachedAt": "2026-03-23T18:15:21.604Z"
     },
     "1588131:43424:1396": {
       "classId": "43424",
@@ -7428,7 +7428,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.217Z"
+      "cachedAt": "2026-03-23T18:15:21.604Z"
     },
     "1587245:43424:1396": {
       "classId": "43424",
@@ -7445,7 +7445,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.217Z"
+      "cachedAt": "2026-03-23T18:15:21.604Z"
     },
     "1585380:43424:1396": {
       "classId": "43424",
@@ -7462,7 +7462,7 @@
       "totalPoints": 0,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.217Z"
+      "cachedAt": "2026-03-23T18:15:21.604Z"
     },
     "1562766:43424:1396": {
       "classId": "43424",
@@ -7479,7 +7479,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.217Z"
+      "cachedAt": "2026-03-23T18:15:21.604Z"
     },
     "1582904:45003:1396": {
       "classId": "45003",
@@ -7496,7 +7496,7 @@
       "totalPoints": 0,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.218Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1588073:43341:1396": {
       "classId": "43341",
@@ -7513,7 +7513,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.218Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1589303:44979:1396": {
       "classId": "44979",
@@ -7530,7 +7530,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.219Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1590922:43049:1396": {
       "classId": "43049",
@@ -7547,7 +7547,7 @@
       "totalPoints": 16,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.219Z"
+      "cachedAt": "2026-03-23T18:15:55.071Z"
     },
     "1591658:44615:1396": {
       "classId": "44615",
@@ -7556,7 +7556,7 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 74,
+      "currentGrade": 75,
       "assignmentName": "Social Structure Day 2 Notes",
       "dateDue": "03/10/2026",
       "dueDate": "03/10/2026",
@@ -7564,7 +7564,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.221Z"
+      "cachedAt": "2026-03-23T18:16:11.794Z"
     },
     "1590689:44615:1396": {
       "classId": "44615",
@@ -7573,7 +7573,7 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 74,
+      "currentGrade": 75,
       "assignmentName": "Social Structure",
       "dateDue": "03/10/2026",
       "dueDate": "03/10/2026",
@@ -7581,7 +7581,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.221Z"
+      "cachedAt": "2026-03-23T18:16:11.794Z"
     },
     "1586023:43424:1396": {
       "classId": "43424",
@@ -7598,7 +7598,7 @@
       "totalPoints": 22,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.217Z"
+      "cachedAt": "2026-03-23T18:15:21.604Z"
     },
     "1583426:43424:1396": {
       "classId": "43424",
@@ -7615,7 +7615,7 @@
       "totalPoints": 22,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.217Z"
+      "cachedAt": "2026-03-23T18:15:21.604Z"
     },
     "1590767:43666:1396": {
       "classId": "43666",
@@ -7624,7 +7624,7 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 75,
+      "currentGrade": 77,
       "assignmentName": "Worksheet #1 Word Problems Pyt",
       "dateDue": "02/27/2026",
       "dueDate": "02/27/2026",
@@ -7632,7 +7632,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.220Z"
+      "cachedAt": "2026-03-23T18:16:02.211Z"
     },
     "1584260:43424:1396": {
       "classId": "43424",
@@ -7649,7 +7649,7 @@
       "totalPoints": 22,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.217Z"
+      "cachedAt": "2026-03-23T18:15:21.604Z"
     },
     "1592729:44463:1396": {
       "classId": "44463",
@@ -7666,7 +7666,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:23.461Z"
+      "cachedAt": "2026-03-23T18:14:55.277Z"
     },
     "1592730:44463:1396": {
       "classId": "44463",
@@ -7683,7 +7683,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:23.461Z"
+      "cachedAt": "2026-03-23T18:14:55.277Z"
     },
     "1588105:43162:1396": {
       "classId": "43162",
@@ -7700,7 +7700,7 @@
       "totalPoints": 22,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:23.462Z"
+      "cachedAt": "2026-03-23T18:14:55.278Z"
     },
     "1592471:44615:1396": {
       "classId": "44615",
@@ -7709,7 +7709,7 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 74,
+      "currentGrade": 75,
       "assignmentName": "Agricultural Rev. Simulation",
       "dateDue": "03/11/2026",
       "dueDate": "03/11/2026",
@@ -7717,7 +7717,7 @@
       "totalPoints": 22,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.221Z"
+      "cachedAt": "2026-03-23T18:16:11.794Z"
     },
     "1590653:43162:1396": {
       "classId": "43162",
@@ -7734,7 +7734,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:23.462Z"
+      "cachedAt": "2026-03-23T18:14:55.278Z"
     },
     "1593184:43424:1396": {
       "classId": "43424",
@@ -7751,7 +7751,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.217Z"
+      "cachedAt": "2026-03-23T18:15:21.604Z"
     },
     "1594266:43666:1396": {
       "classId": "43666",
@@ -7760,7 +7760,7 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 75,
+      "currentGrade": 77,
       "assignmentName": "PIE DAY",
       "dateDue": "03/12/2026",
       "dueDate": "03/12/2026",
@@ -7768,7 +7768,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.220Z"
+      "cachedAt": "2026-03-23T18:16:02.211Z"
     },
     "1594403:43162:1396": {
       "classId": "43162",
@@ -7785,7 +7785,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:23.462Z"
+      "cachedAt": "2026-03-23T18:14:55.278Z"
     },
     "1593847:45003:1396": {
       "classId": "45003",
@@ -7802,7 +7802,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.218Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1593841:45003:1396": {
       "classId": "45003",
@@ -7819,7 +7819,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.218Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1593827:45003:1396": {
       "classId": "45003",
@@ -7836,7 +7836,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.218Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1594002:43341:1396": {
       "classId": "43341",
@@ -7853,7 +7853,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.218Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1593832:45003:1396": {
       "classId": "45003",
@@ -7870,7 +7870,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.218Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1595303:44463:1396": {
       "classId": "44463",
@@ -7887,7 +7887,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:23.461Z"
+      "cachedAt": "2026-03-23T18:14:55.277Z"
     },
     "1595504:43424:1396": {
       "classId": "43424",
@@ -7904,7 +7904,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.216Z"
+      "cachedAt": "2026-03-23T18:15:21.604Z"
     },
     "1595624:43424:1396": {
       "classId": "43424",
@@ -7921,7 +7921,7 @@
       "totalPoints": 25,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.216Z"
+      "cachedAt": "2026-03-23T18:15:21.604Z"
     },
     "1595293:43341:1396": {
       "classId": "43341",
@@ -7938,7 +7938,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.218Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1595674:43424:1396": {
       "classId": "43424",
@@ -7955,7 +7955,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.217Z"
+      "cachedAt": "2026-03-23T18:15:21.604Z"
     },
     "1595760:43666:1396": {
       "classId": "43666",
@@ -7964,7 +7964,7 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 75,
+      "currentGrade": 77,
       "assignmentName": "Monday(3/16/26): Pyth Thm Conv",
       "dateDue": "03/16/2026",
       "dueDate": "03/16/2026",
@@ -7972,7 +7972,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.220Z"
+      "cachedAt": "2026-03-23T18:16:02.211Z"
     },
     "1596295:44463:1396": {
       "classId": "44463",
@@ -7989,7 +7989,7 @@
       "totalPoints": 35,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:23.460Z"
+      "cachedAt": "2026-03-23T18:14:55.276Z"
     },
     "1596186:43162:1396": {
       "classId": "43162",
@@ -8006,7 +8006,7 @@
       "totalPoints": 35,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:23.462Z"
+      "cachedAt": "2026-03-23T18:14:55.278Z"
     },
     "1596198:43162:1396": {
       "classId": "43162",
@@ -8023,7 +8023,7 @@
       "totalPoints": 24,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:23.462Z"
+      "cachedAt": "2026-03-23T18:14:55.278Z"
     },
     "1596514:44979:1396": {
       "classId": "44979",
@@ -8040,7 +8040,7 @@
       "totalPoints": 11,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.219Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1597891:43666:1396": {
       "classId": "43666",
@@ -8049,7 +8049,7 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 75,
+      "currentGrade": 77,
       "assignmentName": "Fence Activity",
       "dateDue": "03/19/2026",
       "dueDate": "03/19/2026",
@@ -8057,7 +8057,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.220Z"
+      "cachedAt": "2026-03-23T18:15:55.071Z"
     },
     "1597892:43666:1396": {
       "classId": "43666",
@@ -8066,7 +8066,7 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 75,
+      "currentGrade": 77,
       "assignmentName": "Pyth Thm Converse WS",
       "dateDue": "03/19/2026",
       "dueDate": "03/19/2026",
@@ -8074,7 +8074,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.220Z"
+      "cachedAt": "2026-03-23T18:16:02.211Z"
     },
     "1597806:44615:1396": {
       "classId": "44615",
@@ -8083,7 +8083,7 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 74,
+      "currentGrade": 75,
       "assignmentName": "Mazerunner Writing Assignment",
       "dateDue": "03/17/2026",
       "dueDate": "03/17/2026",
@@ -8091,7 +8091,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.221Z"
+      "cachedAt": "2026-03-23T18:16:11.794Z"
     },
     "1598832:43341:1396": {
       "classId": "43341",
@@ -8108,7 +8108,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.218Z"
+      "cachedAt": "2026-03-23T18:15:45.454Z"
     },
     "1598837:43666:1396": {
       "classId": "43666",
@@ -8117,7 +8117,7 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 75,
+      "currentGrade": 77,
       "assignmentName": "Friday(3/20/26): PYTHAGOREAN THEOREM QUIZ",
       "dateDue": "03/20/2026",
       "dueDate": "03/20/2026",
@@ -8125,7 +8125,92 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-03-23T12:19:40.220Z"
+      "cachedAt": "2026-03-23T18:15:55.071Z"
+    },
+    "1599843:43424:1396": {
+      "classId": "43424",
+      "assignmentId": "1599843",
+      "studentId": "1396",
+      "className": "BIOLOGY            2",
+      "teacher": "Denise Condo",
+      "period": "2",
+      "currentGrade": 85,
+      "assignmentName": "Vocab check 3rd MP",
+      "dateDue": "03/23/2026",
+      "dueDate": "03/23/2026",
+      "earnedPoints": 21,
+      "totalPoints": 25,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-03-23T18:15:04.787Z"
+    },
+    "1599846:43424:1396": {
+      "classId": "43424",
+      "assignmentId": "1599846",
+      "studentId": "1396",
+      "className": "BIOLOGY            2",
+      "teacher": "Denise Condo",
+      "period": "2",
+      "currentGrade": 85,
+      "assignmentName": "Central Dogma",
+      "dateDue": "03/23/2026",
+      "dueDate": "03/23/2026",
+      "earnedPoints": 21,
+      "totalPoints": 25,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-03-23T18:15:04.887Z"
+    },
+    "1598322:43424:1396": {
+      "classId": "43424",
+      "assignmentId": "1598322",
+      "studentId": "1396",
+      "className": "BIOLOGY            2",
+      "teacher": "Denise Condo",
+      "period": "2",
+      "currentGrade": 85,
+      "assignmentName": "DNA&RNA&PS /A.S. Video recap",
+      "dateDue": "03/23/2026",
+      "dueDate": "03/23/2026",
+      "earnedPoints": 24,
+      "totalPoints": 25,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-03-23T18:15:12.008Z"
+    },
+    "1600418:43666:1396": {
+      "classId": "43666",
+      "assignmentId": "1600418",
+      "studentId": "1396",
+      "className": "INTERMEDIATE GEOMETRY",
+      "teacher": "Caleb Marasco",
+      "period": "7",
+      "currentGrade": 77,
+      "assignmentName": "Tuesday(2/24/26): Triangle Ineq & Ordering Sides/Angles",
+      "dateDue": "02/26/2026",
+      "dueDate": "02/26/2026",
+      "earnedPoints": 20,
+      "totalPoints": 20,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-03-23T18:16:11.684Z"
+    },
+    "1600372:44615:1396": {
+      "classId": "44615",
+      "assignmentId": "1600372",
+      "studentId": "1396",
+      "className": "SOCIOLOGY",
+      "teacher": "Heather Eckels",
+      "period": "8",
+      "currentGrade": 75,
+      "assignmentName": "Deviance Day 1 Notes",
+      "dateDue": "02/26/2026",
+      "dueDate": "02/26/2026",
+      "earnedPoints": 20,
+      "totalPoints": 20,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-03-23T18:16:11.794Z"
     }
   }
 }
