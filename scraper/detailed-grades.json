@@ -1,16 +1,24 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-24T00:44:16.495Z",
+    "scrapedAt": "2026-03-24T12:20:21.720Z",
     "totalClasses": 9,
-    "totalAssignments": 165
+    "totalAssignments": 166
   },
   "classes": [
     {
       "className": "SOPHOMORE SEMINAR",
       "teacher": "Victoria Good",
       "period": "0",
-      "currentGrade": 78,
+      "currentGrade": 79,
       "assignments": [
+        {
+          "name": "Book Part.",
+          "dueDate": "03/24/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Workbok Check",
           "dueDate": "03/18/2026",
@@ -261,11 +269,11 @@
         },
         {
           "name": "Edpuzzle - DNA/RNA & PS questi",
-          "dueDate": "03/20/2026",
-          "earnedPoints": 0,
-          "totalPoints": 5,
+          "dueDate": "03/24/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Protein Sythesis and Words",
@@ -519,7 +527,7 @@
           "name": "Recipe Terms WS",
           "dueDate": "03/16/2026",
           "earnedPoints": 0,
-          "totalPoints": 5,
+          "totalPoints": 10,
           "weight": 1,
           "graded": false
         },
@@ -871,7 +879,7 @@
           "name": "WWII Victory Garden",
           "dueDate": "03/23/2026",
           "earnedPoints": 0,
-          "totalPoints": 25,
+          "totalPoints": 20,
           "weight": 1,
           "graded": false
         },
