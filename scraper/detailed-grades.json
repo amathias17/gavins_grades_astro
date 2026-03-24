@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-23T18:16:13.917Z",
+    "scrapedAt": "2026-03-24T00:44:16.495Z",
     "totalClasses": 9,
     "totalAssignments": 165
   },
@@ -511,7 +511,7 @@
           "name": "Annotating a Recipe WS",
           "dueDate": "03/18/2026",
           "earnedPoints": 0,
-          "totalPoints": 5,
+          "totalPoints": 30,
           "weight": 1,
           "graded": false
         },
@@ -527,7 +527,7 @@
           "name": "Measuring WS",
           "dueDate": "03/12/2026",
           "earnedPoints": 0,
-          "totalPoints": 10,
+          "totalPoints": 20,
           "weight": 1,
           "graded": false
         },
@@ -884,18 +884,18 @@
           "graded": false
         },
         {
-          "name": "Causes to WWII Study Guide",
-          "dueDate": "03/02/2026",
-          "earnedPoints": 13,
-          "totalPoints": 16,
-          "weight": 1,
-          "graded": true
-        },
-        {
           "name": "World War II Vocab",
           "dueDate": "01/28/2026",
           "earnedPoints": 20,
           "totalPoints": 23,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Causes to WWII Study Guide",
+          "dueDate": "03/02/2026",
+          "earnedPoints": 13,
+          "totalPoints": 16,
           "weight": 1,
           "graded": true
         },
