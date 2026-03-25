@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-24T12:20:21.720Z",
+    "scrapedAt": "2026-03-25T00:49:56.083Z",
     "totalClasses": 9,
-    "totalAssignments": 166
+    "totalAssignments": 167
   },
   "classes": [
     {
@@ -241,8 +241,16 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 85,
+      "currentGrade": 83,
       "assignments": [
+        {
+          "name": "Gift of Protein Lab",
+          "dueDate": "03/24/2026",
+          "earnedPoints": 10,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Vocab check 3rd MP",
           "dueDate": "03/23/2026",
@@ -268,7 +276,7 @@
           "graded": true
         },
         {
-          "name": "Edpuzzle - DNA/RNA & PS questi",
+          "name": "Edpuzzle - DNA/RNA & PS",
           "dueDate": "03/24/2026",
           "earnedPoints": 10,
           "totalPoints": 10,
@@ -277,11 +285,11 @@
         },
         {
           "name": "Protein Sythesis and Words",
-          "dueDate": "03/20/2026",
-          "earnedPoints": 0,
-          "totalPoints": 5,
+          "dueDate": "03/24/2026",
+          "earnedPoints": 10,
+          "totalPoints": 20,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "DNA Quiz",
@@ -527,7 +535,7 @@
           "name": "Recipe Terms WS",
           "dueDate": "03/16/2026",
           "earnedPoints": 0,
-          "totalPoints": 10,
+          "totalPoints": 5,
           "weight": 1,
           "graded": false
         },
@@ -879,7 +887,7 @@
           "name": "WWII Victory Garden",
           "dueDate": "03/23/2026",
           "earnedPoints": 0,
-          "totalPoints": 20,
+          "totalPoints": 25,
           "weight": 1,
           "graded": false
         },
@@ -1225,7 +1233,7 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 75,
+      "currentGrade": 86,
       "assignments": [
         {
           "name": "Deviance Day 1 Notes",
