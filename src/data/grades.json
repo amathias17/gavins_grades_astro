@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "03/24/2026, 08:49 PM",
+    "last_updated": "03/25/2026, 08:19 AM",
     "most_recent_date": "3/25/2026",
     "total_classes": 9
   },
@@ -13,10 +13,10 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q3_grade": 79,
-      "q3_letter_grade": "C",
-      "current_grade": 79,
-      "letter_grade": "C"
+      "q3_grade": 81,
+      "q3_letter_grade": "B",
+      "current_grade": 81,
+      "letter_grade": "B"
     },
     {
       "class_name": "English 10",
@@ -244,7 +244,7 @@
       "3/22/2026": 78,
       "3/23/2026": 78,
       "3/24/2026": 79,
-      "3/25/2026": 79
+      "3/25/2026": 81
     },
     "English 10": {
       "11/24/2025": 75,

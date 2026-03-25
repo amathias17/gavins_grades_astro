@@ -1,16 +1,24 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-25T00:49:56.083Z",
+    "scrapedAt": "2026-03-25T12:19:24.262Z",
     "totalClasses": 9,
-    "totalAssignments": 167
+    "totalAssignments": 168
   },
   "classes": [
     {
       "className": "SOPHOMORE SEMINAR",
       "teacher": "Victoria Good",
       "period": "0",
-      "currentGrade": 79,
+      "currentGrade": 81,
       "assignments": [
+        {
+          "name": "BONUS",
+          "dueDate": "03/25/2026",
+          "earnedPoints": 3,
+          "totalPoints": 0,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Book Part.",
           "dueDate": "03/24/2026",
@@ -517,11 +525,11 @@
       "assignments": [
         {
           "name": "Crunchy, Munchy Goop Lab",
-          "dueDate": "03/19/2026",
-          "earnedPoints": 0,
-          "totalPoints": 30,
+          "dueDate": "03/25/2026",
+          "earnedPoints": 3,
+          "totalPoints": 0,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Annotating a Recipe WS",
@@ -887,7 +895,7 @@
           "name": "WWII Victory Garden",
           "dueDate": "03/23/2026",
           "earnedPoints": 0,
-          "totalPoints": 25,
+          "totalPoints": 20,
           "weight": 1,
           "graded": false
         },
