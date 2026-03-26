@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-25T12:19:24.262Z",
+    "scrapedAt": "2026-03-26T00:53:06.603Z",
     "totalClasses": 9,
-    "totalAssignments": 168
+    "totalAssignments": 172
   },
   "classes": [
     {
@@ -121,8 +121,24 @@
       "className": "ENGLISH 10",
       "teacher": "Megan Leone",
       "period": "1",
-      "currentGrade": 71,
+      "currentGrade": 69,
       "assignments": [
+        {
+          "name": "Speak MP4 Reading",
+          "dueDate": "03/25/2026",
+          "earnedPoints": 15,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Speak Symbolism",
+          "dueDate": "03/25/2026",
+          "earnedPoints": 15,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Packet 3",
           "dueDate": "03/18/2026",
@@ -249,7 +265,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 83,
+      "currentGrade": 84,
       "assignments": [
         {
           "name": "Gift of Protein Lab",
@@ -444,6 +460,14 @@
           "graded": true
         },
         {
+          "name": "Sister CHromosomes and Karyoty",
+          "dueDate": "03/25/2026",
+          "earnedPoints": 0,
+          "totalPoints": 12,
+          "weight": 1,
+          "graded": true
+        },
+        {
           "name": "Types of Reproduction-EdPuzzle",
           "dueDate": "02/23/2026",
           "earnedPoints": 5,
@@ -533,9 +557,9 @@
         },
         {
           "name": "Annotating a Recipe WS",
-          "dueDate": "03/18/2026",
+          "dueDate": "02/10/2026",
           "earnedPoints": 0,
-          "totalPoints": 30,
+          "totalPoints": 10,
           "weight": 1,
           "graded": false
         },
@@ -551,7 +575,7 @@
           "name": "Measuring WS",
           "dueDate": "03/12/2026",
           "earnedPoints": 0,
-          "totalPoints": 20,
+          "totalPoints": 10,
           "weight": 1,
           "graded": false
         },
@@ -673,8 +697,16 @@
       "className": "ENG/DESIGN/ARCH",
       "teacher": "Todd Bennett",
       "period": "4",
-      "currentGrade": 70,
+      "currentGrade": 73,
       "assignments": [
+        {
+          "name": "Week 10 Participation",
+          "dueDate": "03/27/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "ADA Floor Plan Challenge",
           "dueDate": "03/20/2026",
@@ -895,7 +927,7 @@
           "name": "WWII Victory Garden",
           "dueDate": "03/23/2026",
           "earnedPoints": 0,
-          "totalPoints": 20,
+          "totalPoints": 25,
           "weight": 1,
           "graded": false
         },
@@ -956,18 +988,18 @@
           "graded": true
         },
         {
-          "name": "Causes to WWII Vocab",
-          "dueDate": "02/20/2026",
-          "earnedPoints": 20,
-          "totalPoints": 20,
-          "weight": 1,
-          "graded": true
-        },
-        {
           "name": "WWII Word Search",
           "dueDate": "02/23/2026",
           "earnedPoints": 5,
           "totalPoints": 5,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Causes to WWII Vocab",
+          "dueDate": "02/20/2026",
+          "earnedPoints": 20,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         },

@@ -1,9 +1,17 @@
 {
   "metadata": {
-    "last_updated": "03/25/2026, 08:19 AM",
-    "count": 11
+    "last_updated": "03/25/2026, 08:53 PM",
+    "count": 12
   },
   "missing_assignments": [
+    {
+      "due_date": "03/25/2026",
+      "assignment_name": "Speak Symbolism",
+      "class_name": "ENGLISH 10",
+      "teacher": "Megan Leone",
+      "category": "Class Work",
+      "max_points": "12"
+    },
     {
       "due_date": "03/23/2026",
       "assignment_name": "WWII Family Rationing",
@@ -71,19 +79,19 @@
     },
     {
       "due_date": "03/01/2026",
-      "assignment_name": "WWII Video Guide",
-      "class_name": "AMER STUDIES",
-      "teacher": "Brock Seese",
-      "category": "Class Work",
-      "max_points": "20"
-    },
-    {
-      "due_date": "03/01/2026",
       "assignment_name": "America WWII Gallery WalK",
       "class_name": "AMER STUDIES",
       "teacher": "Brock Seese",
       "category": "Participation",
       "max_points": "30"
+    },
+    {
+      "due_date": "03/01/2026",
+      "assignment_name": "WWII Video Guide",
+      "class_name": "AMER STUDIES",
+      "teacher": "Brock Seese",
+      "category": "Class Work",
+      "max_points": "20"
     },
     {
       "due_date": "02/26/2026",
