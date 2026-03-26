@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-26T00:53:06.603Z",
+    "scrapedAt": "2026-03-26T12:23:20.028Z",
     "totalClasses": 9,
     "totalAssignments": 172
   },
@@ -557,9 +557,9 @@
         },
         {
           "name": "Annotating a Recipe WS",
-          "dueDate": "02/10/2026",
+          "dueDate": "03/18/2026",
           "earnedPoints": 0,
-          "totalPoints": 10,
+          "totalPoints": 5,
           "weight": 1,
           "graded": false
         },
@@ -702,10 +702,10 @@
         {
           "name": "Week 10 Participation",
           "dueDate": "03/27/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
+          "earnedPoints": 25,
+          "totalPoints": 25,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "ADA Floor Plan Challenge",
@@ -926,10 +926,10 @@
         {
           "name": "WWII Victory Garden",
           "dueDate": "03/23/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 25,
           "totalPoints": 25,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "WWII Family Rationing",
@@ -1093,11 +1093,11 @@
         },
         {
           "name": "Tuesday(3/17/26): DELTA MATH",
-          "dueDate": "03/23/2026",
-          "earnedPoints": 0,
-          "totalPoints": 30,
+          "dueDate": "03/19/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Monday(3/16/26): Pyth Thm Conv",

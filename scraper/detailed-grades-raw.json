@@ -1048,10 +1048,10 @@
     "period": "3",
     "currentGrade": 56,
     "assignmentName": "Annotating a Recipe WS",
-    "dateDue": "02/10/2026",
-    "dueDate": "02/10/2026",
+    "dateDue": "03/18/2026",
+    "dueDate": "03/18/2026",
     "earnedPoints": 0,
-    "totalPoints": 10,
+    "totalPoints": 5,
     "weight": 1,
     "graded": false
   },
@@ -1322,10 +1322,10 @@
     "assignmentName": "Week 10 Participation",
     "dateDue": "03/27/2026",
     "dueDate": "03/27/2026",
-    "earnedPoints": 0,
-    "totalPoints": 20,
+    "earnedPoints": 25,
+    "totalPoints": 25,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "43341",
@@ -1738,10 +1738,10 @@
     "assignmentName": "WWII Victory Garden",
     "dateDue": "03/23/2026",
     "dueDate": "03/23/2026",
-    "earnedPoints": 0,
+    "earnedPoints": 25,
     "totalPoints": 25,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "43049",
@@ -2056,12 +2056,12 @@
     "period": "7",
     "currentGrade": 77,
     "assignmentName": "Tuesday(3/17/26): DELTA MATH",
-    "dateDue": "03/23/2026",
-    "dueDate": "03/23/2026",
-    "earnedPoints": 0,
-    "totalPoints": 30,
+    "dateDue": "03/19/2026",
+    "dueDate": "03/19/2026",
+    "earnedPoints": 10,
+    "totalPoints": 10,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "43666",
