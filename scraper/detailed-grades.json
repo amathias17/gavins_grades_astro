@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-26T12:23:20.028Z",
+    "scrapedAt": "2026-03-27T00:52:38.055Z",
     "totalClasses": 9,
     "totalAssignments": 172
   },
@@ -9,7 +9,7 @@
       "className": "SOPHOMORE SEMINAR",
       "teacher": "Victoria Good",
       "period": "0",
-      "currentGrade": 81,
+      "currentGrade": 0,
       "assignments": [
         {
           "name": "BONUS",
@@ -400,14 +400,6 @@
           "dueDate": "03/03/2026",
           "earnedPoints": 1,
           "totalPoints": 0,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Meiosis Microslide Lab",
-          "dueDate": "02/27/2026",
-          "earnedPoints": 11,
-          "totalPoints": 22,
           "weight": 1,
           "graded": true
         },
@@ -935,7 +927,7 @@
           "name": "WWII Family Rationing",
           "dueDate": "03/23/2026",
           "earnedPoints": 0,
-          "totalPoints": 25,
+          "totalPoints": 30,
           "weight": 1,
           "graded": false
         },
@@ -1073,8 +1065,16 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 77,
+      "currentGrade": 79,
       "assignments": [
+        {
+          "name": "Polygon Interior Angles WS",
+          "dueDate": "03/23/2026",
+          "earnedPoints": 0,
+          "totalPoints": 30,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Friday(3/20/26): PYTHAGOREAN THEOREM QUIZ",
           "dueDate": "03/20/2026",
