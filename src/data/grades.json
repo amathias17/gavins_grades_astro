@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "03/26/2026, 08:52 PM",
+    "last_updated": "03/27/2026, 08:18 AM",
     "most_recent_date": "3/27/2026",
     "total_classes": 9
   },
@@ -91,10 +91,10 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q3_grade": 96,
-      "q3_letter_grade": "A",
-      "current_grade": 96,
-      "letter_grade": "A"
+      "q3_grade": 77,
+      "q3_letter_grade": "C",
+      "current_grade": 77,
+      "letter_grade": "C"
     },
     {
       "class_name": "Intermediate Geometry",
@@ -810,7 +810,7 @@
       "3/24/2026": 96,
       "3/25/2026": 96,
       "3/26/2026": 96,
-      "3/27/2026": 96
+      "3/27/2026": 77
     },
     "Intermediate Geometry": {
       "11/24/2025": 69,
@@ -1264,7 +1264,7 @@
       "3/27/2026": 84
     }
   },
-  "overall_average": 78,
+  "overall_average": 76,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -1389,7 +1389,7 @@
     "3/24/2026": 77,
     "3/25/2026": 78,
     "3/26/2026": 78,
-    "3/27/2026": 78
+    "3/27/2026": 76
   },
   "streak": 0,
   "streak_history": {

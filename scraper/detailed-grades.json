@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-27T00:52:38.055Z",
+    "scrapedAt": "2026-03-27T12:18:38.115Z",
     "totalClasses": 9,
     "totalAssignments": 172
   },
@@ -913,7 +913,7 @@
       "className": "AMER STUDIES",
       "teacher": "Brock Seese",
       "period": "6",
-      "currentGrade": 96,
+      "currentGrade": 77,
       "assignments": [
         {
           "name": "WWII Victory Garden",
@@ -927,7 +927,7 @@
           "name": "WWII Family Rationing",
           "dueDate": "03/23/2026",
           "earnedPoints": 0,
-          "totalPoints": 30,
+          "totalPoints": 20,
           "weight": 1,
           "graded": false
         },
@@ -1069,11 +1069,11 @@
       "assignments": [
         {
           "name": "Polygon Interior Angles WS",
-          "dueDate": "03/23/2026",
-          "earnedPoints": 0,
-          "totalPoints": 30,
+          "dueDate": "03/26/2026",
+          "earnedPoints": 18,
+          "totalPoints": 18,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Friday(3/20/26): PYTHAGOREAN THEOREM QUIZ",

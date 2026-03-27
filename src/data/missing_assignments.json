@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "03/26/2026, 08:52 PM",
-    "count": 12
+    "last_updated": "03/27/2026, 08:18 AM",
+    "count": 14
   },
   "missing_assignments": [
     {
@@ -11,6 +11,14 @@
       "teacher": "Megan Leone",
       "category": "Class Work",
       "max_points": "12"
+    },
+    {
+      "due_date": "03/23/2026",
+      "assignment_name": "WWII Victory Garden",
+      "class_name": "AMER STUDIES",
+      "teacher": "Brock Seese",
+      "category": "Class Work",
+      "max_points": "25"
     },
     {
       "due_date": "03/23/2026",
@@ -76,6 +84,14 @@
       "teacher": "Todd Bennett",
       "category": "Class Work",
       "max_points": "10"
+    },
+    {
+      "due_date": "03/01/2026",
+      "assignment_name": "Pearl Harbor Newspaper",
+      "class_name": "AMER STUDIES",
+      "teacher": "Brock Seese",
+      "category": "Project",
+      "max_points": "20"
     },
     {
       "due_date": "03/01/2026",
