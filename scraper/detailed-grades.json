@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-27T12:18:38.115Z",
+    "scrapedAt": "2026-03-28T00:49:20.249Z",
     "totalClasses": 9,
     "totalAssignments": 172
   },
@@ -913,7 +913,7 @@
       "className": "AMER STUDIES",
       "teacher": "Brock Seese",
       "period": "6",
-      "currentGrade": 77,
+      "currentGrade": 79,
       "assignments": [
         {
           "name": "WWII Victory Garden",
@@ -927,7 +927,7 @@
           "name": "WWII Family Rationing",
           "dueDate": "03/23/2026",
           "earnedPoints": 0,
-          "totalPoints": 20,
+          "totalPoints": 30,
           "weight": 1,
           "graded": false
         },
@@ -980,18 +980,18 @@
           "graded": true
         },
         {
-          "name": "WWII Word Search",
-          "dueDate": "02/23/2026",
-          "earnedPoints": 5,
-          "totalPoints": 5,
-          "weight": 1,
-          "graded": true
-        },
-        {
           "name": "Causes to WWII Vocab",
           "dueDate": "02/20/2026",
           "earnedPoints": 20,
           "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "WWII Word Search",
+          "dueDate": "02/23/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         },
