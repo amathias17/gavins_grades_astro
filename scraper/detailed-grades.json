@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-28T12:14:05.130Z",
+    "scrapedAt": "2026-03-29T00:56:13.855Z",
     "totalClasses": 9,
     "totalAssignments": 172
   },
@@ -567,7 +567,7 @@
           "name": "Measuring WS",
           "dueDate": "03/12/2026",
           "earnedPoints": 0,
-          "totalPoints": 20,
+          "totalPoints": 10,
           "weight": 1,
           "graded": false
         },
