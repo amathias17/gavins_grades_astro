@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-29T12:13:25.593Z",
+    "scrapedAt": "2026-03-30T00:55:28.289Z",
     "totalClasses": 9,
-    "totalAssignments": 172
+    "totalAssignments": 175
   },
   "classes": [
     {
@@ -265,7 +265,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 84,
+      "currentGrade": 85,
       "assignments": [
         {
           "name": "Gift of Protein Lab",
@@ -306,6 +306,14 @@
           "totalPoints": 10,
           "weight": 1,
           "graded": true
+        },
+        {
+          "name": "Collins Words #5",
+          "dueDate": "03/20/2026",
+          "earnedPoints": 0,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": false
         },
         {
           "name": "Protein Sythesis and Words",
@@ -452,10 +460,26 @@
           "graded": true
         },
         {
+          "name": "Plant Mitosis",
+          "dueDate": "02/20/2026",
+          "earnedPoints": 0,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": false
+        },
+        {
           "name": "Sister CHromosomes and Karyoty",
           "dueDate": "03/25/2026",
           "earnedPoints": 0,
           "totalPoints": 12,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Asexual Reproduction",
+          "dueDate": "02/20/2026",
+          "earnedPoints": 25,
+          "totalPoints": 25,
           "weight": 1,
           "graded": true
         },
@@ -549,9 +573,9 @@
         },
         {
           "name": "Annotating a Recipe WS",
-          "dueDate": "03/18/2026",
+          "dueDate": "02/09/2026",
           "earnedPoints": 0,
-          "totalPoints": 5,
+          "totalPoints": 20,
           "weight": 1,
           "graded": false
         },
@@ -559,7 +583,7 @@
           "name": "Recipe Terms WS",
           "dueDate": "03/16/2026",
           "earnedPoints": 0,
-          "totalPoints": 5,
+          "totalPoints": 10,
           "weight": 1,
           "graded": false
         },
@@ -927,7 +951,7 @@
           "name": "WWII Family Rationing",
           "dueDate": "03/23/2026",
           "earnedPoints": 0,
-          "totalPoints": 30,
+          "totalPoints": 20,
           "weight": 1,
           "graded": false
         },
