@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-30T00:55:28.289Z",
+    "scrapedAt": "2026-03-30T12:23:12.878Z",
     "totalClasses": 9,
-    "totalAssignments": 175
+    "totalAssignments": 177
   },
   "classes": [
     {
@@ -265,7 +265,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 85,
+      "currentGrade": 87,
       "assignments": [
         {
           "name": "Gift of Protein Lab",
@@ -310,10 +310,10 @@
         {
           "name": "Collins Words #5",
           "dueDate": "03/20/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 15,
           "totalPoints": 15,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Protein Sythesis and Words",
@@ -462,10 +462,10 @@
         {
           "name": "Plant Mitosis",
           "dueDate": "02/20/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 15,
           "totalPoints": 15,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Sister CHromosomes and Karyoty",
@@ -532,6 +532,14 @@
           "graded": true
         },
         {
+          "name": "Bacteria Video Questions",
+          "dueDate": "02/20/2026",
+          "earnedPoints": 25,
+          "totalPoints": 25,
+          "weight": 1,
+          "graded": true
+        },
+        {
           "name": "Attendance FID",
           "dueDate": "02/03/2026",
           "earnedPoints": 9,
@@ -554,6 +562,14 @@
           "totalPoints": 0,
           "weight": 1,
           "graded": true
+        },
+        {
+          "name": "Death Trap - Insect eating pla",
+          "dueDate": "02/02/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
         }
       ]
     },
@@ -564,6 +580,14 @@
       "currentGrade": 56,
       "assignments": [
         {
+          "name": "Applesauce & Sweet Chips Lab",
+          "dueDate": "03/30/2026",
+          "earnedPoints": 0,
+          "totalPoints": 35,
+          "weight": 1,
+          "graded": false
+        },
+        {
           "name": "Crunchy, Munchy Goop Lab",
           "dueDate": "03/25/2026",
           "earnedPoints": 3,
@@ -573,9 +597,9 @@
         },
         {
           "name": "Annotating a Recipe WS",
-          "dueDate": "02/09/2026",
+          "dueDate": "03/18/2026",
           "earnedPoints": 0,
-          "totalPoints": 20,
+          "totalPoints": 35,
           "weight": 1,
           "graded": false
         },
@@ -583,15 +607,7 @@
           "name": "Recipe Terms WS",
           "dueDate": "03/16/2026",
           "earnedPoints": 0,
-          "totalPoints": 10,
-          "weight": 1,
-          "graded": false
-        },
-        {
-          "name": "Measuring WS",
-          "dueDate": "03/12/2026",
-          "earnedPoints": 0,
-          "totalPoints": 10,
+          "totalPoints": 5,
           "weight": 1,
           "graded": false
         },
@@ -951,7 +967,7 @@
           "name": "WWII Family Rationing",
           "dueDate": "03/23/2026",
           "earnedPoints": 0,
-          "totalPoints": 20,
+          "totalPoints": 30,
           "weight": 1,
           "graded": false
         },
