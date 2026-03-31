@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-30T12:23:12.878Z",
+    "scrapedAt": "2026-03-31T00:53:21.257Z",
     "totalClasses": 9,
-    "totalAssignments": 177
+    "totalAssignments": 178
   },
   "classes": [
     {
@@ -265,8 +265,16 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 87,
+      "currentGrade": 88,
       "assignments": [
+        {
+          "name": "Participation",
+          "dueDate": "03/27/2026",
+          "earnedPoints": 0,
+          "totalPoints": 0,
+          "weight": null,
+          "graded": false
+        },
         {
           "name": "Gift of Protein Lab",
           "dueDate": "03/24/2026",
@@ -556,18 +564,18 @@
           "graded": true
         },
         {
-          "name": "Green Solar Cells:Photo Synthe",
-          "dueDate": "01/26/2026",
-          "earnedPoints": 1,
-          "totalPoints": 0,
-          "weight": 1,
-          "graded": true
-        },
-        {
           "name": "Death Trap - Insect eating pla",
           "dueDate": "02/02/2026",
           "earnedPoints": 10,
           "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Green Solar Cells:Photo Synthe",
+          "dueDate": "01/26/2026",
+          "earnedPoints": 1,
+          "totalPoints": 0,
           "weight": 1,
           "graded": true
         }
@@ -577,15 +585,15 @@
       "className": "FOOD CHALLENGES",
       "teacher": "Misty Finnegan",
       "period": "3",
-      "currentGrade": 56,
+      "currentGrade": 62,
       "assignments": [
         {
           "name": "Applesauce & Sweet Chips Lab",
-          "dueDate": "03/30/2026",
-          "earnedPoints": 0,
-          "totalPoints": 35,
+          "dueDate": "03/27/2026",
+          "earnedPoints": 45,
+          "totalPoints": 45,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Crunchy, Munchy Goop Lab",
@@ -598,18 +606,18 @@
         {
           "name": "Annotating a Recipe WS",
           "dueDate": "03/18/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 27,
           "totalPoints": 35,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Recipe Terms WS",
           "dueDate": "03/16/2026",
-          "earnedPoints": 0,
-          "totalPoints": 5,
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Food Safety Test",
@@ -966,10 +974,10 @@
         {
           "name": "WWII Family Rationing",
           "dueDate": "03/23/2026",
-          "earnedPoints": 0,
-          "totalPoints": 30,
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "World War II Vocab",
