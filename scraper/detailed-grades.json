@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-03-31T00:53:21.257Z",
+    "scrapedAt": "2026-03-31T12:22:52.829Z",
     "totalClasses": 9,
     "totalAssignments": 178
   },
@@ -270,10 +270,10 @@
         {
           "name": "Participation",
           "dueDate": "03/27/2026",
-          "earnedPoints": 0,
-          "totalPoints": 0,
-          "weight": null,
-          "graded": false
+          "earnedPoints": 45,
+          "totalPoints": 45,
+          "weight": 1,
+          "graded": true
         },
         {
           "name": "Gift of Protein Lab",
