@@ -1,0 +1,522 @@
+/*
+ * twstyles.css — Gavin's Grades DBZ Design System
+ *
+ * Import this file in any page or layout that uses the anime/DBZ aesthetic.
+ * Usage: import "../styles/twstyles.css";
+ *
+ * Sections:
+ *   1. Design Tokens (CSS custom properties)
+ *   2. Typography
+ *   3. Backgrounds & Surfaces
+ *   4. Borders & Shadows
+ *   5. Layout Utilities
+ *   6. Component: Panel
+ *   7. Component: Chip / Badge
+ *   8. Component: Stat Card
+ *   9. Component: Nav Link
+ *  10. Grade Color Classes
+ *  11. Animations & Effects
+ *  12. Accessibility
+ */
+
+/* ─────────────────────────────────────────────
+   1. DESIGN TOKENS
+   ───────────────────────────────────────────── */
+:root {
+  /* Brand palette */
+  --dbz-orange:  #f78a1d;
+  --dbz-gold:    #ffd24a;
+  --dbz-blue:    #1a4fd6;
+  --dbz-red:     #e4362a;
+  --dbz-ink:     #0e0b0a;   /* deepest background */
+  --dbz-steel:   #1c222e;   /* mid-dark surface */
+  --dbz-white:   #ffffff;
+
+  /* Grade colors */
+  --grade-a: #01BC61;
+  --grade-b: #E6EF18;
+  --grade-c: #E69E18;
+  --grade-d: #E66A78;
+  --grade-f: #E60A18;
+
+  /* Typography scale (rem) */
+  --text-2xs: 0.4rem;   /* stat block micro-labels           */
+  --text-xs:  0.5rem;   /* scouter labels, fine print        */
+  --text-sm:  0.55rem;  /* body small, class names, chips    */
+  --text-base: 0.65rem; /* normal body copy                  */
+  --text-md:  0.7rem;   /* panel titles, row text            */
+  --text-lg:  0.8rem;   /* stat values inside header blocks  */
+  --text-xl:  0.85rem;  /* scouter readout value             */
+  --text-2xl: 1rem;     /* h2-level stat value               */
+  --text-hero: clamp(1.6rem, 4vw, 2.8rem); /* hero h1        */
+
+  /* Spacing */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  18px;
+  --space-6:  20px;
+  --space-8:  24px;  /* standard panel gap  */
+  --space-10: 32px;  /* section margin       */
+
+  /* Border widths */
+  --border-thin:   2px;
+  --border-normal: 3px;
+  --border-thick:  4px;
+
+  /* Letter spacing */
+  --tracking-wide:  0.18em;
+  --tracking-wider: 0.2em;
+}
+
+
+/* ─────────────────────────────────────────────
+   2. TYPOGRAPHY
+   ───────────────────────────────────────────── */
+
+/* Hero heading — full-width page title */
+.dbz-title {
+  font-size: var(--text-hero);
+  line-height: 1.3;
+  text-transform: uppercase;
+  color: var(--dbz-white);
+  text-shadow: 0 0 18px rgba(255, 210, 74, 0.6);
+  margin-top: var(--space-4);
+}
+
+/* Section / panel heading */
+.dbz-heading {
+  font-size: var(--text-md);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--dbz-gold);
+}
+
+/* Body copy */
+.dbz-body {
+  font-size: var(--text-base);
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Micro label — used above stat values */
+.dbz-label {
+  font-size: var(--text-2xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Fine-print / meta text */
+.dbz-meta {
+  font-size: var(--text-xs);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+
+/* ─────────────────────────────────────────────
+   3. BACKGROUNDS & SURFACES
+   ───────────────────────────────────────────── */
+
+/* Full-page radar background */
+.bg-radar {
+  background: radial-gradient(circle at center, #1a4d1a 0%, #0d260d 100%);
+}
+
+/* Deep ink surface — stat block and header backgrounds */
+.bg-ink {
+  background-color: var(--dbz-ink);
+}
+
+/* Panel/card surface */
+.bg-panel {
+  background: rgba(10, 10, 10, 0.9);
+}
+
+/* Subtle blue-tinted surface — hero sections */
+.bg-hero {
+  background: linear-gradient(120deg, rgba(14, 11, 10, 0.9), rgba(26, 79, 214, 0.4));
+}
+
+/* Main content shell gradient */
+.bg-shell {
+  background:
+    radial-gradient(circle at top, rgba(255, 210, 74, 0.2), transparent 55%),
+    linear-gradient(135deg, rgba(247, 138, 29, 0.2), rgba(26, 79, 214, 0.25) 50%, rgba(14, 11, 10, 0.9));
+}
+
+
+/* ─────────────────────────────────────────────
+   4. BORDERS & SHADOWS
+   ───────────────────────────────────────────── */
+
+/* Standard white panel border */
+.dbz-border {
+  border: var(--border-normal) solid var(--dbz-white);
+}
+
+/* Orange accent border — used on header / nav */
+.dbz-border-orange {
+  border: var(--border-thick) solid var(--dbz-orange);
+}
+
+/* Dashed orange border — nav bar */
+.dbz-border-dashed {
+  border: var(--border-normal) dashed var(--dbz-orange);
+}
+
+/* Gold accent border — fusion/highlight cards */
+.dbz-border-gold {
+  border: var(--border-thin) solid var(--dbz-gold);
+}
+
+/* Inset + drop shadow — gives panels the "floating slab" look */
+.dbz-shadow {
+  box-shadow: 0 0 0 4px #000000, 10px 10px 0 rgba(0, 0, 0, 0.55);
+}
+
+/* Heavier version used on the main header */
+.dbz-shadow-lg {
+  box-shadow: 0 0 0 4px #000000, 0 0 0 8px var(--dbz-orange), 8px 8px 0 8px rgba(247, 138, 29, 0.3);
+}
+
+/* Hero border with inset shadow */
+.dbz-border-hero {
+  border: var(--border-normal) solid var(--dbz-white);
+  box-shadow: 0 0 0 4px #000000, 12px 12px 0 rgba(0, 0, 0, 0.6);
+}
+
+
+/* ─────────────────────────────────────────────
+   5. LAYOUT UTILITIES
+   ───────────────────────────────────────────── */
+
+/* Centered content wrapper — matches max-width used throughout */
+.dbz-container {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Standard responsive panel grid (3 → 2 → 1 col) */
+.dbz-grid {
+  display: grid;
+  gap: var(--space-8);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1024px) {
+  .dbz-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .dbz-grid { grid-template-columns: 1fr; gap: var(--space-4); }
+}
+
+/* Auto-fit stat row grid (hero stats, scouter grid) */
+.dbz-stat-grid {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+/* Row inside a panel — label + value side by side */
+.dbz-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+  font-size: var(--text-md);
+  gap: var(--space-3);
+}
+
+.dbz-row:last-child {
+  border-bottom: none;
+}
+
+
+/* ─────────────────────────────────────────────
+   6. COMPONENT: PANEL
+   ───────────────────────────────────────────── */
+
+/*
+  Usage:
+    <article class="dbz-panel">
+      <div class="dbz-panel-title">Section Name</div>
+      <div class="dbz-row">...</div>
+    </article>
+*/
+.dbz-panel {
+  border: var(--border-normal) solid var(--dbz-white);
+  padding: var(--space-5);
+  background: rgba(10, 10, 10, 0.9);
+  box-shadow: 0 0 0 4px #000000, 10px 10px 0 rgba(0, 0, 0, 0.55);
+}
+
+.dbz-panel-title {
+  font-size: var(--text-md);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  color: var(--dbz-gold);
+}
+
+.dbz-panel-foot {
+  margin-top: var(--space-4);
+  font-size: var(--text-base);
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+}
+
+@media (max-width: 640px) {
+  .dbz-panel { padding: 15px; }
+  .dbz-panel-title { font-size: var(--text-base); margin-bottom: var(--space-3); }
+}
+
+
+/* ─────────────────────────────────────────────
+   7. COMPONENT: CHIP / BADGE
+   ───────────────────────────────────────────── */
+
+/*
+  Usage:
+    <span class="dbz-chip">85%</span>
+    <span class="dbz-chip dbz-chip-red">Missing</span>
+    <span class="dbz-chip dbz-chip-blue">Info</span>
+    <span class="dbz-chip grade-a">A</span>
+*/
+.dbz-chip {
+  background: var(--dbz-orange);
+  padding: var(--space-1) var(--space-2);
+  border: var(--border-thin) solid var(--dbz-white);
+  font-size: var(--text-base);
+  color: #0b0b0b;
+  min-width: 70px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.dbz-chip-blue {
+  background: var(--dbz-blue);
+  color: var(--dbz-white);
+}
+
+.dbz-chip-red {
+  background: var(--dbz-red);
+  color: var(--dbz-white);
+}
+
+.dbz-chip-gold {
+  background: var(--dbz-gold);
+  color: #0b0b0b;
+}
+
+/* Grade-specific chip colors */
+.dbz-chip.grade-a { background: var(--grade-a); color: #000; }
+.dbz-chip.grade-b { background: var(--grade-b); color: #000; }
+.dbz-chip.grade-c { background: var(--grade-c); color: #000; }
+.dbz-chip.grade-d { background: var(--grade-d); color: #fff; }
+.dbz-chip.grade-f { background: var(--grade-f); color: #fff; }
+
+@media (max-width: 640px) {
+  .dbz-chip { font-size: var(--text-sm); padding: 3px 6px; min-width: 60px; }
+}
+
+
+/* ─────────────────────────────────────────────
+   8. COMPONENT: STAT CARD
+   ───────────────────────────────────────────── */
+
+/*
+  Usage:
+    <div class="dbz-stat-card">
+      <span class="dbz-stat-label">Power Level</span>
+      <span class="dbz-stat-value">9001</span>
+      <span class="dbz-stat-meta">Overclocked</span>
+    </div>
+*/
+.dbz-stat-card {
+  border: var(--border-thin) solid rgba(255, 255, 255, 0.8);
+  background: rgba(12, 12, 12, 0.8);
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dbz-stat-label {
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.dbz-stat-value {
+  display: block;
+  margin-top: var(--space-2);
+  font-size: var(--text-2xl);
+  color: var(--dbz-gold);
+}
+
+.dbz-stat-meta {
+  display: block;
+  margin-top: 6px;
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 640px) {
+  .dbz-stat-card { padding: 10px 12px; }
+}
+
+
+/* ─────────────────────────────────────────────
+   9. COMPONENT: NAV LINK
+   ───────────────────────────────────────────── */
+
+/*
+  Usage:
+    <a href="/stats" class="dbz-nav-link dbz-nav-blue">Scouter Stats</a>
+    <a href="/"      class="dbz-nav-link dbz-nav-gold">Earth HQ</a>
+    <a href="/calc"  class="dbz-nav-link dbz-nav-orange">Power Calc</a>
+    <a href="/anime" class="dbz-nav-link dbz-nav-red dbz-nav-active">Training Lab</a>
+*/
+.dbz-nav-link {
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  border: var(--border-thin) solid currentColor;
+  padding: var(--space-2) var(--space-4);
+  background: #000;
+  transition: background-color 0.15s, color 0.15s;
+  text-decoration: none;
+}
+
+.dbz-nav-gold   { color: var(--dbz-gold);   }
+.dbz-nav-blue   { color: var(--dbz-blue);   }
+.dbz-nav-orange { color: var(--dbz-orange); }
+.dbz-nav-red    { color: var(--dbz-red);    }
+
+.dbz-nav-gold:hover   { background: var(--dbz-gold);   color: #000; }
+.dbz-nav-blue:hover   { background: var(--dbz-blue);   color: #fff; }
+.dbz-nav-orange:hover { background: var(--dbz-orange); color: #000; }
+.dbz-nav-red:hover    { background: var(--dbz-red);    color: #fff; }
+
+/* Active/current page state */
+.dbz-nav-active {
+  background: var(--dbz-red);
+  color: #000;
+  font-weight: bold;
+}
+
+
+/* ─────────────────────────────────────────────
+   10. GRADE COLOR CLASSES
+   ───────────────────────────────────────────── */
+
+/* Text color helpers — mirrors global.css but also defined here for standalone use */
+.grade-a { color: var(--grade-a); }
+.grade-b { color: var(--grade-b); }
+.grade-c { color: var(--grade-c); }
+.grade-d { color: var(--grade-d); }
+.grade-f { color: var(--grade-f); }
+
+/* Background versions */
+.grade-a-bg { background-color: var(--grade-a); }
+.grade-b-bg { background-color: var(--grade-b); }
+.grade-c-bg { background-color: var(--grade-c); }
+.grade-d-bg { background-color: var(--grade-d); }
+.grade-f-bg { background-color: var(--grade-f); }
+
+
+/* ─────────────────────────────────────────────
+   11. ANIMATIONS & EFFECTS
+   ───────────────────────────────────────────── */
+
+/* Pulsing aura ring — used on .anime-shell ::after */
+@keyframes auraPulse {
+  0%, 100% { transform: scale(0.96); opacity: 0.6; }
+  50%       { transform: scale(1.02); opacity: 1;   }
+}
+
+/* Horizontal scan sweep — used on meter glow overlay */
+@keyframes scanSweep {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(100%);  }
+}
+
+/* Dragon ball dot blink — orange dots on radar background */
+@keyframes blinkDot {
+  0%, 100% { opacity: 1;   transform: scale(1);   }
+  50%       { opacity: 0.4; transform: scale(0.8); }
+}
+
+/* Cursor blink — SAIYAN ACADEMY_ blinking underscore */
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* Apply classes */
+.aura-pulse  { animation: auraPulse 4s ease-in-out infinite; }
+.scan-sweep  { animation: scanSweep 3s linear infinite; }
+.blink-dot   { animation: blinkDot  2s ease-in-out infinite; }
+.blink       { animation: blink     1s step-start infinite; }
+
+/* Meter bar — power level fill */
+.dbz-meter {
+  position: relative;
+  height: 16px;
+  background: #101010;
+  border: var(--border-thin) solid var(--dbz-white);
+  overflow: hidden;
+  margin-bottom: var(--space-3);
+}
+
+.dbz-meter-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--dbz-orange), var(--dbz-gold));
+}
+
+.dbz-meter-glow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  animation: scanSweep 3s linear infinite;
+}
+
+/* Gold text glow */
+.dbz-glow-gold {
+  text-shadow: 0 0 18px rgba(255, 210, 74, 0.6);
+}
+
+/* Orange aura glow on borders */
+.dbz-glow-orange {
+  box-shadow: 0 0 16px rgba(247, 138, 29, 0.5);
+}
+
+
+/* ─────────────────────────────────────────────
+   12. ACCESSIBILITY
+   ───────────────────────────────────────────── */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.focus\:not-sr-only:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 1rem;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}

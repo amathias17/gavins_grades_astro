@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "04/01/2026, 08:50 PM",
+    "last_updated": "04/02/2026, 07:48 AM",
     "most_recent_date": "4/2/2026",
     "total_classes": 9
   },
@@ -13,10 +13,10 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q3_grade": 0,
-      "q3_letter_grade": "F",
-      "current_grade": 0,
-      "letter_grade": "F"
+      "q4_grade": 82,
+      "q4_letter_grade": "B",
+      "current_grade": 82,
+      "letter_grade": "B"
     },
     {
       "class_name": "English 10",
@@ -26,10 +26,10 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q3_grade": 69,
-      "q3_letter_grade": "D",
-      "current_grade": 69,
-      "letter_grade": "D"
+      "q4_grade": 74,
+      "q4_letter_grade": "C",
+      "current_grade": 74,
+      "letter_grade": "C"
     },
     {
       "class_name": "Biology 2",
@@ -39,9 +39,9 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q3_grade": 88,
-      "q3_letter_grade": "B",
-      "current_grade": 88,
+      "q4_grade": 83,
+      "q4_letter_grade": "B",
+      "current_grade": 83,
       "letter_grade": "B"
     },
     {
@@ -52,10 +52,10 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q3_grade": 62,
-      "q3_letter_grade": "D",
-      "current_grade": 62,
-      "letter_grade": "D"
+      "q4_grade": 0,
+      "q4_letter_grade": "F",
+      "current_grade": 0,
+      "letter_grade": "F"
     },
     {
       "class_name": "Eng/design/arch",
@@ -65,10 +65,10 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q3_grade": 73,
-      "q3_letter_grade": "C",
-      "current_grade": 73,
-      "letter_grade": "C"
+      "q4_grade": 10,
+      "q4_letter_grade": "F",
+      "current_grade": 10,
+      "letter_grade": "F"
     },
     {
       "class_name": "Greek Mythology",
@@ -78,10 +78,10 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q3_grade": 84,
-      "q3_letter_grade": "B",
-      "current_grade": 84,
-      "letter_grade": "B"
+      "q4_grade": 58,
+      "q4_letter_grade": "F",
+      "current_grade": 58,
+      "letter_grade": "F"
     },
     {
       "class_name": "Amer Studies",
@@ -91,10 +91,10 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q3_grade": 79,
-      "q3_letter_grade": "C",
-      "current_grade": 79,
-      "letter_grade": "C"
+      "q4_grade": 0,
+      "q4_letter_grade": "F",
+      "current_grade": 0,
+      "letter_grade": "F"
     },
     {
       "class_name": "Intermediate Geometry",
@@ -104,10 +104,10 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q3_grade": 79,
-      "q3_letter_grade": "C",
-      "current_grade": 79,
-      "letter_grade": "C"
+      "q4_grade": 0,
+      "q4_letter_grade": "F",
+      "current_grade": 0,
+      "letter_grade": "F"
     },
     {
       "class_name": "Sociology",
@@ -117,10 +117,10 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q3_grade": 86,
-      "q3_letter_grade": "B",
-      "current_grade": 86,
-      "letter_grade": "B"
+      "q4_grade": 0,
+      "q4_letter_grade": "F",
+      "current_grade": 0,
+      "letter_grade": "F"
     }
   ],
   "grade_history": {
@@ -252,7 +252,7 @@
       "3/30/2026": 0,
       "3/31/2026": 0,
       "4/1/2026": 0,
-      "4/2/2026": 0
+      "4/2/2026": 82
     },
     "English 10": {
       "11/24/2025": 75,
@@ -383,7 +383,7 @@
       "3/30/2026": 69,
       "3/31/2026": 69,
       "4/1/2026": 69,
-      "4/2/2026": 69
+      "4/2/2026": 74
     },
     "Biology 2": {
       "11/24/2025": 82,
@@ -514,7 +514,7 @@
       "3/30/2026": 87,
       "3/31/2026": 88,
       "4/1/2026": 88,
-      "4/2/2026": 88
+      "4/2/2026": 83
     },
     "History Pop Cult 1": {
       "11/24/2025": 90,
@@ -834,7 +834,7 @@
       "3/30/2026": 79,
       "3/31/2026": 79,
       "4/1/2026": 79,
-      "4/2/2026": 79
+      "4/2/2026": 0
     },
     "Intermediate Geometry": {
       "11/24/2025": 69,
@@ -965,7 +965,7 @@
       "3/30/2026": 79,
       "3/31/2026": 79,
       "4/1/2026": 79,
-      "4/2/2026": 79
+      "4/2/2026": 0
     },
     "Health": {
       "11/24/2025": 94,
@@ -1099,7 +1099,7 @@
       "3/30/2026": 86,
       "3/31/2026": 86,
       "4/1/2026": 86,
-      "4/2/2026": 86
+      "4/2/2026": 0
     },
     "Food Challenges": {
       "1/23/2026": 0,
@@ -1170,7 +1170,7 @@
       "3/30/2026": 56,
       "3/31/2026": 62,
       "4/1/2026": 62,
-      "4/2/2026": 62
+      "4/2/2026": 0
     },
     "Eng/design/arch": {
       "1/23/2026": 0,
@@ -1241,7 +1241,7 @@
       "3/30/2026": 73,
       "3/31/2026": 73,
       "4/1/2026": 73,
-      "4/2/2026": 73
+      "4/2/2026": 10
     },
     "Money Math": {
       "1/23/2026": 0,
@@ -1315,10 +1315,10 @@
       "3/30/2026": 84,
       "3/31/2026": 84,
       "4/1/2026": 84,
-      "4/2/2026": 84
+      "4/2/2026": 58
     }
   },
-  "overall_average": 78,
+  "overall_average": 61,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -1449,7 +1449,7 @@
     "3/30/2026": 77,
     "3/31/2026": 78,
     "4/1/2026": 78,
-    "4/2/2026": 78
+    "4/2/2026": 61
   },
   "streak": 3,
   "streak_history": {

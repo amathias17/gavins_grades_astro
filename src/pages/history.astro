@@ -9,7 +9,7 @@ interface ClassEntry {
   period: string;
   current_grade: number;
   letter_grade: string;
-  q3_grade: number | null;
+  q4_grade: number | null;
 }
 
 // ── Raw data ───────────────────────────────────────────────────────────────
@@ -34,12 +34,12 @@ function getGradeColor(grade: number): string {
 }
 
 /**
- * Detect the Q3 start for a class from its grade history.
+ * Detect the Q4 start for a class from its grade history.
  * Strategy: find the first non-zero value that appears after a drop to 0
  * (quarter reset). If no such transition exists, use the first date.
  * Returns the start date string or null if no history.
  */
-function detectQ3Start(
+function detectQ4Start(
   history: Record<string, number>
 ): string | null {
   const entries = Object.entries(history).sort(
@@ -83,17 +83,17 @@ interface ClassHistoryData {
 const classHistories: ClassHistoryData[] = currentClasses
   .map((cls) => {
     const history = gradeHistory[cls.class_name] ?? {};
-    const q3StartDate = detectQ3Start(history);
-    if (!q3StartDate) return null;
+    const q4StartDate = detectQ4Start(history);
+    if (!q4StartDate) return null;
 
     const allEntries = Object.entries(history).sort(
       ([a], [b]) => parseDate(a) - parseDate(b)
     );
-    const q3StartTs = parseDate(q3StartDate);
+    const q4StartTs = parseDate(q4StartDate);
 
-    // Build series from Q3 start onward, skipping 0-valued reset gaps
+    // Build series from Q4 start onward, skipping 0-valued reset gaps
     const series = allEntries
-      .filter(([date, val]) => parseDate(date) >= q3StartTs && val > 0)
+      .filter(([date, val]) => parseDate(date) >= q4StartTs && val > 0)
       .map(([date, value]) => ({ date, value }));
 
     if (series.length === 0) return null;
@@ -173,11 +173,11 @@ const mostDeclined = classHistories.reduce((worst, c) =>
   c.delta < (worst?.delta ?? Infinity) ? c : worst
 , classHistories[0]);
 
-// Earliest Q3 start and latest date across all classes
-const allQ3Dates = classHistories.map((c) => c.series[0]?.date ?? "");
+// Earliest Q4 start and latest date across all classes
+const allQ4Dates = classHistories.map((c) => c.series[0]?.date ?? "");
 const allLastDates = classHistories.map((c) => c.series[c.series.length - 1]?.date ?? "");
-const q3WindowStart = allQ3Dates.sort((a, b) => parseDate(a) - parseDate(b))[0] ?? "";
-const q3WindowEnd = allLastDates.sort((a, b) => parseDate(b) - parseDate(a))[0] ?? "";
+const q4WindowStart = allQ4Dates.sort((a, b) => parseDate(a) - parseDate(b))[0] ?? "";
+const q4WindowEnd = allLastDates.sort((a, b) => parseDate(b) - parseDate(a))[0] ?? "";
 
 // ── Pre-compute sparklines ─────────────────────────────────────────────────
 const sparklines = classHistories.map((c) => buildSparkline(c.series));
@@ -203,7 +203,7 @@ const sparklines = classHistories.map((c) => buildSparkline(c.series));
         </div>
         <div>
           <h1 class="text-[0.8em] text-[#ff00ff] uppercase mb-2">GRADE.LOG</h1>
-          <p class="text-[0.6em] text-[#aaa]">Q3 GRADE HISTORY — ALL CURRENT CLASSES</p>
+          <p class="text-[0.6em] text-[#aaa]">Q4 GRADE HISTORY — ALL CURRENT CLASSES</p>
         </div>
       </div>
 
@@ -225,8 +225,8 @@ const sparklines = classHistories.map((c) => buildSparkline(c.series));
           </div>
         </div>
         <div class="bg-[#000] p-4 border-[3px] border-solid border-[#555]">
-          <div class="text-[0.5em] text-[#aaa] uppercase mb-2">Q3 Tracking Window</div>
-          <div class="text-[0.6em] text-[#aaa]">{q3WindowStart} → {q3WindowEnd}</div>
+          <div class="text-[0.5em] text-[#aaa] uppercase mb-2">Q4 Tracking Window</div>
+          <div class="text-[0.6em] text-[#aaa]">{q4WindowStart} → {q4WindowEnd}</div>
           <div class="text-[0.6em] text-[#00ffff] mt-1">{classHistories.length} classes tracked</div>
         </div>
       </div>

@@ -1,12 +1,9 @@
 ---
 import gradesData from "../data/grades.json";
-import missingData from "../data/missing_assignments.json";
 import { countDragonBalls } from "../utils/dragonBalls";
 
 const overallAverage = gradesData.overall_average;
-const streak = gradesData.streak || 0;
 const dragonBalls = countDragonBalls(gradesData.classes);
-const missingCount = missingData.metadata.count || 0;
 ---
 
 <!-- Dragon Ball Z Themed Header for Anime Page -->
@@ -22,19 +19,11 @@ const missingCount = missingData.metadata.count || 0;
                 <div class="text-[0.8em] text-[#ffd24a]">{Math.round(overallAverage * 100)}</div>
             </div>
             <div class="border-[3px] border-solid border-white min-w-[100px] px-[15px] py-3 text-center bg-[#0e0b0a]">
-                <div class="text-[0.4em] text-[#aaa] mb-2">ZENKAI</div>
-                <div class="text-[0.8em] text-[#1a4fd6]">{streak}</div>
-            </div>
-            <div class="border-[3px] border-solid border-white min-w-[100px] px-[15px] py-3 text-center bg-[#0e0b0a]">
                 <div class="text-[0.4em] text-[#aaa] mb-2">DRAGON BALLS</div>
                 <div class="flex items-center justify-center gap-2">
                     <img src="/dbs/Ball 4 Stars.png" alt="Dragon Ball" class="dragon-ball-icon" />
                     <div class="text-[0.8em] text-[#f78a1d]" title={`${dragonBalls} / 7 Dragon Balls collected`}>{dragonBalls === 7 ? '🐉' : dragonBalls}</div>
                 </div>
-            </div>
-            <div class="border-[3px] border-solid border-white min-w-[100px] px-[15px] py-3 text-center bg-[#0e0b0a]">
-                <div class="text-[0.4em] text-[#aaa] mb-2">MISSING</div>
-                <div class="text-[0.8em] text-[#e4362a]" title={`${missingCount} missing assignments`}>{missingCount}</div>
             </div>
         </div>
     </div>

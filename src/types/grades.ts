@@ -21,6 +21,8 @@ export interface Class {
   q2_letter_grade: string | null;
   q3_grade?: number | null;
   q3_letter_grade?: string | null;
+  q4_grade?: number | null;
+  q4_letter_grade?: string | null;
   current_grade: number;
   letter_grade: string;
   assignments?: Assignment[];

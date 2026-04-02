@@ -13,11 +13,11 @@ const parseDate = (value: string): number => {
 };
 
 /**
- * Detect Q3 start. Returns { date, hasReset } where hasReset=true means a
+ * Detect Q4 start. Returns { date, hasReset } where hasReset=true means a
  * quarter-reset (drop to 0) was found. Classes without a reset are "continuous"
  * and need a fallback floor date.
  */
-function detectQ3Start(history: Record<string, number>): { date: string; hasReset: boolean } | null {
+function detectQ4Start(history: Record<string, number>): { date: string; hasReset: boolean } | null {
   const entries = Object.entries(history).sort(
     ([a], [b]) => parseDate(a) - parseDate(b)
   );
@@ -33,40 +33,40 @@ function detectQ3Start(history: Record<string, number>): { date: string; hasRese
   return { date: entries[0][0], hasReset: false };
 }
 
-// Build per-class Q3 start timestamps.
+// Build per-class Q4 start timestamps.
 // Classes with a confirmed reset use their own start.
 // Classes with no reset (continuous data) get the floor from reset-confirmed classes.
 const currentClassNames = new Set((gradesData.classes ?? []).map((c: { class_name: string }) => c.class_name));
 
 const resetStarts: number[] = [];
-const rawQ3 = new Map<string, { ts: number; hasReset: boolean }>();
+const rawQ4 = new Map<string, { ts: number; hasReset: boolean }>();
 
 Object.entries(gradeHistory).forEach(([name, history]) => {
   if (!currentClassNames.has(name)) return;
-  const result = detectQ3Start(history as Record<string, number>);
+  const result = detectQ4Start(history as Record<string, number>);
   if (!result) return;
   const ts = parseDate(result.date);
-  rawQ3.set(name, { ts, hasReset: result.hasReset });
+  rawQ4.set(name, { ts, hasReset: result.hasReset });
   if (result.hasReset) resetStarts.push(ts);
 });
 
-// Floor = earliest confirmed-reset Q3 start; fallback to earliest of all if none
-const q3Floor = resetStarts.length
+// Floor = earliest confirmed-reset Q4 start; fallback to earliest of all if none
+const q4Floor = resetStarts.length
   ? Math.min(...resetStarts)
-  : Math.min(...Array.from(rawQ3.values()).map((v) => v.ts));
+  : Math.min(...Array.from(rawQ4.values()).map((v) => v.ts));
 
-const classQ3StartTs = new Map<string, number>();
-rawQ3.forEach(({ ts, hasReset }, name) => {
-  classQ3StartTs.set(name, hasReset ? ts : q3Floor);
+const classQ4StartTs = new Map<string, number>();
+rawQ4.forEach(({ ts, hasReset }, name) => {
+  classQ4StartTs.set(name, hasReset ? ts : q4Floor);
 });
 
-// Only include a date if at least one current class has non-zero Q3 data on that date
+// Only include a date if at least one current class has non-zero Q4 data on that date
 const allDates = new Set<string>();
 Object.entries(gradeHistory).forEach(([name, history]) => {
   if (!currentClassNames.has(name)) return;
-  const classQ3Ts = classQ3StartTs.get(name) ?? Infinity;
+  const classQ4Ts = classQ4StartTs.get(name) ?? Infinity;
   Object.entries(history ?? {}).forEach(([date, val]) => {
-    if (parseDate(date) >= classQ3Ts && (val as number) > 0) allDates.add(date);
+    if (parseDate(date) >= classQ4Ts && (val as number) > 0) allDates.add(date);
   });
 });
 
@@ -81,9 +81,9 @@ const averageSeries = sortedDates
     let count = 0;
     Object.entries(gradeHistory).forEach(([name, history]) => {
       if (!currentClassNames.has(name)) return;
-      // Only include this class if the date is within its Q3 window
-      const classQ3Ts = classQ3StartTs.get(name) ?? Infinity;
-      if (dateTs < classQ3Ts) return;
+      // Only include this class if the date is within its Q4 window
+      const classQ4Ts = classQ4StartTs.get(name) ?? Infinity;
+      if (dateTs < classQ4Ts) return;
       const value = (history as Record<string, number>)?.[date];
       if (typeof value === "number" && value > 0) {
         sum += value;
@@ -193,7 +193,7 @@ const lastDate = averageSeries.length ? averageSeries[averageSeries.length - 1].
           <div class="w-12 h-12 flex items-center justify-center text-[1.2em] border-[3px] border-solid border-[#00ff00] bg-[#000]">
             CH
           </div>
-          <div class="text-[0.7em] text-[#00ff00]">GRADE SIGNAL — Q3</div>
+          <div class="text-[0.7em] text-[#00ff00]">GRADE SIGNAL — Q4</div>
         </div>
 
         <div class="bg-[#000] border-[3px] border-solid border-[#555] p-4">
@@ -201,7 +201,7 @@ const lastDate = averageSeries.length ? averageSeries[averageSeries.length - 1].
             viewBox={`0 0 ${viewBoxWidth} ${viewBoxHeight}`}
             class="w-full h-[260px]"
             role="img"
-            aria-label="Average grade trend for Q3"
+            aria-label="Average grade trend for Q4"
           >
             <rect x="0" y="0" width="100%" height="100%" fill="#000" />
             <g stroke="#1f2933" stroke-width="2">

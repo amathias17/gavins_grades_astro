@@ -222,29 +222,29 @@ async function getClassInfo(page) {
         }
       }
 
-      // Get current grade from the grade row (Q3 column)
+      // Get current grade from the grade row (Q4 column)
       const gradeRow = document.querySelector(`tr[group-parent="${groupId}"]`);
       let currentGrade = null;
-      let q3Grade = null;
+      let q4Grade = null;
       let isHighlighted = false;
 
       if (gradeRow) {
         isHighlighted = gradeRow.querySelector('.sf_highlightYellow') !== null;
         const gradeCells = gradeRow.querySelectorAll('td');
-        const q3Link = gradeCells[2]?.querySelector('a[id="showGradeInfo"]');
+        const q4Link = gradeCells[3]?.querySelector('a[id="showGradeInfo"]');
 
-        if (q3Link) {
-          const gradeText = q3Link.textContent?.trim().replace(/%/g, '');
+        if (q4Link) {
+          const gradeText = q4Link.textContent?.trim().replace(/%/g, '');
           const grade = Number(gradeText);
           if (Number.isFinite(grade) && grade >= 0 && grade <= 100) {
-            q3Grade = grade;
+            q4Grade = grade;
             currentGrade = grade;
           }
         }
 
-        // Highlighted but no Q3 value present: treat as 0 until posted
-        if (isHighlighted && q3Grade === null) {
-          q3Grade = 0;
+        // Highlighted but no Q4 value present: treat as 0 until posted
+        if (isHighlighted && q4Grade === null) {
+          q4Grade = 0;
           currentGrade = 0;
         }
       }
@@ -256,7 +256,7 @@ async function getClassInfo(page) {
           period,
           groupId,
           currentGrade,
-          q3_grade: q3Grade
+          q4_grade: q4Grade
         };
 
         classes.push(entry);
@@ -655,8 +655,8 @@ async function scrapeAllAssignments(page, classes, cacheAssignments = {}, classI
       console.log(`DEBUG: Index ${i}, assignment from array:`, JSON.stringify({name: assignment.name, classId: assignment.classId, assignmentId: assignment.assignmentId}));
     }
 
-    // Only keep Q3 (due date text typically contains (Q3))
-    if (!assignment.dueDate || !/\(Q3\)/i.test(assignment.dueDate)) {
+    // Only keep Q4 (due date text typically contains (Q4))
+    if (!assignment.dueDate || !/\(Q4\)/i.test(assignment.dueDate)) {
       continue;
     }
 
@@ -794,7 +794,7 @@ function organizeByClass(assignments, classes) {
 }
 
 async function scrapeMissingAssignments(page) {
-  console.log('\nChecking for missing assignments (Q3 only)...');
+  console.log('\nChecking for missing assignments (Q4 only)...');
   let missingAssignments = [];
 
   try {
@@ -817,7 +817,7 @@ async function scrapeMissingAssignments(page) {
             if (cells.length < 4) return;
 
             const rawDate = cells[0]?.textContent.trim() || '';
-            if (!rawDate.toLowerCase().includes('q3')) return;
+            if (!rawDate.toLowerCase().includes('q4')) return;
 
             const assignmentName = cells[1]?.textContent.trim() || '';
             const className = cells[2]?.textContent.trim() || '';
@@ -854,7 +854,7 @@ async function scrapeMissingAssignments(page) {
 
           return assignments;
         });
-        console.log(`Found ${missingAssignments.length} missing assignments (Q3)`);
+        console.log(`Found ${missingAssignments.length} missing assignments (Q4)`);
       }
     } else {
       console.log('Missing assignments button not found');
@@ -924,14 +924,14 @@ async function saveGradesToFile(grades, missingAssignments = []) {
     q1_letter_grade: cls.q1_grade !== undefined ? letter(cls.q1_grade) : null,
     q2_grade: cls.q2_grade ?? null,
     q2_letter_grade: cls.q2_grade !== undefined ? letter(cls.q2_grade) : null,
-    q3_grade: cls.q3_grade ?? null,
-    q3_letter_grade: cls.q3_grade !== undefined ? letter(cls.q3_grade) : null,
-    current_grade: cls.q3_grade !== null && cls.q3_grade !== undefined
-      ? cls.q3_grade
-      : (cls.q2_grade !== null && cls.q2_grade !== undefined ? cls.q2_grade : cls.q1_grade),
-    letter_grade: cls.q3_grade !== null && cls.q3_grade !== undefined
-      ? letter(cls.q3_grade)
-      : (cls.q2_grade !== null && cls.q2_grade !== undefined ? letter(cls.q2_grade) : letter(cls.q1_grade))
+    q4_grade: cls.q4_grade ?? null,
+    q4_letter_grade: cls.q4_grade !== undefined ? letter(cls.q4_grade) : null,
+    current_grade: cls.q4_grade !== null && cls.q4_grade !== undefined
+      ? cls.q4_grade
+      : (cls.q3_grade !== null && cls.q3_grade !== undefined ? cls.q3_grade : (cls.q2_grade !== null && cls.q2_grade !== undefined ? cls.q2_grade : cls.q1_grade)),
+    letter_grade: cls.q4_grade !== null && cls.q4_grade !== undefined
+      ? letter(cls.q4_grade)
+      : (cls.q3_grade !== null && cls.q3_grade !== undefined ? letter(cls.q3_grade) : (cls.q2_grade !== null && cls.q2_grade !== undefined ? letter(cls.q2_grade) : letter(cls.q1_grade)))
   }));
 
   const gradeHistory = existingData.grade_history || {};
@@ -1044,17 +1044,18 @@ async function main() {
     );
     console.log(`\nSuccessfully extracted ${assignmentDetails.length} assignments`);
 
-    // Missing assignments (Q3 only)
+    // Missing assignments (Q4 only)
     const missingAssignments = await scrapeMissingAssignments(popup);
 
-    // Persist grades.json using Q3-only classes
+    // Persist grades.json using Q4-only classes
     const gradeClasses = classes.map(c => ({
       class_name: c.className,
       teacher: c.teacher,
       period: c.period,
       q1_grade: null,
       q2_grade: null,
-      q3_grade: c.q3_grade ?? null
+      q3_grade: null,
+      q4_grade: c.q4_grade ?? null
     }));
     await saveGradesToFile(gradeClasses, missingAssignments);
 

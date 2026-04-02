@@ -171,18 +171,19 @@ async function scrapeGrades(username, password) {
                 // Now find the corresponding grade row in the right table using the group ID
                 const gradeRow = document.querySelector(`tr[group-parent="${groupId}"]`);
 
-                // We only care about the current marking period (Q3). Keep placeholders for schema compatibility.
+                // We only care about the current marking period (Q4). Keep placeholders for schema compatibility.
                 let q1Grade = null;
                 let q2Grade = null;
                 let q3Grade = null;
-                let isQ3Highlighted = false;
+                let q4Grade = null;
+                let isQ4Highlighted = false;
 
                 if (gradeRow) {
-                    isQ3Highlighted = gradeRow.querySelector('.sf_highlightYellow') !== null;
+                    isQ4Highlighted = gradeRow.querySelector('.sf_highlightYellow') !== null;
 
                     const gradeCells = gradeRow.querySelectorAll('td');
 
-                    // Grab Q1/Q2 if present (for compatibility, but not used for current)
+                    // Grab Q1/Q2/Q3 if present (for compatibility, but not used for current)
                     const q1Link = gradeCells[0]?.querySelector('a[id="showGradeInfo"]');
                     if (q1Link) {
                         const gradeText = q1Link.textContent?.trim().replace(/%/g, '');
@@ -201,7 +202,6 @@ async function scrapeGrades(username, password) {
                         }
                     }
 
-                    // Q3: if cell exists, parse; if highlighted but empty, default to 0
                     const q3Link = gradeCells[2]?.querySelector('a[id="showGradeInfo"]');
                     if (q3Link) {
                         const gradeText = q3Link.textContent?.trim().replace(/%/g, '');
@@ -209,16 +209,26 @@ async function scrapeGrades(username, password) {
                         if (Number.isFinite(grade) && grade >= 0 && grade <= 100) {
                             q3Grade = grade;
                         }
-                    } else if (isQ3Highlighted) {
-                        q3Grade = 0;
+                    }
+
+                    // Q4: if cell exists, parse; if highlighted but empty, default to 0
+                    const q4Link = gradeCells[3]?.querySelector('a[id="showGradeInfo"]');
+                    if (q4Link) {
+                        const gradeText = q4Link.textContent?.trim().replace(/%/g, '');
+                        const grade = Number(gradeText);
+                        if (Number.isFinite(grade) && grade >= 0 && grade <= 100) {
+                            q4Grade = grade;
+                        }
+                    } else if (isQ4Highlighted) {
+                        q4Grade = 0;
                     }
                 }
 
                 // Only include classes marked as current (highlighted), even if no grade yet
-                if (isQ3Highlighted) {
-                    // Default empty Q3 to 0 so current classes surface with a placeholder grade
-                    if (q3Grade === null) {
-                        q3Grade = 0;
+                if (isQ4Highlighted) {
+                    // Default empty Q4 to 0 so current classes surface with a placeholder grade
+                    if (q4Grade === null) {
+                        q4Grade = 0;
                     }
                     // Calculate letter grades
                     let q1LetterGrade = null;
@@ -248,6 +258,15 @@ async function scrapeGrades(username, password) {
                         else q3LetterGrade = 'F';
                     }
 
+                    let q4LetterGrade = null;
+                    if (q4Grade !== null) {
+                        if (q4Grade >= 90) q4LetterGrade = 'A';
+                        else if (q4Grade >= 80) q4LetterGrade = 'B';
+                        else if (q4Grade >= 70) q4LetterGrade = 'C';
+                        else if (q4Grade >= 60) q4LetterGrade = 'D';
+                        else q4LetterGrade = 'F';
+                    }
+
                     classes.push({
                         class_name: className,
                         teacher: teacher,
@@ -257,7 +276,9 @@ async function scrapeGrades(username, password) {
                         q2_grade: q2Grade,
                         q2_letter_grade: q2LetterGrade,
                         q3_grade: q3Grade,
-                        q3_letter_grade: q3LetterGrade
+                        q3_letter_grade: q3LetterGrade,
+                        q4_grade: q4Grade,
+                        q4_letter_grade: q4LetterGrade
                     });
                 }
             });
@@ -316,8 +337,8 @@ async function scrapeGrades(username, password) {
                             const maxPoints = cells.length >= 6 ? cells[5]?.textContent.trim() || '' : '';
                             const absent = cells.length >= 7 ? cells[6]?.textContent.trim() || '' : '';
 
-                            // Only keep Q3-marked rows
-                            if (!dateRaw.toLowerCase().includes('q3')) return;
+                            // Only keep Q4-marked rows
+                            if (!dateRaw.toLowerCase().includes('q4')) return;
 
                             // Skip if this looks like header text or empty
                             if (!date || !assignmentName || !className) return;
@@ -431,11 +452,13 @@ async function saveGradesToFile(grades, missingAssignments = []) {
         q2_letter_grade: cls.q2_letter_grade,
         q3_grade: cls.q3_grade,
         q3_letter_grade: cls.q3_letter_grade,
-        // Use Q3 grade if available, otherwise Q2 then Q1
-        current_grade: cls.q3_grade !== null ? cls.q3_grade : (cls.q2_grade !== null ? cls.q2_grade : cls.q1_grade),
-        letter_grade: cls.q3_letter_grade !== null
-            ? cls.q3_letter_grade
-            : (cls.q2_letter_grade !== null ? cls.q2_letter_grade : cls.q1_letter_grade)
+        q4_grade: cls.q4_grade,
+        q4_letter_grade: cls.q4_letter_grade,
+        // Use Q4 grade if available, otherwise Q3 then Q2 then Q1
+        current_grade: cls.q4_grade !== null ? cls.q4_grade : (cls.q3_grade !== null ? cls.q3_grade : (cls.q2_grade !== null ? cls.q2_grade : cls.q1_grade)),
+        letter_grade: cls.q4_letter_grade !== null
+            ? cls.q4_letter_grade
+            : (cls.q3_letter_grade !== null ? cls.q3_letter_grade : (cls.q2_letter_grade !== null ? cls.q2_letter_grade : cls.q1_letter_grade))
     }));
 
     // Update grade history
