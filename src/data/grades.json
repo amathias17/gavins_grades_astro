@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "04/02/2026, 08:25 AM",
+    "last_updated": "04/02/2026, 03:21 PM",
     "most_recent_date": "4/2/2026",
     "total_classes": 9
   },
@@ -65,9 +65,9 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q4_grade": 10,
+      "q4_grade": 25,
       "q4_letter_grade": "F",
-      "current_grade": 10,
+      "current_grade": 25,
       "letter_grade": "F"
     },
     {
@@ -1241,7 +1241,7 @@
       "3/30/2026": 73,
       "3/31/2026": 73,
       "4/1/2026": 73,
-      "4/2/2026": 10
+      "4/2/2026": 25
     },
     "Money Math": {
       "1/23/2026": 0,
@@ -1318,7 +1318,7 @@
       "4/2/2026": 58
     }
   },
-  "overall_average": 61,
+  "overall_average": 64,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -1449,7 +1449,7 @@
     "3/30/2026": 77,
     "3/31/2026": 78,
     "4/1/2026": 78,
-    "4/2/2026": 61
+    "4/2/2026": 64
   },
   "streak": 3,
   "streak_history": {
