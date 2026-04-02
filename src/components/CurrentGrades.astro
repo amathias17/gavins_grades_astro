@@ -1,8 +1,8 @@
 ---
 import gradesData from "../data/grades.json";
 import missingAssignmentsData from "../data/missing_assignments.json";
-import fs from "node:fs/promises";
-import path from "node:path";
+import fs from "fs/promises";
+import path from "path";
 
 type ScrapedAssignment = {
     earnedPoints: number;
@@ -16,8 +16,19 @@ type ScrapedClass = {
     assignments: ScrapedAssignment[];
 };
 
+type MissingAssignment = {
+    assignment_name: string;
+    class_name: string;
+    due_date: string;
+    max_points: number | string;
+};
+
+type MissingAssignmentsData = {
+    missing_assignments?: MissingAssignment[];
+};
+
 const data = gradesData.classes.map((classInfo) => ({
-    class: classInfo.class_name,
+    className: classInfo.class_name,
     teacher: classInfo.teacher,
     q1_grade: classInfo.q1_grade,
     q1_letter_grade: classInfo.q1_letter_grade,
@@ -34,7 +45,7 @@ const metadata = {
 const normalizeClassName = (value: string): string =>
     value.trim().toLowerCase().replace(/[^a-z0-9]+/g, " ");
 const classLookup = new Map(
-    data.map((entry) => [normalizeClassName(entry.class), entry]),
+    data.map((entry) => [normalizeClassName(entry.className), entry]),
 );
 
 const normalizeMissingDate = (value: string): string =>
@@ -86,7 +97,7 @@ function getClassPoints(className: string, classPeriod: string | null) {
     return totals;
 }
 
-const missingAssignments = missingAssignmentsData.missing_assignments?.map(
+const missingAssignments = (missingAssignmentsData as MissingAssignmentsData).missing_assignments?.map(
     (assignment) => {
         const classKey = normalizeClassName(assignment.class_name);
         const classInfo = classLookup.get(classKey);
@@ -116,6 +127,82 @@ function getGradeColor(grade: number): string {
     if (grade >= 60) return "grade-d";
     return "grade-f";
 }
+
+// ── Grade fluctuation (Q4 sparklines + weekly delta) ──────────────────────
+const gradeHistory = (gradesData.grade_history ?? {}) as Record<string, Record<string, number>>;
+
+const parseDate = (d: string) => { const p = Date.parse(d); return Number.isNaN(p) ? 0 : p; };
+
+function detectQ4Start(history: Record<string, number>): string | null {
+    const entries = Object.entries(history).sort(([a], [b]) => parseDate(a) - parseDate(b));
+    if (entries.length === 0) return null;
+    for (let i = 1; i < entries.length; i++) {
+        if (entries[i - 1][1] > 10 && entries[i][1] === 0) {
+            for (let j = i + 1; j < entries.length; j++) {
+                if (entries[j][1] > 0) return entries[j][0];
+            }
+            return entries[i][0];
+        }
+    }
+    return entries[0][0];
+}
+
+function buildMiniSparkline(series: { date: string; value: number }[], width = 80, height = 24): string {
+    if (series.length < 2) return "";
+    const values = series.map((s) => s.value);
+    const rawMin = Math.min(...values);
+    const rawMax = Math.max(...values);
+    const range = rawMax - rawMin;
+    const yMin = range < 2 ? Math.max(0, rawMin - 3) : rawMin - 1;
+    const yMax = range < 2 ? Math.min(100, rawMax + 3) : rawMax + 1;
+    const yRange = yMax - yMin || 1;
+    const pad = 2;
+    const plotW = width - 2 * pad;
+    const plotH = height - 2 * pad;
+    return series
+        .map((s, i) => {
+            const progress = series.length > 1 ? i / (series.length - 1) : 0;
+            const x = pad + progress * plotW;
+            const y = pad + (1 - (s.value - yMin) / yRange) * plotH;
+            return `${x.toFixed(1)},${y.toFixed(1)}`;
+        })
+        .join(" ");
+}
+
+const ONE_DAY_MS = 24 * 60 * 60 * 1000;
+
+interface FluctuationData {
+    delta: number;
+    sparkPoints: string;
+    hasData: boolean;
+    prevDate: string;
+    lastDate: string;
+}
+
+const classFluctuation = new Map<string, FluctuationData>(
+    data.map((cls) => {
+        const history = gradeHistory[cls.className] ?? {};
+        const q4Start = detectQ4Start(history);
+        const q4StartTs = q4Start ? parseDate(q4Start) : 0;
+        const series = Object.entries(history)
+            .sort(([a], [b]) => parseDate(a) - parseDate(b))
+            .filter(([date, val]) => parseDate(date) >= q4StartTs && (val as number) > 0)
+            .map(([date, value]) => ({ date, value: value as number }));
+
+        if (series.length < 2) {
+            return [cls.className, { delta: 0, sparkPoints: "", hasData: false, prevDate: "", lastDate: "" }];
+        }
+        const last = series[series.length - 1];
+        const lastTs = parseDate(last.date);
+        const yesterday = [...series].reverse().find((s) => lastTs - parseDate(s.date) >= ONE_DAY_MS);
+        const prev = yesterday ?? series[0];
+        const delta = last.value - prev.value;
+        return [
+            cls.className,
+            { delta, sparkPoints: buildMiniSparkline(series), hasData: true, prevDate: prev.date, lastDate: last.date },
+        ];
+    })
+);
 ---
 
 <!-- <section
@@ -135,9 +222,9 @@ function getGradeColor(grade: number): string {
     >
         {
             data.map((i) => (
-                <article class="bg-gray-800 p-4 md:p-6 rounded-lg transition-colors hover:bg-gray-700" aria-label={`${i.class} grade information`}>
+                <article class="bg-gray-800 p-4 md:p-6 rounded-lg transition-colors hover:bg-gray-700" aria-label={`${i.className} grade information`}>
                     <div class="flex items-baseline justify-between mb-2">
-                        <h2 class="text-lg md:text-xl font-semibold">{i.class}</h2>
+                        <h2 class="text-lg md:text-xl font-semibold">{i.className}</h2>
                         <span class="text-xs md:text-sm text-gray-400" aria-label={`Period ${i.period}`}>Period {i.period}</span>
                     </div>
                     <div class="flex items-baseline justify-between mb-2" aria-label={`Grade: ${i.grade} percent, Letter grade: ${i.lettergrade}`}>
@@ -150,105 +237,127 @@ function getGradeColor(grade: number): string {
         }
     </div> --><!-- </section> -->
 <section>
-    <div class="grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-5 mb-5">
-        <!-- Current Grades -->
+    <div
+        class="shadow-[0_0_0_4px_#000,0_0_0_8px_#fff,8px_8px_0_8px_rgba(255,255,255,0.3)] relative p-5 border-4 border-solid border-white card mb-5"
+    >
         <div
-            class="shadow-[0_0_0_4px_#000,0_0_0_8px_#fff,8px_8px_0_8px_rgba(255,255,255,0.3)] relative p-5 border-4 border-solid border-white card"
+            class="flex items-center gap-[15px] mb-5 pb-[15px] border-b-[3px] border-b-[#555] border-dashed"
         >
             <div
-                class="flex items-center gap-[15px] mb-5 pb-[15px] border-b-[3px] border-b-[#555] border-dashed"
+                class="w-12 h-12 flex items-center justify-center text-[1.2em] border-[3px] border-solid border-[#00ff00] bg-[#000]"
             >
-                <div
-                    class="w-12 h-12 flex items-center justify-center text-[1.2em] border-[3px] border-solid border-[#00ff00] bg-[#000] bg-[#000]"
-                >
-                    📚
-                </div>
-                <div class="text-[0.7em] text-[#00ff00]">
-                    CURRENT.GRADES - UPDATED {metadata.last_updated}
-                </div>
+                📚
             </div>
+            <div class="text-[0.7em] text-[#00ff00]">
+                CURRENT.GRADES - UPDATED {metadata.last_updated}
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
             {
-                data.map((i) => (
-                    <a href={`/classes/${i.period}`} class="block mb-[15px] p-[15px] border-[3px] border-solid border-[#555] bg-[#000] hover:border-[#00ff00] hover:shadow-[0_0_10px_rgba(0,255,0,0.3)] transition-all cursor-pointer">
-                        <div class="flex justify-between items-center flex-wrap gap-2.5 mb-[15px]">
-                            <>
-                                <span class="text-[0.6em] text-white uppercase">
-                                    {i.class} - {i.teacher}
+                data.map((i) => {
+                    const fluct = classFluctuation.get(i.className);
+                    const deltaSign = fluct && fluct.delta > 0 ? "▲" : fluct && fluct.delta < 0 ? "▼" : "●";
+                    const deltaColor = fluct && fluct.delta > 0.4 ? "#01BC61" : fluct && fluct.delta < -0.4 ? "#E60A18" : "#aaa";
+                    const deltaText = fluct && fluct.hasData
+                        ? `${deltaSign}${fluct.delta >= 0 ? "+" : ""}${Math.round(fluct.delta)}%`
+                        : "●—";
+                    return (
+                        <a href={`/classes/${i.period}`} class="block p-[15px] border-[3px] border-solid border-[#555] bg-[#000] hover:border-[#00ff00] hover:shadow-[0_0_10px_rgba(0,255,0,0.3)] transition-all cursor-pointer">
+                            <div class="flex justify-between items-center flex-wrap gap-2 mb-3">
+                                <span class="text-[0.6em] text-white uppercase flex-1 min-w-0 truncate">
+                                    {i.className} <span class="text-[#777]">— {i.teacher}</span>
                                 </span>
-
-                                <div class="flex gap-2.5 items-center">
-                                    <span
-                                        class={`grade-badge ${getGradeColor(i.grade)}`}
-                                    >
-                                        {i.lettergrade}
-                                    </span>
-                                    <span
-                                        class={`grade-badge ${getGradeColor(i.grade)}`}
-                                    >
-                                        {i.grade}%
-                                    </span>
+                                <div class="flex gap-2 items-center flex-shrink-0">
+                                    <span class={`grade-badge ${getGradeColor(i.grade)}`}>{i.lettergrade}</span>
+                                    <span class={`grade-badge text-[0.75em] ${getGradeColor(i.grade)}`}>{i.grade}%</span>
                                 </div>
-                            </>
-                        </div>
-                        <div class="w-full h-6 relative overflow-hidden border-[3px] border-solid border-white bg-[#000]">
-                            <div
-                                class={`progress-fill ${getGradeColor(i.grade)} h-full transition-[width] duration-[1s] ease-[steps(20)] relative after:content-[''] after:absolute after:w-1 after:h-full after:animate-[blink_0.5s_step-start_infinite] after:right-0 after:top-0;`}
-                                style={`width: ${i.grade}%`}
-                            />
-                        </div>
-                    </a>
-                ))
+                            </div>
+                            <div class="w-full h-5 relative overflow-hidden border-[3px] border-solid border-white bg-[#000] mb-3">
+                                <div
+                                    class={`progress-fill ${getGradeColor(i.grade)} h-full transition-[width] duration-[1s] ease-[steps(20)] relative after:content-[''] after:absolute after:w-1 after:h-full after:animate-[blink_0.5s_step-start_infinite] after:right-0 after:top-0`}
+                                    style={`width: ${i.grade}%`}>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                {fluct?.hasData && fluct.sparkPoints ? (
+                                    <svg width="100%" height="32" viewBox="0 0 400 32" preserveAspectRatio="none" class="flex-1 min-w-0" aria-hidden="true">
+                                        <polyline
+                                            points={fluct.sparkPoints.split(" ").map(pt => {
+                                                const [x, y] = pt.split(",");
+                                                return `${(Number(x) / 80 * 400).toFixed(1)},${(Number(y) / 24 * 32).toFixed(1)}`;
+                                            }).join(" ")}
+                                            fill="none"
+                                            stroke={deltaColor}
+                                            stroke-width="2"
+                                            stroke-linejoin="round"
+                                            stroke-linecap="round"
+                                            vector-effect="non-scaling-stroke"
+                                        />
+                                    </svg>
+                                ) : (
+                                    <svg width="100%" height="32" viewBox="0 0 400 32" preserveAspectRatio="none" class="flex-1 min-w-0" aria-hidden="true">
+                                        <line x1="0" y1="16" x2="400" y2="16" stroke="#333" stroke-width="1" stroke-dasharray="6 4"/>
+                                    </svg>
+                                )}
+                                <div class="flex flex-col items-end flex-shrink-0 w-14">
+                                    <span class="text-[0.6em] font-bold leading-tight" style={`color: ${deltaColor}`}>{deltaText}</span>
+                                    <span class="text-[0.38em] text-[#555] uppercase leading-tight">daily</span>
+                                </div>
+                            </div>
+                        </a>
+                    );
+                })
             }
         </div>
+    </div>
 
-        <!-- Active Quests -->
+    <!-- Missing Quests — de-emphasized, below current grades -->
+    <div
+        class="relative p-4 border-[2px] border-dashed border-[#333] bg-[#000] mb-5"
+    >
         <div
-            class="shadow-[0_0_0_4px_#000,0_0_0_8px_#fff,8px_8px_0_8px_rgba(255,255,255,0.3)] relative p-5 border-4 border-solid border-white card"
+            class="flex items-center gap-3 mb-4 pb-3 border-b-[2px] border-b-[#333] border-dashed"
         >
             <div
-                class="flex items-center gap-[15px] mb-5 pb-[15px] border-b-[3px] border-b-[#555] border-dashed"
+                class="w-9 h-9 flex items-center justify-center text-[0.9em] border-[2px] border-solid border-[#555] bg-[#000]"
             >
-                <div
-                    class="w-12 h-12 flex items-center justify-center text-[1.2em] border-[3px] border-solid border-[#00ff00] bg-[#000] bg-[#000]"
-                >
-                    ⚔️
-                </div>
-                <div class="text-[0.7em] text-[#00ff00]">
-                    MISSING.QUESTS ({missingAssignmentsCount})
-                </div>
+                ⚔️
             </div>
+            <div class="text-[0.6em] text-[#777]">
+                MISSING.QUESTS ({missingAssignmentsCount})
+            </div>
+        </div>
 
-            {
-                missingAssignments.length === 0 ? (
-                    <div class="flex justify-center items-center flex-col">
-                        <div class="mb-8 ">🤘🤘🤘🤘 <span class="text-green-500 uppercase">NO</span> MISSING ASSIGNMENTS 🤘🤘🤘🤘</div>
-                    </div>
-                ) : (
-                    missingAssignments.map((a, index) => (
+            {missingAssignments.length === 0 ? (
+                <div class="flex justify-center items-center flex-col py-2">
+                    <div class="text-[0.55em]">🤘 <span class="text-green-500 uppercase">NO</span> MISSING ASSIGNMENTS 🤘</div>
+                </div>
+            ) : (
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+                {missingAssignments.map((a, index) => (
                         <button
                             type="button"
-                            class="missing-quest-button w-full text-left bg-[#000] p-[15px] mb-[12px] border-[3px] border-[#00ffff] flex items-center gap-[15px] hover:border-[#00ff00] hover:shadow-[0_0_10px_rgba(0,255,0,0.3)] transition-all"
+                            class="missing-quest-button w-full text-left bg-[#000] p-[10px] border-[2px] border-[#333] flex items-center gap-[10px] hover:border-[#555] transition-all"
                             data-quest-index={index}
                             aria-haspopup="dialog"
                             aria-controls="missing-quest-modal"
                             aria-label={`Show grade impact for ${a.assignment} in ${a.className}`}
                         >
-                            <div class="text-[1.5em] flex-shrink-0">👎</div>
-                            <div class="flex-[1]">
-                                <strong class="text-[0.5em] text-[#fff] block mb-[8px] uppercase">
+                            <div class="text-[1em] flex-shrink-0">👎</div>
+                            <div class="flex-[1] min-w-0">
+                                <strong class="text-[0.45em] text-[#aaa] block mb-[4px] uppercase truncate">
                                     {a.assignment}
                                 </strong>
-                                <p class="text-[0.4em] text-[#aaa] uppercase">
-                                    {a.className} - DUE: {a.due}
+                                <p class="text-[0.4em] text-[#555] uppercase truncate">
+                                    {a.className}
                                 </p>
                             </div>
-                            <div class="quest-reward">+{a.maxPoints} XP</div>
+                            <div class="text-[0.45em] text-[#777] flex-shrink-0">+{a.maxPoints}xp</div>
                         </button>
-                    ))
+                    ))}
+                    </div>
                 )
             }
-        </div>
-
     </div>
 </section>
 
