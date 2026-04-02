@@ -187,9 +187,9 @@
     "dateDue": "04/01/2026",
     "dueDate": "04/01/2026",
     "earnedPoints": 0,
-    "totalPoints": 10,
+    "totalPoints": 5,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "44979",
