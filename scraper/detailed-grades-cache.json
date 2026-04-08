@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-07T12:23:16.631Z",
+  "updatedAt": "2026-04-08T00:54:04.515Z",
   "assignments": {
     "1561854:44463:1396": {
       "classId": "44463",
@@ -8618,7 +8618,7 @@
       "totalPoints": 45,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-07T12:23:16.448Z"
+      "cachedAt": "2026-04-08T00:53:54.797Z"
     },
     "1606960:44463:1396": {
       "classId": "44463",
@@ -8635,7 +8635,7 @@
       "totalPoints": 45,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-07T12:23:16.448Z"
+      "cachedAt": "2026-04-08T00:53:54.797Z"
     },
     "1606676:43162:1396": {
       "classId": "43162",
@@ -8644,7 +8644,7 @@
       "className": "ENGLISH 10",
       "teacher": "Megan Leone",
       "period": "1",
-      "currentGrade": 74,
+      "currentGrade": 62,
       "assignmentName": "Speak Book Test",
       "dateDue": "04/01/2026",
       "dueDate": "04/01/2026",
@@ -8652,7 +8652,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-07T12:23:16.449Z"
+      "cachedAt": "2026-04-08T00:54:04.197Z"
     },
     "1607952:43162:1396": {
       "classId": "43162",
@@ -8661,7 +8661,7 @@
       "className": "ENGLISH 10",
       "teacher": "Megan Leone",
       "period": "1",
-      "currentGrade": 74,
+      "currentGrade": 62,
       "assignmentName": "Magical Realism- Bao",
       "dateDue": "04/01/2026",
       "dueDate": "04/01/2026",
@@ -8669,7 +8669,7 @@
       "totalPoints": 40,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-07T12:23:16.449Z"
+      "cachedAt": "2026-04-08T00:54:04.197Z"
     },
     "1603331:43424:1396": {
       "classId": "43424",
@@ -8686,7 +8686,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-07T12:23:16.449Z"
+      "cachedAt": "2026-04-08T00:54:04.197Z"
     },
     "1604340:43424:1396": {
       "classId": "43424",
@@ -8703,7 +8703,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-07T12:23:16.449Z"
+      "cachedAt": "2026-04-08T00:54:04.198Z"
     },
     "1606235:43424:1396": {
       "classId": "43424",
@@ -8720,7 +8720,7 @@
       "totalPoints": 25,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-07T12:23:16.449Z"
+      "cachedAt": "2026-04-08T00:54:04.198Z"
     },
     "1607314:43424:1396": {
       "classId": "43424",
@@ -8737,7 +8737,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-07T12:23:16.449Z"
+      "cachedAt": "2026-04-08T00:54:04.198Z"
     },
     "1600112:45003:1396": {
       "classId": "45003",
@@ -8746,7 +8746,7 @@
       "className": "FOOD CHALLENGES",
       "teacher": "Misty Finnegan",
       "period": "3",
-      "currentGrade": 0,
+      "currentGrade": 80,
       "assignmentName": "Measuring WS",
       "dateDue": "03/31/2026",
       "dueDate": "03/31/2026",
@@ -8754,7 +8754,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-07T12:23:16.449Z"
+      "cachedAt": "2026-04-08T00:54:04.487Z"
     },
     "1604981:43341:1396": {
       "classId": "43341",
@@ -8771,7 +8771,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-07T12:23:16.449Z"
+      "cachedAt": "2026-04-08T00:54:04.487Z"
     },
     "1608064:43341:1396": {
       "classId": "43341",
@@ -8788,7 +8788,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-07T12:23:16.449Z"
+      "cachedAt": "2026-04-08T00:54:04.487Z"
     },
     "1608258:44979:1396": {
       "classId": "44979",
@@ -8805,7 +8805,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-07T12:23:16.449Z"
+      "cachedAt": "2026-04-08T00:54:04.487Z"
     },
     "1608260:44979:1396": {
       "classId": "44979",
@@ -8822,7 +8822,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-07T12:23:16.450Z"
+      "cachedAt": "2026-04-08T00:54:04.487Z"
     },
     "1608230:44615:1396": {
       "classId": "44615",
@@ -8839,7 +8839,7 @@
       "totalPoints": 16,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-07T12:23:16.450Z"
+      "cachedAt": "2026-04-08T00:54:04.487Z"
     },
     "1608257:44979:1396": {
       "classId": "44979",
@@ -8856,7 +8856,58 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-07T12:23:16.449Z"
+      "cachedAt": "2026-04-08T00:54:04.487Z"
+    },
+    "1609705:43162:1396": {
+      "classId": "43162",
+      "assignmentId": "1609705",
+      "studentId": "1396",
+      "className": "ENGLISH 10",
+      "teacher": "Megan Leone",
+      "period": "1",
+      "currentGrade": 62,
+      "assignmentName": "AMC Anticipation Guide",
+      "dateDue": "04/07/2026",
+      "dueDate": "04/07/2026",
+      "earnedPoints": 0,
+      "totalPoints": 10,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-04-08T00:54:04.196Z"
+    },
+    "1609829:45003:1396": {
+      "classId": "45003",
+      "assignmentId": "1609829",
+      "studentId": "1396",
+      "className": "FOOD CHALLENGES",
+      "teacher": "Misty Finnegan",
+      "period": "3",
+      "currentGrade": 80,
+      "assignmentName": "Sweet/Savory Bread Lab",
+      "dateDue": "04/07/2026",
+      "dueDate": "04/07/2026",
+      "earnedPoints": 0,
+      "totalPoints": 10,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-04-08T00:54:04.320Z"
+    },
+    "1609680:45003:1396": {
+      "classId": "45003",
+      "assignmentId": "1609680",
+      "studentId": "1396",
+      "className": "FOOD CHALLENGES",
+      "teacher": "Misty Finnegan",
+      "period": "3",
+      "currentGrade": 80,
+      "assignmentName": "Tools of the Trade (Collins)",
+      "dateDue": "04/02/2026",
+      "dueDate": "04/02/2026",
+      "earnedPoints": 29,
+      "totalPoints": 35,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-04-08T00:54:04.486Z"
     }
   }
 }

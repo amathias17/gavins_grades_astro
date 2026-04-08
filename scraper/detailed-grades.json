@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-04-07T12:23:16.630Z",
+    "scrapedAt": "2026-04-08T00:54:04.513Z",
     "totalClasses": 9,
-    "totalAssignments": 15
+    "totalAssignments": 18
   },
   "classes": [
     {
@@ -33,8 +33,16 @@
       "className": "ENGLISH 10",
       "teacher": "Megan Leone",
       "period": "1",
-      "currentGrade": 74,
+      "currentGrade": 62,
       "assignments": [
+        {
+          "name": "AMC Anticipation Guide",
+          "dueDate": "04/07/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Speak Book Test",
           "dueDate": "04/01/2026",
@@ -97,8 +105,24 @@
       "className": "FOOD CHALLENGES",
       "teacher": "Misty Finnegan",
       "period": "3",
-      "currentGrade": 0,
+      "currentGrade": 80,
       "assignments": [
+        {
+          "name": "Sweet/Savory Bread Lab",
+          "dueDate": "04/07/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Tools of the Trade (Collins)",
+          "dueDate": "04/02/2026",
+          "earnedPoints": 29,
+          "totalPoints": 35,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Measuring WS",
           "dueDate": "03/31/2026",
