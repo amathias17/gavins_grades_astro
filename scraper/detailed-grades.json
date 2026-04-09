@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-04-08T12:22:58.680Z",
+    "scrapedAt": "2026-04-09T00:45:28.385Z",
     "totalClasses": 9,
-    "totalAssignments": 18
+    "totalAssignments": 19
   },
   "classes": [
     {
@@ -139,6 +139,14 @@
       "period": "4",
       "currentGrade": 25,
       "assignments": [
+        {
+          "name": "Architecture Terms 21-40",
+          "dueDate": "04/08/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Dream Home Online Shopping Assignment",
           "dueDate": "04/02/2026",
