@@ -1,16 +1,24 @@
 {
   "metadata": {
-    "scrapedAt": "2026-04-09T12:25:16.956Z",
+    "scrapedAt": "2026-04-10T12:20:41.371Z",
     "totalClasses": 9,
-    "totalAssignments": 19
+    "totalAssignments": 25
   },
   "classes": [
     {
       "className": "SOPHOMORE SEMINAR",
       "teacher": "Victoria Good",
       "period": "0",
-      "currentGrade": 82,
+      "currentGrade": 85,
       "assignments": [
+        {
+          "name": "Budget Part. Wk of 4/6",
+          "dueDate": "04/10/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Budget & Wants/Needs",
           "dueDate": "04/01/2026",
@@ -65,8 +73,24 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 83,
+      "currentGrade": 60,
       "assignments": [
+        {
+          "name": "Collins Words #6",
+          "dueDate": "04/10/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Blood typing Problems",
+          "dueDate": "04/09/2026",
+          "earnedPoints": 0,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Mutations SG (identification)",
           "dueDate": "04/01/2026",
@@ -137,15 +161,15 @@
       "className": "ENG/DESIGN/ARCH",
       "teacher": "Todd Bennett",
       "period": "4",
-      "currentGrade": 25,
+      "currentGrade": 41,
       "assignments": [
         {
           "name": "Architecture Terms 21-40",
           "dueDate": "04/08/2026",
           "earnedPoints": 0,
-          "totalPoints": 20,
+          "totalPoints": 0,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Dream Home Online Shopping Assignment",
@@ -169,8 +193,16 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 58,
+      "currentGrade": 71,
       "assignments": [
+        {
+          "name": "Hermes Brochure",
+          "dueDate": "04/07/2026",
+          "earnedPoints": 18,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Greek Bus Activity",
           "dueDate": "04/01/2026",
@@ -201,8 +233,24 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 0,
+      "currentGrade": 100,
       "assignments": [
+        {
+          "name": "Networking Bingo",
+          "dueDate": "04/07/2026",
+          "earnedPoints": 18,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Day 1 Notes",
+          "dueDate": "04/08/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Divergent",
           "dueDate": "04/01/2026",

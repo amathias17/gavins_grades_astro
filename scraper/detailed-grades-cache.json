@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-09T12:25:16.957Z",
+  "updatedAt": "2026-04-10T12:20:41.371Z",
   "assignments": {
     "1561854:44463:1396": {
       "classId": "44463",
@@ -8610,7 +8610,7 @@
       "className": "SOPHOMORE SEMINAR",
       "teacher": "Victoria Good",
       "period": "0",
-      "currentGrade": 82,
+      "currentGrade": 85,
       "assignmentName": "Budget & Wants/Needs",
       "dateDue": "04/01/2026",
       "dueDate": "04/01/2026",
@@ -8618,7 +8618,7 @@
       "totalPoints": 45,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-09T12:25:07.511Z"
+      "cachedAt": "2026-04-10T12:20:28.989Z"
     },
     "1606960:44463:1396": {
       "classId": "44463",
@@ -8627,7 +8627,7 @@
       "className": "SOPHOMORE SEMINAR",
       "teacher": "Victoria Good",
       "period": "0",
-      "currentGrade": 82,
+      "currentGrade": 85,
       "assignmentName": "3/30-3/31 Reading",
       "dateDue": "04/01/2026",
       "dueDate": "04/01/2026",
@@ -8635,7 +8635,7 @@
       "totalPoints": 45,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-09T12:25:07.511Z"
+      "cachedAt": "2026-04-10T12:20:28.989Z"
     },
     "1606676:43162:1396": {
       "classId": "43162",
@@ -8652,7 +8652,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-09T12:25:07.511Z"
+      "cachedAt": "2026-04-10T12:20:28.989Z"
     },
     "1607952:43162:1396": {
       "classId": "43162",
@@ -8669,7 +8669,7 @@
       "totalPoints": 40,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-09T12:25:07.511Z"
+      "cachedAt": "2026-04-10T12:20:28.989Z"
     },
     "1603331:43424:1396": {
       "classId": "43424",
@@ -8678,7 +8678,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 83,
+      "currentGrade": 60,
       "assignmentName": "Mutations SG (identification)",
       "dateDue": "04/01/2026",
       "dueDate": "04/01/2026",
@@ -8686,7 +8686,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-09T12:25:07.512Z"
+      "cachedAt": "2026-04-10T12:20:29.235Z"
     },
     "1604340:43424:1396": {
       "classId": "43424",
@@ -8695,7 +8695,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 83,
+      "currentGrade": 60,
       "assignmentName": "Mutations Quiz",
       "dateDue": "03/31/2026",
       "dueDate": "03/31/2026",
@@ -8703,7 +8703,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-09T12:25:07.512Z"
+      "cachedAt": "2026-04-10T12:20:29.236Z"
     },
     "1606235:43424:1396": {
       "classId": "43424",
@@ -8712,7 +8712,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 83,
+      "currentGrade": 60,
       "assignmentName": "Human Trait Wheel",
       "dateDue": "03/31/2026",
       "dueDate": "03/31/2026",
@@ -8720,7 +8720,7 @@
       "totalPoints": 25,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-09T12:25:07.512Z"
+      "cachedAt": "2026-04-10T12:20:29.236Z"
     },
     "1607314:43424:1396": {
       "classId": "43424",
@@ -8729,7 +8729,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 83,
+      "currentGrade": 60,
       "assignmentName": "Mendel Edpuzzle",
       "dateDue": "03/31/2026",
       "dueDate": "03/31/2026",
@@ -8737,7 +8737,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-09T12:25:07.512Z"
+      "cachedAt": "2026-04-10T12:20:29.236Z"
     },
     "1600112:45003:1396": {
       "classId": "45003",
@@ -8754,7 +8754,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-09T12:25:07.512Z"
+      "cachedAt": "2026-04-10T12:20:29.236Z"
     },
     "1604981:43341:1396": {
       "classId": "43341",
@@ -8763,7 +8763,7 @@
       "className": "ENG/DESIGN/ARCH",
       "teacher": "Todd Bennett",
       "period": "4",
-      "currentGrade": 25,
+      "currentGrade": 41,
       "assignmentName": "Dream Home Online Shopping Assignment",
       "dateDue": "04/02/2026",
       "dueDate": "04/02/2026",
@@ -8771,7 +8771,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-09T12:25:16.933Z"
+      "cachedAt": "2026-04-10T12:20:29.426Z"
     },
     "1608064:43341:1396": {
       "classId": "43341",
@@ -8780,7 +8780,7 @@
       "className": "ENG/DESIGN/ARCH",
       "teacher": "Todd Bennett",
       "period": "4",
-      "currentGrade": 25,
+      "currentGrade": 41,
       "assignmentName": "Week 11 Participation",
       "dateDue": "04/01/2026",
       "dueDate": "04/01/2026",
@@ -8788,7 +8788,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-09T12:25:16.933Z"
+      "cachedAt": "2026-04-10T12:20:29.426Z"
     },
     "1608258:44979:1396": {
       "classId": "44979",
@@ -8797,7 +8797,7 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 58,
+      "currentGrade": 71,
       "assignmentName": "Oracle of Delphi Activity",
       "dateDue": "04/01/2026",
       "dueDate": "04/01/2026",
@@ -8805,7 +8805,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-09T12:25:16.933Z"
+      "cachedAt": "2026-04-10T12:20:38.960Z"
     },
     "1608260:44979:1396": {
       "classId": "44979",
@@ -8814,7 +8814,7 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 58,
+      "currentGrade": 71,
       "assignmentName": "Artemis & Apollo Reading Qs",
       "dateDue": "04/01/2026",
       "dueDate": "04/01/2026",
@@ -8822,7 +8822,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-09T12:25:16.933Z"
+      "cachedAt": "2026-04-10T12:20:38.960Z"
     },
     "1608230:44615:1396": {
       "classId": "44615",
@@ -8831,7 +8831,7 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 0,
+      "currentGrade": 100,
       "assignmentName": "Divergent",
       "dateDue": "04/01/2026",
       "dueDate": "04/01/2026",
@@ -8839,7 +8839,7 @@
       "totalPoints": 16,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-09T12:25:16.933Z"
+      "cachedAt": "2026-04-10T12:20:39.239Z"
     },
     "1608257:44979:1396": {
       "classId": "44979",
@@ -8848,7 +8848,7 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 58,
+      "currentGrade": 71,
       "assignmentName": "Greek Bus Activity",
       "dateDue": "04/01/2026",
       "dueDate": "04/01/2026",
@@ -8856,7 +8856,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-09T12:25:16.933Z"
+      "cachedAt": "2026-04-10T12:20:38.959Z"
     },
     "1609705:43162:1396": {
       "classId": "43162",
@@ -8873,7 +8873,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-09T12:25:07.511Z"
+      "cachedAt": "2026-04-10T12:20:28.989Z"
     },
     "1609829:45003:1396": {
       "classId": "45003",
@@ -8890,7 +8890,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-09T12:25:07.512Z"
+      "cachedAt": "2026-04-10T12:20:29.236Z"
     },
     "1609680:45003:1396": {
       "classId": "45003",
@@ -8907,7 +8907,126 @@
       "totalPoints": 35,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-09T12:25:07.512Z"
+      "cachedAt": "2026-04-10T12:20:29.236Z"
+    },
+    "1612351:44463:1396": {
+      "classId": "44463",
+      "assignmentId": "1612351",
+      "studentId": "1396",
+      "className": "SOPHOMORE SEMINAR",
+      "teacher": "Victoria Good",
+      "period": "0",
+      "currentGrade": 85,
+      "assignmentName": "Budget Part. Wk of 4/6",
+      "dateDue": "04/10/2026",
+      "dueDate": "04/10/2026",
+      "earnedPoints": 10,
+      "totalPoints": 10,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-04-10T12:20:28.988Z"
+    },
+    "1611725:43424:1396": {
+      "classId": "43424",
+      "assignmentId": "1611725",
+      "studentId": "1396",
+      "className": "BIOLOGY            2",
+      "teacher": "Denise Condo",
+      "period": "2",
+      "currentGrade": 60,
+      "assignmentName": "Collins Words #6",
+      "dateDue": "04/10/2026",
+      "dueDate": "04/10/2026",
+      "earnedPoints": 10,
+      "totalPoints": 10,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-04-10T12:20:29.094Z"
+    },
+    "1611729:43424:1396": {
+      "classId": "43424",
+      "assignmentId": "1611729",
+      "studentId": "1396",
+      "className": "BIOLOGY            2",
+      "teacher": "Denise Condo",
+      "period": "2",
+      "currentGrade": 60,
+      "assignmentName": "Blood typing Problems",
+      "dateDue": "04/09/2026",
+      "dueDate": "04/09/2026",
+      "earnedPoints": 0,
+      "totalPoints": 15,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-04-10T12:20:29.235Z"
+    },
+    "1611026:43341:1396": {
+      "classId": "43341",
+      "assignmentId": "1611026",
+      "studentId": "1396",
+      "className": "ENG/DESIGN/ARCH",
+      "teacher": "Todd Bennett",
+      "period": "4",
+      "currentGrade": 41,
+      "assignmentName": "Architecture Terms 21-40",
+      "dateDue": "04/08/2026",
+      "dueDate": "04/08/2026",
+      "earnedPoints": 0,
+      "totalPoints": 0,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-04-10T12:20:29.426Z"
+    },
+    "1612296:44979:1396": {
+      "classId": "44979",
+      "assignmentId": "1612296",
+      "studentId": "1396",
+      "className": "GREEK MYTHOLOGY",
+      "teacher": "Alex Ray",
+      "period": "5",
+      "currentGrade": 71,
+      "assignmentName": "Hermes Brochure",
+      "dateDue": "04/07/2026",
+      "dueDate": "04/07/2026",
+      "earnedPoints": 18,
+      "totalPoints": 20,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-04-10T12:20:38.959Z"
+    },
+    "1611930:44615:1396": {
+      "classId": "44615",
+      "assignmentId": "1611930",
+      "studentId": "1396",
+      "className": "SOCIOLOGY",
+      "teacher": "Heather Eckels",
+      "period": "8",
+      "currentGrade": 100,
+      "assignmentName": "Networking Bingo",
+      "dateDue": "04/07/2026",
+      "dueDate": "04/07/2026",
+      "earnedPoints": 18,
+      "totalPoints": 20,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-04-10T12:20:39.072Z"
+    },
+    "1611940:44615:1396": {
+      "classId": "44615",
+      "assignmentId": "1611940",
+      "studentId": "1396",
+      "className": "SOCIOLOGY",
+      "teacher": "Heather Eckels",
+      "period": "8",
+      "currentGrade": 100,
+      "assignmentName": "Day 1 Notes",
+      "dateDue": "04/08/2026",
+      "dueDate": "04/08/2026",
+      "earnedPoints": 10,
+      "totalPoints": 10,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-04-10T12:20:39.239Z"
     }
   }
 }
