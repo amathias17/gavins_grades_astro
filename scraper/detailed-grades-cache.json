@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-10T12:20:41.371Z",
+  "updatedAt": "2026-04-11T00:52:29.796Z",
   "assignments": {
     "1561854:44463:1396": {
       "classId": "44463",
@@ -8618,7 +8618,7 @@
       "totalPoints": 45,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-10T12:20:28.989Z"
+      "cachedAt": "2026-04-11T00:51:37.424Z"
     },
     "1606960:44463:1396": {
       "classId": "44463",
@@ -8635,7 +8635,7 @@
       "totalPoints": 45,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-10T12:20:28.989Z"
+      "cachedAt": "2026-04-11T00:51:37.424Z"
     },
     "1606676:43162:1396": {
       "classId": "43162",
@@ -8652,7 +8652,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-10T12:20:28.989Z"
+      "cachedAt": "2026-04-11T00:51:37.424Z"
     },
     "1607952:43162:1396": {
       "classId": "43162",
@@ -8669,7 +8669,7 @@
       "totalPoints": 40,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-10T12:20:28.989Z"
+      "cachedAt": "2026-04-11T00:51:37.425Z"
     },
     "1603331:43424:1396": {
       "classId": "43424",
@@ -8678,7 +8678,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 60,
+      "currentGrade": 82,
       "assignmentName": "Mutations SG (identification)",
       "dateDue": "04/01/2026",
       "dueDate": "04/01/2026",
@@ -8686,7 +8686,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-10T12:20:29.235Z"
+      "cachedAt": "2026-04-11T00:51:54.205Z"
     },
     "1604340:43424:1396": {
       "classId": "43424",
@@ -8695,7 +8695,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 60,
+      "currentGrade": 82,
       "assignmentName": "Mutations Quiz",
       "dateDue": "03/31/2026",
       "dueDate": "03/31/2026",
@@ -8703,7 +8703,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-10T12:20:29.236Z"
+      "cachedAt": "2026-04-11T00:51:54.205Z"
     },
     "1606235:43424:1396": {
       "classId": "43424",
@@ -8712,7 +8712,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 60,
+      "currentGrade": 82,
       "assignmentName": "Human Trait Wheel",
       "dateDue": "03/31/2026",
       "dueDate": "03/31/2026",
@@ -8720,7 +8720,7 @@
       "totalPoints": 25,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-10T12:20:29.236Z"
+      "cachedAt": "2026-04-11T00:51:54.205Z"
     },
     "1607314:43424:1396": {
       "classId": "43424",
@@ -8729,7 +8729,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 60,
+      "currentGrade": 82,
       "assignmentName": "Mendel Edpuzzle",
       "dateDue": "03/31/2026",
       "dueDate": "03/31/2026",
@@ -8737,7 +8737,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-10T12:20:29.236Z"
+      "cachedAt": "2026-04-11T00:51:54.205Z"
     },
     "1600112:45003:1396": {
       "classId": "45003",
@@ -8754,7 +8754,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-10T12:20:29.236Z"
+      "cachedAt": "2026-04-11T00:52:03.791Z"
     },
     "1604981:43341:1396": {
       "classId": "43341",
@@ -8771,7 +8771,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-10T12:20:29.426Z"
+      "cachedAt": "2026-04-11T00:52:03.791Z"
     },
     "1608064:43341:1396": {
       "classId": "43341",
@@ -8788,7 +8788,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-10T12:20:29.426Z"
+      "cachedAt": "2026-04-11T00:52:03.791Z"
     },
     "1608258:44979:1396": {
       "classId": "44979",
@@ -8797,7 +8797,7 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 71,
+      "currentGrade": 75,
       "assignmentName": "Oracle of Delphi Activity",
       "dateDue": "04/01/2026",
       "dueDate": "04/01/2026",
@@ -8805,7 +8805,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-10T12:20:38.960Z"
+      "cachedAt": "2026-04-11T00:52:10.946Z"
     },
     "1608260:44979:1396": {
       "classId": "44979",
@@ -8814,7 +8814,7 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 71,
+      "currentGrade": 75,
       "assignmentName": "Artemis & Apollo Reading Qs",
       "dateDue": "04/01/2026",
       "dueDate": "04/01/2026",
@@ -8822,7 +8822,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-10T12:20:38.960Z"
+      "cachedAt": "2026-04-11T00:52:10.946Z"
     },
     "1608230:44615:1396": {
       "classId": "44615",
@@ -8839,7 +8839,7 @@
       "totalPoints": 16,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-10T12:20:39.239Z"
+      "cachedAt": "2026-04-11T00:52:27.693Z"
     },
     "1608257:44979:1396": {
       "classId": "44979",
@@ -8848,7 +8848,7 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 71,
+      "currentGrade": 75,
       "assignmentName": "Greek Bus Activity",
       "dateDue": "04/01/2026",
       "dueDate": "04/01/2026",
@@ -8856,7 +8856,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-10T12:20:38.959Z"
+      "cachedAt": "2026-04-11T00:52:10.946Z"
     },
     "1609705:43162:1396": {
       "classId": "43162",
@@ -8873,7 +8873,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-10T12:20:28.989Z"
+      "cachedAt": "2026-04-11T00:51:37.424Z"
     },
     "1609829:45003:1396": {
       "classId": "45003",
@@ -8890,7 +8890,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-10T12:20:29.236Z"
+      "cachedAt": "2026-04-11T00:52:03.790Z"
     },
     "1609680:45003:1396": {
       "classId": "45003",
@@ -8907,7 +8907,7 @@
       "totalPoints": 35,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-10T12:20:29.236Z"
+      "cachedAt": "2026-04-11T00:52:03.791Z"
     },
     "1612351:44463:1396": {
       "classId": "44463",
@@ -8924,7 +8924,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-10T12:20:28.988Z"
+      "cachedAt": "2026-04-11T00:51:37.423Z"
     },
     "1611725:43424:1396": {
       "classId": "43424",
@@ -8933,7 +8933,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 60,
+      "currentGrade": 82,
       "assignmentName": "Collins Words #6",
       "dateDue": "04/10/2026",
       "dueDate": "04/10/2026",
@@ -8941,7 +8941,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-10T12:20:29.094Z"
+      "cachedAt": "2026-04-11T00:51:54.205Z"
     },
     "1611729:43424:1396": {
       "classId": "43424",
@@ -8950,7 +8950,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 60,
+      "currentGrade": 82,
       "assignmentName": "Blood typing Problems",
       "dateDue": "04/09/2026",
       "dueDate": "04/09/2026",
@@ -8958,7 +8958,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-10T12:20:29.235Z"
+      "cachedAt": "2026-04-11T00:51:54.205Z"
     },
     "1611026:43341:1396": {
       "classId": "43341",
@@ -8975,7 +8975,7 @@
       "totalPoints": 0,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-10T12:20:29.426Z"
+      "cachedAt": "2026-04-11T00:52:03.791Z"
     },
     "1612296:44979:1396": {
       "classId": "44979",
@@ -8984,7 +8984,7 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 71,
+      "currentGrade": 75,
       "assignmentName": "Hermes Brochure",
       "dateDue": "04/07/2026",
       "dueDate": "04/07/2026",
@@ -8992,7 +8992,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-10T12:20:38.959Z"
+      "cachedAt": "2026-04-11T00:52:10.946Z"
     },
     "1611930:44615:1396": {
       "classId": "44615",
@@ -9009,7 +9009,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-10T12:20:39.072Z"
+      "cachedAt": "2026-04-11T00:52:27.693Z"
     },
     "1611940:44615:1396": {
       "classId": "44615",
@@ -9026,7 +9026,109 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-10T12:20:39.239Z"
+      "cachedAt": "2026-04-11T00:52:27.693Z"
+    },
+    "1612604:43424:1396": {
+      "classId": "43424",
+      "assignmentId": "1612604",
+      "studentId": "1396",
+      "className": "BIOLOGY            2",
+      "teacher": "Denise Condo",
+      "period": "2",
+      "currentGrade": 82,
+      "assignmentName": "Sex-linked Traits",
+      "dateDue": "04/10/2026",
+      "dueDate": "04/10/2026",
+      "earnedPoints": 5,
+      "totalPoints": 5,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-04-11T00:51:46.943Z"
+    },
+    "1612610:43424:1396": {
+      "classId": "43424",
+      "assignmentId": "1612610",
+      "studentId": "1396",
+      "className": "BIOLOGY            2",
+      "teacher": "Denise Condo",
+      "period": "2",
+      "currentGrade": 82,
+      "assignmentName": "Genetics Problems",
+      "dateDue": "04/10/2026",
+      "dueDate": "04/10/2026",
+      "earnedPoints": 5,
+      "totalPoints": 5,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-04-11T00:51:47.061Z"
+    },
+    "1612639:43424:1396": {
+      "classId": "43424",
+      "assignmentId": "1612639",
+      "studentId": "1396",
+      "className": "BIOLOGY            2",
+      "teacher": "Denise Condo",
+      "period": "2",
+      "currentGrade": 82,
+      "assignmentName": "Keystone Vocabulary",
+      "dateDue": "04/10/2026",
+      "dueDate": "04/10/2026",
+      "earnedPoints": 40,
+      "totalPoints": 40,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-04-11T00:51:54.205Z"
+    },
+    "1613095:43666:1396": {
+      "classId": "43666",
+      "assignmentId": "1613095",
+      "studentId": "1396",
+      "className": "INTERMEDIATE GEOMETRY",
+      "teacher": "Caleb Marasco",
+      "period": "7",
+      "currentGrade": 82,
+      "assignmentName": "Reviews for Polygon Angles",
+      "dateDue": "04/10/2026",
+      "dueDate": "04/10/2026",
+      "earnedPoints": 18,
+      "totalPoints": 20,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-04-11T00:52:20.446Z"
+    },
+    "1613102:43666:1396": {
+      "classId": "43666",
+      "assignmentId": "1613102",
+      "studentId": "1396",
+      "className": "INTERMEDIATE GEOMETRY",
+      "teacher": "Caleb Marasco",
+      "period": "7",
+      "currentGrade": 82,
+      "assignmentName": "Polygon Interior and Exterior",
+      "dateDue": "04/10/2026",
+      "dueDate": "04/10/2026",
+      "earnedPoints": 18,
+      "totalPoints": 20,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-04-11T00:52:20.558Z"
+    },
+    "1612437:43666:1396": {
+      "classId": "43666",
+      "assignmentId": "1612437",
+      "studentId": "1396",
+      "className": "INTERMEDIATE GEOMETRY",
+      "teacher": "Caleb Marasco",
+      "period": "7",
+      "currentGrade": 82,
+      "assignmentName": "MP4Wk1",
+      "dateDue": "04/10/2026",
+      "dueDate": "04/10/2026",
+      "earnedPoints": 21,
+      "totalPoints": 30,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-04-11T00:52:27.693Z"
     }
   }
 }

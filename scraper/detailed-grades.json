@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-04-10T12:20:41.371Z",
+    "scrapedAt": "2026-04-11T00:52:29.795Z",
     "totalClasses": 9,
-    "totalAssignments": 25
+    "totalAssignments": 34
   },
   "classes": [
     {
@@ -73,8 +73,32 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 60,
+      "currentGrade": 82,
       "assignments": [
+        {
+          "name": "Sex-linked Traits",
+          "dueDate": "04/10/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Genetics Problems",
+          "dueDate": "04/10/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Keystone Vocabulary",
+          "dueDate": "04/10/2026",
+          "earnedPoints": 40,
+          "totalPoints": 40,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Collins Words #6",
           "dueDate": "04/10/2026",
@@ -131,6 +155,22 @@
       "period": "3",
       "currentGrade": 80,
       "assignments": [
+        {
+          "name": "Personal Choc. Chip Cookie Lab",
+          "dueDate": "04/13/2026",
+          "earnedPoints": 0,
+          "totalPoints": 35,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Lab Eval- Personal Cookie",
+          "dueDate": "04/13/2026",
+          "earnedPoints": 0,
+          "totalPoints": 35,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Sweet/Savory Bread Lab",
           "dueDate": "04/07/2026",
@@ -193,8 +233,16 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 71,
+      "currentGrade": 75,
       "assignments": [
+        {
+          "name": "Sons of Apollo & Reading Qs",
+          "dueDate": "04/08/2026",
+          "earnedPoints": 0,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Hermes Brochure",
           "dueDate": "04/07/2026",
@@ -224,6 +272,38 @@
           "dueDate": "04/01/2026",
           "earnedPoints": 8,
           "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        }
+      ]
+    },
+    {
+      "className": "INTERMEDIATE GEOMETRY",
+      "teacher": "Caleb Marasco",
+      "period": "7",
+      "currentGrade": 82,
+      "assignments": [
+        {
+          "name": "Reviews for Polygon Angles",
+          "dueDate": "04/10/2026",
+          "earnedPoints": 18,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Polygon Interior and Exterior",
+          "dueDate": "04/10/2026",
+          "earnedPoints": 18,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "MP4Wk1",
+          "dueDate": "04/10/2026",
+          "earnedPoints": 21,
+          "totalPoints": 30,
           "weight": 1,
           "graded": true
         }
