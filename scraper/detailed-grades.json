@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-04-13T00:59:26.431Z",
+    "scrapedAt": "2026-04-13T12:27:00.059Z",
     "totalClasses": 9,
-    "totalAssignments": 34
+    "totalAssignments": 35
   },
   "classes": [
     {
@@ -41,8 +41,16 @@
       "className": "ENGLISH 10",
       "teacher": "Megan Leone",
       "period": "1",
-      "currentGrade": 62,
+      "currentGrade": 65,
       "assignments": [
+        {
+          "name": "AMC Task?",
+          "dueDate": "04/13/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "AMC Anticipation Guide",
           "dueDate": "04/07/2026",
@@ -158,10 +166,10 @@
         {
           "name": "Personal Choc. Chip Cookie Lab",
           "dueDate": "04/13/2026",
-          "earnedPoints": 0,
-          "totalPoints": 35,
+          "earnedPoints": 5,
+          "totalPoints": 5,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Lab Eval- Personal Cookie",
