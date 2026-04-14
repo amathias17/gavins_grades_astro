@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-04-13T12:27:00.059Z",
+    "scrapedAt": "2026-04-14T00:58:30.713Z",
     "totalClasses": 9,
-    "totalAssignments": 35
+    "totalAssignments": 36
   },
   "classes": [
     {
@@ -175,7 +175,7 @@
           "name": "Lab Eval- Personal Cookie",
           "dueDate": "04/13/2026",
           "earnedPoints": 0,
-          "totalPoints": 35,
+          "totalPoints": 15,
           "weight": 1,
           "graded": false
         },
@@ -209,8 +209,16 @@
       "className": "ENG/DESIGN/ARCH",
       "teacher": "Todd Bennett",
       "period": "4",
-      "currentGrade": 41,
+      "currentGrade": 53,
       "assignments": [
+        {
+          "name": "Week 12 Questions",
+          "dueDate": "04/10/2026",
+          "earnedPoints": 0,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Architecture Terms 21-40",
           "dueDate": "04/08/2026",
@@ -246,10 +254,10 @@
         {
           "name": "Sons of Apollo & Reading Qs",
           "dueDate": "04/08/2026",
-          "earnedPoints": 0,
-          "totalPoints": 15,
+          "earnedPoints": 20,
+          "totalPoints": 20,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Hermes Brochure",
