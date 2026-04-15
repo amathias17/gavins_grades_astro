@@ -362,10 +362,10 @@
     "assignmentName": "Week 12 Questions",
     "dateDue": "04/10/2026",
     "dueDate": "04/10/2026",
-    "earnedPoints": 0,
-    "totalPoints": 15,
+    "earnedPoints": 20,
+    "totalPoints": 20,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "43341",
@@ -412,6 +412,22 @@
     "dueDate": "04/01/2026",
     "earnedPoints": 5,
     "totalPoints": 50,
+    "weight": 1,
+    "graded": true
+  },
+  {
+    "classId": "44979",
+    "assignmentId": "1615595",
+    "studentId": "1396",
+    "className": "GREEK MYTHOLOGY",
+    "teacher": "Alex Ray",
+    "period": "5",
+    "currentGrade": 75,
+    "assignmentName": "Pandora Myth Worksheet",
+    "dateDue": "04/09/2026",
+    "dueDate": "04/09/2026",
+    "earnedPoints": 20,
+    "totalPoints": 20,
     "weight": 1,
     "graded": true
   },

@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-04-15T00:59:05.695Z",
+    "scrapedAt": "2026-04-15T12:25:09.163Z",
     "totalClasses": 9,
-    "totalAssignments": 37
+    "totalAssignments": 38
   },
   "classes": [
     {
@@ -222,10 +222,10 @@
         {
           "name": "Week 12 Questions",
           "dueDate": "04/10/2026",
-          "earnedPoints": 0,
-          "totalPoints": 15,
+          "earnedPoints": 20,
+          "totalPoints": 20,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Architecture Terms 21-40",
@@ -259,6 +259,14 @@
       "period": "5",
       "currentGrade": 75,
       "assignments": [
+        {
+          "name": "Pandora Myth Worksheet",
+          "dueDate": "04/09/2026",
+          "earnedPoints": 20,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Sons of Apollo & Reading Qs",
           "dueDate": "04/08/2026",
