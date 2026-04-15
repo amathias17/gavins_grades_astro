@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-04-14T12:25:12.974Z",
+    "scrapedAt": "2026-04-15T00:59:05.695Z",
     "totalClasses": 9,
-    "totalAssignments": 36
+    "totalAssignments": 37
   },
   "classes": [
     {
@@ -41,8 +41,16 @@
       "className": "ENGLISH 10",
       "teacher": "Megan Leone",
       "period": "1",
-      "currentGrade": 65,
+      "currentGrade": 70,
       "assignments": [
+        {
+          "name": "AMC Chunk 1+2 Quiz",
+          "dueDate": "04/14/2026",
+          "earnedPoints": 16,
+          "totalPoints": 18,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "AMC Task?",
           "dueDate": "04/13/2026",
@@ -173,11 +181,11 @@
         },
         {
           "name": "Lab Eval- Personal Cookie",
-          "dueDate": "04/13/2026",
-          "earnedPoints": 0,
-          "totalPoints": 15,
+          "dueDate": "04/14/2026",
+          "earnedPoints": 16,
+          "totalPoints": 18,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Sweet/Savory Bread Lab",
