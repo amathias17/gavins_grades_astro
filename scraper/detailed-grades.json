@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-04-17T00:58:32.598Z",
+    "scrapedAt": "2026-04-17T12:24:04.802Z",
     "totalClasses": 9,
     "totalAssignments": 44
   },
@@ -397,9 +397,9 @@
         },
         {
           "name": "Hunger Games Viewing Guide",
-          "dueDate": "04/16/2026",
+          "dueDate": "04/19/2026",
           "earnedPoints": 0,
-          "totalPoints": 40,
+          "totalPoints": 50,
           "weight": 1,
           "graded": false
         },
