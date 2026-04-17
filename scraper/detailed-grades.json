@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-04-16T12:26:47.305Z",
+    "scrapedAt": "2026-04-17T00:58:32.598Z",
     "totalClasses": 9,
-    "totalAssignments": 38
+    "totalAssignments": 44
   },
   "classes": [
     {
@@ -41,8 +41,24 @@
       "className": "ENGLISH 10",
       "teacher": "Megan Leone",
       "period": "1",
-      "currentGrade": 70,
+      "currentGrade": 66,
       "assignments": [
+        {
+          "name": "Give One, Get One AMC",
+          "dueDate": "04/16/2026",
+          "earnedPoints": 20,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "IXL 4/15",
+          "dueDate": "04/16/2026",
+          "earnedPoints": 20,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "AMC Chunk 1+2 Quiz",
           "dueDate": "04/14/2026",
@@ -310,6 +326,30 @@
       ]
     },
     {
+      "className": "AMER STUDIES",
+      "teacher": "Brock Seese",
+      "period": "6",
+      "currentGrade": 0,
+      "assignments": [
+        {
+          "name": "Cold War Vocab",
+          "dueDate": "04/16/2026",
+          "earnedPoints": 0,
+          "totalPoints": 16,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Cold War Vocab Cartoon",
+          "dueDate": "04/16/2026",
+          "earnedPoints": 0,
+          "totalPoints": 16,
+          "weight": 1,
+          "graded": false
+        }
+      ]
+    },
+    {
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
@@ -347,6 +387,22 @@
       "period": "8",
       "currentGrade": 100,
       "assignments": [
+        {
+          "name": "Hunger Games Writing Assignmen",
+          "dueDate": "04/16/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Hunger Games Viewing Guide",
+          "dueDate": "04/16/2026",
+          "earnedPoints": 0,
+          "totalPoints": 40,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Networking Bingo",
           "dueDate": "04/07/2026",
