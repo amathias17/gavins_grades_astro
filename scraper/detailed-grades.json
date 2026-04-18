@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-04-18T00:54:00.670Z",
+    "scrapedAt": "2026-04-18T12:15:18.288Z",
     "totalClasses": 9,
     "totalAssignments": 48
   },
@@ -421,11 +421,11 @@
       "assignments": [
         {
           "name": "Hunger Games Writing Assignmen",
-          "dueDate": "04/19/2026",
-          "earnedPoints": 0,
-          "totalPoints": 50,
-          "weight": 1,
-          "graded": false
+          "dueDate": "04/17/2026",
+          "earnedPoints": 12,
+          "totalPoints": 15,
+          "weight": 0.5,
+          "graded": true
         },
         {
           "name": "Hunger Games Viewing Guide",
