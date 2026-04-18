@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-04-17T12:24:04.802Z",
+    "scrapedAt": "2026-04-18T00:54:00.670Z",
     "totalClasses": 9,
-    "totalAssignments": 44
+    "totalAssignments": 48
   },
   "classes": [
     {
@@ -105,8 +105,24 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 82,
+      "currentGrade": 83,
       "assignments": [
+        {
+          "name": "Pedigree-Song",
+          "dueDate": "04/17/2026",
+          "earnedPoints": 6,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Evolution-Edpuzzle clip",
+          "dueDate": "04/17/2026",
+          "earnedPoints": 6,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Sex-linked Traits",
           "dueDate": "04/10/2026",
@@ -334,16 +350,16 @@
         {
           "name": "Cold War Vocab",
           "dueDate": "04/16/2026",
-          "earnedPoints": 0,
-          "totalPoints": 16,
+          "earnedPoints": 8,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Cold War Vocab Cartoon",
           "dueDate": "04/16/2026",
           "earnedPoints": 0,
-          "totalPoints": 16,
+          "totalPoints": 10,
           "weight": 1,
           "graded": false
         }
@@ -353,8 +369,24 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 82,
+      "currentGrade": 83,
       "assignments": [
+        {
+          "name": "GMM: 30pts Perimeter",
+          "dueDate": "04/16/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Perimeter Quiz on GMM",
+          "dueDate": "04/17/2026",
+          "earnedPoints": 12,
+          "totalPoints": 15,
+          "weight": 0.5,
+          "graded": true
+        },
         {
           "name": "Reviews for Polygon Angles",
           "dueDate": "04/10/2026",
@@ -389,9 +421,9 @@
       "assignments": [
         {
           "name": "Hunger Games Writing Assignmen",
-          "dueDate": "04/16/2026",
+          "dueDate": "04/19/2026",
           "earnedPoints": 0,
-          "totalPoints": 10,
+          "totalPoints": 50,
           "weight": 1,
           "graded": false
         },
