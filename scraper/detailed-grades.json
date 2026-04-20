@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-04-20T12:29:31.069Z",
+    "scrapedAt": "2026-04-20T19:58:51.166Z",
     "totalClasses": 9,
-    "totalAssignments": 48
+    "totalAssignments": 52
   },
   "classes": [
     {
@@ -41,8 +41,16 @@
       "className": "ENGLISH 10",
       "teacher": "Megan Leone",
       "period": "1",
-      "currentGrade": 66,
+      "currentGrade": 75,
       "assignments": [
+        {
+          "name": "IXL Diagnostic",
+          "dueDate": "04/22/2026",
+          "earnedPoints": 40,
+          "totalPoints": 40,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Give One, Get One AMC",
           "dueDate": "04/16/2026",
@@ -105,8 +113,16 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 83,
+      "currentGrade": 84,
       "assignments": [
+        {
+          "name": "Pedigree practice",
+          "dueDate": "04/22/2026",
+          "earnedPoints": 40,
+          "totalPoints": 40,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Pedigree-Song",
           "dueDate": "04/17/2026",
@@ -201,7 +217,7 @@
       "className": "FOOD CHALLENGES",
       "teacher": "Misty Finnegan",
       "period": "3",
-      "currentGrade": 80,
+      "currentGrade": 79,
       "assignments": [
         {
           "name": "Personal Choc. Chip Cookie Lab",
@@ -249,8 +265,24 @@
       "className": "ENG/DESIGN/ARCH",
       "teacher": "Todd Bennett",
       "period": "4",
-      "currentGrade": 53,
+      "currentGrade": 47,
       "assignments": [
+        {
+          "name": "Dream Home Research",
+          "dueDate": "04/20/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Home Renovation Case Study",
+          "dueDate": "04/17/2026",
+          "earnedPoints": 0,
+          "totalPoints": 25,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Week 12 Questions",
           "dueDate": "04/10/2026",

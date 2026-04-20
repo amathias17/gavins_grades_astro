@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "04/20/2026, 08:29 AM",
+    "last_updated": "04/20/2026, 03:58 PM",
     "most_recent_date": "4/20/2026",
     "total_classes": 9
   },
@@ -26,10 +26,10 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q4_grade": 66,
-      "q4_letter_grade": "D",
-      "current_grade": 66,
-      "letter_grade": "D"
+      "q4_grade": 75,
+      "q4_letter_grade": "C",
+      "current_grade": 75,
+      "letter_grade": "C"
     },
     {
       "class_name": "Biology 2",
@@ -39,9 +39,9 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q4_grade": 83,
+      "q4_grade": 84,
       "q4_letter_grade": "B",
-      "current_grade": 83,
+      "current_grade": 84,
       "letter_grade": "B"
     },
     {
@@ -52,10 +52,10 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q4_grade": 80,
-      "q4_letter_grade": "B",
-      "current_grade": 80,
-      "letter_grade": "B"
+      "q4_grade": 79,
+      "q4_letter_grade": "C",
+      "current_grade": 79,
+      "letter_grade": "C"
     },
     {
       "class_name": "Eng/design/arch",
@@ -65,9 +65,9 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q4_grade": 53,
+      "q4_grade": 47,
       "q4_letter_grade": "F",
-      "current_grade": 53,
+      "current_grade": 47,
       "letter_grade": "F"
     },
     {
@@ -419,7 +419,7 @@
       "4/17/2026": 66,
       "4/18/2026": 66,
       "4/19/2026": 66,
-      "4/20/2026": 66
+      "4/20/2026": 75
     },
     "Biology 2": {
       "11/24/2025": 82,
@@ -568,7 +568,7 @@
       "4/17/2026": 82,
       "4/18/2026": 83,
       "4/19/2026": 83,
-      "4/20/2026": 83
+      "4/20/2026": 84
     },
     "History Pop Cult 1": {
       "11/24/2025": 90,
@@ -1296,7 +1296,7 @@
       "4/17/2026": 80,
       "4/18/2026": 80,
       "4/19/2026": 80,
-      "4/20/2026": 80
+      "4/20/2026": 79
     },
     "Eng/design/arch": {
       "1/23/2026": 0,
@@ -1385,7 +1385,7 @@
       "4/17/2026": 53,
       "4/18/2026": 53,
       "4/19/2026": 53,
-      "4/20/2026": 53
+      "4/20/2026": 47
     },
     "Money Math": {
       "1/23/2026": 0,

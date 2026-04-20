@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "04/20/2026, 08:29 AM",
-    "count": 4
+    "last_updated": "04/20/2026, 03:58 PM",
+    "count": 5
   },
   "missing_assignments": [
     {
@@ -11,6 +11,14 @@
       "teacher": "Heather Eckels",
       "category": "Homework",
       "max_points": "50"
+    },
+    {
+      "due_date": "04/17/2026",
+      "assignment_name": "Dream Home Research",
+      "class_name": "ENG/DESIGN/ARCH",
+      "teacher": "Todd Bennett",
+      "category": "Class Work",
+      "max_points": "25"
     },
     {
       "due_date": "04/16/2026",
