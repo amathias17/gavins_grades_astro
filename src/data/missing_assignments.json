@@ -1,9 +1,25 @@
 {
   "metadata": {
-    "last_updated": "04/19/2026, 08:15 AM",
-    "count": 1
+    "last_updated": "04/19/2026, 08:59 PM",
+    "count": 3
   },
   "missing_assignments": [
+    {
+      "due_date": "04/16/2026",
+      "assignment_name": "Cold War Vocab",
+      "class_name": "AMER STUDIES",
+      "teacher": "Brock Seese",
+      "category": "Class Work",
+      "max_points": "16"
+    },
+    {
+      "due_date": "04/16/2026",
+      "assignment_name": "Cold War Vocab Cartoon",
+      "class_name": "AMER STUDIES",
+      "teacher": "Brock Seese",
+      "category": "Class Work",
+      "max_points": "10"
+    },
     {
       "due_date": "04/09/2026",
       "assignment_name": "Collins Words #6",
