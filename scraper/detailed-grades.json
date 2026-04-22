@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-04-21T12:26:08.436Z",
+    "scrapedAt": "2026-04-22T00:56:20.845Z",
     "totalClasses": 9,
-    "totalAssignments": 52
+    "totalAssignments": 59
   },
   "classes": [
     {
@@ -113,13 +113,45 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 84,
+      "currentGrade": 86,
       "assignments": [
+        {
+          "name": "Abiotic/Biotic Graphic organiz",
+          "dueDate": "04/21/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Ecology Nearpod",
+          "dueDate": "04/21/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Exit quiz Biomes",
+          "dueDate": "04/21/2026",
+          "earnedPoints": 7,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Pedigree practice",
           "dueDate": "04/22/2026",
           "earnedPoints": 40,
           "totalPoints": 40,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Genetics/genetic Disorders",
+          "dueDate": "04/21/2026",
+          "earnedPoints": 7,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
@@ -217,8 +249,16 @@
       "className": "FOOD CHALLENGES",
       "teacher": "Misty Finnegan",
       "period": "3",
-      "currentGrade": 79,
+      "currentGrade": 71,
       "assignments": [
+        {
+          "name": "Tools of the Trade Quiz",
+          "dueDate": "04/20/2026",
+          "earnedPoints": 32,
+          "totalPoints": 35,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Personal Choc. Chip Cookie Lab",
           "dueDate": "04/13/2026",
@@ -324,6 +364,14 @@
       "currentGrade": 80,
       "assignments": [
         {
+          "name": "Hephaestus Project",
+          "dueDate": "04/14/2026",
+          "earnedPoints": 16,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
+        {
           "name": "Pandora Myth Worksheet",
           "dueDate": "04/09/2026",
           "earnedPoints": 20,
@@ -380,6 +428,14 @@
       "currentGrade": 0,
       "assignments": [
         {
+          "name": "WWII Documentary Project",
+          "dueDate": "04/21/2026",
+          "earnedPoints": 0,
+          "totalPoints": 100,
+          "weight": 1,
+          "graded": false
+        },
+        {
           "name": "Cold War Vocab",
           "dueDate": "04/16/2026",
           "earnedPoints": 8,
@@ -389,9 +445,9 @@
         },
         {
           "name": "Cold War Vocab Cartoon",
-          "dueDate": "04/16/2026",
+          "dueDate": "04/21/2026",
           "earnedPoints": 0,
-          "totalPoints": 10,
+          "totalPoints": 100,
           "weight": 1,
           "graded": false
         }

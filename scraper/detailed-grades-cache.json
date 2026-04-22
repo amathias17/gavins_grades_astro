@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-21T12:26:08.437Z",
+  "updatedAt": "2026-04-22T00:56:20.846Z",
   "assignments": {
     "1561854:44463:1396": {
       "classId": "44463",
@@ -8618,7 +8618,7 @@
       "totalPoints": 45,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.701Z"
+      "cachedAt": "2026-04-22T00:55:24.170Z"
     },
     "1606960:44463:1396": {
       "classId": "44463",
@@ -8635,7 +8635,7 @@
       "totalPoints": 45,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.701Z"
+      "cachedAt": "2026-04-22T00:55:24.170Z"
     },
     "1606676:43162:1396": {
       "classId": "43162",
@@ -8652,7 +8652,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.702Z"
+      "cachedAt": "2026-04-22T00:55:24.171Z"
     },
     "1607952:43162:1396": {
       "classId": "43162",
@@ -8669,7 +8669,7 @@
       "totalPoints": 40,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.702Z"
+      "cachedAt": "2026-04-22T00:55:24.171Z"
     },
     "1603331:43424:1396": {
       "classId": "43424",
@@ -8678,7 +8678,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 84,
+      "currentGrade": 86,
       "assignmentName": "Mutations SG (identification)",
       "dateDue": "04/01/2026",
       "dueDate": "04/01/2026",
@@ -8686,7 +8686,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.703Z"
+      "cachedAt": "2026-04-22T00:55:44.040Z"
     },
     "1604340:43424:1396": {
       "classId": "43424",
@@ -8695,7 +8695,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 84,
+      "currentGrade": 86,
       "assignmentName": "Mutations Quiz",
       "dateDue": "03/31/2026",
       "dueDate": "03/31/2026",
@@ -8703,7 +8703,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.703Z"
+      "cachedAt": "2026-04-22T00:55:44.040Z"
     },
     "1606235:43424:1396": {
       "classId": "43424",
@@ -8712,7 +8712,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 84,
+      "currentGrade": 86,
       "assignmentName": "Human Trait Wheel",
       "dateDue": "03/31/2026",
       "dueDate": "03/31/2026",
@@ -8720,7 +8720,7 @@
       "totalPoints": 25,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.703Z"
+      "cachedAt": "2026-04-22T00:55:44.040Z"
     },
     "1607314:43424:1396": {
       "classId": "43424",
@@ -8729,7 +8729,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 84,
+      "currentGrade": 86,
       "assignmentName": "Mendel Edpuzzle",
       "dateDue": "03/31/2026",
       "dueDate": "03/31/2026",
@@ -8737,7 +8737,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.703Z"
+      "cachedAt": "2026-04-22T00:55:44.040Z"
     },
     "1600112:45003:1396": {
       "classId": "45003",
@@ -8746,7 +8746,7 @@
       "className": "FOOD CHALLENGES",
       "teacher": "Misty Finnegan",
       "period": "3",
-      "currentGrade": 79,
+      "currentGrade": 71,
       "assignmentName": "Measuring WS",
       "dateDue": "03/31/2026",
       "dueDate": "03/31/2026",
@@ -8754,7 +8754,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.703Z"
+      "cachedAt": "2026-04-22T00:55:55.195Z"
     },
     "1604981:43341:1396": {
       "classId": "43341",
@@ -8771,7 +8771,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.704Z"
+      "cachedAt": "2026-04-22T00:55:55.195Z"
     },
     "1608064:43341:1396": {
       "classId": "43341",
@@ -8788,7 +8788,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.704Z"
+      "cachedAt": "2026-04-22T00:55:55.195Z"
     },
     "1608258:44979:1396": {
       "classId": "44979",
@@ -8805,7 +8805,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.704Z"
+      "cachedAt": "2026-04-22T00:55:55.315Z"
     },
     "1608260:44979:1396": {
       "classId": "44979",
@@ -8822,7 +8822,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.704Z"
+      "cachedAt": "2026-04-22T00:55:55.315Z"
     },
     "1608230:44615:1396": {
       "classId": "44615",
@@ -8839,7 +8839,7 @@
       "totalPoints": 16,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:26:06.325Z"
+      "cachedAt": "2026-04-22T00:56:18.745Z"
     },
     "1608257:44979:1396": {
       "classId": "44979",
@@ -8856,7 +8856,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.704Z"
+      "cachedAt": "2026-04-22T00:55:55.315Z"
     },
     "1609705:43162:1396": {
       "classId": "43162",
@@ -8873,7 +8873,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.702Z"
+      "cachedAt": "2026-04-22T00:55:24.171Z"
     },
     "1609829:45003:1396": {
       "classId": "45003",
@@ -8882,7 +8882,7 @@
       "className": "FOOD CHALLENGES",
       "teacher": "Misty Finnegan",
       "period": "3",
-      "currentGrade": 79,
+      "currentGrade": 71,
       "assignmentName": "Sweet/Savory Bread Lab",
       "dateDue": "04/07/2026",
       "dueDate": "04/07/2026",
@@ -8890,7 +8890,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.703Z"
+      "cachedAt": "2026-04-22T00:55:55.195Z"
     },
     "1609680:45003:1396": {
       "classId": "45003",
@@ -8899,7 +8899,7 @@
       "className": "FOOD CHALLENGES",
       "teacher": "Misty Finnegan",
       "period": "3",
-      "currentGrade": 79,
+      "currentGrade": 71,
       "assignmentName": "Tools of the Trade (Collins)",
       "dateDue": "04/02/2026",
       "dueDate": "04/02/2026",
@@ -8907,7 +8907,7 @@
       "totalPoints": 35,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.703Z"
+      "cachedAt": "2026-04-22T00:55:55.195Z"
     },
     "1612351:44463:1396": {
       "classId": "44463",
@@ -8924,7 +8924,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.701Z"
+      "cachedAt": "2026-04-22T00:55:24.169Z"
     },
     "1611725:43424:1396": {
       "classId": "43424",
@@ -8933,7 +8933,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 84,
+      "currentGrade": 86,
       "assignmentName": "Collins Words #6",
       "dateDue": "04/10/2026",
       "dueDate": "04/10/2026",
@@ -8941,7 +8941,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.703Z"
+      "cachedAt": "2026-04-22T00:55:44.040Z"
     },
     "1611729:43424:1396": {
       "classId": "43424",
@@ -8950,7 +8950,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 84,
+      "currentGrade": 86,
       "assignmentName": "Blood typing Problems",
       "dateDue": "04/09/2026",
       "dueDate": "04/09/2026",
@@ -8958,7 +8958,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.703Z"
+      "cachedAt": "2026-04-22T00:55:44.040Z"
     },
     "1611026:43341:1396": {
       "classId": "43341",
@@ -8975,7 +8975,7 @@
       "totalPoints": 0,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.703Z"
+      "cachedAt": "2026-04-22T00:55:55.195Z"
     },
     "1612296:44979:1396": {
       "classId": "44979",
@@ -8992,7 +8992,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.704Z"
+      "cachedAt": "2026-04-22T00:55:55.315Z"
     },
     "1611930:44615:1396": {
       "classId": "44615",
@@ -9009,7 +9009,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:26:06.325Z"
+      "cachedAt": "2026-04-22T00:56:18.745Z"
     },
     "1611940:44615:1396": {
       "classId": "44615",
@@ -9026,7 +9026,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:26:06.325Z"
+      "cachedAt": "2026-04-22T00:56:18.745Z"
     },
     "1612604:43424:1396": {
       "classId": "43424",
@@ -9035,7 +9035,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 84,
+      "currentGrade": 86,
       "assignmentName": "Sex-linked Traits",
       "dateDue": "04/10/2026",
       "dueDate": "04/10/2026",
@@ -9043,7 +9043,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.703Z"
+      "cachedAt": "2026-04-22T00:55:44.040Z"
     },
     "1612610:43424:1396": {
       "classId": "43424",
@@ -9052,7 +9052,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 84,
+      "currentGrade": 86,
       "assignmentName": "Genetics Problems",
       "dateDue": "04/10/2026",
       "dueDate": "04/10/2026",
@@ -9060,7 +9060,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.703Z"
+      "cachedAt": "2026-04-22T00:55:44.040Z"
     },
     "1612639:43424:1396": {
       "classId": "43424",
@@ -9069,7 +9069,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 84,
+      "currentGrade": 86,
       "assignmentName": "Keystone Vocabulary",
       "dateDue": "04/10/2026",
       "dueDate": "04/10/2026",
@@ -9077,7 +9077,7 @@
       "totalPoints": 40,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.703Z"
+      "cachedAt": "2026-04-22T00:55:44.040Z"
     },
     "1613095:43666:1396": {
       "classId": "43666",
@@ -9094,7 +9094,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:26:06.325Z"
+      "cachedAt": "2026-04-22T00:56:18.745Z"
     },
     "1613102:43666:1396": {
       "classId": "43666",
@@ -9111,7 +9111,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:26:06.325Z"
+      "cachedAt": "2026-04-22T00:56:18.745Z"
     },
     "1612437:43666:1396": {
       "classId": "43666",
@@ -9128,7 +9128,7 @@
       "totalPoints": 30,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:26:06.325Z"
+      "cachedAt": "2026-04-22T00:56:18.745Z"
     },
     "1613658:43162:1396": {
       "classId": "43162",
@@ -9145,7 +9145,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.702Z"
+      "cachedAt": "2026-04-22T00:55:24.170Z"
     },
     "1613108:45003:1396": {
       "classId": "45003",
@@ -9154,7 +9154,7 @@
       "className": "FOOD CHALLENGES",
       "teacher": "Misty Finnegan",
       "period": "3",
-      "currentGrade": 79,
+      "currentGrade": 71,
       "assignmentName": "Personal Choc. Chip Cookie Lab",
       "dateDue": "04/13/2026",
       "dueDate": "04/13/2026",
@@ -9162,7 +9162,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.703Z"
+      "cachedAt": "2026-04-22T00:55:55.194Z"
     },
     "1612843:44979:1396": {
       "classId": "44979",
@@ -9179,7 +9179,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.704Z"
+      "cachedAt": "2026-04-22T00:55:55.315Z"
     },
     "1614925:43162:1396": {
       "classId": "43162",
@@ -9196,7 +9196,7 @@
       "totalPoints": 18,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.702Z"
+      "cachedAt": "2026-04-22T00:55:24.170Z"
     },
     "1613112:45003:1396": {
       "classId": "45003",
@@ -9205,7 +9205,7 @@
       "className": "FOOD CHALLENGES",
       "teacher": "Misty Finnegan",
       "period": "3",
-      "currentGrade": 79,
+      "currentGrade": 71,
       "assignmentName": "Lab Eval- Personal Cookie",
       "dateDue": "04/14/2026",
       "dueDate": "04/14/2026",
@@ -9213,7 +9213,7 @@
       "totalPoints": 18,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.703Z"
+      "cachedAt": "2026-04-22T00:55:55.195Z"
     },
     "1613767:43341:1396": {
       "classId": "43341",
@@ -9230,7 +9230,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.703Z"
+      "cachedAt": "2026-04-22T00:55:55.195Z"
     },
     "1615595:44979:1396": {
       "classId": "44979",
@@ -9247,7 +9247,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.704Z"
+      "cachedAt": "2026-04-22T00:55:55.315Z"
     },
     "1616610:43162:1396": {
       "classId": "43162",
@@ -9264,7 +9264,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.702Z"
+      "cachedAt": "2026-04-22T00:55:24.170Z"
     },
     "1614269:43162:1396": {
       "classId": "43162",
@@ -9281,7 +9281,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.702Z"
+      "cachedAt": "2026-04-22T00:55:24.170Z"
     },
     "1617523:43424:1396": {
       "classId": "43424",
@@ -9290,7 +9290,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 84,
+      "currentGrade": 86,
       "assignmentName": "Pedigree-Song",
       "dateDue": "04/17/2026",
       "dueDate": "04/17/2026",
@@ -9298,7 +9298,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.703Z"
+      "cachedAt": "2026-04-22T00:55:44.040Z"
     },
     "1617563:43424:1396": {
       "classId": "43424",
@@ -9307,7 +9307,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 84,
+      "currentGrade": 86,
       "assignmentName": "Evolution-Edpuzzle clip",
       "dateDue": "04/17/2026",
       "dueDate": "04/17/2026",
@@ -9315,7 +9315,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.703Z"
+      "cachedAt": "2026-04-22T00:55:44.040Z"
     },
     "1617005:43049:1396": {
       "classId": "43049",
@@ -9332,7 +9332,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.704Z"
+      "cachedAt": "2026-04-22T00:56:06.982Z"
     },
     "1617853:43666:1396": {
       "classId": "43666",
@@ -9349,7 +9349,7 @@
       "totalPoints": 15,
       "weight": 0.5,
       "graded": true,
-      "cachedAt": "2026-04-21T12:26:06.325Z"
+      "cachedAt": "2026-04-22T00:56:18.745Z"
     },
     "1616961:44615:1396": {
       "classId": "44615",
@@ -9366,7 +9366,7 @@
       "totalPoints": 15,
       "weight": 0.5,
       "graded": true,
-      "cachedAt": "2026-04-21T12:26:06.325Z"
+      "cachedAt": "2026-04-22T00:56:18.745Z"
     },
     "1616959:44615:1396": {
       "classId": "44615",
@@ -9383,7 +9383,7 @@
       "totalPoints": 15,
       "weight": 0.5,
       "graded": true,
-      "cachedAt": "2026-04-21T12:26:06.325Z"
+      "cachedAt": "2026-04-22T00:56:18.745Z"
     },
     "1618471:43162:1396": {
       "classId": "43162",
@@ -9400,7 +9400,7 @@
       "totalPoints": 40,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.702Z"
+      "cachedAt": "2026-04-22T00:55:24.170Z"
     },
     "1618910:43424:1396": {
       "classId": "43424",
@@ -9409,7 +9409,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 84,
+      "currentGrade": 86,
       "assignmentName": "Pedigree practice",
       "dateDue": "04/22/2026",
       "dueDate": "04/22/2026",
@@ -9417,7 +9417,7 @@
       "totalPoints": 40,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.703Z"
+      "cachedAt": "2026-04-22T00:55:43.932Z"
     },
     "1618454:43341:1396": {
       "classId": "43341",
@@ -9434,7 +9434,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.703Z"
+      "cachedAt": "2026-04-22T00:55:55.195Z"
     },
     "1618491:43341:1396": {
       "classId": "43341",
@@ -9451,7 +9451,109 @@
       "totalPoints": 25,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-04-21T12:25:56.703Z"
+      "cachedAt": "2026-04-22T00:55:55.195Z"
+    },
+    "1619798:43424:1396": {
+      "classId": "43424",
+      "assignmentId": "1619798",
+      "studentId": "1396",
+      "className": "BIOLOGY            2",
+      "teacher": "Denise Condo",
+      "period": "2",
+      "currentGrade": 86,
+      "assignmentName": "Abiotic/Biotic Graphic organiz",
+      "dateDue": "04/21/2026",
+      "dueDate": "04/21/2026",
+      "earnedPoints": 5,
+      "totalPoints": 5,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-04-22T00:55:33.693Z"
+    },
+    "1619801:43424:1396": {
+      "classId": "43424",
+      "assignmentId": "1619801",
+      "studentId": "1396",
+      "className": "BIOLOGY            2",
+      "teacher": "Denise Condo",
+      "period": "2",
+      "currentGrade": 86,
+      "assignmentName": "Ecology Nearpod",
+      "dateDue": "04/21/2026",
+      "dueDate": "04/21/2026",
+      "earnedPoints": 5,
+      "totalPoints": 5,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-04-22T00:55:33.809Z"
+    },
+    "1619804:43424:1396": {
+      "classId": "43424",
+      "assignmentId": "1619804",
+      "studentId": "1396",
+      "className": "BIOLOGY            2",
+      "teacher": "Denise Condo",
+      "period": "2",
+      "currentGrade": 86,
+      "assignmentName": "Exit quiz Biomes",
+      "dateDue": "04/21/2026",
+      "dueDate": "04/21/2026",
+      "earnedPoints": 7,
+      "totalPoints": 10,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-04-22T00:55:43.932Z"
+    },
+    "1619790:43424:1396": {
+      "classId": "43424",
+      "assignmentId": "1619790",
+      "studentId": "1396",
+      "className": "BIOLOGY            2",
+      "teacher": "Denise Condo",
+      "period": "2",
+      "currentGrade": 86,
+      "assignmentName": "Genetics/genetic Disorders",
+      "dateDue": "04/21/2026",
+      "dueDate": "04/21/2026",
+      "earnedPoints": 7,
+      "totalPoints": 10,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-04-22T00:55:44.040Z"
+    },
+    "1619892:45003:1396": {
+      "classId": "45003",
+      "assignmentId": "1619892",
+      "studentId": "1396",
+      "className": "FOOD CHALLENGES",
+      "teacher": "Misty Finnegan",
+      "period": "3",
+      "currentGrade": 71,
+      "assignmentName": "Tools of the Trade Quiz",
+      "dateDue": "04/20/2026",
+      "dueDate": "04/20/2026",
+      "earnedPoints": 32,
+      "totalPoints": 35,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-04-22T00:55:55.194Z"
+    },
+    "1619654:44979:1396": {
+      "classId": "44979",
+      "assignmentId": "1619654",
+      "studentId": "1396",
+      "className": "GREEK MYTHOLOGY",
+      "teacher": "Alex Ray",
+      "period": "5",
+      "currentGrade": 80,
+      "assignmentName": "Hephaestus Project",
+      "dateDue": "04/14/2026",
+      "dueDate": "04/14/2026",
+      "earnedPoints": 16,
+      "totalPoints": 20,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-04-22T00:55:55.315Z"
     }
   }
 }
