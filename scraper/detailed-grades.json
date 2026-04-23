@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-04-23T01:00:34.509Z",
+    "scrapedAt": "2026-04-23T12:25:51.058Z",
     "totalClasses": 9,
     "totalAssignments": 61
   },
@@ -446,10 +446,10 @@
         {
           "name": "WWII Documentary Project",
           "dueDate": "04/21/2026",
-          "earnedPoints": 0,
-          "totalPoints": 100,
+          "earnedPoints": 43,
+          "totalPoints": 50,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Cold War Vocab",
@@ -477,11 +477,11 @@
       "assignments": [
         {
           "name": "GMM: 30pts Perimeter",
-          "dueDate": "04/16/2026",
-          "earnedPoints": 0,
-          "totalPoints": 10,
-          "weight": 1,
-          "graded": false
+          "dueDate": "04/17/2026",
+          "earnedPoints": 12,
+          "totalPoints": 15,
+          "weight": 0.5,
+          "graded": true
         },
         {
           "name": "Perimeter Quiz on GMM",
@@ -525,11 +525,11 @@
       "assignments": [
         {
           "name": "Forms of Government Stations",
-          "dueDate": "04/16/2026",
-          "earnedPoints": 0,
-          "totalPoints": 10,
-          "weight": 1,
-          "graded": false
+          "dueDate": "04/17/2026",
+          "earnedPoints": 12,
+          "totalPoints": 15,
+          "weight": 0.5,
+          "graded": true
         },
         {
           "name": "Political Spectrum",

@@ -778,10 +778,10 @@
     "assignmentName": "WWII Documentary Project",
     "dateDue": "04/21/2026",
     "dueDate": "04/21/2026",
-    "earnedPoints": 0,
-    "totalPoints": 100,
+    "earnedPoints": 43,
+    "totalPoints": 50,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "43049",
@@ -824,12 +824,12 @@
     "period": "7",
     "currentGrade": 83,
     "assignmentName": "GMM: 30pts Perimeter",
-    "dateDue": "04/16/2026",
-    "dueDate": "04/16/2026",
-    "earnedPoints": 0,
-    "totalPoints": 10,
-    "weight": 1,
-    "graded": false
+    "dateDue": "04/17/2026",
+    "dueDate": "04/17/2026",
+    "earnedPoints": 12,
+    "totalPoints": 15,
+    "weight": 0.5,
+    "graded": true
   },
   {
     "classId": "43666",
@@ -904,12 +904,12 @@
     "period": "8",
     "currentGrade": 94,
     "assignmentName": "Forms of Government Stations",
-    "dateDue": "04/16/2026",
-    "dueDate": "04/16/2026",
-    "earnedPoints": 0,
-    "totalPoints": 10,
-    "weight": 1,
-    "graded": false
+    "dateDue": "04/17/2026",
+    "dueDate": "04/17/2026",
+    "earnedPoints": 12,
+    "totalPoints": 15,
+    "weight": 0.5,
+    "graded": true
   },
   {
     "classId": "44615",
