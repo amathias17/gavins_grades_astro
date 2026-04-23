@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-04-22T12:25:40.044Z",
+    "scrapedAt": "2026-04-23T01:00:34.509Z",
     "totalClasses": 9,
-    "totalAssignments": 59
+    "totalAssignments": 61
   },
   "classes": [
     {
@@ -115,6 +115,14 @@
       "period": "2",
       "currentGrade": 86,
       "assignments": [
+        {
+          "name": "Food Webs/energy relationships",
+          "dueDate": "04/23/2026",
+          "earnedPoints": 0,
+          "totalPoints": 50,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Abiotic/Biotic Graphic organiz",
           "dueDate": "04/21/2026",
@@ -249,8 +257,16 @@
       "className": "FOOD CHALLENGES",
       "teacher": "Misty Finnegan",
       "period": "3",
-      "currentGrade": 71,
+      "currentGrade": 75,
       "assignments": [
+        {
+          "name": "Breakfast Lab",
+          "dueDate": "04/23/2026",
+          "earnedPoints": 0,
+          "totalPoints": 50,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Tools of the Trade Quiz",
           "dueDate": "04/20/2026",
@@ -445,11 +461,11 @@
         },
         {
           "name": "Cold War Vocab Cartoon",
-          "dueDate": "04/21/2026",
-          "earnedPoints": 0,
-          "totalPoints": 100,
+          "dueDate": "04/16/2026",
+          "earnedPoints": 43,
+          "totalPoints": 50,
           "weight": 1,
-          "graded": false
+          "graded": true
         }
       ]
     },
@@ -505,8 +521,32 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 68,
+      "currentGrade": 94,
       "assignments": [
+        {
+          "name": "Forms of Government Stations",
+          "dueDate": "04/16/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Political Spectrum",
+          "dueDate": "04/21/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "EdPuzzle Politics",
+          "dueDate": "04/22/2026",
+          "earnedPoints": 0,
+          "totalPoints": 35,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Hunger Games Writing Assignmen",
           "dueDate": "04/17/2026",
@@ -521,30 +561,6 @@
           "earnedPoints": 12,
           "totalPoints": 15,
           "weight": 0.5,
-          "graded": true
-        },
-        {
-          "name": "Networking Bingo",
-          "dueDate": "04/07/2026",
-          "earnedPoints": 18,
-          "totalPoints": 20,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Day 1 Notes",
-          "dueDate": "04/08/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Divergent",
-          "dueDate": "04/01/2026",
-          "earnedPoints": 10,
-          "totalPoints": 16,
-          "weight": 1,
           "graded": true
         }
       ]
