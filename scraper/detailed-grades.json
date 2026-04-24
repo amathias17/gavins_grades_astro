@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-04-24T01:01:01.870Z",
+    "scrapedAt": "2026-04-24T12:25:18.021Z",
     "totalClasses": 9,
     "totalAssignments": 63
   },
@@ -181,11 +181,11 @@
         },
         {
           "name": "Hemophilia Pedigree/Problems",
-          "dueDate": "04/23/2026",
-          "earnedPoints": 0,
-          "totalPoints": 50,
+          "dueDate": "04/17/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Evolution-Edpuzzle clip",
@@ -537,8 +537,16 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 94,
+      "currentGrade": 81,
       "assignments": [
+        {
+          "name": "Types of Economies",
+          "dueDate": "04/17/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Forms of Government Stations",
           "dueDate": "04/17/2026",
@@ -565,14 +573,6 @@
         },
         {
           "name": "Hunger Games Writing Assignmen",
-          "dueDate": "04/17/2026",
-          "earnedPoints": 12,
-          "totalPoints": 15,
-          "weight": 0.5,
-          "graded": true
-        },
-        {
-          "name": "Hunger Games Viewing Guide",
           "dueDate": "04/17/2026",
           "earnedPoints": 12,
           "totalPoints": 15,

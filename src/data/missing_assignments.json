@@ -1,9 +1,17 @@
 {
   "metadata": {
-    "last_updated": "04/23/2026, 09:01 PM",
-    "count": 4
+    "last_updated": "04/24/2026, 08:25 AM",
+    "count": 5
   },
   "missing_assignments": [
+    {
+      "due_date": "04/22/2026",
+      "assignment_name": "Forms of Government Stations",
+      "class_name": "SOCIOLOGY",
+      "teacher": "Heather Eckels",
+      "category": "Class Work",
+      "max_points": "35"
+    },
     {
       "due_date": "04/17/2026",
       "assignment_name": "Dream Home Research",
