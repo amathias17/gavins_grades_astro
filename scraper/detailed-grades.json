@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-04-23T12:25:51.058Z",
+    "scrapedAt": "2026-04-24T01:01:01.870Z",
     "totalClasses": 9,
-    "totalAssignments": 61
+    "totalAssignments": 63
   },
   "classes": [
     {
@@ -41,8 +41,16 @@
       "className": "ENGLISH 10",
       "teacher": "Megan Leone",
       "period": "1",
-      "currentGrade": 75,
+      "currentGrade": 76,
       "assignments": [
+        {
+          "name": "Mood Activity",
+          "dueDate": "04/23/2026",
+          "earnedPoints": 12,
+          "totalPoints": 12,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "IXL Diagnostic",
           "dueDate": "04/22/2026",
@@ -113,15 +121,15 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 86,
+      "currentGrade": 87,
       "assignments": [
         {
           "name": "Food Webs/energy relationships",
           "dueDate": "04/23/2026",
-          "earnedPoints": 0,
-          "totalPoints": 50,
+          "earnedPoints": 12,
+          "totalPoints": 12,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Abiotic/Biotic Graphic organiz",
@@ -170,6 +178,14 @@
           "totalPoints": 5,
           "weight": 1,
           "graded": true
+        },
+        {
+          "name": "Hemophilia Pedigree/Problems",
+          "dueDate": "04/23/2026",
+          "earnedPoints": 0,
+          "totalPoints": 50,
+          "weight": 1,
+          "graded": false
         },
         {
           "name": "Evolution-Edpuzzle clip",
@@ -261,11 +277,11 @@
       "assignments": [
         {
           "name": "Breakfast Lab",
-          "dueDate": "04/23/2026",
-          "earnedPoints": 0,
-          "totalPoints": 50,
+          "dueDate": "04/17/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Tools of the Trade Quiz",
@@ -541,11 +557,11 @@
         },
         {
           "name": "EdPuzzle Politics",
-          "dueDate": "04/22/2026",
-          "earnedPoints": 0,
-          "totalPoints": 35,
+          "dueDate": "04/20/2026",
+          "earnedPoints": 43,
+          "totalPoints": 50,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Hunger Games Writing Assignmen",
