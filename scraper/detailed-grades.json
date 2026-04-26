@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-04-25T12:17:07.043Z",
+    "scrapedAt": "2026-04-26T01:02:39.270Z",
     "totalClasses": 9,
-    "totalAssignments": 63
+    "totalAssignments": 64
   },
   "classes": [
     {
@@ -337,8 +337,16 @@
       "className": "ENG/DESIGN/ARCH",
       "teacher": "Todd Bennett",
       "period": "4",
-      "currentGrade": 47,
+      "currentGrade": 61,
       "assignments": [
+        {
+          "name": "Tiny Home Design Challenge (HomeByMe)",
+          "dueDate": "04/24/2026",
+          "earnedPoints": 50,
+          "totalPoints": 50,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Dream Home Research",
           "dueDate": "04/20/2026",
