@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "04/26/2026, 09:02 PM",
+    "last_updated": "04/27/2026, 08:36 AM",
     "most_recent_date": "4/27/2026",
     "total_classes": 9
   },
@@ -26,9 +26,9 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q4_grade": 76,
+      "q4_grade": 78,
       "q4_letter_grade": "C",
-      "current_grade": 76,
+      "current_grade": 78,
       "letter_grade": "C"
     },
     {
@@ -433,7 +433,7 @@
       "4/24/2026": 76,
       "4/25/2026": 76,
       "4/26/2026": 76,
-      "4/27/2026": 76
+      "4/27/2026": 78
     },
     "Biology 2": {
       "11/24/2025": 82,

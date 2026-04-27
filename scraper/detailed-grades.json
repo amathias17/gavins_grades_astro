@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-04-27T01:02:31.513Z",
+    "scrapedAt": "2026-04-27T12:36:30.314Z",
     "totalClasses": 9,
-    "totalAssignments": 64
+    "totalAssignments": 65
   },
   "classes": [
     {
@@ -41,8 +41,16 @@
       "className": "ENGLISH 10",
       "teacher": "Megan Leone",
       "period": "1",
-      "currentGrade": 76,
+      "currentGrade": 78,
       "assignments": [
+        {
+          "name": "AMC Chunk 3 Quiz",
+          "dueDate": "04/27/2026",
+          "earnedPoints": 12,
+          "totalPoints": 13,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Mood Activity",
           "dueDate": "04/23/2026",
@@ -548,6 +556,14 @@
       "currentGrade": 81,
       "assignments": [
         {
+          "name": "The Watergate Breakin",
+          "dueDate": "04/27/2026",
+          "earnedPoints": 12,
+          "totalPoints": 13,
+          "weight": 1,
+          "graded": true
+        },
+        {
           "name": "Types of Economies",
           "dueDate": "04/17/2026",
           "earnedPoints": 10,
@@ -577,14 +593,6 @@
           "earnedPoints": 43,
           "totalPoints": 50,
           "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Hunger Games Writing Assignmen",
-          "dueDate": "04/17/2026",
-          "earnedPoints": 12,
-          "totalPoints": 15,
-          "weight": 0.5,
           "graded": true
         }
       ]
