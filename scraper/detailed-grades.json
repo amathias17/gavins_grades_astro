@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-04-27T12:36:30.314Z",
+    "scrapedAt": "2026-04-28T01:04:02.297Z",
     "totalClasses": 9,
-    "totalAssignments": 65
+    "totalAssignments": 66
   },
   "classes": [
     {
@@ -66,6 +66,14 @@
           "totalPoints": 40,
           "weight": 1,
           "graded": true
+        },
+        {
+          "name": "Keystone Bonus",
+          "dueDate": "04/21/2026",
+          "earnedPoints": 0,
+          "totalPoints": 0,
+          "weight": 1,
+          "graded": false
         },
         {
           "name": "Give One, Get One AMC",
@@ -473,7 +481,7 @@
       "className": "AMER STUDIES",
       "teacher": "Brock Seese",
       "period": "6",
-      "currentGrade": 0,
+      "currentGrade": 75,
       "assignments": [
         {
           "name": "WWII Documentary Project",
