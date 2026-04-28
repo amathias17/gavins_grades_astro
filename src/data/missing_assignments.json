@@ -1,9 +1,17 @@
 {
   "metadata": {
-    "last_updated": "04/27/2026, 09:04 PM",
-    "count": 5
+    "last_updated": "04/28/2026, 08:39 AM",
+    "count": 6
   },
   "missing_assignments": [
+    {
+      "due_date": "04/27/2026",
+      "assignment_name": "The Watergate Breakin",
+      "class_name": "SOCIOLOGY",
+      "teacher": "Heather Eckels",
+      "category": "Class Work",
+      "max_points": "30"
+    },
     {
       "due_date": "04/22/2026",
       "assignment_name": "Forms of Government Stations",
