@@ -1,16 +1,40 @@
 {
   "metadata": {
-    "scrapedAt": "2026-04-28T12:39:40.798Z",
+    "scrapedAt": "2026-04-29T01:05:49.893Z",
     "totalClasses": 9,
-    "totalAssignments": 67
+    "totalAssignments": 73
   },
   "classes": [
     {
       "className": "SOPHOMORE SEMINAR",
       "teacher": "Victoria Good",
       "period": "0",
-      "currentGrade": 85,
+      "currentGrade": 71,
       "assignments": [
+        {
+          "name": "workbook check",
+          "dueDate": "04/28/2026",
+          "earnedPoints": 30,
+          "totalPoints": 40,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Budget Lessons (Part 2)",
+          "dueDate": "04/28/2026",
+          "earnedPoints": 30,
+          "totalPoints": 40,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Workbook Part.",
+          "dueDate": "04/28/2026",
+          "earnedPoints": 50,
+          "totalPoints": 55,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Budget Part. Wk of 4/6",
           "dueDate": "04/10/2026",
@@ -47,9 +71,9 @@
           "name": "Packet 1 AMC",
           "dueDate": "04/28/2026",
           "earnedPoints": 0,
-          "totalPoints": 40,
+          "totalPoints": 30,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "AMC Chunk 3 Quiz",
@@ -77,9 +101,9 @@
         },
         {
           "name": "Keystone Bonus",
-          "dueDate": "04/28/2026",
+          "dueDate": "04/21/2026",
           "earnedPoints": 0,
-          "totalPoints": 40,
+          "totalPoints": 0,
           "weight": 1,
           "graded": false
         },
@@ -147,6 +171,30 @@
       "period": "2",
       "currentGrade": 87,
       "assignments": [
+        {
+          "name": "Nutrient Cycles Activity",
+          "dueDate": "04/21/2026",
+          "earnedPoints": 0,
+          "totalPoints": 0,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Biogeochemical Interactivity",
+          "dueDate": "04/28/2026",
+          "earnedPoints": 0,
+          "totalPoints": 50,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Biogeochemical Cycles Quiz",
+          "dueDate": "04/28/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Food Webs/energy relationships",
           "dueDate": "04/23/2026",
