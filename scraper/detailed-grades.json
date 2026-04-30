@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-04-30T01:04:45.955Z",
+    "scrapedAt": "2026-04-30T12:37:11.040Z",
     "totalClasses": 9,
-    "totalAssignments": 76
+    "totalAssignments": 79
   },
   "classes": [
     {
@@ -68,10 +68,18 @@
       "currentGrade": 78,
       "assignments": [
         {
-          "name": "AMC Writings",
-          "dueDate": "04/29/2026",
+          "name": "IXL 4/30",
+          "dueDate": "04/30/2026",
           "earnedPoints": 0,
-          "totalPoints": 20,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "AMC Writings",
+          "dueDate": "04/30/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
           "weight": 1,
           "graded": false
         },
@@ -180,10 +188,18 @@
       "currentGrade": 87,
       "assignments": [
         {
-          "name": "Nutrient Cycles Activity",
-          "dueDate": "04/21/2026",
+          "name": "Module 1 Review/scenario",
+          "dueDate": "05/04/2026",
           "earnedPoints": 0,
-          "totalPoints": 0,
+          "totalPoints": 65,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Nutrient Cycles Activity",
+          "dueDate": "05/04/2026",
+          "earnedPoints": 0,
+          "totalPoints": 65,
           "weight": 1,
           "graded": false
         },
@@ -561,8 +577,16 @@
       "className": "AMER STUDIES",
       "teacher": "Brock Seese",
       "period": "6",
-      "currentGrade": 75,
+      "currentGrade": 73,
       "assignments": [
+        {
+          "name": "Cold War Manuscript",
+          "dueDate": "04/29/2026",
+          "earnedPoints": 0,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "WWII Documentary Project",
           "dueDate": "04/21/2026",
@@ -596,7 +620,7 @@
       "currentGrade": 83,
       "assignments": [
         {
-          "name": "Perimeter Quiz on GMM",
+          "name": "GMM: 30pts Perimeter",
           "dueDate": "04/17/2026",
           "earnedPoints": 12,
           "totalPoints": 15,
@@ -604,7 +628,7 @@
           "graded": true
         },
         {
-          "name": "GMM: 30pts Perimeter",
+          "name": "Perimeter Quiz on GMM",
           "dueDate": "04/17/2026",
           "earnedPoints": 12,
           "totalPoints": 15,
