@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-04-29T12:37:06.284Z",
+    "scrapedAt": "2026-04-30T01:04:45.955Z",
     "totalClasses": 9,
-    "totalAssignments": 73
+    "totalAssignments": 76
   },
   "classes": [
     {
@@ -68,6 +68,14 @@
       "currentGrade": 78,
       "assignments": [
         {
+          "name": "AMC Writings",
+          "dueDate": "04/29/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": false
+        },
+        {
           "name": "Packet 1 AMC",
           "dueDate": "04/28/2026",
           "earnedPoints": 0,
@@ -101,9 +109,9 @@
         },
         {
           "name": "Keystone Bonus",
-          "dueDate": "04/21/2026",
+          "dueDate": "04/29/2026",
           "earnedPoints": 0,
-          "totalPoints": 0,
+          "totalPoints": 20,
           "weight": 1,
           "graded": false
         },
@@ -192,6 +200,22 @@
           "dueDate": "04/28/2026",
           "earnedPoints": 0,
           "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Nitrogen and Phosphorus edpuzz",
+          "dueDate": "04/28/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Water and Carbon Cycle Edpuzzl",
+          "dueDate": "04/27/2026",
+          "earnedPoints": 0,
+          "totalPoints": 5,
           "weight": 1,
           "graded": false
         },
@@ -572,7 +596,7 @@
       "currentGrade": 83,
       "assignments": [
         {
-          "name": "GMM: 30pts Perimeter",
+          "name": "Perimeter Quiz on GMM",
           "dueDate": "04/17/2026",
           "earnedPoints": 12,
           "totalPoints": 15,
@@ -580,7 +604,7 @@
           "graded": true
         },
         {
-          "name": "Perimeter Quiz on GMM",
+          "name": "GMM: 30pts Perimeter",
           "dueDate": "04/17/2026",
           "earnedPoints": 12,
           "totalPoints": 15,
