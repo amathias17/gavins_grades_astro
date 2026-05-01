@@ -1,16 +1,24 @@
 {
   "metadata": {
-    "last_updated": "04/30/2026, 09:10 PM",
-    "count": 7
+    "last_updated": "05/01/2026, 01:54 PM",
+    "count": 8
   },
   "missing_assignments": [
     {
-      "due_date": "04/30/2026",
-      "assignment_name": "Watergate Writing Assignment",
-      "class_name": "SOCIOLOGY",
-      "teacher": "Heather Eckels",
+      "due_date": "04/29/2026",
+      "assignment_name": "AMC Writings",
+      "class_name": "ENGLISH 10",
+      "teacher": "Megan Leone",
+      "category": "Writing",
+      "max_points": "20"
+    },
+    {
+      "due_date": "04/28/2026",
+      "assignment_name": "Packet 1 AMC",
+      "class_name": "ENGLISH 10",
+      "teacher": "Megan Leone",
       "category": "Class Work",
-      "max_points": "50"
+      "max_points": "40"
     },
     {
       "due_date": "04/27/2026",

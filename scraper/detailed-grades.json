@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-05-01T01:10:10.258Z",
+    "scrapedAt": "2026-05-01T17:54:33.740Z",
     "totalClasses": 9,
-    "totalAssignments": 79
+    "totalAssignments": 81
   },
   "classes": [
     {
@@ -65,7 +65,7 @@
       "className": "ENGLISH 10",
       "teacher": "Megan Leone",
       "period": "1",
-      "currentGrade": 74,
+      "currentGrade": 56,
       "assignments": [
         {
           "name": "IXL 4/30",
@@ -189,9 +189,9 @@
       "assignments": [
         {
           "name": "Module 1 Review/scenario",
-          "dueDate": "05/04/2026",
+          "dueDate": "04/21/2026",
           "earnedPoints": 0,
-          "totalPoints": 65,
+          "totalPoints": 0,
           "weight": 1,
           "graded": false
         },
@@ -207,7 +207,7 @@
           "name": "Biogeochemical Interactivity",
           "dueDate": "04/28/2026",
           "earnedPoints": 0,
-          "totalPoints": 50,
+          "totalPoints": 5,
           "weight": 1,
           "graded": false
         },
@@ -215,7 +215,7 @@
           "name": "Biogeochemical Cycles Quiz",
           "dueDate": "04/28/2026",
           "earnedPoints": 0,
-          "totalPoints": 10,
+          "totalPoints": 5,
           "weight": 1,
           "graded": false
         },
@@ -229,7 +229,7 @@
         },
         {
           "name": "Water and Carbon Cycle Edpuzzl",
-          "dueDate": "04/27/2026",
+          "dueDate": "04/24/2026",
           "earnedPoints": 0,
           "totalPoints": 5,
           "weight": 1,
@@ -513,8 +513,24 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 80,
+      "currentGrade": 81,
       "assignments": [
+        {
+          "name": "The 13th Labor",
+          "dueDate": "04/24/2026",
+          "earnedPoints": 0,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Venus Lyrics",
+          "dueDate": "04/29/2026",
+          "earnedPoints": 16,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Hephaestus Project",
           "dueDate": "04/14/2026",
@@ -665,7 +681,7 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 61,
+      "currentGrade": 73,
       "assignments": [
         {
           "name": "Watergate Writing Assignment",

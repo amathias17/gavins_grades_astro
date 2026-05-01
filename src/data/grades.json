@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "04/30/2026, 09:10 PM",
+    "last_updated": "05/01/2026, 01:54 PM",
     "most_recent_date": "5/1/2026",
     "total_classes": 9
   },
@@ -26,10 +26,10 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q4_grade": 74,
-      "q4_letter_grade": "C",
-      "current_grade": 74,
-      "letter_grade": "C"
+      "q4_grade": 56,
+      "q4_letter_grade": "F",
+      "current_grade": 56,
+      "letter_grade": "F"
     },
     {
       "class_name": "Biology 2",
@@ -78,9 +78,9 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q4_grade": 80,
+      "q4_grade": 81,
       "q4_letter_grade": "B",
-      "current_grade": 80,
+      "current_grade": 81,
       "letter_grade": "B"
     },
     {
@@ -117,10 +117,10 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q4_grade": 61,
-      "q4_letter_grade": "D",
-      "current_grade": 61,
-      "letter_grade": "D"
+      "q4_grade": 73,
+      "q4_letter_grade": "C",
+      "current_grade": 73,
+      "letter_grade": "C"
     }
   ],
   "grade_history": {
@@ -441,7 +441,7 @@
       "4/28/2026": 78,
       "4/29/2026": 78,
       "4/30/2026": 78,
-      "5/1/2026": 74
+      "5/1/2026": 56
     },
     "Biology 2": {
       "11/24/2025": 82,
@@ -1273,7 +1273,7 @@
       "4/28/2026": 72,
       "4/29/2026": 72,
       "4/30/2026": 72,
-      "5/1/2026": 61
+      "5/1/2026": 73
     },
     "Food Challenges": {
       "1/23/2026": 0,
@@ -1576,10 +1576,10 @@
       "4/28/2026": 80,
       "4/29/2026": 80,
       "4/30/2026": 80,
-      "5/1/2026": 80
+      "5/1/2026": 81
     }
   },
-  "overall_average": 74,
+  "overall_average": 73,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -1739,7 +1739,7 @@
     "4/28/2026": 77,
     "4/29/2026": 76,
     "4/30/2026": 76,
-    "5/1/2026": 74
+    "5/1/2026": 73
   },
   "streak": 0,
   "streak_history": {
