@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-04-30T12:37:11.040Z",
+    "scrapedAt": "2026-05-01T01:10:10.258Z",
     "totalClasses": 9,
     "totalAssignments": 79
   },
@@ -65,7 +65,7 @@
       "className": "ENGLISH 10",
       "teacher": "Megan Leone",
       "period": "1",
-      "currentGrade": 78,
+      "currentGrade": 74,
       "assignments": [
         {
           "name": "IXL 4/30",
@@ -73,7 +73,7 @@
           "earnedPoints": 0,
           "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "AMC Writings",
@@ -81,7 +81,7 @@
           "earnedPoints": 0,
           "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Packet 1 AMC",
@@ -117,9 +117,9 @@
         },
         {
           "name": "Keystone Bonus",
-          "dueDate": "04/29/2026",
+          "dueDate": "04/21/2026",
           "earnedPoints": 0,
-          "totalPoints": 20,
+          "totalPoints": 0,
           "weight": 1,
           "graded": false
         },
@@ -665,8 +665,16 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 72,
+      "currentGrade": 61,
       "assignments": [
+        {
+          "name": "Watergate Writing Assignment",
+          "dueDate": "04/30/2026",
+          "earnedPoints": 0,
+          "totalPoints": 50,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "The Watergate Breakin",
           "dueDate": "04/27/2026",
@@ -696,14 +704,6 @@
           "dueDate": "04/21/2026",
           "earnedPoints": 10,
           "totalPoints": 10,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "EdPuzzle Politics",
-          "dueDate": "04/20/2026",
-          "earnedPoints": 43,
-          "totalPoints": 50,
           "weight": 1,
           "graded": true
         }

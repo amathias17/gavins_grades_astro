@@ -1,9 +1,17 @@
 {
   "metadata": {
-    "last_updated": "04/30/2026, 08:37 AM",
-    "count": 6
+    "last_updated": "04/30/2026, 09:10 PM",
+    "count": 7
   },
   "missing_assignments": [
+    {
+      "due_date": "04/30/2026",
+      "assignment_name": "Watergate Writing Assignment",
+      "class_name": "SOCIOLOGY",
+      "teacher": "Heather Eckels",
+      "category": "Class Work",
+      "max_points": "50"
+    },
     {
       "due_date": "04/27/2026",
       "assignment_name": "The Watergate Breakin",
