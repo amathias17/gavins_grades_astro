@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-05-01T17:54:33.740Z",
+    "scrapedAt": "2026-05-02T01:02:07.998Z",
     "totalClasses": 9,
     "totalAssignments": 81
   },
@@ -207,7 +207,7 @@
           "name": "Biogeochemical Interactivity",
           "dueDate": "04/28/2026",
           "earnedPoints": 0,
-          "totalPoints": 5,
+          "totalPoints": 50,
           "weight": 1,
           "graded": false
         },
