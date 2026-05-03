@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-05-02T12:22:21.882Z",
+    "scrapedAt": "2026-05-03T01:08:41.696Z",
     "totalClasses": 9,
-    "totalAssignments": 81
+    "totalAssignments": 82
   },
   "classes": [
     {
@@ -207,7 +207,7 @@
           "name": "Biogeochemical Interactivity",
           "dueDate": "04/28/2026",
           "earnedPoints": 0,
-          "totalPoints": 5,
+          "totalPoints": 50,
           "weight": 1,
           "graded": false
         },
@@ -215,7 +215,7 @@
           "name": "Biogeochemical Cycles Quiz",
           "dueDate": "04/28/2026",
           "earnedPoints": 0,
-          "totalPoints": 5,
+          "totalPoints": 10,
           "weight": 1,
           "graded": false
         },
@@ -229,7 +229,7 @@
         },
         {
           "name": "Water and Carbon Cycle Edpuzzl",
-          "dueDate": "04/24/2026",
+          "dueDate": "04/27/2026",
           "earnedPoints": 0,
           "totalPoints": 5,
           "weight": 1,
@@ -449,8 +449,16 @@
       "className": "ENG/DESIGN/ARCH",
       "teacher": "Todd Bennett",
       "period": "4",
-      "currentGrade": 61,
+      "currentGrade": 66,
       "assignments": [
+        {
+          "name": "Week 16 Participation",
+          "dueDate": "05/01/2026",
+          "earnedPoints": 25,
+          "totalPoints": 25,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Tiny Home Design Challenge (HomeByMe)",
           "dueDate": "04/24/2026",
@@ -517,11 +525,11 @@
       "assignments": [
         {
           "name": "The 13th Labor",
-          "dueDate": "04/24/2026",
-          "earnedPoints": 0,
-          "totalPoints": 5,
+          "dueDate": "04/29/2026",
+          "earnedPoints": 25,
+          "totalPoints": 25,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Venus Lyrics",
