@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-05-04T12:38:40.003Z",
+    "scrapedAt": "2026-05-04T23:45:53.315Z",
     "totalClasses": 9,
-    "totalAssignments": 82
+    "totalAssignments": 83
   },
   "classes": [
     {
@@ -65,7 +65,7 @@
       "className": "ENGLISH 10",
       "teacher": "Megan Leone",
       "period": "1",
-      "currentGrade": 56,
+      "currentGrade": 76,
       "assignments": [
         {
           "name": "IXL 4/30",
@@ -185,10 +185,10 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 87,
+      "currentGrade": 85,
       "assignments": [
         {
-          "name": "Module 1 Review/scenario",
+          "name": "Module 1 Review",
           "dueDate": "04/21/2026",
           "earnedPoints": 0,
           "totalPoints": 0,
@@ -196,10 +196,18 @@
           "graded": false
         },
         {
-          "name": "Nutrient Cycles Activity",
+          "name": "Practice Scenario Keystone",
           "dueDate": "05/04/2026",
           "earnedPoints": 0,
-          "totalPoints": 65,
+          "totalPoints": 60,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Nutrient Cycles Activity",
+          "dueDate": "04/28/2026",
+          "earnedPoints": 0,
+          "totalPoints": 50,
           "weight": 1,
           "graded": false
         },
@@ -215,7 +223,7 @@
           "name": "Biogeochemical Cycles Quiz",
           "dueDate": "04/28/2026",
           "earnedPoints": 0,
-          "totalPoints": 10,
+          "totalPoints": 5,
           "weight": 1,
           "graded": false
         },

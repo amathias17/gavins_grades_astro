@@ -1,25 +1,9 @@
 {
   "metadata": {
-    "last_updated": "05/04/2026, 08:38 AM",
-    "count": 8
+    "last_updated": "05/04/2026, 07:45 PM",
+    "count": 6
   },
   "missing_assignments": [
-    {
-      "due_date": "04/29/2026",
-      "assignment_name": "AMC Writings",
-      "class_name": "ENGLISH 10",
-      "teacher": "Megan Leone",
-      "category": "Writing",
-      "max_points": "20"
-    },
-    {
-      "due_date": "04/28/2026",
-      "assignment_name": "Packet 1 AMC",
-      "class_name": "ENGLISH 10",
-      "teacher": "Megan Leone",
-      "category": "Class Work",
-      "max_points": "40"
-    },
     {
       "due_date": "04/27/2026",
       "assignment_name": "The Watergate Breakin",
