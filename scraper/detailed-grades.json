@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-05-04T12:08:48.223Z",
+    "scrapedAt": "2026-05-04T12:38:40.003Z",
     "totalClasses": 9,
     "totalAssignments": 82
   },
@@ -221,9 +221,9 @@
         },
         {
           "name": "Nitrogen and Phosphorus edpuzz",
-          "dueDate": "04/28/2026",
+          "dueDate": "04/27/2026",
           "earnedPoints": 0,
-          "totalPoints": 10,
+          "totalPoints": 5,
           "weight": 1,
           "graded": false
         },
