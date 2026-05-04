@@ -1,10 +1,128 @@
 {
   "metadata": {
-    "last_updated": "05/03/2026, 09:05 PM",
+    "last_updated": "05/04/2026, 08:08 AM",
     "most_recent_date": "5/4/2026",
-    "total_classes": 0
+    "total_classes": 9
   },
-  "classes": [],
+  "classes": [
+    {
+      "class_name": "Sophomore Seminar",
+      "teacher": "Victoria Good",
+      "period": "0",
+      "q1_grade": null,
+      "q1_letter_grade": null,
+      "q2_grade": null,
+      "q2_letter_grade": null,
+      "q4_grade": 71,
+      "q4_letter_grade": "C",
+      "current_grade": 71,
+      "letter_grade": "C"
+    },
+    {
+      "class_name": "English 10",
+      "teacher": "Megan Leone",
+      "period": "1",
+      "q1_grade": null,
+      "q1_letter_grade": null,
+      "q2_grade": null,
+      "q2_letter_grade": null,
+      "q4_grade": 56,
+      "q4_letter_grade": "F",
+      "current_grade": 56,
+      "letter_grade": "F"
+    },
+    {
+      "class_name": "Biology 2",
+      "teacher": "Denise Condo",
+      "period": "2",
+      "q1_grade": null,
+      "q1_letter_grade": null,
+      "q2_grade": null,
+      "q2_letter_grade": null,
+      "q4_grade": 87,
+      "q4_letter_grade": "B",
+      "current_grade": 87,
+      "letter_grade": "B"
+    },
+    {
+      "class_name": "Food Challenges",
+      "teacher": "Misty Finnegan",
+      "period": "3",
+      "q1_grade": null,
+      "q1_letter_grade": null,
+      "q2_grade": null,
+      "q2_letter_grade": null,
+      "q4_grade": 75,
+      "q4_letter_grade": "C",
+      "current_grade": 75,
+      "letter_grade": "C"
+    },
+    {
+      "class_name": "Eng/design/arch",
+      "teacher": "Todd Bennett",
+      "period": "4",
+      "q1_grade": null,
+      "q1_letter_grade": null,
+      "q2_grade": null,
+      "q2_letter_grade": null,
+      "q4_grade": 66,
+      "q4_letter_grade": "D",
+      "current_grade": 66,
+      "letter_grade": "D"
+    },
+    {
+      "class_name": "Greek Mythology",
+      "teacher": "Alex Ray",
+      "period": "5",
+      "q1_grade": null,
+      "q1_letter_grade": null,
+      "q2_grade": null,
+      "q2_letter_grade": null,
+      "q4_grade": 81,
+      "q4_letter_grade": "B",
+      "current_grade": 81,
+      "letter_grade": "B"
+    },
+    {
+      "class_name": "Amer Studies",
+      "teacher": "Brock Seese",
+      "period": "6",
+      "q1_grade": null,
+      "q1_letter_grade": null,
+      "q2_grade": null,
+      "q2_letter_grade": null,
+      "q4_grade": 73,
+      "q4_letter_grade": "C",
+      "current_grade": 73,
+      "letter_grade": "C"
+    },
+    {
+      "class_name": "Intermediate Geometry",
+      "teacher": "Caleb Marasco",
+      "period": "7",
+      "q1_grade": null,
+      "q1_letter_grade": null,
+      "q2_grade": null,
+      "q2_letter_grade": null,
+      "q4_grade": 83,
+      "q4_letter_grade": "B",
+      "current_grade": 83,
+      "letter_grade": "B"
+    },
+    {
+      "class_name": "Sociology",
+      "teacher": "Heather Eckels",
+      "period": "8",
+      "q1_grade": null,
+      "q1_letter_grade": null,
+      "q2_grade": null,
+      "q2_letter_grade": null,
+      "q4_grade": 73,
+      "q4_letter_grade": "C",
+      "current_grade": 73,
+      "letter_grade": "C"
+    }
+  ],
   "grade_history": {
     "Sophomore Seminar": {
       "11/24/2025": 66,
@@ -165,7 +283,8 @@
       "4/30/2026": 71,
       "5/1/2026": 71,
       "5/2/2026": 71,
-      "5/3/2026": 71
+      "5/3/2026": 71,
+      "5/4/2026": 71
     },
     "English 10": {
       "11/24/2025": 75,
@@ -327,7 +446,8 @@
       "4/30/2026": 78,
       "5/1/2026": 56,
       "5/2/2026": 56,
-      "5/3/2026": 56
+      "5/3/2026": 56,
+      "5/4/2026": 56
     },
     "Biology 2": {
       "11/24/2025": 82,
@@ -489,7 +609,8 @@
       "4/30/2026": 87,
       "5/1/2026": 87,
       "5/2/2026": 87,
-      "5/3/2026": 87
+      "5/3/2026": 87,
+      "5/4/2026": 87
     },
     "History Pop Cult 1": {
       "11/24/2025": 90,
@@ -840,7 +961,8 @@
       "4/30/2026": 73,
       "5/1/2026": 73,
       "5/2/2026": 73,
-      "5/3/2026": 73
+      "5/3/2026": 73,
+      "5/4/2026": 73
     },
     "Intermediate Geometry": {
       "11/24/2025": 69,
@@ -1002,7 +1124,8 @@
       "4/30/2026": 83,
       "5/1/2026": 83,
       "5/2/2026": 83,
-      "5/3/2026": 83
+      "5/3/2026": 83,
+      "5/4/2026": 83
     },
     "Health": {
       "11/24/2025": 94,
@@ -1167,7 +1290,8 @@
       "4/30/2026": 72,
       "5/1/2026": 73,
       "5/2/2026": 73,
-      "5/3/2026": 73
+      "5/3/2026": 73,
+      "5/4/2026": 73
     },
     "Food Challenges": {
       "1/23/2026": 0,
@@ -1269,7 +1393,8 @@
       "4/30/2026": 75,
       "5/1/2026": 75,
       "5/2/2026": 75,
-      "5/3/2026": 75
+      "5/3/2026": 75,
+      "5/4/2026": 75
     },
     "Eng/design/arch": {
       "1/23/2026": 0,
@@ -1371,7 +1496,8 @@
       "4/30/2026": 61,
       "5/1/2026": 61,
       "5/2/2026": 61,
-      "5/3/2026": 66
+      "5/3/2026": 66,
+      "5/4/2026": 66
     },
     "Money Math": {
       "1/23/2026": 0,
@@ -1476,10 +1602,11 @@
       "4/30/2026": 80,
       "5/1/2026": 81,
       "5/2/2026": 81,
-      "5/3/2026": 81
+      "5/3/2026": 81,
+      "5/4/2026": 81
     }
   },
-  "overall_average": 0,
+  "overall_average": 74,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -1642,9 +1769,9 @@
     "5/1/2026": 73,
     "5/2/2026": 73,
     "5/3/2026": 0,
-    "5/4/2026": 0
+    "5/4/2026": 74
   },
-  "streak": 2,
+  "streak": 0,
   "streak_history": {
     "11/24/2025": 0,
     "11/25/2025": 0,
@@ -1807,6 +1934,6 @@
     "5/1/2026": 0,
     "5/2/2026": 0,
     "5/3/2026": 1,
-    "5/4/2026": 2
+    "5/4/2026": 0
   }
 }

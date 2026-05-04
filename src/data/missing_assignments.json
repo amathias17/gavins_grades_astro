@@ -1,7 +1,72 @@
 {
   "metadata": {
-    "last_updated": "05/03/2026, 09:05 PM",
-    "count": 0
+    "last_updated": "05/04/2026, 08:08 AM",
+    "count": 8
   },
-  "missing_assignments": []
+  "missing_assignments": [
+    {
+      "due_date": "04/29/2026",
+      "assignment_name": "AMC Writings",
+      "class_name": "ENGLISH 10",
+      "teacher": "Megan Leone",
+      "category": "Writing",
+      "max_points": "20"
+    },
+    {
+      "due_date": "04/28/2026",
+      "assignment_name": "Packet 1 AMC",
+      "class_name": "ENGLISH 10",
+      "teacher": "Megan Leone",
+      "category": "Class Work",
+      "max_points": "40"
+    },
+    {
+      "due_date": "04/27/2026",
+      "assignment_name": "The Watergate Breakin",
+      "class_name": "SOCIOLOGY",
+      "teacher": "Heather Eckels",
+      "category": "Class Work",
+      "max_points": "30"
+    },
+    {
+      "due_date": "04/22/2026",
+      "assignment_name": "Forms of Government Stations",
+      "class_name": "SOCIOLOGY",
+      "teacher": "Heather Eckels",
+      "category": "Class Work",
+      "max_points": "35"
+    },
+    {
+      "due_date": "04/17/2026",
+      "assignment_name": "Dream Home Research",
+      "class_name": "ENG/DESIGN/ARCH",
+      "teacher": "Todd Bennett",
+      "category": "Class Work",
+      "max_points": "25"
+    },
+    {
+      "due_date": "04/16/2026",
+      "assignment_name": "Cold War Vocab",
+      "class_name": "AMER STUDIES",
+      "teacher": "Brock Seese",
+      "category": "Class Work",
+      "max_points": "16"
+    },
+    {
+      "due_date": "04/16/2026",
+      "assignment_name": "Cold War Vocab Cartoon",
+      "class_name": "AMER STUDIES",
+      "teacher": "Brock Seese",
+      "category": "Class Work",
+      "max_points": "10"
+    },
+    {
+      "due_date": "04/09/2026",
+      "assignment_name": "Collins Words #6",
+      "class_name": "BIOLOGY            2",
+      "teacher": "Denise Condo",
+      "category": "Bell Ringer",
+      "max_points": "15"
+    }
+  ]
 }
