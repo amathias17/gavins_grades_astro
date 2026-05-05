@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-05-04T23:45:53.315Z",
+    "scrapedAt": "2026-05-05T01:00:27.269Z",
     "totalClasses": 9,
     "totalAssignments": 83
   },
@@ -205,17 +205,17 @@
         },
         {
           "name": "Nutrient Cycles Activity",
-          "dueDate": "04/28/2026",
+          "dueDate": "05/04/2026",
           "earnedPoints": 0,
-          "totalPoints": 50,
+          "totalPoints": 5,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Biogeochemical Interactivity",
           "dueDate": "04/28/2026",
           "earnedPoints": 0,
-          "totalPoints": 50,
+          "totalPoints": 5,
           "weight": 1,
           "graded": false
         },
@@ -229,9 +229,9 @@
         },
         {
           "name": "Nitrogen and Phosphorus edpuzz",
-          "dueDate": "04/27/2026",
+          "dueDate": "04/28/2026",
           "earnedPoints": 0,
-          "totalPoints": 5,
+          "totalPoints": 10,
           "weight": 1,
           "graded": false
         },
