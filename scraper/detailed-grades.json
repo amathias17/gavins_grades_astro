@@ -1,16 +1,24 @@
 {
   "metadata": {
-    "scrapedAt": "2026-05-05T01:00:27.269Z",
+    "scrapedAt": "2026-05-05T12:32:21.175Z",
     "totalClasses": 9,
-    "totalAssignments": 83
+    "totalAssignments": 84
   },
   "classes": [
     {
       "className": "SOPHOMORE SEMINAR",
       "teacher": "Victoria Good",
       "period": "0",
-      "currentGrade": 71,
+      "currentGrade": 74,
       "assignments": [
+        {
+          "name": "W4 & Job Wordsearch",
+          "dueDate": "05/05/2026",
+          "earnedPoints": 28,
+          "totalPoints": 30,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "workbook check",
           "dueDate": "04/28/2026",
@@ -117,11 +125,11 @@
         },
         {
           "name": "Keystone Bonus",
-          "dueDate": "04/21/2026",
-          "earnedPoints": 0,
-          "totalPoints": 0,
+          "dueDate": "05/05/2026",
+          "earnedPoints": 28,
+          "totalPoints": 30,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Give One, Get One AMC",
@@ -189,9 +197,9 @@
       "assignments": [
         {
           "name": "Module 1 Review",
-          "dueDate": "04/21/2026",
+          "dueDate": "05/04/2026",
           "earnedPoints": 0,
-          "totalPoints": 0,
+          "totalPoints": 60,
           "weight": 1,
           "graded": false
         },
@@ -199,9 +207,9 @@
           "name": "Practice Scenario Keystone",
           "dueDate": "05/04/2026",
           "earnedPoints": 0,
-          "totalPoints": 60,
+          "totalPoints": 5,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Nutrient Cycles Activity",
@@ -213,11 +221,11 @@
         },
         {
           "name": "Biogeochemical Interactivity",
-          "dueDate": "04/28/2026",
+          "dueDate": "05/04/2026",
           "earnedPoints": 0,
           "totalPoints": 5,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Biogeochemical Cycles Quiz",
