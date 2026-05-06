@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-05-06T01:00:20.856Z",
+    "scrapedAt": "2026-05-06T12:41:20.243Z",
     "totalClasses": 9,
-    "totalAssignments": 84
+    "totalAssignments": 85
   },
   "classes": [
     {
@@ -468,6 +468,14 @@
       "currentGrade": 66,
       "assignments": [
         {
+          "name": "Architecture Final Test",
+          "dueDate": "05/06/2026",
+          "earnedPoints": 0,
+          "totalPoints": 100,
+          "weight": 1,
+          "graded": false
+        },
+        {
           "name": "Week 16 Participation",
           "dueDate": "05/01/2026",
           "earnedPoints": 25,
@@ -717,9 +725,9 @@
         },
         {
           "name": "100 People",
-          "dueDate": "05/05/2026",
+          "dueDate": "05/04/2026",
           "earnedPoints": 0,
-          "totalPoints": 17,
+          "totalPoints": 100,
           "weight": 1,
           "graded": false
         },
