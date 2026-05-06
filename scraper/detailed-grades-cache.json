@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-05T12:32:21.176Z",
+  "updatedAt": "2026-05-06T01:00:20.857Z",
   "assignments": {
     "1561854:44463:1396": {
       "classId": "44463",
@@ -8618,7 +8618,7 @@
       "totalPoints": 45,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:01.727Z"
+      "cachedAt": "2026-05-06T01:00:07.854Z"
     },
     "1606960:44463:1396": {
       "classId": "44463",
@@ -8635,7 +8635,7 @@
       "totalPoints": 45,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:01.727Z"
+      "cachedAt": "2026-05-06T01:00:07.854Z"
     },
     "1606676:43162:1396": {
       "classId": "43162",
@@ -8652,7 +8652,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:01.840Z"
+      "cachedAt": "2026-05-06T01:00:07.855Z"
     },
     "1607952:43162:1396": {
       "classId": "43162",
@@ -8669,7 +8669,7 @@
       "totalPoints": 40,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:01.840Z"
+      "cachedAt": "2026-05-06T01:00:07.855Z"
     },
     "1603331:43424:1396": {
       "classId": "43424",
@@ -8678,7 +8678,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 85,
+      "currentGrade": 72,
       "assignmentName": "Mutations SG (identification)",
       "dateDue": "04/01/2026",
       "dueDate": "04/01/2026",
@@ -8686,7 +8686,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.017Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1604340:43424:1396": {
       "classId": "43424",
@@ -8695,7 +8695,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 85,
+      "currentGrade": 72,
       "assignmentName": "Mutations Quiz",
       "dateDue": "03/31/2026",
       "dueDate": "03/31/2026",
@@ -8703,7 +8703,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.017Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1606235:43424:1396": {
       "classId": "43424",
@@ -8712,7 +8712,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 85,
+      "currentGrade": 72,
       "assignmentName": "Human Trait Wheel",
       "dateDue": "03/31/2026",
       "dueDate": "03/31/2026",
@@ -8720,7 +8720,7 @@
       "totalPoints": 25,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.017Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1607314:43424:1396": {
       "classId": "43424",
@@ -8729,7 +8729,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 85,
+      "currentGrade": 72,
       "assignmentName": "Mendel Edpuzzle",
       "dateDue": "03/31/2026",
       "dueDate": "03/31/2026",
@@ -8737,7 +8737,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.017Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1600112:45003:1396": {
       "classId": "45003",
@@ -8754,7 +8754,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.017Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1604981:43341:1396": {
       "classId": "43341",
@@ -8771,7 +8771,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.018Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1608064:43341:1396": {
       "classId": "43341",
@@ -8788,7 +8788,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.018Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1608258:44979:1396": {
       "classId": "44979",
@@ -8805,7 +8805,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.018Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1608260:44979:1396": {
       "classId": "44979",
@@ -8822,7 +8822,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.018Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1608230:44615:1396": {
       "classId": "44615",
@@ -8856,7 +8856,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.018Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1609705:43162:1396": {
       "classId": "43162",
@@ -8873,7 +8873,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:01.840Z"
+      "cachedAt": "2026-05-06T01:00:07.855Z"
     },
     "1609829:45003:1396": {
       "classId": "45003",
@@ -8890,7 +8890,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.017Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1609680:45003:1396": {
       "classId": "45003",
@@ -8907,7 +8907,7 @@
       "totalPoints": 35,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.017Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1612351:44463:1396": {
       "classId": "44463",
@@ -8924,7 +8924,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:01.727Z"
+      "cachedAt": "2026-05-06T01:00:07.854Z"
     },
     "1611725:43424:1396": {
       "classId": "43424",
@@ -8933,7 +8933,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 85,
+      "currentGrade": 72,
       "assignmentName": "Collins Words #6",
       "dateDue": "04/10/2026",
       "dueDate": "04/10/2026",
@@ -8941,7 +8941,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.017Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1611729:43424:1396": {
       "classId": "43424",
@@ -8950,7 +8950,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 85,
+      "currentGrade": 72,
       "assignmentName": "Blood typing Problems",
       "dateDue": "04/09/2026",
       "dueDate": "04/09/2026",
@@ -8958,7 +8958,7 @@
       "totalPoints": 15,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.017Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1611026:43341:1396": {
       "classId": "43341",
@@ -8975,7 +8975,7 @@
       "totalPoints": 0,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.018Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1612296:44979:1396": {
       "classId": "44979",
@@ -8992,7 +8992,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.018Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1611930:44615:1396": {
       "classId": "44615",
@@ -9035,7 +9035,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 85,
+      "currentGrade": 72,
       "assignmentName": "Sex-linked Traits",
       "dateDue": "04/10/2026",
       "dueDate": "04/10/2026",
@@ -9043,7 +9043,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.017Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1612610:43424:1396": {
       "classId": "43424",
@@ -9052,7 +9052,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 85,
+      "currentGrade": 72,
       "assignmentName": "Genetics Problems",
       "dateDue": "04/10/2026",
       "dueDate": "04/10/2026",
@@ -9060,7 +9060,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.017Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1612639:43424:1396": {
       "classId": "43424",
@@ -9069,7 +9069,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 85,
+      "currentGrade": 72,
       "assignmentName": "Keystone Vocabulary",
       "dateDue": "04/10/2026",
       "dueDate": "04/10/2026",
@@ -9077,7 +9077,7 @@
       "totalPoints": 40,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.017Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1613095:43666:1396": {
       "classId": "43666",
@@ -9094,7 +9094,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.018Z"
+      "cachedAt": "2026-05-06T01:00:18.410Z"
     },
     "1613102:43666:1396": {
       "classId": "43666",
@@ -9111,7 +9111,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.018Z"
+      "cachedAt": "2026-05-06T01:00:18.410Z"
     },
     "1612437:43666:1396": {
       "classId": "43666",
@@ -9128,7 +9128,7 @@
       "totalPoints": 30,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.018Z"
+      "cachedAt": "2026-05-06T01:00:18.410Z"
     },
     "1613658:43162:1396": {
       "classId": "43162",
@@ -9145,7 +9145,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:01.840Z"
+      "cachedAt": "2026-05-06T01:00:07.855Z"
     },
     "1613108:45003:1396": {
       "classId": "45003",
@@ -9162,7 +9162,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.017Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1612843:44979:1396": {
       "classId": "44979",
@@ -9179,7 +9179,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.018Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1614925:43162:1396": {
       "classId": "43162",
@@ -9196,7 +9196,7 @@
       "totalPoints": 18,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:01.840Z"
+      "cachedAt": "2026-05-06T01:00:07.855Z"
     },
     "1613112:45003:1396": {
       "classId": "45003",
@@ -9213,7 +9213,7 @@
       "totalPoints": 18,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.017Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1613767:43341:1396": {
       "classId": "43341",
@@ -9230,7 +9230,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.018Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1615595:44979:1396": {
       "classId": "44979",
@@ -9247,7 +9247,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.018Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1616610:43162:1396": {
       "classId": "43162",
@@ -9264,7 +9264,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:01.840Z"
+      "cachedAt": "2026-05-06T01:00:07.855Z"
     },
     "1614269:43162:1396": {
       "classId": "43162",
@@ -9281,7 +9281,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:01.840Z"
+      "cachedAt": "2026-05-06T01:00:07.855Z"
     },
     "1617523:43424:1396": {
       "classId": "43424",
@@ -9290,7 +9290,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 85,
+      "currentGrade": 72,
       "assignmentName": "Pedigree-Song",
       "dateDue": "04/17/2026",
       "dueDate": "04/17/2026",
@@ -9298,7 +9298,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.017Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1617563:43424:1396": {
       "classId": "43424",
@@ -9307,7 +9307,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 85,
+      "currentGrade": 72,
       "assignmentName": "Evolution-Edpuzzle clip",
       "dateDue": "04/17/2026",
       "dueDate": "04/17/2026",
@@ -9315,7 +9315,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.017Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1617005:43049:1396": {
       "classId": "43049",
@@ -9332,7 +9332,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.018Z"
+      "cachedAt": "2026-05-06T01:00:18.410Z"
     },
     "1617853:43666:1396": {
       "classId": "43666",
@@ -9349,7 +9349,7 @@
       "totalPoints": 15,
       "weight": 0.5,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.018Z"
+      "cachedAt": "2026-05-06T01:00:18.410Z"
     },
     "1616961:44615:1396": {
       "classId": "44615",
@@ -9400,7 +9400,7 @@
       "totalPoints": 40,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:01.728Z"
+      "cachedAt": "2026-05-06T01:00:07.855Z"
     },
     "1618910:43424:1396": {
       "classId": "43424",
@@ -9409,7 +9409,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 85,
+      "currentGrade": 72,
       "assignmentName": "Pedigree practice",
       "dateDue": "04/22/2026",
       "dueDate": "04/22/2026",
@@ -9417,7 +9417,7 @@
       "totalPoints": 40,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.017Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1618454:43341:1396": {
       "classId": "43341",
@@ -9434,7 +9434,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.017Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1618491:43341:1396": {
       "classId": "43341",
@@ -9451,7 +9451,7 @@
       "totalPoints": 25,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.017Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1619798:43424:1396": {
       "classId": "43424",
@@ -9460,7 +9460,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 85,
+      "currentGrade": 72,
       "assignmentName": "Abiotic/Biotic Graphic organiz",
       "dateDue": "04/21/2026",
       "dueDate": "04/21/2026",
@@ -9468,7 +9468,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.017Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1619801:43424:1396": {
       "classId": "43424",
@@ -9477,7 +9477,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 85,
+      "currentGrade": 72,
       "assignmentName": "Ecology Nearpod",
       "dateDue": "04/21/2026",
       "dueDate": "04/21/2026",
@@ -9485,7 +9485,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.017Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1619804:43424:1396": {
       "classId": "43424",
@@ -9494,7 +9494,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 85,
+      "currentGrade": 72,
       "assignmentName": "Exit quiz Biomes",
       "dateDue": "04/21/2026",
       "dueDate": "04/21/2026",
@@ -9502,7 +9502,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.017Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1619790:43424:1396": {
       "classId": "43424",
@@ -9511,7 +9511,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 85,
+      "currentGrade": 72,
       "assignmentName": "Genetics/genetic Disorders",
       "dateDue": "04/21/2026",
       "dueDate": "04/21/2026",
@@ -9519,7 +9519,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.017Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1619892:45003:1396": {
       "classId": "45003",
@@ -9536,7 +9536,7 @@
       "totalPoints": 35,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.017Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1619654:44979:1396": {
       "classId": "44979",
@@ -9553,7 +9553,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.018Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1617011:43049:1396": {
       "classId": "43049",
@@ -9570,7 +9570,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.018Z"
+      "cachedAt": "2026-05-06T01:00:18.410Z"
     },
     "1620533:44615:1396": {
       "classId": "44615",
@@ -9604,7 +9604,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.018Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1617794:43666:1396": {
       "classId": "43666",
@@ -9621,7 +9621,7 @@
       "totalPoints": 15,
       "weight": 0.5,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.018Z"
+      "cachedAt": "2026-05-06T01:00:18.410Z"
     },
     "1620692:44615:1396": {
       "classId": "44615",
@@ -9655,7 +9655,7 @@
       "totalPoints": 12,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:01.728Z"
+      "cachedAt": "2026-05-06T01:00:07.854Z"
     },
     "1620643:43424:1396": {
       "classId": "43424",
@@ -9664,7 +9664,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 85,
+      "currentGrade": 72,
       "assignmentName": "Food Webs/energy relationships",
       "dateDue": "04/23/2026",
       "dueDate": "04/23/2026",
@@ -9672,7 +9672,7 @@
       "totalPoints": 12,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.017Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1620801:45003:1396": {
       "classId": "45003",
@@ -9689,7 +9689,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.017Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1620530:44615:1396": {
       "classId": "44615",
@@ -9715,7 +9715,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 85,
+      "currentGrade": 72,
       "assignmentName": "Hemophilia Pedigree/Problems",
       "dateDue": "04/17/2026",
       "dueDate": "04/17/2026",
@@ -9723,7 +9723,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.017Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1621807:44615:1396": {
       "classId": "44615",
@@ -9740,7 +9740,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.018Z"
+      "cachedAt": "2026-05-06T01:00:18.723Z"
     },
     "1622494:43341:1396": {
       "classId": "43341",
@@ -9757,7 +9757,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.017Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1622777:43162:1396": {
       "classId": "43162",
@@ -9774,7 +9774,7 @@
       "totalPoints": 13,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:01.727Z"
+      "cachedAt": "2026-05-06T01:00:07.854Z"
     },
     "1622636:44615:1396": {
       "classId": "44615",
@@ -9791,7 +9791,7 @@
       "totalPoints": 13,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.018Z"
+      "cachedAt": "2026-05-06T01:00:18.723Z"
     },
     "1624314:44463:1396": {
       "classId": "44463",
@@ -9808,7 +9808,7 @@
       "totalPoints": 40,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:01.726Z"
+      "cachedAt": "2026-05-06T01:00:07.854Z"
     },
     "1624375:44463:1396": {
       "classId": "44463",
@@ -9825,7 +9825,7 @@
       "totalPoints": 40,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:01.726Z"
+      "cachedAt": "2026-05-06T01:00:07.854Z"
     },
     "1624386:44463:1396": {
       "classId": "44463",
@@ -9842,7 +9842,7 @@
       "totalPoints": 55,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:01.726Z"
+      "cachedAt": "2026-05-06T01:00:07.854Z"
     },
     "1623762:43162:1396": {
       "classId": "43162",
@@ -9859,7 +9859,7 @@
       "totalPoints": 30,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:01.727Z"
+      "cachedAt": "2026-05-06T01:00:07.854Z"
     },
     "1625305:43049:1396": {
       "classId": "43049",
@@ -9876,7 +9876,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.018Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1625406:43162:1396": {
       "classId": "43162",
@@ -9893,7 +9893,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:01.727Z"
+      "cachedAt": "2026-05-06T01:00:07.854Z"
     },
     "1624847:43162:1396": {
       "classId": "43162",
@@ -9910,7 +9910,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:01.727Z"
+      "cachedAt": "2026-05-06T01:00:07.854Z"
     },
     "1625583:44615:1396": {
       "classId": "44615",
@@ -9927,7 +9927,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.018Z"
+      "cachedAt": "2026-05-06T01:00:18.723Z"
     },
     "1626304:44979:1396": {
       "classId": "44979",
@@ -9944,7 +9944,7 @@
       "totalPoints": 20,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.018Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1626702:43341:1396": {
       "classId": "43341",
@@ -9961,7 +9961,7 @@
       "totalPoints": 25,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.017Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1626365:44979:1396": {
       "classId": "44979",
@@ -9978,7 +9978,7 @@
       "totalPoints": 25,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:19.018Z"
+      "cachedAt": "2026-05-06T01:00:18.409Z"
     },
     "1623839:43424:1396": {
       "classId": "43424",
@@ -9987,7 +9987,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 85,
+      "currentGrade": 72,
       "assignmentName": "Nutrient Cycles Activity",
       "dateDue": "05/04/2026",
       "dueDate": "05/04/2026",
@@ -9995,7 +9995,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:18.518Z"
+      "cachedAt": "2026-05-06T01:00:18.028Z"
     },
     "1627810:44463:1396": {
       "classId": "44463",
@@ -10012,7 +10012,7 @@
       "totalPoints": 30,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:01.726Z"
+      "cachedAt": "2026-05-06T01:00:07.853Z"
     },
     "1623533:43162:1396": {
       "classId": "43162",
@@ -10029,7 +10029,7 @@
       "totalPoints": 30,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:01.840Z"
+      "cachedAt": "2026-05-06T01:00:07.855Z"
     },
     "1627477:43424:1396": {
       "classId": "43424",
@@ -10038,7 +10038,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 85,
+      "currentGrade": 72,
       "assignmentName": "Practice Scenario Keystone",
       "dateDue": "05/04/2026",
       "dueDate": "05/04/2026",
@@ -10046,7 +10046,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:18.518Z"
+      "cachedAt": "2026-05-06T01:00:18.027Z"
     },
     "1623856:43424:1396": {
       "classId": "43424",
@@ -10055,7 +10055,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 85,
+      "currentGrade": 72,
       "assignmentName": "Biogeochemical Interactivity",
       "dateDue": "05/04/2026",
       "dueDate": "05/04/2026",
@@ -10063,7 +10063,92 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-05-05T12:32:18.633Z"
+      "cachedAt": "2026-05-06T01:00:18.028Z"
+    },
+    "1624913:43424:1396": {
+      "classId": "43424",
+      "assignmentId": "1624913",
+      "studentId": "1396",
+      "className": "BIOLOGY            2",
+      "teacher": "Denise Condo",
+      "period": "2",
+      "currentGrade": 72,
+      "assignmentName": "Module 1 Review",
+      "dateDue": "05/04/2026",
+      "dueDate": "05/04/2026",
+      "earnedPoints": 15,
+      "totalPoints": 60,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-05-06T01:00:18.027Z"
+    },
+    "1623866:43424:1396": {
+      "classId": "43424",
+      "assignmentId": "1623866",
+      "studentId": "1396",
+      "className": "BIOLOGY            2",
+      "teacher": "Denise Condo",
+      "period": "2",
+      "currentGrade": 72,
+      "assignmentName": "Biogeochemical Cycles Quiz",
+      "dateDue": "05/04/2026",
+      "dueDate": "05/04/2026",
+      "earnedPoints": 15,
+      "totalPoints": 60,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-05-06T01:00:18.141Z"
+    },
+    "1624949:43424:1396": {
+      "classId": "43424",
+      "assignmentId": "1624949",
+      "studentId": "1396",
+      "className": "BIOLOGY            2",
+      "teacher": "Denise Condo",
+      "period": "2",
+      "currentGrade": 72,
+      "assignmentName": "Nitrogen and Phosphorus edpuzz",
+      "dateDue": "04/28/2026",
+      "dueDate": "04/28/2026",
+      "earnedPoints": 2,
+      "totalPoints": 10,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-05-06T01:00:18.276Z"
+    },
+    "1624952:43424:1396": {
+      "classId": "43424",
+      "assignmentId": "1624952",
+      "studentId": "1396",
+      "className": "BIOLOGY            2",
+      "teacher": "Denise Condo",
+      "period": "2",
+      "currentGrade": 72,
+      "assignmentName": "Water and Carbon Cycle Edpuzzl",
+      "dateDue": "04/27/2026",
+      "dueDate": "04/27/2026",
+      "earnedPoints": 5,
+      "totalPoints": 5,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-05-06T01:00:18.408Z"
+    },
+    "1628445:44615:1396": {
+      "classId": "44615",
+      "assignmentId": "1628445",
+      "studentId": "1396",
+      "className": "SOCIOLOGY",
+      "teacher": "Heather Eckels",
+      "period": "8",
+      "currentGrade": 73,
+      "assignmentName": "Is the World Overpopulated?",
+      "dateDue": "04/24/2026",
+      "dueDate": "04/24/2026",
+      "earnedPoints": 5,
+      "totalPoints": 5,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-05-06T01:00:18.555Z"
     }
   }
 }

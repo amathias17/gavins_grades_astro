@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-05-05T12:32:21.175Z",
+    "scrapedAt": "2026-05-06T01:00:20.856Z",
     "totalClasses": 9,
     "totalAssignments": 84
   },
@@ -193,15 +193,15 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 85,
+      "currentGrade": 72,
       "assignments": [
         {
           "name": "Module 1 Review",
           "dueDate": "05/04/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 15,
           "totalPoints": 60,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Practice Scenario Keystone",
@@ -229,27 +229,27 @@
         },
         {
           "name": "Biogeochemical Cycles Quiz",
-          "dueDate": "04/28/2026",
-          "earnedPoints": 0,
-          "totalPoints": 5,
+          "dueDate": "05/04/2026",
+          "earnedPoints": 15,
+          "totalPoints": 60,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Nitrogen and Phosphorus edpuzz",
           "dueDate": "04/28/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 2,
           "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Water and Carbon Cycle Edpuzzl",
           "dueDate": "04/27/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 5,
           "totalPoints": 5,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Food Webs/energy relationships",
@@ -708,6 +708,22 @@
       "currentGrade": 73,
       "assignments": [
         {
+          "name": "Is the World Overpopulated?",
+          "dueDate": "04/24/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "100 People",
+          "dueDate": "05/05/2026",
+          "earnedPoints": 0,
+          "totalPoints": 17,
+          "weight": 1,
+          "graded": false
+        },
+        {
           "name": "Watergate Writing Assignment",
           "dueDate": "04/30/2026",
           "earnedPoints": 0,
@@ -726,22 +742,6 @@
         {
           "name": "Types of Economies",
           "dueDate": "04/17/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Forms of Government Stations",
-          "dueDate": "04/17/2026",
-          "earnedPoints": 12,
-          "totalPoints": 15,
-          "weight": 0.5,
-          "graded": true
-        },
-        {
-          "name": "Political Spectrum",
-          "dueDate": "04/21/2026",
           "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
