@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-05-07T12:42:22.351Z",
+    "scrapedAt": "2026-05-08T01:05:09.060Z",
     "totalClasses": 9,
-    "totalAssignments": 86
+    "totalAssignments": 87
   },
   "classes": [
     {
@@ -75,6 +75,14 @@
       "period": "1",
       "currentGrade": 76,
       "assignments": [
+        {
+          "name": "Packet 2",
+          "dueDate": "05/07/2026",
+          "earnedPoints": 0,
+          "totalPoints": 23,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "IXL 4/30",
           "dueDate": "04/30/2026",
@@ -721,13 +729,13 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 74,
+      "currentGrade": 76,
       "assignments": [
         {
           "name": "Immigration and Urbanization S",
-          "dueDate": "05/06/2026",
+          "dueDate": "05/07/2026",
           "earnedPoints": 0,
-          "totalPoints": 36,
+          "totalPoints": 23,
           "weight": 1,
           "graded": false
         },
@@ -742,10 +750,10 @@
         {
           "name": "100 People",
           "dueDate": "05/06/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 36,
           "totalPoints": 36,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Watergate Writing Assignment",
