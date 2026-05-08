@@ -1,16 +1,24 @@
 {
   "metadata": {
-    "scrapedAt": "2026-05-08T01:05:09.060Z",
+    "scrapedAt": "2026-05-08T12:33:14.884Z",
     "totalClasses": 9,
-    "totalAssignments": 87
+    "totalAssignments": 91
   },
   "classes": [
     {
       "className": "SOPHOMORE SEMINAR",
       "teacher": "Victoria Good",
       "period": "0",
-      "currentGrade": 74,
+      "currentGrade": 76,
       "assignments": [
+        {
+          "name": "insurance Bummer",
+          "dueDate": "05/08/2026",
+          "earnedPoints": 20,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "W4 & Job Wordsearch",
           "dueDate": "05/05/2026",
@@ -77,11 +85,11 @@
       "assignments": [
         {
           "name": "Packet 2",
-          "dueDate": "05/07/2026",
-          "earnedPoints": 0,
-          "totalPoints": 23,
+          "dueDate": "05/08/2026",
+          "earnedPoints": 20,
+          "totalPoints": 20,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "IXL 4/30",
@@ -681,8 +689,32 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 83,
+      "currentGrade": 73,
       "assignments": [
+        {
+          "name": "GMM May 5 (Area, Circ, Perim)",
+          "dueDate": "05/07/2026",
+          "earnedPoints": 0,
+          "totalPoints": 23,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "GMM 18pts Area of Tri, Rec, Pa",
+          "dueDate": "05/01/2026",
+          "earnedPoints": 0,
+          "totalPoints": 16,
+          "weight": 0.5,
+          "graded": false
+        },
+        {
+          "name": "GMM 15pts Area of Tri/Rec",
+          "dueDate": "04/24/2026",
+          "earnedPoints": 12,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "GMM: 30pts Perimeter",
           "dueDate": "04/17/2026",
@@ -732,10 +764,18 @@
       "currentGrade": 76,
       "assignments": [
         {
+          "name": "Impact of Mexican Immigration",
+          "dueDate": "04/24/2026",
+          "earnedPoints": 12,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": true
+        },
+        {
           "name": "Immigration and Urbanization S",
-          "dueDate": "05/07/2026",
+          "dueDate": "05/08/2026",
           "earnedPoints": 0,
-          "totalPoints": 23,
+          "totalPoints": 25,
           "weight": 1,
           "graded": false
         },
@@ -760,14 +800,6 @@
           "dueDate": "04/30/2026",
           "earnedPoints": 0,
           "totalPoints": 50,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "The Watergate Breakin",
-          "dueDate": "04/27/2026",
-          "earnedPoints": 12,
-          "totalPoints": 13,
           "weight": 1,
           "graded": true
         }

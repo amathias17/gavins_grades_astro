@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "05/07/2026, 09:05 PM",
+    "last_updated": "05/08/2026, 08:33 AM",
     "most_recent_date": "5/8/2026",
     "total_classes": 9
   },
@@ -13,9 +13,9 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q4_grade": 74,
+      "q4_grade": 76,
       "q4_letter_grade": "C",
-      "current_grade": 74,
+      "current_grade": 76,
       "letter_grade": "C"
     },
     {
@@ -104,10 +104,10 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q4_grade": 83,
-      "q4_letter_grade": "B",
-      "current_grade": 83,
-      "letter_grade": "B"
+      "q4_grade": 73,
+      "q4_letter_grade": "C",
+      "current_grade": 73,
+      "letter_grade": "C"
     },
     {
       "class_name": "Sociology",
@@ -288,7 +288,7 @@
       "5/5/2026": 74,
       "5/6/2026": 74,
       "5/7/2026": 74,
-      "5/8/2026": 74
+      "5/8/2026": 76
     },
     "English 10": {
       "11/24/2025": 75,
@@ -1145,7 +1145,7 @@
       "5/5/2026": 83,
       "5/6/2026": 83,
       "5/7/2026": 83,
-      "5/8/2026": 83
+      "5/8/2026": 73
     },
     "Health": {
       "11/24/2025": 94,
@@ -1642,7 +1642,7 @@
       "5/8/2026": 81
     }
   },
-  "overall_average": 76,
+  "overall_average": 75,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -1809,7 +1809,7 @@
     "5/5/2026": 76,
     "5/6/2026": 75,
     "5/7/2026": 76,
-    "5/8/2026": 76
+    "5/8/2026": 75
   },
   "streak": 0,
   "streak_history": {
