@@ -1336,12 +1336,12 @@
     "period": "7",
     "currentGrade": 57,
     "assignmentName": "GMM 18pts Area of Tri, Rec, Pa",
-    "dateDue": "05/01/2026",
-    "dueDate": "05/01/2026",
-    "earnedPoints": 0,
-    "totalPoints": 16,
-    "weight": 0.5,
-    "graded": false
+    "dateDue": "05/08/2026",
+    "dueDate": "05/08/2026",
+    "earnedPoints": 13,
+    "totalPoints": 20,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "43666",

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-05-09T01:04:58.465Z",
+    "scrapedAt": "2026-05-09T12:23:05.984Z",
     "totalClasses": 9,
     "totalAssignments": 98
   },
@@ -733,11 +733,11 @@
         },
         {
           "name": "GMM 18pts Area of Tri, Rec, Pa",
-          "dueDate": "05/01/2026",
-          "earnedPoints": 0,
-          "totalPoints": 16,
-          "weight": 0.5,
-          "graded": false
+          "dueDate": "05/08/2026",
+          "earnedPoints": 13,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
         },
         {
           "name": "Floor Plan Project Day 1",
