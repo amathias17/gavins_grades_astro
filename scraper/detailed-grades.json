@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-05-08T12:33:14.884Z",
+    "scrapedAt": "2026-05-09T01:04:58.465Z",
     "totalClasses": 9,
-    "totalAssignments": 91
+    "totalAssignments": 98
   },
   "classes": [
     {
@@ -211,6 +211,14 @@
       "period": "2",
       "currentGrade": 72,
       "assignments": [
+        {
+          "name": "5-9 Keystone review Topics",
+          "dueDate": "05/12/2026",
+          "earnedPoints": 0,
+          "totalPoints": 75,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Module 1 Review",
           "dueDate": "05/04/2026",
@@ -484,6 +492,14 @@
       "currentGrade": 75,
       "assignments": [
         {
+          "name": "Architectural Terms 41-60",
+          "dueDate": "05/12/2026",
+          "earnedPoints": 0,
+          "totalPoints": 75,
+          "weight": 1,
+          "graded": false
+        },
+        {
           "name": "Architecture Final Test",
           "dueDate": "05/06/2026",
           "earnedPoints": 96,
@@ -561,8 +577,24 @@
       "className": "GREEK MYTHOLOGY",
       "teacher": "Alex Ray",
       "period": "5",
-      "currentGrade": 81,
+      "currentGrade": 80,
       "assignments": [
+        {
+          "name": "Trading Card Any Character",
+          "dueDate": "05/08/2026",
+          "earnedPoints": 13,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Perseus Trap of the King",
+          "dueDate": "05/04/2026",
+          "earnedPoints": 6,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "The 13th Labor",
           "dueDate": "04/29/2026",
@@ -689,15 +721,15 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 73,
+      "currentGrade": 57,
       "assignments": [
         {
           "name": "GMM May 5 (Area, Circ, Perim)",
-          "dueDate": "05/07/2026",
-          "earnedPoints": 0,
-          "totalPoints": 23,
+          "dueDate": "05/04/2026",
+          "earnedPoints": 6,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "GMM 18pts Area of Tri, Rec, Pa",
@@ -706,6 +738,22 @@
           "totalPoints": 16,
           "weight": 0.5,
           "graded": false
+        },
+        {
+          "name": "Floor Plan Project Day 1",
+          "dueDate": "05/01/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Floor Plan Project Day 2",
+          "dueDate": "05/01/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
         },
         {
           "name": "GMM 15pts Area of Tri/Rec",
@@ -729,6 +777,14 @@
           "earnedPoints": 12,
           "totalPoints": 15,
           "weight": 0.5,
+          "graded": true
+        },
+        {
+          "name": "Delta Math Review Topics",
+          "dueDate": "04/15/2026",
+          "earnedPoints": 0,
+          "totalPoints": 50,
+          "weight": 1,
           "graded": true
         },
         {
@@ -773,11 +829,11 @@
         },
         {
           "name": "Immigration and Urbanization S",
-          "dueDate": "05/08/2026",
-          "earnedPoints": 0,
-          "totalPoints": 25,
+          "dueDate": "05/06/2026",
+          "earnedPoints": 36,
+          "totalPoints": 36,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Is the World Overpopulated?",
