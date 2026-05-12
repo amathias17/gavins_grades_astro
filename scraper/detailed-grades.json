@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-05-11T13:03:15.343Z",
+    "scrapedAt": "2026-05-12T01:03:49.867Z",
     "totalClasses": 9,
     "totalAssignments": 98
   },
@@ -28,6 +28,14 @@
           "graded": true
         },
         {
+          "name": "Workbook Part.",
+          "dueDate": "04/28/2026",
+          "earnedPoints": 50,
+          "totalPoints": 55,
+          "weight": 1,
+          "graded": true
+        },
+        {
           "name": "workbook check",
           "dueDate": "04/28/2026",
           "earnedPoints": 30,
@@ -40,14 +48,6 @@
           "dueDate": "04/28/2026",
           "earnedPoints": 30,
           "totalPoints": 40,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Workbook Part.",
-          "dueDate": "04/28/2026",
-          "earnedPoints": 50,
-          "totalPoints": 55,
           "weight": 1,
           "graded": true
         },
@@ -236,14 +236,6 @@
           "graded": true
         },
         {
-          "name": "Nutrient Cycles Activity",
-          "dueDate": "05/04/2026",
-          "earnedPoints": 0,
-          "totalPoints": 5,
-          "weight": 1,
-          "graded": true
-        },
-        {
           "name": "Biogeochemical Interactivity",
           "dueDate": "05/04/2026",
           "earnedPoints": 0,
@@ -258,6 +250,14 @@
           "totalPoints": 60,
           "weight": 1,
           "graded": true
+        },
+        {
+          "name": "Cycles in the ecosystem",
+          "dueDate": "05/12/2026",
+          "earnedPoints": 0,
+          "totalPoints": 75,
+          "weight": 1,
+          "graded": false
         },
         {
           "name": "Nitrogen and Phosphorus edpuzz",
@@ -493,9 +493,9 @@
       "assignments": [
         {
           "name": "Architectural Terms 41-60",
-          "dueDate": "05/12/2026",
+          "dueDate": "04/28/2026",
           "earnedPoints": 0,
-          "totalPoints": 75,
+          "totalPoints": 50,
           "weight": 1,
           "graded": false
         },
