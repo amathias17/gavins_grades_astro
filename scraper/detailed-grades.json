@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-05-12T12:47:32.389Z",
+    "scrapedAt": "2026-05-13T01:08:17.915Z",
     "totalClasses": 9,
-    "totalAssignments": 98
+    "totalAssignments": 100
   },
   "classes": [
     {
@@ -28,6 +28,14 @@
           "graded": true
         },
         {
+          "name": "Budget Lessons (Part 2)",
+          "dueDate": "04/28/2026",
+          "earnedPoints": 30,
+          "totalPoints": 40,
+          "weight": 1,
+          "graded": true
+        },
+        {
           "name": "Workbook Part.",
           "dueDate": "04/28/2026",
           "earnedPoints": 50,
@@ -37,14 +45,6 @@
         },
         {
           "name": "workbook check",
-          "dueDate": "04/28/2026",
-          "earnedPoints": 30,
-          "totalPoints": 40,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Budget Lessons (Part 2)",
           "dueDate": "04/28/2026",
           "earnedPoints": 30,
           "totalPoints": 40,
@@ -209,10 +209,18 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 72,
+      "currentGrade": 74,
       "assignments": [
         {
           "name": "5-9 Keystone review Topics",
+          "dueDate": "05/12/2026",
+          "earnedPoints": 0,
+          "totalPoints": 75,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Keystone Module 1 Review game",
           "dueDate": "05/12/2026",
           "earnedPoints": 0,
           "totalPoints": 75,
@@ -236,6 +244,14 @@
           "graded": true
         },
         {
+          "name": "Food Webs",
+          "dueDate": "05/12/2026",
+          "earnedPoints": 0,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": false
+        },
+        {
           "name": "Biogeochemical Interactivity",
           "dueDate": "05/04/2026",
           "earnedPoints": 0,
@@ -253,11 +269,11 @@
         },
         {
           "name": "Cycles in the ecosystem",
-          "dueDate": "05/12/2026",
-          "earnedPoints": 0,
-          "totalPoints": 75,
+          "dueDate": "05/04/2026",
+          "earnedPoints": 43,
+          "totalPoints": 50,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Nitrogen and Phosphorus edpuzz",
