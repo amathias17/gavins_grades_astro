@@ -954,10 +954,10 @@
     "assignmentName": "Architectural Terms 41-60",
     "dateDue": "05/08/2026",
     "dueDate": "05/08/2026",
-    "earnedPoints": 0,
-    "totalPoints": 25,
+    "earnedPoints": 13,
+    "totalPoints": 20,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "43341",
