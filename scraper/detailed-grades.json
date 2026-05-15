@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-05-15T01:07:29.022Z",
+    "scrapedAt": "2026-05-15T12:41:25.131Z",
     "totalClasses": 9,
     "totalAssignments": 104
   },
@@ -237,11 +237,11 @@
         },
         {
           "name": "Keystone Module 1 Review game",
-          "dueDate": "05/12/2026",
-          "earnedPoints": 0,
+          "dueDate": "05/14/2026",
+          "earnedPoints": 5,
           "totalPoints": 5,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Module 1 Review",
@@ -261,11 +261,11 @@
         },
         {
           "name": "Food Webs",
-          "dueDate": "05/12/2026",
-          "earnedPoints": 0,
-          "totalPoints": 5,
+          "dueDate": "05/04/2026",
+          "earnedPoints": 43,
+          "totalPoints": 50,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Biogeochemical Interactivity",
@@ -865,8 +865,16 @@
       "className": "SOCIOLOGY",
       "teacher": "Heather Eckels",
       "period": "8",
-      "currentGrade": 76,
+      "currentGrade": 78,
       "assignments": [
+        {
+          "name": "The First Crusade",
+          "dueDate": "05/04/2026",
+          "earnedPoints": 43,
+          "totalPoints": 50,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Impact of Mexican Immigration",
           "dueDate": "04/24/2026",
@@ -896,14 +904,6 @@
           "dueDate": "05/06/2026",
           "earnedPoints": 36,
           "totalPoints": 36,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Watergate Writing Assignment",
-          "dueDate": "04/30/2026",
-          "earnedPoints": 0,
-          "totalPoints": 50,
           "weight": 1,
           "graded": true
         }
