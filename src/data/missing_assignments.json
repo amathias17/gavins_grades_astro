@@ -1,9 +1,25 @@
 {
   "metadata": {
-    "last_updated": "05/15/2026, 08:41 AM",
-    "count": 6
+    "last_updated": "05/15/2026, 09:03 PM",
+    "count": 8
   },
   "missing_assignments": [
+    {
+      "due_date": "05/15/2026",
+      "assignment_name": "Dream Home Renovation Project (HomeByMe)",
+      "class_name": "ENG/DESIGN/ARCH",
+      "teacher": "Todd Bennett",
+      "category": "Class Work",
+      "max_points": "25"
+    },
+    {
+      "due_date": "05/15/2026",
+      "assignment_name": "Design Your Dream Home in 3D",
+      "class_name": "ENG/DESIGN/ARCH",
+      "teacher": "Todd Bennett",
+      "category": "Class Work",
+      "max_points": "50"
+    },
     {
       "due_date": "04/27/2026",
       "assignment_name": "The Watergate Breakin",

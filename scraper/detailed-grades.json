@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-05-15T12:41:25.131Z",
+    "scrapedAt": "2026-05-16T01:03:28.076Z",
     "totalClasses": 9,
-    "totalAssignments": 104
+    "totalAssignments": 105
   },
   "classes": [
     {
@@ -521,13 +521,21 @@
       "className": "ENG/DESIGN/ARCH",
       "teacher": "Todd Bennett",
       "period": "4",
-      "currentGrade": 75,
+      "currentGrade": 61,
       "assignments": [
         {
           "name": "Dream Home Renovation Project (HomeByMe)",
           "dueDate": "05/04/2026",
           "earnedPoints": 43,
           "totalPoints": 50,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Design Your Dream Home in 3D",
+          "dueDate": "05/14/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         },
