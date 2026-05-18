@@ -1,9 +1,17 @@
 {
   "metadata": {
-    "last_updated": "05/17/2026, 09:12 PM",
-    "count": 8
+    "last_updated": "05/18/2026, 09:17 AM",
+    "count": 10
   },
   "missing_assignments": [
+    {
+      "due_date": "05/18/2026",
+      "assignment_name": "Calling Your Monster",
+      "class_name": "ENGLISH 10",
+      "teacher": "Megan Leone",
+      "category": "Project",
+      "max_points": "75"
+    },
     {
       "due_date": "05/15/2026",
       "assignment_name": "Dream Home Renovation Project (HomeByMe)",
@@ -19,6 +27,14 @@
       "teacher": "Todd Bennett",
       "category": "Class Work",
       "max_points": "50"
+    },
+    {
+      "due_date": "05/07/2026",
+      "assignment_name": "Packet 2",
+      "class_name": "ENGLISH 10",
+      "teacher": "Megan Leone",
+      "category": "Class Work",
+      "max_points": "23"
     },
     {
       "due_date": "04/27/2026",
