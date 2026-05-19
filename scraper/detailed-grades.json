@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-05-18T13:17:59.867Z",
+    "scrapedAt": "2026-05-19T01:12:34.966Z",
     "totalClasses": 9,
-    "totalAssignments": 105
+    "totalAssignments": 109
   },
   "classes": [
     {
@@ -220,12 +220,36 @@
       "currentGrade": 75,
       "assignments": [
         {
+          "name": "Wood Duck - Natural Selection",
+          "dueDate": "05/18/2026",
+          "earnedPoints": 8,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "MP particpation",
+          "dueDate": "05/18/2026",
+          "earnedPoints": 8,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
           "name": "Keystone Review",
           "dueDate": "05/18/2026",
           "earnedPoints": 0,
           "totalPoints": 75,
           "weight": 1,
           "graded": true
+        },
+        {
+          "name": "Open notes test-Biology concep",
+          "dueDate": "05/18/2026",
+          "earnedPoints": 0,
+          "totalPoints": 45,
+          "weight": 1,
+          "graded": false
         },
         {
           "name": "5-9 Keystone review Topics",
@@ -769,8 +793,16 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 54,
+      "currentGrade": 68,
       "assignments": [
+        {
+          "name": "Friday Asynchronous Area WS",
+          "dueDate": "05/14/2026",
+          "earnedPoints": 32,
+          "totalPoints": 40,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Asynchronous Assignment WS",
           "dueDate": "05/04/2026",
