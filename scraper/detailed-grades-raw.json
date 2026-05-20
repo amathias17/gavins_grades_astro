@@ -1665,6 +1665,22 @@
   },
   {
     "classId": "44615",
+    "assignmentId": "1637324",
+    "studentId": "1396",
+    "className": "SOCIOLOGY",
+    "teacher": "Heather Eckels",
+    "period": "8",
+    "currentGrade": 78,
+    "assignmentName": "Star Wars History",
+    "dateDue": "05/20/2026",
+    "dueDate": "05/20/2026",
+    "earnedPoints": 10,
+    "totalPoints": 10,
+    "weight": 1,
+    "graded": true
+  },
+  {
+    "classId": "44615",
     "assignmentId": "1634597",
     "studentId": "1396",
     "className": "SOCIOLOGY",
@@ -1724,22 +1740,6 @@
     "dueDate": "04/24/2026",
     "earnedPoints": 5,
     "totalPoints": 5,
-    "weight": 1,
-    "graded": true
-  },
-  {
-    "classId": "44615",
-    "assignmentId": "1628209",
-    "studentId": "1396",
-    "className": "SOCIOLOGY",
-    "teacher": "Heather Eckels",
-    "period": "8",
-    "currentGrade": 78,
-    "assignmentName": "100 People",
-    "dateDue": "05/06/2026",
-    "dueDate": "05/06/2026",
-    "earnedPoints": 36,
-    "totalPoints": 36,
     "weight": 1,
     "graded": true
   }
