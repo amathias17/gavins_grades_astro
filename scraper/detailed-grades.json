@@ -1,16 +1,24 @@
 {
   "metadata": {
-    "scrapedAt": "2026-05-21T01:14:25.778Z",
+    "scrapedAt": "2026-05-21T13:11:53.159Z",
     "totalClasses": 9,
-    "totalAssignments": 114
+    "totalAssignments": 116
   },
   "classes": [
     {
       "className": "SOPHOMORE SEMINAR",
       "teacher": "Victoria Good",
       "period": "0",
-      "currentGrade": 76,
+      "currentGrade": 0,
       "assignments": [
+        {
+          "name": "Final Grade Tracking",
+          "dueDate": "05/21/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "insurance Bummer",
           "dueDate": "05/08/2026",
@@ -81,15 +89,15 @@
       "className": "ENGLISH 10",
       "teacher": "Megan Leone",
       "period": "1",
-      "currentGrade": 70,
+      "currentGrade": 65,
       "assignments": [
         {
           "name": "IXL",
-          "dueDate": "05/20/2026",
-          "earnedPoints": 0,
+          "dueDate": "05/21/2026",
+          "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Calling Your Monster",
@@ -225,7 +233,7 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 76,
+      "currentGrade": 72,
       "assignments": [
         {
           "name": "Planting Mini-lab",
@@ -581,9 +589,9 @@
       "assignments": [
         {
           "name": "Asynchronous Day Assignment",
-          "dueDate": "05/20/2026",
+          "dueDate": "05/19/2026",
           "earnedPoints": 0,
-          "totalPoints": 20,
+          "totalPoints": 0,
           "weight": 1,
           "graded": false
         },
@@ -691,6 +699,14 @@
       "period": "5",
       "currentGrade": 82,
       "assignments": [
+        {
+          "name": "Keystone Quiz #2",
+          "dueDate": "05/13/2026",
+          "earnedPoints": 0,
+          "totalPoints": 0,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Trading Card Any Character",
           "dueDate": "05/08/2026",
