@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-05-20T12:56:24.148Z",
+    "scrapedAt": "2026-05-21T01:14:25.778Z",
     "totalClasses": 9,
-    "totalAssignments": 109
+    "totalAssignments": 114
   },
   "classes": [
     {
@@ -81,8 +81,16 @@
       "className": "ENGLISH 10",
       "teacher": "Megan Leone",
       "period": "1",
-      "currentGrade": 55,
+      "currentGrade": 70,
       "assignments": [
+        {
+          "name": "IXL",
+          "dueDate": "05/20/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Calling Your Monster",
           "dueDate": "05/18/2026",
@@ -217,8 +225,32 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 75,
+      "currentGrade": 76,
       "assignments": [
+        {
+          "name": "Planting Mini-lab",
+          "dueDate": "05/20/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Importance of plants (botany)",
+          "dueDate": "05/20/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Comparing Homologous structure",
+          "dueDate": "05/20/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Wood Duck - Natural Selection",
           "dueDate": "05/18/2026",
@@ -548,6 +580,14 @@
       "currentGrade": 61,
       "assignments": [
         {
+          "name": "Asynchronous Day Assignment",
+          "dueDate": "05/20/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": false
+        },
+        {
           "name": "Dream Home Renovation Project (HomeByMe)",
           "dueDate": "05/04/2026",
           "earnedPoints": 43,
@@ -793,7 +833,7 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 68,
+      "currentGrade": 65,
       "assignments": [
         {
           "name": "Friday Asynchronous Area WS",
