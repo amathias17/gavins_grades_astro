@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "05/21/2026, 09:13 PM",
+    "last_updated": "05/22/2026, 08:53 AM",
     "most_recent_date": "5/22/2026",
     "total_classes": 9
   },
@@ -78,10 +78,10 @@
       "q1_letter_grade": null,
       "q2_grade": null,
       "q2_letter_grade": null,
-      "q4_grade": 82,
-      "q4_letter_grade": "B",
-      "current_grade": 82,
-      "letter_grade": "B"
+      "q4_grade": 77,
+      "q4_letter_grade": "C",
+      "current_grade": 77,
+      "letter_grade": "C"
     },
     {
       "class_name": "Amer Studies",
@@ -1765,10 +1765,10 @@
       "5/19/2026": 82,
       "5/20/2026": 82,
       "5/21/2026": 82,
-      "5/22/2026": 82
+      "5/22/2026": 77
     }
   },
-  "overall_average": 73,
+  "overall_average": 72,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -1949,7 +1949,7 @@
     "5/19/2026": 72,
     "5/20/2026": 72,
     "5/21/2026": 72,
-    "5/22/2026": 73
+    "5/22/2026": 72
   },
   "streak": 0,
   "streak_history": {
