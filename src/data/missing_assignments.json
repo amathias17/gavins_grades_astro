@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "05/21/2026, 09:11 AM",
-    "count": 9
+    "last_updated": "05/21/2026, 09:13 PM",
+    "count": 8
   },
   "missing_assignments": [
     {
@@ -67,14 +67,6 @@
       "teacher": "Brock Seese",
       "category": "Class Work",
       "max_points": "10"
-    },
-    {
-      "due_date": "04/09/2026",
-      "assignment_name": "Collins Words #6",
-      "class_name": "BIOLOGY            2",
-      "teacher": "Denise Condo",
-      "category": "Bell Ringer",
-      "max_points": "15"
     }
   ]
 }
