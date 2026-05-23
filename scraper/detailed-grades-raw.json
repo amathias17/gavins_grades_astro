@@ -1115,7 +1115,7 @@
     "dateDue": "05/07/2026",
     "dueDate": "05/07/2026",
     "earnedPoints": 0,
-    "totalPoints": 50,
+    "totalPoints": 10,
     "weight": 1,
     "graded": false
   },
@@ -1259,7 +1259,7 @@
     "dateDue": "05/19/2026",
     "dueDate": "05/19/2026",
     "earnedPoints": 0,
-    "totalPoints": 50,
+    "totalPoints": 0,
     "weight": 1,
     "graded": false
   },
@@ -1788,6 +1788,22 @@
     "dueDate": "04/16/2026",
     "earnedPoints": 43,
     "totalPoints": 50,
+    "weight": 1,
+    "graded": true
+  },
+  {
+    "classId": "43666",
+    "assignmentId": "1638164",
+    "studentId": "1396",
+    "className": "INTERMEDIATE GEOMETRY",
+    "teacher": "Caleb Marasco",
+    "period": "7",
+    "currentGrade": 65,
+    "assignmentName": "ASYNCHRONOUS ASSIGNMENT",
+    "dateDue": "05/27/2026",
+    "dueDate": "05/27/2026",
+    "earnedPoints": 0,
+    "totalPoints": 10,
     "weight": 1,
     "graded": true
   },
