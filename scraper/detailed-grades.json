@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-05-22T12:53:16.757Z",
+    "scrapedAt": "2026-05-23T01:09:47.196Z",
     "totalClasses": 9,
-    "totalAssignments": 122
+    "totalAssignments": 130
   },
   "classes": [
     {
@@ -243,6 +243,22 @@
       "period": "2",
       "currentGrade": 78,
       "assignments": [
+        {
+          "name": "Animal Overview",
+          "dueDate": "05/22/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Animal Kingdom Edpuzzle",
+          "dueDate": "05/22/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Planting Mini-lab",
           "dueDate": "05/21/2026",
@@ -540,6 +556,54 @@
       "currentGrade": 75,
       "assignments": [
         {
+          "name": "Lab Eval Cupcake Wars Final",
+          "dueDate": "05/21/2026",
+          "earnedPoints": 13,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Extra Credit Quiz",
+          "dueDate": "05/21/2026",
+          "earnedPoints": 0,
+          "totalPoints": 0,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Cupcake Wars Final Lab",
+          "dueDate": "05/20/2026",
+          "earnedPoints": 0,
+          "totalPoints": 0,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Altering Recipes WS",
+          "dueDate": "05/18/2026",
+          "earnedPoints": 0,
+          "totalPoints": 85,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Soup & Sliders Lab",
+          "dueDate": "05/07/2026",
+          "earnedPoints": 0,
+          "totalPoints": 50,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Party Foods Lab",
+          "dueDate": "05/07/2026",
+          "earnedPoints": 0,
+          "totalPoints": 50,
+          "weight": 1,
+          "graded": false
+        },
+        {
           "name": "Breakfast Lab",
           "dueDate": "04/17/2026",
           "earnedPoints": 10,
@@ -607,7 +671,7 @@
           "name": "Asynchronous Day Assignment",
           "dueDate": "05/19/2026",
           "earnedPoints": 0,
-          "totalPoints": 0,
+          "totalPoints": 50,
           "weight": 1,
           "graded": false
         },
@@ -718,10 +782,10 @@
         {
           "name": "Greek gods - Symbol Slides",
           "dueDate": "05/22/2026",
-          "earnedPoints": 0,
-          "totalPoints": 0,
+          "earnedPoints": 10,
+          "totalPoints": 25,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Keystone Quiz #2",
@@ -825,31 +889,31 @@
       "className": "AMER STUDIES",
       "teacher": "Brock Seese",
       "period": "6",
-      "currentGrade": 78,
+      "currentGrade": 70,
       "assignments": [
         {
           "name": "Protest Songs",
           "dueDate": "05/22/2026",
-          "earnedPoints": 0,
-          "totalPoints": 5,
+          "earnedPoints": 10,
+          "totalPoints": 25,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Week 1",
           "dueDate": "05/22/2026",
           "earnedPoints": 0,
-          "totalPoints": 25,
+          "totalPoints": 50,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Week 2-3",
           "dueDate": "05/22/2026",
-          "earnedPoints": 0,
-          "totalPoints": 25,
+          "earnedPoints": 50,
+          "totalPoints": 50,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "American History Final Exam",
@@ -1012,6 +1076,14 @@
       "currentGrade": 78,
       "assignments": [
         {
+          "name": "The VIllage",
+          "dueDate": "05/22/2026",
+          "earnedPoints": 50,
+          "totalPoints": 50,
+          "weight": 1,
+          "graded": true
+        },
+        {
           "name": "Star Wars History",
           "dueDate": "05/20/2026",
           "earnedPoints": 10,
@@ -1040,14 +1112,6 @@
           "dueDate": "05/06/2026",
           "earnedPoints": 36,
           "totalPoints": 36,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Is the World Overpopulated?",
-          "dueDate": "04/24/2026",
-          "earnedPoints": 5,
-          "totalPoints": 5,
           "weight": 1,
           "graded": true
         }

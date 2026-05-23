@@ -1,9 +1,17 @@
 {
   "metadata": {
-    "last_updated": "05/22/2026, 08:53 AM",
-    "count": 8
+    "last_updated": "05/22/2026, 09:09 PM",
+    "count": 9
   },
   "missing_assignments": [
+    {
+      "due_date": "05/22/2026",
+      "assignment_name": "Protest Songs",
+      "class_name": "AMER STUDIES",
+      "teacher": "Brock Seese",
+      "category": "Project",
+      "max_points": "50"
+    },
     {
       "due_date": "05/15/2026",
       "assignment_name": "Dream Home Renovation Project (HomeByMe)",
