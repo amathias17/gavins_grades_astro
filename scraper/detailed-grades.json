@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-05-24T01:14:29.749Z",
+    "scrapedAt": "2026-05-24T12:27:13.526Z",
     "totalClasses": 9,
     "totalAssignments": 131
   },
@@ -591,7 +591,7 @@
           "name": "Soup & Sliders Lab",
           "dueDate": "05/07/2026",
           "earnedPoints": 0,
-          "totalPoints": 50,
+          "totalPoints": 10,
           "weight": 1,
           "graded": false
         },
