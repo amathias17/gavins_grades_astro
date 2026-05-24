@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-05-23T12:24:40.901Z",
+    "scrapedAt": "2026-05-24T01:14:29.749Z",
     "totalClasses": 9,
     "totalAssignments": 131
   },
@@ -591,7 +591,7 @@
           "name": "Soup & Sliders Lab",
           "dueDate": "05/07/2026",
           "earnedPoints": 0,
-          "totalPoints": 10,
+          "totalPoints": 50,
           "weight": 1,
           "graded": false
         },
@@ -665,13 +665,13 @@
       "className": "ENG/DESIGN/ARCH",
       "teacher": "Todd Bennett",
       "period": "4",
-      "currentGrade": 61,
+      "currentGrade": 73,
       "assignments": [
         {
           "name": "Asynchronous Day Assignment",
           "dueDate": "05/19/2026",
           "earnedPoints": 0,
-          "totalPoints": 0,
+          "totalPoints": 50,
           "weight": 1,
           "graded": false
         },

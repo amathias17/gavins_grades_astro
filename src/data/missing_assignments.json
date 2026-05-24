@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "05/23/2026, 08:24 AM",
-    "count": 9
+    "last_updated": "05/23/2026, 09:14 PM",
+    "count": 8
   },
   "missing_assignments": [
     {
@@ -19,14 +19,6 @@
       "teacher": "Todd Bennett",
       "category": "Class Work",
       "max_points": "25"
-    },
-    {
-      "due_date": "05/15/2026",
-      "assignment_name": "Design Your Dream Home in 3D",
-      "class_name": "ENG/DESIGN/ARCH",
-      "teacher": "Todd Bennett",
-      "category": "Class Work",
-      "max_points": "50"
     },
     {
       "due_date": "05/07/2026",
