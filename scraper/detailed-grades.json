@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-05-25T13:13:24.716Z",
+    "scrapedAt": "2026-05-26T01:10:37.374Z",
     "totalClasses": 9,
     "totalAssignments": 131
   },
@@ -553,7 +553,7 @@
       "className": "FOOD CHALLENGES",
       "teacher": "Misty Finnegan",
       "period": "3",
-      "currentGrade": 75,
+      "currentGrade": 83,
       "assignments": [
         {
           "name": "Lab Eval Cupcake Wars Final",
@@ -566,42 +566,42 @@
         {
           "name": "Extra Credit Quiz",
           "dueDate": "05/21/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 7,
           "totalPoints": 0,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Cupcake Wars Final Lab",
           "dueDate": "05/20/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 7,
           "totalPoints": 0,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Altering Recipes WS",
           "dueDate": "05/18/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 79,
           "totalPoints": 85,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Soup & Sliders Lab",
           "dueDate": "05/07/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 40,
           "totalPoints": 50,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Party Foods Lab",
           "dueDate": "05/07/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 40,
           "totalPoints": 50,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Breakfast Lab",
@@ -670,10 +670,10 @@
         {
           "name": "Asynchronous Day Assignment",
           "dueDate": "05/19/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 43,
           "totalPoints": 50,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Dream Home Renovation Project (HomeByMe)",
