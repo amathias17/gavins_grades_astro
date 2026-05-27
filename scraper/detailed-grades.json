@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-05-27T01:14:41.929Z",
+    "scrapedAt": "2026-05-27T13:14:02.965Z",
     "totalClasses": 9,
-    "totalAssignments": 132
+    "totalAssignments": 131
   },
   "classes": [
     {
@@ -352,14 +352,6 @@
           "dueDate": "05/04/2026",
           "earnedPoints": 0,
           "totalPoints": 5,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Food Webs",
-          "dueDate": "05/04/2026",
-          "earnedPoints": 43,
-          "totalPoints": 50,
           "weight": 1,
           "graded": true
         },

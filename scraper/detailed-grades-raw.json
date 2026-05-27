@@ -657,22 +657,6 @@
   },
   {
     "classId": "43424",
-    "assignmentId": "1632805",
-    "studentId": "1396",
-    "className": "BIOLOGY            2",
-    "teacher": "Denise Condo",
-    "period": "2",
-    "currentGrade": 79,
-    "assignmentName": "Food Webs",
-    "dateDue": "05/04/2026",
-    "dueDate": "05/04/2026",
-    "earnedPoints": 43,
-    "totalPoints": 50,
-    "weight": 1,
-    "graded": true
-  },
-  {
-    "classId": "43424",
     "assignmentId": "1623856",
     "studentId": "1396",
     "className": "BIOLOGY            2",
