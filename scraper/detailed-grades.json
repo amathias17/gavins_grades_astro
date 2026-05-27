@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-05-26T13:03:22.724Z",
+    "scrapedAt": "2026-05-27T01:14:41.929Z",
     "totalClasses": 9,
     "totalAssignments": 132
   },
@@ -241,15 +241,15 @@
       "className": "BIOLOGY            2",
       "teacher": "Denise Condo",
       "period": "2",
-      "currentGrade": 78,
+      "currentGrade": 79,
       "assignments": [
         {
           "name": "Dissection Labs",
           "dueDate": "05/26/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 25,
           "totalPoints": 25,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Animal Overview",
@@ -561,7 +561,7 @@
       "className": "FOOD CHALLENGES",
       "teacher": "Misty Finnegan",
       "period": "3",
-      "currentGrade": 83,
+      "currentGrade": 81,
       "assignments": [
         {
           "name": "Lab Eval Cupcake Wars Final",
