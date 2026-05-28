@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-05-27T13:14:02.965Z",
+    "scrapedAt": "2026-05-28T01:06:58.589Z",
     "totalClasses": 9,
-    "totalAssignments": 131
+    "totalAssignments": 132
   },
   "classes": [
     {
@@ -961,13 +961,21 @@
       "className": "INTERMEDIATE GEOMETRY",
       "teacher": "Caleb Marasco",
       "period": "7",
-      "currentGrade": 65,
+      "currentGrade": 67,
       "assignments": [
         {
           "name": "ASYNCHRONOUS ASSIGNMENT",
           "dueDate": "05/27/2026",
           "earnedPoints": 0,
           "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "End of Year Project",
+          "dueDate": "05/27/2026",
+          "earnedPoints": 20,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         },
