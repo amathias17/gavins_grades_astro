@@ -1,72 +1,7 @@
 {
   "metadata": {
-    "last_updated": "05/27/2026, 09:06 PM",
-    "count": 8
+    "last_updated": "05/28/2026, 09:18 AM",
+    "count": 0
   },
-  "missing_assignments": [
-    {
-      "due_date": "05/22/2026",
-      "assignment_name": "Protest Songs",
-      "class_name": "AMER STUDIES",
-      "teacher": "Brock Seese",
-      "category": "Project",
-      "max_points": "50"
-    },
-    {
-      "due_date": "05/15/2026",
-      "assignment_name": "Dream Home Renovation Project (HomeByMe)",
-      "class_name": "ENG/DESIGN/ARCH",
-      "teacher": "Todd Bennett",
-      "category": "Class Work",
-      "max_points": "25"
-    },
-    {
-      "due_date": "05/07/2026",
-      "assignment_name": "Packet 2",
-      "class_name": "ENGLISH 10",
-      "teacher": "Megan Leone",
-      "category": "Class Work",
-      "max_points": "23"
-    },
-    {
-      "due_date": "04/27/2026",
-      "assignment_name": "The Watergate Breakin",
-      "class_name": "SOCIOLOGY",
-      "teacher": "Heather Eckels",
-      "category": "Class Work",
-      "max_points": "30"
-    },
-    {
-      "due_date": "04/22/2026",
-      "assignment_name": "Forms of Government Stations",
-      "class_name": "SOCIOLOGY",
-      "teacher": "Heather Eckels",
-      "category": "Class Work",
-      "max_points": "35"
-    },
-    {
-      "due_date": "04/17/2026",
-      "assignment_name": "Dream Home Research",
-      "class_name": "ENG/DESIGN/ARCH",
-      "teacher": "Todd Bennett",
-      "category": "Class Work",
-      "max_points": "25"
-    },
-    {
-      "due_date": "04/16/2026",
-      "assignment_name": "Cold War Vocab",
-      "class_name": "AMER STUDIES",
-      "teacher": "Brock Seese",
-      "category": "Class Work",
-      "max_points": "16"
-    },
-    {
-      "due_date": "04/16/2026",
-      "assignment_name": "Cold War Vocab Cartoon",
-      "class_name": "AMER STUDIES",
-      "teacher": "Brock Seese",
-      "category": "Class Work",
-      "max_points": "10"
-    }
-  ]
+  "missing_assignments": []
 }
