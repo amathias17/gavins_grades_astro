@@ -1,128 +1,10 @@
 {
   "metadata": {
-    "last_updated": "05/29/2026, 09:08 AM",
-    "most_recent_date": "5/29/2026",
-    "total_classes": 9
+    "last_updated": "05/29/2026, 09:10 PM",
+    "most_recent_date": "5/30/2026",
+    "total_classes": 0
   },
-  "classes": [
-    {
-      "class_name": "Sophomore Seminar",
-      "teacher": "Victoria Good",
-      "period": "0",
-      "q1_grade": null,
-      "q1_letter_grade": null,
-      "q2_grade": null,
-      "q2_letter_grade": null,
-      "q4_grade": 0,
-      "q4_letter_grade": "F",
-      "current_grade": 0,
-      "letter_grade": "F"
-    },
-    {
-      "class_name": "English 10",
-      "teacher": "Megan Leone",
-      "period": "1",
-      "q1_grade": null,
-      "q1_letter_grade": null,
-      "q2_grade": null,
-      "q2_letter_grade": null,
-      "q4_grade": 66,
-      "q4_letter_grade": "D",
-      "current_grade": 66,
-      "letter_grade": "D"
-    },
-    {
-      "class_name": "Biology 2",
-      "teacher": "Denise Condo",
-      "period": "2",
-      "q1_grade": null,
-      "q1_letter_grade": null,
-      "q2_grade": null,
-      "q2_letter_grade": null,
-      "q4_grade": 79,
-      "q4_letter_grade": "C",
-      "current_grade": 79,
-      "letter_grade": "C"
-    },
-    {
-      "class_name": "Food Challenges",
-      "teacher": "Misty Finnegan",
-      "period": "3",
-      "q1_grade": null,
-      "q1_letter_grade": null,
-      "q2_grade": null,
-      "q2_letter_grade": null,
-      "q4_grade": 81,
-      "q4_letter_grade": "B",
-      "current_grade": 81,
-      "letter_grade": "B"
-    },
-    {
-      "class_name": "Eng/design/arch",
-      "teacher": "Todd Bennett",
-      "period": "4",
-      "q1_grade": null,
-      "q1_letter_grade": null,
-      "q2_grade": null,
-      "q2_letter_grade": null,
-      "q4_grade": 73,
-      "q4_letter_grade": "C",
-      "current_grade": 73,
-      "letter_grade": "C"
-    },
-    {
-      "class_name": "Greek Mythology",
-      "teacher": "Alex Ray",
-      "period": "5",
-      "q1_grade": null,
-      "q1_letter_grade": null,
-      "q2_grade": null,
-      "q2_letter_grade": null,
-      "q4_grade": 77,
-      "q4_letter_grade": "C",
-      "current_grade": 77,
-      "letter_grade": "C"
-    },
-    {
-      "class_name": "Amer Studies",
-      "teacher": "Brock Seese",
-      "period": "6",
-      "q1_grade": null,
-      "q1_letter_grade": null,
-      "q2_grade": null,
-      "q2_letter_grade": null,
-      "q4_grade": 70,
-      "q4_letter_grade": "C",
-      "current_grade": 70,
-      "letter_grade": "C"
-    },
-    {
-      "class_name": "Intermediate Geometry",
-      "teacher": "Caleb Marasco",
-      "period": "7",
-      "q1_grade": null,
-      "q1_letter_grade": null,
-      "q2_grade": null,
-      "q2_letter_grade": null,
-      "q4_grade": 67,
-      "q4_letter_grade": "D",
-      "current_grade": 67,
-      "letter_grade": "D"
-    },
-    {
-      "class_name": "Sociology",
-      "teacher": "Heather Eckels",
-      "period": "8",
-      "q1_grade": null,
-      "q1_letter_grade": null,
-      "q2_grade": null,
-      "q2_letter_grade": null,
-      "q4_grade": 78,
-      "q4_letter_grade": "C",
-      "current_grade": 78,
-      "letter_grade": "C"
-    }
-  ],
+  "classes": [],
   "grade_history": {
     "Sophomore Seminar": {
       "11/24/2025": 66,
@@ -1831,7 +1713,7 @@
       "5/29/2026": 77
     }
   },
-  "overall_average": 74,
+  "overall_average": 0,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -2019,9 +1901,10 @@
     "5/26/2026": 74,
     "5/27/2026": 74,
     "5/28/2026": 74,
-    "5/29/2026": 74
+    "5/29/2026": 74,
+    "5/30/2026": 0
   },
-  "streak": 2,
+  "streak": 3,
   "streak_history": {
     "11/24/2025": 0,
     "11/25/2025": 0,
@@ -2209,6 +2092,7 @@
     "5/26/2026": 0,
     "5/27/2026": 0,
     "5/28/2026": 1,
-    "5/29/2026": 2
+    "5/29/2026": 2,
+    "5/30/2026": 3
   }
 }
