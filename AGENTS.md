@@ -21,7 +21,7 @@
 - Payout amount typography uses subtle positive letter spacing (.01em) for readable multi-character totals.
 - Payout currency symbol is intentionally smaller than the numeric amount.
 - Payout homepage shows a server-rendered uppercase "DOLLARS" label centered beneath the number; it randomly selects playful money slang and jokes, including "SLICES OF BACON", every 6 seconds with varied CSS glitch transitions and no immediate repeats, and reduced-motion users see the static label.
-- On normal page load, the payout number starts as a masked placeholder and runs a 2.2-second slot-machine reveal before the slang label appears and starts rotating; reduced-motion users see the final amount immediately.
+- On normal page load, the payout number starts as a zeroed placeholder matching the final amount's digit/comma shape and runs a 2.2-second slot-machine reveal before the slang label appears and starts rotating; reduced-motion users see the final amount immediately.
 - The payout reveal uses the original whole-number slot effect, changing each digit in the formatted amount for 2.2 seconds before the slang label appears.
 - Payout calculation lives in src/utils/payout.ts; scraper and grade ingestion remain unchanged.
 - Tests: Playwright E2E in tests/e2e/; reports under playwright-report/ and test-results/. Docs in docs/ and DELIVERABLES.md. Scraper scripts in scraper/ (Skyward login/data fetch). Build/test artifacts, debug screenshots, and temp outputs are not tracked (dist/, playwright-report/, test-results/, debug images/html).

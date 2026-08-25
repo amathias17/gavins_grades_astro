@@ -10,7 +10,7 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
 
 <section class="payout-screen" aria-labelledby="payout-heading">
     <h1 id="payout-heading" class="sr-only">Gavin's grade allowance</h1>
-    <div class="total" data-final={formattedAmount} aria-label={`${formattedAmount} dollars total earned`}>???</div>
+    <div class="total" data-final={formattedAmount} aria-label={`${formattedAmount} dollars total earned`}>{formattedAmount.replace(/\d/g, "0")}</div>
     <div class="money-label" data-money-label data-text="DOLLARS" aria-hidden="true">DOLLARS</div>
 </section>
 
