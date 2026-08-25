@@ -51,7 +51,7 @@
 - PRs: describe scope, tests run, and UI changes (include screenshots for UI tweaks); link issues when applicable.
 
 ## Security & Configuration
-- Secrets live in .claude/settings.local.json (SKYWARD credentials) and scraper scripts; never commit or log secrets. Treat data files as sensitive student info.
+- Secrets must be supplied through environment variables or GitHub Actions Secrets; the scraper launcher contains no credentials. Never commit or log secrets. Treat data files as sensitive student info.
 
 ## Working Agreement
 - Any change (add/remove/update feature, data, tooling, or process) must be reflected in this file and memory.md immediately; remove entries when features are removed.
