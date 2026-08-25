@@ -18,7 +18,7 @@
 - CurrentGrades missing quests card shows a dynamic Missing.Quests count sourced from missing_assignments.json.
 - Homepage payout dashboard is a dark, headerless full-screen view showing only the centered total; it calculates $50 for each current numeric grade >= 90 and renders $0 when no classes are imported.
 - Homepage payout amount uses the Orbitron Google Font.
-- Payout amount typography uses positive letter spacing for readable multi-character totals.
+- Payout amount typography uses subtle positive letter spacing (.01em) for readable multi-character totals.
 - Payout currency symbol is intentionally smaller than the numeric amount.
 - Payout homepage shows a server-rendered uppercase "DOLLARS" label centered beneath the number; it randomly selects playful money slang and jokes, including "SLICES OF BACON", every 6 seconds with varied CSS glitch transitions and no immediate repeats, and reduced-motion users see the static label.
 - On normal page load, the payout number runs a 2.2-second slot-machine reveal before the slang label appears and starts rotating; reduced-motion users skip the reveal.

@@ -6,7 +6,7 @@
 - Data: src/data/grades.json holds metadata/overall averages/grade_history; class_id may be missing (period used for routing); assignments optional per class. src/data/missing_assignments.json uses key missing_assignments and due_date strings carry encoding artifacts ("A??A??").
 - Routes: / (index.astro) renders the dark, headerless, full-screen PayoutDashboard with only a centered total; it uses $50 per numeric current_grade >= 90 and shows $0 when no classes are imported. /classes/[classId].astro builds static paths from class_id or period, embeds GradeCalculator and assignments table with status chips, and pulls scraped assignments from scraper/detailed-grades.json when available (matching by period and normalized class name); /calculator (calculator.astro) is the new 2-column dashboard with class selector, form, and results panels; legacy prototypes live in src/pages/new.astro and old.astro.
 - Payout display uses Orbitron loaded from Google Fonts.
-- Payout display uses positive tracking so multi-character totals do not visually collide.
+- Payout display uses subtle positive .01em tracking so multi-character totals stay readable without spreading too far apart.
 - Payout display renders the currency symbol smaller than the numeric amount.
 - Payout display includes a centered uppercase client-side random slang/joke label (including DOLLARS, BUCKS, BUCKAROOS, IN DOUGH, DOLLARS CASH, and SLICES OF BACON) with a 6-second cadence, varied CSS glitch transitions, no immediate repeats, and reduced-motion fallback.
 - Payout display begins with a 2.2-second client-side slot-machine number reveal; slang rotation starts only after the final number lands, while reduced-motion skips the reveal.
