@@ -42,4 +42,13 @@ test.describe("A-grade payout dashboard", () => {
       await expect(page.getByLabel("Current class payout breakdown")).toBeVisible();
     }
   });
+
+  test("rotates the money label with the initial word rendered server-side", async ({ page }) => {
+    await page.goto("/");
+
+    const label = page.locator("[data-money-label]");
+    await expect(label).toHaveText("dollars");
+    await page.waitForTimeout(3200);
+    await expect(label).not.toHaveText("dollars");
+  });
 });

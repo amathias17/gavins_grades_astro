@@ -17,12 +17,42 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
 <section class="payout-screen" aria-labelledby="payout-heading">
     <h1 id="payout-heading" class="sr-only">Gavin's grade allowance</h1>
     <div class="total" aria-label={`${formattedTotal} total earned`}><span class="currency-symbol" aria-hidden="true">$</span>{formattedAmount}</div>
+    <div class="money-label" data-money-label data-text="dollars" aria-hidden="true">dollars</div>
 </section>
 
+<script>
+    const label = document.querySelector<HTMLElement>("[data-money-label]");
+    const words = ["dollars", "bucks", "buckaroos", "dough", "moolah", "cash"];
+
+    if (label && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        let wordIndex = 0;
+        const timer = window.setInterval(() => {
+            wordIndex = (wordIndex + 1) % words.length;
+            const nextWord = words[wordIndex];
+            label.textContent = nextWord;
+            label.dataset.text = nextWord;
+            label.classList.remove("is-glitching");
+            void label.offsetWidth;
+            label.classList.add("is-glitching");
+            window.setTimeout(() => label.classList.remove("is-glitching"), 320);
+        }, 3000);
+
+        document.addEventListener("astro:before-swap", () => window.clearInterval(timer), { once: true });
+    }
+</script>
+
 <style>
-    .payout-screen { display: grid; place-items: center; width: 100%; min-height: 100svh; }
+    .payout-screen { display: grid; place-items: center; align-content: center; width: 100%; min-height: 100svh; }
     .total { color: #f2f5ef; font: 700 clamp(8rem, 34vw, 32rem)/.78 "Orbitron", sans-serif; letter-spacing: .03em; text-shadow: 0 0 70px rgba(97, 212, 154, .1); animation: arrive .8s cubic-bezier(.2, .8, .2, 1) both; }
     .currency-symbol { display: inline-block; margin-right: .08em; font-size: .45em; letter-spacing: 0; vertical-align: .35em; }
+    .money-label { position: relative; margin-top: 1.5rem; color: #61d49a; font: 700 clamp(.8rem, 2vw, 1.15rem)/1 "Orbitron", sans-serif; letter-spacing: .28em; text-transform: lowercase; }
+    .money-label.is-glitching { animation: label-glitch .32s steps(2, end) both; }
+    .money-label.is-glitching::before, .money-label.is-glitching::after { position: absolute; inset: 0; pointer-events: none; content: attr(data-text); }
+    .money-label.is-glitching::before { color: #f2f5ef; animation: label-slice-a .32s steps(2, end) both; clip-path: inset(0 0 52% 0); transform: translateX(-.08em); }
+    .money-label.is-glitching::after { color: #ff4fd8; animation: label-slice-b .32s steps(2, end) both; clip-path: inset(55% 0 0 0); transform: translateX(.08em); }
     @keyframes arrive { from { opacity: 0; transform: scale(.94); } to { opacity: 1; transform: scale(1); } }
-    @media (prefers-reduced-motion: reduce) { .total { animation: none; } }
+    @keyframes label-glitch { 0%, 100% { transform: translateX(0); opacity: 1; } 20% { transform: translateX(-.04em); opacity: .75; } 45% { transform: translateX(.05em); opacity: .9; } 70% { transform: translateX(-.02em); opacity: .65; } }
+    @keyframes label-slice-a { 0%, 100% { transform: translateX(-.08em); } 50% { transform: translateX(.14em); } }
+    @keyframes label-slice-b { 0%, 100% { transform: translateX(.08em); } 50% { transform: translateX(-.12em); } }
+    @media (prefers-reduced-motion: reduce) { .total { animation: none; } .money-label { margin-top: 1.5rem; } }
 </style>
