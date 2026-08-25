@@ -5,6 +5,8 @@ test.describe("Grade Impact Calculator Dashboard", () => {
     // Navigate to the calculator dashboard
     await page.goto("/calculator");
     await page.waitForLoadState("networkidle");
+    const classCount = await page.locator("#class-selector option").count();
+    test.skip(classCount <= 1, "No current class data available");
   });
 
   test("should render the dashboard page with all sections", async ({

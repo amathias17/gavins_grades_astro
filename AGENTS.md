@@ -2,7 +2,7 @@
 
 ## Project Structure & Data
 - Astro 5 + Tailwind 4.1 (@tailwindcss/vite); layout in src/layouts/BaseLayout.astro imports src/styles/global.css and retro neon-green/black theme.
-- Pages: src/pages/index.astro (dashboard), src/pages/classes/[classId].astro (per-class + GradeCalculator), src/pages/calculator.astro (dashboard-style calculator), src/pages/stats.astro (grade history stats), src/pages/anime.astro (Dragon Ball Z proof-of-concept); legacy prototypes in src/pages/new.astro and src/pages/old.astro.
+- Pages: src/pages/index.astro (A-grade payout dashboard), src/pages/classes/[classId].astro (per-class + GradeCalculator), src/pages/calculator.astro (dashboard-style calculator), src/pages/stats.astro (grade history stats), src/pages/anime.astro (Dragon Ball Z proof-of-concept); legacy prototypes in src/pages/new.astro and src/pages/old.astro.
 - Layout lab lives at src/pages/lab.astro for dev-only visual experiments and is not linked in navigation.
 - Class pages read scraped assignment data from scraper/detailed-grades.json at build time when available, matching by period and normalized class name.
 - Components in src/components/ (CurrentGrades.astro, GradeCalculator.astro, etc.); utilities in src/utils/gradeCalculator.ts; data in src/data/grades.json and src/data/missing_assignments.json (class_id may be absent; use period). Encoding artifacts exist; do not "clean" without source confirmation.
@@ -16,6 +16,8 @@
 - Missing assignment dates strip "(Q2)" suffix on display; scraper normalizes missing assignment due_date to drop quarter tags.
 - BaseLayout enables Astro view transitions with ClientRouter in the page head.
 - CurrentGrades missing quests card shows a dynamic Missing.Quests count sourced from missing_assignments.json.
+- Homepage payout dashboard calculates $50 for each current numeric grade >= 90, shows the total and compact class breakdown, and renders a $0 waiting state when no classes are imported.
+- Payout calculation lives in src/utils/payout.ts; scraper and grade ingestion remain unchanged.
 - Tests: Playwright E2E in tests/e2e/; reports under playwright-report/ and test-results/. Docs in docs/ and DELIVERABLES.md. Scraper scripts in scraper/ (Skyward login/data fetch). Build/test artifacts, debug screenshots, and temp outputs are not tracked (dist/, playwright-report/, test-results/, debug images/html).
 - Scraper updates: scraper/enhanced-scraper.cjs now clicks sf_expander, exhausts all "Next" pagination links (moreAssignmentsEvents_*) per class, filters Q2 assignments, opens showAssignmentInfo dialogs, and pulls Points Earned/Total Points/Due Date via document XPaths with dialog DOM fallbacks before closing via sf_DialogClose. Date fields are normalized to drop numeric-only or label-only values. Runtime sped up with headless launch, no slowMo, shorter waits, and dialog-visible/hidden waits instead of fixed sleeps. Output remains detailed-grades.json (per class with assignment weights/points) plus raw. Graded assignments cache to scraper/detailed-grades-cache.json (gitignored) to skip re-scraping; "* out of x" are kept as 0/out-of-X and left uncached until graded; raw output now includes class names plus due dates; organized output omits classes with no assignments. ClassId mapping now also uses assignment row group-child/group-parent attributes with classDesc lookups to restore className/period/teacher after expansion.
 - Scraper supports SKYWARD_MAX_ASSIGNMENTS to cap assignment detail scraping for quick checks.

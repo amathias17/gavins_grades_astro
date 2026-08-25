@@ -1,144 +1,29 @@
 ---
-import gradesData from "../data/grades.json";
-
-const overallAverage = gradesData.overall_average;
-const streak = gradesData.streak || 0;
 ---
 
-<!-- <div class="fixed h-full left-0 scanlines top-0 w-full z-1000"></div>
-<header class="bg-gray-900 text-white font-player" role="banner">
-    <nav class="flex items-center flex-wrap px-4 py-5 container mx-auto" role="navigation" aria-label="Main navigation">
-        <a
-            href="#"
-            class="text-[1.5em] text-[#00ff00]"
-            aria-label="Gavin's Grades - Home"
-            >Gavin&apos;s Grades</a
-        >
-        <span class="blink mr-auto text-[#00ff00]" aria-hidden="true">_</span>
-        <button
-            class="hover:bg-blue-600 hover:text-white px-3 py-2 rounded lg:hidden"
-            data-name="nav-toggler"
-            aria-label="Toggle navigation menu"
-            aria-expanded="false"
-            aria-controls="nav-menu"
-            data-pg-ia='{"l":[{"name":"NabMenuToggler","trg":"click","a":{"l":[{"t":"^nav|[data-name=nav-menu]","l":[{"t":"set","p":0,"d":0,"l":{"class.remove":"hidden"}}]},{"t":"#gt# span:nth-of-type(1)","l":[{"t":"tween","p":0,"d":0.2,"l":{"rotationZ":45,"yPercent":300}}]},{"t":"#gt# span:nth-of-type(2)","l":[{"t":"tween","p":0,"d":0.2,"l":{"autoAlpha":0}}]},{"t":"#gt# span:nth-of-type(3)","l":[{"t":"tween","p":0,"d":0.2,"l":{"rotationZ":-45,"yPercent":-300}}]}]},"pdef":"true","trev":"true"}]}'
-        >
-            <span class="block border-b-2 border-current my-1 w-6" aria-hidden="true"></span>
-            <span class="block border-b-2 border-current my-1 w-6" aria-hidden="true"></span>
-            <span class="block border-b-2 border-current my-1 w-6" aria-hidden="true"></span>
-        </button>
-        <div
-            id="nav-menu"
-            class="lg:flex lg:space-x-4 lg:space-y-0 lg:w-auto space-y-2 w-full hidden lg:items-center"
-            data-name="nav-menu"
-        >
-            <ul class="flex flex-col lg:flex-row" role="list">
-                <li>
-                    <a
-                        href="#"
-                        class="font-light hover:text-blue-600 lg:px-4 uppercase py-2 px-0"
-                        aria-current="page"
-                        >Home</a
-                    >
-                </li>
-                <li>
-                    <a
-                        href="#"
-                        class="font-light hover:text-blue-600 lg:px-4 uppercase py-2 px-0"
-                        >About</a
-                    >
-                </li>
-                <li>
-                    <a
-                        href="#"
-                        class="font-light hover:text-blue-600 lg:px-4 uppercase py-2 px-0"
-                        >Features</a
-                    >
-                </li>
-                <li>
-                    <a
-                        href="#"
-                        class="font-light hover:text-blue-600 lg:px-4 uppercase py-2 px-0"
-                        >Services</a
-                    >
-                </li>
-                <li>
-                    <a
-                        href="#"
-                        class="font-light hover:text-blue-600 lg:px-4 uppercase py-2 px-0"
-                        >Contact</a
-                    >
-                </li>
-            </ul>
-            <!-- <a
-                href="#"
-                class="bg-blue-600 font-light inline-block px-5 py-2 rounded text-white hover:bg-blue-700 uppercase"
-                >Sign Up</a
-            > --><!-- </div>
+<header class="site-header" role="banner">
+    <a class="brand" href="/" aria-label="Gavin's allowance home">
+        <span class="brand-mark" aria-hidden="true">$</span>
+        <span><strong>GAVIN'S</strong><small>GRADE ALLOWANCE</small></span>
+    </a>
+    <nav aria-label="Primary navigation">
+        <a class="active" href="/">Overview</a>
+        <a href="/stats">Stats</a>
+        <a href="/history">History</a>
+        <a href="/calculator">Calculator</a>
     </nav>
-</header>  -->
-         <!-- Header -->
-            <div class="m-auto max-w-[1400px] border-4 border-[#00ff00] border-solid flex header mb-5 p-5 relative shadow-[0_0_0_4px_#000,0_0_0_8px_#00ff00,8px_8px_0_8px_rgba(0,255,0,0.3)]">
-                <div class="flex flex-wrap gap-5 header-content">
-                    <div class="ml-auto mr-auto player-info">
-                        <h1 class="text-[1.5em] text-[#00ff00] mb-[15px]">GRADE QUEST<span class="blink">_</span></h1>
-                        <p class="text-[0.6em] text-[#ffff00]">&gt; PLAYER.1 - GAVIN</p>
-                    </div>
-                    <div class="flex gap-1" data-pg-collapsed>
-                        <div class="border-[3px] border-solid border-white min-w-[100px] px-[15px] py-3 text-center">
-                            <div class="text-[0.4em] text-[#aaa] mb-2">LVL</div>
-                            <div class="text-[0.8em] text-[#00ffff]">10</div>
-                        </div>
-                        <div class="border-[3px] border-solid border-white min-w-[100px] px-[15px] py-3 text-center">
-                            <div class="text-[0.4em] text-[#aaa] mb-2">AVG</div>
-                            <div class="text-[0.8em] text-[#00ffff]">{overallAverage}%</div>
-                        </div>
-                        <div class="border-[3px] border-solid border-white min-w-[100px] px-[15px] py-3 text-center">
-                            <div class="text-[0.4em] text-[#aaa] mb-2">STREAK</div>
-                            <div class="text-[0.8em] text-[#00ffff]">{streak}</div>
-                        </div>
-                        <!-- <div class="border-[3px] border-solid border-white min-w-[100px] px-[15px] py-3 text-center">
-                            <div class="text-[0.4em] text-[#aaa] mb-2">QUARTER</div>
-                            <div class="text-[0.8em] text-[#00ffff]">2</div>
-                        </div> -->
-                        <!-- <div class="inline-flex items-center gap-[8px] bg-[#000] px-[12px] py-[8px] border-[3px] border-[solid] border-[#ffff00] text-[0.5em]">
-                            <div class="w-[20px] h-[20px] bg-[#ffff00] rounded-[50%] border-[2px] border-[solid] border-[#fff]"></div><span>000</span>
-                        </div> -->
-                    </div>
-                </div>
-            </div>
-            <nav class="m-auto max-w-[1400px] mb-8 border-[3px] border-[#00ff00] border-dashed p-4 bg-[#000]" aria-label="Primary">
-                <div class="text-[0.5em] text-[#00ff00] uppercase mb-3">NAV.CONSOLE</div>
-                <div class="flex flex-wrap gap-3">
-                    <a
-                        href="/"
-                        class="nav-link text-[0.55em] uppercase border-2 border-[#00ff00] text-[#00ff00] px-4 py-2 bg-[#000] hover:text-[#000] hover:bg-[#00ff00] transition-colors"
-                    >
-                        Home
-                    </a>
-                    <a
-                        href="/stats"
-                        class="nav-link text-[0.55em] uppercase border-2 border-[#00ffff] text-[#00ffff] px-4 py-2 bg-[#000] hover:text-[#000] hover:bg-[#00ffff] transition-colors"
-                    >
-                        Stats Room
-                    </a>
-                    <a
-                        href="/calculator"
-                        class="nav-link text-[0.55em] uppercase border-2 border-[#ffff00] text-[#ffff00] px-4 py-2 bg-[#000] hover:text-[#000] hover:bg-[#ffff00] transition-colors"
-                    >
-                        Calculator
-                    </a>
-                    <a
-                        href="/history"
-                        class="nav-link text-[0.55em] uppercase border-2 border-[#ff00ff] text-[#ff00ff] px-4 py-2 bg-[#000] hover:text-[#000] hover:bg-[#ff00ff] transition-colors"
-                    >
-                        Grade History
-                    </a>
-                    <span class="nav-link is-disabled text-[0.55em] uppercase border-2 border-[#555] text-[#666] px-4 py-2 bg-[#0b0b0b]">
-                        Missions (Soon)
-                    </span>
-                    <span class="nav-link is-disabled text-[0.55em] uppercase border-2 border-[#555] text-[#666] px-4 py-2 bg-[#0b0b0b]">
-                        Intel (Soon)
-                    </span>
-                </div>
-            </nav>
+</header>
+
+<style>
+    .site-header { display: flex; align-items: center; justify-content: space-between; gap: 2rem; max-width: 1100px; margin: 0 auto; padding: 1.5rem 0; border-bottom: 1px solid var(--ledger-line); }
+    .brand { display: flex; align-items: center; gap: .7rem; color: var(--ledger-ink); text-decoration: none; }
+    .brand-mark { display: grid; place-items: center; width: 2.1rem; height: 2.1rem; border: 1px solid var(--ledger-green); color: var(--ledger-green-dark); font: 700 1.15rem/1 "DM Serif Display", Georgia, serif; }
+    .brand strong, .brand small { display: block; }
+    .brand strong { font: 700 .8rem/1 "DM Mono", monospace; letter-spacing: .08em; }
+    .brand small { margin-top: .25rem; color: var(--ledger-muted); font: 700 .52rem/1 "DM Mono", monospace; letter-spacing: .08em; }
+    nav { display: flex; flex-wrap: wrap; justify-content: end; gap: 1.4rem; }
+    nav a { position: relative; color: var(--ledger-muted); font: 700 .65rem/1 "DM Mono", monospace; letter-spacing: .06em; text-decoration: none; text-transform: uppercase; }
+    nav a:hover, nav a:focus-visible, nav a.active { color: var(--ledger-ink); }
+    nav a.active::after { position: absolute; right: 0; bottom: -.55rem; left: 0; height: 2px; background: var(--ledger-green); content: ""; }
+    @media (max-width: 640px) { .site-header { align-items: start; flex-direction: column; gap: 1.25rem; } nav { justify-content: start; gap: 1rem; } }
+</style>

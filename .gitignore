@@ -26,3 +26,4 @@ pnpm-debug.log*
 # scraper caches (student data)
 .custom-mem
 .claude
+.serena
