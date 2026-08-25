@@ -222,41 +222,64 @@ async function getClassInfo(page) {
         }
       }
 
-      // Get current grade from the grade row (Q4 column)
+      // Get the active grade from the highlighted quarter column.
       const gradeRow = document.querySelector(`tr[group-parent="${groupId}"]`);
       let currentGrade = null;
-      let q4Grade = null;
+      let currentQuarter = null;
       let isHighlighted = false;
 
       if (gradeRow) {
-        isHighlighted = gradeRow.querySelector('.sf_highlightYellow') !== null;
+        const highlightedCell = gradeRow.querySelector('.sf_highlightYellow');
         const gradeCells = gradeRow.querySelectorAll('td');
-        const q4Link = gradeCells[3]?.querySelector('a[id="showGradeInfo"]');
+        isHighlighted = highlightedCell !== null;
 
-        if (q4Link) {
-          const gradeText = q4Link.textContent?.trim().replace(/%/g, '');
+        // Skyward's column positions can change, so identify the quarter from
+        // the grade-table header instead of assuming Q4 is a fixed cell.
+        if (highlightedCell) {
+          const gradeTable = gradeRow.closest('table');
+          const highlightedIndex = Array.from(gradeCells).indexOf(highlightedCell.closest('td'));
+          const headerRows = gradeTable ? Array.from(gradeTable.querySelectorAll('tr')) : [];
+          const headerRow = headerRows.find(row => {
+            const labels = Array.from(row.querySelectorAll('th, td')).map(cell => cell.textContent.trim());
+            return labels.some(label => /^Q[1-4]$/.test(label));
+          });
+          const headerCells = headerRow ? Array.from(headerRow.querySelectorAll('th, td')) : [];
+          const headerLabel = headerCells[highlightedIndex]?.textContent.trim();
+          if (/^Q[1-4]$/.test(headerLabel || '')) {
+            currentQuarter = headerLabel;
+          }
+        }
+
+        const gradeCell = highlightedCell?.closest('td')
+          || Array.from(gradeCells).find(cell => cell.querySelector('a[id="showGradeInfo"]'))
+          || gradeCells[3];
+        const gradeLink = gradeCell?.querySelector('a[id="showGradeInfo"]');
+
+        if (gradeLink) {
+          const gradeText = gradeLink.textContent?.trim().replace(/%/g, '');
           const grade = Number(gradeText);
           if (Number.isFinite(grade) && grade >= 0 && grade <= 100) {
-            q4Grade = grade;
             currentGrade = grade;
           }
         }
 
-        // Highlighted but no Q4 value present: treat as 0 until posted
-        if (isHighlighted && q4Grade === null) {
-          q4Grade = 0;
+        // Highlighted but no current-quarter value present: treat as 0 until posted.
+        if (isHighlighted && currentGrade === null) {
           currentGrade = 0;
         }
       }
 
-      if (isHighlighted) {
+      // Keep every class description so assignment links can still be mapped
+      // when the portal has not highlighted the active quarter yet.
+      if (className) {
         const entry = {
           className,
           teacher,
           period,
           groupId,
           currentGrade,
-          q4_grade: q4Grade
+          currentQuarter,
+          ...(currentQuarter ? { [`${currentQuarter.toLowerCase()}_grade`]: currentGrade } : {})
         };
 
         classes.push(entry);
@@ -304,7 +327,8 @@ async function getClassInfo(page) {
       }
     });
 
-    return { classes, classIdMap };
+    const highlightedQuarter = classes.find(entry => entry.currentQuarter)?.currentQuarter || null;
+    return { classes, classIdMap, currentQuarter: highlightedQuarter };
   });
 }
 
@@ -625,7 +649,7 @@ async function extractAssignmentDetails(page, assignmentId, classId) {
   }
 }
 
-async function scrapeAllAssignments(page, classes, cacheAssignments = {}, classIdMap = {}) {
+async function scrapeAllAssignments(page, classes, cacheAssignments = {}, classIdMap = {}, currentQuarter = null) {
   console.log('\nExtracting detailed assignment information...');
 
   // Get all assignment links
@@ -655,8 +679,10 @@ async function scrapeAllAssignments(page, classes, cacheAssignments = {}, classI
       console.log(`DEBUG: Index ${i}, assignment from array:`, JSON.stringify({name: assignment.name, classId: assignment.classId, assignmentId: assignment.assignmentId}));
     }
 
-    // Only keep Q4 (due date text typically contains (Q4))
-    if (!assignment.dueDate || !/\(Q4\)/i.test(assignment.dueDate)) {
+    // Keep assignments from the active quarter when Skyward provides a tag.
+    // If the portal has not highlighted a quarter yet, retain the assignment.
+    const dueQuarter = assignment.dueDate?.match(/\(Q([1-4])\)/i)?.[1] || null;
+    if (currentQuarter && dueQuarter && dueQuarter !== currentQuarter.slice(1)) {
       continue;
     }
 
@@ -793,8 +819,8 @@ function organizeByClass(assignments, classes) {
   return Object.values(byClass).filter(entry => entry.assignments.length > 0);
 }
 
-async function scrapeMissingAssignments(page) {
-  console.log('\nChecking for missing assignments (Q4 only)...');
+async function scrapeMissingAssignments(page, currentQuarter = null) {
+  console.log(`\nChecking for missing assignments${currentQuarter ? ` (${currentQuarter} only)` : ''}...`);
   let missingAssignments = [];
 
   try {
@@ -817,7 +843,8 @@ async function scrapeMissingAssignments(page) {
             if (cells.length < 4) return;
 
             const rawDate = cells[0]?.textContent.trim() || '';
-            if (!rawDate.toLowerCase().includes('q4')) return;
+          const dueQuarter = rawDate.match(/\(Q([1-4])\)/i)?.[1] || null;
+          if (currentQuarter && dueQuarter && dueQuarter !== currentQuarter.slice(1)) return;
 
             const assignmentName = cells[1]?.textContent.trim() || '';
             const className = cells[2]?.textContent.trim() || '';
@@ -854,7 +881,7 @@ async function scrapeMissingAssignments(page) {
 
           return assignments;
         });
-        console.log(`Found ${missingAssignments.length} missing assignments (Q4)`);
+        console.log(`Found ${missingAssignments.length} missing assignments${currentQuarter ? ` (${currentQuarter})` : ''}`);
       }
     } else {
       console.log('Missing assignments button not found');
@@ -924,6 +951,8 @@ async function saveGradesToFile(grades, missingAssignments = []) {
     q1_letter_grade: cls.q1_grade !== undefined ? letter(cls.q1_grade) : null,
     q2_grade: cls.q2_grade ?? null,
     q2_letter_grade: cls.q2_grade !== undefined ? letter(cls.q2_grade) : null,
+    q3_grade: cls.q3_grade ?? null,
+    q3_letter_grade: cls.q3_grade !== undefined ? letter(cls.q3_grade) : null,
     q4_grade: cls.q4_grade ?? null,
     q4_letter_grade: cls.q4_grade !== undefined ? letter(cls.q4_grade) : null,
     current_grade: cls.q4_grade !== null && cls.q4_grade !== undefined
@@ -1030,7 +1059,7 @@ async function main() {
     await expandAllAssignments(popup);
 
     // Get class information
-    const { classes, classIdMap } = await getClassInfo(popup);
+    const { classes, classIdMap, currentQuarter } = await getClassInfo(popup);
     console.log(`\nFound ${classes.length} classes`);
     console.log('Classes:', classes.map(c => `Period ${c.period}: ${c.className} (groupId: ${c.groupId})`).join(', '));
     console.log('ClassIdMap keys:', Object.keys(classIdMap).join(', '));
@@ -1040,21 +1069,21 @@ async function main() {
       popup,
       classes,
       cache.assignments,
-      classIdMap
+      classIdMap,
+      currentQuarter
     );
     console.log(`\nSuccessfully extracted ${assignmentDetails.length} assignments`);
 
-    // Missing assignments (Q4 only)
-    const missingAssignments = await scrapeMissingAssignments(popup);
+    const missingAssignments = await scrapeMissingAssignments(popup, currentQuarter);
 
-    // Persist grades.json using Q4-only classes
+    // Persist grades.json using the quarter detected from Skyward's highlight.
     const gradeClasses = classes.map(c => ({
       class_name: c.className,
       teacher: c.teacher,
       period: c.period,
-      q1_grade: null,
-      q2_grade: null,
-      q3_grade: null,
+      q1_grade: c.q1_grade ?? null,
+      q2_grade: c.q2_grade ?? null,
+      q3_grade: c.q3_grade ?? null,
       q4_grade: c.q4_grade ?? null
     }));
     await saveGradesToFile(gradeClasses, missingAssignments);
