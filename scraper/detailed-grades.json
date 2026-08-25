@@ -1,8 +1,25 @@
 {
   "metadata": {
-    "scrapedAt": "2026-08-25T12:41:59.233Z",
-    "totalClasses": 0,
-    "totalAssignments": 0
+    "scrapedAt": "2026-08-25T18:51:26.759Z",
+    "totalClasses": 13,
+    "totalAssignments": 1
   },
-  "classes": []
+  "classes": [
+    {
+      "className": "ASTRONOMY",
+      "teacher": "James Krug",
+      "period": "6",
+      "currentGrade": 100,
+      "assignments": [
+        {
+          "name": "CLASS PARTICIPATION",
+          "dueDate": "08/26/2026",
+          "earnedPoints": 50,
+          "totalPoints": 50,
+          "weight": 1,
+          "graded": true
+        }
+      ]
+    }
+  ]
 }
