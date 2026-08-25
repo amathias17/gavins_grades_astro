@@ -9,7 +9,7 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
 ---
 
 <section class="payout-screen" aria-labelledby="payout-heading">
-    <h1 id="payout-heading" class="sr-only">Gavin's grade allowance</h1>
+    <h1 id="payout-heading" class="payout-headline">HOW MUCH MONEY WILL GAVIN TAKE FROM DAD?</h1>
     <div class="total" data-final={formattedAmount} aria-label={`${formattedAmount} dollars total earned`}>{formattedAmount.replace(/\d/g, "0")}</div>
     <div class="money-label" data-money-label data-text="DOLLARS" aria-hidden="true">DOLLARS</div>
 </section>
@@ -123,6 +123,7 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
 
 <style>
     .payout-screen { display: grid; place-items: center; align-content: center; width: 100%; min-height: 100svh; }
+    .payout-headline { width: min(90vw, 48rem); margin: 0 0 2.25rem; color: #61d49a; font: 700 clamp(.72rem, 2.2vw, 1.15rem)/1.4 "DM Mono", monospace; letter-spacing: .12em; text-align: center; text-shadow: 0 0 18px rgba(97, 212, 154, .35); text-transform: uppercase; }
     .total { color: #f2f5ef; font: 700 clamp(8rem, 34vw, 32rem)/.78 "Orbitron", sans-serif; letter-spacing: .01em; text-shadow: 0 0 70px rgba(97, 212, 154, .1); animation: arrive .8s cubic-bezier(.2, .8, .2, 1) both; }
     .total.is-spinning { animation: slot-shake .12s steps(2, end) infinite; color: #c8d4cc; text-shadow: 3px 0 #ff4fd8, -3px 0 #61d49a; }
     .money-label { position: relative; margin-top: 2rem; color: #61d49a; font: 700 clamp(1.1rem, 3.5vw, 1.65rem)/1 "Orbitron", sans-serif; letter-spacing: .28em; text-align: center; opacity: 0; transform: translateY(-.5rem); }

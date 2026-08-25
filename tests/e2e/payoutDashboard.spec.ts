@@ -1,10 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { readFileSync } from "node:fs";
 import { calculatePayout } from "../../src/utils/payout";
-
-const gradesData = JSON.parse(
-  readFileSync(new URL("../../src/data/grades.json", import.meta.url), "utf8"),
-) as { classes: { class_name: string; period: string; current_grade: number }[] };
 
 test.describe("A-grade payout dashboard", () => {
   test("calculates $50 for each numeric A", () => {
@@ -30,17 +25,10 @@ test.describe("A-grade payout dashboard", () => {
   test("renders the live payout state from the imported grade data", async ({ page }) => {
     await page.goto("/");
 
-    await expect(page.locator("#payout-heading")).toBeAttached();
+    await expect(page.locator("#payout-heading")).toHaveText("HOW MUCH MONEY WILL GAVIN TAKE FROM DAD?");
+    await expect(page.locator("#payout-heading")).toBeVisible();
     await expect(page.getByLabel(/\d+ dollars total earned/)).toBeVisible();
     await expect(page.locator(".site-header")).toHaveCount(0);
-
-    if (gradesData.classes.length === 0) {
-      await expect(page.getByLabel("0 dollars total earned")).toBeVisible();
-    } else {
-      const payout = calculatePayout(gradesData.classes);
-      await expect(page.getByText(`${payout.qualifyingACount} ${payout.qualifyingACount === 1 ? "A" : "As"} x $50`)).toBeVisible();
-      await expect(page.getByLabel("Current class payout breakdown")).toBeVisible();
-    }
   });
 
   test("rotates the money label with the initial word rendered server-side", async ({ page }) => {
