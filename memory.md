@@ -9,7 +9,7 @@
 - Payout display uses subtle positive .01em tracking so multi-character totals stay readable without spreading too far apart.
 - Payout display renders the currency symbol smaller than the numeric amount.
 - Payout display includes a centered uppercase client-side random slang/joke label (including DOLLARS, BUCKS, BUCKAROOS, IN DOUGH, DOLLARS CASH, and SLICES OF BACON) with a 6-second cadence, varied CSS glitch transitions, no immediate repeats, and reduced-motion fallback.
-- Payout display begins with a 2.2-second client-side slot-machine number reveal; slang rotation starts only after the final number lands, while reduced-motion skips the reveal.
+- Payout display begins with a masked placeholder and a 2.2-second client-side slot-machine number reveal; slang rotation starts only after the final number lands, while reduced-motion shows the final amount immediately.
 - Payout display uses the original whole-number slot effect: formatted digits change rapidly for 2.2 seconds, then the slang label appears and begins rotating.
 - Routes: /lab (lab.astro) is a dev-only layout lab for visual experiments and is not linked in navigation.
 - Routes: /stats (stats.astro) shows grade history stats with an SVG trend chart and class highlights.
