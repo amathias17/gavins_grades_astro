@@ -30,11 +30,12 @@ test.describe("A-grade payout dashboard", () => {
   test("renders the live payout state from the imported grade data", async ({ page }) => {
     await page.goto("/");
 
-    await expect(page.getByRole("heading", { name: /Good grades/ })).toBeVisible();
+    await expect(page.locator("#payout-heading")).toBeAttached();
     await expect(page.getByLabel(/\$\d+ total earned/)).toBeVisible();
+    await expect(page.locator(".site-header")).toHaveCount(0);
 
     if (gradesData.classes.length === 0) {
-      await expect(page.getByRole("status")).toContainText("No current classes");
+      await expect(page.getByLabel("$0 total earned")).toBeVisible();
     } else {
       const payout = calculatePayout(gradesData.classes);
       await expect(page.getByText(`${payout.qualifyingACount} ${payout.qualifyingACount === 1 ? "A" : "As"} x $50`)).toBeVisible();
