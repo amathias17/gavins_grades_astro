@@ -1,7 +1,13 @@
 import { expect, test } from "@playwright/test";
-import { countSchoolDays, getMarkingPeriodStatus, getSchoolDayReminder } from "../../src/utils/schoolCalendar";
+import { countSchoolDays, getMarkingPeriodStatus, getSchoolDayReminder, markingPeriods, specialDays, testingWindows } from "../../src/utils/schoolCalendar";
 
 test.describe("school calendar marking periods", () => {
+  test("keeps the published calendar data complete", () => {
+    expect(markingPeriods).toHaveLength(4);
+    expect(specialDays.length).toBeGreaterThan(0);
+    expect(testingWindows).toHaveLength(4);
+  });
+
   test("counts weekdays while excluding supplied closures", () => {
     expect(countSchoolDays("2026-08-26", "2026-08-31")).toBe(4);
   });

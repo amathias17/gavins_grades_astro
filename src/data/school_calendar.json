@@ -1,0 +1,29 @@
+{
+  "schoolYear": "2026-2027",
+  "firstSchoolDay": "2026-08-26",
+  "markingPeriods": [
+    { "number": 1, "start": "2026-08-26", "end": "2026-10-30" },
+    { "number": 2, "start": "2026-10-31", "end": "2027-01-21" },
+    { "number": 3, "start": "2027-01-22", "end": "2027-03-31" },
+    { "number": 4, "start": "2027-04-01", "end": "2027-06-04" }
+  ],
+  "specialDays": [
+    { "date": "2026-08-21", "label": "Teacher inservice", "kind": "closure" },
+    { "date": "2026-08-24", "label": "Teacher inservice", "kind": "closure" },
+    { "date": "2026-08-25", "label": "Teacher inservice", "kind": "closure" },
+    { "date": "2026-09-25", "label": "Teacher inservice", "kind": "closure" },
+    { "date": "2026-11-03", "label": "Teacher inservice", "kind": "closure" },
+    { "date": "2026-11-25", "label": "Teacher inservice", "kind": "closure" },
+    { "date": "2026-12-24", "label": "Teacher inservice", "kind": "closure" },
+    { "date": "2027-02-19", "label": "Teacher inservice", "kind": "closure" },
+    { "date": "2027-05-18", "label": "Teacher inservice", "kind": "closure" },
+    { "date": "2027-06-07", "label": "Teacher inservice", "kind": "closure" },
+    { "date": "2026-12-04", "label": "Morning students; afternoon staff only", "kind": "modified" }
+  ],
+  "testingWindows": [
+    { "label": "Keystone Winter Wave", "start": "2027-01-04", "end": "2027-01-15" },
+    { "label": "PSSA English Language Arts", "start": "2027-04-26", "end": "2027-04-30" },
+    { "label": "PSSA Math, Science, and make-ups", "start": "2027-05-03", "end": "2027-05-07" },
+    { "label": "Keystone Spring Wave", "start": "2027-05-17", "end": "2027-05-28" }
+  ]
+}

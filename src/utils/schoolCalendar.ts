@@ -1,3 +1,5 @@
+import calendarData from "../data/school_calendar.json" with { type: "json" };
+
 export type CalendarStatus = "before-school" | "active" | "after-period" | "completed";
 
 export interface MarkingPeriod {
@@ -10,6 +12,12 @@ export interface SpecialDay {
   date: string;
   label: string;
   kind: "closure" | "modified";
+}
+
+export interface TestingWindow {
+  label: string;
+  start: string;
+  end: string;
 }
 
 export interface MarkingPeriodStatus {
@@ -29,26 +37,9 @@ export interface SchoolDayReminder {
   tone: "normal" | "notice" | "special";
 }
 
-export const markingPeriods: MarkingPeriod[] = [
-  { number: 1, start: "2026-08-26", end: "2026-10-30" },
-  { number: 2, start: "2026-10-31", end: "2027-01-21" },
-  { number: 3, start: "2027-01-22", end: "2027-03-31" },
-  { number: 4, start: "2027-04-01", end: "2027-06-04" },
-];
-
-export const specialDays: SpecialDay[] = [
-  { date: "2026-08-21", label: "Teacher inservice", kind: "closure" },
-  { date: "2026-08-24", label: "Teacher inservice", kind: "closure" },
-  { date: "2026-08-25", label: "Teacher inservice", kind: "closure" },
-  { date: "2026-09-25", label: "Teacher inservice", kind: "closure" },
-  { date: "2026-11-03", label: "Teacher inservice", kind: "closure" },
-  { date: "2026-11-25", label: "Teacher inservice", kind: "closure" },
-  { date: "2026-12-24", label: "Teacher inservice", kind: "closure" },
-  { date: "2027-02-19", label: "Teacher inservice", kind: "closure" },
-  { date: "2027-05-18", label: "Teacher inservice", kind: "closure" },
-  { date: "2027-06-07", label: "Teacher inservice", kind: "closure" },
-  { date: "2026-12-04", label: "Morning students; afternoon staff only", kind: "modified" },
-];
+export const markingPeriods: MarkingPeriod[] = calendarData.markingPeriods;
+export const specialDays: SpecialDay[] = calendarData.specialDays;
+export const testingWindows: TestingWindow[] = calendarData.testingWindows;
 
 const closureDates = new Set(
   specialDays.filter((day) => day.kind === "closure").map((day) => day.date),
