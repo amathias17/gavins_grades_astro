@@ -1,6 +1,7 @@
 ---
 import gradesData from "../data/grades.json";
 import { calculatePayout } from "../utils/payout";
+import MarkingPeriodCard from "./MarkingPeriodCard.astro";
 
 const { totalPayout } = calculatePayout(gradesData.classes);
 const formattedAmount = new Intl.NumberFormat("en-US", {
@@ -12,6 +13,7 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
     <h1 id="payout-heading" class="payout-headline">HOW MUCH MONEY WILL GAVIN TAKE FROM DAD?</h1>
     <div class="total" data-final={formattedAmount} aria-label={`${formattedAmount} dollars total earned`}>{formattedAmount.replace(/\d/g, "0")}</div>
     <div class="money-label-frame" aria-hidden="true"><div class="money-label" data-money-label data-text="DOLLARS">DOLLARS</div></div>
+    <MarkingPeriodCard />
     <button class="feedback-button" type="button" data-feedback-open>Press to Submit Feedback</button>
     <dialog class="feedback-dialog" id="feedback-dialog" aria-label="Feedback response" aria-describedby="feedback-message">
         <button class="feedback-close" type="button" data-feedback-close>Close</button>
@@ -25,7 +27,7 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
     const feedbackOpen = document.querySelector<HTMLButtonElement>("[data-feedback-open]");
     const feedbackDialog = document.querySelector<HTMLDialogElement>("#feedback-dialog");
     const feedbackClose = feedbackDialog?.querySelector<HTMLButtonElement>("[data-feedback-close]");
-    const words = ["DOLLARS", "BUCKS", "BUCKAROOS", "IN DOUGH", "WASHINTONS", "SLICES OF BACON","SLICES OF CHEDDAR"];
+    const words = ["DOLLARS", "BUCKS", "BUCKAROOS", "IN DOUGH", "WASHINGTONS", "SLICES OF BACON","SLICES OF CHEDDAR"];
     const effects = ["glitch-slice", "glitch-flicker", "glitch-scan", "glitch-burst"];
     const effectClasses = ["glitch-slice", "glitch-flicker", "glitch-scan", "glitch-burst"];
     const glitchChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#$%?!";

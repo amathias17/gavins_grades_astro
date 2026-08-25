@@ -1,0 +1,93 @@
+---
+import { getMarkingPeriodStatus } from "../utils/schoolCalendar";
+
+const initialStatus = getMarkingPeriodStatus();
+const initialPeriodLabel = initialStatus.period ? `MARKING PERIOD ${initialStatus.period.number}` : initialStatus.label;
+---
+
+<aside
+    class="marking-period-card"
+    data-marking-period-card
+    data-status={JSON.stringify(initialStatus)}
+    aria-labelledby="marking-period-heading"
+>
+    <div class="marking-period-meta">
+        <span id="marking-period-heading" class="marking-period-kicker">{initialPeriodLabel}</span>
+        <span class="marking-period-signal" aria-hidden="true">● LIVE CALENDAR</span>
+    </div>
+    <strong class="marking-period-label" data-marking-period-label>{initialStatus.label}</strong>
+    <span class="marking-period-detail" data-marking-period-detail>{initialStatus.detail}</span>
+    <div class="marking-period-track" aria-hidden="true">
+        <span class="marking-period-progress" data-marking-period-progress style={`width: ${initialStatus.progressPercent}%`}></span>
+    </div>
+    <span class="sr-only" data-marking-period-announcement aria-live="polite"></span>
+</aside>
+
+<script>
+    import { getMarkingPeriodStatus } from "../utils/schoolCalendar";
+
+    const card = document.querySelector<HTMLElement>("[data-marking-period-card]");
+    const label = card?.querySelector<HTMLElement>("[data-marking-period-label]");
+    const detail = card?.querySelector<HTMLElement>("[data-marking-period-detail]");
+    const progress = card?.querySelector<HTMLElement>("[data-marking-period-progress]");
+    const heading = card?.querySelector<HTMLElement>("#marking-period-heading");
+    const announcement = card?.querySelector<HTMLElement>("[data-marking-period-announcement]");
+
+    const update = () => {
+        const status = getMarkingPeriodStatus(new Date());
+        const periodLabel = status.period ? `MARKING PERIOD ${status.period.number}` : status.label;
+        if (heading) heading.textContent = periodLabel;
+        if (label) label.textContent = status.label;
+        if (detail) detail.textContent = status.detail;
+        if (progress) progress.style.width = `${status.progressPercent}%`;
+        if (announcement) announcement.textContent = `${periodLabel}. ${status.label}. ${status.detail}.`;
+    };
+
+    update();
+    const millisecondsUntilTomorrow = () => {
+        const tomorrow = new Date();
+        tomorrow.setHours(24, 0, 5, 0);
+        return tomorrow.getTime() - Date.now();
+    };
+    window.setTimeout(() => {
+        update();
+        window.setInterval(update, 24 * 60 * 60 * 1000);
+    }, millisecondsUntilTomorrow());
+</script>
+
+<style>
+    .marking-period-card {
+        width: min(88vw, 31rem);
+        margin: 1.4rem auto 0;
+        padding: .8rem 1rem .95rem;
+        border: 1px solid rgba(97, 212, 154, .48);
+        border-radius: 2px;
+        background: linear-gradient(105deg, rgba(10, 28, 25, .94), rgba(15, 42, 35, .72));
+        box-shadow: 0 0 0 1px rgba(97, 212, 154, .08), 0 0 28px rgba(97, 212, 154, .11);
+        color: #dfffe9;
+        font-family: "DM Mono", monospace;
+        text-align: left;
+    }
+
+    .marking-period-meta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: .75rem;
+        color: #61d49a;
+        font-size: .57rem;
+        letter-spacing: .13em;
+        line-height: 1.3;
+    }
+
+    .marking-period-signal { color: rgba(223, 255, 233, .52); font-size: .48rem; }
+    .marking-period-signal::first-letter { color: #ffca3a; }
+    .marking-period-label { display: block; margin-top: .42rem; color: #f2f5ef; font-family: "Orbitron", sans-serif; font-size: clamp(1rem, 4vw, 1.45rem); letter-spacing: .07em; line-height: 1.1; }
+    .marking-period-detail { display: block; margin-top: .35rem; color: rgba(223, 255, 233, .68); font-size: .68rem; letter-spacing: .03em; }
+    .marking-period-track { height: .28rem; margin-top: .8rem; overflow: hidden; border: 1px solid rgba(97, 212, 154, .25); background: rgba(0, 0, 0, .34); }
+    .marking-period-progress { display: block; height: 100%; min-width: 0; background: repeating-linear-gradient(135deg, #61d49a 0 7px, #b6ffd0 7px 9px); box-shadow: 0 0 12px rgba(97, 212, 154, .7); transition: width .45s ease; }
+
+    @media (prefers-reduced-motion: reduce) {
+        .marking-period-progress { transition: none; }
+    }
+</style>
