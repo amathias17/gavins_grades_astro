@@ -14,8 +14,8 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
     <div class="money-label" data-money-label data-text="DOLLARS" aria-hidden="true">DOLLARS</div>
     <button class="feedback-button" type="button" data-feedback-open>Press to Submit Feedback</button>
     <dialog class="feedback-dialog" id="feedback-dialog" aria-label="Feedback response" aria-describedby="feedback-message">
+        <button class="feedback-close" type="button" data-feedback-close>Close</button>
         <p id="feedback-message">lol turn in your assignments.</p>
-        <button class="sr-only" type="button" data-feedback-close>Close feedback</button>
     </dialog>
 </section>
 
@@ -158,9 +158,12 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
     .money-label.is-glitching::after { color: #ff4fd8; clip-path: inset(55% 0 0 0); transform: translateX(.08em); }
     .feedback-button { margin-top: 1.7rem; border: 1px solid rgba(97, 212, 154, .7); padding: .7rem 1rem; color: #61d49a; background: rgba(10, 20, 16, .72); font: 700 .65rem/1 "DM Mono", monospace; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; box-shadow: 0 0 16px rgba(97, 212, 154, .12); transition: color .2s ease, background .2s ease, box-shadow .2s ease, transform .2s ease; }
     .feedback-button:hover, .feedback-button:focus-visible { color: #07110d; background: #61d49a; box-shadow: 0 0 24px rgba(97, 212, 154, .35); transform: translateY(-2px); }
-    .feedback-dialog { width: min(88vw, 28rem); border: 1px solid #61d49a; padding: 2rem; color: #61d49a; background: #07110d; box-shadow: 0 0 0 1px rgba(255, 79, 216, .35), 0 0 42px rgba(97, 212, 154, .25); font: 700 clamp(1rem, 3vw, 1.35rem)/1.4 "DM Mono", monospace; text-align: center; }
+    .feedback-dialog { width: 100vw; max-width: none; height: 100svh; max-height: none; margin: 0; border: 0; padding: clamp(2rem, 6vw, 5rem); color: #61d49a; background: #07110d; box-shadow: inset 0 0 0 1px rgba(97, 212, 154, .7), inset 0 0 0 3px rgba(255, 79, 216, .18); font: 700 clamp(1rem, 3vw, 1.35rem)/1.4 "DM Mono", monospace; text-align: center; }
+    .feedback-dialog[open] { display: grid; place-items: center; }
     .feedback-dialog::backdrop { background: rgba(2, 7, 5, .82); backdrop-filter: blur(3px); }
     .feedback-dialog p { margin: 0; }
+    .feedback-close { position: absolute; top: clamp(1rem, 3vw, 2rem); right: clamp(1rem, 3vw, 2rem); border: 1px solid rgba(97, 212, 154, .7); padding: .65rem .8rem; color: #61d49a; background: transparent; font: 700 .65rem/1 "DM Mono", monospace; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; }
+    .feedback-close:hover, .feedback-close:focus-visible { color: #07110d; background: #61d49a; outline: none; }
     @keyframes arrive { from { opacity: 0; transform: scale(.94); } to { opacity: 1; transform: scale(1); } }
     @keyframes slot-shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-.025em); } 75% { transform: translateX(.025em); } }
     .glitch-slice::before { animation: label-slice-a .56s steps(2, end) both; }

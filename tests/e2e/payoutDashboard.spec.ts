@@ -38,8 +38,9 @@ test.describe("A-grade payout dashboard", () => {
     const dialog = page.getByRole("dialog");
     await expect(dialog).toBeVisible();
     await expect(dialog.locator("#feedback-message")).toHaveText("lol turn in your assignments.");
+    await expect(dialog.getByRole("button", { name: "Close" })).toBeVisible();
 
-    await page.keyboard.press("Escape");
+    await dialog.getByRole("button", { name: "Close" }).click();
     await expect(dialog).not.toBeVisible();
   });
 

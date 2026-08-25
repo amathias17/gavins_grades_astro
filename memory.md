@@ -12,7 +12,7 @@
 - Payout display begins with a zeroed placeholder matching the final amount's digit/comma shape and a 2.2-second client-side slot-machine number reveal; slang rotation starts only after the final number lands, while reduced-motion shows the final amount immediately.
 - Payout display uses the original whole-number slot effect: formatted digits change rapidly for 2.2 seconds, then the slang label appears and begins rotating.
 - Payout slang transitions now struggle through a roughly 1.4-second staged scramble with partial fragments, corrupted characters, repeated glitch cycles, jitter, and a clean final lock-in; reduced-motion users skip the transition.
-- Payout homepage includes a "Press to Submit Feedback" button that opens an accessible modal containing "lol turn in your assignments." with Escape, backdrop click, and focus restoration behavior.
+- Payout homepage includes a "Press to Submit Feedback" button that opens a full-screen accessible modal containing "lol turn in your assignments." with a visible Close button, Escape, backdrop click, and focus restoration behavior.
 - Routes: /lab (lab.astro) is a dev-only layout lab for visual experiments and is not linked in navigation.
 - Routes: /stats (stats.astro) shows grade history stats with an SVG trend chart and class highlights.
 - Routes: /anime (anime.astro) is a Dragon Ball Z inspired proof-of-concept page with static content only.
