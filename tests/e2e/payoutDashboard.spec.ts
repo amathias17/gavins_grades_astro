@@ -31,6 +31,18 @@ test.describe("A-grade payout dashboard", () => {
     await expect(page.locator(".site-header")).toHaveCount(0);
   });
 
+  test("opens the feedback response modal", async ({ page }) => {
+    await page.goto("/");
+
+    await page.getByRole("button", { name: "Press to Submit Feedback" }).click();
+    const dialog = page.getByRole("dialog");
+    await expect(dialog).toBeVisible();
+    await expect(dialog.locator("#feedback-message")).toHaveText("lol turn in your assignments.");
+
+    await page.keyboard.press("Escape");
+    await expect(dialog).not.toBeVisible();
+  });
+
   test("rotates the money label with the initial word rendered server-side", async ({ page }) => {
     await page.goto("/");
 
