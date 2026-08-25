@@ -50,5 +50,6 @@ test.describe("A-grade payout dashboard", () => {
     await expect(label).toHaveText("DOLLARS");
     await page.waitForTimeout(6200);
     await expect(label).not.toHaveText("DOLLARS");
+    await expect(label).toHaveCSS("font-size", /.+/);
   });
 });
