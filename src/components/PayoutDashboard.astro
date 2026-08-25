@@ -20,10 +20,14 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
     const words = ["DOLLARS", "BUCKS", "BUCKAROOS", "IN DOUGH", "DOLLARS CASH", "SLICES OF BACON"];
     const effects = ["glitch-slice", "glitch-flicker", "glitch-scan", "glitch-burst"];
     const effectClasses = ["glitch-slice", "glitch-flicker", "glitch-scan", "glitch-burst"];
+    const glitchChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#$%?!";
+    const transitionDuration = 1400;
+    const transitionTick = 85;
 
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     let wordTimer: number | undefined;
     let spinTimer: number | undefined;
+    let transitionTimer: number | undefined;
 
     const startWordRotation = () => {
         if (!label || reduceMotion || wordTimer !== undefined) return;
@@ -37,16 +41,53 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
             return next;
         };
 
+        const scrambleWord = (from: string, to: string, progress: number) => {
+            const length = Math.max(from.length, to.length);
+            return Array.from({ length }, (_, index) => {
+                const nextCharacter = to[index] ?? "";
+                if (nextCharacter === " ") return " ";
+                const characterProgress = Math.min(1, Math.max(0, (progress - index / length * .42) / .58));
+                if (characterProgress > .86) return nextCharacter;
+                if (characterProgress > .58 && Math.random() > .35) return nextCharacter;
+                if (characterProgress < .18 && from[index] && Math.random() > .4) return from[index];
+                return glitchChars[Math.floor(Math.random() * glitchChars.length)];
+            }).join("");
+        };
+
+        const beginWordTransition = (nextWord: string) => {
+            if (!label || transitionTimer !== undefined) return;
+            const fromWord = label.textContent || words[wordIndex] || "DOLLARS";
+            const startedAt = performance.now();
+            let tickCount = 0;
+
+            const tick = () => {
+                if (!label) return;
+                const progress = Math.min(1, (performance.now() - startedAt) / transitionDuration);
+                if (progress >= 1) {
+                    label.textContent = nextWord;
+                    label.dataset.text = nextWord;
+                    label.classList.remove("is-glitching", ...effectClasses);
+                    transitionTimer = undefined;
+                    return;
+                }
+
+                const scrambled = scrambleWord(fromWord, nextWord, progress);
+                label.textContent = scrambled;
+                label.dataset.text = scrambled;
+                label.classList.remove(...effectClasses);
+                void label.offsetWidth;
+                effectIndex = randomIndexExcept(effects.length, effectIndex);
+                label.classList.add("is-glitching", effects[effectIndex]);
+                tickCount += 1;
+                transitionTimer = window.setTimeout(tick, transitionTick + (tickCount % 3) * 18);
+            };
+
+            tick();
+        };
+
         wordTimer = window.setInterval(() => {
             wordIndex = randomIndexExcept(words.length, wordIndex);
-            effectIndex = randomIndexExcept(effects.length, effectIndex);
-            const nextWord = words[wordIndex];
-            label.textContent = nextWord;
-            label.dataset.text = nextWord;
-            label.classList.remove("is-glitching", ...effectClasses);
-            void label.offsetWidth;
-            label.classList.add("is-glitching", effects[effectIndex]);
-            window.setTimeout(() => label.classList.remove("is-glitching", ...effectClasses), 560);
+            beginWordTransition(words[wordIndex]);
         }, 6000);
     };
 
@@ -76,6 +117,7 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
     document.addEventListener("astro:before-swap", () => {
         if (spinTimer !== undefined) window.clearInterval(spinTimer);
         if (wordTimer !== undefined) window.clearInterval(wordTimer);
+        if (transitionTimer !== undefined) window.clearTimeout(transitionTimer);
     }, { once: true });
 </script>
 
@@ -85,7 +127,7 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
     .total.is-spinning { animation: slot-shake .12s steps(2, end) infinite; color: #c8d4cc; text-shadow: 3px 0 #ff4fd8, -3px 0 #61d49a; }
     .money-label { position: relative; margin-top: 2rem; color: #61d49a; font: 700 clamp(1.1rem, 3.5vw, 1.65rem)/1 "Orbitron", sans-serif; letter-spacing: .28em; text-align: center; opacity: 0; transform: translateY(-.5rem); }
     .money-label.is-ready { opacity: 1; transform: translateY(0); transition: opacity .35s ease, transform .35s ease; }
-    .money-label.is-glitching { animation: label-glitch .56s steps(2, end) both; }
+    .money-label.is-glitching { animation: label-glitch .18s steps(2, end) infinite; text-shadow: 3px 0 #ff4fd8, -3px 0 #61d49a, 0 0 18px rgba(97, 212, 154, .45); }
     .money-label.is-glitching::before, .money-label.is-glitching::after { position: absolute; inset: 0; pointer-events: none; content: attr(data-text); }
     .money-label.is-glitching::before { color: #f2f5ef; clip-path: inset(0 0 52% 0); transform: translateX(-.08em); }
     .money-label.is-glitching::after { color: #ff4fd8; clip-path: inset(55% 0 0 0); transform: translateX(.08em); }
@@ -93,17 +135,17 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
     @keyframes slot-shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-.025em); } 75% { transform: translateX(.025em); } }
     .glitch-slice::before { animation: label-slice-a .56s steps(2, end) both; }
     .glitch-slice::after { animation: label-slice-b .56s steps(2, end) both; }
-    .glitch-flicker { animation: label-glitch-flicker .56s steps(4, end) both !important; text-shadow: 2px 0 #ff4fd8, -2px 0 #61d49a; }
+    .glitch-flicker { animation: label-glitch-flicker .3s steps(4, end) infinite !important; text-shadow: 4px 0 #ff4fd8, -4px 0 #61d49a; }
     .glitch-flicker::before { animation: label-slice-b .56s steps(3, end) both; }
     .glitch-flicker::after { animation: label-slice-a .56s steps(3, end) both; }
     .glitch-scan::before { animation: label-scan-a .56s steps(5, end) both; clip-path: inset(15% 0 68% 0); }
     .glitch-scan::after { animation: label-scan-b .56s steps(5, end) both; clip-path: inset(70% 0 12% 0); }
-    .glitch-burst { animation: label-burst .56s steps(2, end) both !important; }
+    .glitch-burst { animation: label-burst .42s steps(2, end) infinite !important; }
     .glitch-burst::before { animation: label-slice-a .56s steps(2, end) both; text-shadow: 4px 0 #ff4fd8; }
     .glitch-burst::after { animation: label-slice-b .56s steps(2, end) both; text-shadow: -4px 0 #61d49a; }
-    @keyframes label-glitch { 0%, 100% { transform: translateX(0); opacity: 1; } 20% { transform: translateX(-.04em); opacity: .75; } 45% { transform: translateX(.05em); opacity: .9; } 70% { transform: translateX(-.02em); opacity: .65; } }
-    @keyframes label-glitch-flicker { 0%, 100% { opacity: 1; transform: skewX(0); } 25% { opacity: .1; transform: skewX(-8deg); } 50% { opacity: .85; transform: skewX(5deg); } 75% { opacity: .25; transform: skewX(-3deg); } }
-    @keyframes label-burst { 0%, 100% { transform: scale(1); letter-spacing: .28em; } 35% { transform: scale(1.12); letter-spacing: .42em; opacity: .45; } 70% { transform: scale(.96); letter-spacing: .18em; } }
+    @keyframes label-glitch { 0%, 100% { transform: translate(0, 0); opacity: 1; } 20% { transform: translate(-.08em, .03em); opacity: .65; } 45% { transform: translate(.1em, -.02em); opacity: .95; } 70% { transform: translate(-.05em, .04em); opacity: .45; } }
+    @keyframes label-glitch-flicker { 0%, 100% { opacity: 1; transform: skewX(0); } 18% { opacity: .08; transform: skewX(-12deg) translateX(-.08em); } 42% { opacity: .9; transform: skewX(8deg) translateX(.1em); } 64% { opacity: .18; transform: skewX(-5deg) translateX(-.05em); } 82% { opacity: .75; transform: skewX(3deg); } }
+    @keyframes label-burst { 0%, 100% { transform: scale(1) translateX(0); letter-spacing: .28em; } 35% { transform: scale(1.15) translateX(-.04em); letter-spacing: .42em; opacity: .38; } 70% { transform: scale(.94) translateX(.06em); letter-spacing: .14em; opacity: .9; } }
     @keyframes label-scan-a { 0%, 100% { transform: translateX(-.08em); } 25% { transform: translateX(.18em); } 50% { transform: translateX(-.2em); } 75% { transform: translateX(.1em); } }
     @keyframes label-scan-b { 0%, 100% { transform: translateX(.08em); } 25% { transform: translateX(-.16em); } 50% { transform: translateX(.2em); } 75% { transform: translateX(-.1em); } }
     @keyframes label-slice-a { 0%, 100% { transform: translateX(-.08em); } 50% { transform: translateX(.14em); } }
