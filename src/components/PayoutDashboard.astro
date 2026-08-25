@@ -81,6 +81,8 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
         const beginWordTransition = (nextWord: string) => {
             if (!label || transitionTimer !== undefined) return;
             const fromWord = label.textContent || words[wordIndex] || "DOLLARS";
+            const fromLength = Math.max(1, fromWord.length);
+            const toLength = Math.max(1, nextWord.length);
             const startedAt = performance.now();
             let tickCount = 0;
 
@@ -90,14 +92,18 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
                 if (progress >= 1) {
                     label.textContent = nextWord;
                     label.dataset.text = nextWord;
+                    label.style.removeProperty("--morph-scale");
                     label.classList.remove("is-glitching", ...effectClasses);
                     transitionTimer = undefined;
                     return;
                 }
 
                 const scrambled = scrambleWord(fromWord, nextWord, progress);
+                const startScale = fromLength / toLength;
+                const morphScale = startScale + (1 - startScale) * progress;
                 label.textContent = scrambled;
                 label.dataset.text = scrambled;
+                label.style.setProperty("--morph-scale", morphScale.toFixed(3));
                 label.classList.remove(...effectClasses);
                 void label.offsetWidth;
                 effectIndex = randomIndexExcept(effects.length, effectIndex);
@@ -150,7 +156,7 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
     .payout-headline { width: min(90vw, 48rem); margin: 0 0 2.25rem; color: #61d49a; font: 700 clamp(.72rem, 2.2vw, 1.15rem)/1.4 "DM Mono", monospace; letter-spacing: .12em; text-align: center; text-shadow: 0 0 18px rgba(97, 212, 154, .35); text-transform: uppercase; }
     .total { color: #f2f5ef; font: 700 clamp(8rem, 34vw, 32rem)/.78 "Orbitron", sans-serif; letter-spacing: .01em; text-shadow: 0 0 70px rgba(97, 212, 154, .1); animation: arrive .8s cubic-bezier(.2, .8, .2, 1) both; }
     .total.is-spinning { animation: slot-shake .12s steps(2, end) infinite; color: #c8d4cc; text-shadow: 3px 0 #ff4fd8, -3px 0 #61d49a; }
-    .money-label { position: relative; margin-top: 2rem; color: #61d49a; font: 700 clamp(1.1rem, 3.5vw, 1.65rem)/1 "Orbitron", sans-serif; letter-spacing: .28em; text-align: center; opacity: 0; transform: translateY(-.5rem); }
+    .money-label { position: relative; display: inline-block; margin-top: 2rem; color: #61d49a; font: 700 clamp(1.1rem, 3.5vw, 1.65rem)/1 "Orbitron", sans-serif; letter-spacing: .28em; text-align: center; opacity: 0; transform: translateY(-.5rem); transform-origin: center; }
     .money-label.is-ready { opacity: 1; transform: translateY(0); transition: opacity .35s ease, transform .35s ease; }
     .money-label.is-glitching { animation: label-glitch .18s steps(2, end) infinite; text-shadow: 3px 0 #ff4fd8, -3px 0 #61d49a, 0 0 18px rgba(97, 212, 154, .45); }
     .money-label.is-glitching::before, .money-label.is-glitching::after { position: absolute; inset: 0; pointer-events: none; content: attr(data-text); }
@@ -176,9 +182,9 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
     .glitch-burst { animation: label-burst .42s steps(2, end) infinite !important; }
     .glitch-burst::before { animation: label-slice-a .56s steps(2, end) both; text-shadow: 4px 0 #ff4fd8; }
     .glitch-burst::after { animation: label-slice-b .56s steps(2, end) both; text-shadow: -4px 0 #61d49a; }
-    @keyframes label-glitch { 0%, 100% { transform: translate(0, 0); opacity: 1; } 20% { transform: translate(-.08em, .03em); opacity: .65; } 45% { transform: translate(.1em, -.02em); opacity: .95; } 70% { transform: translate(-.05em, .04em); opacity: .45; } }
-    @keyframes label-glitch-flicker { 0%, 100% { opacity: 1; transform: skewX(0); } 18% { opacity: .08; transform: skewX(-12deg) translateX(-.08em); } 42% { opacity: .9; transform: skewX(8deg) translateX(.1em); } 64% { opacity: .18; transform: skewX(-5deg) translateX(-.05em); } 82% { opacity: .75; transform: skewX(3deg); } }
-    @keyframes label-burst { 0%, 100% { transform: scale(1) translateX(0); letter-spacing: .28em; } 35% { transform: scale(1.15) translateX(-.04em); letter-spacing: .42em; opacity: .38; } 70% { transform: scale(.94) translateX(.06em); letter-spacing: .14em; opacity: .9; } }
+    @keyframes label-glitch { 0%, 100% { transform: scaleX(var(--morph-scale, 1)) translate(0, 0); opacity: 1; } 20% { transform: scaleX(var(--morph-scale, 1)) translate(-.08em, .03em); opacity: .65; } 45% { transform: scaleX(var(--morph-scale, 1)) translate(.1em, -.02em); opacity: .95; } 70% { transform: scaleX(var(--morph-scale, 1)) translate(-.05em, .04em); opacity: .45; } }
+    @keyframes label-glitch-flicker { 0%, 100% { opacity: 1; transform: scaleX(var(--morph-scale, 1)) skewX(0); } 18% { opacity: .08; transform: scaleX(var(--morph-scale, 1)) skewX(-12deg) translateX(-.08em); } 42% { opacity: .9; transform: scaleX(var(--morph-scale, 1)) skewX(8deg) translateX(.1em); } 64% { opacity: .18; transform: scaleX(var(--morph-scale, 1)) skewX(-5deg) translateX(-.05em); } 82% { opacity: .75; transform: scaleX(var(--morph-scale, 1)) skewX(3deg); } }
+    @keyframes label-burst { 0%, 100% { transform: scaleX(var(--morph-scale, 1)) scale(1) translateX(0); letter-spacing: .28em; } 35% { transform: scaleX(var(--morph-scale, 1)) scale(1.15) translateX(-.04em); letter-spacing: .42em; opacity: .38; } 70% { transform: scaleX(var(--morph-scale, 1)) scale(.94) translateX(.06em); letter-spacing: .14em; opacity: .9; } }
     @keyframes label-scan-a { 0%, 100% { transform: translateX(-.08em); } 25% { transform: translateX(.18em); } 50% { transform: translateX(-.2em); } 75% { transform: translateX(.1em); } }
     @keyframes label-scan-b { 0%, 100% { transform: translateX(.08em); } 25% { transform: translateX(-.16em); } 50% { transform: translateX(.2em); } 75% { transform: translateX(-.1em); } }
     @keyframes label-slice-a { 0%, 100% { transform: translateX(-.08em); } 50% { transform: translateX(.14em); } }
