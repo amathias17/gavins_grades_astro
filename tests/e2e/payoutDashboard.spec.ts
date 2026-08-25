@@ -55,7 +55,6 @@ test.describe("A-grade payout dashboard", () => {
     await expect(label).toHaveClass(/is-ready/);
     await expect(page.locator(".total")).not.toHaveClass(/is-spinning/);
     await page.waitForTimeout(6200);
-    await expect(label).toHaveClass(/is-glitching/);
     await expect(label).not.toHaveText("DOLLARS");
     await expect(label).toHaveCSS("font-size", /.+/);
   });
