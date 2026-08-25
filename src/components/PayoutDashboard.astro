@@ -11,7 +11,7 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
 <section class="payout-screen" aria-labelledby="payout-heading">
     <h1 id="payout-heading" class="payout-headline">HOW MUCH MONEY WILL GAVIN TAKE FROM DAD?</h1>
     <div class="total" data-final={formattedAmount} aria-label={`${formattedAmount} dollars total earned`}>{formattedAmount.replace(/\d/g, "0")}</div>
-    <div class="money-label" data-money-label data-text="DOLLARS" aria-hidden="true">DOLLARS</div>
+    <div class="money-label-frame" aria-hidden="true"><div class="money-label" data-money-label data-text="DOLLARS">DOLLARS</div></div>
     <button class="feedback-button" type="button" data-feedback-open>Press to Submit Feedback</button>
     <dialog class="feedback-dialog" id="feedback-dialog" aria-label="Feedback response" aria-describedby="feedback-message">
         <button class="feedback-close" type="button" data-feedback-close>Close</button>
@@ -31,6 +31,7 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
     const glitchChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#$%?!";
     const transitionDuration = 1400;
     const transitionTick = 85;
+    const stutterPattern = [85, 95, 210, 72, 280, 90, 160, 76, 320, 88];
 
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     let wordTimer: number | undefined;
@@ -93,7 +94,7 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
                     label.textContent = nextWord;
                     label.dataset.text = nextWord;
                     label.style.removeProperty("--morph-scale");
-                    label.classList.remove("is-glitching", ...effectClasses);
+                    label.classList.remove("is-glitching", "is-choked", ...effectClasses);
                     transitionTimer = undefined;
                     return;
                 }
@@ -108,8 +109,10 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
                 void label.offsetWidth;
                 effectIndex = randomIndexExcept(effects.length, effectIndex);
                 label.classList.add("is-glitching", effects[effectIndex]);
+                const stutterDelay = stutterPattern[tickCount % stutterPattern.length];
+                label.classList.toggle("is-choked", stutterDelay >= 200);
                 tickCount += 1;
-                transitionTimer = window.setTimeout(tick, transitionTick + (tickCount % 3) * 18);
+                transitionTimer = window.setTimeout(tick, stutterDelay);
             };
 
             tick();
@@ -156,12 +159,14 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
     .payout-headline { width: min(90vw, 48rem); margin: 0 0 2.25rem; color: #61d49a; font: 700 clamp(.72rem, 2.2vw, 1.15rem)/1.4 "DM Mono", monospace; letter-spacing: .12em; text-align: center; text-shadow: 0 0 18px rgba(97, 212, 154, .35); text-transform: uppercase; }
     .total { color: #f2f5ef; font: 700 clamp(8rem, 34vw, 32rem)/.78 "Orbitron", sans-serif; letter-spacing: .01em; text-shadow: 0 0 70px rgba(97, 212, 154, .1); animation: arrive .8s cubic-bezier(.2, .8, .2, 1) both; }
     .total.is-spinning { animation: slot-shake .12s steps(2, end) infinite; color: #c8d4cc; text-shadow: 3px 0 #ff4fd8, -3px 0 #61d49a; }
-    .money-label { position: relative; display: inline-block; margin-top: 2rem; color: #61d49a; font: 700 clamp(1.1rem, 3.5vw, 1.65rem)/1 "Orbitron", sans-serif; letter-spacing: .28em; text-align: center; opacity: 0; transform: translateY(-.5rem); transform-origin: center; }
+    .money-label-frame { width: min(92vw, 44rem); margin-top: 2rem; overflow: clip; text-align: center; }
+    .money-label { position: relative; display: inline-block; max-width: 92vw; color: #61d49a; font: 700 clamp(.85rem, 4.4vw, 1.65rem)/1 "Orbitron", sans-serif; letter-spacing: clamp(.08em, 1.5vw, .28em); text-align: center; white-space: nowrap; opacity: 0; transform: translateY(-.5rem); transform-origin: center; }
     .money-label.is-ready { opacity: 1; transform: translateY(0); transition: opacity .35s ease, transform .35s ease; }
     .money-label.is-glitching { animation: label-glitch .18s steps(2, end) infinite; text-shadow: 3px 0 #ff4fd8, -3px 0 #61d49a, 0 0 18px rgba(97, 212, 154, .45); }
     .money-label.is-glitching::before, .money-label.is-glitching::after { position: absolute; inset: 0; pointer-events: none; content: attr(data-text); }
     .money-label.is-glitching::before { color: #f2f5ef; clip-path: inset(0 0 52% 0); transform: translateX(-.08em); }
     .money-label.is-glitching::after { color: #ff4fd8; clip-path: inset(55% 0 0 0); transform: translateX(.08em); }
+    .money-label.is-choked, .money-label.is-choked::before, .money-label.is-choked::after { animation-play-state: paused !important; }
     .feedback-button { margin-top: 5rem; border: 1px solid rgba(97, 212, 154, .7); padding: .7rem 1rem; color: #61d49a; background: rgba(10, 20, 16, .72); font: 700 .65rem/1 "DM Mono", monospace; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; box-shadow: 0 0 16px rgba(97, 212, 154, .12); transition: color .2s ease, background .2s ease, box-shadow .2s ease, transform .2s ease; }
     .feedback-button:hover, .feedback-button:focus-visible { color: #07110d; background: #61d49a; box-shadow: 0 0 24px rgba(97, 212, 154, .35); transform: translateY(-2px); }
     .feedback-dialog { width: 100vw; max-width: none; height: 100svh; max-height: none; margin: 0; border: 0; padding: clamp(2rem, 6vw, 5rem); color: #61d49a; background: #07110d; box-shadow: inset 0 0 0 1px rgba(97, 212, 154, .7), inset 0 0 0 3px rgba(255, 79, 216, .18); font: 700 clamp(1rem, 3vw, 1.35rem)/1.4 "DM Mono", monospace; text-align: center; }
@@ -189,5 +194,5 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
     @keyframes label-scan-b { 0%, 100% { transform: translateX(.08em); } 25% { transform: translateX(-.16em); } 50% { transform: translateX(.2em); } 75% { transform: translateX(-.1em); } }
     @keyframes label-slice-a { 0%, 100% { transform: translateX(-.08em); } 50% { transform: translateX(.14em); } }
     @keyframes label-slice-b { 0%, 100% { transform: translateX(.08em); } 50% { transform: translateX(-.12em); } }
-    @media (prefers-reduced-motion: reduce) { .total, .total.is-spinning { animation: none; } .money-label { margin-top: 2rem; opacity: 1; transform: none; } }
+    @media (prefers-reduced-motion: reduce) { .total, .total.is-spinning { animation: none; } .money-label-frame { margin-top: 2rem; } .money-label { opacity: 1; transform: none; } }
 </style>
