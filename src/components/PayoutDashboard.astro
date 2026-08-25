@@ -33,11 +33,13 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
     const glitchChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#$%?!";
     const transitionDuration = 1400;
     const transitionTick = 85;
+    const loadingTick = 95;
     const stutterPattern = [85, 95, 210, 72, 280, 90, 160, 76, 320, 88];
 
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     let wordTimer: number | undefined;
     let spinTimer: number | undefined;
+    let loadingWordTimer: number | undefined;
     let transitionTimer: number | undefined;
     let feedbackReturnFocus: HTMLElement | null = null;
 
@@ -126,20 +128,42 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
         }, 6000);
     };
 
+    const startLoadingWordGlitch = () => {
+        if (!label || reduceMotion || loadingWordTimer !== undefined) return;
+        let loadingWord = words[0];
+        label.classList.add("is-loading", "is-glitching");
+        loadingWordTimer = window.setInterval(() => {
+            if (!label) return;
+            if (Math.random() > .72) loadingWord = words[Math.floor(Math.random() * words.length)];
+            const scrambled = Array.from(loadingWord, (character) => {
+                if (character === " ") return " ";
+                return Math.random() > .52 ? glitchChars[Math.floor(Math.random() * glitchChars.length)] : character;
+            }).join("");
+            label.textContent = scrambled;
+            label.dataset.text = scrambled;
+        }, loadingTick);
+    };
+
     if (total && label && reduceMotion) {
         total.textContent = total.dataset.final ?? "0";
         label.classList.add("is-ready");
     } else if (total && label) {
         const finalAmount = total.dataset.final ?? total.textContent ?? "0";
         const spinStartedAt = performance.now();
+        startLoadingWordGlitch();
         total.classList.add("is-spinning");
         spinTimer = window.setInterval(() => {
             const progress = Math.min(1, (performance.now() - spinStartedAt) / 2200);
             if (progress >= 1) {
                 if (spinTimer !== undefined) window.clearInterval(spinTimer);
                 spinTimer = undefined;
+                if (loadingWordTimer !== undefined) window.clearInterval(loadingWordTimer);
+                loadingWordTimer = undefined;
                 total.textContent = finalAmount;
                 total.classList.remove("is-spinning");
+                label.textContent = "DOLLARS";
+                label.dataset.text = "DOLLARS";
+                label.classList.remove("is-loading", "is-glitching");
                 label.classList.add("is-ready");
                 startWordRotation();
                 return;
@@ -151,6 +175,7 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
 
     document.addEventListener("astro:before-swap", () => {
         if (spinTimer !== undefined) window.clearInterval(spinTimer);
+        if (loadingWordTimer !== undefined) window.clearInterval(loadingWordTimer);
         if (wordTimer !== undefined) window.clearInterval(wordTimer);
         if (transitionTimer !== undefined) window.clearTimeout(transitionTimer);
     }, { once: true });
@@ -164,6 +189,7 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
     .money-label-frame { width: min(92vw, 44rem); margin-top: 2rem; overflow: clip; text-align: center; }
     .money-label { position: relative; display: inline-block; max-width: 92vw; color: #61d49a; font: 700 clamp(.85rem, 4.4vw, 1.65rem)/1 "Orbitron", sans-serif; letter-spacing: clamp(.08em, 1.5vw, .28em); text-align: center; white-space: nowrap; opacity: 0; transform: translateY(-.5rem); transform-origin: center; }
     .money-label.is-ready { opacity: 1; transform: translateY(0); transition: opacity .35s ease, transform .35s ease; }
+    .money-label.is-loading { opacity: .72; transform: translateY(0); }
     .money-label.is-glitching { animation: label-glitch .18s steps(2, end) infinite; text-shadow: 3px 0 #ff4fd8, -3px 0 #61d49a, 0 0 18px rgba(97, 212, 154, .45); }
     .money-label.is-glitching::before, .money-label.is-glitching::after { position: absolute; inset: 0; pointer-events: none; content: attr(data-text); }
     .money-label.is-glitching::before { color: #f2f5ef; clip-path: inset(0 0 52% 0); transform: translateX(-.08em); }
