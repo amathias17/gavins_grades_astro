@@ -7,6 +7,7 @@
 - Routes: / (index.astro) renders the dark, headerless, full-screen PayoutDashboard with only a centered total; it uses $50 per numeric current_grade >= 90 and shows $0 when no classes are imported. /classes/[classId].astro builds static paths from class_id or period, embeds GradeCalculator and assignments table with status chips, and pulls scraped assignments from scraper/detailed-grades.json when available (matching by period and normalized class name); /calculator (calculator.astro) is the new 2-column dashboard with class selector, form, and results panels; legacy prototypes live in src/pages/new.astro and old.astro.
 - Payout display uses Orbitron loaded from Google Fonts.
 - Payout display uses positive tracking so multi-character totals do not visually collide.
+- Payout display renders the currency symbol smaller than the numeric amount.
 - Routes: /lab (lab.astro) is a dev-only layout lab for visual experiments and is not linked in navigation.
 - Routes: /stats (stats.astro) shows grade history stats with an SVG trend chart and class highlights.
 - Routes: /anime (anime.astro) is a Dragon Ball Z inspired proof-of-concept page with static content only.

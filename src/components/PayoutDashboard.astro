@@ -9,16 +9,20 @@ const currency = new Intl.NumberFormat("en-US", {
     maximumFractionDigits: 0,
 });
 const formattedTotal = currency.format(totalPayout);
+const formattedAmount = new Intl.NumberFormat("en-US", {
+    maximumFractionDigits: 0,
+}).format(totalPayout);
 ---
 
 <section class="payout-screen" aria-labelledby="payout-heading">
     <h1 id="payout-heading" class="sr-only">Gavin's grade allowance</h1>
-    <div class="total" aria-label={`${formattedTotal} total earned`}>{formattedTotal}</div>
+    <div class="total" aria-label={`${formattedTotal} total earned`}><span class="currency-symbol" aria-hidden="true">$</span>{formattedAmount}</div>
 </section>
 
 <style>
     .payout-screen { display: grid; place-items: center; width: 100%; min-height: 100svh; }
     .total { color: #f2f5ef; font: 700 clamp(8rem, 34vw, 32rem)/.78 "Orbitron", sans-serif; letter-spacing: .03em; text-shadow: 0 0 70px rgba(97, 212, 154, .1); animation: arrive .8s cubic-bezier(.2, .8, .2, 1) both; }
+    .currency-symbol { display: inline-block; margin-right: .08em; font-size: .45em; letter-spacing: 0; vertical-align: .35em; }
     @keyframes arrive { from { opacity: 0; transform: scale(.94); } to { opacity: 1; transform: scale(1); } }
     @media (prefers-reduced-motion: reduce) { .total { animation: none; } }
 </style>
