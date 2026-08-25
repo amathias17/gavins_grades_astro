@@ -10,6 +10,7 @@
 - Payout display renders the currency symbol smaller than the numeric amount.
 - Payout display includes a centered uppercase client-side random slang/joke label (including DOLLARS, BUCKS, BUCKAROOS, IN DOUGH, DOLLARS CASH, and SLICES OF BACON) with a 6-second cadence, varied CSS glitch transitions, no immediate repeats, and reduced-motion fallback.
 - Payout display begins with a 2.2-second client-side slot-machine number reveal; slang rotation starts only after the final number lands, while reduced-motion skips the reveal.
+- Payout reels render one fixed-width track per digit, keep separators stationary, and reserve the label layout so multi-digit totals land without shifting.
 - Routes: /lab (lab.astro) is a dev-only layout lab for visual experiments and is not linked in navigation.
 - Routes: /stats (stats.astro) shows grade history stats with an SVG trend chart and class highlights.
 - Routes: /anime (anime.astro) is a Dragon Ball Z inspired proof-of-concept page with static content only.

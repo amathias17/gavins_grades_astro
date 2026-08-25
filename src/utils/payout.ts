@@ -2,6 +2,16 @@ import type { Class } from "../types/grades";
 
 export const PAYOUT_PER_A = 50;
 
+export function formatPayoutAmount(amount: number): string {
+  return new Intl.NumberFormat("en-US", {
+    maximumFractionDigits: 0,
+  }).format(amount);
+}
+
+export function getPayoutDisplayParts(amount: number): string[] {
+  return [...formatPayoutAmount(amount)];
+}
+
 export interface PayoutClass {
   className: string;
   period: string;
