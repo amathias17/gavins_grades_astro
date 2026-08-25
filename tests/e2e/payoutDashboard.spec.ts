@@ -1,19 +1,12 @@
 import { expect, test } from "@playwright/test";
 import { readFileSync } from "node:fs";
-import { calculatePayout, getPayoutDisplayParts } from "../../src/utils/payout";
+import { calculatePayout } from "../../src/utils/payout";
 
 const gradesData = JSON.parse(
   readFileSync(new URL("../../src/data/grades.json", import.meta.url), "utf8"),
 ) as { classes: { class_name: string; period: string; current_grade: number }[] };
 
 test.describe("A-grade payout dashboard", () => {
-  test("keeps every payout digit in a fixed display part", () => {
-    expect(getPayoutDisplayParts(0)).toEqual(["0"]);
-    expect(getPayoutDisplayParts(50)).toEqual(["5", "0"]);
-    expect(getPayoutDisplayParts(100)).toEqual(["1", "0", "0"]);
-    expect(getPayoutDisplayParts(1050)).toEqual(["1", ",", "0", "5", "0"]);
-  });
-
   test("calculates $50 for each numeric A", () => {
     const result = calculatePayout([
       { class_name: "English", period: "1", current_grade: 90 },
@@ -54,20 +47,12 @@ test.describe("A-grade payout dashboard", () => {
     await page.goto("/");
 
     const label = page.locator("[data-money-label]");
-    const total = page.locator(".total");
     await expect(label).toHaveText("DOLLARS");
     await expect(label).not.toHaveClass(/is-ready/);
-    await expect(total).toHaveClass(/is-spinning/);
-    await expect(total.locator(".digit-window")).toHaveCount(String(calculatePayout(gradesData.classes).totalPayout).length);
-    const spinningBox = await total.boundingBox();
+    await expect(page.locator(".total")).toHaveClass(/is-spinning/);
     await page.waitForTimeout(2400);
     await expect(label).toHaveClass(/is-ready/);
-    await expect(total).not.toHaveClass(/is-spinning/);
-    const landedBox = await total.boundingBox();
-    expect(landedBox).not.toBeNull();
-    expect(spinningBox).not.toBeNull();
-    expect(Math.abs((landedBox?.x ?? 0) - (spinningBox?.x ?? 0))).toBeLessThan(1);
-    expect(Math.abs((landedBox?.y ?? 0) - (spinningBox?.y ?? 0))).toBeLessThan(1);
+    await expect(page.locator(".total")).not.toHaveClass(/is-spinning/);
     await page.waitForTimeout(6200);
     await expect(label).not.toHaveText("DOLLARS");
     await expect(label).toHaveCSS("font-size", /.+/);

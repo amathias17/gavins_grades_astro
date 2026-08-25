@@ -1,42 +1,29 @@
 ---
 import gradesData from "../data/grades.json";
-import { calculatePayout, getPayoutDisplayParts, formatPayoutAmount } from "../utils/payout";
+import { calculatePayout } from "../utils/payout";
 
 const { totalPayout } = calculatePayout(gradesData.classes);
-const formattedAmount = formatPayoutAmount(totalPayout);
-const amountParts = getPayoutDisplayParts(totalPayout);
-const reelDigits = Array.from({ length: 70 }, (_, index) => index % 10);
+const formattedAmount = new Intl.NumberFormat("en-US", {
+    maximumFractionDigits: 0,
+}).format(totalPayout);
 ---
 
 <section class="payout-screen" aria-labelledby="payout-heading">
     <h1 id="payout-heading" class="sr-only">Gavin's grade allowance</h1>
-    <div class="payout-stack">
-        <div class="total" data-final={formattedAmount} data-digit-count={amountParts.filter((part) => /\d/.test(part)).length} role="img" aria-label={`${formattedAmount} dollars total earned`}>
-            {amountParts.map((part) => part === "," ? (
-                <span class="amount-separator" aria-hidden="true">,</span>
-            ) : (
-                <span class="digit-window" aria-hidden="true">
-                    <span class="digit-reel" data-digit-reel data-final-digit={part} style={`transform: translateY(-${50 + Number(part)}em)`}>
-                        {reelDigits.map((digit) => <span class="digit">{digit}</span>)}
-                    </span>
-                </span>
-            ))}
-        </div>
-        <div class="money-label" data-money-label data-text="DOLLARS" aria-hidden="true">DOLLARS</div>
-    </div>
+    <div class="total" data-final={formattedAmount} aria-label={`${formattedAmount} dollars total earned`}>{formattedAmount}</div>
+    <div class="money-label" data-money-label data-text="DOLLARS" aria-hidden="true">DOLLARS</div>
 </section>
 
 <script>
     const total = document.querySelector<HTMLElement>(".total");
     const label = document.querySelector<HTMLElement>("[data-money-label]");
-    const reels = Array.from(document.querySelectorAll<HTMLElement>("[data-digit-reel]"));
     const words = ["DOLLARS", "BUCKS", "BUCKAROOS", "IN DOUGH", "DOLLARS CASH", "SLICES OF BACON"];
     const effects = ["glitch-slice", "glitch-flicker", "glitch-scan", "glitch-burst"];
     const effectClasses = ["glitch-slice", "glitch-flicker", "glitch-scan", "glitch-burst"];
 
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     let wordTimer: number | undefined;
-    let landingTimer: number | undefined;
+    let spinTimer: number | undefined;
 
     const startWordRotation = () => {
         if (!label || reduceMotion || wordTimer !== undefined) return;
@@ -61,67 +48,48 @@ const reelDigits = Array.from({ length: 70 }, (_, index) => index % 10);
             label.classList.add("is-glitching", effects[effectIndex]);
             window.setTimeout(() => label.classList.remove("is-glitching", ...effectClasses), 560);
         }, 6000);
-
     };
 
     if (total && label && reduceMotion) {
-        reels.forEach((reel) => {
-            const finalDigit = Number(reel.dataset.finalDigit ?? "0");
-            reel.style.transform = `translateY(-${50 + finalDigit}em)`;
-        });
         label.classList.add("is-ready");
-    } else if (total && label && reels.length > 0) {
-        const finalAmount = total.dataset.final ?? "0";
-        const finalDigits = [...finalAmount].filter((character) => /\d/.test(character));
-
-        reels.forEach((reel, index) => {
-            const finalDigit = Number(reel.dataset.finalDigit ?? finalDigits[index] ?? "0");
-            const startIndex = Math.floor(Math.random() * 10);
-            const landingIndex = 50 + finalDigit;
-            reel.style.transform = `translateY(-${startIndex}em)`;
-            reel.style.setProperty("--reel-delay", `${index * 35}ms`);
-            reel.style.setProperty("--landing-index", String(landingIndex));
-        });
-
+    } else if (total && label) {
+        const finalAmount = total.dataset.final ?? total.textContent ?? "0";
+        const spinStartedAt = performance.now();
         total.classList.add("is-spinning");
+        spinTimer = window.setInterval(() => {
+            const progress = Math.min(1, (performance.now() - spinStartedAt) / 2200);
+            if (progress >= 1) {
+                if (spinTimer !== undefined) window.clearInterval(spinTimer);
+                spinTimer = undefined;
+                total.textContent = finalAmount;
+                total.classList.remove("is-spinning");
+                label.classList.add("is-ready");
+                startWordRotation();
+                return;
+            }
 
-        requestAnimationFrame(() => {
-            reels.forEach((reel) => {
-                const landingIndex = reel.style.getPropertyValue("--landing-index");
-                reel.style.transform = `translateY(-${landingIndex}em)`;
-            });
-        });
-
-        landingTimer = window.setTimeout(() => {
-            total.classList.remove("is-spinning");
-            label.classList.add("is-ready");
-            startWordRotation();
-            landingTimer = undefined;
-        }, 2200 + (reels.length - 1) * 35);
+            total.textContent = finalAmount.replace(/\d/g, () => String(Math.floor(Math.random() * 10)));
+        }, 70);
     }
 
     document.addEventListener("astro:before-swap", () => {
+        if (spinTimer !== undefined) window.clearInterval(spinTimer);
         if (wordTimer !== undefined) window.clearInterval(wordTimer);
-        if (landingTimer !== undefined) window.clearTimeout(landingTimer);
     }, { once: true });
 </script>
 
 <style>
-    .payout-screen { display: grid; place-items: center; width: 100%; min-height: 100svh; }
-    .payout-stack { display: grid; justify-items: center; }
-    .total { display: flex; align-items: center; justify-content: center; color: #f2f5ef; font: 700 clamp(8rem, 34vw, 32rem)/1 "Orbitron", sans-serif; font-variant-numeric: tabular-nums; letter-spacing: .03em; text-shadow: 0 0 70px rgba(97, 212, 154, .1); }
-    .digit-window { display: block; width: .95em; height: 1em; overflow: hidden; }
-    .digit-reel { display: flex; flex-direction: column; align-items: center; transform: translateY(0); }
-    .digit { display: grid; width: 100%; height: 1em; place-items: center; }
-    .amount-separator { width: .35em; text-align: center; }
-    .total.is-spinning { color: #c8d4cc; text-shadow: 3px 0 #ff4fd8, -3px 0 #61d49a; }
-    .total.is-spinning .digit-reel { filter: blur(.035em); transition: transform 2.1s cubic-bezier(.18, .86, .22, 1); transition-delay: var(--reel-delay); }
+    .payout-screen { display: grid; place-items: center; align-content: center; width: 100%; min-height: 100svh; }
+    .total { color: #f2f5ef; font: 700 clamp(8rem, 34vw, 32rem)/.78 "Orbitron", sans-serif; letter-spacing: .03em; text-shadow: 0 0 70px rgba(97, 212, 154, .1); animation: arrive .8s cubic-bezier(.2, .8, .2, 1) both; }
+    .total.is-spinning { animation: slot-shake .12s steps(2, end) infinite; color: #c8d4cc; text-shadow: 3px 0 #ff4fd8, -3px 0 #61d49a; }
     .money-label { position: relative; margin-top: 2rem; color: #61d49a; font: 700 clamp(1.1rem, 3.5vw, 1.65rem)/1 "Orbitron", sans-serif; letter-spacing: .28em; text-align: center; opacity: 0; transform: translateY(-.5rem); }
     .money-label.is-ready { opacity: 1; transform: translateY(0); transition: opacity .35s ease, transform .35s ease; }
     .money-label.is-glitching { animation: label-glitch .56s steps(2, end) both; }
     .money-label.is-glitching::before, .money-label.is-glitching::after { position: absolute; inset: 0; pointer-events: none; content: attr(data-text); }
     .money-label.is-glitching::before { color: #f2f5ef; clip-path: inset(0 0 52% 0); transform: translateX(-.08em); }
     .money-label.is-glitching::after { color: #ff4fd8; clip-path: inset(55% 0 0 0); transform: translateX(.08em); }
+    @keyframes arrive { from { opacity: 0; transform: scale(.94); } to { opacity: 1; transform: scale(1); } }
+    @keyframes slot-shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-.025em); } 75% { transform: translateX(.025em); } }
     .glitch-slice::before { animation: label-slice-a .56s steps(2, end) both; }
     .glitch-slice::after { animation: label-slice-b .56s steps(2, end) both; }
     .glitch-flicker { animation: label-glitch-flicker .56s steps(4, end) both !important; text-shadow: 2px 0 #ff4fd8, -2px 0 #61d49a; }
@@ -139,5 +107,5 @@ const reelDigits = Array.from({ length: 70 }, (_, index) => index % 10);
     @keyframes label-scan-b { 0%, 100% { transform: translateX(.08em); } 25% { transform: translateX(-.16em); } 50% { transform: translateX(.2em); } 75% { transform: translateX(-.1em); } }
     @keyframes label-slice-a { 0%, 100% { transform: translateX(-.08em); } 50% { transform: translateX(.14em); } }
     @keyframes label-slice-b { 0%, 100% { transform: translateX(.08em); } 50% { transform: translateX(-.12em); } }
-    @media (prefers-reduced-motion: reduce) { .total.is-spinning .digit-reel { transition: none; filter: none; } .money-label { margin-top: 2rem; opacity: 1; transform: none; } }
+    @media (prefers-reduced-motion: reduce) { .total, .total.is-spinning { animation: none; } .money-label { margin-top: 2rem; opacity: 1; transform: none; } }
 </style>
