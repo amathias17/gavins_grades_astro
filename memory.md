@@ -8,7 +8,7 @@
 - Payout display uses Orbitron loaded from Google Fonts.
 - Payout display uses positive tracking so multi-character totals do not visually collide.
 - Payout display renders the currency symbol smaller than the numeric amount.
-- Payout display includes a client-side rotating slang label (dollars, bucks, buckaroos, dough, moolah, cash) with a 3-second CSS glitch transition and reduced-motion fallback.
+- Payout display includes a centered uppercase client-side rotating slang label (DOLLARS, BUCKS, BUCKAROOS, DOUGH, MOOLAH, CASH) with a 6-second cadence, varied CSS glitch transitions, and reduced-motion fallback.
 - Routes: /lab (lab.astro) is a dev-only layout lab for visual experiments and is not linked in navigation.
 - Routes: /stats (stats.astro) shows grade history stats with an SVG trend chart and class highlights.
 - Routes: /anime (anime.astro) is a Dragon Ball Z inspired proof-of-concept page with static content only.

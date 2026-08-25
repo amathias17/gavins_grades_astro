@@ -31,11 +31,11 @@ test.describe("A-grade payout dashboard", () => {
     await page.goto("/");
 
     await expect(page.locator("#payout-heading")).toBeAttached();
-    await expect(page.getByLabel(/\$\d+ total earned/)).toBeVisible();
+    await expect(page.getByLabel(/\d+ dollars total earned/)).toBeVisible();
     await expect(page.locator(".site-header")).toHaveCount(0);
 
     if (gradesData.classes.length === 0) {
-      await expect(page.getByLabel("$0 total earned")).toBeVisible();
+      await expect(page.getByLabel("0 dollars total earned")).toBeVisible();
     } else {
       const payout = calculatePayout(gradesData.classes);
       await expect(page.getByText(`${payout.qualifyingACount} ${payout.qualifyingACount === 1 ? "A" : "As"} x $50`)).toBeVisible();
@@ -47,8 +47,8 @@ test.describe("A-grade payout dashboard", () => {
     await page.goto("/");
 
     const label = page.locator("[data-money-label]");
-    await expect(label).toHaveText("dollars");
-    await page.waitForTimeout(3200);
-    await expect(label).not.toHaveText("dollars");
+    await expect(label).toHaveText("DOLLARS");
+    await page.waitForTimeout(6200);
+    await expect(label).not.toHaveText("DOLLARS");
   });
 });

@@ -3,12 +3,6 @@ import gradesData from "../data/grades.json";
 import { calculatePayout } from "../utils/payout";
 
 const { totalPayout } = calculatePayout(gradesData.classes);
-const currency = new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-    maximumFractionDigits: 0,
-});
-const formattedTotal = currency.format(totalPayout);
 const formattedAmount = new Intl.NumberFormat("en-US", {
     maximumFractionDigits: 0,
 }).format(totalPayout);
@@ -16,13 +10,15 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
 
 <section class="payout-screen" aria-labelledby="payout-heading">
     <h1 id="payout-heading" class="sr-only">Gavin's grade allowance</h1>
-    <div class="total" aria-label={`${formattedTotal} total earned`}><span class="currency-symbol" aria-hidden="true">$</span>{formattedAmount}</div>
-    <div class="money-label" data-money-label data-text="dollars" aria-hidden="true">dollars</div>
+    <div class="total" aria-label={`${formattedAmount} dollars total earned`}>{formattedAmount}</div>
+    <div class="money-label" data-money-label data-text="DOLLARS" aria-hidden="true">DOLLARS</div>
 </section>
 
 <script>
     const label = document.querySelector<HTMLElement>("[data-money-label]");
-    const words = ["dollars", "bucks", "buckaroos", "dough", "moolah", "cash"];
+    const words = ["DOLLARS", "BUCKS", "BUCKAROOS", "DOUGH", "MOOLAH", "CASH", "SCRILLA", "BREAD", "LOOT", "CABBAGE", "DINERO", "FOLDERS", "GREENBACKS", "PAPER", "SMACKERS", "STASH"];
+    const effects = ["glitch-slice", "glitch-flicker", "glitch-scan", "glitch-burst"];
+    const effectClasses = ["glitch-slice", "glitch-flicker", "glitch-scan", "glitch-burst"];
 
     if (label && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
         let wordIndex = 0;
@@ -31,11 +27,11 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
             const nextWord = words[wordIndex];
             label.textContent = nextWord;
             label.dataset.text = nextWord;
-            label.classList.remove("is-glitching");
+            label.classList.remove("is-glitching", ...effectClasses);
             void label.offsetWidth;
-            label.classList.add("is-glitching");
-            window.setTimeout(() => label.classList.remove("is-glitching"), 320);
-        }, 3000);
+            label.classList.add("is-glitching", effects[wordIndex % effects.length]);
+            window.setTimeout(() => label.classList.remove("is-glitching", ...effectClasses), 560);
+        }, 6000);
 
         document.addEventListener("astro:before-swap", () => window.clearInterval(timer), { once: true });
     }
@@ -44,15 +40,28 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
 <style>
     .payout-screen { display: grid; place-items: center; align-content: center; width: 100%; min-height: 100svh; }
     .total { color: #f2f5ef; font: 700 clamp(8rem, 34vw, 32rem)/.78 "Orbitron", sans-serif; letter-spacing: .03em; text-shadow: 0 0 70px rgba(97, 212, 154, .1); animation: arrive .8s cubic-bezier(.2, .8, .2, 1) both; }
-    .currency-symbol { display: inline-block; margin-right: .08em; font-size: .45em; letter-spacing: 0; vertical-align: .35em; }
-    .money-label { position: relative; margin-top: 1.5rem; color: #61d49a; font: 700 clamp(.8rem, 2vw, 1.15rem)/1 "Orbitron", sans-serif; letter-spacing: .28em; text-transform: lowercase; }
-    .money-label.is-glitching { animation: label-glitch .32s steps(2, end) both; }
+    .money-label { position: relative; margin-top: 2rem; color: #61d49a; font: 700 clamp(1rem, 3vw, 1.45rem)/1 "Orbitron", sans-serif; letter-spacing: .28em; text-align: center; }
+    .money-label.is-glitching { animation: label-glitch .56s steps(2, end) both; }
     .money-label.is-glitching::before, .money-label.is-glitching::after { position: absolute; inset: 0; pointer-events: none; content: attr(data-text); }
-    .money-label.is-glitching::before { color: #f2f5ef; animation: label-slice-a .32s steps(2, end) both; clip-path: inset(0 0 52% 0); transform: translateX(-.08em); }
-    .money-label.is-glitching::after { color: #ff4fd8; animation: label-slice-b .32s steps(2, end) both; clip-path: inset(55% 0 0 0); transform: translateX(.08em); }
+    .money-label.is-glitching::before { color: #f2f5ef; clip-path: inset(0 0 52% 0); transform: translateX(-.08em); }
+    .money-label.is-glitching::after { color: #ff4fd8; clip-path: inset(55% 0 0 0); transform: translateX(.08em); }
     @keyframes arrive { from { opacity: 0; transform: scale(.94); } to { opacity: 1; transform: scale(1); } }
+    .glitch-slice::before { animation: label-slice-a .56s steps(2, end) both; }
+    .glitch-slice::after { animation: label-slice-b .56s steps(2, end) both; }
+    .glitch-flicker { animation: label-glitch-flicker .56s steps(4, end) both !important; text-shadow: 2px 0 #ff4fd8, -2px 0 #61d49a; }
+    .glitch-flicker::before { animation: label-slice-b .56s steps(3, end) both; }
+    .glitch-flicker::after { animation: label-slice-a .56s steps(3, end) both; }
+    .glitch-scan::before { animation: label-scan-a .56s steps(5, end) both; clip-path: inset(15% 0 68% 0); }
+    .glitch-scan::after { animation: label-scan-b .56s steps(5, end) both; clip-path: inset(70% 0 12% 0); }
+    .glitch-burst { animation: label-burst .56s steps(2, end) both !important; }
+    .glitch-burst::before { animation: label-slice-a .56s steps(2, end) both; text-shadow: 4px 0 #ff4fd8; }
+    .glitch-burst::after { animation: label-slice-b .56s steps(2, end) both; text-shadow: -4px 0 #61d49a; }
     @keyframes label-glitch { 0%, 100% { transform: translateX(0); opacity: 1; } 20% { transform: translateX(-.04em); opacity: .75; } 45% { transform: translateX(.05em); opacity: .9; } 70% { transform: translateX(-.02em); opacity: .65; } }
+    @keyframes label-glitch-flicker { 0%, 100% { opacity: 1; transform: skewX(0); } 25% { opacity: .1; transform: skewX(-8deg); } 50% { opacity: .85; transform: skewX(5deg); } 75% { opacity: .25; transform: skewX(-3deg); } }
+    @keyframes label-burst { 0%, 100% { transform: scale(1); letter-spacing: .28em; } 35% { transform: scale(1.12); letter-spacing: .42em; opacity: .45; } 70% { transform: scale(.96); letter-spacing: .18em; } }
+    @keyframes label-scan-a { 0%, 100% { transform: translateX(-.08em); } 25% { transform: translateX(.18em); } 50% { transform: translateX(-.2em); } 75% { transform: translateX(.1em); } }
+    @keyframes label-scan-b { 0%, 100% { transform: translateX(.08em); } 25% { transform: translateX(-.16em); } 50% { transform: translateX(.2em); } 75% { transform: translateX(-.1em); } }
     @keyframes label-slice-a { 0%, 100% { transform: translateX(-.08em); } 50% { transform: translateX(.14em); } }
     @keyframes label-slice-b { 0%, 100% { transform: translateX(.08em); } 50% { transform: translateX(-.12em); } }
-    @media (prefers-reduced-motion: reduce) { .total { animation: none; } .money-label { margin-top: 1.5rem; } }
+    @media (prefers-reduced-motion: reduce) { .total { animation: none; } .money-label { margin-top: 2rem; } }
 </style>
