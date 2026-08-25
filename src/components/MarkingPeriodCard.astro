@@ -1,7 +1,8 @@
 ---
-import { getMarkingPeriodStatus } from "../utils/schoolCalendar";
+import { getMarkingPeriodStatus, getSchoolDayReminder } from "../utils/schoolCalendar";
 
 const initialStatus = getMarkingPeriodStatus();
+const initialReminder = getSchoolDayReminder();
 const initialPeriodLabel = initialStatus.period ? `MARKING PERIOD ${initialStatus.period.number}` : initialStatus.label;
 ---
 
@@ -20,11 +21,16 @@ const initialPeriodLabel = initialStatus.period ? `MARKING PERIOD ${initialStatu
     <div class="marking-period-track" aria-hidden="true">
         <span class="marking-period-progress" data-marking-period-progress style={`width: ${initialStatus.progressPercent}%`}></span>
     </div>
+    <div class:list={["school-reminder", `school-reminder-${initialReminder.tone}`]} data-school-reminder>
+        <span class="school-reminder-tag">REMINDER</span>
+        <strong data-school-reminder-label>{initialReminder.label}</strong>
+        <span data-school-reminder-detail>{initialReminder.detail}</span>
+    </div>
     <span class="sr-only" data-marking-period-announcement aria-live="polite"></span>
 </aside>
 
 <script>
-    import { getMarkingPeriodStatus } from "../utils/schoolCalendar";
+    import { getMarkingPeriodStatus, getSchoolDayReminder } from "../utils/schoolCalendar";
 
     const card = document.querySelector<HTMLElement>("[data-marking-period-card]");
     const label = card?.querySelector<HTMLElement>("[data-marking-period-label]");
@@ -32,15 +38,24 @@ const initialPeriodLabel = initialStatus.period ? `MARKING PERIOD ${initialStatu
     const progress = card?.querySelector<HTMLElement>("[data-marking-period-progress]");
     const heading = card?.querySelector<HTMLElement>("#marking-period-heading");
     const announcement = card?.querySelector<HTMLElement>("[data-marking-period-announcement]");
+    const reminder = card?.querySelector<HTMLElement>("[data-school-reminder]");
+    const reminderLabel = card?.querySelector<HTMLElement>("[data-school-reminder-label]");
+    const reminderDetail = card?.querySelector<HTMLElement>("[data-school-reminder-detail]");
 
     const update = () => {
         const status = getMarkingPeriodStatus(new Date());
+        const nextReminder = getSchoolDayReminder(new Date());
         const periodLabel = status.period ? `MARKING PERIOD ${status.period.number}` : status.label;
         if (heading) heading.textContent = periodLabel;
         if (label) label.textContent = status.label;
         if (detail) detail.textContent = status.detail;
         if (progress) progress.style.width = `${status.progressPercent}%`;
-        if (announcement) announcement.textContent = `${periodLabel}. ${status.label}. ${status.detail}.`;
+        if (reminder) {
+            reminder.className = `school-reminder school-reminder-${nextReminder.tone}`;
+        }
+        if (reminderLabel) reminderLabel.textContent = nextReminder.label;
+        if (reminderDetail) reminderDetail.textContent = nextReminder.detail;
+        if (announcement) announcement.textContent = `${periodLabel}. ${status.label}. ${status.detail}. ${nextReminder.label}. ${nextReminder.detail}`;
     };
 
     update();
@@ -86,6 +101,14 @@ const initialPeriodLabel = initialStatus.period ? `MARKING PERIOD ${initialStatu
     .marking-period-detail { display: block; margin-top: .35rem; color: rgba(223, 255, 233, .68); font-size: .68rem; letter-spacing: .03em; }
     .marking-period-track { height: .28rem; margin-top: .8rem; overflow: hidden; border: 1px solid rgba(97, 212, 154, .25); background: rgba(0, 0, 0, .34); }
     .marking-period-progress { display: block; height: 100%; min-width: 0; background: repeating-linear-gradient(135deg, #61d49a 0 7px, #b6ffd0 7px 9px); box-shadow: 0 0 12px rgba(97, 212, 154, .7); transition: width .45s ease; }
+    .school-reminder { display: grid; grid-template-columns: auto 1fr; gap: .18rem .55rem; margin-top: .8rem; padding: .55rem .65rem .6rem; border-left: 2px solid #61d49a; background: rgba(0, 0, 0, .23); }
+    .school-reminder-tag { grid-column: 1 / -1; color: rgba(223, 255, 233, .5); font-size: .48rem; letter-spacing: .16em; }
+    .school-reminder strong { color: #dfffe9; font-size: .62rem; letter-spacing: .05em; line-height: 1.35; }
+    .school-reminder > span:last-child { color: rgba(223, 255, 233, .66); font-size: .6rem; line-height: 1.35; }
+    .school-reminder-notice { border-left-color: #ffca3a; }
+    .school-reminder-notice strong { color: #ffda70; }
+    .school-reminder-special { border-left-color: #9c8cff; }
+    .school-reminder-special strong { color: #c4bcff; }
 
     @media (prefers-reduced-motion: reduce) {
         .marking-period-progress { transition: none; }

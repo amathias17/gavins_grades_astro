@@ -23,6 +23,12 @@ export interface MarkingPeriodStatus {
   progressPercent: number;
 }
 
+export interface SchoolDayReminder {
+  label: string;
+  detail: string;
+  tone: "normal" | "notice" | "special";
+}
+
 export const markingPeriods: MarkingPeriod[] = [
   { number: 1, start: "2026-08-26", end: "2026-10-30" },
   { number: 2, start: "2026-10-31", end: "2027-01-21" },
@@ -70,6 +76,95 @@ function addDays(date: Date, amount: number): Date {
 function isSchoolDay(date: Date): boolean {
   const weekday = date.getUTCDay();
   return weekday !== 0 && weekday !== 6 && !closureDates.has(toDateKey(date));
+}
+
+function formatWeekday(value: string): string {
+  return new Intl.DateTimeFormat("en-US", {
+    weekday: "long",
+    month: "long",
+    day: "numeric",
+    timeZone: "UTC",
+  }).format(toUtcDate(value));
+}
+
+function getNextSchoolDay(date: Date): Date {
+  let next = addDays(date, 1);
+  while (!isSchoolDay(next)) next = addDays(next, 1);
+  return next;
+}
+
+export function getSchoolDayReminder(today: string | Date = new Date()): SchoolDayReminder {
+  const date = toUtcDate(today);
+  const dateKey = toDateKey(date);
+  const todaySpecial = specialDays.find((day) => day.date === dateKey);
+  const tomorrow = addDays(date, 1);
+  const tomorrowKey = toDateKey(tomorrow);
+  const tomorrowSpecial = specialDays.find((day) => day.date === tomorrowKey);
+  const nextSchoolDay = getNextSchoolDay(date);
+
+  if (dateKey < markingPeriods[0].start) {
+    const daysUntilStart = countSchoolDays(date, markingPeriods[0].start);
+    return {
+      label: daysUntilStart === 1 ? "SCHOOL STARTS TOMORROW" : "SCHOOL YEAR INCOMING",
+      detail: `First school day: ${formatWeekday(markingPeriods[0].start)}.`,
+      tone: "normal",
+    };
+  }
+
+  if (todaySpecial?.kind === "closure") {
+    return {
+      label: "NO SCHOOL TODAY",
+      detail: `${todaySpecial.label}. Next school day: ${formatWeekday(toDateKey(nextSchoolDay))}.`,
+      tone: "notice",
+    };
+  }
+
+  if (todaySpecial?.kind === "modified") {
+    return {
+      label: "SPECIAL SCHEDULE TODAY",
+      detail: todaySpecial.label,
+      tone: "special",
+    };
+  }
+
+  if (tomorrowSpecial?.kind === "closure") {
+    return {
+      label: "NO SCHOOL TOMORROW",
+      detail: tomorrowSpecial.label,
+      tone: "notice",
+    };
+  }
+
+  if (tomorrowSpecial?.kind === "modified") {
+    return {
+      label: "SPECIAL SCHEDULE TOMORROW",
+      detail: tomorrowSpecial.label,
+      tone: "special",
+    };
+  }
+
+  if (!isSchoolDay(date)) {
+    return {
+      label: "WEEKEND MODE",
+      detail: `Next school day: ${formatWeekday(toDateKey(nextSchoolDay))}.`,
+      tone: "normal",
+    };
+  }
+
+  const activePeriod = markingPeriods.find((period) => dateKey >= period.start && dateKey <= period.end);
+  if (activePeriod) {
+    return {
+      label: `NEXT CHECKPOINT: MARKING PERIOD ${activePeriod.number}`,
+      detail: `Ends ${formatDate(activePeriod.end)}.`,
+      tone: "normal",
+    };
+  }
+
+  return {
+    label: "SCHOOL YEAR COMPLETE",
+    detail: "No more school-day reminders scheduled.",
+    tone: "normal",
+  };
 }
 
 export function countSchoolDays(start: string | Date, end: string | Date): number {

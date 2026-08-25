@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { countSchoolDays, getMarkingPeriodStatus } from "../../src/utils/schoolCalendar";
+import { countSchoolDays, getMarkingPeriodStatus, getSchoolDayReminder } from "../../src/utils/schoolCalendar";
 
 test.describe("school calendar marking periods", () => {
   test("counts weekdays while excluding supplied closures", () => {
@@ -25,6 +25,12 @@ test.describe("school calendar marking periods", () => {
   test("recognizes pre-school and completed-year states", () => {
     expect(getMarkingPeriodStatus("2026-08-25").status).toBe("before-school");
     expect(getMarkingPeriodStatus("2027-06-05").status).toBe("completed");
+  });
+
+  test("gives school-day-aware reminders", () => {
+    expect(getSchoolDayReminder("2026-08-25").label).toBe("SCHOOL STARTS TOMORROW");
+    expect(getSchoolDayReminder("2026-09-25").label).toBe("NO SCHOOL TODAY");
+    expect(getSchoolDayReminder("2026-12-03").label).toBe("SPECIAL SCHEDULE TOMORROW");
   });
 
   test("renders the live marking-period card on the homepage", async ({ page }) => {
