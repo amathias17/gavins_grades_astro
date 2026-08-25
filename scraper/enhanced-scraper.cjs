@@ -955,12 +955,14 @@ async function saveGradesToFile(grades, missingAssignments = []) {
     q3_letter_grade: cls.q3_grade !== undefined ? letter(cls.q3_grade) : null,
     q4_grade: cls.q4_grade ?? null,
     q4_letter_grade: cls.q4_grade !== undefined ? letter(cls.q4_grade) : null,
-    current_grade: cls.q4_grade !== null && cls.q4_grade !== undefined
+    current_grade: cls.current_grade ?? (cls.q4_grade !== null && cls.q4_grade !== undefined
       ? cls.q4_grade
-      : (cls.q3_grade !== null && cls.q3_grade !== undefined ? cls.q3_grade : (cls.q2_grade !== null && cls.q2_grade !== undefined ? cls.q2_grade : cls.q1_grade)),
-    letter_grade: cls.q4_grade !== null && cls.q4_grade !== undefined
-      ? letter(cls.q4_grade)
-      : (cls.q3_grade !== null && cls.q3_grade !== undefined ? letter(cls.q3_grade) : (cls.q2_grade !== null && cls.q2_grade !== undefined ? letter(cls.q2_grade) : letter(cls.q1_grade)))
+      : (cls.q3_grade !== null && cls.q3_grade !== undefined ? cls.q3_grade : (cls.q2_grade !== null && cls.q2_grade !== undefined ? cls.q2_grade : cls.q1_grade))),
+    letter_grade: cls.current_grade !== null && cls.current_grade !== undefined
+      ? letter(cls.current_grade)
+      : (cls.q4_grade !== null && cls.q4_grade !== undefined
+        ? letter(cls.q4_grade)
+        : (cls.q3_grade !== null && cls.q3_grade !== undefined ? letter(cls.q3_grade) : (cls.q2_grade !== null && cls.q2_grade !== undefined ? letter(cls.q2_grade) : letter(cls.q1_grade))))
   }));
 
   const gradeHistory = existingData.grade_history || {};
@@ -1084,7 +1086,8 @@ async function main() {
       q1_grade: c.q1_grade ?? null,
       q2_grade: c.q2_grade ?? null,
       q3_grade: c.q3_grade ?? null,
-      q4_grade: c.q4_grade ?? null
+      q4_grade: c.q4_grade ?? null,
+      current_grade: c.currentGrade ?? null
     }));
     await saveGradesToFile(gradeClasses, missingAssignments);
 
