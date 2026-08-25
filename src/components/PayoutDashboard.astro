@@ -10,17 +10,24 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
 
 <section class="payout-screen" aria-labelledby="payout-heading">
     <h1 id="payout-heading" class="sr-only">Gavin's grade allowance</h1>
-    <div class="total" aria-label={`${formattedAmount} dollars total earned`}>{formattedAmount}</div>
+    <div class="total" data-final={formattedAmount} aria-label={`${formattedAmount} dollars total earned`}>{formattedAmount}</div>
     <div class="money-label" data-money-label data-text="DOLLARS" aria-hidden="true">DOLLARS</div>
 </section>
 
 <script>
+    const total = document.querySelector<HTMLElement>(".total");
     const label = document.querySelector<HTMLElement>("[data-money-label]");
     const words = ["DOLLARS", "BUCKS", "BUCKAROOS", "IN DOUGH", "DOLLARS CASH", "SLICES OF BACON"];
     const effects = ["glitch-slice", "glitch-flicker", "glitch-scan", "glitch-burst"];
     const effectClasses = ["glitch-slice", "glitch-flicker", "glitch-scan", "glitch-burst"];
 
-    if (label && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let wordTimer: number | undefined;
+    let spinTimer: number | undefined;
+    let landingTimer: number | undefined;
+
+    const startWordRotation = () => {
+        if (!label || reduceMotion || wordTimer !== undefined) return;
         let wordIndex = 0;
         let effectIndex = 0;
         const randomIndexExcept = (length: number, current: number) => {
@@ -31,7 +38,7 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
             return next;
         };
 
-        const timer = window.setInterval(() => {
+        wordTimer = window.setInterval(() => {
             wordIndex = randomIndexExcept(words.length, wordIndex);
             effectIndex = randomIndexExcept(effects.length, effectIndex);
             const nextWord = words[wordIndex];
@@ -44,18 +51,49 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
         }, 6000);
 
         document.addEventListener("astro:before-swap", () => window.clearInterval(timer), { once: true });
+    };
+
+    if (total && label && reduceMotion) {
+        label.classList.add("is-ready");
+    } else if (total && label) {
+        const finalAmount = total.dataset.final ?? total.textContent ?? "0";
+        const spinStartedAt = performance.now();
+        total.classList.add("is-spinning");
+        spinTimer = window.setInterval(() => {
+            const progress = Math.min(1, (performance.now() - spinStartedAt) / 2200);
+            if (progress >= 1) {
+                if (spinTimer !== undefined) window.clearInterval(spinTimer);
+                spinTimer = undefined;
+                total.textContent = finalAmount;
+                total.classList.remove("is-spinning");
+                label.classList.add("is-ready");
+                startWordRotation();
+                return;
+            }
+
+            total.textContent = finalAmount.replace(/\d/g, () => String(Math.floor(Math.random() * 10)));
+        }, 70);
     }
+
+    document.addEventListener("astro:before-swap", () => {
+        if (spinTimer !== undefined) window.clearInterval(spinTimer);
+        if (wordTimer !== undefined) window.clearInterval(wordTimer);
+        if (landingTimer !== undefined) window.clearTimeout(landingTimer);
+    }, { once: true });
 </script>
 
 <style>
     .payout-screen { display: grid; place-items: center; align-content: center; width: 100%; min-height: 100svh; }
     .total { color: #f2f5ef; font: 700 clamp(8rem, 34vw, 32rem)/.78 "Orbitron", sans-serif; letter-spacing: .03em; text-shadow: 0 0 70px rgba(97, 212, 154, .1); animation: arrive .8s cubic-bezier(.2, .8, .2, 1) both; }
-    .money-label { position: relative; margin-top: 2rem; color: #61d49a; font: 700 clamp(1.1rem, 3.5vw, 1.65rem)/1 "Orbitron", sans-serif; letter-spacing: .28em; text-align: center; }
+    .total.is-spinning { animation: slot-shake .12s steps(2, end) infinite; color: #c8d4cc; text-shadow: 3px 0 #ff4fd8, -3px 0 #61d49a; }
+    .money-label { position: relative; margin-top: 2rem; color: #61d49a; font: 700 clamp(1.1rem, 3.5vw, 1.65rem)/1 "Orbitron", sans-serif; letter-spacing: .28em; text-align: center; opacity: 0; transform: translateY(-.5rem); }
+    .money-label.is-ready { opacity: 1; transform: translateY(0); transition: opacity .35s ease, transform .35s ease; }
     .money-label.is-glitching { animation: label-glitch .56s steps(2, end) both; }
     .money-label.is-glitching::before, .money-label.is-glitching::after { position: absolute; inset: 0; pointer-events: none; content: attr(data-text); }
     .money-label.is-glitching::before { color: #f2f5ef; clip-path: inset(0 0 52% 0); transform: translateX(-.08em); }
     .money-label.is-glitching::after { color: #ff4fd8; clip-path: inset(55% 0 0 0); transform: translateX(.08em); }
     @keyframes arrive { from { opacity: 0; transform: scale(.94); } to { opacity: 1; transform: scale(1); } }
+    @keyframes slot-shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-.025em); } 75% { transform: translateX(.025em); } }
     .glitch-slice::before { animation: label-slice-a .56s steps(2, end) both; }
     .glitch-slice::after { animation: label-slice-b .56s steps(2, end) both; }
     .glitch-flicker { animation: label-glitch-flicker .56s steps(4, end) both !important; text-shadow: 2px 0 #ff4fd8, -2px 0 #61d49a; }
@@ -73,5 +111,5 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
     @keyframes label-scan-b { 0%, 100% { transform: translateX(.08em); } 25% { transform: translateX(-.16em); } 50% { transform: translateX(.2em); } 75% { transform: translateX(-.1em); } }
     @keyframes label-slice-a { 0%, 100% { transform: translateX(-.08em); } 50% { transform: translateX(.14em); } }
     @keyframes label-slice-b { 0%, 100% { transform: translateX(.08em); } 50% { transform: translateX(-.12em); } }
-    @media (prefers-reduced-motion: reduce) { .total { animation: none; } .money-label { margin-top: 2rem; } }
+    @media (prefers-reduced-motion: reduce) { .total, .total.is-spinning { animation: none; } .money-label { margin-top: 2rem; opacity: 1; transform: none; } }
 </style>

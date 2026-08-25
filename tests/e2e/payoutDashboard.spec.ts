@@ -48,6 +48,11 @@ test.describe("A-grade payout dashboard", () => {
 
     const label = page.locator("[data-money-label]");
     await expect(label).toHaveText("DOLLARS");
+    await expect(label).not.toHaveClass(/is-ready/);
+    await expect(page.locator(".total")).toHaveClass(/is-spinning/);
+    await page.waitForTimeout(2400);
+    await expect(label).toHaveClass(/is-ready/);
+    await expect(page.locator(".total")).not.toHaveClass(/is-spinning/);
     await page.waitForTimeout(6200);
     await expect(label).not.toHaveText("DOLLARS");
     await expect(label).toHaveCSS("font-size", /.+/);
