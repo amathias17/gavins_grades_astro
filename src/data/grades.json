@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "08/25/2026, 02:51 PM",
-    "most_recent_date": "8/25/2026",
+    "last_updated": "08/26/2026, 08:46 AM",
+    "most_recent_date": "8/26/2026",
     "total_classes": 13
   },
   "classes": [
@@ -32,8 +32,8 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": null,
-      "letter_grade": null
+      "current_grade": 0,
+      "letter_grade": "F"
     },
     {
       "class_name": "Heroes & Monsters",
@@ -107,8 +107,8 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": null,
-      "letter_grade": null
+      "current_grade": 0,
+      "letter_grade": "F"
     },
     {
       "class_name": "Anatomy & Physiol",
@@ -122,8 +122,8 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": null,
-      "letter_grade": null
+      "current_grade": 0,
+      "letter_grade": "F"
     },
     {
       "class_name": "Science Of Science Fiction",
@@ -182,8 +182,8 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": null,
-      "letter_grade": null
+      "current_grade": 0,
+      "letter_grade": "F"
     },
     {
       "class_name": "English 11",
@@ -197,8 +197,8 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": null,
-      "letter_grade": null
+      "current_grade": 0,
+      "letter_grade": "F"
     }
   ],
   "grade_history": {
@@ -953,7 +953,8 @@
       "1/21/2026": 100,
       "1/22/2026": 100,
       "1/23/2026": 90,
-      "8/25/2026": null
+      "8/25/2026": null,
+      "8/26/2026": null
     },
     "Amer Studies": {
       "11/24/2025": 100,
@@ -1910,40 +1911,52 @@
       "5/29/2026": 77
     },
     "Junior Seminar": {
-      "8/25/2026": null
+      "8/25/2026": null,
+      "8/26/2026": null
     },
     "Environ Science 1": {
-      "8/25/2026": null
+      "8/25/2026": null,
+      "8/26/2026": 0
     },
     "Heroes & Monsters": {
-      "8/25/2026": null
+      "8/25/2026": null,
+      "8/26/2026": null
     },
     "Coding W/ Python": {
-      "8/25/2026": null
+      "8/25/2026": null,
+      "8/26/2026": null
     },
     "Chemistry 2": {
-      "8/25/2026": null
+      "8/25/2026": null,
+      "8/26/2026": null
     },
     "Intrmediate Alg Ii": {
-      "8/25/2026": null
+      "8/25/2026": null,
+      "8/26/2026": 0
     },
     "Anatomy & Physiol": {
-      "8/25/2026": null
+      "8/25/2026": null,
+      "8/26/2026": 0
     },
     "Science Of Science Fiction": {
-      "8/25/2026": null
+      "8/25/2026": null,
+      "8/26/2026": null
     },
     "Astronomy": {
-      "8/25/2026": 100
+      "8/25/2026": 100,
+      "8/26/2026": 100
     },
     "Mod Film & Culture": {
-      "8/25/2026": null
+      "8/25/2026": null,
+      "8/26/2026": null
     },
     "World Studies": {
-      "8/25/2026": null
+      "8/25/2026": null,
+      "8/26/2026": 0
     },
     "English 11": {
-      "8/25/2026": null
+      "8/25/2026": null,
+      "8/26/2026": 0
     }
   },
   "overall_average": 100,
@@ -2220,9 +2233,10 @@
     "8/22/2026": 0,
     "8/23/2026": 0,
     "8/24/2026": 0,
-    "8/25/2026": 100
+    "8/25/2026": 100,
+    "8/26/2026": 100
   },
-  "streak": 88,
+  "streak": 89,
   "streak_history": {
     "11/24/2025": 0,
     "11/25/2025": 0,
@@ -2496,6 +2510,7 @@
     "8/22/2026": 85,
     "8/23/2026": 86,
     "8/24/2026": 87,
-    "8/25/2026": 88
+    "8/25/2026": 88,
+    "8/26/2026": 89
   }
 }
