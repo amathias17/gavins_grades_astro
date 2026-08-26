@@ -10,6 +10,7 @@
 - Payout display renders the currency symbol smaller than the numeric amount.
 - Payout display renders a centered uppercase, amount-aware rotating purchase-equivalent label with a 6-second cadence, varied CSS glitch transitions, no immediate repeats, and reduced-motion fallback.
 - Payout purchase descriptions sit beneath a small CAN BUY kicker, above the marking-period content; the dollar symbol is vertically centered with the numeric amount.
+- Payout purchase-equivalent thresholds and copy live in src/data/purchase_equivalents.json so the rotating list can be edited without changing the component.
 - Payout display includes a centered uppercase CAN BUY kicker and amount-aware purchase-equivalent label with a 6-second cadence, varied CSS glitch transitions, no immediate repeats, and reduced-motion fallback.
 - Payout display begins with a zeroed placeholder matching the final amount's digit/comma shape and a 2.2-second client-side slot-machine number reveal; slang rotation starts only after the final number lands, while reduced-motion shows the final amount immediately.
 - Payout display uses the original whole-number slot effect: formatted digits change rapidly for 2.2 seconds, then the slang label appears and begins rotating.

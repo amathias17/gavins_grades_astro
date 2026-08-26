@@ -1,0 +1,50 @@
+[
+  {
+    "minimum": 0,
+    "items": [
+      "A HIGH FIVE FROM DAD",
+      "ONE SHINY ROCK",
+      "A VERY SMALL SNACK"
+    ]
+  },
+  {
+    "minimum": 1,
+    "items": [
+      "A GAS-STATION SNACK",
+      "A COUPLE OF SODAS",
+      "AN EMOTIONAL SUPPORT SLUSHIE"
+    ]
+  },
+  {
+    "minimum": 50,
+    "items": [
+      "A LARGE PIZZA",
+      "A NEW VIDEO GAME",
+      "A SMALL STACK OF TACOS"
+    ]
+  },
+  {
+    "minimum": 100,
+    "items": [
+      "TWO LARGE PIZZAS",
+      "A USED VIDEO GAME",
+      "A WEEK OF SNACKS"
+    ]
+  },
+  {
+    "minimum": 200,
+    "items": [
+      "A WEEK OF GAS MONEY",
+      "A NICE PAIR OF SNEAKERS",
+      "A SERIOUS PIZZA HAUL"
+    ]
+  },
+  {
+    "minimum": 500,
+    "items": [
+      "A SUSPICIOUSLY LARGE PIZZA HAUL",
+      "A USED GAMING CONSOLE",
+      "A SMALL FORTUNE IN SNACKS"
+    ]
+  }
+]

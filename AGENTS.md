@@ -22,6 +22,7 @@
 - Payout currency symbol is intentionally smaller than the numeric amount.
 - Payout amount shows a smaller dollar symbol and rotates amount-aware funny purchase equivalents instead of generic money slang; the existing slot reveal and reduced-motion behavior remain intact.
 - Payout purchase equivalents include a small CAN BUY kicker, and the dollar symbol is vertically centered beside the number.
+- Payout purchase-equivalent copy lives in src/data/purchase_equivalents.json; add a minimum payout and item strings there to expand the rotating descriptions.
 - Payout homepage shows a server-rendered uppercase "CAN BUY" kicker and amount-aware funny purchase equivalent centered beneath the number; it rotates descriptions every 6 seconds with varied CSS glitch transitions and no immediate repeats, and reduced-motion users see the static label.
 - On normal page load, the payout number starts as a zeroed placeholder matching the final amount's digit/comma shape and runs a 2.2-second slot-machine reveal before the slang label appears and starts rotating; reduced-motion users see the final amount immediately.
 - The payout reveal uses the original whole-number slot effect, changing each digit in the formatted amount for 2.2 seconds before the slang label appears.
