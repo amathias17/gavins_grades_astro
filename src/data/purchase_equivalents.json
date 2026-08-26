@@ -2,9 +2,14 @@
   {
     "minimum": 0,
     "items": [
-      "A HIGH FIVE FROM DAD",
-      "ONE SHINY ROCK",
-      "A VERY SMALL SNACK"
+      "NOT MUCH",
+      "NO ROBUX",
+      "A VERY SMALL SNACK",
+      "A PROPER GROUNDING",
+      "A LIST OF CHORES",
+      "DIRT",
+      "WHOLE LOTTA NOTHIN'", 
+      "MORE CHORES"
     ]
   },
   {
@@ -13,14 +18,17 @@
       "A GAS-STATION SNACK",
       "A COUPLE OF SODAS",
       "AN EMOTIONAL SUPPORT SLUSHIE"
+      
     ]
   },
   {
     "minimum": 50,
     "items": [
-      "A LARGE PIZZA",
-      "A NEW VIDEO GAME",
-      "A SMALL STACK OF TACOS"
+      "24 CRUNCHY TACOS",
+      "5,250 ROBUX",
+      "104 CHICKEN NUGGETS",
+      "13 GALLONS OF MILK",
+      "TIME OUT OF CAGE"
     ]
   },
   {
