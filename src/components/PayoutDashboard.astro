@@ -7,12 +7,24 @@ const { totalPayout } = calculatePayout(gradesData.classes);
 const formattedAmount = new Intl.NumberFormat("en-US", {
     maximumFractionDigits: 0,
 }).format(totalPayout);
+const purchaseEquivalents = totalPayout === 0
+    ? ["A HIGH FIVE FROM DAD", "ONE SHINY ROCK", "A VERY SMALL SNACK"]
+    : totalPayout < 50
+        ? ["A GAS-STATION SNACK", "A COUPLE OF SODAS", "AN EMOTIONAL SUPPORT SLUSHIE"]
+        : totalPayout < 100
+            ? ["A LARGE PIZZA", "A NEW VIDEO GAME", "A SMALL STACK OF TACOS"]
+            : totalPayout < 200
+                ? ["TWO LARGE PIZZAS", "A USED VIDEO GAME", "A WEEK OF SNACKS"]
+                : totalPayout < 500
+                    ? ["A WEEK OF GAS MONEY", "A NICE PAIR OF SNEAKERS", "A SERIOUS PIZZA HAUL"]
+                    : ["A SUSPICIOUSLY LARGE PIZZA HAUL", "A USED GAMING CONSOLE", "A SMALL FORTUNE IN SNACKS"];
+const initialPurchaseEquivalent = purchaseEquivalents[0];
 ---
 
 <section class="payout-screen" aria-labelledby="payout-heading">
     <h1 id="payout-heading" class="payout-headline">HOW MUCH MONEY WILL GAVIN TAKE FROM DAD?</h1>
-    <div class="total" data-final={formattedAmount} aria-label={`${formattedAmount} dollars total earned`}>{formattedAmount.replace(/\d/g, "0")}</div>
-    <div class="money-label-frame" aria-hidden="true"><div class="money-label" data-money-label data-text="DOLLARS">DOLLARS</div></div>
+    <div class="total" aria-label={`$${formattedAmount} total earned`}><span class="currency-symbol" aria-hidden="true">$</span><span class="total-value" data-final={formattedAmount}>{formattedAmount.replace(/\d/g, "0")}</span></div>
+    <div class="money-label-frame" aria-hidden="true"><div class="money-label-kicker">CAN BUY</div><div class="money-label" data-money-label data-equivalents={JSON.stringify(purchaseEquivalents)} data-text={initialPurchaseEquivalent}>{initialPurchaseEquivalent}</div></div>
     <MarkingPeriodCard />
     <button class="feedback-button" type="button" data-feedback-open>Press to Submit Feedback</button>
     <dialog class="feedback-dialog" id="feedback-dialog" aria-label="Feedback response" aria-describedby="feedback-message">
@@ -22,12 +34,13 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
 </section>
 
 <script>
-    const total = document.querySelector<HTMLElement>(".total");
+    const total = document.querySelector<HTMLElement>(".total-value");
+    const totalFrame = document.querySelector<HTMLElement>(".total");
     const label = document.querySelector<HTMLElement>("[data-money-label]");
     const feedbackOpen = document.querySelector<HTMLButtonElement>("[data-feedback-open]");
     const feedbackDialog = document.querySelector<HTMLDialogElement>("#feedback-dialog");
     const feedbackClose = feedbackDialog?.querySelector<HTMLButtonElement>("[data-feedback-close]");
-    const words = ["DOLLARS", "BUCKS", "BUCKAROOS", "IN DOUGH", "WASHINGTONS", "SLICES OF BACON","SLICES OF CHEDDAR"];
+    const words = label?.dataset.equivalents ? JSON.parse(label.dataset.equivalents) as string[] : [];
     const effects = ["glitch-slice", "glitch-flicker", "glitch-scan", "glitch-burst"];
     const effectClasses = ["glitch-slice", "glitch-flicker", "glitch-scan", "glitch-burst"];
     const glitchChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#$%?!";
@@ -85,7 +98,7 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
 
         const beginWordTransition = (nextWord: string) => {
             if (!label || transitionTimer !== undefined) return;
-            const fromWord = label.textContent || words[wordIndex] || "DOLLARS";
+            const fromWord = label.textContent || words[wordIndex] || "A PURCHASE";
             const fromLength = Math.max(1, fromWord.length);
             const toLength = Math.max(1, nextWord.length);
             const startedAt = performance.now();
@@ -130,7 +143,7 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
 
     const startLoadingWordGlitch = () => {
         if (!label || reduceMotion || loadingWordTimer !== undefined) return;
-        let loadingWord = words[0];
+        let loadingWord = words[0] || "A PURCHASE";
         label.classList.add("is-loading", "is-glitching");
         loadingWordTimer = window.setInterval(() => {
             if (!label) return;
@@ -151,7 +164,7 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
         const finalAmount = total.dataset.final ?? total.textContent ?? "0";
         const spinStartedAt = performance.now();
         startLoadingWordGlitch();
-        total.classList.add("is-spinning");
+        totalFrame?.classList.add("is-spinning");
         spinTimer = window.setInterval(() => {
             const progress = Math.min(1, (performance.now() - spinStartedAt) / 2200);
             if (progress >= 1) {
@@ -160,9 +173,9 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
                 if (loadingWordTimer !== undefined) window.clearInterval(loadingWordTimer);
                 loadingWordTimer = undefined;
                 total.textContent = finalAmount;
-                total.classList.remove("is-spinning");
-                label.textContent = "DOLLARS";
-                label.dataset.text = "DOLLARS";
+                totalFrame?.classList.remove("is-spinning");
+                label.textContent = words[0] || "A PURCHASE";
+                label.dataset.text = words[0] || "A PURCHASE";
                 label.classList.remove("is-loading", "is-glitching");
                 label.classList.add("is-ready");
                 startWordRotation();
@@ -184,9 +197,11 @@ const formattedAmount = new Intl.NumberFormat("en-US", {
 <style>
     .payout-screen { display: grid; place-items: center; align-content: center; width: 100%; min-height: 100svh; }
     .payout-headline { width: min(90vw, 48rem); margin: 0 0 2.25rem; color: #61d49a; font: 700 clamp(.72rem, 2.2vw, 1.15rem)/1.4 "DM Mono", monospace; letter-spacing: .12em; text-align: center; text-shadow: 0 0 18px rgba(97, 212, 154, .35); text-transform: uppercase; }
-    .total { color: #f2f5ef; font: 700 clamp(8rem, 34vw, 32rem)/.78 "Orbitron", sans-serif; letter-spacing: .01em; text-shadow: 0 0 70px rgba(97, 212, 154, .1); animation: arrive .8s cubic-bezier(.2, .8, .2, 1) both; }
+    .total { display: inline-flex; align-items: center; color: #f2f5ef; font: 700 clamp(8rem, 34vw, 32rem)/.78 "Orbitron", sans-serif; letter-spacing: .01em; text-shadow: 0 0 70px rgba(97, 212, 154, .1); animation: arrive .8s cubic-bezier(.2, .8, .2, 1) both; }
+    .currency-symbol { margin-right: .08em; color: #61d49a; font-size: .34em; letter-spacing: 0; text-shadow: 0 0 24px rgba(97, 212, 154, .3); }
     .total.is-spinning { animation: slot-shake .12s steps(2, end) infinite; color: #c8d4cc; text-shadow: 3px 0 #ff4fd8, -3px 0 #61d49a; }
     .money-label-frame { width: min(92vw, 44rem); margin-top: 2rem; overflow: clip; text-align: center; }
+    .money-label-kicker { margin-bottom: .65rem; color: rgba(97, 212, 154, .7); font: 700 clamp(.58rem, 2vw, .75rem)/1 "DM Mono", monospace; letter-spacing: .3em; text-transform: uppercase; }
     .money-label { position: relative; display: inline-block; max-width: 92vw; color: #61d49a; font: 700 clamp(.85rem, 4.4vw, 1.65rem)/1 "Orbitron", sans-serif; letter-spacing: clamp(.08em, 1.5vw, .28em); text-align: center; white-space: nowrap; opacity: 0; transform: translateY(-.5rem); transform-origin: center; }
     .money-label.is-ready { opacity: 1; transform: translateY(0); transition: opacity .35s ease, transform .35s ease; }
     .money-label.is-loading { opacity: .72; transform: translateY(0); }

@@ -8,11 +8,13 @@
 - Payout display uses Orbitron loaded from Google Fonts.
 - Payout display uses subtle positive .01em tracking so multi-character totals stay readable without spreading too far apart.
 - Payout display renders the currency symbol smaller than the numeric amount.
-- Payout display includes a centered uppercase client-side random slang/joke label (including DOLLARS, BUCKS, BUCKAROOS, IN DOUGH, DOLLARS CASH, and SLICES OF BACON) with a 6-second cadence, varied CSS glitch transitions, no immediate repeats, and reduced-motion fallback.
+- Payout display renders a centered uppercase, amount-aware rotating purchase-equivalent label with a 6-second cadence, varied CSS glitch transitions, no immediate repeats, and reduced-motion fallback.
+- Payout purchase descriptions sit beneath a small CAN BUY kicker, above the marking-period content; the dollar symbol is vertically centered with the numeric amount.
+- Payout display includes a centered uppercase CAN BUY kicker and amount-aware purchase-equivalent label with a 6-second cadence, varied CSS glitch transitions, no immediate repeats, and reduced-motion fallback.
 - Payout display begins with a zeroed placeholder matching the final amount's digit/comma shape and a 2.2-second client-side slot-machine number reveal; slang rotation starts only after the final number lands, while reduced-motion shows the final amount immediately.
 - Payout display uses the original whole-number slot effect: formatted digits change rapidly for 2.2 seconds, then the slang label appears and begins rotating.
 - Payout slang transitions now struggle through a roughly 1.4-second staged scramble with partial fragments, corrupted characters, repeated glitch cycles, viewport-constrained width-aware morph scaling, deliberate choke/pause stutters, and a clean final lock-in; reduced-motion users skip the transition.
-- Payout homepage includes a "Press to Submit Feedback" button that opens a full-screen accessible modal containing "lol turn in your assignments." with a visible Close button, Escape, backdrop click, and focus restoration behavior. Its loading state now glitches the money slang label concurrently with the 2.2-second number slot reveal before locking to DOLLARS and starting normal label rotation.
+- Payout homepage includes a smaller dollar symbol beside the payout amount. Its loading state glitches the amount-aware purchase label concurrently with the 2.2-second number slot reveal before locking to the first purchase equivalent and starting normal label rotation. The feedback button opens a full-screen accessible modal containing "lol turn in your assignments." with a visible Close button, Escape, backdrop click, and focus restoration behavior.
 - Routes: /lab (lab.astro) is a dev-only layout lab for visual experiments and is not linked in navigation.
 - Routes: /stats (stats.astro) shows grade history stats with an SVG trend chart and class highlights.
 - Routes: /anime (anime.astro) is a Dragon Ball Z inspired proof-of-concept page with static content only.

@@ -20,12 +20,14 @@
 - Homepage payout amount uses the Orbitron Google Font.
 - Payout amount typography uses subtle positive letter spacing (.01em) for readable multi-character totals.
 - Payout currency symbol is intentionally smaller than the numeric amount.
-- Payout homepage shows a server-rendered uppercase "DOLLARS" label centered beneath the number; it randomly selects playful money slang and jokes, including "SLICES OF BACON", every 6 seconds with varied CSS glitch transitions and no immediate repeats, and reduced-motion users see the static label.
+- Payout amount shows a smaller dollar symbol and rotates amount-aware funny purchase equivalents instead of generic money slang; the existing slot reveal and reduced-motion behavior remain intact.
+- Payout purchase equivalents include a small CAN BUY kicker, and the dollar symbol is vertically centered beside the number.
+- Payout homepage shows a server-rendered uppercase "CAN BUY" kicker and amount-aware funny purchase equivalent centered beneath the number; it rotates descriptions every 6 seconds with varied CSS glitch transitions and no immediate repeats, and reduced-motion users see the static label.
 - On normal page load, the payout number starts as a zeroed placeholder matching the final amount's digit/comma shape and runs a 2.2-second slot-machine reveal before the slang label appears and starts rotating; reduced-motion users see the final amount immediately.
 - The payout reveal uses the original whole-number slot effect, changing each digit in the formatted amount for 2.2 seconds before the slang label appears.
 - Payout slang transitions use a roughly 1.4-second staged scramble with partial word fragments, corrupted characters, repeated glitch cycles, viewport-constrained width-aware morph scaling, deliberate choke/pause stutters, and a clean final lock-in; reduced-motion users skip the transition.
 - Payout homepage includes a "Press to Submit Feedback" button that opens a full-screen accessible modal containing "lol turn in your assignments." with a visible Close button, Escape, backdrop click, and focus restoration.
-- Payout loading glitches the slang word concurrently with the numeric slot animation, then locks to DOLLARS before normal slang rotation begins.
+- Payout loading glitches the purchase equivalent concurrently with the numeric slot animation, then locks to the first amount-aware description before normal rotation begins.
 - Homepage includes a generously spaced live school-day marking-period card for the 2026-2027 secondary calendar, showing the current period, school days remaining, end date, and progress while excluding supplied inservice closures.
 - The marking-period card also shows school-day-aware reminders for school starts, closures, weekend mode, special schedules, and the next marking-period checkpoint.
 - School-year calendar facts live in src/data/school_calendar.json; src/utils/schoolCalendar.ts contains the reusable date calculations and reminder logic.

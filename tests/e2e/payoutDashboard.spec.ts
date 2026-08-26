@@ -27,7 +27,9 @@ test.describe("A-grade payout dashboard", () => {
 
     await expect(page.locator("#payout-heading")).toHaveText("HOW MUCH MONEY WILL GAVIN TAKE FROM DAD?");
     await expect(page.locator("#payout-heading")).toBeVisible();
-    await expect(page.getByLabel(/\d+ dollars total earned/)).toBeVisible();
+    await expect(page.getByLabel(/\$\d+ total earned/)).toBeVisible();
+    await expect(page.locator(".currency-symbol")).toHaveText("$");
+    await expect(page.locator(".money-label-kicker")).toHaveText("CAN BUY");
     await expect(page.locator(".site-header")).toHaveCount(0);
   });
 
@@ -48,7 +50,7 @@ test.describe("A-grade payout dashboard", () => {
     await page.goto("/");
 
     const label = page.locator("[data-money-label]");
-    await expect(label).toHaveText("DOLLARS");
+    await expect(label).not.toHaveText("DOLLARS");
     await page.waitForTimeout(2400);
     await expect(label).toHaveClass(/is-ready/);
     await expect(page.locator(".total")).not.toHaveClass(/is-spinning/);
