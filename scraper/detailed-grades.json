@@ -1,16 +1,40 @@
 {
   "metadata": {
-    "scrapedAt": "2026-08-27T08:55:20.501Z",
+    "scrapedAt": "2026-08-27T21:44:39.255Z",
     "totalClasses": 13,
-    "totalAssignments": 1
+    "totalAssignments": 3
   },
   "classes": [
+    {
+      "className": "ANATOMY & PHYSIOL",
+      "teacher": "Denise Condo",
+      "period": "5",
+      "currentGrade": 0,
+      "assignments": [
+        {
+          "name": "Syllabus/Grading Policy Signed",
+          "dueDate": "08/31/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        }
+      ]
+    },
     {
       "className": "ASTRONOMY",
       "teacher": "James Krug",
       "period": "6",
       "currentGrade": 100,
       "assignments": [
+        {
+          "name": "Signed Course Syllabus",
+          "dueDate": "08/28/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "CLASS PARTICIPATION",
           "dueDate": "08/26/2026",
