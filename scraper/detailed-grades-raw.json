@@ -6,14 +6,14 @@
     "className": "ANATOMY & PHYSIOL",
     "teacher": "Denise Condo",
     "period": "5",
-    "currentGrade": 0,
+    "currentGrade": 100,
     "assignmentName": "Syllabus/Grading Policy Signed",
     "dateDue": "08/31/2026",
     "dueDate": "08/31/2026",
-    "earnedPoints": 0,
+    "earnedPoints": 11,
     "totalPoints": 10,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "47487",
@@ -26,10 +26,10 @@
     "assignmentName": "Signed Course Syllabus",
     "dateDue": "08/28/2026",
     "dueDate": "08/28/2026",
-    "earnedPoints": 0,
+    "earnedPoints": 11,
     "totalPoints": 10,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "47487",

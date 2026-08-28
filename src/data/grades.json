@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "08/28/2026, 07:08 AM",
+    "last_updated": "08/28/2026, 05:43 PM",
     "most_recent_date": "8/28/2026",
     "total_classes": 13
   },
@@ -122,8 +122,8 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 0,
-      "letter_grade": "F"
+      "current_grade": 100,
+      "letter_grade": "A"
     },
     {
       "class_name": "Science Of Science Fiction",
@@ -1952,7 +1952,7 @@
       "8/25/2026": null,
       "8/26/2026": 0,
       "8/27/2026": 0,
-      "8/28/2026": 0
+      "8/28/2026": 100
     },
     "Science Of Science Fiction": {
       "8/25/2026": null,
