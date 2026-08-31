@@ -14,6 +14,17 @@ test.describe("A-grade payout dashboard", () => {
     expect(result.classes[2].payout).toBe(0);
   });
 
+  test("blocks the payout when missing assignments exist", () => {
+    const result = calculatePayout([
+      { class_name: "English", period: "1", current_grade: 96 },
+      { class_name: "Math", period: "2", current_grade: 91 },
+    ], true);
+
+    expect(result.qualifyingACount).toBe(0);
+    expect(result.totalPayout).toBe(0);
+    expect(result.classes.every((classInfo) => !classInfo.qualifies && classInfo.payout === 0)).toBe(true);
+  });
+
   test("treats an empty new-year import as zero earnings", () => {
     const result = calculatePayout([]);
 

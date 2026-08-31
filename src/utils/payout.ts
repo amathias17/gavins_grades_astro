@@ -18,12 +18,13 @@ export interface PayoutSummary {
 
 export function calculatePayout(
   classes: Pick<Class, "class_name" | "period" | "current_grade">[],
+  hasMissingAssignments = false,
 ): PayoutSummary {
   const payoutClasses = classes.map((classInfo) => {
     const grade = Number.isFinite(classInfo.current_grade)
       ? classInfo.current_grade
       : null;
-    const qualifies = grade !== null && grade >= 90;
+    const qualifies = !hasMissingAssignments && grade !== null && grade >= 90;
 
     return {
       className: classInfo.class_name,
