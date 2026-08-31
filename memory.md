@@ -17,6 +17,7 @@
 - Payout display uses the original whole-number slot effect: formatted digits change rapidly for 2.2 seconds, then the slang label appears and begins rotating.
 - Payout slang transitions now struggle through a roughly 1.4-second staged scramble with partial fragments, corrupted characters, repeated glitch cycles, viewport-constrained width-aware morph scaling, deliberate choke/pause stutters, and a clean final lock-in; reduced-motion users skip the transition.
 - Payout homepage includes a smaller dollar symbol beside the payout amount. Its loading state glitches the amount-aware purchase label concurrently with the 2.2-second number slot reveal before locking to the first purchase equivalent and starting normal label rotation. The feedback button opens a full-screen accessible modal containing "lol turn in your assignments." with a visible Close button, Escape, backdrop click, and focus restoration behavior.
+- Payout purchase-equivalent text is centered beneath the numeric payout value only; the smaller dollar symbol remains positioned to the numeric value's left.
 - Routes: /lab (lab.astro) is a dev-only layout lab for visual experiments and is not linked in navigation.
 - Routes: /stats (stats.astro) shows grade history stats with an SVG trend chart and class highlights.
 - Routes: /anime (anime.astro) is a Dragon Ball Z inspired proof-of-concept page with static content only.

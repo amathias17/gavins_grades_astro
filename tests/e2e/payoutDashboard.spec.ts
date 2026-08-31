@@ -55,6 +55,24 @@ test.describe("A-grade payout dashboard", () => {
     await expect(page.locator(".site-header")).toHaveCount(0);
   });
 
+  test("centers the purchase label under the numeric payout", async ({ page }) => {
+    await page.goto("/");
+    await expect(page.locator(".total")).not.toHaveClass(/is-spinning/, { timeout: 3000 });
+
+    const centers = await page.evaluate(() => {
+      const value = document.querySelector(".total-value")?.getBoundingClientRect();
+      const label = document.querySelector(".money-label-frame")?.getBoundingClientRect();
+      return {
+        valueCenter: value ? value.x + value.width / 2 : null,
+        labelCenter: label ? label.x + label.width / 2 : null,
+      };
+    });
+
+    expect(centers.valueCenter).not.toBeNull();
+    expect(centers.labelCenter).not.toBeNull();
+    expect(Math.abs((centers.valueCenter ?? 0) - (centers.labelCenter ?? 0))).toBeLessThanOrEqual(1);
+  });
+
   test("renders the scraper-provided missing assignments below the total", async ({ page }) => {
     await page.goto("/");
 

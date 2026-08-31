@@ -196,10 +196,11 @@ const initialPurchaseEquivalent = purchaseEquivalents[0];
 <style>
     .payout-screen { display: grid; place-items: center; align-content: center; width: 100%; min-height: 100svh; }
     .payout-headline { width: min(90vw, 48rem); margin: 0 0 2.25rem; color: #61d49a; font: 700 clamp(.72rem, 2.2vw, 1.15rem)/1.4 "DM Mono", monospace; letter-spacing: .12em; text-align: center; text-shadow: 0 0 18px rgba(97, 212, 154, .35); text-transform: uppercase; }
-    .total { display: inline-flex; align-items: center; color: #f2f5ef; font: 700 clamp(8rem, 34vw, 32rem)/.78 "Orbitron", sans-serif; letter-spacing: .01em; text-shadow: 0 0 70px rgba(97, 212, 154, .1); animation: arrive .8s cubic-bezier(.2, .8, .2, 1) both; }
-    .currency-symbol { margin-right: .08em; color: #61d49a; font-size: .34em; letter-spacing: 0; text-shadow: 0 0 24px rgba(97, 212, 154, .3); }
+    .total { position: relative; display: inline-block; width: max-content; color: #f2f5ef; font: 700 clamp(8rem, 34vw, 32rem)/.78 "Orbitron", sans-serif; letter-spacing: .01em; text-shadow: 0 0 70px rgba(97, 212, 154, .1); animation: arrive .8s cubic-bezier(.2, .8, .2, 1) both; }
+    .total-value { display: block; }
+    .currency-symbol { position: absolute; top: 50%; right: 100%; margin-right: .08em; color: #61d49a; font-size: .34em; letter-spacing: 0; text-shadow: 0 0 24px rgba(97, 212, 154, .3); transform: translateY(-50%); }
     .total.is-spinning { animation: slot-shake .12s steps(2, end) infinite; color: #c8d4cc; text-shadow: 3px 0 #ff4fd8, -3px 0 #61d49a; }
-    .money-label-frame { width: min(92vw, 44rem); margin-top: 2rem; overflow: clip; text-align: center; }
+    .money-label-frame { width: max-content; max-width: 92vw; margin-top: 2rem; overflow: clip; text-align: center; }
     .money-label-kicker { margin-bottom: .65rem; color: rgba(97, 212, 154, .7); font: 700 clamp(.58rem, 2vw, .75rem)/1 "DM Mono", monospace; letter-spacing: .3em; text-transform: uppercase; }
     .money-label { position: relative; display: inline-block; max-width: 92vw; color: #61d49a; font: 700 clamp(.85rem, 4.4vw, 1.65rem)/1 "Orbitron", sans-serif; letter-spacing: clamp(.08em, 1.5vw, .28em); text-align: center; white-space: nowrap; opacity: 0; transform: translateY(-.5rem); transform-origin: center; }
     .money-label.is-ready { opacity: 1; transform: translateY(0); transition: opacity .35s ease, transform .35s ease; }
