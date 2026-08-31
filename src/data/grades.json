@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "08/31/2026, 01:14 AM",
+    "last_updated": "08/31/2026, 11:40 AM",
     "most_recent_date": "8/31/2026",
     "total_classes": 13
   },
@@ -32,8 +32,8 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 0,
-      "letter_grade": "F"
+      "current_grade": 60,
+      "letter_grade": "D"
     },
     {
       "class_name": "Heroes & Monsters",
@@ -1931,7 +1931,7 @@
       "8/28/2026": 0,
       "8/29/2026": 0,
       "8/30/2026": 0,
-      "8/31/2026": 0
+      "8/31/2026": 60
     },
     "Heroes & Monsters": {
       "8/25/2026": null,
@@ -2024,7 +2024,7 @@
       "8/31/2026": 0
     }
   },
-  "overall_average": 100,
+  "overall_average": 87,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -2304,7 +2304,7 @@
     "8/28/2026": 100,
     "8/29/2026": 100,
     "8/30/2026": 100,
-    "8/31/2026": 100
+    "8/31/2026": 87
   },
   "streak": 94,
   "streak_history": {

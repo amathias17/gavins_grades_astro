@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-31T05:14:16.074Z",
+  "updatedAt": "2026-08-31T15:40:27.842Z",
   "assignments": {
     "1561854:44463:1396": {
       "classId": "44463",
@@ -11152,6 +11152,23 @@
       "weight": 1,
       "graded": true,
       "cachedAt": "2026-08-31T05:14:16.043Z"
+    },
+    "1644626:47460:1396": {
+      "classId": "47460",
+      "assignmentId": "1644626",
+      "studentId": "1396",
+      "className": "ENVIRON SCIENCE    1",
+      "teacher": "Megan Kutruff",
+      "period": "1",
+      "currentGrade": 60,
+      "assignmentName": "Signed Syllabus",
+      "dateDue": "08/31/2026",
+      "dueDate": "08/31/2026",
+      "earnedPoints": 0,
+      "totalPoints": 5,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-08-31T15:40:25.790Z"
     }
   }
 }

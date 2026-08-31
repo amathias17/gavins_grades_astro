@@ -1,45 +1,21 @@
 {
   "metadata": {
-    "scrapedAt": "2026-08-31T05:14:16.074Z",
+    "scrapedAt": "2026-08-31T15:40:27.840Z",
     "totalClasses": 13,
-    "totalAssignments": 3
+    "totalAssignments": 1
   },
   "classes": [
     {
-      "className": "ANATOMY & PHYSIOL",
-      "teacher": "Denise Condo",
-      "period": "5",
-      "currentGrade": 100,
+      "className": "ENVIRON SCIENCE    1",
+      "teacher": "Megan Kutruff",
+      "period": "1",
+      "currentGrade": 60,
       "assignments": [
         {
-          "name": "Syllabus/Grading Policy Signed",
+          "name": "Signed Syllabus",
           "dueDate": "08/31/2026",
-          "earnedPoints": 11,
-          "totalPoints": 10,
-          "weight": 1,
-          "graded": true
-        }
-      ]
-    },
-    {
-      "className": "ASTRONOMY",
-      "teacher": "James Krug",
-      "period": "6",
-      "currentGrade": 100,
-      "assignments": [
-        {
-          "name": "Signed Course Syllabus",
-          "dueDate": "08/28/2026",
-          "earnedPoints": 11,
-          "totalPoints": 10,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "CLASS PARTICIPATION",
-          "dueDate": "08/26/2026",
-          "earnedPoints": 50,
-          "totalPoints": 50,
+          "earnedPoints": 0,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         }
