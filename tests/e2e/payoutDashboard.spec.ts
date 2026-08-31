@@ -1,5 +1,16 @@
 import { expect, test } from "@playwright/test";
+import { readFileSync } from "node:fs";
 import { calculatePayout } from "../../src/utils/payout";
+
+const missingAssignmentsData = JSON.parse(
+  readFileSync(new URL("../../src/data/missing_assignments.json", import.meta.url), "utf8"),
+) as {
+  missing_assignments: Array<{
+    assignment_name: string;
+    class_name: string;
+    due_date: string;
+  }>;
+};
 
 test.describe("A-grade payout dashboard", () => {
   test("calculates $50 for each numeric A", () => {
@@ -42,6 +53,26 @@ test.describe("A-grade payout dashboard", () => {
     await expect(page.locator(".currency-symbol")).toHaveText("$");
     await expect(page.locator(".money-label-kicker")).toHaveText("CAN BUY");
     await expect(page.locator(".site-header")).toHaveCount(0);
+  });
+
+  test("renders the scraper-provided missing assignments below the total", async ({ page }) => {
+    await page.goto("/");
+
+    const assignments = missingAssignmentsData.missing_assignments;
+    const summary = page.locator(".missing-summary");
+
+    await expect(summary).toBeVisible();
+    await expect(summary.getByRole("heading", { name: "Missing assignments" })).toBeVisible();
+    await expect(summary.locator(".missing-summary-count")).toHaveText(String(assignments.length));
+    await expect(summary.getByRole("listitem")).toHaveCount(assignments.length);
+
+    if (assignments.length > 0) {
+      await expect(summary).toContainText(assignments[0].assignment_name);
+      await expect(summary).toContainText(assignments[0].class_name);
+      await expect(summary).toContainText(assignments[0].due_date.replace(/\s*\(Q\d+\)/i, ""));
+    } else {
+      await expect(summary).toContainText("No missing assignments");
+    }
   });
 
   test("opens the feedback response modal", async ({ page }) => {

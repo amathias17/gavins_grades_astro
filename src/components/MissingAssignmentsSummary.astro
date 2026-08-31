@@ -1,0 +1,166 @@
+---
+import missingAssignmentsData from "../data/missing_assignments.json";
+
+const assignments = missingAssignmentsData.missing_assignments.map((assignment) => ({
+    ...assignment,
+    due_date: assignment.due_date
+        ?.replace(/\u00a0/g, " ")
+        .replace(/\s*\(Q\d+\)/i, "")
+        .trim(),
+}));
+---
+
+<section class="missing-summary" aria-labelledby="missing-summary-heading">
+    <div class="missing-summary-heading">
+        <div>
+            <p class="missing-summary-kicker">Assignment status</p>
+            <h2 id="missing-summary-heading">Missing assignments</h2>
+        </div>
+        <span class="missing-summary-count" aria-label={`${assignments.length} missing assignments`}>
+            {assignments.length}
+        </span>
+    </div>
+
+    {assignments.length === 0 ? (
+        <p class="missing-summary-empty">No missing assignments</p>
+    ) : (
+        <ul class="missing-summary-list" aria-label="Missing assignments list">
+            {assignments.map((assignment) => (
+                <li class="missing-summary-item">
+                    <div class="missing-summary-item-main">
+                        <strong>{assignment.assignment_name}</strong>
+                        <span>{assignment.class_name}</span>
+                    </div>
+                    <div class="missing-summary-item-meta">
+                        <time datetime={assignment.due_date}>{assignment.due_date}</time>
+                        <span>{assignment.max_points ? `${assignment.max_points} pts` : "Points unavailable"}</span>
+                    </div>
+                </li>
+            ))}
+        </ul>
+    )}
+</section>
+
+<style>
+    .missing-summary {
+        width: min(92vw, 44rem);
+        margin: 2rem auto 0;
+        border: 1px solid rgba(97, 212, 154, .42);
+        background: rgba(7, 17, 13, .78);
+        box-shadow: 0 0 24px rgba(97, 212, 154, .07);
+        color: #f2f5ef;
+        font-family: "DM Mono", monospace;
+    }
+
+    .missing-summary-heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        border-bottom: 1px dashed rgba(97, 212, 154, .32);
+        padding: .9rem 1rem;
+    }
+
+    .missing-summary-kicker {
+        margin: 0 0 .35rem;
+        color: rgba(97, 212, 154, .68);
+        font-size: .58rem;
+        letter-spacing: .2em;
+        text-transform: uppercase;
+    }
+
+    .missing-summary h2 {
+        margin: 0;
+        color: #61d49a;
+        font-size: clamp(.8rem, 2.6vw, 1rem);
+        letter-spacing: .08em;
+        text-transform: uppercase;
+    }
+
+    .missing-summary-count {
+        display: grid;
+        flex: 0 0 auto;
+        width: 2rem;
+        height: 2rem;
+        place-items: center;
+        border: 1px solid rgba(255, 79, 216, .7);
+        color: #ff8be5;
+        font-size: .8rem;
+        font-weight: 700;
+    }
+
+    .missing-summary-list {
+        display: grid;
+        gap: .55rem;
+        margin: 0;
+        padding: .7rem;
+        list-style: none;
+    }
+
+    .missing-summary-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        border-left: 2px solid #ff4fd8;
+        padding: .7rem .75rem;
+        background: rgba(0, 0, 0, .38);
+    }
+
+    .missing-summary-item-main,
+    .missing-summary-item-meta {
+        display: grid;
+        gap: .3rem;
+        min-width: 0;
+    }
+
+    .missing-summary-item-main strong {
+        overflow-wrap: anywhere;
+        color: #f2f5ef;
+        font-size: clamp(.68rem, 2.4vw, .82rem);
+        text-transform: uppercase;
+    }
+
+    .missing-summary-item-main span,
+    .missing-summary-item-meta {
+        color: #8c9890;
+        font-size: clamp(.58rem, 2vw, .68rem);
+    }
+
+    .missing-summary-item-meta {
+        flex: 0 0 auto;
+        justify-items: end;
+        text-align: right;
+        white-space: nowrap;
+    }
+
+    .missing-summary-item-meta span {
+        color: #ff8be5;
+    }
+
+    .missing-summary-empty {
+        margin: 0;
+        padding: 1rem;
+        color: #61d49a;
+        font-size: .7rem;
+        letter-spacing: .08em;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    @media (max-width: 480px) {
+        .missing-summary-item {
+            align-items: flex-start;
+            flex-direction: column;
+            gap: .65rem;
+        }
+
+        .missing-summary-item-meta {
+            display: flex;
+            align-items: center;
+            justify-items: initial;
+            gap: .75rem;
+            text-align: left;
+        }
+    }
+</style>
