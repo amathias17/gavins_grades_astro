@@ -833,7 +833,7 @@ async function scrapeMissingAssignments(page, currentQuarter = null) {
       if (noMissingText > 0) {
         console.log('No missing assignments found');
       } else {
-        missingAssignments = await page.evaluate(() => {
+        missingAssignments = await page.evaluate((quarter) => {
           const assignments = [];
           const seen = new Set();
           const rows = document.querySelectorAll('table tr');
@@ -844,7 +844,7 @@ async function scrapeMissingAssignments(page, currentQuarter = null) {
 
             const rawDate = cells[0]?.textContent.trim() || '';
           const dueQuarter = rawDate.match(/\(Q([1-4])\)/i)?.[1] || null;
-          if (currentQuarter && dueQuarter && dueQuarter !== currentQuarter.slice(1)) return;
+          if (quarter && dueQuarter && dueQuarter !== quarter.slice(1)) return;
 
             const assignmentName = cells[1]?.textContent.trim() || '';
             const className = cells[2]?.textContent.trim() || '';
@@ -880,7 +880,7 @@ async function scrapeMissingAssignments(page, currentQuarter = null) {
           });
 
           return assignments;
-        });
+        }, currentQuarter);
         console.log(`Found ${missingAssignments.length} missing assignments${currentQuarter ? ` (${currentQuarter})` : ''}`);
       }
     } else {
@@ -1143,4 +1143,8 @@ async function main() {
   }
 }
 
-main();
+module.exports = { scrapeMissingAssignments };
+
+if (require.main === module) {
+  main();
+}
