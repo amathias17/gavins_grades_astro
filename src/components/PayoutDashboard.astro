@@ -10,6 +10,7 @@ const { totalPayout } = calculatePayout(
     gradesData.classes,
     missingAssignmentsData.missing_assignments.length > 0,
 );
+const hasMissingAssignments = missingAssignmentsData.missing_assignments.length > 0;
 const formattedAmount = new Intl.NumberFormat("en-US", {
     maximumFractionDigits: 0,
 }).format(totalPayout);
@@ -21,7 +22,7 @@ const initialPurchaseEquivalent = purchaseEquivalents[0];
 
 <section class="payout-screen" aria-labelledby="payout-heading">
     <h1 id="payout-heading" class="payout-headline">HOW MUCH MONEY WILL GAVIN TAKE FROM DAD?</h1>
-    <div class="total" aria-label={`$${formattedAmount} total earned`}><span class="currency-symbol" aria-hidden="true">$</span><span class="total-value" data-final={formattedAmount}>{formattedAmount.replace(/\d/g, "0")}</span></div>
+    <div class:list={['total', { 'has-missing-grades': hasMissingAssignments }]} aria-label={`$${formattedAmount} total earned`}><span class="currency-symbol" aria-hidden="true">$</span><span class="total-value" data-final={formattedAmount}>{formattedAmount.replace(/\d/g, "0")}</span></div>
     <div class="money-label-frame" aria-hidden="true"><div class="money-label-kicker">CAN BUY</div><div class="money-label" data-money-label data-equivalents={JSON.stringify(purchaseEquivalents)} data-text={initialPurchaseEquivalent}>{initialPurchaseEquivalent}</div></div>
     <MissingAssignmentsSummary />
     <MarkingPeriodCard />
@@ -200,6 +201,7 @@ const initialPurchaseEquivalent = purchaseEquivalents[0];
     .total-value { display: block; }
     .currency-symbol { position: absolute; top: 50%; right: 100%; margin-right: .08em; color: #61d49a; font-size: .34em; letter-spacing: 0; text-shadow: 0 0 24px rgba(97, 212, 154, .3); transform: translateY(-50%); }
     .total.is-spinning { animation: slot-shake .12s steps(2, end) infinite; color: #c8d4cc; text-shadow: 3px 0 #ff4fd8, -3px 0 #61d49a; }
+    .total.has-missing-grades .total-value { color: #ff4f64; animation: missing-grade-alarm .72s steps(2, end) infinite; text-shadow: 0 0 24px rgba(255, 79, 100, .8), 0 0 52px rgba(255, 79, 100, .35); }
     .money-label-frame { width: max-content; max-width: 92vw; margin-top: 2rem; overflow: clip; text-align: center; }
     .money-label-kicker { margin-bottom: .65rem; color: rgba(97, 212, 154, .7); font: 700 clamp(.58rem, 2vw, .75rem)/1 "DM Mono", monospace; letter-spacing: .3em; text-transform: uppercase; }
     .money-label { position: relative; display: inline-block; max-width: 92vw; color: #61d49a; font: 700 clamp(.85rem, 4.4vw, 1.65rem)/1 "Orbitron", sans-serif; letter-spacing: clamp(.08em, 1.5vw, .28em); text-align: center; white-space: nowrap; opacity: 0; transform: translateY(-.5rem); transform-origin: center; }
@@ -220,6 +222,7 @@ const initialPurchaseEquivalent = purchaseEquivalents[0];
     .feedback-close:hover, .feedback-close:focus-visible { color: #07110d; background: #61d49a; outline: none; }
     @keyframes arrive { from { opacity: 0; transform: scale(.94); } to { opacity: 1; transform: scale(1); } }
     @keyframes slot-shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-.025em); } 75% { transform: translateX(.025em); } }
+    @keyframes missing-grade-alarm { 0%, 100% { opacity: 1; text-shadow: 0 0 24px rgba(255, 79, 100, .8), 0 0 52px rgba(255, 79, 100, .35); } 50% { opacity: .42; text-shadow: 0 0 8px rgba(255, 79, 100, .45); } }
     .glitch-slice::before { animation: label-slice-a .56s steps(2, end) both; }
     .glitch-slice::after { animation: label-slice-b .56s steps(2, end) both; }
     .glitch-flicker { animation: label-glitch-flicker .3s steps(4, end) infinite !important; text-shadow: 4px 0 #ff4fd8, -4px 0 #61d49a; }
@@ -237,5 +240,5 @@ const initialPurchaseEquivalent = purchaseEquivalents[0];
     @keyframes label-scan-b { 0%, 100% { transform: translateX(.08em); } 25% { transform: translateX(-.16em); } 50% { transform: translateX(.2em); } 75% { transform: translateX(-.1em); } }
     @keyframes label-slice-a { 0%, 100% { transform: translateX(-.08em); } 50% { transform: translateX(.14em); } }
     @keyframes label-slice-b { 0%, 100% { transform: translateX(.08em); } 50% { transform: translateX(-.12em); } }
-    @media (prefers-reduced-motion: reduce) { .total, .total.is-spinning { animation: none; } .money-label-frame { margin-top: 2rem; } .money-label { opacity: 1; transform: none; } }
+    @media (prefers-reduced-motion: reduce) { .total, .total.is-spinning { animation: none; } .total.has-missing-grades .total-value { animation: none; opacity: 1; } .money-label-frame { margin-top: 2rem; } .money-label { opacity: 1; transform: none; } }
 </style>

@@ -23,6 +23,7 @@
 - Payout amount typography uses subtle positive letter spacing (.01em) for readable multi-character totals.
 - Payout currency symbol is intentionally smaller than the numeric amount.
 - Payout purchase-equivalent text centers beneath the numeric payout value, excluding the dollar symbol.
+- When missing assignments exist, the homepage zero uses a persistent red alarm pulse; reduced-motion users see a static red zero.
 - Payout amount shows a smaller dollar symbol and rotates amount-aware funny purchase equivalents instead of generic money slang; the existing slot reveal and reduced-motion behavior remain intact.
 - Payout purchase equivalents include a small CAN BUY kicker, and the dollar symbol is vertically centered beside the number.
 - Payout purchase-equivalent copy lives in src/data/purchase_equivalents.json; add a minimum payout and item strings there to expand the rotating descriptions.

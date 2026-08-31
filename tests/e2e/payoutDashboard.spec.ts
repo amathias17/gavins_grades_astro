@@ -52,7 +52,18 @@ test.describe("A-grade payout dashboard", () => {
     await expect(page.getByLabel(/\$\d+ total earned/)).toBeVisible();
     await expect(page.locator(".currency-symbol")).toHaveText("$");
     await expect(page.locator(".money-label-kicker")).toHaveText("CAN BUY");
+    await expect(page.locator(".total")).toHaveClass(/has-missing-grades/);
+    await expect(page.locator(".total-value")).toHaveCSS("animation-name", /missing-grade-alarm/);
     await expect(page.locator(".site-header")).toHaveCount(0);
+  });
+
+  test("keeps the missing-grade alarm static for reduced motion", async ({ page }) => {
+    await page.emulateMedia({ reducedMotion: "reduce" });
+    await page.goto("/");
+
+    await expect(page.locator(".total")).toHaveClass(/has-missing-grades/);
+    await expect(page.locator(".total-value")).toHaveCSS("animation-name", "none");
+    await expect(page.locator(".total-value")).toHaveCSS("color", "rgb(255, 79, 100)");
   });
 
   test("centers the purchase label under the numeric payout", async ({ page }) => {
