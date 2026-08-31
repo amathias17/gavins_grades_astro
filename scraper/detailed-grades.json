@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-08-31T15:54:09.646Z",
+    "scrapedAt": "2026-08-31T18:45:52.325Z",
     "totalClasses": 13,
-    "totalAssignments": 8
+    "totalAssignments": 9
   },
   "classes": [
     {
@@ -55,7 +55,7 @@
           "name": "Classroom Policy",
           "dueDate": "08/31/2026",
           "earnedPoints": 0,
-          "totalPoints": 20,
+          "totalPoints": 10,
           "weight": 1,
           "graded": false
         }
@@ -98,6 +98,22 @@
           "totalPoints": 50,
           "weight": 1,
           "graded": true
+        }
+      ]
+    },
+    {
+      "className": "ENGLISH 11",
+      "teacher": "Audrey Cromell",
+      "period": "8",
+      "currentGrade": 0,
+      "assignments": [
+        {
+          "name": "Survey and Character",
+          "dueDate": "08/31/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
         }
       ]
     }

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-31T15:54:09.646Z",
+  "updatedAt": "2026-08-31T18:45:52.326Z",
   "assignments": {
     "1561854:44463:1396": {
       "classId": "44463",
@@ -11117,7 +11117,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-08-31T15:54:07.600Z"
+      "cachedAt": "2026-08-31T18:45:50.216Z"
     },
     "1644122:47705:1396": {
       "classId": "47705",
@@ -11134,7 +11134,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-08-31T15:54:07.600Z"
+      "cachedAt": "2026-08-31T18:45:50.216Z"
     },
     "1644168:47487:1396": {
       "classId": "47487",
@@ -11151,7 +11151,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-08-31T15:54:07.600Z"
+      "cachedAt": "2026-08-31T18:45:50.216Z"
     },
     "1644626:47460:1396": {
       "classId": "47460",
@@ -11168,7 +11168,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-08-31T15:54:00.419Z"
+      "cachedAt": "2026-08-31T18:45:40.796Z"
     },
     "1644620:47460:1396": {
       "classId": "47460",
@@ -11185,7 +11185,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-08-31T15:54:00.419Z"
+      "cachedAt": "2026-08-31T18:45:40.796Z"
     },
     "1644631:47460:1396": {
       "classId": "47460",
@@ -11202,7 +11202,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-08-31T15:54:00.477Z"
+      "cachedAt": "2026-08-31T18:45:40.796Z"
     }
   }
 }
