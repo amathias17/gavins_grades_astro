@@ -18,7 +18,7 @@
 - CurrentGrades missing quests card shows a dynamic Missing.Quests count sourced from missing_assignments.json.
 - Homepage payout dashboard is a dark, headerless full-screen view with a humorous headline above the centered total; it calculates $50 for each current numeric grade >= 90 and renders $0 when no classes are imported.
 - Any non-empty missing_assignments.json list globally blocks homepage payout eligibility: qualifying A count, per-class payout, and total payout are all zero; calculator and class-grade rules are unchanged.
-- Homepage payout dashboard renders a compact server-rendered MissingAssignmentsSummary directly below the total, showing assignment, class, due date, and points; an empty list shows an all-clear message.
+- Homepage payout dashboard renders a compact server-rendered MissingAssignmentsSummary below the purchase-equivalent label, showing assignment, class, due date, and points; an empty list shows an all-clear message.
 - Homepage payout amount uses the Orbitron Google Font.
 - Payout amount typography uses subtle positive letter spacing (.01em) for readable multi-character totals.
 - Payout currency symbol is intentionally smaller than the numeric amount.

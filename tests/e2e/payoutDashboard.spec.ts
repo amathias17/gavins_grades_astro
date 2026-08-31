@@ -62,6 +62,7 @@ test.describe("A-grade payout dashboard", () => {
     const summary = page.locator(".missing-summary");
 
     await expect(summary).toBeVisible();
+    expect(await summary.evaluate((element) => element.previousElementSibling?.classList.contains("money-label-frame"))).toBe(true);
     await expect(summary.getByRole("heading", { name: "Missing assignments" })).toBeVisible();
     await expect(summary.locator(".missing-summary-count")).toHaveText(String(assignments.length));
     await expect(summary.getByRole("listitem")).toHaveCount(assignments.length);

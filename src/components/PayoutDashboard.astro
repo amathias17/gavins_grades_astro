@@ -22,8 +22,8 @@ const initialPurchaseEquivalent = purchaseEquivalents[0];
 <section class="payout-screen" aria-labelledby="payout-heading">
     <h1 id="payout-heading" class="payout-headline">HOW MUCH MONEY WILL GAVIN TAKE FROM DAD?</h1>
     <div class="total" aria-label={`$${formattedAmount} total earned`}><span class="currency-symbol" aria-hidden="true">$</span><span class="total-value" data-final={formattedAmount}>{formattedAmount.replace(/\d/g, "0")}</span></div>
-    <MissingAssignmentsSummary />
     <div class="money-label-frame" aria-hidden="true"><div class="money-label-kicker">CAN BUY</div><div class="money-label" data-money-label data-equivalents={JSON.stringify(purchaseEquivalents)} data-text={initialPurchaseEquivalent}>{initialPurchaseEquivalent}</div></div>
+    <MissingAssignmentsSummary />
     <MarkingPeriodCard />
     <button class="feedback-button" type="button" data-feedback-open>Press to Submit Feedback</button>
     <dialog class="feedback-dialog" id="feedback-dialog" aria-label="Feedback response" aria-describedby="feedback-message">
