@@ -35,6 +35,7 @@ export interface SchoolDayReminder {
   label: string;
   detail: string;
   tone: "normal" | "notice" | "special";
+  isCheckpoint?: boolean;
 }
 
 export const markingPeriods: MarkingPeriod[] = calendarData.markingPeriods;
@@ -148,6 +149,7 @@ export function getSchoolDayReminder(today: string | Date = new Date()): SchoolD
       label: `NEXT CHECKPOINT: MARKING PERIOD ${activePeriod.number}`,
       detail: `Ends ${formatDate(activePeriod.end)}.`,
       tone: "normal",
+      isCheckpoint: true,
     };
   }
 

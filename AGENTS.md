@@ -29,6 +29,7 @@
 - Payout slang transitions use a roughly 1.4-second staged scramble with partial word fragments, corrupted characters, repeated glitch cycles, viewport-constrained width-aware morph scaling, deliberate choke/pause stutters, and a clean final lock-in; reduced-motion users skip the transition.
 - Payout homepage includes a "Press to Submit Feedback" button that opens a full-screen accessible modal containing "lol turn in your assignments." with a visible Close button, Escape, backdrop click, and focus restoration.
 - Payout loading glitches the purchase equivalent concurrently with the numeric slot animation, then locks to the first amount-aware description before normal rotation begins.
+- Marking-period card omits the LIVE CALENDAR badge, hides redundant active-period checkpoint reminders, keeps contextual school-day reminders, and uses more generous responsive spacing.
 - Homepage includes a generously spaced live school-day marking-period card for the 2026-2027 secondary calendar, showing the current period, school days remaining, end date, and progress while excluding supplied inservice closures.
 - The marking-period card also shows school-day-aware reminders for school starts, closures, weekend mode, special schedules, and the next marking-period checkpoint.
 - School-year calendar facts live in src/data/school_calendar.json; src/utils/schoolCalendar.ts contains the reusable date calculations and reminder logic.

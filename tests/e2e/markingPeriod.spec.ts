@@ -37,6 +37,8 @@ test.describe("school calendar marking periods", () => {
     expect(getSchoolDayReminder("2026-08-25").label).toBe("SCHOOL STARTS TOMORROW");
     expect(getSchoolDayReminder("2026-09-25").label).toBe("NO SCHOOL TODAY");
     expect(getSchoolDayReminder("2026-12-03").label).toBe("SPECIAL SCHEDULE TOMORROW");
+    expect(getSchoolDayReminder("2026-08-31").isCheckpoint).toBe(true);
+    expect(getSchoolDayReminder("2026-09-25").isCheckpoint).toBeUndefined();
   });
 
   test("renders the live marking-period card on the homepage", async ({ page }) => {
@@ -44,6 +46,7 @@ test.describe("school calendar marking periods", () => {
 
     const card = page.locator("[data-marking-period-card]");
     await expect(card).toBeVisible();
+    await expect(card.locator(".marking-period-signal")).toHaveCount(0);
     await expect(card.locator("#marking-period-heading")).toContainText(/MARKING PERIOD|SCHOOL YEAR/);
     await expect(card.locator("[data-marking-period-detail]")).toContainText(/2026|2027/);
   });

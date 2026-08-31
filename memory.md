@@ -30,6 +30,7 @@
 - Missing.Quests modal now sets aria-hidden/aria-describedby and restores focus on close with a basic focus trap.
 - Homepage now includes a generously spaced live marking-period card powered by src/utils/schoolCalendar.ts and src/components/MarkingPeriodCard.astro. It tracks 2026-2027 secondary marking periods, counts weekdays excluding supplied inservice closures, and refreshes at midnight in the browser.
 - The marking-period card includes a school-day-aware reminder strip driven by getSchoolDayReminder, covering school start, closure days, weekends, modified schedules, and the next marking-period checkpoint.
+- MarkingPeriodCard hides only the redundant active-period checkpoint reminder (identified by SchoolDayReminder.isCheckpoint), removes the LIVE CALENDAR badge, and uses more generous mobile spacing while retaining contextual reminders and the progress bar.
 - Calendar facts now live in src/data/school_calendar.json, including marking periods, special days, and testing windows; schoolCalendar.ts imports that data and retains calculation logic only.
 - Missing assignment dates strip "(Q2)" on display; skyward-scraper normalizes missing assignment due_date to drop quarter suffixes.
 - BaseLayout enables Astro view transitions with ClientRouter in the page head.

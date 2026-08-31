@@ -14,14 +14,13 @@ const initialPeriodLabel = initialStatus.period ? `MARKING PERIOD ${initialStatu
 >
     <div class="marking-period-meta">
         <span id="marking-period-heading" class="marking-period-kicker">{initialPeriodLabel}</span>
-        <span class="marking-period-signal" aria-hidden="true">● LIVE CALENDAR</span>
     </div>
     <strong class="marking-period-label" data-marking-period-label>{initialStatus.label}</strong>
     <span class="marking-period-detail" data-marking-period-detail>{initialStatus.detail}</span>
     <div class="marking-period-track" aria-hidden="true">
         <span class="marking-period-progress" data-marking-period-progress style={`width: ${initialStatus.progressPercent}%`}></span>
     </div>
-    <div class:list={["school-reminder", `school-reminder-${initialReminder.tone}`]} data-school-reminder>
+    <div class:list={["school-reminder", `school-reminder-${initialReminder.tone}`]} data-school-reminder hidden={initialReminder.isCheckpoint}>
         <span class="school-reminder-tag">REMINDER</span>
         <strong data-school-reminder-label>{initialReminder.label}</strong>
         <span data-school-reminder-detail>{initialReminder.detail}</span>
@@ -52,10 +51,14 @@ const initialPeriodLabel = initialStatus.period ? `MARKING PERIOD ${initialStatu
         if (progress) progress.style.width = `${status.progressPercent}%`;
         if (reminder) {
             reminder.className = `school-reminder school-reminder-${nextReminder.tone}`;
+            reminder.hidden = Boolean(nextReminder.isCheckpoint);
         }
         if (reminderLabel) reminderLabel.textContent = nextReminder.label;
         if (reminderDetail) reminderDetail.textContent = nextReminder.detail;
-        if (announcement) announcement.textContent = `${periodLabel}. ${status.label}. ${status.detail}. ${nextReminder.label}. ${nextReminder.detail}`;
+        if (announcement) {
+            const reminderAnnouncement = nextReminder.isCheckpoint ? "" : ` ${nextReminder.label}. ${nextReminder.detail}`;
+            announcement.textContent = `${periodLabel}. ${status.label}. ${status.detail}.${reminderAnnouncement}`;
+        }
     };
 
     update();
@@ -74,7 +77,7 @@ const initialPeriodLabel = initialStatus.period ? `MARKING PERIOD ${initialStatu
     .marking-period-card {
         width: min(88vw, 31rem);
         margin: 3.5rem auto 0;
-        padding: .8rem 1rem .95rem;
+        padding: 1.05rem 1rem 1.2rem;
         border: 1px solid rgba(97, 212, 154, .48);
         border-radius: 2px;
         background: linear-gradient(105deg, rgba(10, 28, 25, .94), rgba(15, 42, 35, .72));
@@ -85,23 +88,18 @@ const initialPeriodLabel = initialStatus.period ? `MARKING PERIOD ${initialStatu
     }
 
     .marking-period-meta {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: .75rem;
+        display: block;
         color: #61d49a;
         font-size: .57rem;
         letter-spacing: .13em;
         line-height: 1.3;
     }
 
-    .marking-period-signal { color: rgba(223, 255, 233, .52); font-size: .48rem; }
-    .marking-period-signal::first-letter { color: #ffca3a; }
-    .marking-period-label { display: block; margin-top: .42rem; color: #f2f5ef; font-family: "Orbitron", sans-serif; font-size: clamp(1rem, 4vw, 1.45rem); letter-spacing: .07em; line-height: 1.1; }
-    .marking-period-detail { display: block; margin-top: .35rem; color: rgba(223, 255, 233, .68); font-size: .68rem; letter-spacing: .03em; }
-    .marking-period-track { height: .28rem; margin-top: .8rem; overflow: hidden; border: 1px solid rgba(97, 212, 154, .25); background: rgba(0, 0, 0, .34); }
+    .marking-period-label { display: block; margin-top: .72rem; color: #f2f5ef; font-family: "Orbitron", sans-serif; font-size: clamp(1rem, 4vw, 1.45rem); letter-spacing: .07em; line-height: 1.1; }
+    .marking-period-detail { display: block; margin-top: .5rem; color: rgba(223, 255, 233, .68); font-size: .68rem; letter-spacing: .03em; }
+    .marking-period-track { height: .28rem; margin-top: .95rem; overflow: hidden; border: 1px solid rgba(97, 212, 154, .25); background: rgba(0, 0, 0, .34); }
     .marking-period-progress { display: block; height: 100%; min-width: 0; background: repeating-linear-gradient(135deg, #61d49a 0 7px, #b6ffd0 7px 9px); box-shadow: 0 0 12px rgba(97, 212, 154, .7); transition: width .45s ease; }
-    .school-reminder { display: grid; grid-template-columns: auto 1fr; gap: .18rem .55rem; margin-top: .8rem; padding: .55rem .65rem .6rem; border-left: 2px solid #61d49a; background: rgba(0, 0, 0, .23); }
+    .school-reminder { display: grid; grid-template-columns: auto 1fr; gap: .25rem .55rem; margin-top: 1rem; padding: .7rem .7rem .75rem; border-left: 2px solid #61d49a; background: rgba(0, 0, 0, .23); }
     .school-reminder-tag { grid-column: 1 / -1; color: rgba(223, 255, 233, .5); font-size: .48rem; letter-spacing: .16em; }
     .school-reminder strong { color: #dfffe9; font-size: .62rem; letter-spacing: .05em; line-height: 1.35; }
     .school-reminder > span:last-child { color: rgba(223, 255, 233, .66); font-size: .6rem; line-height: 1.35; }
