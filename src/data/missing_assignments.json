@@ -1,7 +1,16 @@
 {
   "metadata": {
-    "last_updated": "08/31/2026, 11:40 AM",
-    "count": 0
+    "last_updated": "08/31/2026, 11:54 AM",
+    "count": 1
   },
-  "missing_assignments": []
+  "missing_assignments": [
+    {
+      "due_date": "08/31/2026",
+      "assignment_name": "Signed Syllabus",
+      "class_name": "ENVIRON SCIENCE    1",
+      "teacher": "Megan Kutruff",
+      "category": "Other",
+      "max_points": "5"
+    }
+  ]
 }

@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-08-31T15:40:27.840Z",
+    "scrapedAt": "2026-08-31T15:54:09.646Z",
     "totalClasses": 13,
-    "totalAssignments": 1
+    "totalAssignments": 8
   },
   "classes": [
     {
@@ -16,6 +16,86 @@
           "dueDate": "08/31/2026",
           "earnedPoints": 0,
           "totalPoints": 5,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Student Survey",
+          "dueDate": "08/31/2026",
+          "earnedPoints": 9,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Signed Syllabus",
+          "dueDate": "08/31/2026",
+          "earnedPoints": 0,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Create your own Lab coat",
+          "dueDate": "08/31/2026",
+          "earnedPoints": 9,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        }
+      ]
+    },
+    {
+      "className": "INTRMEDIATE ALG II",
+      "teacher": "Jodi Lambertus",
+      "period": "4",
+      "currentGrade": 0,
+      "assignments": [
+        {
+          "name": "Classroom Policy",
+          "dueDate": "08/31/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": false
+        }
+      ]
+    },
+    {
+      "className": "ANATOMY & PHYSIOL",
+      "teacher": "Denise Condo",
+      "period": "5",
+      "currentGrade": 100,
+      "assignments": [
+        {
+          "name": "Syllabus/Grading Policy Signed",
+          "dueDate": "08/31/2026",
+          "earnedPoints": 11,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        }
+      ]
+    },
+    {
+      "className": "ASTRONOMY",
+      "teacher": "James Krug",
+      "period": "6",
+      "currentGrade": 100,
+      "assignments": [
+        {
+          "name": "Signed Course Syllabus",
+          "dueDate": "08/28/2026",
+          "earnedPoints": 11,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "CLASS PARTICIPATION",
+          "dueDate": "08/26/2026",
+          "earnedPoints": 50,
+          "totalPoints": 50,
           "weight": 1,
           "graded": true
         }
