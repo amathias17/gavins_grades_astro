@@ -66,6 +66,15 @@ test.describe("A-grade payout dashboard", () => {
     await expect(page.locator(".total-value")).toHaveCSS("color", "rgb(255, 79, 100)");
   });
 
+  test("keeps breathing room above the dashboard on iPhone-sized screens", async ({ page }) => {
+    await page.setViewportSize({ width: 428, height: 926 });
+    await page.goto("/");
+
+    await expect(page.locator(".payout-screen")).toHaveCSS("padding-top", "48px");
+    const headlineTop = await page.locator(".payout-headline").evaluate((element) => element.getBoundingClientRect().top);
+    expect(headlineTop).toBeGreaterThanOrEqual(48);
+  });
+
   test("centers the purchase label under the numeric payout", async ({ page }) => {
     await page.goto("/");
     await expect(page.locator(".total")).not.toHaveClass(/is-spinning/, { timeout: 3000 });

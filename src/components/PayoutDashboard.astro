@@ -240,5 +240,6 @@ const initialPurchaseEquivalent = purchaseEquivalents[0];
     @keyframes label-scan-b { 0%, 100% { transform: translateX(.08em); } 25% { transform: translateX(-.16em); } 50% { transform: translateX(.2em); } 75% { transform: translateX(-.1em); } }
     @keyframes label-slice-a { 0%, 100% { transform: translateX(-.08em); } 50% { transform: translateX(.14em); } }
     @keyframes label-slice-b { 0%, 100% { transform: translateX(.08em); } 50% { transform: translateX(-.12em); } }
+    @media (max-width: 640px) { .payout-screen { box-sizing: border-box; padding-top: max(3rem, env(safe-area-inset-top)); padding-bottom: max(1.5rem, env(safe-area-inset-bottom)); } }
     @media (prefers-reduced-motion: reduce) { .total, .total.is-spinning { animation: none; } .total.has-missing-grades .total-value { animation: none; opacity: 1; } .money-label-frame { margin-top: 2rem; } .money-label { opacity: 1; transform: none; } }
 </style>

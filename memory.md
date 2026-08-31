@@ -19,6 +19,7 @@
 - Payout homepage includes a smaller dollar symbol beside the payout amount. Its loading state glitches the amount-aware purchase label concurrently with the 2.2-second number slot reveal before locking to the first purchase equivalent and starting normal label rotation. The feedback button opens a full-screen accessible modal containing "lol turn in your assignments." with a visible Close button, Escape, backdrop click, and focus restoration behavior.
 - Payout purchase-equivalent text is centered beneath the numeric payout value only; the smaller dollar symbol remains positioned to the numeric value's left.
 - When missing assignments are present, PayoutDashboard marks the numeric zero with a persistent red alarm pulse; the pulse is disabled but the red color remains for reduced-motion users.
+- Mobile PayoutDashboard reserves at least 3rem above the centered stack and honors the iOS safe-area top inset, with a 1.5rem minimum bottom inset.
 - Routes: /lab (lab.astro) is a dev-only layout lab for visual experiments and is not linked in navigation.
 - Routes: /stats (stats.astro) shows grade history stats with an SVG trend chart and class highlights.
 - Routes: /anime (anime.astro) is a Dragon Ball Z inspired proof-of-concept page with static content only.
