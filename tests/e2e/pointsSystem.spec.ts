@@ -25,6 +25,10 @@ test.describe("positive marking-period points", () => {
     expect(result.totalPoints).toBe(31);
     expect(result.availablePoints).toBe(20);
     expect(result.completionPercent).toBe(95);
+    expect(result.assignments).toEqual([
+      { className: "English", assignmentName: "Essay", dueDate: "08/28/2026", earnedPoints: 9, possiblePoints: 10, status: "completed" },
+      { className: "English", assignmentName: "Quiz", dueDate: "09/01/2026", earnedPoints: 10, possiblePoints: 10, status: "completed" },
+    ]);
   });
 
   test("shows incomplete work as an opportunity without subtracting points", () => {
@@ -46,6 +50,7 @@ test.describe("positive marking-period points", () => {
       dueDate: "09/02/2026",
       availablePoints: 20,
     }]);
+    expect(result.assignments[0]).toMatchObject({ assignmentName: "Practice", earnedPoints: 0, possiblePoints: 20, status: "open" });
   });
 
   test("filters invalid and out-of-period assignments and deduplicates rows", () => {
