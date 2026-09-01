@@ -1,245 +1,117 @@
 ---
 import gradesData from "../data/grades.json";
-import missingAssignmentsData from "../data/missing_assignments.json";
-import purchaseEquivalentSets from "../data/purchase_equivalents.json";
-import { calculatePayout } from "../utils/payout";
+import fs from "node:fs/promises";
+import path from "node:path";
 import MarkingPeriodCard from "./MarkingPeriodCard.astro";
-import MissingAssignmentsSummary from "./MissingAssignmentsSummary.astro";
+import { getMarkingPeriodStatus } from "../utils/schoolCalendar";
+import { calculatePoints, MILESTONES } from "../utils/points";
 
-const { totalPayout } = calculatePayout(
-    gradesData.classes,
-    missingAssignmentsData.missing_assignments.length > 0,
-);
-const hasMissingAssignments = missingAssignmentsData.missing_assignments.length > 0;
-const formattedAmount = new Intl.NumberFormat("en-US", {
-    maximumFractionDigits: 0,
-}).format(totalPayout);
-const purchaseEquivalents = purchaseEquivalentSets
-    .filter(({ minimum }) => totalPayout >= minimum)
-    .pop()?.items ?? [];
-const initialPurchaseEquivalent = purchaseEquivalents[0];
+type ScrapedAssignment = { name: string; dueDate: string | null; earnedPoints: number; totalPoints: number; weight?: number | null; graded: boolean };
+type ScrapedClass = { className: string; period: string; assignments: ScrapedAssignment[] };
+let scrapedClasses: ScrapedClass[] = [];
+try {
+    const raw = await fs.readFile(path.resolve("scraper", "detailed-grades.json"), "utf8");
+    scrapedClasses = (JSON.parse(raw) as { classes?: ScrapedClass[] }).classes ?? [];
+} catch { scrapedClasses = []; }
+
+const periodStatus = getMarkingPeriodStatus();
+const points = calculatePoints(gradesData.classes, scrapedClasses, periodStatus.period);
+const nextMilestone = points.nextMilestone ?? points.totalPoints;
+const previousMilestone = points.nextMilestone === null ? Math.max(0, points.totalPoints - 500) : [...MILESTONES].filter((milestone) => milestone < points.nextMilestone).pop() ?? 0;
+const milestoneRange = Math.max(1, nextMilestone - previousMilestone);
+const milestoneProgress = Math.min(100, Math.round(((points.totalPoints - previousMilestone) / milestoneRange) * 100));
+const periodLabel = periodStatus.period ? `MARKING PERIOD ${periodStatus.period.number}` : "POINTS QUEST";
+const formattedPoints = new Intl.NumberFormat("en-US", { maximumFractionDigits: 2 }).format(points.totalPoints);
+const formattedAvailable = new Intl.NumberFormat("en-US", { maximumFractionDigits: 2 }).format(points.availablePoints);
 ---
 
-<section class="payout-screen" aria-labelledby="payout-heading">
-    <h1 id="payout-heading" class="payout-headline">HOW MUCH MONEY WILL GAVIN TAKE FROM DAD?</h1>
-    <div class:list={['total', { 'has-missing-grades': hasMissingAssignments }]} aria-label={`$${formattedAmount} total earned`}><span class="currency-symbol" aria-hidden="true">$</span><span class="total-value" data-final={formattedAmount}>{formattedAmount.replace(/\d/g, "0")}</span></div>
-    <div class="money-label-frame" aria-hidden="true"><div class="money-label-kicker">CAN BUY</div><div class="money-label" data-money-label data-equivalents={JSON.stringify(purchaseEquivalents)} data-text={initialPurchaseEquivalent}>{initialPurchaseEquivalent}</div></div>
-    <MissingAssignmentsSummary />
-    <MarkingPeriodCard />
-    <button class="feedback-button" type="button" data-feedback-open>Press to Submit Feedback</button>
-    <dialog class="feedback-dialog" id="feedback-dialog" aria-label="Feedback response" aria-describedby="feedback-message">
-        <button class="feedback-close" type="button" data-feedback-close>Close</button>
-        <p id="feedback-message">lol turn in your assignments.</p>
-    </dialog>
+<section class="points-screen" aria-labelledby="points-heading">
+    <div class="points-console">
+        <header class="points-header">
+            <div><p class="points-eyebrow">{periodLabel} // PROGRESS CONSOLE</p><h1 id="points-heading">GAVIN'S POINTS QUEST</h1></div>
+            <span class="status-light" aria-label="Points system online">ONLINE</span>
+        </header>
+        <div class="points-hero">
+            <div class="points-hero-label">TOTAL POINTS EARNED</div>
+            <div class="points-value" aria-label={`${formattedPoints} points earned this marking period`}><span>{formattedPoints}</span><small>PTS</small></div>
+            <p class="points-encouragement">{points.totalPoints > 0 ? "Every completed mission moves the meter." : "Your next point is ready when you are."}</p>
+        </div>
+        <section class="level-panel" aria-labelledby="level-heading">
+            <div class="panel-heading"><div><p class="panel-kicker">LEVEL {points.level + 1}</p><h2 id="level-heading">NEXT MILESTONE: {nextMilestone.toLocaleString()} PTS</h2></div><strong class="points-to-go">{points.pointsToNextMilestone.toLocaleString()} TO GO</strong></div>
+            <div class="milestone-track" role="progressbar" aria-label={`Progress toward ${nextMilestone} points`} aria-valuemin="0" aria-valuemax={nextMilestone} aria-valuenow={points.totalPoints}><span style={`width: ${milestoneProgress}%`}></span></div>
+            <div class="milestone-meta"><span>{previousMilestone.toLocaleString()} PTS</span><span>{milestoneProgress}% CHARGED</span><span>{nextMilestone.toLocaleString()} PTS</span></div>
+        </section>
+        <div class="point-stats" aria-label="Point breakdown">
+            <div class="stat-card"><span>ASSIGNMENT POINTS</span><strong>{points.assignmentPoints.toLocaleString()}</strong></div>
+            <div class="stat-card"><span>FULL-CREDIT BONUSES</span><strong>+{points.fullCreditBonuses}</strong></div>
+            <div class="stat-card"><span>A-GRADE BONUSES</span><strong>+{points.classGradeBonuses}</strong></div>
+        </div>
+        <section class="opportunity-panel" aria-labelledby="opportunity-heading">
+            <div class="panel-heading opportunity-heading"><div><p class="panel-kicker">AVAILABLE MISSIONS</p><h2 id="opportunity-heading">POINTS READY TO EARN</h2></div><strong class="opportunity-total">{formattedAvailable} AVAILABLE</strong></div>
+            {points.opportunities.length > 0 ? <ul class="opportunity-list">{points.opportunities.slice(0, 5).map((opportunity) => <li><span class="opportunity-mark" aria-hidden="true">+</span><span class="opportunity-name"><strong>{opportunity.assignmentName}</strong><small>{opportunity.className}</small></span><span class="opportunity-points">{opportunity.availablePoints} PTS</span></li>)}</ul> : <p class="opportunity-empty">No open missions. Keep building your streak.</p>}
+            {points.opportunities.length > 5 && <p class="opportunity-more">+ {points.opportunities.length - 5} MORE MISSIONS AVAILABLE</p>}
+        </section>
+        <MarkingPeriodCard />
+        <button class="feedback-button" type="button" data-feedback-open>PRESS TO SUBMIT FEEDBACK</button>
+    </div>
+    <dialog class="feedback-dialog" id="feedback-dialog" aria-label="Feedback response" aria-describedby="feedback-message"><button class="feedback-close" type="button" data-feedback-close>Close</button><p id="feedback-message">lol turn in your assignments.</p></dialog>
 </section>
 
 <script>
-    const total = document.querySelector<HTMLElement>(".total-value");
-    const totalFrame = document.querySelector<HTMLElement>(".total");
-    const label = document.querySelector<HTMLElement>("[data-money-label]");
     const feedbackOpen = document.querySelector<HTMLButtonElement>("[data-feedback-open]");
     const feedbackDialog = document.querySelector<HTMLDialogElement>("#feedback-dialog");
     const feedbackClose = feedbackDialog?.querySelector<HTMLButtonElement>("[data-feedback-close]");
-    const words = label?.dataset.equivalents ? JSON.parse(label.dataset.equivalents) as string[] : [];
-    const effects = ["glitch-slice", "glitch-flicker", "glitch-scan", "glitch-burst"];
-    const effectClasses = ["glitch-slice", "glitch-flicker", "glitch-scan", "glitch-burst"];
-    const glitchChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#$%?!";
-    const transitionDuration = 1400;
-    const transitionTick = 85;
-    const loadingTick = 95;
-    const stutterPattern = [85, 95, 210, 72, 280, 90, 160, 76, 320, 88];
-
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    let wordTimer: number | undefined;
-    let spinTimer: number | undefined;
-    let loadingWordTimer: number | undefined;
-    let transitionTimer: number | undefined;
     let feedbackReturnFocus: HTMLElement | null = null;
-
-    feedbackOpen?.addEventListener("click", () => {
-        if (!feedbackDialog) return;
-        feedbackReturnFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
-        feedbackDialog.showModal();
-        feedbackClose?.focus();
-    });
+    feedbackOpen?.addEventListener("click", () => { if (!feedbackDialog) return; feedbackReturnFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null; feedbackDialog.showModal(); feedbackClose?.focus(); });
     feedbackClose?.addEventListener("click", () => feedbackDialog?.close());
-    feedbackDialog?.addEventListener("click", (event) => {
-        if (event.target === feedbackDialog) feedbackDialog.close();
-    });
-    feedbackDialog?.addEventListener("close", () => {
-        feedbackReturnFocus?.focus();
-        feedbackReturnFocus = null;
-    });
-
-    const startWordRotation = () => {
-        if (!label || reduceMotion || wordTimer !== undefined) return;
-        let wordIndex = 0;
-        let effectIndex = 0;
-        const randomIndexExcept = (length: number, current: number) => {
-            let next = current;
-            while (length > 1 && next === current) {
-                next = Math.floor(Math.random() * length);
-            }
-            return next;
-        };
-
-        const scrambleWord = (from: string, to: string, progress: number) => {
-            const length = Math.max(from.length, to.length);
-            return Array.from({ length }, (_, index) => {
-                const nextCharacter = to[index] ?? "";
-                if (nextCharacter === " ") return " ";
-                const characterProgress = Math.min(1, Math.max(0, (progress - index / length * .42) / .58));
-                if (characterProgress > .86) return nextCharacter;
-                if (characterProgress > .58 && Math.random() > .35) return nextCharacter;
-                if (characterProgress < .18 && from[index] && Math.random() > .4) return from[index];
-                return glitchChars[Math.floor(Math.random() * glitchChars.length)];
-            }).join("");
-        };
-
-        const beginWordTransition = (nextWord: string) => {
-            if (!label || transitionTimer !== undefined) return;
-            const fromWord = label.textContent || words[wordIndex] || "A PURCHASE";
-            const fromLength = Math.max(1, fromWord.length);
-            const toLength = Math.max(1, nextWord.length);
-            const startedAt = performance.now();
-            let tickCount = 0;
-
-            const tick = () => {
-                if (!label) return;
-                const progress = Math.min(1, (performance.now() - startedAt) / transitionDuration);
-                if (progress >= 1) {
-                    label.textContent = nextWord;
-                    label.dataset.text = nextWord;
-                    label.style.removeProperty("--morph-scale");
-                    label.classList.remove("is-glitching", "is-choked", ...effectClasses);
-                    transitionTimer = undefined;
-                    return;
-                }
-
-                const scrambled = scrambleWord(fromWord, nextWord, progress);
-                const startScale = fromLength / toLength;
-                const morphScale = startScale + (1 - startScale) * progress;
-                label.textContent = scrambled;
-                label.dataset.text = scrambled;
-                label.style.setProperty("--morph-scale", morphScale.toFixed(3));
-                label.classList.remove(...effectClasses);
-                void label.offsetWidth;
-                effectIndex = randomIndexExcept(effects.length, effectIndex);
-                label.classList.add("is-glitching", effects[effectIndex]);
-                const stutterDelay = stutterPattern[tickCount % stutterPattern.length];
-                label.classList.toggle("is-choked", stutterDelay >= 200);
-                tickCount += 1;
-                transitionTimer = window.setTimeout(tick, stutterDelay);
-            };
-
-            tick();
-        };
-
-        wordTimer = window.setInterval(() => {
-            wordIndex = randomIndexExcept(words.length, wordIndex);
-            beginWordTransition(words[wordIndex]);
-        }, 6000);
-    };
-
-    const startLoadingWordGlitch = () => {
-        if (!label || reduceMotion || loadingWordTimer !== undefined) return;
-        let loadingWord = words[0] || "A PURCHASE";
-        label.classList.add("is-loading", "is-glitching");
-        loadingWordTimer = window.setInterval(() => {
-            if (!label) return;
-            if (Math.random() > .72) loadingWord = words[Math.floor(Math.random() * words.length)];
-            const scrambled = Array.from(loadingWord, (character) => {
-                if (character === " ") return " ";
-                return Math.random() > .52 ? glitchChars[Math.floor(Math.random() * glitchChars.length)] : character;
-            }).join("");
-            label.textContent = scrambled;
-            label.dataset.text = scrambled;
-        }, loadingTick);
-    };
-
-    if (total && label && reduceMotion) {
-        total.textContent = total.dataset.final ?? "0";
-        label.classList.add("is-ready");
-    } else if (total && label) {
-        const finalAmount = total.dataset.final ?? total.textContent ?? "0";
-        const spinStartedAt = performance.now();
-        startLoadingWordGlitch();
-        totalFrame?.classList.add("is-spinning");
-        spinTimer = window.setInterval(() => {
-            const progress = Math.min(1, (performance.now() - spinStartedAt) / 2200);
-            if (progress >= 1) {
-                if (spinTimer !== undefined) window.clearInterval(spinTimer);
-                spinTimer = undefined;
-                if (loadingWordTimer !== undefined) window.clearInterval(loadingWordTimer);
-                loadingWordTimer = undefined;
-                total.textContent = finalAmount;
-                totalFrame?.classList.remove("is-spinning");
-                label.textContent = words[0] || "A PURCHASE";
-                label.dataset.text = words[0] || "A PURCHASE";
-                label.classList.remove("is-loading", "is-glitching");
-                label.classList.add("is-ready");
-                startWordRotation();
-                return;
-            }
-
-            total.textContent = finalAmount.replace(/\d/g, () => String(Math.floor(Math.random() * 10)));
-        }, 70);
-    }
-
-    document.addEventListener("astro:before-swap", () => {
-        if (spinTimer !== undefined) window.clearInterval(spinTimer);
-        if (loadingWordTimer !== undefined) window.clearInterval(loadingWordTimer);
-        if (wordTimer !== undefined) window.clearInterval(wordTimer);
-        if (transitionTimer !== undefined) window.clearTimeout(transitionTimer);
-    }, { once: true });
+    feedbackDialog?.addEventListener("click", (event) => { if (event.target === feedbackDialog) feedbackDialog.close(); });
+    feedbackDialog?.addEventListener("close", () => { feedbackReturnFocus?.focus(); feedbackReturnFocus = null; });
 </script>
 
 <style>
-    .payout-screen { display: grid; place-items: center; align-content: center; width: 100%; min-height: 100svh; }
-    .payout-headline { width: min(90vw, 48rem); margin: 0 0 2.25rem; color: #61d49a; font: 700 clamp(.72rem, 2.2vw, 1.15rem)/1.4 "DM Mono", monospace; letter-spacing: .12em; text-align: center; text-shadow: 0 0 18px rgba(97, 212, 154, .35); text-transform: uppercase; }
-    .total { position: relative; display: inline-block; width: max-content; color: #f2f5ef; font: 700 clamp(8rem, 34vw, 32rem)/.78 "Orbitron", sans-serif; letter-spacing: .01em; text-shadow: 0 0 70px rgba(97, 212, 154, .1); animation: arrive .8s cubic-bezier(.2, .8, .2, 1) both; }
-    .total-value { display: block; }
-    .currency-symbol { position: absolute; top: 50%; right: 100%; margin-right: .08em; color: #61d49a; font-size: .34em; letter-spacing: 0; text-shadow: 0 0 24px rgba(97, 212, 154, .3); transform: translateY(-50%); }
-    .total.is-spinning { animation: slot-shake .12s steps(2, end) infinite; color: #c8d4cc; text-shadow: 3px 0 #ff4fd8, -3px 0 #61d49a; }
-    .total.has-missing-grades .total-value { color: #ff4f64; animation: missing-grade-alarm .72s steps(2, end) infinite; text-shadow: 0 0 24px rgba(255, 79, 100, .8), 0 0 52px rgba(255, 79, 100, .35); }
-    .money-label-frame { width: max-content; max-width: 92vw; margin-top: 2rem; overflow: clip; text-align: center; }
-    .money-label-kicker { margin-bottom: .65rem; color: rgba(97, 212, 154, .7); font: 700 clamp(.58rem, 2vw, .75rem)/1 "DM Mono", monospace; letter-spacing: .3em; text-transform: uppercase; }
-    .money-label { position: relative; display: inline-block; max-width: 92vw; color: #61d49a; font: 700 clamp(.85rem, 4.4vw, 1.65rem)/1 "Orbitron", sans-serif; letter-spacing: clamp(.08em, 1.5vw, .28em); text-align: center; white-space: nowrap; opacity: 0; transform: translateY(-.5rem); transform-origin: center; }
-    .money-label.is-ready { opacity: 1; transform: translateY(0); transition: opacity .35s ease, transform .35s ease; }
-    .money-label.is-loading { opacity: .72; transform: translateY(0); }
-    .money-label.is-glitching { animation: label-glitch .18s steps(2, end) infinite; text-shadow: 3px 0 #ff4fd8, -3px 0 #61d49a, 0 0 18px rgba(97, 212, 154, .45); }
-    .money-label.is-glitching::before, .money-label.is-glitching::after { position: absolute; inset: 0; pointer-events: none; content: attr(data-text); }
-    .money-label.is-glitching::before { color: #f2f5ef; clip-path: inset(0 0 52% 0); transform: translateX(-.08em); }
-    .money-label.is-glitching::after { color: #ff4fd8; clip-path: inset(55% 0 0 0); transform: translateX(.08em); }
-    .money-label.is-choked, .money-label.is-choked::before, .money-label.is-choked::after { animation-play-state: paused !important; }
-    .feedback-button { margin-top: 5rem; border: 1px solid rgba(97, 212, 154, .7); padding: .7rem 1rem; color: #61d49a; background: rgba(10, 20, 16, .72); font: 700 .65rem/1 "DM Mono", monospace; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; box-shadow: 0 0 16px rgba(97, 212, 154, .12); transition: color .2s ease, background .2s ease, box-shadow .2s ease, transform .2s ease; }
-    .feedback-button:hover, .feedback-button:focus-visible { color: #07110d; background: #61d49a; box-shadow: 0 0 24px rgba(97, 212, 154, .35); transform: translateY(-2px); }
-    .feedback-dialog { width: 100vw; max-width: none; height: 100svh; max-height: none; margin: 0; border: 0; padding: clamp(2rem, 6vw, 5rem); color: #61d49a; background: #07110d; box-shadow: inset 0 0 0 1px rgba(97, 212, 154, .7), inset 0 0 0 3px rgba(255, 79, 216, .18); font: 700 clamp(1rem, 3vw, 1.35rem)/1.4 "DM Mono", monospace; text-align: center; }
+    .points-screen { width: 100%; min-height: 100svh; padding: clamp(1.5rem, 4vw, 3rem) 0 2rem; color: #f2f5ef; }
+    .points-console { width: min(92vw, 52rem); margin: 0 auto; }
+    .points-header, .panel-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; }
+    .points-header { border-bottom: 1px solid rgba(97, 212, 154, .3); padding-bottom: 1rem; }
+    .points-eyebrow, .panel-kicker { margin: 0 0 .55rem; color: #61d49a; font: 700 .58rem/1.3 "DM Mono", monospace; letter-spacing: .16em; text-transform: uppercase; }
+    .points-header h1 { margin: 0; color: #f2f5ef; font: 700 clamp(1.3rem, 5vw, 2.3rem)/1.05 "Orbitron", sans-serif; letter-spacing: .04em; }
+    .status-light { flex: 0 0 auto; border: 1px solid rgba(97, 212, 154, .6); padding: .35rem .45rem; color: #61d49a; font: 700 .5rem/1 "DM Mono", monospace; letter-spacing: .12em; box-shadow: 0 0 14px rgba(97, 212, 154, .12); }
+    .points-hero { position: relative; margin: 2rem 0 1.5rem; padding: 1.7rem 1rem 1.5rem; overflow: hidden; border: 1px solid rgba(97, 212, 154, .48); background: linear-gradient(135deg, rgba(15, 42, 35, .82), rgba(7, 17, 13, .55)); text-align: center; box-shadow: 0 0 0 1px rgba(255, 202, 58, .08), 0 1.2rem 3rem rgba(0, 0, 0, .25); }
+    .points-hero::before { position: absolute; inset: 0; pointer-events: none; opacity: .23; background: repeating-linear-gradient(0deg, transparent 0 5px, rgba(97, 212, 154, .18) 6px, transparent 7px); content: ""; }
+    .points-hero-label { position: relative; color: rgba(223, 255, 233, .72); font: 700 .62rem/1 "DM Mono", monospace; letter-spacing: .2em; }
+    .points-value { position: relative; margin-top: .7rem; color: #f2f5ef; font: 700 clamp(4.6rem, 22vw, 11rem)/.86 "Orbitron", sans-serif; letter-spacing: .01em; text-shadow: 0 0 30px rgba(97, 212, 154, .3); }
+    .points-value small { display: inline-block; margin-left: .45rem; color: #ffca3a; font: 700 clamp(.75rem, 3vw, 1.3rem)/1 "DM Mono", monospace; letter-spacing: .12em; vertical-align: middle; }
+    .points-encouragement { position: relative; margin: 1rem 0 0; color: #b6ffd0; font: 400 .72rem/1.45 "DM Mono", monospace; letter-spacing: .04em; }
+    .level-panel, .opportunity-panel { margin-top: 1rem; border: 1px solid rgba(97, 212, 154, .3); padding: 1rem; background: rgba(8, 20, 15, .78); }
+    .panel-kicker { margin-bottom: .35rem; color: #ffca3a; }
+    .panel-heading h2 { margin: 0; color: #f2f5ef; font: 700 clamp(.8rem, 3vw, 1.1rem)/1.2 "Orbitron", sans-serif; letter-spacing: .05em; }
+    .points-to-go, .opportunity-total { flex: 0 0 auto; color: #61d49a; font: 700 .62rem/1.2 "DM Mono", monospace; letter-spacing: .05em; text-align: right; }
+    .milestone-track { height: .65rem; margin-top: 1.15rem; overflow: hidden; border: 1px solid rgba(97, 212, 154, .38); background: rgba(0, 0, 0, .5); }
+    .milestone-track span { display: block; height: 100%; background: repeating-linear-gradient(135deg, #61d49a 0 9px, #b6ffd0 9px 12px); box-shadow: 0 0 18px rgba(97, 212, 154, .78); transition: width .45s ease; }
+    .milestone-meta { display: flex; justify-content: space-between; margin-top: .5rem; color: rgba(223, 255, 233, .58); font: 700 .5rem/1 "DM Mono", monospace; letter-spacing: .06em; }
+    .point-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: .65rem; margin-top: .65rem; }
+    .stat-card { min-width: 0; border: 1px solid rgba(97, 212, 154, .2); padding: .75rem .65rem; background: rgba(15, 42, 35, .4); }
+    .stat-card span { display: block; color: rgba(223, 255, 233, .62); font: 700 .48rem/1.3 "DM Mono", monospace; letter-spacing: .08em; }
+    .stat-card strong { display: block; margin-top: .45rem; color: #f2f5ef; font: 700 clamp(1rem, 4vw, 1.35rem)/1 "Orbitron", sans-serif; }
+    .opportunity-heading { align-items: center; }
+    .opportunity-list { display: grid; gap: .45rem; margin: 1rem 0 0; padding: 0; list-style: none; }
+    .opportunity-list li { display: flex; align-items: center; gap: .7rem; border-left: 2px solid #ffca3a; padding: .65rem .7rem; background: rgba(255, 202, 58, .06); }
+    .opportunity-mark { color: #ffca3a; font: 700 1.3rem/1 "Orbitron", sans-serif; }
+    .opportunity-name { display: grid; min-width: 0; gap: .2rem; flex: 1; }
+    .opportunity-name strong { overflow-wrap: anywhere; color: #f2f5ef; font: 700 .67rem/1.3 "DM Mono", monospace; text-transform: uppercase; }
+    .opportunity-name small { overflow-wrap: anywhere; color: rgba(223, 255, 233, .58); font: 400 .6rem/1.3 "DM Mono", monospace; }
+    .opportunity-points { flex: 0 0 auto; color: #ffca3a; font: 700 .6rem/1 "DM Mono", monospace; }
+    .opportunity-empty, .opportunity-more { margin: 1rem 0 .15rem; color: #b6ffd0; font: 700 .62rem/1.4 "DM Mono", monospace; letter-spacing: .04em; text-transform: uppercase; }
+    .opportunity-more { color: rgba(223, 255, 233, .58); }
+    .marking-period-card { margin-top: 1.5rem; }
+    .feedback-button { display: block; margin: 2rem auto 0; border: 1px solid rgba(97, 212, 154, .7); padding: .7rem 1rem; color: #61d49a; background: rgba(10, 20, 16, .72); font: 700 .62rem/1 "DM Mono", monospace; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; transition: color .2s ease, background .2s ease, transform .2s ease; }
+    .feedback-button:hover, .feedback-button:focus-visible { color: #07110d; background: #61d49a; transform: translateY(-2px); }
+    .feedback-dialog { width: 100vw; max-width: none; height: 100svh; max-height: none; margin: 0; border: 0; padding: clamp(2rem, 6vw, 5rem); color: #61d49a; background: #07110d; font: 700 clamp(1rem, 3vw, 1.35rem)/1.4 "DM Mono", monospace; text-align: center; }
     .feedback-dialog[open] { display: grid; place-items: center; }
     .feedback-dialog::backdrop { background: rgba(2, 7, 5, .82); backdrop-filter: blur(3px); }
     .feedback-dialog p { margin: 0; }
-    .feedback-close { position: absolute; top: clamp(1rem, 3vw, 2rem); right: clamp(1rem, 3vw, 2rem); border: 1px solid rgba(97, 212, 154, .7); padding: .65rem .8rem; color: #61d49a; background: transparent; font: 700 .65rem/1 "DM Mono", monospace; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; }
+    .feedback-close { position: absolute; top: clamp(1rem, 3vw, 2rem); right: clamp(1rem, 3vw, 2rem); border: 1px solid rgba(97, 212, 154, .7); padding: .65rem .8rem; color: #61d49a; background: transparent; font: 700 .65rem/1 "DM Mono", monospace; text-transform: uppercase; cursor: pointer; }
     .feedback-close:hover, .feedback-close:focus-visible { color: #07110d; background: #61d49a; outline: none; }
-    @keyframes arrive { from { opacity: 0; transform: scale(.94); } to { opacity: 1; transform: scale(1); } }
-    @keyframes slot-shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-.025em); } 75% { transform: translateX(.025em); } }
-    @keyframes missing-grade-alarm { 0%, 100% { opacity: 1; text-shadow: 0 0 24px rgba(255, 79, 100, .8), 0 0 52px rgba(255, 79, 100, .35); } 50% { opacity: .42; text-shadow: 0 0 8px rgba(255, 79, 100, .45); } }
-    .glitch-slice::before { animation: label-slice-a .56s steps(2, end) both; }
-    .glitch-slice::after { animation: label-slice-b .56s steps(2, end) both; }
-    .glitch-flicker { animation: label-glitch-flicker .3s steps(4, end) infinite !important; text-shadow: 4px 0 #ff4fd8, -4px 0 #61d49a; }
-    .glitch-flicker::before { animation: label-slice-b .56s steps(3, end) both; }
-    .glitch-flicker::after { animation: label-slice-a .56s steps(3, end) both; }
-    .glitch-scan::before { animation: label-scan-a .56s steps(5, end) both; clip-path: inset(15% 0 68% 0); }
-    .glitch-scan::after { animation: label-scan-b .56s steps(5, end) both; clip-path: inset(70% 0 12% 0); }
-    .glitch-burst { animation: label-burst .42s steps(2, end) infinite !important; }
-    .glitch-burst::before { animation: label-slice-a .56s steps(2, end) both; text-shadow: 4px 0 #ff4fd8; }
-    .glitch-burst::after { animation: label-slice-b .56s steps(2, end) both; text-shadow: -4px 0 #61d49a; }
-    @keyframes label-glitch { 0%, 100% { transform: scaleX(var(--morph-scale, 1)) translate(0, 0); opacity: 1; } 20% { transform: scaleX(var(--morph-scale, 1)) translate(-.08em, .03em); opacity: .65; } 45% { transform: scaleX(var(--morph-scale, 1)) translate(.1em, -.02em); opacity: .95; } 70% { transform: scaleX(var(--morph-scale, 1)) translate(-.05em, .04em); opacity: .45; } }
-    @keyframes label-glitch-flicker { 0%, 100% { opacity: 1; transform: scaleX(var(--morph-scale, 1)) skewX(0); } 18% { opacity: .08; transform: scaleX(var(--morph-scale, 1)) skewX(-12deg) translateX(-.08em); } 42% { opacity: .9; transform: scaleX(var(--morph-scale, 1)) skewX(8deg) translateX(.1em); } 64% { opacity: .18; transform: scaleX(var(--morph-scale, 1)) skewX(-5deg) translateX(-.05em); } 82% { opacity: .75; transform: scaleX(var(--morph-scale, 1)) skewX(3deg); } }
-    @keyframes label-burst { 0%, 100% { transform: scaleX(var(--morph-scale, 1)) scale(1) translateX(0); letter-spacing: .28em; } 35% { transform: scaleX(var(--morph-scale, 1)) scale(1.15) translateX(-.04em); letter-spacing: .42em; opacity: .38; } 70% { transform: scaleX(var(--morph-scale, 1)) scale(.94) translateX(.06em); letter-spacing: .14em; opacity: .9; } }
-    @keyframes label-scan-a { 0%, 100% { transform: translateX(-.08em); } 25% { transform: translateX(.18em); } 50% { transform: translateX(-.2em); } 75% { transform: translateX(.1em); } }
-    @keyframes label-scan-b { 0%, 100% { transform: translateX(.08em); } 25% { transform: translateX(-.16em); } 50% { transform: translateX(.2em); } 75% { transform: translateX(-.1em); } }
-    @keyframes label-slice-a { 0%, 100% { transform: translateX(-.08em); } 50% { transform: translateX(.14em); } }
-    @keyframes label-slice-b { 0%, 100% { transform: translateX(.08em); } 50% { transform: translateX(-.12em); } }
-    @media (max-width: 640px) { .payout-screen { box-sizing: border-box; padding-top: max(3rem, env(safe-area-inset-top)); padding-bottom: max(1.5rem, env(safe-area-inset-bottom)); } }
-    @media (prefers-reduced-motion: reduce) { .total, .total.is-spinning { animation: none; } .total.has-missing-grades .total-value { animation: none; opacity: 1; } .money-label-frame { margin-top: 2rem; } .money-label { opacity: 1; transform: none; } }
+    @media (max-width: 520px) { .points-screen { padding-top: max(3rem, env(safe-area-inset-top)); padding-bottom: max(1.5rem, env(safe-area-inset-bottom)); } .status-light { font-size: .43rem; } .point-stats { gap: .4rem; } .stat-card { padding: .65rem .45rem; } .stat-card span { font-size: .42rem; } .panel-heading { gap: .65rem; } .points-to-go, .opportunity-total { font-size: .52rem; } }
+    @media (prefers-reduced-motion: reduce) { .milestone-track span { transition: none; } }
 </style>

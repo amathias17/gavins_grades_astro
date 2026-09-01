@@ -1,0 +1,245 @@
+---
+import gradesData from "../data/grades.json";
+import missingAssignmentsData from "../data/missing_assignments.json";
+import purchaseEquivalentSets from "../data/purchase_equivalents.json";
+import { calculatePayout } from "../utils/payout";
+import MarkingPeriodCard from "./MarkingPeriodCard.astro";
+import MissingAssignmentsSummary from "./MissingAssignmentsSummary.astro";
+
+const { totalPayout } = calculatePayout(
+    gradesData.classes,
+    missingAssignmentsData.missing_assignments.length > 0,
+);
+const hasMissingAssignments = missingAssignmentsData.missing_assignments.length > 0;
+const formattedAmount = new Intl.NumberFormat("en-US", {
+    maximumFractionDigits: 0,
+}).format(totalPayout);
+const purchaseEquivalents = purchaseEquivalentSets
+    .filter(({ minimum }) => totalPayout >= minimum)
+    .pop()?.items ?? [];
+const initialPurchaseEquivalent = purchaseEquivalents[0];
+---
+
+<section class="payout-screen" aria-labelledby="payout-heading">
+    <h1 id="payout-heading" class="payout-headline">HOW MUCH MONEY WILL GAVIN TAKE FROM DAD?</h1>
+    <div class:list={['total', { 'has-missing-grades': hasMissingAssignments }]} aria-label={`$${formattedAmount} total earned`}><span class="currency-symbol" aria-hidden="true">$</span><span class="total-value" data-final={formattedAmount}>{formattedAmount.replace(/\d/g, "0")}</span></div>
+    <div class="money-label-frame" aria-hidden="true"><div class="money-label-kicker">CAN BUY</div><div class="money-label" data-money-label data-equivalents={JSON.stringify(purchaseEquivalents)} data-text={initialPurchaseEquivalent}>{initialPurchaseEquivalent}</div></div>
+    <MissingAssignmentsSummary />
+    <MarkingPeriodCard />
+    <button class="feedback-button" type="button" data-feedback-open>Press to Submit Feedback</button>
+    <dialog class="feedback-dialog" id="feedback-dialog" aria-label="Feedback response" aria-describedby="feedback-message">
+        <button class="feedback-close" type="button" data-feedback-close>Close</button>
+        <p id="feedback-message">lol turn in your assignments.</p>
+    </dialog>
+</section>
+
+<script>
+    const total = document.querySelector<HTMLElement>(".total-value");
+    const totalFrame = document.querySelector<HTMLElement>(".total");
+    const label = document.querySelector<HTMLElement>("[data-money-label]");
+    const feedbackOpen = document.querySelector<HTMLButtonElement>("[data-feedback-open]");
+    const feedbackDialog = document.querySelector<HTMLDialogElement>("#feedback-dialog");
+    const feedbackClose = feedbackDialog?.querySelector<HTMLButtonElement>("[data-feedback-close]");
+    const words = label?.dataset.equivalents ? JSON.parse(label.dataset.equivalents) as string[] : [];
+    const effects = ["glitch-slice", "glitch-flicker", "glitch-scan", "glitch-burst"];
+    const effectClasses = ["glitch-slice", "glitch-flicker", "glitch-scan", "glitch-burst"];
+    const glitchChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#$%?!";
+    const transitionDuration = 1400;
+    const transitionTick = 85;
+    const loadingTick = 95;
+    const stutterPattern = [85, 95, 210, 72, 280, 90, 160, 76, 320, 88];
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let wordTimer: number | undefined;
+    let spinTimer: number | undefined;
+    let loadingWordTimer: number | undefined;
+    let transitionTimer: number | undefined;
+    let feedbackReturnFocus: HTMLElement | null = null;
+
+    feedbackOpen?.addEventListener("click", () => {
+        if (!feedbackDialog) return;
+        feedbackReturnFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+        feedbackDialog.showModal();
+        feedbackClose?.focus();
+    });
+    feedbackClose?.addEventListener("click", () => feedbackDialog?.close());
+    feedbackDialog?.addEventListener("click", (event) => {
+        if (event.target === feedbackDialog) feedbackDialog.close();
+    });
+    feedbackDialog?.addEventListener("close", () => {
+        feedbackReturnFocus?.focus();
+        feedbackReturnFocus = null;
+    });
+
+    const startWordRotation = () => {
+        if (!label || reduceMotion || wordTimer !== undefined) return;
+        let wordIndex = 0;
+        let effectIndex = 0;
+        const randomIndexExcept = (length: number, current: number) => {
+            let next = current;
+            while (length > 1 && next === current) {
+                next = Math.floor(Math.random() * length);
+            }
+            return next;
+        };
+
+        const scrambleWord = (from: string, to: string, progress: number) => {
+            const length = Math.max(from.length, to.length);
+            return Array.from({ length }, (_, index) => {
+                const nextCharacter = to[index] ?? "";
+                if (nextCharacter === " ") return " ";
+                const characterProgress = Math.min(1, Math.max(0, (progress - index / length * .42) / .58));
+                if (characterProgress > .86) return nextCharacter;
+                if (characterProgress > .58 && Math.random() > .35) return nextCharacter;
+                if (characterProgress < .18 && from[index] && Math.random() > .4) return from[index];
+                return glitchChars[Math.floor(Math.random() * glitchChars.length)];
+            }).join("");
+        };
+
+        const beginWordTransition = (nextWord: string) => {
+            if (!label || transitionTimer !== undefined) return;
+            const fromWord = label.textContent || words[wordIndex] || "A PURCHASE";
+            const fromLength = Math.max(1, fromWord.length);
+            const toLength = Math.max(1, nextWord.length);
+            const startedAt = performance.now();
+            let tickCount = 0;
+
+            const tick = () => {
+                if (!label) return;
+                const progress = Math.min(1, (performance.now() - startedAt) / transitionDuration);
+                if (progress >= 1) {
+                    label.textContent = nextWord;
+                    label.dataset.text = nextWord;
+                    label.style.removeProperty("--morph-scale");
+                    label.classList.remove("is-glitching", "is-choked", ...effectClasses);
+                    transitionTimer = undefined;
+                    return;
+                }
+
+                const scrambled = scrambleWord(fromWord, nextWord, progress);
+                const startScale = fromLength / toLength;
+                const morphScale = startScale + (1 - startScale) * progress;
+                label.textContent = scrambled;
+                label.dataset.text = scrambled;
+                label.style.setProperty("--morph-scale", morphScale.toFixed(3));
+                label.classList.remove(...effectClasses);
+                void label.offsetWidth;
+                effectIndex = randomIndexExcept(effects.length, effectIndex);
+                label.classList.add("is-glitching", effects[effectIndex]);
+                const stutterDelay = stutterPattern[tickCount % stutterPattern.length];
+                label.classList.toggle("is-choked", stutterDelay >= 200);
+                tickCount += 1;
+                transitionTimer = window.setTimeout(tick, stutterDelay);
+            };
+
+            tick();
+        };
+
+        wordTimer = window.setInterval(() => {
+            wordIndex = randomIndexExcept(words.length, wordIndex);
+            beginWordTransition(words[wordIndex]);
+        }, 6000);
+    };
+
+    const startLoadingWordGlitch = () => {
+        if (!label || reduceMotion || loadingWordTimer !== undefined) return;
+        let loadingWord = words[0] || "A PURCHASE";
+        label.classList.add("is-loading", "is-glitching");
+        loadingWordTimer = window.setInterval(() => {
+            if (!label) return;
+            if (Math.random() > .72) loadingWord = words[Math.floor(Math.random() * words.length)];
+            const scrambled = Array.from(loadingWord, (character) => {
+                if (character === " ") return " ";
+                return Math.random() > .52 ? glitchChars[Math.floor(Math.random() * glitchChars.length)] : character;
+            }).join("");
+            label.textContent = scrambled;
+            label.dataset.text = scrambled;
+        }, loadingTick);
+    };
+
+    if (total && label && reduceMotion) {
+        total.textContent = total.dataset.final ?? "0";
+        label.classList.add("is-ready");
+    } else if (total && label) {
+        const finalAmount = total.dataset.final ?? total.textContent ?? "0";
+        const spinStartedAt = performance.now();
+        startLoadingWordGlitch();
+        totalFrame?.classList.add("is-spinning");
+        spinTimer = window.setInterval(() => {
+            const progress = Math.min(1, (performance.now() - spinStartedAt) / 2200);
+            if (progress >= 1) {
+                if (spinTimer !== undefined) window.clearInterval(spinTimer);
+                spinTimer = undefined;
+                if (loadingWordTimer !== undefined) window.clearInterval(loadingWordTimer);
+                loadingWordTimer = undefined;
+                total.textContent = finalAmount;
+                totalFrame?.classList.remove("is-spinning");
+                label.textContent = words[0] || "A PURCHASE";
+                label.dataset.text = words[0] || "A PURCHASE";
+                label.classList.remove("is-loading", "is-glitching");
+                label.classList.add("is-ready");
+                startWordRotation();
+                return;
+            }
+
+            total.textContent = finalAmount.replace(/\d/g, () => String(Math.floor(Math.random() * 10)));
+        }, 70);
+    }
+
+    document.addEventListener("astro:before-swap", () => {
+        if (spinTimer !== undefined) window.clearInterval(spinTimer);
+        if (loadingWordTimer !== undefined) window.clearInterval(loadingWordTimer);
+        if (wordTimer !== undefined) window.clearInterval(wordTimer);
+        if (transitionTimer !== undefined) window.clearTimeout(transitionTimer);
+    }, { once: true });
+</script>
+
+<style>
+    .payout-screen { display: grid; place-items: center; align-content: center; width: 100%; min-height: 100svh; }
+    .payout-headline { width: min(90vw, 48rem); margin: 0 0 2.25rem; color: #61d49a; font: 700 clamp(.72rem, 2.2vw, 1.15rem)/1.4 "DM Mono", monospace; letter-spacing: .12em; text-align: center; text-shadow: 0 0 18px rgba(97, 212, 154, .35); text-transform: uppercase; }
+    .total { position: relative; display: inline-block; width: max-content; color: #f2f5ef; font: 700 clamp(8rem, 34vw, 32rem)/.78 "Orbitron", sans-serif; letter-spacing: .01em; text-shadow: 0 0 70px rgba(97, 212, 154, .1); animation: arrive .8s cubic-bezier(.2, .8, .2, 1) both; }
+    .total-value { display: block; }
+    .currency-symbol { position: absolute; top: 50%; right: 100%; margin-right: .08em; color: #61d49a; font-size: .34em; letter-spacing: 0; text-shadow: 0 0 24px rgba(97, 212, 154, .3); transform: translateY(-50%); }
+    .total.is-spinning { animation: slot-shake .12s steps(2, end) infinite; color: #c8d4cc; text-shadow: 3px 0 #ff4fd8, -3px 0 #61d49a; }
+    .total.has-missing-grades .total-value { color: #ff4f64; animation: missing-grade-alarm .72s steps(2, end) infinite; text-shadow: 0 0 24px rgba(255, 79, 100, .8), 0 0 52px rgba(255, 79, 100, .35); }
+    .money-label-frame { width: max-content; max-width: 92vw; margin-top: 2rem; overflow: clip; text-align: center; }
+    .money-label-kicker { margin-bottom: .65rem; color: rgba(97, 212, 154, .7); font: 700 clamp(.58rem, 2vw, .75rem)/1 "DM Mono", monospace; letter-spacing: .3em; text-transform: uppercase; }
+    .money-label { position: relative; display: inline-block; max-width: 92vw; color: #61d49a; font: 700 clamp(.85rem, 4.4vw, 1.65rem)/1 "Orbitron", sans-serif; letter-spacing: clamp(.08em, 1.5vw, .28em); text-align: center; white-space: nowrap; opacity: 0; transform: translateY(-.5rem); transform-origin: center; }
+    .money-label.is-ready { opacity: 1; transform: translateY(0); transition: opacity .35s ease, transform .35s ease; }
+    .money-label.is-loading { opacity: .72; transform: translateY(0); }
+    .money-label.is-glitching { animation: label-glitch .18s steps(2, end) infinite; text-shadow: 3px 0 #ff4fd8, -3px 0 #61d49a, 0 0 18px rgba(97, 212, 154, .45); }
+    .money-label.is-glitching::before, .money-label.is-glitching::after { position: absolute; inset: 0; pointer-events: none; content: attr(data-text); }
+    .money-label.is-glitching::before { color: #f2f5ef; clip-path: inset(0 0 52% 0); transform: translateX(-.08em); }
+    .money-label.is-glitching::after { color: #ff4fd8; clip-path: inset(55% 0 0 0); transform: translateX(.08em); }
+    .money-label.is-choked, .money-label.is-choked::before, .money-label.is-choked::after { animation-play-state: paused !important; }
+    .feedback-button { margin-top: 5rem; border: 1px solid rgba(97, 212, 154, .7); padding: .7rem 1rem; color: #61d49a; background: rgba(10, 20, 16, .72); font: 700 .65rem/1 "DM Mono", monospace; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; box-shadow: 0 0 16px rgba(97, 212, 154, .12); transition: color .2s ease, background .2s ease, box-shadow .2s ease, transform .2s ease; }
+    .feedback-button:hover, .feedback-button:focus-visible { color: #07110d; background: #61d49a; box-shadow: 0 0 24px rgba(97, 212, 154, .35); transform: translateY(-2px); }
+    .feedback-dialog { width: 100vw; max-width: none; height: 100svh; max-height: none; margin: 0; border: 0; padding: clamp(2rem, 6vw, 5rem); color: #61d49a; background: #07110d; box-shadow: inset 0 0 0 1px rgba(97, 212, 154, .7), inset 0 0 0 3px rgba(255, 79, 216, .18); font: 700 clamp(1rem, 3vw, 1.35rem)/1.4 "DM Mono", monospace; text-align: center; }
+    .feedback-dialog[open] { display: grid; place-items: center; }
+    .feedback-dialog::backdrop { background: rgba(2, 7, 5, .82); backdrop-filter: blur(3px); }
+    .feedback-dialog p { margin: 0; }
+    .feedback-close { position: absolute; top: clamp(1rem, 3vw, 2rem); right: clamp(1rem, 3vw, 2rem); border: 1px solid rgba(97, 212, 154, .7); padding: .65rem .8rem; color: #61d49a; background: transparent; font: 700 .65rem/1 "DM Mono", monospace; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; }
+    .feedback-close:hover, .feedback-close:focus-visible { color: #07110d; background: #61d49a; outline: none; }
+    @keyframes arrive { from { opacity: 0; transform: scale(.94); } to { opacity: 1; transform: scale(1); } }
+    @keyframes slot-shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-.025em); } 75% { transform: translateX(.025em); } }
+    @keyframes missing-grade-alarm { 0%, 100% { opacity: 1; text-shadow: 0 0 24px rgba(255, 79, 100, .8), 0 0 52px rgba(255, 79, 100, .35); } 50% { opacity: .42; text-shadow: 0 0 8px rgba(255, 79, 100, .45); } }
+    .glitch-slice::before { animation: label-slice-a .56s steps(2, end) both; }
+    .glitch-slice::after { animation: label-slice-b .56s steps(2, end) both; }
+    .glitch-flicker { animation: label-glitch-flicker .3s steps(4, end) infinite !important; text-shadow: 4px 0 #ff4fd8, -4px 0 #61d49a; }
+    .glitch-flicker::before { animation: label-slice-b .56s steps(3, end) both; }
+    .glitch-flicker::after { animation: label-slice-a .56s steps(3, end) both; }
+    .glitch-scan::before { animation: label-scan-a .56s steps(5, end) both; clip-path: inset(15% 0 68% 0); }
+    .glitch-scan::after { animation: label-scan-b .56s steps(5, end) both; clip-path: inset(70% 0 12% 0); }
+    .glitch-burst { animation: label-burst .42s steps(2, end) infinite !important; }
+    .glitch-burst::before { animation: label-slice-a .56s steps(2, end) both; text-shadow: 4px 0 #ff4fd8; }
+    .glitch-burst::after { animation: label-slice-b .56s steps(2, end) both; text-shadow: -4px 0 #61d49a; }
+    @keyframes label-glitch { 0%, 100% { transform: scaleX(var(--morph-scale, 1)) translate(0, 0); opacity: 1; } 20% { transform: scaleX(var(--morph-scale, 1)) translate(-.08em, .03em); opacity: .65; } 45% { transform: scaleX(var(--morph-scale, 1)) translate(.1em, -.02em); opacity: .95; } 70% { transform: scaleX(var(--morph-scale, 1)) translate(-.05em, .04em); opacity: .45; } }
+    @keyframes label-glitch-flicker { 0%, 100% { opacity: 1; transform: scaleX(var(--morph-scale, 1)) skewX(0); } 18% { opacity: .08; transform: scaleX(var(--morph-scale, 1)) skewX(-12deg) translateX(-.08em); } 42% { opacity: .9; transform: scaleX(var(--morph-scale, 1)) skewX(8deg) translateX(.1em); } 64% { opacity: .18; transform: scaleX(var(--morph-scale, 1)) skewX(-5deg) translateX(-.05em); } 82% { opacity: .75; transform: scaleX(var(--morph-scale, 1)) skewX(3deg); } }
+    @keyframes label-burst { 0%, 100% { transform: scaleX(var(--morph-scale, 1)) scale(1) translateX(0); letter-spacing: .28em; } 35% { transform: scaleX(var(--morph-scale, 1)) scale(1.15) translateX(-.04em); letter-spacing: .42em; opacity: .38; } 70% { transform: scaleX(var(--morph-scale, 1)) scale(.94) translateX(.06em); letter-spacing: .14em; opacity: .9; } }
+    @keyframes label-scan-a { 0%, 100% { transform: translateX(-.08em); } 25% { transform: translateX(.18em); } 50% { transform: translateX(-.2em); } 75% { transform: translateX(.1em); } }
+    @keyframes label-scan-b { 0%, 100% { transform: translateX(.08em); } 25% { transform: translateX(-.16em); } 50% { transform: translateX(.2em); } 75% { transform: translateX(-.1em); } }
+    @keyframes label-slice-a { 0%, 100% { transform: translateX(-.08em); } 50% { transform: translateX(.14em); } }
+    @keyframes label-slice-b { 0%, 100% { transform: translateX(.08em); } 50% { transform: translateX(-.12em); } }
+    @media (max-width: 640px) { .payout-screen { box-sizing: border-box; padding-top: max(3rem, env(safe-area-inset-top)); padding-bottom: max(1.5rem, env(safe-area-inset-bottom)); } }
+    @media (prefers-reduced-motion: reduce) { .total, .total.is-spinning { animation: none; } .total.has-missing-grades .total-value { animation: none; opacity: 1; } .money-label-frame { margin-top: 2rem; } .money-label { opacity: 1; transform: none; } }
+</style>
