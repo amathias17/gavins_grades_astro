@@ -28,7 +28,7 @@ const formattedAvailable = new Intl.NumberFormat("en-US", { maximumFractionDigit
 <section class="points-screen" aria-labelledby="points-heading">
     <div class="points-console">
         <header class="points-header">
-            <div><p class="points-eyebrow">{periodLabel} // PROGRESS CONSOLE</p><h1 id="points-heading">GAVIN'S POINTS QUEST</h1></div>
+            <div><p class="points-eyebrow">{periodLabel} / PROGRESS</p><h1 id="points-heading">GAVIN'S POINTS QUEST</h1></div>
             <span class="status-light" aria-label="Points system online">ONLINE</span>
         </header>
         <div class="points-hero">
@@ -39,7 +39,7 @@ const formattedAvailable = new Intl.NumberFormat("en-US", { maximumFractionDigit
         <section class="level-panel" aria-labelledby="level-heading">
             <div class="panel-heading"><div><p class="panel-kicker">LEVEL {points.level + 1}</p><h2 id="level-heading">NEXT MILESTONE: {nextMilestone.toLocaleString()} PTS</h2></div><strong class="points-to-go">{points.pointsToNextMilestone.toLocaleString()} TO GO</strong></div>
             <div class="milestone-track" role="progressbar" aria-label={`Progress toward ${nextMilestone} points`} aria-valuemin="0" aria-valuemax={nextMilestone} aria-valuenow={points.totalPoints}><span style={`width: ${milestoneProgress}%`}></span></div>
-            <div class="milestone-meta"><span>{previousMilestone.toLocaleString()} PTS</span><span>{milestoneProgress}% CHARGED</span><span>{nextMilestone.toLocaleString()} PTS</span></div>
+            <div class="milestone-meta"><span>{previousMilestone.toLocaleString()} PTS</span><span>{milestoneProgress}% COMPLETE</span><span>{nextMilestone.toLocaleString()} PTS</span></div>
         </section>
         <div class="point-stats" aria-label="Point breakdown">
             <div class="stat-card"><span>ASSIGNMENT POINTS</span><strong>{points.assignmentPoints.toLocaleString()}</strong></div>
@@ -47,14 +47,14 @@ const formattedAvailable = new Intl.NumberFormat("en-US", { maximumFractionDigit
             <div class="stat-card"><span>A-GRADE BONUSES</span><strong>+{points.classGradeBonuses}</strong></div>
         </div>
         <section class="opportunity-panel" aria-labelledby="opportunity-heading">
-            <div class="panel-heading opportunity-heading"><div><p class="panel-kicker">AVAILABLE MISSIONS</p><h2 id="opportunity-heading">POINTS READY TO EARN</h2></div><strong class="opportunity-total">{formattedAvailable} AVAILABLE</strong></div>
+            <div class="panel-heading opportunity-heading"><div><p class="panel-kicker">OPEN OPPORTUNITIES</p><h2 id="opportunity-heading">POINTS READY TO EARN</h2></div><strong class="opportunity-total">{formattedAvailable} AVAILABLE</strong></div>
             {points.opportunities.length > 0 ? <ul class="opportunity-list">{points.opportunities.slice(0, 5).map((opportunity) => <li><span class="opportunity-mark" aria-hidden="true">+</span><span class="opportunity-name"><strong>{opportunity.assignmentName}</strong><small>{opportunity.className}</small></span><span class="opportunity-points">{opportunity.availablePoints} PTS</span></li>)}</ul> : <p class="opportunity-empty">No open missions. Keep building your streak.</p>}
             {points.opportunities.length > 5 && <p class="opportunity-more">+ {points.opportunities.length - 5} MORE MISSIONS AVAILABLE</p>}
         </section>
         <MarkingPeriodCard />
         <button class="feedback-button" type="button" data-feedback-open>HOW POINTS WORK</button>
     </div>
-    <dialog class="feedback-dialog" id="feedback-dialog" aria-labelledby="points-guide-heading" aria-describedby="points-guide-intro"><button class="feedback-close" type="button" data-feedback-close>Close</button><div class="points-guide"><p class="guide-kicker">FIELD MANUAL // POINTS SYSTEM</p><h2 id="points-guide-heading">BUILD YOUR MOMENTUM</h2><p id="points-guide-intro">This marking period is a chance to stack progress one completed mission at a time.</p><ul><li><strong>Assignment points</strong><span>Earn the points you score on each assignment.</span></li><li><strong>Full-credit bonus</strong><span>Get <b>+2</b> for every assignment completed for full credit.</span></li><li><strong>A-grade bonus</strong><span>Get <b>+10</b> for every class currently at 90% or higher.</span></li><li><strong>Open missions</strong><span>Incomplete work does not take points away. It shows you where more points are waiting.</span></li></ul><p class="guide-footer">Next target: {nextMilestone.toLocaleString()} points.</p></div></dialog>
+    <dialog class="feedback-dialog" id="feedback-dialog" aria-labelledby="points-guide-heading" aria-describedby="points-guide-intro"><button class="feedback-close" type="button" data-feedback-close>Close</button><div class="points-guide"><p class="guide-kicker">A QUIET GUIDE TO YOUR PROGRESS</p><h2 id="points-guide-heading">HOW YOUR POINTS GROW</h2><p id="points-guide-intro">This marking period is a chance to build momentum one completed assignment at a time.</p><ul><li><strong>ASSIGNMENT POINTS</strong><span>Earn the points you score on each assignment.</span></li><li><strong>FULL-CREDIT BONUS</strong><span>Get <b>+2</b> for every assignment completed for full credit.</span></li><li><strong>A-GRADE BONUS</strong><span>Get <b>+10</b> for every class currently at 90% or higher.</span></li><li><strong>OPEN OPPORTUNITIES</strong><span>Incomplete work does not take points away. It shows you where more points are waiting.</span></li></ul><p class="guide-footer">NEXT TARGET: {nextMilestone.toLocaleString()} POINTS.</p></div></dialog>
 </section>
 
 <script>
@@ -121,6 +121,45 @@ const formattedAvailable = new Intl.NumberFormat("en-US", { maximumFractionDigit
     .guide-footer { margin: 1.35rem 0 0; color: #ffca3a; font: 700 .68rem/1.3 "DM Mono", monospace; letter-spacing: .05em; text-transform: uppercase; }
     .feedback-close { position: absolute; top: clamp(1rem, 3vw, 2rem); right: clamp(1rem, 3vw, 2rem); border: 1px solid rgba(97, 212, 154, .7); padding: .65rem .8rem; color: #61d49a; background: transparent; font: 700 .65rem/1 "DM Mono", monospace; text-transform: uppercase; cursor: pointer; }
     .feedback-close:hover, .feedback-close:focus-visible { color: #07110d; background: #61d49a; outline: none; }
+    /* Softer dark study-room treatment: keep the caps, lower the visual volume. */
+    .points-screen { padding-top: clamp(2rem, 5vw, 4rem); color: #e8eee9; font-family: "DM Sans", sans-serif; }
+    .points-header { border-bottom-color: rgba(174, 202, 184, .18); padding-bottom: 1.25rem; }
+    .points-eyebrow, .panel-kicker { color: #9fbea8; font-family: "DM Sans", sans-serif; font-weight: 700; letter-spacing: .13em; }
+    .points-header h1 { color: #e8eee9; font-family: "DM Sans", sans-serif; font-size: clamp(1.25rem, 4.4vw, 2rem); font-weight: 500; letter-spacing: .08em; }
+    .status-light { border-color: rgba(159, 190, 168, .35); border-radius: 999px; color: #9fbea8; font-family: "DM Sans", sans-serif; font-weight: 500; letter-spacing: .1em; box-shadow: none; }
+    .points-hero { margin-top: 2.5rem; border-color: rgba(174, 202, 184, .22); border-radius: 1.25rem; background: radial-gradient(circle at 50% 0%, rgba(111, 151, 126, .16), transparent 58%), rgba(12, 23, 18, .72); box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .22); }
+    .points-hero::before { opacity: .06; }
+    .points-hero-label { color: rgba(232, 238, 233, .62); font-family: "DM Sans", sans-serif; font-weight: 500; letter-spacing: .16em; }
+    .points-value { color: #e8eee9; text-shadow: 0 0 34px rgba(159, 190, 168, .16); }
+    .points-value small { color: #c7aa72; font-family: "DM Sans", sans-serif; font-weight: 500; }
+    .points-encouragement { color: rgba(199, 218, 204, .72); font-family: "DM Sans", sans-serif; }
+    .level-panel, .opportunity-panel { border-color: rgba(174, 202, 184, .16); border-radius: .9rem; background: rgba(12, 23, 18, .56); }
+    .panel-kicker { color: #c7aa72; }
+    .panel-heading h2 { color: #e8eee9; font-family: "DM Sans", sans-serif; font-weight: 600; letter-spacing: .06em; }
+    .points-to-go, .opportunity-total { color: #9fbea8; font-family: "DM Sans", sans-serif; font-weight: 500; }
+    .milestone-track { height: .45rem; border-color: rgba(174, 202, 184, .2); border-radius: 999px; background: rgba(0, 0, 0, .24); }
+    .milestone-track span { background: #9fbea8; border-radius: inherit; box-shadow: 0 0 14px rgba(159, 190, 168, .3); }
+    .milestone-meta { color: rgba(199, 218, 204, .5); font-family: "DM Sans", sans-serif; font-weight: 500; }
+    .stat-card { border-color: rgba(174, 202, 184, .12); border-radius: .7rem; background: rgba(24, 40, 30, .34); }
+    .stat-card span { color: rgba(199, 218, 204, .56); font-family: "DM Sans", sans-serif; font-weight: 500; letter-spacing: .06em; }
+    .stat-card strong { color: #e8eee9; font-family: "Orbitron", sans-serif; font-weight: 600; }
+    .opportunity-list li { border-left: 2px solid rgba(199, 170, 114, .65); border-radius: .5rem; background: rgba(199, 170, 114, .045); }
+    .opportunity-mark, .opportunity-points { color: #c7aa72; }
+    .opportunity-name strong { color: #e8eee9; font-family: "DM Sans", sans-serif; font-weight: 600; letter-spacing: .03em; }
+    .opportunity-name small { color: rgba(199, 218, 204, .52); font-family: "DM Sans", sans-serif; }
+    .opportunity-empty, .opportunity-more { color: rgba(199, 218, 204, .68); font-family: "DM Sans", sans-serif; font-weight: 500; letter-spacing: .06em; }
+    .marking-period-card { border-color: rgba(174, 202, 184, .16); border-radius: .9rem; background: rgba(12, 23, 18, .48); box-shadow: none; }
+    .feedback-button { border-color: rgba(159, 190, 168, .4); border-radius: 999px; color: #9fbea8; background: rgba(12, 23, 18, .45); font-family: "DM Sans", sans-serif; font-weight: 500; letter-spacing: .1em; }
+    .feedback-button:hover, .feedback-button:focus-visible { color: #142219; background: #9fbea8; box-shadow: 0 0 18px rgba(159, 190, 168, .18); }
+    .feedback-dialog { color: #9fbea8; background: #0b1510; }
+    .points-guide { border-color: rgba(174, 202, 184, .2); border-radius: 1rem; background: #101d16; box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .28); }
+    .guide-kicker, .guide-footer { color: #c7aa72; font-family: "DM Sans", sans-serif; font-weight: 500; }
+    .points-guide h2 { color: #e8eee9; font-family: "DM Sans", sans-serif; font-weight: 600; }
+    #points-guide-intro, .points-guide li span { color: rgba(199, 218, 204, .7); font-family: "DM Sans", sans-serif; }
+    .points-guide li { border-left-color: rgba(159, 190, 168, .5); border-radius: .45rem; background: rgba(159, 190, 168, .05); }
+    .points-guide li strong { color: #b9d2bf; font-family: "DM Sans", sans-serif; font-weight: 600; }
+    .feedback-close { border-color: rgba(159, 190, 168, .4); border-radius: 999px; color: #9fbea8; font-family: "DM Sans", sans-serif; }
+    @media (prefers-reduced-motion: reduce) { .milestone-track span { transition: none; } }
     @media (max-width: 520px) { .points-screen { padding-top: max(3rem, env(safe-area-inset-top)); padding-bottom: max(1.5rem, env(safe-area-inset-bottom)); } .status-light { font-size: .43rem; } .point-stats { gap: .4rem; } .stat-card { padding: .65rem .45rem; } .stat-card span { font-size: .42rem; } .panel-heading { gap: .65rem; } .points-to-go, .opportunity-total { font-size: .52rem; } }
     @media (prefers-reduced-motion: reduce) { .milestone-track span { transition: none; } }
 </style>

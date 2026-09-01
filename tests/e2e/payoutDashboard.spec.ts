@@ -37,10 +37,10 @@ test.describe("positive points dashboard", () => {
     const dialog = page.getByRole("dialog");
     await expect(dialog).toBeVisible();
     await expect(dialog).toHaveRole("dialog");
-    await expect(dialog.locator("#points-guide-heading")).toHaveText("BUILD YOUR MOMENTUM");
-    await expect(dialog).toContainText("Assignment points");
-    await expect(dialog).toContainText("Full-credit bonus");
-    await expect(dialog).toContainText("Open missions");
+    await expect(dialog.locator("#points-guide-heading")).toHaveText("HOW YOUR POINTS GROW");
+    await expect(dialog).toContainText("ASSIGNMENT POINTS");
+    await expect(dialog).toContainText("FULL-CREDIT BONUS");
+    await expect(dialog).toContainText("OPEN OPPORTUNITIES");
     await dialog.getByRole("button", { name: "Close" }).click();
     await expect(dialog).not.toBeVisible();
   });
