@@ -44,4 +44,22 @@ test.describe("positive points dashboard", () => {
     await dialog.getByRole("button", { name: "Close" }).click();
     await expect(dialog).not.toBeVisible();
   });
+
+  test("opens the current-period assignment points breakdown", async ({ page }) => {
+    await page.goto("/");
+    const trigger = page.getByRole("button", { name: "VIEW ASSIGNMENT BREAKDOWN" });
+    await trigger.click({ force: true });
+
+    const dialog = page.locator("#breakdown-dialog");
+    await expect(dialog).toBeVisible();
+    await expect(dialog.locator("#breakdown-heading")).toHaveText("ASSIGNMENT BREAKDOWN");
+    await expect(dialog.locator(".breakdown-summary")).toContainText("BONUSES");
+    await expect(dialog.locator(".breakdown-class")).not.toHaveCount(0);
+    await expect(dialog.locator(".breakdown-class li")).not.toHaveCount(0);
+    await expect(dialog.locator(".breakdown-status").first()).toHaveText(/COMPLETED|OPEN/);
+
+    await dialog.getByRole("button", { name: "Close" }).click();
+    await expect(dialog).not.toBeVisible();
+    await expect(trigger).toBeFocused();
+  });
 });

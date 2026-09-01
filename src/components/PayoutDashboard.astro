@@ -23,6 +23,10 @@ const milestoneProgress = Math.min(100, Math.round(((points.totalPoints - previo
 const periodLabel = periodStatus.period ? `MARKING PERIOD ${periodStatus.period.number}` : "POINTS QUEST";
 const formattedPoints = new Intl.NumberFormat("en-US", { maximumFractionDigits: 2 }).format(points.totalPoints);
 const formattedAvailable = new Intl.NumberFormat("en-US", { maximumFractionDigits: 2 }).format(points.availablePoints);
+const assignmentGroups = Object.entries(points.assignments.reduce<Record<string, typeof points.assignments>>((groups, assignment) => {
+    (groups[assignment.className] ??= []).push(assignment);
+    return groups;
+}, {}));
 ---
 
 <section class="points-screen" aria-labelledby="points-heading">
@@ -52,8 +56,9 @@ const formattedAvailable = new Intl.NumberFormat("en-US", { maximumFractionDigit
             {points.opportunities.length > 5 && <p class="opportunity-more">+ {points.opportunities.length - 5} MORE MISSIONS AVAILABLE</p>}
         </section>
         <MarkingPeriodCard />
-        <button class="feedback-button" type="button" data-feedback-open>HOW POINTS WORK</button>
+        <div class="dashboard-actions"><button class="breakdown-button" type="button" data-breakdown-open>VIEW ASSIGNMENT BREAKDOWN</button><button class="feedback-button" type="button" data-feedback-open>HOW POINTS WORK</button></div>
     </div>
+    <dialog class="breakdown-dialog feedback-dialog" id="breakdown-dialog" aria-labelledby="breakdown-heading" aria-describedby="breakdown-intro"><button class="feedback-close" type="button" data-breakdown-close>Close</button><div class="breakdown-guide"><p class="guide-kicker">CURRENT MARKING PERIOD // DETAIL VIEW</p><h2 id="breakdown-heading">ASSIGNMENT BREAKDOWN</h2><p id="breakdown-intro">A clear record of where your points came from, with open opportunities left visible.</p><div class="breakdown-summary"><div><span>ASSIGNMENT POINTS</span><strong>{points.assignmentPoints.toLocaleString()}</strong></div><div><span>AVAILABLE POINTS</span><strong>{points.availablePoints.toLocaleString()}</strong></div><div><span>BONUSES</span><strong>+{(points.fullCreditBonuses + points.classGradeBonuses).toLocaleString()}</strong></div><div><span>TOTAL POINTS</span><strong>{points.totalPoints.toLocaleString()}</strong></div></div>{assignmentGroups.length > 0 ? <div class="breakdown-groups">{assignmentGroups.map(([className, assignments]) => <section class="breakdown-class" aria-labelledby={`breakdown-class-${className.replace(/[^a-z0-9]+/gi, "-")}`}><h3 id={`breakdown-class-${className.replace(/[^a-z0-9]+/gi, "-")}`}>{className}</h3><ul>{assignments.map((assignment) => <li><span class="breakdown-assignment"><strong>{assignment.assignmentName}</strong><small>{assignment.dueDate || "DATE NOT AVAILABLE"}</small></span><span class="breakdown-score">{assignment.earnedPoints.toLocaleString()} / {assignment.possiblePoints.toLocaleString()} PTS</span><span class:list={["breakdown-status", assignment.status === "completed" ? "is-complete" : "is-open"]}>{assignment.status === "completed" ? "COMPLETED" : "OPEN"}</span></li>)}</ul></section>)}</div> : <p class="breakdown-empty">NO ASSIGNMENTS ARE LOGGED FOR THIS MARKING PERIOD YET.</p>}<p class="breakdown-bonus-note">BONUS SUMMARY: +{points.fullCreditBonuses} FULL-CREDIT / +{points.classGradeBonuses} A-GRADE</p></div></dialog>
     <dialog class="feedback-dialog" id="feedback-dialog" aria-labelledby="points-guide-heading" aria-describedby="points-guide-intro"><button class="feedback-close" type="button" data-feedback-close>Close</button><div class="points-guide"><p class="guide-kicker">A QUIET GUIDE TO YOUR PROGRESS</p><h2 id="points-guide-heading">HOW YOUR POINTS GROW</h2><p id="points-guide-intro">This marking period is a chance to build momentum one completed assignment at a time.</p><ul><li><strong>ASSIGNMENT POINTS</strong><span>Earn the points you score on each assignment.</span></li><li><strong>FULL-CREDIT BONUS</strong><span>Get <b>+2</b> for every assignment completed for full credit.</span></li><li><strong>A-GRADE BONUS</strong><span>Get <b>+10</b> for every class currently at 90% or higher.</span></li><li><strong>OPEN OPPORTUNITIES</strong><span>Incomplete work does not take points away. It shows you where more points are waiting.</span></li></ul><p class="guide-footer">NEXT TARGET: {nextMilestone.toLocaleString()} POINTS.</p></div></dialog>
 </section>
 
@@ -61,11 +66,19 @@ const formattedAvailable = new Intl.NumberFormat("en-US", { maximumFractionDigit
     const feedbackOpen = document.querySelector<HTMLButtonElement>("[data-feedback-open]");
     const feedbackDialog = document.querySelector<HTMLDialogElement>("#feedback-dialog");
     const feedbackClose = feedbackDialog?.querySelector<HTMLButtonElement>("[data-feedback-close]");
+    const breakdownOpen = document.querySelector<HTMLButtonElement>("[data-breakdown-open]");
+    const breakdownDialog = document.querySelector<HTMLDialogElement>("#breakdown-dialog");
+    const breakdownClose = breakdownDialog?.querySelector<HTMLButtonElement>("[data-breakdown-close]");
     let feedbackReturnFocus: HTMLElement | null = null;
+    let breakdownReturnFocus: HTMLElement | null = null;
     feedbackOpen?.addEventListener("click", () => { if (!feedbackDialog) return; feedbackReturnFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null; feedbackDialog.showModal(); feedbackClose?.focus(); });
     feedbackClose?.addEventListener("click", () => feedbackDialog?.close());
     feedbackDialog?.addEventListener("click", (event) => { if (event.target === feedbackDialog) feedbackDialog.close(); });
     feedbackDialog?.addEventListener("close", () => { feedbackReturnFocus?.focus(); feedbackReturnFocus = null; });
+    breakdownOpen?.addEventListener("click", () => { if (!breakdownDialog) return; breakdownReturnFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null; breakdownDialog.showModal(); breakdownClose?.focus(); });
+    breakdownClose?.addEventListener("click", () => breakdownDialog?.close());
+    breakdownDialog?.addEventListener("click", (event) => { if (event.target === breakdownDialog) breakdownDialog.close(); });
+    breakdownDialog?.addEventListener("close", () => { breakdownReturnFocus?.focus(); breakdownReturnFocus = null; });
 </script>
 
 <style>
@@ -159,6 +172,32 @@ const formattedAvailable = new Intl.NumberFormat("en-US", { maximumFractionDigit
     .points-guide li { border-left-color: rgba(159, 190, 168, .5); border-radius: .45rem; background: rgba(159, 190, 168, .05); }
     .points-guide li strong { color: #b9d2bf; font-family: "DM Sans", sans-serif; font-weight: 600; }
     .feedback-close { border-color: rgba(159, 190, 168, .4); border-radius: 999px; color: #9fbea8; font-family: "DM Sans", sans-serif; }
+    .dashboard-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: .7rem; margin-top: 2rem; }
+    .dashboard-actions .feedback-button { margin: 0; }
+    .breakdown-button { border: 1px solid rgba(199, 170, 114, .5); border-radius: 999px; padding: .7rem 1rem; color: #c7aa72; background: rgba(12, 23, 18, .45); font: 500 .62rem/1 "DM Sans", sans-serif; letter-spacing: .1em; text-transform: uppercase; cursor: pointer; transition: color .2s ease, background .2s ease, transform .2s ease; }
+    .breakdown-button:hover, .breakdown-button:focus-visible { color: #17140d; background: #c7aa72; box-shadow: 0 0 18px rgba(199, 170, 114, .16); transform: translateY(-2px); }
+    .breakdown-guide { width: min(100%, 48rem); max-height: 84svh; overflow-y: auto; border: 1px solid rgba(174, 202, 184, .2); border-radius: 1rem; padding: clamp(1.25rem, 4vw, 2.5rem); background: #101d16; box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .28); text-align: left; }
+    .breakdown-guide h2 { margin: 0; color: #e8eee9; font: 600 clamp(1.3rem, 5vw, 2rem)/1.1 "DM Sans", sans-serif; letter-spacing: .06em; }
+    #breakdown-intro { margin: .8rem 0 1.4rem; color: rgba(199, 218, 204, .7); font: 400 .78rem/1.5 "DM Sans", sans-serif; }
+    .breakdown-summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: .5rem; margin-bottom: 1.4rem; }
+    .breakdown-summary div { border: 1px solid rgba(174, 202, 184, .12); border-radius: .55rem; padding: .65rem; background: rgba(159, 190, 168, .045); }
+    .breakdown-summary span { display: block; color: rgba(199, 218, 204, .54); font: 500 .48rem/1.3 "DM Sans", sans-serif; letter-spacing: .07em; }
+    .breakdown-summary strong { display: block; margin-top: .35rem; color: #e8eee9; font: 600 1rem/1 "Orbitron", sans-serif; }
+    .breakdown-groups { display: grid; gap: 1rem; }
+    .breakdown-class { margin: 0; }
+    .breakdown-class h3 { margin: 0; padding-bottom: .4rem; border-bottom: 1px solid rgba(174, 202, 184, .14); color: #b9d2bf; font: 600 .72rem/1.3 "DM Sans", sans-serif; letter-spacing: .08em; text-transform: uppercase; }
+    .breakdown-class ul { display: grid; gap: .35rem; margin: .4rem 0 0; padding: 0; list-style: none; }
+    .breakdown-class li { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: .7rem; padding: .55rem .65rem; border-radius: .45rem; background: rgba(159, 190, 168, .035); }
+    .breakdown-assignment { display: grid; min-width: 0; gap: .15rem; }
+    .breakdown-assignment strong { overflow-wrap: anywhere; color: #e8eee9; font: 600 .68rem/1.3 "DM Sans", sans-serif; }
+    .breakdown-assignment small { color: rgba(199, 218, 204, .5); font: 400 .58rem/1.3 "DM Sans", sans-serif; }
+    .breakdown-score { color: #c7aa72; font: 500 .62rem/1 "DM Sans", sans-serif; white-space: nowrap; }
+    .breakdown-status { border-radius: 999px; padding: .25rem .4rem; color: rgba(199, 218, 204, .58); font: 500 .46rem/1 "DM Sans", sans-serif; letter-spacing: .06em; white-space: nowrap; }
+    .breakdown-status.is-complete { color: #9fbea8; background: rgba(159, 190, 168, .1); }
+    .breakdown-status.is-open { color: #c7aa72; background: rgba(199, 170, 114, .1); }
+    .breakdown-empty, .breakdown-bonus-note { margin: 1rem 0 0; color: rgba(199, 218, 204, .66); font: 500 .65rem/1.4 "DM Sans", sans-serif; letter-spacing: .05em; text-transform: uppercase; }
+    .breakdown-bonus-note { color: #c7aa72; }
+    @media (max-width: 560px) { .breakdown-summary { grid-template-columns: repeat(2, 1fr); } .breakdown-class li { grid-template-columns: minmax(0, 1fr) auto; } .breakdown-status { grid-column: 1 / -1; justify-self: start; } }
     @media (prefers-reduced-motion: reduce) { .milestone-track span { transition: none; } }
     @media (max-width: 520px) { .points-screen { padding-top: max(3rem, env(safe-area-inset-top)); padding-bottom: max(1.5rem, env(safe-area-inset-bottom)); } .status-light { font-size: .43rem; } .point-stats { gap: .4rem; } .stat-card { padding: .65rem .45rem; } .stat-card span { font-size: .42rem; } .panel-heading { gap: .65rem; } .points-to-go, .opportunity-total { font-size: .52rem; } }
     @media (prefers-reduced-motion: reduce) { .milestone-track span { transition: none; } }

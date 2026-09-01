@@ -27,6 +27,15 @@ export interface PointOpportunity {
   availablePoints: number;
 }
 
+export interface PointAssignment {
+  className: string;
+  assignmentName: string;
+  dueDate: string;
+  earnedPoints: number;
+  possiblePoints: number;
+  status: "completed" | "open";
+}
+
 export interface PointsSummary {
   period: MarkingPeriod | null;
   earnedPoints: number;
@@ -40,6 +49,7 @@ export interface PointsSummary {
   nextMilestone: number | null;
   pointsToNextMilestone: number;
   opportunities: PointOpportunity[];
+  assignments: PointAssignment[];
 }
 
 function normalize(value: string): string {
@@ -98,6 +108,7 @@ export function calculatePoints(
   period: MarkingPeriod | null,
 ): PointsSummary {
   const opportunities: PointOpportunity[] = [];
+  const assignments: PointAssignment[] = [];
   const seen = new Set<string>();
   let assignmentPoints = 0;
   let availablePoints = 0;
@@ -119,6 +130,15 @@ export function calculatePoints(
         const earned = Math.min(Math.max(numeric(assignment.earnedPoints) ?? 0, 0), total) * multiplier;
         availablePoints += possible;
         assignmentPoints += earned;
+
+        assignments.push({
+          className: scrapedClass.className,
+          assignmentName: assignment.name,
+          dueDate: assignment.dueDate ?? "",
+          earnedPoints: earned,
+          possiblePoints: possible,
+          status: assignment.graded ? "completed" : "open",
+        });
 
         if (assignment.graded && (numeric(assignment.earnedPoints) ?? 0) >= total) {
           fullCreditCount += 1;
@@ -155,5 +175,6 @@ export function calculatePoints(
     totalPoints,
     ...milestone,
     opportunities,
+    assignments,
   };
 }

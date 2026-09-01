@@ -8,6 +8,7 @@
 - PayoutDashboard shows earned points, next level/milestone progress, bonus breakdown, and incomplete assignments as available missions. It no longer presents money, purchase equivalents, missing-grade alarms, or defeat-oriented homepage copy.
 - Payout display uses Orbitron and DM Mono loaded from Google Fonts. The current points total is a static server-rendered value with a milestone progress bar; reduced-motion users retain the same non-animated information. The homepage visual direction is intentionally softer and darker: muted charcoal/sage/sand, rounded grouping, restrained shadows, and retained all-caps labels to avoid an AI-looking, overly aggressive presentation.
 - The HOW POINTS WORK button opens a full-screen accessible points-system guide with assignment points, +2 full-credit bonuses, +10 A-grade bonuses, no-penalty opportunities, milestone context, Close, Escape, backdrop click, and focus restoration behavior.
+- The VIEW ASSIGNMENT BREAKDOWN button opens a second full-screen accessible dialog showing every valid active-period assignment grouped by class with earned/possible points and completed/open status; bonuses remain in a separate reconciliation summary.
 - The pre-points payout homepage is backed up under backups/homepage-payout/ for recovery during the phased migration.
 - Routes: /lab (lab.astro) is a dev-only layout lab for visual experiments and is not linked in navigation.
 - Routes: /stats (stats.astro) shows grade history stats with an SVG trend chart and class highlights.
