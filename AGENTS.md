@@ -19,7 +19,7 @@
 - Homepage is a positive, mobile-first points quest: it shows current marking-period points, level progress, milestone distance, point bonuses, and incomplete assignments as opportunities.
 - Homepage points are derived from scraper assignments and grades by src/utils/points.ts; missing work never triggers a red alarm or subtracts points. Calculator, class-grade rules, and scraper behavior remain unchanged.
 - Homepage uses Orbitron and DM Mono in a retro-futuristic training-console treatment, with at least 3rem of mobile top breathing room plus the iOS safe-area inset.
-- Homepage keeps the live marking-period card and accessible feedback modal; the pre-points payout homepage is backed up under backups/homepage-payout/.
+- Homepage keeps the live marking-period card and an accessible HOW POINTS WORK modal explaining assignment points, bonuses, milestones, and opportunity missions; the pre-points payout homepage is backed up under backups/homepage-payout/.
 - Marking-period card omits the LIVE CALENDAR badge, hides redundant active-period checkpoint reminders, keeps contextual school-day reminders, and uses more generous responsive spacing.
 - Homepage includes a generously spaced live school-day marking-period card for the 2026-2027 secondary calendar, showing the current period, school days remaining, end date, and progress while excluding supplied inservice closures.
 - The marking-period card also shows school-day-aware reminders for school starts, closures, weekend mode, special schedules, and the next marking-period checkpoint.

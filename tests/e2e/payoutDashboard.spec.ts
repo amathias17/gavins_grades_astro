@@ -33,10 +33,14 @@ test.describe("positive points dashboard", () => {
 
   test("opens and closes the accessible feedback modal", async ({ page }) => {
     await page.goto("/");
-    await page.getByRole("button", { name: "PRESS TO SUBMIT FEEDBACK" }).click({ force: true });
+    await page.getByRole("button", { name: "HOW POINTS WORK" }).click({ force: true });
     const dialog = page.getByRole("dialog");
     await expect(dialog).toBeVisible();
-    await expect(dialog.locator("#feedback-message")).toHaveText("lol turn in your assignments.");
+    await expect(dialog).toHaveRole("dialog");
+    await expect(dialog.locator("#points-guide-heading")).toHaveText("BUILD YOUR MOMENTUM");
+    await expect(dialog).toContainText("Assignment points");
+    await expect(dialog).toContainText("Full-credit bonus");
+    await expect(dialog).toContainText("Open missions");
     await dialog.getByRole("button", { name: "Close" }).click();
     await expect(dialog).not.toBeVisible();
   });
