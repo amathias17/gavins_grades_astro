@@ -1,10 +1,12 @@
 ---
 import gradesData from "../data/grades.json";
+import missingAssignmentsData from "../data/missing_assignments.json";
 import fs from "node:fs/promises";
 import path from "node:path";
 import MarkingPeriodCard from "./MarkingPeriodCard.astro";
 import { getMarkingPeriodStatus } from "../utils/schoolCalendar";
 import { calculatePoints, MILESTONES } from "../utils/points";
+import type { MissingPointAssignment } from "../utils/points";
 
 type ScrapedAssignment = { name: string; dueDate: string | null; earnedPoints: number; totalPoints: number; weight?: number | null; graded: boolean };
 type ScrapedClass = { className: string; period: string; assignments: ScrapedAssignment[] };
@@ -15,7 +17,8 @@ try {
 } catch { scrapedClasses = []; }
 
 const periodStatus = getMarkingPeriodStatus();
-const points = calculatePoints(gradesData.classes, scrapedClasses, periodStatus.period);
+const missingAssignments = (missingAssignmentsData.missing_assignments ?? []) as MissingPointAssignment[];
+const points = calculatePoints(gradesData.classes, scrapedClasses, periodStatus.period, missingAssignments);
 const nextMilestone = points.nextMilestone ?? points.totalPoints;
 const previousMilestone = points.nextMilestone === null ? Math.max(0, points.totalPoints - 500) : [...MILESTONES].filter((milestone) => milestone < points.nextMilestone).pop() ?? 0;
 const milestoneRange = Math.max(1, nextMilestone - previousMilestone);

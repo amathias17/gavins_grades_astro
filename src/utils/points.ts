@@ -27,6 +27,13 @@ export interface PointOpportunity {
   availablePoints: number;
 }
 
+export interface MissingPointAssignment {
+  assignment_name: string;
+  class_name: string;
+  due_date: string;
+  max_points: number | string;
+}
+
 export interface PointAssignment {
   className: string;
   assignmentName: string;
@@ -81,8 +88,13 @@ function numeric(value: number | null | undefined): number | null {
   return typeof value === "number" && Number.isFinite(value) ? value : null;
 }
 
-function assignmentKey(classInfo: ScrapedPointClass, assignment: ScrapedPointAssignment): string {
-  return `${normalize(classInfo.period)}|${normalize(classInfo.className)}|${normalize(assignment.name)}|${assignment.dueDate ?? ""}`;
+function dateKey(value: string | null): string {
+  const date = parseDate(value);
+  return date ? date.toISOString().slice(0, 10) : normalize(value ?? "");
+}
+
+function assignmentKey(className: string, assignmentName: string, dueDate: string | null): string {
+  return `${normalize(className)}|${normalize(assignmentName)}|${dateKey(dueDate)}`;
 }
 
 function milestoneFor(total: number): { level: number; nextMilestone: number | null; pointsToNextMilestone: number } {
@@ -106,6 +118,7 @@ export function calculatePoints(
   classes: Pick<Class, "class_name" | "period" | "current_grade">[],
   scrapedClasses: ScrapedPointClass[],
   period: MarkingPeriod | null,
+  missingAssignments: MissingPointAssignment[] = [],
 ): PointsSummary {
   const opportunities: PointOpportunity[] = [];
   const assignments: PointAssignment[] = [];
@@ -113,6 +126,12 @@ export function calculatePoints(
   let assignmentPoints = 0;
   let availablePoints = 0;
   let fullCreditCount = 0;
+  const missingByKey = new Map<string, MissingPointAssignment>();
+  for (const missing of missingAssignments) {
+    const key = assignmentKey(missing.class_name, missing.assignment_name, missing.due_date);
+    if (!missingByKey.has(key)) missingByKey.set(key, missing);
+  }
+  const matchedMissing = new Set<string>();
 
   if (period) {
     for (const scrapedClass of scrapedClasses) {
@@ -120,14 +139,19 @@ export function calculatePoints(
         const total = numeric(assignment.totalPoints);
         if (total === null || total <= 0 || !isInPeriod(assignment.dueDate, period)) continue;
 
-        const key = assignmentKey(scrapedClass, assignment);
+        const key = assignmentKey(scrapedClass.className, assignment.name, assignment.dueDate);
         if (seen.has(key)) continue;
         seen.add(key);
 
+        const missing = missingByKey.get(key);
+        if (missing) matchedMissing.add(key);
         const weight = numeric(assignment.weight);
         const multiplier = weight !== null && weight > 0 ? weight : 1;
-        const possible = total * multiplier;
-        const earned = Math.min(Math.max(numeric(assignment.earnedPoints) ?? 0, 0), total) * multiplier;
+        const missingTotal = missing ? numeric(Number(missing.max_points)) : null;
+        const possible = (missingTotal !== null && missingTotal > 0 ? missingTotal : total) * multiplier;
+        const earned = missing
+          ? 0
+          : Math.min(Math.max(numeric(assignment.earnedPoints) ?? 0, 0), total) * multiplier;
         availablePoints += possible;
         assignmentPoints += earned;
 
@@ -137,14 +161,14 @@ export function calculatePoints(
           dueDate: assignment.dueDate ?? "",
           earnedPoints: earned,
           possiblePoints: possible,
-          status: assignment.graded ? "completed" : "open",
+          status: missing || !assignment.graded ? "open" : "completed",
         });
 
-        if (assignment.graded && (numeric(assignment.earnedPoints) ?? 0) >= total) {
+        if (!missing && assignment.graded && (numeric(assignment.earnedPoints) ?? 0) >= total) {
           fullCreditCount += 1;
         }
 
-        if (!assignment.graded) {
+        if (missing || !assignment.graded) {
           opportunities.push({
             className: scrapedClass.className,
             assignmentName: assignment.name,
@@ -153,6 +177,24 @@ export function calculatePoints(
           });
         }
       }
+    }
+
+    for (const missing of missingAssignments) {
+      const key = assignmentKey(missing.class_name, missing.assignment_name, missing.due_date);
+      if (matchedMissing.has(key) || seen.has(key) || !isInPeriod(missing.due_date, period)) continue;
+
+      const maxPoints = numeric(Number(missing.max_points));
+      if (maxPoints === null || maxPoints <= 0) continue;
+
+      const scrapedClass = scrapedClasses.find((candidate) => normalize(candidate.className) === normalize(missing.class_name));
+      const classInfo = classes.find((candidate) => normalize(candidate.class_name) === normalize(missing.class_name));
+      const className = scrapedClass?.className ?? classInfo?.class_name;
+      if (!className) continue;
+
+      seen.add(key);
+      availablePoints += maxPoints;
+      assignments.push({ className, assignmentName: missing.assignment_name, dueDate: missing.due_date, earnedPoints: 0, possiblePoints: maxPoints, status: "open" });
+      opportunities.push({ className, assignmentName: missing.assignment_name, dueDate: missing.due_date, availablePoints: maxPoints });
     }
   }
 

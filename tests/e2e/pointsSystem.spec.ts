@@ -53,6 +53,36 @@ test.describe("positive marking-period points", () => {
     expect(result.assignments[0]).toMatchObject({ assignmentName: "Practice", earnedPoints: 0, possiblePoints: 20, status: "open" });
   });
 
+  test("reconciles a missing feed item over an incorrectly graded scraper row", () => {
+    const result = calculatePoints(
+      [{ class_name: "ENVIRON SCIENCE 1", period: "1", current_grade: 88 }],
+      [{ className: "ENVIRON SCIENCE 1", period: "1", assignments: [{ name: "Signed Syllabus", dueDate: "08/31/2026", earnedPoints: 0, totalPoints: 5, graded: true }] }],
+      period,
+      [{ assignment_name: "Signed Syllabus", class_name: "ENVIRON SCIENCE    1", due_date: "08/31/2026", max_points: "5" }],
+    );
+
+    expect(result.assignments).toEqual([{ className: "ENVIRON SCIENCE 1", assignmentName: "Signed Syllabus", dueDate: "08/31/2026", earnedPoints: 0, possiblePoints: 5, status: "open" }]);
+    expect(result.opportunities).toEqual([{ className: "ENVIRON SCIENCE 1", assignmentName: "Signed Syllabus", dueDate: "08/31/2026", availablePoints: 5 }]);
+    expect(result.fullCreditBonuses).toBe(0);
+  });
+
+  test("adds unmatched current-period missing items once and ignores invalid or out-of-period records", () => {
+    const result = calculatePoints(
+      [{ class_name: "Math", period: "2", current_grade: null }],
+      [],
+      period,
+      [
+        { assignment_name: "Practice", class_name: "Math", due_date: "09/02/2026", max_points: "20" },
+        { assignment_name: "Invalid", class_name: "Math", due_date: "not-a-date", max_points: "10" },
+        { assignment_name: "Later", class_name: "Math", due_date: "11/01/2026", max_points: "10" },
+      ],
+    );
+
+    expect(result.availablePoints).toBe(20);
+    expect(result.opportunities).toHaveLength(1);
+    expect(result.assignments[0]).toMatchObject({ assignmentName: "Practice", status: "open" });
+  });
+
   test("filters invalid and out-of-period assignments and deduplicates rows", () => {
     const result = calculatePoints(
       [{ class_name: "Science", period: "3", current_grade: null }],
