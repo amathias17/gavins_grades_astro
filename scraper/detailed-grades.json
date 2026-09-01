@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-09-01T16:04:03.068Z",
+    "scrapedAt": "2026-09-01T19:02:15.198Z",
     "totalClasses": 13,
-    "totalAssignments": 9
+    "totalAssignments": 11
   },
   "classes": [
     {
@@ -68,6 +68,14 @@
       "currentGrade": 100,
       "assignments": [
         {
+          "name": "Virtual Simulator mini-lab",
+          "dueDate": "08/31/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
           "name": "Syllabus/Grading Policy Signed",
           "dueDate": "08/31/2026",
           "earnedPoints": 11,
@@ -92,6 +100,14 @@
           "graded": true
         },
         {
+          "name": "\"Supervolcanoes\" Sky Show",
+          "dueDate": "09/01/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": true
+        },
+        {
           "name": "CLASS PARTICIPATION",
           "dueDate": "08/26/2026",
           "earnedPoints": 50,
@@ -109,9 +125,9 @@
       "assignments": [
         {
           "name": "Survey and Character",
-          "dueDate": "08/31/2026",
+          "dueDate": "08/28/2026",
           "earnedPoints": 0,
-          "totalPoints": 10,
+          "totalPoints": 5,
           "weight": 1,
           "graded": false
         }
