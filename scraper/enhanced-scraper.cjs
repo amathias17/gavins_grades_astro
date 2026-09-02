@@ -46,8 +46,38 @@ function getAssignmentScoreHint(rawText) {
 
   return {
     status: match[1] === '*' ? 'ungraded' : 'graded',
+    ...(match[1] === '*' ? {} : { earnedPoints: Number(match[1]) }),
     totalPoints: Number(match[2])
   };
+}
+
+function assignmentCacheKey(assignment) {
+  return [assignment.assignmentId, assignment.classId, assignment.studentId].filter(Boolean).join(':');
+}
+
+function assignmentFingerprint(assignment) {
+  const hint = assignment.rowScoreHint || { status: 'unknown', earnedPoints: null, totalPoints: null };
+  return {
+    assignmentId: assignment.assignmentId || null,
+    classId: assignment.classId || null,
+    studentId: assignment.studentId || null,
+    name: assignment.name || '',
+    dueDate: normalizeDueDate(assignment.dueDate) || assignment.dueDate || null,
+    scoreStatus: hint.status,
+    earnedPoints: hint.earnedPoints ?? null,
+    totalPoints: hint.totalPoints ?? null
+  };
+}
+
+function fingerprintsMatch(left, right) {
+  return Boolean(left && right && JSON.stringify(left) === JSON.stringify(right));
+}
+
+function canUseCachedAssignment(assignment, cached, forceRefresh = process.env.SKYWARD_FORCE_REFRESH === '1') {
+  if (forceRefresh || !cached?.fingerprint) return false;
+  const hint = assignment.rowScoreHint;
+  if (!hint || hint.status === 'unknown') return false;
+  return fingerprintsMatch(cached.fingerprint, assignmentFingerprint(assignment));
 }
 
 async function readJsonIfExists(filePath) {
@@ -79,7 +109,22 @@ async function saveCache(cachePath, assignments) {
     assignments
   };
 
+  const previous = await readJsonIfExists(cachePath);
+  if (previous && JSON.stringify(previous.assignments ?? {}) === JSON.stringify(assignments)) {
+    return false;
+  }
+
   await fs.writeFile(cachePath, JSON.stringify(payload, null, 2));
+  return true;
+}
+
+async function saveJsonIfChanged(filePath, value, comparableValue = value) {
+  const previous = await readJsonIfExists(filePath);
+  if (previous && JSON.stringify(previous) === JSON.stringify(comparableValue)) {
+    return false;
+  }
+  await fs.writeFile(filePath, JSON.stringify(value, null, 2));
+  return true;
 }
 
 async function loginAndNavigateToGradebook() {
@@ -368,7 +413,7 @@ async function getAssignmentLinks(page) {
       const scoreText = row.textContent || '';
       const scoreMatch = scoreText.match(/(\*|\d+(?:\.\d+)?)\s*(?:\/|out\s*of)\s*(\d+(?:\.\d+)?)(?!\s*\/\s*\d{2,4})/i);
       const rowScoreHint = scoreMatch && Number(scoreMatch[2]) > 0 && Number(scoreMatch[2]) <= 1000
-        ? { status: scoreMatch[1] === '*' ? 'ungraded' : 'graded', totalPoints: Number(scoreMatch[2]) }
+        ? { status: scoreMatch[1] === '*' ? 'ungraded' : 'graded', earnedPoints: scoreMatch[1] === '*' ? null : Number(scoreMatch[1]), totalPoints: Number(scoreMatch[2]) }
         : { status: 'unknown', totalPoints: null };
 
       // Try to find the class name from nearby DOM elements
@@ -694,6 +739,8 @@ async function scrapeAllAssignments(page, classes, cacheAssignments = {}, classI
   const assignmentDetails = [];
   const updatedCache = { ...cacheAssignments };
   let cacheHits = 0;
+  let detailDialogsOpened = 0;
+  const currentKeys = new Set();
 
   // Process each assignment
   for (let i = 0; i < assignmentLimit; i++) {
@@ -710,21 +757,23 @@ async function scrapeAllAssignments(page, classes, cacheAssignments = {}, classI
       continue;
     }
 
+    const cacheKey = assignmentCacheKey(assignment);
+    if (cacheKey) currentKeys.add(cacheKey);
+
     if (i < 10 || i % 50 === 0) {
       console.log(`Processing ${i + 1}/${assignmentLinks.length}: ${assignment.name} (classId=${assignment.classId})`);
     } else {
       console.log(`Processing ${i + 1}/${assignmentLinks.length}: ${assignment.name}`);
     }
 
-    const cacheKeyParts = [assignment.assignmentId, assignment.classId, assignment.studentId].filter(Boolean);
-    const cacheKey = cacheKeyParts.join(':');
     const cached = cacheKey ? cacheAssignments[cacheKey] : null;
 
-    let details = cached && cached.graded && assignment.rowScoreHint.status !== 'ungraded' ? cached : null;
+    let details = canUseCachedAssignment(assignment, cached) ? cached : null;
     if (details) {
       cacheHits += 1;
     } else {
       // Extract detailed points by clicking the assignment
+      detailDialogsOpened += 1;
       details = await extractAssignmentDetails(page, assignment.assignmentId, assignment.classId);
     }
 
@@ -777,23 +826,31 @@ async function scrapeAllAssignments(page, classes, cacheAssignments = {}, classI
       graded
     };
 
-    if (graded && cacheKey) {
+    if (cacheKey) {
       updatedCache[cacheKey] = {
         ...assignmentData,
-        graded: true,
+        fingerprint: assignmentFingerprint(assignment),
         cachedAt: new Date().toISOString()
       };
-    } else if (cacheKey && updatedCache[cacheKey]) {
-      // Keep pending items uncached so they are refreshed when grades land
-      delete updatedCache[cacheKey];
     }
 
     assignmentDetails.push(assignmentData);
   }
 
-  console.log(`Cache hits: ${cacheHits}`);
+  let cacheEntriesPruned = 0;
+  for (const key of Object.keys(updatedCache)) {
+    if (!currentKeys.has(key)) {
+      delete updatedCache[key];
+      cacheEntriesPruned += 1;
+    }
+  }
 
-  return { assignmentDetails, updatedCache };
+  console.log(`Metadata rows scanned: ${assignmentLinks.length}`);
+  console.log(`Cache hits: ${cacheHits}`);
+  console.log(`Detail dialogs opened: ${detailDialogsOpened}`);
+  console.log(`Cache entries pruned: ${cacheEntriesPruned}`);
+
+  return { assignmentDetails, updatedCache, stats: { metadataRowsScanned: assignmentLinks.length, cacheHits, detailDialogsOpened, cacheEntriesPruned } };
 }
 
 function organizeByClass(assignments, classes) {
@@ -1138,17 +1195,22 @@ async function main() {
       classes: dataByClass
     };
 
-    await fs.writeFile(outputPath, JSON.stringify(outputData, null, 2));
-    console.log(`\n✓ Data saved to: ${outputPath}`);
+    const previousOutput = await readJsonIfExists(outputPath);
+    const comparableOutput = { ...outputData, metadata: { ...outputData.metadata, scrapedAt: null } };
+    const previousComparableOutput = previousOutput
+      ? { ...previousOutput, metadata: { ...previousOutput.metadata, scrapedAt: null } }
+      : null;
+    const outputChanged = await saveJsonIfChanged(outputPath, outputData, previousComparableOutput && JSON.stringify(previousComparableOutput) === JSON.stringify(comparableOutput) ? previousOutput : comparableOutput);
+    console.log(`\n${outputChanged ? '✓ Data saved' : '· Data unchanged'}: ${outputPath}`);
 
     // Also save raw assignments for debugging
     const rawOutputPath = path.join(__dirname, 'detailed-grades-raw.json');
-    await fs.writeFile(rawOutputPath, JSON.stringify(assignmentDetails, null, 2));
-    console.log(`✓ Raw data saved to: ${rawOutputPath}`);
+    const rawChanged = await saveJsonIfChanged(rawOutputPath, assignmentDetails);
+    console.log(`${rawChanged ? '✓ Raw data saved' : '· Raw data unchanged'}: ${rawOutputPath}`);
 
     // Persist cache for future runs
-    await saveCache(cache.path, updatedCache);
-    console.log(`Cache updated at: ${cache.path}`);
+    const cacheChanged = await saveCache(cache.path, updatedCache);
+    console.log(`${cacheChanged ? 'Cache updated' : 'Cache unchanged'} at: ${cache.path}`);
 
     await browser.close();
     console.log('\n✓ Scraping complete!');
@@ -1176,7 +1238,15 @@ async function main() {
   }
 }
 
-module.exports = { extractAssignmentDetails, getAssignmentScoreHint, scrapeMissingAssignments };
+module.exports = {
+  extractAssignmentDetails,
+  getAssignmentScoreHint,
+  scrapeMissingAssignments,
+  assignmentCacheKey,
+  assignmentFingerprint,
+  canUseCachedAssignment,
+  scrapeAllAssignments
+};
 
 if (require.main === module) {
   main();

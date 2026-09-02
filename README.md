@@ -45,7 +45,7 @@ $env:SKYWARD_USERNAME="your_username"; $env:SKYWARD_PASSWORD="your_password"; no
 
 The scraper will open a headless browser, log in to Skyward, and pull all Q3 assignments. It writes two files:
 - `scraper/detailed-grades.json` — per-class assignment data used by the site at build time
-- `scraper/detailed-grades-cache.json` — cache of already-scraped assignments (speeds up future runs)
+- `scraper/detailed-grades-cache.json` — local-only fingerprint cache of already-scraped assignments (speeds up future runs; never commit this student data)
 
 > **Tip:** Add `$env:SKYWARD_MAX_ASSIGNMENTS=10` to cap assignments per class for a quick test run.
 
@@ -136,4 +136,4 @@ Missing and past-due assignments. Shown on the home page as **Missing.Quests**.
 
 - Assignment scores showing `* out of X` in Skyward mean the assignment has not been graded yet. These appear as `0/X` in the UI.
 - Grade history tracks Q3 only. The Q3 start is auto-detected per class from the grade history data.
-- The scraper caches graded assignments to skip re-scraping on future runs. Ungraded (`*`) assignments are never cached so they get re-checked each run.
+- The scraper scans lightweight assignment-row metadata each run and uses fingerprints (assignment/class/student IDs, name, due date, score state, earned points, and total points) to skip unchanged detail dialogs. Both graded and unchanged ungraded (`*`) rows are cached; new or changed rows are refreshed, and removed rows are pruned. Set `SKYWARD_FORCE_REFRESH=1` to reopen every eligible detail dialog when portal data may be stale. Cache logs report metadata rows, hits, dialogs opened, and pruned entries.
