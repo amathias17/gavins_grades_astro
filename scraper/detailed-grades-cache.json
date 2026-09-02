@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-01T19:02:15.200Z",
+  "updatedAt": "2026-09-02T04:10:57.485Z",
   "assignments": {
     "1561854:44463:1396": {
       "classId": "44463",
@@ -11109,7 +11109,7 @@
       "className": "ASTRONOMY",
       "teacher": "James Krug",
       "period": "6",
-      "currentGrade": 100,
+      "currentGrade": 98,
       "assignmentName": "CLASS PARTICIPATION",
       "dateDue": "08/26/2026",
       "dueDate": "08/26/2026",
@@ -11117,7 +11117,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-09-01T19:02:03.719Z"
+      "cachedAt": "2026-09-02T04:10:55.309Z"
     },
     "1644122:47705:1396": {
       "classId": "47705",
@@ -11134,7 +11134,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-09-01T19:01:56.581Z"
+      "cachedAt": "2026-09-02T04:10:55.210Z"
     },
     "1644168:47487:1396": {
       "classId": "47487",
@@ -11143,7 +11143,7 @@
       "className": "ASTRONOMY",
       "teacher": "James Krug",
       "period": "6",
-      "currentGrade": 100,
+      "currentGrade": 98,
       "assignmentName": "Signed Course Syllabus",
       "dateDue": "08/28/2026",
       "dueDate": "08/28/2026",
@@ -11151,7 +11151,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-09-01T19:01:56.582Z"
+      "cachedAt": "2026-09-02T04:10:55.309Z"
     },
     "1644626:47460:1396": {
       "classId": "47460",
@@ -11168,7 +11168,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-09-01T19:01:47.072Z"
+      "cachedAt": "2026-09-02T04:10:45.684Z"
     },
     "1644620:47460:1396": {
       "classId": "47460",
@@ -11185,7 +11185,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-09-01T19:01:47.072Z"
+      "cachedAt": "2026-09-02T04:10:45.684Z"
     },
     "1644631:47460:1396": {
       "classId": "47460",
@@ -11202,7 +11202,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-09-01T19:01:47.073Z"
+      "cachedAt": "2026-09-02T04:10:45.685Z"
     },
     "1645394:47487:1396": {
       "classId": "47487",
@@ -11211,7 +11211,7 @@
       "className": "ASTRONOMY",
       "teacher": "James Krug",
       "period": "6",
-      "currentGrade": 100,
+      "currentGrade": 98,
       "assignmentName": "\"Supervolcanoes\" Sky Show",
       "dateDue": "09/01/2026",
       "dueDate": "09/01/2026",
@@ -11219,7 +11219,41 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-09-01T19:02:03.719Z"
+      "cachedAt": "2026-09-02T04:10:55.309Z"
+    },
+    "1645407:47487:1396": {
+      "classId": "47487",
+      "assignmentId": "1645407",
+      "studentId": "1396",
+      "className": "ASTRONOMY",
+      "teacher": "James Krug",
+      "period": "6",
+      "currentGrade": 98,
+      "assignmentName": "Powers of 10 Quiz",
+      "dateDue": "09/01/2026",
+      "dueDate": "09/01/2026",
+      "earnedPoints": 5,
+      "totalPoints": 5,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-09-02T04:10:55.308Z"
+    },
+    "1644883:47127:1396": {
+      "classId": "47127",
+      "assignmentId": "1644883",
+      "studentId": "1396",
+      "className": "ENGLISH 11",
+      "teacher": "Audrey Cromell",
+      "period": "8",
+      "currentGrade": 0,
+      "assignmentName": "Survey and Character",
+      "dateDue": "08/28/2026",
+      "dueDate": "08/28/2026",
+      "earnedPoints": 31,
+      "totalPoints": 33,
+      "weight": 1,
+      "graded": true,
+      "cachedAt": "2026-09-02T04:10:55.409Z"
     }
   }
 }

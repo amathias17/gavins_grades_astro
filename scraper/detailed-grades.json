@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-09-01T19:02:15.198Z",
+    "scrapedAt": "2026-09-02T04:10:57.484Z",
     "totalClasses": 13,
-    "totalAssignments": 11
+    "totalAssignments": 12
   },
   "classes": [
     {
@@ -89,8 +89,16 @@
       "className": "ASTRONOMY",
       "teacher": "James Krug",
       "period": "6",
-      "currentGrade": 100,
+      "currentGrade": 98,
       "assignments": [
+        {
+          "name": "Powers of 10 Quiz",
+          "dueDate": "09/01/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Signed Course Syllabus",
           "dueDate": "08/28/2026",
@@ -126,10 +134,10 @@
         {
           "name": "Survey and Character",
           "dueDate": "08/28/2026",
-          "earnedPoints": 0,
-          "totalPoints": 5,
+          "earnedPoints": 31,
+          "totalPoints": 33,
           "weight": 1,
-          "graded": false
+          "graded": true
         }
       ]
     }
