@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-02T04:10:57.485Z",
+  "updatedAt": "2026-09-02T13:42:28.090Z",
   "assignments": {
     "1561854:44463:1396": {
       "classId": "44463",
@@ -11117,7 +11117,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-09-02T04:10:55.309Z"
+      "cachedAt": "2026-09-02T13:42:16.519Z"
     },
     "1644122:47705:1396": {
       "classId": "47705",
@@ -11134,7 +11134,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-09-02T04:10:55.210Z"
+      "cachedAt": "2026-09-02T13:42:16.518Z"
     },
     "1644168:47487:1396": {
       "classId": "47487",
@@ -11151,7 +11151,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-09-02T04:10:55.309Z"
+      "cachedAt": "2026-09-02T13:42:16.519Z"
     },
     "1644626:47460:1396": {
       "classId": "47460",
@@ -11168,7 +11168,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-09-02T04:10:45.684Z"
+      "cachedAt": "2026-09-02T13:41:59.888Z"
     },
     "1644620:47460:1396": {
       "classId": "47460",
@@ -11185,7 +11185,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-09-02T04:10:45.684Z"
+      "cachedAt": "2026-09-02T13:41:59.888Z"
     },
     "1644631:47460:1396": {
       "classId": "47460",
@@ -11202,7 +11202,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-09-02T04:10:45.685Z"
+      "cachedAt": "2026-09-02T13:41:59.889Z"
     },
     "1645394:47487:1396": {
       "classId": "47487",
@@ -11219,7 +11219,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-09-02T04:10:55.309Z"
+      "cachedAt": "2026-09-02T13:42:16.519Z"
     },
     "1645407:47487:1396": {
       "classId": "47487",
@@ -11236,7 +11236,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-09-02T04:10:55.308Z"
+      "cachedAt": "2026-09-02T13:42:16.518Z"
     },
     "1644883:47127:1396": {
       "classId": "47127",
@@ -11245,7 +11245,7 @@
       "className": "ENGLISH 11",
       "teacher": "Audrey Cromell",
       "period": "8",
-      "currentGrade": 0,
+      "currentGrade": 100,
       "assignmentName": "Survey and Character",
       "dateDue": "08/28/2026",
       "dueDate": "08/28/2026",
@@ -11253,7 +11253,7 @@
       "totalPoints": 33,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-09-02T04:10:55.409Z"
+      "cachedAt": "2026-09-02T13:42:26.011Z"
     }
   }
 }
