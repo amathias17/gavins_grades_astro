@@ -58,13 +58,43 @@ test.describe("positive points dashboard", () => {
     await expect(dialog).toBeVisible();
     await expect(dialog.locator("#breakdown-heading")).toHaveText("ASSIGNMENT BREAKDOWN");
     await expect(dialog.locator(".breakdown-summary")).toContainText("BONUSES");
-    await expect(dialog.locator(".breakdown-summary")).toContainText("AVAILABLE POINTS");
+    await expect(dialog.locator(".breakdown-summary")).toContainText("PERIOD POSSIBLE");
+    await expect(dialog.locator(".breakdown-summary")).toContainText("READY TO EARN");
+    await expect(dialog.locator(".breakdown-summary")).toContainText("AWAITING GRADES");
+    await expect(dialog.locator(".breakdown-summary")).toContainText("TOTAL POINTS EARNED");
     await expect(dialog.locator(".breakdown-class")).not.toHaveCount(0);
     await expect(dialog.locator(".breakdown-class li")).not.toHaveCount(0);
-    await expect(dialog.locator(".breakdown-status").first()).toHaveText(/COMPLETED|MISSING|NOT GRADED|OPEN/);
+    await expect(dialog.getByText("OPEN", { exact: true })).toHaveCount(0);
+    await expect(dialog.locator(".breakdown-class li").filter({ hasText: "Signed Syllabus" })).toContainText("0 / 5 PTS");
+    await expect(dialog.locator(".breakdown-class li").filter({ hasText: "Signed Syllabus" }).locator(".breakdown-status")).toHaveText("MISSING");
+    await expect(dialog.locator(".breakdown-class li").filter({ hasText: "Create your own Lab coat" })).toContainText("9 / 10 PTS");
+    await expect(dialog.locator(".breakdown-class li").filter({ hasText: "Create your own Lab coat" }).locator(".breakdown-status")).toHaveText("COMPLETED");
+    await expect(dialog.locator(".breakdown-class li").filter({ hasText: "Virtual Simulator mini-lab" })).toContainText("0 / 10 PTS");
+    await expect(dialog.locator(".breakdown-class li").filter({ hasText: "Virtual Simulator mini-lab" }).locator(".breakdown-status")).toHaveText("NOT GRADED");
+    await expect(dialog.locator(".breakdown-class li").filter({ hasText: '"Supervolcanoes" Sky Show' })).toContainText("5 / 5 PTS");
 
     await dialog.getByRole("button", { name: "Close" }).click();
     await expect(dialog).not.toBeVisible();
     await expect(trigger).toBeFocused();
+  });
+
+  test("keeps all opportunity cards readable on mobile", async ({ page }) => {
+    await page.setViewportSize({ width: 428, height: 926 });
+    await page.goto("/");
+
+    const dialog = page.locator("#opportunities-dialog");
+    await dialog.evaluate((element) => (element as HTMLDialogElement).showModal());
+    await expect(dialog).toBeVisible();
+    await expect(dialog.locator(".opportunity-dialog-list li")).toHaveCount(6);
+    await expect(dialog.locator(".opportunity-dialog-list")).toContainText("Virtual Simulator mini-lab");
+    await expect(dialog.locator(".opportunity-dialog-list")).toContainText("09/03/2026");
+    await expect(dialog.locator(".opportunity-dialog-list .opportunity-status").first()).toHaveText(/MISSING|NOT GRADED/);
+    await expect(dialog.locator(".opportunity-dialog-list .opportunity-points").first()).toBeVisible();
+
+    const overflow = await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth);
+    expect(overflow).toBe(false);
+
+    await dialog.getByRole("button", { name: "Close" }).click();
+    await expect(dialog).not.toBeVisible();
   });
 });

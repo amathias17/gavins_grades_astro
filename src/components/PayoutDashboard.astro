@@ -32,6 +32,8 @@ const assignmentGroups = Object.entries(points.assignments.reduce<Record<string,
     (groups[assignment.className] ??= []).push(assignment);
     return groups;
 }, {}));
+const assignmentStatusLabel = (status: typeof points.assignments[number]["status"]) => status === "completed" ? "COMPLETED" : status === "missing" ? "MISSING" : "NOT GRADED";
+const assignmentStatusClass = (status: typeof points.assignments[number]["status"]) => status === "completed" ? "is-complete" : status === "missing" ? "is-missing" : "is-not-graded";
 ---
 
 <section class="points-screen" aria-labelledby="points-heading">
@@ -63,7 +65,7 @@ const assignmentGroups = Object.entries(points.assignments.reduce<Record<string,
         <MarkingPeriodCard />
         <div class="dashboard-actions"><button class="breakdown-button" type="button" data-breakdown-open>VIEW ASSIGNMENT BREAKDOWN</button><button class="feedback-button" type="button" data-feedback-open>HOW POINTS WORK</button></div>
     </div>
-    <dialog class="breakdown-dialog feedback-dialog" id="breakdown-dialog" aria-labelledby="breakdown-heading" aria-describedby="breakdown-intro"><button class="feedback-close" type="button" data-breakdown-close>Close</button><div class="breakdown-guide"><p class="guide-kicker">CURRENT MARKING PERIOD // DETAIL VIEW</p><h2 id="breakdown-heading">ASSIGNMENT BREAKDOWN</h2><p id="breakdown-intro">A clear record of where your points came from, with open opportunities left visible.</p><div class="breakdown-summary"><div><span>ASSIGNMENT POINTS</span><strong>{points.assignmentPoints.toLocaleString()}</strong></div><div><span>AVAILABLE POINTS</span><strong>{points.availablePoints.toLocaleString()}</strong></div><div><span>BONUSES</span><strong>+{(points.fullCreditBonuses + points.classGradeBonuses).toLocaleString()}</strong></div><div><span>TOTAL POINTS</span><strong>{points.totalPoints.toLocaleString()}</strong></div></div>{assignmentGroups.length > 0 ? <div class="breakdown-groups">{assignmentGroups.map(([className, assignments]) => <section class="breakdown-class" aria-labelledby={`breakdown-class-${className.replace(/[^a-z0-9]+/gi, "-")}`}><h3 id={`breakdown-class-${className.replace(/[^a-z0-9]+/gi, "-")}`}>{className}</h3><ul>{assignments.map((assignment) => <li><span class="breakdown-assignment"><strong>{assignment.assignmentName}</strong><small>{assignment.dueDate || "DATE NOT AVAILABLE"}</small></span><span class="breakdown-score">{assignment.earnedPoints.toLocaleString()} / {assignment.possiblePoints.toLocaleString()} PTS</span><span class:list={["breakdown-status", assignment.status === "completed" ? "is-complete" : "is-open"]}>{assignment.status === "completed" ? "COMPLETED" : "OPEN"}</span></li>)}</ul></section>)}</div> : <p class="breakdown-empty">NO ASSIGNMENTS ARE LOGGED FOR THIS MARKING PERIOD YET.</p>}<p class="breakdown-bonus-note">BONUS SUMMARY: +{points.fullCreditBonuses} FULL-CREDIT / +{points.classGradeBonuses} A-GRADE</p></div></dialog>
+    <dialog class="breakdown-dialog feedback-dialog" id="breakdown-dialog" aria-labelledby="breakdown-heading" aria-describedby="breakdown-intro"><button class="feedback-close" type="button" data-breakdown-close>Close</button><div class="breakdown-guide"><p class="guide-kicker">CURRENT MARKING PERIOD // DETAIL VIEW</p><h2 id="breakdown-heading">ASSIGNMENT BREAKDOWN</h2><p id="breakdown-intro">A clear record of where your points came from, with every assignment status reconciled.</p><div class="breakdown-summary"><div><span>ASSIGNMENT POINTS</span><strong>{points.assignmentPoints.toLocaleString()}</strong></div><div><span>PERIOD POSSIBLE</span><strong>{points.availablePoints.toLocaleString()}</strong></div><div><span>READY TO EARN</span><strong>{points.readyToEarnPoints.toLocaleString()}</strong></div><div><span>AWAITING GRADES</span><strong>{points.awaitingGradePoints.toLocaleString()}</strong></div><div><span>BONUSES</span><strong>+{(points.fullCreditBonuses + points.classGradeBonuses).toLocaleString()}</strong></div><div><span>TOTAL POINTS EARNED</span><strong>{points.totalPoints.toLocaleString()}</strong></div></div>{assignmentGroups.length > 0 ? <div class="breakdown-groups">{assignmentGroups.map(([className, assignments]) => <section class="breakdown-class" aria-labelledby={`breakdown-class-${className.replace(/[^a-z0-9]+/gi, "-")}`}><h3 id={`breakdown-class-${className.replace(/[^a-z0-9]+/gi, "-")}`}>{className}</h3><ul>{assignments.map((assignment) => <li><span class="breakdown-assignment"><strong>{assignment.assignmentName}</strong><small>{assignment.dueDate || "DATE NOT AVAILABLE"}</small></span><span class="breakdown-score">{assignment.earnedPoints.toLocaleString()} / {assignment.possiblePoints.toLocaleString()} PTS</span><span class:list={["breakdown-status", assignmentStatusClass(assignment.status)]}>{assignmentStatusLabel(assignment.status)}</span></li>)}</ul></section>)}</div> : <p class="breakdown-empty">NO ASSIGNMENTS ARE LOGGED FOR THIS MARKING PERIOD YET.</p>}<p class="breakdown-bonus-note">BONUS SUMMARY: +{points.fullCreditBonuses} FULL-CREDIT / +{points.classGradeBonuses} A-GRADE</p></div></dialog>
     <dialog class="feedback-dialog" id="feedback-dialog" aria-labelledby="points-guide-heading" aria-describedby="points-guide-intro"><button class="feedback-close" type="button" data-feedback-close>Close</button><div class="points-guide"><p class="guide-kicker">A QUIET GUIDE TO YOUR PROGRESS</p><h2 id="points-guide-heading">HOW YOUR POINTS GROW</h2><p id="points-guide-intro">This marking period is a chance to build momentum one completed assignment at a time.</p><ul><li><strong>ASSIGNMENT POINTS</strong><span>Earn the points you score on each assignment.</span></li><li><strong>FULL-CREDIT BONUS</strong><span>Get <b>+2</b> for every assignment completed for full credit.</span></li><li><strong>A-GRADE BONUS</strong><span>Get <b>+10</b> for every class currently at 90% or higher.</span></li><li><strong>OPEN OPPORTUNITIES</strong><span>Incomplete work does not take points away. It shows you where more points are waiting.</span></li></ul><p class="guide-footer">NEXT TARGET: {nextMilestone.toLocaleString()} POINTS.</p></div></dialog>
 </section>
 
@@ -84,20 +86,6 @@ const assignmentGroups = Object.entries(points.assignments.reduce<Record<string,
         </ul>
     </div>
 </dialog>
-
-<script define:vars={{ assignmentsData: points.assignments }}>
-    const assignmentStatusRows = document.querySelectorAll<HTMLLIElement>("#breakdown-dialog .breakdown-class li");
-    assignmentStatusRows.forEach((row) => {
-        const name = row.querySelector(".breakdown-assignment strong")?.textContent?.trim();
-        const dueDate = row.querySelector(".breakdown-assignment small")?.textContent?.trim();
-        const assignment = assignmentsData.find((item) => item.assignmentName === name && item.dueDate === dueDate);
-        const status = row.querySelector<HTMLElement>(".breakdown-status");
-        if (!assignment || !status) return;
-        status.textContent = assignment.status === "completed" ? "COMPLETED" : assignment.status === "missing" ? "MISSING" : "NOT GRADED";
-        status.classList.remove("is-open", "is-complete", "is-missing", "is-not-graded");
-        status.classList.add(assignment.status === "completed" ? "is-complete" : assignment.status === "missing" ? "is-missing" : "is-not-graded");
-    });
-</script>
 
 <script>
     const feedbackOpen = document.querySelector<HTMLButtonElement>("[data-feedback-open]");
@@ -171,8 +159,9 @@ const assignmentGroups = Object.entries(points.assignments.reduce<Record<string,
     .marking-period-card { margin-top: 1.5rem; }
     .feedback-button { display: block; margin: 2rem auto 0; border: 1px solid rgba(97, 212, 154, .7); padding: .7rem 1rem; color: #61d49a; background: rgba(10, 20, 16, .72); font: 700 .62rem/1 "DM Mono", monospace; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; transition: color .2s ease, background .2s ease, transform .2s ease; }
     .feedback-button:hover, .feedback-button:focus-visible { color: #07110d; background: #61d49a; transform: translateY(-2px); }
-    .feedback-dialog { width: 100vw; max-width: none; height: 100svh; max-height: none; margin: 0; border: 0; padding: clamp(2rem, 6vw, 5rem); color: #61d49a; background: #07110d; font: 400 clamp(.8rem, 2.4vw, 1rem)/1.5 "DM Mono", monospace; text-align: center; }
+    .feedback-dialog { box-sizing: border-box; width: 100vw; max-width: none; height: 100svh; max-height: none; margin: 0; border: 0; padding: clamp(2rem, 6vw, 5rem); color: #61d49a; background: #07110d; font: 400 clamp(.8rem, 2.4vw, 1rem)/1.5 "DM Mono", monospace; text-align: center; }
     .feedback-dialog[open] { display: grid; place-items: center; }
+    :global(body:has(dialog[open])) { overflow: hidden; }
     .feedback-dialog::backdrop { background: rgba(2, 7, 5, .82); backdrop-filter: blur(3px); }
     .points-guide { width: min(100%, 36rem); border: 1px solid rgba(97, 212, 154, .48); padding: clamp(1.25rem, 4vw, 2.5rem); background: linear-gradient(135deg, rgba(15, 42, 35, .82), rgba(7, 17, 13, .55)); text-align: left; box-shadow: 0 0 0 1px rgba(255, 202, 58, .08), 0 1rem 3rem rgba(0, 0, 0, .3); }
     .guide-kicker { margin: 0 0 .65rem; color: #ffca3a; font: 700 .55rem/1 "DM Mono", monospace; letter-spacing: .16em; }
@@ -229,10 +218,10 @@ const assignmentGroups = Object.entries(points.assignments.reduce<Record<string,
     .dashboard-actions .feedback-button { margin: 0; }
     .breakdown-button { border: 1px solid rgba(199, 170, 114, .5); border-radius: 999px; padding: .7rem 1rem; color: #c7aa72; background: rgba(12, 23, 18, .45); font: 500 .62rem/1 "DM Sans", sans-serif; letter-spacing: .1em; text-transform: uppercase; cursor: pointer; transition: color .2s ease, background .2s ease, transform .2s ease; }
     .breakdown-button:hover, .breakdown-button:focus-visible { color: #17140d; background: #c7aa72; box-shadow: 0 0 18px rgba(199, 170, 114, .16); transform: translateY(-2px); }
-    .breakdown-guide { width: min(100%, 48rem); max-height: 84svh; overflow-y: auto; border: 1px solid rgba(174, 202, 184, .2); border-radius: 1rem; padding: clamp(1.25rem, 4vw, 2.5rem); background: #101d16; box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .28); text-align: left; }
+    .breakdown-guide { box-sizing: border-box; width: min(100%, 52rem); max-height: 84svh; overflow-y: auto; border: 1px solid rgba(174, 202, 184, .2); border-radius: 1rem; padding: clamp(1.25rem, 4vw, 2.5rem); background: #101d16; box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .28); text-align: left; }
     .breakdown-guide h2 { margin: 0; color: #e8eee9; font: 600 clamp(1.3rem, 5vw, 2rem)/1.1 "DM Sans", sans-serif; letter-spacing: .06em; }
     #breakdown-intro { margin: .8rem 0 1.4rem; color: rgba(199, 218, 204, .7); font: 400 .78rem/1.5 "DM Sans", sans-serif; }
-    .breakdown-summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: .5rem; margin-bottom: 1.4rem; }
+    .breakdown-summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: .5rem; margin-bottom: 1.4rem; }
     .breakdown-summary div { border: 1px solid rgba(174, 202, 184, .12); border-radius: .55rem; padding: .65rem; background: rgba(159, 190, 168, .045); }
     .breakdown-summary span { display: block; color: rgba(199, 218, 204, .54); font: 500 .48rem/1.3 "DM Sans", sans-serif; letter-spacing: .07em; }
     .breakdown-summary strong { display: block; margin-top: .35rem; color: #e8eee9; font: 600 1rem/1 "Orbitron", sans-serif; }
@@ -254,12 +243,15 @@ const assignmentGroups = Object.entries(points.assignments.reduce<Record<string,
     .opportunity-dialog-summary span { border: 1px solid rgba(174, 202, 184, .14); border-radius: .55rem; padding: .55rem .7rem; color: rgba(199, 218, 204, .62); font: 500 .55rem/1.2 "DM Sans", sans-serif; }
     .opportunity-dialog-summary strong { color: #e8eee9; font: 600 1rem/1 "Orbitron", sans-serif; }
     .opportunity-dialog-list { display: grid; gap: .4rem; margin: 0; padding: 0; list-style: none; }
-    .opportunity-dialog-list li { display: flex; align-items: center; gap: .8rem; border-left: 2px solid #c7aa72; border-radius: .45rem; padding: .65rem .7rem; background: rgba(199, 170, 114, .045); }
+    .opportunity-dialog-list li { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: .8rem 1rem; border-left: 2px solid #c7aa72; border-radius: .55rem; padding: .8rem .85rem; background: rgba(199, 170, 114, .045); }
     .opportunity-dialog-list li.is-not-graded { border-left-color: #9fbea8; background: rgba(159, 190, 168, .04); }
-    .opportunity-dialog-list .opportunity-name { gap: .25rem; }
+    .opportunity-dialog-list .opportunity-name { gap: .3rem; }
+    .opportunity-dialog-list .opportunity-name strong { line-height: 1.4; }
+    .opportunity-dialog-list .opportunity-name small { line-height: 1.45; }
+    .opportunity-dialog-list .opportunity-meta { min-width: 5.4rem; align-self: center; }
     .breakdown-empty, .breakdown-bonus-note { margin: 1rem 0 0; color: rgba(199, 218, 204, .66); font: 500 .65rem/1.4 "DM Sans", sans-serif; letter-spacing: .05em; text-transform: uppercase; }
     .breakdown-bonus-note { color: #c7aa72; }
-    @media (max-width: 560px) { .breakdown-summary { grid-template-columns: repeat(2, 1fr); } .breakdown-class li { grid-template-columns: minmax(0, 1fr) auto; } .breakdown-status { grid-column: 1 / -1; justify-self: start; } .opportunity-dialog-list li { align-items: flex-start; } .opportunity-dialog-list .opportunity-meta { margin-left: auto; } }
+    @media (max-width: 560px) { .breakdown-summary { grid-template-columns: repeat(2, 1fr); } .breakdown-class li { grid-template-columns: minmax(0, 1fr) auto; } .breakdown-status { grid-column: 1 / -1; justify-self: start; } .opportunity-dialog-list li { grid-template-columns: minmax(0, 1fr); align-items: start; gap: .65rem; } .opportunity-dialog-list .opportunity-meta { min-width: 0; width: 100%; display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-start; gap: .55rem .8rem; } .opportunity-dialog-list .opportunity-points { margin-left: auto; } }
     @media (prefers-reduced-motion: reduce) { .milestone-track span { transition: none; } }
     @media (max-width: 520px) { .points-screen { padding-top: max(3rem, env(safe-area-inset-top)); padding-bottom: max(1.5rem, env(safe-area-inset-bottom)); } .status-light { font-size: .43rem; } .point-stats { gap: .4rem; } .stat-card { padding: .65rem .45rem; } .stat-card span { font-size: .42rem; } .panel-heading { gap: .65rem; } .points-to-go, .opportunity-total { font-size: .52rem; } .awaiting-total { font-size: .46rem; } }
     @media (prefers-reduced-motion: reduce) { .milestone-track span { transition: none; } }

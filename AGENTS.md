@@ -24,6 +24,8 @@
 - Homepage uses a softer dark study-room treatment: muted charcoal, sage, and warm sand accents, gentle rounded grouping, restrained shadows, and all-caps labels. It retains Orbitron/DM Mono, with at least 3rem of mobile top breathing room plus the iOS safe-area inset.
 - Homepage keeps the live marking-period card and an accessible HOW POINTS WORK modal explaining assignment points, bonuses, milestones, and opportunity missions; the pre-points payout homepage is backed up under backups/homepage-payout/.
 - Homepage also provides a VIEW ASSIGNMENT BREAKDOWN modal with all valid current-period assignments grouped by class, earned/possible points, completed/open status, and a separate bonus reconciliation summary.
+- Assignment breakdown uses reconciled PointAssignment statuses server-rendered as COMPLETED, MISSING, or NOT GRADED; its summary separates assignment points, period possible, ready-to-earn, awaiting-grade, bonuses, and total earned points.
+- ALL OPPORTUNITIES uses responsive cards with wrapping assignment/class/date metadata and visually separated status and point values, including distinct missing and not-graded accents.
 - Marking-period card omits the LIVE CALENDAR badge, hides redundant active-period checkpoint reminders, keeps contextual school-day reminders, and uses more generous responsive spacing.
 - Homepage includes a generously spaced live school-day marking-period card for the 2026-2027 secondary calendar, showing the current period, school days remaining, end date, and progress while excluding supplied inservice closures.
 - The marking-period card also shows school-day-aware reminders for school starts, closures, weekend mode, special schedules, and the next marking-period checkpoint.
