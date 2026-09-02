@@ -37,6 +37,19 @@ function normalizeDueDate(raw) {
   return null;
 }
 
+function getAssignmentScoreHint(rawText) {
+  const text = String(rawText || '');
+  const match = text.match(/(\*|\d+(?:\.\d+)?)\s*(?:\/|out\s*of)\s*(\d+(?:\.\d+)?)(?!\s*\/\s*\d{2,4})/i);
+  if (!match || Number(match[2]) <= 0 || Number(match[2]) > 1000) {
+    return { status: 'unknown', totalPoints: null };
+  }
+
+  return {
+    status: match[1] === '*' ? 'ungraded' : 'graded',
+    totalPoints: Number(match[2])
+  };
+}
+
 async function readJsonIfExists(filePath) {
   try {
     const content = await fs.readFile(filePath, 'utf8');
@@ -352,6 +365,11 @@ async function getAssignmentLinks(page) {
       // Get due date from the row
       const dueSpan = row.querySelector('span.fXs');
       const dueDate = dueSpan ? dueSpan.textContent.trim() : null;
+      const scoreText = row.textContent || '';
+      const scoreMatch = scoreText.match(/(\*|\d+(?:\.\d+)?)\s*(?:\/|out\s*of)\s*(\d+(?:\.\d+)?)(?!\s*\/\s*\d{2,4})/i);
+      const rowScoreHint = scoreMatch && Number(scoreMatch[2]) > 0 && Number(scoreMatch[2]) <= 1000
+        ? { status: scoreMatch[1] === '*' ? 'ungraded' : 'graded', totalPoints: Number(scoreMatch[2]) }
+        : { status: 'unknown', totalPoints: null };
 
       // Try to find the class name from nearby DOM elements
       // Look for the closest class description table above this assignment
@@ -402,7 +420,8 @@ async function getAssignmentLinks(page) {
         classNameHint: classNameFromDOM,
         periodHint: periodFromDOM,
         teacherHint: teacherFromDOM,
-        groupIdHint
+        groupIdHint,
+        rowScoreHint
       });
     });
 
@@ -421,12 +440,17 @@ async function extractAssignmentDetails(page, assignmentId, classId) {
     await link.click();
 
     // Wait for the detail modal/popup to appear
-    const dialogLocator = page.locator('.sf_Dialog, .ui-dialog, [role="dialog"]').first();
+    const dialogLocator = page.locator('.sf_Dialog:visible, .ui-dialog:visible, [role="dialog"]:visible').first();
     await dialogLocator.waitFor({ state: 'visible', timeout: 5000 });
 
     // Extract the assignment details from the modal
     const details = await page.evaluate(() => {
-      const dialog = document.querySelector('.sf_Dialog, .ui-dialog, [role="dialog"]');
+      const dialog = Array.from(document.querySelectorAll('.sf_Dialog, .ui-dialog, [role="dialog"]'))
+        .find((candidate) => {
+          const style = getComputedStyle(candidate);
+          const rect = candidate.getBoundingClientRect();
+          return style.visibility !== 'hidden' && style.display !== 'none' && rect.width > 0 && rect.height > 0;
+        });
       const scope = dialog || document.body;
       const text = scope.innerText || '';
 
@@ -628,7 +652,7 @@ async function extractAssignmentDetails(page, assignmentId, classId) {
     }
 
     try {
-      const dialogLocator = page.locator('.sf_Dialog, .ui-dialog, [role="dialog"]').first();
+      const dialogLocator = page.locator('.sf_Dialog:visible, .ui-dialog:visible, [role="dialog"]:visible').first();
       await dialogLocator.waitFor({ state: 'hidden', timeout: 2000 });
     } catch (e) {
       await page.waitForTimeout(200);
@@ -696,12 +720,21 @@ async function scrapeAllAssignments(page, classes, cacheAssignments = {}, classI
     const cacheKey = cacheKeyParts.join(':');
     const cached = cacheKey ? cacheAssignments[cacheKey] : null;
 
-    let details = cached && cached.graded ? cached : null;
+    let details = cached && cached.graded && assignment.rowScoreHint.status !== 'ungraded' ? cached : null;
     if (details) {
       cacheHits += 1;
     } else {
       // Extract detailed points by clicking the assignment
       details = await extractAssignmentDetails(page, assignment.assignmentId, assignment.classId);
+    }
+
+    if (assignment.rowScoreHint.status === 'ungraded') {
+      details = {
+        ...details,
+        graded: false,
+        earnedPoints: 0,
+        totalPoints: details.totalPoints ?? assignment.rowScoreHint.totalPoints
+      };
     }
 
     // Find which class this assignment belongs to
@@ -1143,7 +1176,7 @@ async function main() {
   }
 }
 
-module.exports = { scrapeMissingAssignments };
+module.exports = { extractAssignmentDetails, getAssignmentScoreHint, scrapeMissingAssignments };
 
 if (require.main === module) {
   main();
