@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-02T13:42:28.090Z",
+  "updatedAt": "2026-09-02T15:58:27.458Z",
   "assignments": {
     "1561854:44463:1396": {
       "classId": "44463",
@@ -11117,7 +11117,7 @@
       "totalPoints": 50,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-09-02T13:42:16.519Z"
+      "cachedAt": "2026-09-02T15:58:15.889Z"
     },
     "1644122:47705:1396": {
       "classId": "47705",
@@ -11134,7 +11134,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-09-02T13:42:16.518Z"
+      "cachedAt": "2026-09-02T15:58:15.889Z"
     },
     "1644168:47487:1396": {
       "classId": "47487",
@@ -11151,7 +11151,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-09-02T13:42:16.519Z"
+      "cachedAt": "2026-09-02T15:58:15.889Z"
     },
     "1644626:47460:1396": {
       "classId": "47460",
@@ -11168,7 +11168,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-09-02T13:41:59.888Z"
+      "cachedAt": "2026-09-02T15:57:59.250Z"
     },
     "1644620:47460:1396": {
       "classId": "47460",
@@ -11185,7 +11185,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-09-02T13:41:59.888Z"
+      "cachedAt": "2026-09-02T15:57:59.249Z"
     },
     "1644631:47460:1396": {
       "classId": "47460",
@@ -11202,7 +11202,7 @@
       "totalPoints": 10,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-09-02T13:41:59.889Z"
+      "cachedAt": "2026-09-02T15:57:59.250Z"
     },
     "1645394:47487:1396": {
       "classId": "47487",
@@ -11219,7 +11219,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-09-02T13:42:16.519Z"
+      "cachedAt": "2026-09-02T15:58:15.889Z"
     },
     "1645407:47487:1396": {
       "classId": "47487",
@@ -11236,7 +11236,7 @@
       "totalPoints": 5,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-09-02T13:42:16.518Z"
+      "cachedAt": "2026-09-02T15:58:15.889Z"
     },
     "1644883:47127:1396": {
       "classId": "47127",
@@ -11253,7 +11253,7 @@
       "totalPoints": 33,
       "weight": 1,
       "graded": true,
-      "cachedAt": "2026-09-02T13:42:26.011Z"
+      "cachedAt": "2026-09-02T15:58:25.383Z"
     }
   }
 }
