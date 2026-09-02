@@ -19,7 +19,10 @@ test.describe("positive points dashboard", () => {
     await expect(page.locator(".total")).toHaveCount(0);
     await expect(page.locator(".missing-grade-alarm")).toHaveCount(0);
     await expect(page.locator(".opportunity-panel")).toBeVisible();
-    await expect(page.locator(".opportunity-panel")).toContainText("AVAILABLE");
+    await expect(page.locator(".opportunity-panel")).toContainText("READY");
+    await expect(page.locator(".opportunity-panel")).toContainText("AWAITING GRADES");
+    await expect(page.locator(".opportunity-total")).toHaveText("5 READY");
+    await expect(page.locator(".awaiting-total")).toHaveText("50 AWAITING GRADES");
     await expect(page.locator(".opportunity-status").first()).toHaveText(/MISSING|NOT GRADED/);
   });
 
@@ -55,6 +58,7 @@ test.describe("positive points dashboard", () => {
     await expect(dialog).toBeVisible();
     await expect(dialog.locator("#breakdown-heading")).toHaveText("ASSIGNMENT BREAKDOWN");
     await expect(dialog.locator(".breakdown-summary")).toContainText("BONUSES");
+    await expect(dialog.locator(".breakdown-summary")).toContainText("AVAILABLE POINTS");
     await expect(dialog.locator(".breakdown-class")).not.toHaveCount(0);
     await expect(dialog.locator(".breakdown-class li")).not.toHaveCount(0);
     await expect(dialog.locator(".breakdown-status").first()).toHaveText(/COMPLETED|MISSING|NOT GRADED|OPEN/);

@@ -24,6 +24,8 @@ test.describe("positive marking-period points", () => {
     expect(result.classGradeBonuses).toBe(10);
     expect(result.totalPoints).toBe(31);
     expect(result.availablePoints).toBe(20);
+    expect(result.readyToEarnPoints).toBe(0);
+    expect(result.awaitingGradePoints).toBe(0);
     expect(result.completionPercent).toBe(95);
     expect(result.assignments).toEqual([
       { className: "English", assignmentName: "Essay", dueDate: "08/28/2026", earnedPoints: 9, possiblePoints: 10, status: "completed" },
@@ -44,6 +46,8 @@ test.describe("positive marking-period points", () => {
 
     expect(result.totalPoints).toBe(0);
     expect(result.availablePoints).toBe(20);
+    expect(result.readyToEarnPoints).toBe(0);
+    expect(result.awaitingGradePoints).toBe(20);
     expect(result.opportunities).toEqual([{
       className: "Math",
       assignmentName: "Practice",
@@ -65,6 +69,8 @@ test.describe("positive marking-period points", () => {
     expect(result.assignments).toEqual([{ className: "ENVIRON SCIENCE 1", assignmentName: "Signed Syllabus", dueDate: "08/31/2026", earnedPoints: 0, possiblePoints: 5, status: "missing" }]);
     expect(result.opportunities).toEqual([{ className: "ENVIRON SCIENCE 1", assignmentName: "Signed Syllabus", dueDate: "08/31/2026", availablePoints: 5, opportunityType: "missing" }]);
     expect(result.fullCreditBonuses).toBe(0);
+    expect(result.readyToEarnPoints).toBe(5);
+    expect(result.awaitingGradePoints).toBe(0);
   });
 
   test("adds unmatched current-period missing items once and ignores invalid or out-of-period records", () => {
@@ -81,6 +87,8 @@ test.describe("positive marking-period points", () => {
 
     expect(result.availablePoints).toBe(20);
     expect(result.opportunities).toHaveLength(1);
+    expect(result.readyToEarnPoints).toBe(20);
+    expect(result.awaitingGradePoints).toBe(0);
     expect(result.assignments[0]).toMatchObject({ assignmentName: "Practice", status: "missing" });
   });
 
@@ -96,6 +104,8 @@ test.describe("positive marking-period points", () => {
     );
 
     expect(result.opportunities.map((opportunity) => opportunity.opportunityType)).toEqual(["missing", "missing", "not-graded"]);
+    expect(result.readyToEarnPoints).toBe(25);
+    expect(result.awaitingGradePoints).toBe(10);
   });
 
   test("filters invalid and out-of-period assignments and deduplicates rows", () => {

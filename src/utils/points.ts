@@ -48,6 +48,8 @@ export interface PointsSummary {
   period: MarkingPeriod | null;
   earnedPoints: number;
   availablePoints: number;
+  readyToEarnPoints: number;
+  awaitingGradePoints: number;
   completionPercent: number;
   assignmentPoints: number;
   fullCreditBonuses: number;
@@ -126,6 +128,8 @@ export function calculatePoints(
   const seen = new Set<string>();
   let assignmentPoints = 0;
   let availablePoints = 0;
+  let readyToEarnPoints = 0;
+  let awaitingGradePoints = 0;
   let fullCreditCount = 0;
   const missingByKey = new Map<string, MissingPointAssignment>();
   for (const missing of missingAssignments) {
@@ -170,6 +174,8 @@ export function calculatePoints(
         }
 
         if (missing || !assignment.graded) {
+          if (missing) readyToEarnPoints += possible;
+          else awaitingGradePoints += possible;
           opportunities.push({
             className: scrapedClass.className,
             assignmentName: assignment.name,
@@ -195,6 +201,7 @@ export function calculatePoints(
 
       seen.add(key);
       availablePoints += maxPoints;
+      readyToEarnPoints += maxPoints;
       assignments.push({ className, assignmentName: missing.assignment_name, dueDate: missing.due_date, earnedPoints: 0, possiblePoints: maxPoints, status: "missing" });
       opportunities.push({ className, assignmentName: missing.assignment_name, dueDate: missing.due_date, availablePoints: maxPoints, opportunityType: "missing" });
     }
@@ -214,6 +221,8 @@ export function calculatePoints(
     period,
     earnedPoints: totalPoints,
     availablePoints,
+    readyToEarnPoints,
+    awaitingGradePoints,
     completionPercent: availablePoints === 0 ? 0 : Math.round((assignmentPoints / availablePoints) * 10000) / 100,
     assignmentPoints,
     fullCreditBonuses,
