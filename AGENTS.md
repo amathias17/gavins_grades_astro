@@ -19,6 +19,7 @@
 - Homepage is a positive, mobile-first points quest: it shows current marking-period points, level progress, milestone distance, point bonuses, and incomplete assignments as opportunities.
 - Homepage points are derived from scraper assignments and grades by src/utils/points.ts; missing work never triggers a red alarm or subtracts points. Calculator, class-grade rules, and scraper behavior remain unchanged.
 - Points reconciliation treats src/data/missing_assignments.json as authoritative: matching records override scraper status to OPEN with 0 earned points, and valid current-period feed-only records appear as opportunities.
+- Points opportunities distinguish confirmed MISSING work from NOT GRADED work; the dashboard previews five sorted opportunities and provides an accessible full-list dialog when more exist.
 - Homepage uses a softer dark study-room treatment: muted charcoal, sage, and warm sand accents, gentle rounded grouping, restrained shadows, and all-caps labels. It retains Orbitron/DM Mono, with at least 3rem of mobile top breathing room plus the iOS safe-area inset.
 - Homepage keeps the live marking-period card and an accessible HOW POINTS WORK modal explaining assignment points, bonuses, milestones, and opportunity missions; the pre-points payout homepage is backed up under backups/homepage-payout/.
 - Homepage also provides a VIEW ASSIGNMENT BREAKDOWN modal with all valid current-period assignments grouped by class, earned/possible points, completed/open status, and a separate bonus reconciliation summary.

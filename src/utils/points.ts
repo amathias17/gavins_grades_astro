@@ -25,6 +25,7 @@ export interface PointOpportunity {
   assignmentName: string;
   dueDate: string;
   availablePoints: number;
+  opportunityType: "missing" | "not-graded";
 }
 
 export interface MissingPointAssignment {
@@ -40,7 +41,7 @@ export interface PointAssignment {
   dueDate: string;
   earnedPoints: number;
   possiblePoints: number;
-  status: "completed" | "open";
+  status: "completed" | "missing" | "not-graded";
 }
 
 export interface PointsSummary {
@@ -161,7 +162,7 @@ export function calculatePoints(
           dueDate: assignment.dueDate ?? "",
           earnedPoints: earned,
           possiblePoints: possible,
-          status: missing || !assignment.graded ? "open" : "completed",
+          status: missing ? "missing" : assignment.graded ? "completed" : "not-graded",
         });
 
         if (!missing && assignment.graded && (numeric(assignment.earnedPoints) ?? 0) >= total) {
@@ -174,6 +175,7 @@ export function calculatePoints(
             assignmentName: assignment.name,
             dueDate: assignment.dueDate ?? "",
             availablePoints: possible,
+            opportunityType: missing ? "missing" : "not-graded",
           });
         }
       }
@@ -193,10 +195,12 @@ export function calculatePoints(
 
       seen.add(key);
       availablePoints += maxPoints;
-      assignments.push({ className, assignmentName: missing.assignment_name, dueDate: missing.due_date, earnedPoints: 0, possiblePoints: maxPoints, status: "open" });
-      opportunities.push({ className, assignmentName: missing.assignment_name, dueDate: missing.due_date, availablePoints: maxPoints });
+      assignments.push({ className, assignmentName: missing.assignment_name, dueDate: missing.due_date, earnedPoints: 0, possiblePoints: maxPoints, status: "missing" });
+      opportunities.push({ className, assignmentName: missing.assignment_name, dueDate: missing.due_date, availablePoints: maxPoints, opportunityType: "missing" });
     }
   }
+
+  opportunities.sort((left, right) => Number(right.opportunityType === "missing") - Number(left.opportunityType === "missing"));
 
   const classGradeBonuses = classes.filter((classInfo) => {
     const grade = numeric(classInfo.current_grade);

@@ -20,6 +20,7 @@ test.describe("positive points dashboard", () => {
     await expect(page.locator(".missing-grade-alarm")).toHaveCount(0);
     await expect(page.locator(".opportunity-panel")).toBeVisible();
     await expect(page.locator(".opportunity-panel")).toContainText("AVAILABLE");
+    await expect(page.locator(".opportunity-status").first()).toHaveText(/MISSING|NOT GRADED/);
   });
 
   test("keeps the mobile dashboard inside the viewport with top breathing room", async ({ page }) => {
@@ -56,7 +57,7 @@ test.describe("positive points dashboard", () => {
     await expect(dialog.locator(".breakdown-summary")).toContainText("BONUSES");
     await expect(dialog.locator(".breakdown-class")).not.toHaveCount(0);
     await expect(dialog.locator(".breakdown-class li")).not.toHaveCount(0);
-    await expect(dialog.locator(".breakdown-status").first()).toHaveText(/COMPLETED|OPEN/);
+    await expect(dialog.locator(".breakdown-status").first()).toHaveText(/COMPLETED|MISSING|NOT GRADED|OPEN/);
 
     await dialog.getByRole("button", { name: "Close" }).click();
     await expect(dialog).not.toBeVisible();

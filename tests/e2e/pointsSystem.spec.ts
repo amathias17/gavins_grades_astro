@@ -49,8 +49,9 @@ test.describe("positive marking-period points", () => {
       assignmentName: "Practice",
       dueDate: "09/02/2026",
       availablePoints: 20,
+      opportunityType: "not-graded",
     }]);
-    expect(result.assignments[0]).toMatchObject({ assignmentName: "Practice", earnedPoints: 0, possiblePoints: 20, status: "open" });
+    expect(result.assignments[0]).toMatchObject({ assignmentName: "Practice", earnedPoints: 0, possiblePoints: 20, status: "not-graded" });
   });
 
   test("reconciles a missing feed item over an incorrectly graded scraper row", () => {
@@ -61,8 +62,8 @@ test.describe("positive marking-period points", () => {
       [{ assignment_name: "Signed Syllabus", class_name: "ENVIRON SCIENCE    1", due_date: "08/31/2026", max_points: "5" }],
     );
 
-    expect(result.assignments).toEqual([{ className: "ENVIRON SCIENCE 1", assignmentName: "Signed Syllabus", dueDate: "08/31/2026", earnedPoints: 0, possiblePoints: 5, status: "open" }]);
-    expect(result.opportunities).toEqual([{ className: "ENVIRON SCIENCE 1", assignmentName: "Signed Syllabus", dueDate: "08/31/2026", availablePoints: 5 }]);
+    expect(result.assignments).toEqual([{ className: "ENVIRON SCIENCE 1", assignmentName: "Signed Syllabus", dueDate: "08/31/2026", earnedPoints: 0, possiblePoints: 5, status: "missing" }]);
+    expect(result.opportunities).toEqual([{ className: "ENVIRON SCIENCE 1", assignmentName: "Signed Syllabus", dueDate: "08/31/2026", availablePoints: 5, opportunityType: "missing" }]);
     expect(result.fullCreditBonuses).toBe(0);
   });
 
@@ -80,7 +81,21 @@ test.describe("positive marking-period points", () => {
 
     expect(result.availablePoints).toBe(20);
     expect(result.opportunities).toHaveLength(1);
-    expect(result.assignments[0]).toMatchObject({ assignmentName: "Practice", status: "open" });
+    expect(result.assignments[0]).toMatchObject({ assignmentName: "Practice", status: "missing" });
+  });
+
+  test("prioritizes confirmed missing opportunities over not-graded work", () => {
+    const result = calculatePoints(
+      [{ class_name: "Math", period: "2", current_grade: null }],
+      [{ className: "Math", period: "2", assignments: [{ name: "Awaiting Grade", dueDate: "09/03/2026", earnedPoints: 0, totalPoints: 10, graded: false }] }],
+      period,
+      [
+        { assignment_name: "Confirmed Missing", class_name: "Math", due_date: "09/02/2026", max_points: "20" },
+        { assignment_name: "Second Missing", class_name: "Math", due_date: "09/04/2026", max_points: "5" },
+      ],
+    );
+
+    expect(result.opportunities.map((opportunity) => opportunity.opportunityType)).toEqual(["missing", "missing", "not-graded"]);
   });
 
   test("filters invalid and out-of-period assignments and deduplicates rows", () => {
