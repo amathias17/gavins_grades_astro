@@ -54,6 +54,7 @@ export interface PointsSummary {
   assignmentPoints: number;
   fullCreditBonuses: number;
   classGradeBonuses: number;
+  persistentPoints: number;
   totalPoints: number;
   level: number;
   nextMilestone: number | null;
@@ -214,7 +215,8 @@ export function calculatePoints(
     return grade !== null && grade >= 90;
   }).length * A_GRADE_BONUS;
   const fullCreditBonuses = fullCreditCount * FULL_CREDIT_BONUS;
-  const totalPoints = assignmentPoints + fullCreditBonuses + classGradeBonuses;
+  const persistentPoints = assignmentPoints + fullCreditBonuses;
+  const totalPoints = persistentPoints + classGradeBonuses;
   const milestone = milestoneFor(totalPoints);
 
   return {
@@ -227,6 +229,7 @@ export function calculatePoints(
     assignmentPoints,
     fullCreditBonuses,
     classGradeBonuses,
+    persistentPoints,
     totalPoints,
     ...milestone,
     opportunities,

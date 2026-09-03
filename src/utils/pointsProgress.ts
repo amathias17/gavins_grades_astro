@@ -1,7 +1,8 @@
 import type { PointsSummary } from "./points";
 
 export interface PointsProgressPeriod {
-  maxTotalPoints: number;
+  maxPersistentPoints: number;
+  maxTotalPoints?: number;
   updatedAt: string;
 }
 
@@ -10,17 +11,17 @@ export interface PointsProgressLedger {
   periods: Record<string, PointsProgressPeriod>;
 }
 
-export function getProtectedTotal(
-  rawTotal: number,
+export function getProtectedPersistentPoints(
+  rawPersistentPoints: number,
   ledger: PointsProgressLedger | null | undefined,
   currentSchoolYear: string,
   periodNumber: number | null,
 ): number {
-  if (periodNumber === null || !Number.isFinite(rawTotal)) return Math.max(0, rawTotal);
+  if (periodNumber === null || !Number.isFinite(rawPersistentPoints)) return Math.max(0, rawPersistentPoints);
   const previous = ledger?.schoolYear === currentSchoolYear
-    ? ledger.periods[String(periodNumber)]?.maxTotalPoints ?? 0
+    ? ledger.periods[String(periodNumber)]?.maxPersistentPoints ?? ledger.periods[String(periodNumber)]?.maxTotalPoints ?? 0
     : 0;
-  return Math.max(0, previous, rawTotal);
+  return Math.max(0, previous, rawPersistentPoints);
 }
 
 export function applyProtectedProgress(
@@ -28,12 +29,13 @@ export function applyProtectedProgress(
   ledger: PointsProgressLedger | null | undefined,
   currentSchoolYear: string,
 ): PointsSummary {
-  const protectedTotal = getProtectedTotal(
-    points.totalPoints,
+  const protectedPersistentPoints = getProtectedPersistentPoints(
+    points.persistentPoints,
     ledger,
     currentSchoolYear,
     points.period?.number ?? null,
   );
+  const protectedTotal = protectedPersistentPoints + points.classGradeBonuses;
   const nextMilestone = protectedTotal < 1000
     ? [100, 250, 500, 1000].find((milestone) => protectedTotal < milestone) ?? null
     : Math.floor(protectedTotal / 500 + 1) * 500;

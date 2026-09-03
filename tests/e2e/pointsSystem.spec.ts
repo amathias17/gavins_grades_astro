@@ -1,7 +1,7 @@
 import { expect, test } from "@playwright/test";
 import { calculatePoints } from "../../src/utils/points";
 import type { MarkingPeriod } from "../../src/utils/schoolCalendar";
-import { applyProtectedProgress, getProtectedTotal } from "../../src/utils/pointsProgress";
+import { applyProtectedProgress, getProtectedPersistentPoints } from "../../src/utils/pointsProgress";
 import { formatDataUpdateTime, getLatestDataUpdate } from "../../src/utils/dataFreshness";
 import { badges, getBadgeStates, getCurrentBadge, getBadgeStatesWithApiArtwork } from "../../src/utils/badges";
 import { fetchDragonBallCharacters } from "../../src/utils/dragonBallApi";
@@ -67,15 +67,27 @@ test.describe("positive marking-period points", () => {
     expect(gradeOnly?.toISOString()).toBe("2026-09-03T16:48:00.000Z");
   });
 
-  test("protects quest progress while keeping the current snapshot factual", () => {
+  test("protects persistent quest progress while recalculating A-grade bonuses", () => {
+    const persistentLedger = { schoolYear: "2026-2027", periods: { "1": { maxPersistentPoints: 169, updatedAt: "2026-09-02T00:00:00.000Z" } } };
+    expect(getProtectedPersistentPoints(20, persistentLedger, "2026-2027", 1)).toBe(169);
+    expect(getProtectedPersistentPoints(200, persistentLedger, "2026-2027", 1)).toBe(200);
+    expect(getProtectedPersistentPoints(20, persistentLedger, "2026-2027", 2)).toBe(20);
+    expect(getProtectedPersistentPoints(200, persistentLedger, "2025-2026", 1)).toBe(200);
+
+    const assignment = [{ name: "Quiz", dueDate: "09/01/2026", earnedPoints: 10, totalPoints: 10, graded: true }];
+    const withA = calculatePoints([{ class_name: "English", period: "1", current_grade: 95 }], [{ className: "English", period: "1", assignments: assignment }], period);
+    const belowA = calculatePoints([{ class_name: "English", period: "1", current_grade: 89 }], [{ className: "English", period: "1", assignments: assignment }], period);
+    const withAResult = applyProtectedProgress(withA, undefined, "2026-2027");
+    const belowAResult = applyProtectedProgress(belowA, undefined, "2026-2027");
+    expect(withAResult.persistentPoints).toBe(12);
+    expect(withAResult.totalPoints).toBe(22);
+    expect(belowAResult.persistentPoints).toBe(12);
+    expect(belowAResult.totalPoints).toBe(12);
+    expect(withAResult.totalPoints - belowAResult.totalPoints).toBe(10);
+
     const raw = calculatePoints([], [], period);
-    const ledger = { schoolYear: "2026-2027", periods: { "1": { maxTotalPoints: 169, updatedAt: "2026-09-02T00:00:00.000Z" } } };
-    expect(getProtectedTotal(20, ledger, "2026-2027", 1)).toBe(169);
-    expect(getProtectedTotal(200, ledger, "2026-2027", 1)).toBe(200);
-    expect(getProtectedTotal(20, ledger, "2026-2027", 2)).toBe(20);
-    expect(getProtectedTotal(200, ledger, "2025-2026", 1)).toBe(200);
-    expect(applyProtectedProgress(raw, ledger, "2026-2027").totalPoints).toBe(169);
-    expect(applyProtectedProgress(raw, ledger, "2026-2027").assignmentPoints).toBe(0);
+    expect(applyProtectedProgress(raw, persistentLedger, "2026-2027").totalPoints).toBe(169);
+    expect(applyProtectedProgress(raw, persistentLedger, "2026-2027").assignmentPoints).toBe(0);
   });
 
   test("awards actual points, full-credit bonuses, and A-grade bonuses", () => {

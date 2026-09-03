@@ -29,7 +29,7 @@ function currentPeriod(today = new Date()) {
   return calendar.markingPeriods.find((period) => key >= period.start && key <= period.end) || null;
 }
 
-function calculateRawTotal(classes, scrapedClasses, missingAssignments, period) {
+function calculatePersistentPoints(classes, scrapedClasses, missingAssignments, period) {
   if (!period) return 0;
   const missing = new Set((missingAssignments || []).map((item) => `${normalize(item.class_name)}|${normalize(item.assignment_name)}|${item.due_date}`));
   const seen = new Set();
@@ -50,26 +50,37 @@ function calculateRawTotal(classes, scrapedClasses, missingAssignments, period) 
       if (!isMissing && assignment.graded && (numeric(assignment.earnedPoints) || 0) >= total) fullCreditCount += 1;
     }
   }
-  const classGradeBonuses = (classes || []).filter((item) => (numeric(item.current_grade) || 0) >= 90).length * 10;
-  return assignmentPoints + fullCreditCount * 2 + classGradeBonuses;
+  return assignmentPoints + fullCreditCount * 2;
+}
+
+function calculateAGradeBonus(classes) {
+  return (classes || []).filter((item) => (numeric(item.current_grade) || 0) >= 90).length * 10;
+}
+
+function calculateRawTotal(classes, scrapedClasses, missingAssignments, period) {
+  if (!period) return 0;
+  return calculatePersistentPoints(classes, scrapedClasses, missingAssignments, period) + calculateAGradeBonus(classes);
 }
 
 async function updatePointsProgress({ classes, scrapedClasses, missingAssignments, now = new Date() }) {
   const period = currentPeriod(now);
   if (!period) return { changed: false, rawTotal: 0, protectedTotal: null };
   const previous = await fs.readFile(ledgerPath, 'utf8').then(JSON.parse).catch(() => ({ schoolYear: calendar.schoolYear, periods: {} }));
-  const rawTotal = calculateRawTotal(classes, scrapedClasses, missingAssignments, period);
+  const persistentPoints = calculatePersistentPoints(classes, scrapedClasses, missingAssignments, period);
+  const aGradeBonus = calculateAGradeBonus(classes);
+  const rawTotal = persistentPoints + aGradeBonus;
   const periodKey = String(period.number);
   const previousPeriod = previous.schoolYear === calendar.schoolYear ? previous.periods?.[periodKey] : null;
-  const previousMax = numeric(previousPeriod?.maxTotalPoints) || 0;
-  const protectedTotal = Math.max(previousMax, rawTotal);
-  if (previous.schoolYear === calendar.schoolYear && previousPeriod && protectedTotal === previousMax) {
+  const previousMax = numeric(previousPeriod?.maxPersistentPoints) ?? numeric(previousPeriod?.maxTotalPoints) ?? 0;
+  const protectedPersistentPoints = Math.max(previousMax, persistentPoints);
+  const protectedTotal = protectedPersistentPoints + aGradeBonus;
+  if (previous.schoolYear === calendar.schoolYear && previousPeriod && protectedPersistentPoints === previousMax) {
     return { changed: false, rawTotal, protectedTotal };
   }
   const next = previous.schoolYear === calendar.schoolYear ? previous : { schoolYear: calendar.schoolYear, periods: {} };
-  next.periods = { ...(next.periods || {}), [periodKey]: { maxTotalPoints: protectedTotal, updatedAt: now.toISOString() } };
+  next.periods = { ...(next.periods || {}), [periodKey]: { maxPersistentPoints: protectedPersistentPoints, updatedAt: now.toISOString() } };
   await fs.writeFile(ledgerPath, JSON.stringify(next, null, 2));
   return { changed: true, rawTotal, protectedTotal };
 }
 
-module.exports = { calculateRawTotal, currentPeriod, updatePointsProgress };
+module.exports = { calculatePersistentPoints, calculateRawTotal, currentPeriod, updatePointsProgress };
