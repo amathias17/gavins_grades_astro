@@ -25,6 +25,25 @@ test.describe("positive points dashboard", () => {
     await expect(page.locator(".badge-grid .badge-card.is-current")).toContainText("Krillin");
     await expect(page.locator(".badge-grid .badge-card.is-locked")).not.toHaveCount(0);
     await expect(page.locator(".badge-grid .badge-art").first()).toContainText("GO");
+    await expect(page.locator(".collection-counts strong")).toHaveText("2 / 7 BADGES COLLECTED");
+    await expect(page.locator(".collection-counts span")).toHaveText("5 BADGES REMAINING");
+    await expect(page.getByRole("progressbar", { name: "Badge collection progress" }))
+      .toHaveAttribute("aria-valuenow", "2");
+    await expect(page.getByRole("progressbar", { name: "Badge collection progress" }))
+      .toHaveAttribute("aria-valuemin", "0");
+    await expect(page.getByRole("progressbar", { name: "Badge collection progress" }))
+      .toHaveAttribute("aria-valuemax", "7");
+  });
+
+  test("keeps the badge collection summary readable on mobile", async ({ page }) => {
+    await page.setViewportSize({ width: 428, height: 926 });
+    await page.goto("/badges");
+
+    await expect(page.locator(".collection-summary")).toBeVisible();
+    const overflow = await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth);
+    expect(overflow).toBe(false);
+    expect(await page.locator(".badge-grid .badge-card.is-locked").count()).toBe(5);
+    expect(await page.locator(".badge-grid .badge-card:not(.is-locked)").count()).toBe(2);
   });
 
   test("does not show a missing-grade alarm when incomplete work exists", async ({ page }) => {

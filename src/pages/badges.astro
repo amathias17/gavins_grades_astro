@@ -26,6 +26,9 @@ const rawPoints = calculatePoints(gradesData.classes, scrapedClasses, periodStat
 const points = applyProtectedProgress(rawPoints, pointsProgressData, schoolYear);
 const badgeStates = getBadgeStates(points.totalPoints);
 const currentBadge = badgeStates.find((badge) => badge.isCurrent) ?? badgeStates[0];
+const collectedCount = badgeStates.filter((badge) => badge.unlocked).length;
+const remainingCount = badgeStates.length - collectedCount;
+const collectionPercent = badgeStates.length === 0 ? 0 : Math.round((collectedCount / badgeStates.length) * 100);
 ---
 
 <BaseLayout>
@@ -43,6 +46,26 @@ const currentBadge = badgeStates.find((badge) => badge.isCurrent) ?? badgeStates
                 <p class="badge-room-kicker">CURRENT POWER LEVEL // LEVEL {currentBadge.level}</p>
                 <h2 id="badge-current-title">{currentBadge.characterName}</h2>
                 <p>{currentBadge.isFinal ? "FINAL BADGE UNLOCKED. THE COLLECTION IS COMPLETE." : `Next badge unlocks at ${badgeStates.find((badge) => !badge.unlocked)?.unlockPoints.toLocaleString() ?? "maximum"} points.`}</p>
+                <div class="collection-summary" aria-labelledby="collection-progress-label">
+                    <div class="collection-summary-heading">
+                        <p id="collection-progress-label" class="badge-room-kicker">BADGE COLLECTION PROGRESS</p>
+                        <span class="collection-percent">{collectionPercent}%</span>
+                    </div>
+                    <div class="collection-counts">
+                        <strong>{collectedCount} / {badgeStates.length} BADGES COLLECTED</strong>
+                        <span>{remainingCount} BADGES REMAINING</span>
+                    </div>
+                    <div
+                        class="collection-progress-track"
+                        role="progressbar"
+                        aria-label="Badge collection progress"
+                        aria-valuenow={collectedCount}
+                        aria-valuemin="0"
+                        aria-valuemax={badgeStates.length}
+                    >
+                        <span class="collection-progress-fill" style={`width: ${collectionPercent}%`}></span>
+                    </div>
+                </div>
             </div>
             <BadgeCard badge={currentBadge} />
         </section>
@@ -63,9 +86,18 @@ const currentBadge = badgeStates.find((badge) => badge.isCurrent) ?? badgeStates
     .badge-room-current { display: grid; grid-template-columns: minmax(0, 1fr) minmax(18rem, 24rem); gap: 2rem; align-items: center; margin-top: 2rem; border: 1px solid rgba(199, 170, 114, .35); border-radius: 1.1rem; padding: clamp(1rem, 4vw, 2rem); background: radial-gradient(circle at 90% 20%, rgba(199, 170, 114, .13), transparent 42%), rgba(12, 23, 18, .65); }
     .badge-room-current h2 { margin: 0; color: #e8eee9; font: 600 clamp(1.6rem, 5vw, 2.8rem)/1 "DM Sans", sans-serif; letter-spacing: .04em; }
     .badge-room-current p:last-child { margin: .8rem 0 0; color: rgba(199, 218, 204, .7); font-size: .8rem; line-height: 1.5; }
+    .collection-summary { max-width: 28rem; margin-top: 1.5rem; border-top: 1px solid rgba(174, 202, 184, .16); padding-top: 1rem; }
+    .collection-summary-heading, .collection-counts { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+    .collection-summary-heading .badge-room-kicker { margin: 0; }
+    .collection-percent { color: #c7aa72; font: 600 .7rem/1 "DM Sans", sans-serif; letter-spacing: .08em; }
+    .collection-counts { margin-top: .65rem; color: rgba(199, 218, 204, .68); font-size: .65rem; letter-spacing: .08em; text-transform: uppercase; }
+    .collection-counts strong { color: #e8eee9; font-weight: 600; }
+    .collection-progress-track { height: .45rem; margin-top: .8rem; overflow: hidden; border: 1px solid rgba(159, 190, 168, .28); border-radius: 999px; background: rgba(8, 17, 12, .72); }
+    .collection-progress-fill { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #9fbea8, #c7aa72); }
     .badge-room-current .badge-card { border: 0; padding: 0; background: transparent; box-shadow: none; }
     .badge-room-current .badge-art { width: 8rem; justify-self: end; }
     .badge-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .8rem; margin-top: 1.5rem; }
     @media (max-width: 720px) { .badge-room-header { align-items: start; flex-direction: column; gap: 1rem; } .badge-room-current { grid-template-columns: 1fr; } .badge-room-current .badge-art { width: 7rem; justify-self: start; } .badge-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 450px) { .collection-counts { align-items: start; flex-direction: column; gap: .35rem; } }
     @media (max-width: 450px) { .badge-grid { grid-template-columns: 1fr; } }
 </style>

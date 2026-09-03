@@ -17,6 +17,15 @@ test.describe("positive marking-period points", () => {
     expect(getBadgeStates(5000).at(-1)?.isFinal).toBe(true);
   });
 
+  test("derives collection counts from unlocked badge states", () => {
+    expect(getBadgeStates(0).filter((badge) => badge.unlocked)).toHaveLength(1);
+    expect(getBadgeStates(0).filter((badge) => !badge.unlocked)).toHaveLength(6);
+    expect(getBadgeStates(250).filter((badge) => badge.unlocked)).toHaveLength(3);
+    expect(getBadgeStates(2000).filter((badge) => badge.unlocked)).toHaveLength(7);
+    expect(getBadgeStates(2000).filter((badge) => !badge.unlocked)).toHaveLength(0);
+    expect(getBadgeStates(0)).toHaveLength(7);
+  });
+
   test("selects and formats the newest data source timestamp", () => {
     const latest = getLatestDataUpdate("09/03/2026, 11:48 AM", "2026-09-03T15:48:10.742Z");
     expect(latest?.toISOString()).toBe("2026-09-03T15:48:10.742Z");
