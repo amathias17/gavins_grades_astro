@@ -1,13 +1,5 @@
-# Badge headshot slots
+# Legacy badge artwork
 
-Add local headshot files with these exact names to render artwork in the badge cards:
+Badge cards now source character artwork from the build-time Dragon Ball API integration in `src/utils/dragonBallApi.ts`.
 
-- goku.png
-- krillin.png
-- piccolo.png
-- vegeta.png
-- gohan.png
-- future-trunks.png
-- gogeta.png
-
-Until a file is added, the site renders a styled character placeholder.
+The local image files are no longer required. If an API character or image is unavailable, the site renders a styled character placeholder.

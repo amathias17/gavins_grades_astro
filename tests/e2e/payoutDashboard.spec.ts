@@ -24,7 +24,7 @@ test.describe("positive points dashboard", () => {
     await expect(page.locator(".badge-grid .badge-card")).toHaveCount(7);
     await expect(page.locator(".badge-grid .badge-card.is-current")).toContainText("Krillin");
     await expect(page.locator(".badge-grid .badge-card.is-locked")).not.toHaveCount(0);
-    await expect(page.locator(".badge-grid .badge-art").first()).toContainText("GO");
+    await expect(page.locator(".badge-grid .badge-art")).toHaveCount(7);
     await expect(page.locator(".collection-counts strong")).toHaveText("2 / 7 BADGES COLLECTED");
     await expect(page.locator(".collection-counts span")).toHaveText("5 BADGES REMAINING");
     await expect(page.getByRole("progressbar", { name: "Badge collection progress" }))

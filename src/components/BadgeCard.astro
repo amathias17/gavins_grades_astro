@@ -12,7 +12,7 @@ const { badge, compact = false } = Astro.props;
 <article class:list={["badge-card", { "badge-card-compact": compact, "is-current": badge.isCurrent, "is-locked": !badge.unlocked, "is-final": badge.isFinal }]} aria-label={`${badge.characterName} badge, ${badge.unlocked ? "unlocked" : "locked"}`}>
     <div class="badge-art" data-badge-art>
         <span class="badge-placeholder" aria-hidden="true">{badge.characterName.slice(0, 2).toUpperCase()}</span>
-        <img src={badge.imagePath} alt={`${badge.characterName} headshot`} loading="lazy" />
+        {badge.imagePath && <img src={badge.imagePath} alt={`${badge.characterName} headshot`} loading="lazy" />}
         {!badge.unlocked && <span class="badge-lock" aria-hidden="true">LOCKED</span>}
     </div>
     <div class="badge-copy">

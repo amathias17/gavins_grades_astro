@@ -9,7 +9,7 @@ import { getMarkingPeriodStatus, schoolYear } from "../utils/schoolCalendar";
 import { calculatePoints, MILESTONES } from "../utils/points";
 import { applyProtectedProgress } from "../utils/pointsProgress";
 import { formatDataUpdateTime, getLatestDataUpdate } from "../utils/dataFreshness";
-import { getCurrentBadge } from "../utils/badges";
+import { getBadgeStatesWithApiArtwork } from "../utils/badges";
 import BadgeCard from "./BadgeCard.astro";
 import type { MissingPointAssignment } from "../utils/points";
 
@@ -28,7 +28,8 @@ const periodStatus = getMarkingPeriodStatus();
 const missingAssignments = (missingAssignmentsData.missing_assignments ?? []) as MissingPointAssignment[];
 const rawPoints = calculatePoints(gradesData.classes, scrapedClasses, periodStatus.period, missingAssignments);
 const points = applyProtectedProgress(rawPoints, pointsProgressData, schoolYear);
-const currentBadge = getCurrentBadge(points.totalPoints);
+const hydratedBadges = await getBadgeStatesWithApiArtwork(points.totalPoints);
+const currentBadge = hydratedBadges.find((badge) => badge.isCurrent) ?? hydratedBadges[0];
 const dataUpdatedAt = formatDataUpdateTime(getLatestDataUpdate(gradesData.metadata.last_updated, scrapedAt));
 const nextMilestone = points.nextMilestone ?? points.totalPoints;
 const previousMilestone = points.nextMilestone === null ? Math.max(0, points.totalPoints - 500) : [...MILESTONES].filter((milestone) => milestone < points.nextMilestone).pop() ?? 0;

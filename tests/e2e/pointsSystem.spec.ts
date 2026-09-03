@@ -3,17 +3,18 @@ import { calculatePoints } from "../../src/utils/points";
 import type { MarkingPeriod } from "../../src/utils/schoolCalendar";
 import { applyProtectedProgress, getProtectedTotal } from "../../src/utils/pointsProgress";
 import { formatDataUpdateTime, getLatestDataUpdate } from "../../src/utils/dataFreshness";
-import { getBadgeStates, getCurrentBadge } from "../../src/utils/badges";
+import { badges, getBadgeStates, getCurrentBadge, getBadgeStatesWithApiArtwork } from "../../src/utils/badges";
+import { fetchDragonBallCharacters } from "../../src/utils/dragonBallApi";
 
 const period: MarkingPeriod = { number: 1, start: "2026-08-26", end: "2026-10-30" };
 
 test.describe("positive marking-period points", () => {
   test("maps protected quest points to the capped badge progression", () => {
-    expect(getCurrentBadge(0).characterName).toBe("Goku");
+    expect(getCurrentBadge(0).characterName).toBe(badges[0].characterName);
     expect(getCurrentBadge(999).characterName).toBe("Vegeta");
     expect(getCurrentBadge(1000).characterName).toBe("Gohan");
     expect(getCurrentBadge(5000).characterName).toBe("Gogeta");
-    expect(getBadgeStates(250).filter((badge) => badge.unlocked).map((badge) => badge.characterName)).toEqual(["Goku", "Krillin", "Piccolo"]);
+    expect(getBadgeStates(250).filter((badge) => badge.unlocked).map((badge) => badge.characterName)).toEqual(badges.slice(0, 3).map((badge) => badge.characterName));
     expect(getBadgeStates(5000).at(-1)?.isFinal).toBe(true);
   });
 
@@ -24,6 +25,31 @@ test.describe("positive marking-period points", () => {
     expect(getBadgeStates(2000).filter((badge) => badge.unlocked)).toHaveLength(7);
     expect(getBadgeStates(2000).filter((badge) => !badge.unlocked)).toHaveLength(0);
     expect(getBadgeStates(0)).toHaveLength(7);
+  });
+
+  test("hydrates badge artwork from explicit API character IDs and tolerates an unavailable image", async () => {
+    const hydrated = await getBadgeStatesWithApiArtwork(0, async (input) => {
+      const id = Number(String(input).split("/").pop());
+      if (id === 13) return new Response(JSON.stringify({ id, name: "Yamcha", image: "https://example.com/yamcha.webp" }), { status: 200 });
+      return new Response("unavailable", { status: 503 });
+    });
+
+    expect(hydrated[0].imagePath).toBe("https://example.com/yamcha.webp");
+    expect(hydrated[1].imagePath).toBeUndefined();
+    expect(hydrated.filter((badge) => badge.unlocked)).toHaveLength(1);
+  });
+
+  test("reads paginated Dragon Ball character lists", async () => {
+    const pages = [
+      { items: [{ id: 1, name: "Goku", image: "goku.webp" }], meta: { totalPages: 2 } },
+      { items: [{ id: 2, name: "Vegeta", image: "vegeta.webp" }], meta: { totalPages: 2 } },
+    ];
+    const characters = await fetchDragonBallCharacters(async (input) => {
+      const page = Number(new URL(String(input)).searchParams.get("page"));
+      return new Response(JSON.stringify(pages[page - 1]), { status: 200 });
+    });
+
+    expect(characters.map((character) => character.name)).toEqual(["Goku", "Vegeta"]);
   });
 
   test("selects and formats the newest data source timestamp", () => {

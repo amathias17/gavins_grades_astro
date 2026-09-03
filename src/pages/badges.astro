@@ -9,7 +9,7 @@ import pointsProgressData from "../data/points_progress.json";
 import { calculatePoints } from "../utils/points";
 import { applyProtectedProgress } from "../utils/pointsProgress";
 import { getMarkingPeriodStatus, schoolYear } from "../utils/schoolCalendar";
-import { getBadgeStates } from "../utils/badges";
+import { getBadgeStatesWithApiArtwork } from "../utils/badges";
 import type { MissingPointAssignment } from "../utils/points";
 
 type ScrapedAssignment = { name: string; dueDate: string | null; earnedPoints: number; totalPoints: number; weight?: number | null; graded: boolean };
@@ -24,7 +24,7 @@ const periodStatus = getMarkingPeriodStatus();
 const missingAssignments = (missingAssignmentsData.missing_assignments ?? []) as MissingPointAssignment[];
 const rawPoints = calculatePoints(gradesData.classes, scrapedClasses, periodStatus.period, missingAssignments);
 const points = applyProtectedProgress(rawPoints, pointsProgressData, schoolYear);
-const badgeStates = getBadgeStates(points.totalPoints);
+const badgeStates = await getBadgeStatesWithApiArtwork(points.totalPoints);
 const currentBadge = badgeStates.find((badge) => badge.isCurrent) ?? badgeStates[0];
 const collectedCount = badgeStates.filter((badge) => badge.unlocked).length;
 const remainingCount = badgeStates.length - collectedCount;

@@ -1,9 +1,9 @@
 [
-  { "id": "goku", "characterName": "Goku", "unlockPoints": 0, "level": 1, "imagePath": "/badges/goku.png", "isFinal": false },
-  { "id": "krillin", "characterName": "Krillin", "unlockPoints": 100, "level": 2, "imagePath": "/badges/krillin.png", "isFinal": false },
-  { "id": "piccolo", "characterName": "Piccolo", "unlockPoints": 250, "level": 3, "imagePath": "/badges/piccolo.png", "isFinal": false },
-  { "id": "vegeta", "characterName": "Vegeta", "unlockPoints": 500, "level": 4, "imagePath": "/badges/vegeta.png", "isFinal": false },
-  { "id": "gohan", "characterName": "Gohan", "unlockPoints": 1000, "level": 5, "imagePath": "/badges/gohan.png", "isFinal": false },
-  { "id": "future-trunks", "characterName": "Future Trunks", "unlockPoints": 1500, "level": 6, "imagePath": "/badges/future-trunks.png", "isFinal": false },
-  { "id": "gogeta", "characterName": "Gogeta", "unlockPoints": 2000, "level": 7, "imagePath": "/badges/gogeta.png", "isFinal": true }
+  { "id": "yamcha", "characterName": "Yamcha", "apiCharacterId": 13, "unlockPoints": 0, "level": 1, "isFinal": false },
+  { "id": "krillin", "characterName": "Krillin", "apiCharacterId": 11, "unlockPoints": 100, "level": 2, "isFinal": false },
+  { "id": "piccolo", "characterName": "Piccolo", "apiCharacterId": 3, "unlockPoints": 250, "level": 3, "isFinal": false },
+  { "id": "vegeta", "characterName": "Vegeta", "apiCharacterId": 2, "unlockPoints": 500, "level": 4, "isFinal": false },
+  { "id": "gohan", "characterName": "Gohan", "apiCharacterId": 10, "unlockPoints": 1000, "level": 5, "isFinal": false },
+  { "id": "future-trunks", "characterName": "Future Trunks", "apiCharacterId": 16, "unlockPoints": 1500, "level": 6, "isFinal": false },
+  { "id": "gogeta", "characterName": "Gogeta", "apiCharacterId": 65, "unlockPoints": 2000, "level": 7, "isFinal": true }
 ]
