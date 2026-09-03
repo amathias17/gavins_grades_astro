@@ -58,14 +58,18 @@ const assignmentStatusClass = (status: typeof points.assignments[number]["status
             <div class="points-hero-label">TOTAL POINTS EARNED</div>
             <div class="points-value" aria-label={`${formattedPoints} points earned this marking period`}><span>{formattedPoints}</span><small>PTS</small></div>
             <p class="points-encouragement">{points.totalPoints > 0 ? "Every completed mission moves the meter." : "Your next point is ready when you are."}</p>
+            <div class="data-freshness" data-data-freshness>
+                <span class="data-freshness-label">DATA UPDATED</span>
+                <time datetime={dataUpdatedAt}>{dataUpdatedAt}</time>
+            </div>
         </div>
         <section class="level-panel" aria-labelledby="level-heading">
             <div class="panel-heading"><div><p class="panel-kicker">LEVEL {points.level + 1}</p><h2 id="level-heading">NEXT MILESTONE: {nextMilestone.toLocaleString()} PTS</h2></div><strong class="points-to-go">{points.pointsToNextMilestone.toLocaleString()} TO GO</strong></div>
             <div class="milestone-track" role="progressbar" aria-label={`Progress toward ${nextMilestone} points`} aria-valuemin="0" aria-valuemax={nextMilestone} aria-valuenow={points.totalPoints}><span style={`width: ${milestoneProgress}%`}></span></div>
             <div class="milestone-meta"><span>{previousMilestone.toLocaleString()} PTS</span><span>{milestoneProgress}% COMPLETE</span><span>{nextMilestone.toLocaleString()} PTS</span></div>
         </section>
-        <section class="current-badge-panel" aria-labelledby="current-badge-heading">
-            <div class="panel-heading"><div><p class="panel-kicker">POWER LEVEL BADGE</p><h2 id="current-badge-heading">CURRENT CHARACTER</h2></div><a class="badge-room-link" href="/badges">OPEN BADGE ROOM</a></div>
+        <section class="current-badge-panel" aria-label="Power level badge">
+            <div class="panel-heading"><div><p class="panel-kicker">POWER LEVEL BADGE</p></div><a class="badge-room-link" href="/badges">OPEN BADGE ROOM</a></div>
             <a class="current-badge-link" href="/badges" aria-label="Open Badge Room to view all badges"><BadgeCard badge={currentBadge} compact /></a>
         </section>
         <div class="point-stats" aria-label="Point breakdown">
@@ -78,7 +82,7 @@ const assignmentStatusClass = (status: typeof points.assignments[number]["status
             {opportunityPreview.length > 0 ? <ul class="opportunity-list">{opportunityPreview.map((opportunity) => <li class:list={["opportunity-item", `is-${opportunity.opportunityType}`]}><span class="opportunity-mark" aria-hidden="true">+</span><span class="opportunity-name"><strong>{opportunity.assignmentName}</strong><small>{opportunity.className}</small></span><span class="opportunity-meta"><span class="opportunity-status">{opportunity.opportunityType === "missing" ? "MISSING" : "NOT GRADED"}</span><span class="opportunity-points">{opportunity.availablePoints} PTS</span></span></li>)}</ul> : <p class="opportunity-empty">No open missions. Keep building your streak.</p>}
             {points.opportunities.length > 5 && <button class="opportunity-more" type="button" data-opportunities-open>VIEW ALL OPPORTUNITIES <span>({points.opportunities.length})</span></button>}
         </section>
-        <MarkingPeriodCard updatedAt={dataUpdatedAt} />
+        <MarkingPeriodCard />
         <div class="dashboard-actions"><button class="breakdown-button" type="button" data-breakdown-open>VIEW ASSIGNMENT BREAKDOWN</button><button class="feedback-button" type="button" data-feedback-open>HOW POINTS WORK</button></div>
     </div>
     <dialog class="breakdown-dialog feedback-dialog" id="breakdown-dialog" aria-labelledby="breakdown-heading" aria-describedby="breakdown-intro"><button class="feedback-close" type="button" data-breakdown-close>Close</button><div class="breakdown-guide"><p class="guide-kicker">CURRENT MARKING PERIOD // DETAIL VIEW</p><h2 id="breakdown-heading">ASSIGNMENT BREAKDOWN</h2><p id="breakdown-intro">Current assignment scores and statuses are factual. Protected quest progress can remain higher after a correction or newly reported open work.</p><div class="breakdown-summary"><div><span>ASSIGNMENT POINTS</span><strong>{points.assignmentPoints.toLocaleString()}</strong></div><div><span>PERIOD POSSIBLE</span><strong>{points.availablePoints.toLocaleString()}</strong></div><div><span>READY TO EARN</span><strong>{points.readyToEarnPoints.toLocaleString()}</strong></div><div><span>AWAITING GRADES</span><strong>{points.awaitingGradePoints.toLocaleString()}</strong></div><div><span>BONUSES</span><strong>+{(points.fullCreditBonuses + points.classGradeBonuses).toLocaleString()}</strong></div><div><span>TOTAL POINTS EARNED / PROTECTED QUEST TOTAL</span><strong>{points.totalPoints.toLocaleString()}</strong></div></div>{assignmentGroups.length > 0 ? <div class="breakdown-groups">{assignmentGroups.map(([className, assignments]) => <section class="breakdown-class" aria-labelledby={`breakdown-class-${className.replace(/[^a-z0-9]+/gi, "-")}`}><h3 id={`breakdown-class-${className.replace(/[^a-z0-9]+/gi, "-")}`}>{className}</h3><ul>{assignments.map((assignment) => <li><span class="breakdown-assignment"><strong>{assignment.assignmentName}</strong><small>{assignment.dueDate || "DATE NOT AVAILABLE"}</small></span><span class="breakdown-score">{assignment.earnedPoints.toLocaleString()} / {assignment.possiblePoints.toLocaleString()} PTS</span><span class:list={["breakdown-status", assignmentStatusClass(assignment.status)]}>{assignmentStatusLabel(assignment.status)}</span></li>)}</ul></section>)}</div> : <p class="breakdown-empty">NO ASSIGNMENTS ARE LOGGED FOR THIS MARKING PERIOD YET.</p>}<p class="breakdown-bonus-note">BONUS SUMMARY: +{points.fullCreditBonuses} FULL-CREDIT / +{points.classGradeBonuses} A-GRADE</p></div></dialog>
@@ -203,6 +207,9 @@ const assignmentStatusClass = (status: typeof points.assignments[number]["status
     .points-value { color: #e8eee9; text-shadow: 0 0 34px rgba(159, 190, 168, .16); }
     .points-value small { color: #c7aa72; font-family: "DM Sans", sans-serif; font-weight: 500; }
     .points-encouragement { color: rgba(199, 218, 204, .72); font-family: "DM Sans", sans-serif; }
+    .data-freshness { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: center; gap: .35rem .55rem; margin-top: .65rem; color: rgba(199, 218, 204, .56); font-size: .55rem; letter-spacing: .03em; }
+    .data-freshness-label { color: rgba(199, 218, 204, .44); font-size: .48rem; letter-spacing: .14em; }
+    .data-freshness time { color: rgba(199, 218, 204, .72); }
     .level-panel, .opportunity-panel { border-color: rgba(174, 202, 184, .16); border-radius: .9rem; background: rgba(12, 23, 18, .56); }
     .current-badge-panel { margin-top: 1rem; border: 1px solid rgba(174, 202, 184, .16); border-radius: .9rem; padding: 1rem; background: rgba(12, 23, 18, .56); }
     .current-badge-panel .badge-card { max-width: 25rem; margin-top: 1.25rem; }

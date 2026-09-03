@@ -21,7 +21,7 @@ const isLocked = !badge.unlocked;
     <div class="badge-copy">
         <span class="badge-kicker">LEVEL {badge.level} {!isLocked && badge.isFinal && "// FINAL BADGE"}</span>
         <h3>{isLocked ? "LOCKED BADGE" : badge.characterName}</h3>
-        <span class="badge-status">{badge.isCurrent ? "CURRENT BADGE" : isLocked ? `${badge.unlockPoints.toLocaleString()} PTS TO UNLOCK` : "UNLOCKED"}</span>
+        {!badge.isCurrent && <span class="badge-status">{isLocked ? `${badge.unlockPoints.toLocaleString()} PTS TO UNLOCK` : "UNLOCKED"}</span>}
         {!isLocked && <dl class="badge-stats">
             <div><dt>AFFILIATION</dt><dd>{badge.affiliation ?? "UNKNOWN"}</dd></div>
             <div><dt>BASE KI</dt><dd>{badge.baseKi ?? "UNKNOWN"}</dd></div>
