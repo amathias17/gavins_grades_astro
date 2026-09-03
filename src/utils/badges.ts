@@ -5,6 +5,7 @@ export interface BadgeDefinition {
   id: string;
   characterName: string;
   apiCharacterId: number;
+  apiTransformationId?: number;
   unlockPoints: number;
   level: number;
   imagePath?: string;
@@ -41,10 +42,13 @@ export function getCurrentBadge(protectedTotal: number): BadgeState {
 
 export async function getBadgeStatesWithApiArtwork(protectedTotal: number, fetcher?: DragonBallFetch): Promise<BadgeState[]> {
   const states = getBadgeStates(protectedTotal);
-  const artwork = await fetchBadgeCharacterArtwork(states.map((badge) => badge.apiCharacterId), fetcher);
+  const artwork = await fetchBadgeCharacterArtwork(states.map((badge) => ({
+    characterId: badge.apiCharacterId,
+    transformationId: badge.apiTransformationId,
+  })), fetcher);
 
   return states.map((badge) => ({
     ...badge,
-    imagePath: artwork.get(badge.apiCharacterId),
+    imagePath: artwork.get(badge.apiTransformationId ?? badge.apiCharacterId),
   }));
 }

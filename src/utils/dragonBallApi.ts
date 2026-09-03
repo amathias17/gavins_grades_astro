@@ -27,6 +27,11 @@ export interface DragonBallTransformation {
   ki?: string;
 }
 
+export interface BadgeArtworkRequest {
+  characterId: number;
+  transformationId?: number;
+}
+
 export type DragonBallFetch = (input: RequestInfo | URL, init?: RequestInit) => Promise<Response>;
 
 function isRecord(value: unknown): value is Record<string, unknown> {
@@ -71,14 +76,17 @@ export async function fetchDragonBallCharacters(fetcher: DragonBallFetch = fetch
 }
 
 export async function fetchBadgeCharacterArtwork(
-  characterIds: number[],
+  requests: BadgeArtworkRequest[],
   fetcher: DragonBallFetch = fetch,
 ): Promise<Map<number, string>> {
   const artwork = new Map<number, string>();
-  const results = await Promise.all(characterIds.map(async (id) => {
+  const results = await Promise.all(requests.map(async ({ characterId, transformationId }) => {
     try {
-      const character = await fetchDragonBallCharacter(id, fetcher);
-      return [id, character.image] as const;
+      const character = await fetchDragonBallCharacter(characterId, fetcher);
+      const image = transformationId === undefined
+        ? character.image
+        : character.transformations?.find((transformation) => transformation.id === transformationId)?.image;
+      return image ? [transformationId ?? characterId, image] as const : null;
     } catch {
       return null;
     }

@@ -9,7 +9,7 @@ test.describe("positive points dashboard", () => {
     await expect(page.locator(".milestone-track")).toHaveAttribute("role", "progressbar");
     await expect(page.locator(".point-stats")).toBeVisible();
     await expect(page.locator("#current-badge-heading")).toHaveText("CURRENT CHARACTER");
-    await expect(page.locator(".current-badge-panel .badge-card")).toContainText("Krillin");
+    await expect(page.locator(".current-badge-panel .badge-card")).toContainText("Piccolo");
     await expect(page.getByRole("link", { name: "BADGE ROOM" })).toHaveAttribute("href", "/badges");
     await expect(page.locator("[data-data-freshness]")).toContainText("DATA UPDATED");
     await expect(page.locator("[data-data-freshness] time")).toContainText(/2026/);
@@ -22,7 +22,7 @@ test.describe("positive points dashboard", () => {
     await page.goto("/badges");
     await expect(page.locator("#badge-room-title")).toHaveText("BADGE ROOM");
     await expect(page.locator(".badge-grid .badge-card")).toHaveCount(7);
-    await expect(page.locator(".badge-grid .badge-card.is-current")).toContainText("Krillin");
+    await expect(page.locator(".badge-grid .badge-card.is-current")).toContainText("Piccolo");
     await expect(page.locator(".badge-grid .badge-card.is-locked")).not.toHaveCount(0);
     await expect(page.locator(".badge-grid .badge-art")).toHaveCount(7);
     await expect(page.locator(".badge-grid .badge-art").first()).toHaveCSS("border-radius", "12px");

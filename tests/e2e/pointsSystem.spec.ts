@@ -12,8 +12,8 @@ test.describe("positive marking-period points", () => {
   test("maps protected quest points to the capped badge progression", () => {
     expect(getCurrentBadge(0).characterName).toBe(badges[0].characterName);
     expect(getCurrentBadge(999).characterName).toBe("Vegeta");
-    expect(getCurrentBadge(1000).characterName).toBe("Gohan");
-    expect(getCurrentBadge(5000).characterName).toBe("Gogeta");
+    expect(getCurrentBadge(1000).characterName).toBe("Goku");
+    expect(getCurrentBadge(5000).characterName).toBe("Goku Ultra Instinct");
     expect(getBadgeStates(250).filter((badge) => badge.unlocked).map((badge) => badge.characterName)).toEqual(badges.slice(0, 3).map((badge) => badge.characterName));
     expect(getBadgeStates(5000).at(-1)?.isFinal).toBe(true);
   });
@@ -28,15 +28,17 @@ test.describe("positive marking-period points", () => {
   });
 
   test("hydrates badge artwork from explicit API character IDs and tolerates an unavailable image", async () => {
-    const hydrated = await getBadgeStatesWithApiArtwork(0, async (input) => {
+    const hydrated = await getBadgeStatesWithApiArtwork(2000, async (input) => {
       const id = Number(String(input).split("/").pop());
       if (id === 13) return new Response(JSON.stringify({ id, name: "Yamcha", image: "https://example.com/yamcha.webp" }), { status: 200 });
+      if (id === 1) return new Response(JSON.stringify({ id, name: "Goku", image: "https://example.com/goku.webp", transformations: [{ id: 44, name: "Goku Ultra Instinc", image: "https://example.com/ui.webp" }] }), { status: 200 });
       return new Response("unavailable", { status: 503 });
     });
 
     expect(hydrated[0].imagePath).toBe("https://example.com/yamcha.webp");
     expect(hydrated[1].imagePath).toBeUndefined();
-    expect(hydrated.filter((badge) => badge.unlocked)).toHaveLength(1);
+    expect(hydrated.at(-1)?.imagePath).toBe("https://example.com/ui.webp");
+    expect(hydrated.filter((badge) => badge.unlocked)).toHaveLength(7);
   });
 
   test("reads paginated Dragon Ball character lists", async () => {
