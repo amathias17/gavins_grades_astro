@@ -47,6 +47,7 @@ The scraper will open a headless browser, log in to Skyward, and pull all Q3 ass
 - `scraper/detailed-grades.json` — per-class assignment data used by the site at build time
 - `scraper/detailed-grades-cache.json` — local-only fingerprint cache of already-scraped assignments (speeds up future runs; never commit this student data)
 - `src/data/points_progress.json` — tracked quest ledger storing the highest observed points total for each marking period in the current school year
+- `src/data/badges.json` — DBZ character badge roster and protected-point unlock thresholds; optional headshots belong in `public/badges/`
 
 > **Tip:** Add `$env:SKYWARD_MAX_ASSIGNMENTS=10` to cap assignments per class for a quick test run.
 

@@ -1,0 +1,51 @@
+---
+import type { BadgeState } from "../utils/badges";
+
+interface Props {
+    badge: BadgeState;
+    compact?: boolean;
+}
+
+const { badge, compact = false } = Astro.props;
+---
+
+<article class:list={["badge-card", { "badge-card-compact": compact, "is-current": badge.isCurrent, "is-locked": !badge.unlocked, "is-final": badge.isFinal }]} aria-label={`${badge.characterName} badge, ${badge.unlocked ? "unlocked" : "locked"}`}>
+    <div class="badge-art" data-badge-art>
+        <span class="badge-placeholder" aria-hidden="true">{badge.characterName.slice(0, 2).toUpperCase()}</span>
+        <img src={badge.imagePath} alt={`${badge.characterName} headshot`} loading="lazy" />
+        {!badge.unlocked && <span class="badge-lock" aria-hidden="true">LOCKED</span>}
+    </div>
+    <div class="badge-copy">
+        <span class="badge-kicker">LEVEL {badge.level} {badge.isFinal && "// FINAL BADGE"}</span>
+        <h3>{badge.characterName}</h3>
+        <span class="badge-status">{badge.isCurrent ? "CURRENT BADGE" : badge.unlocked ? "UNLOCKED" : `${badge.unlockPoints.toLocaleString()} PTS TO UNLOCK`}</span>
+    </div>
+</article>
+
+<script>
+    document.querySelectorAll<HTMLElement>("[data-badge-art]").forEach((art) => {
+        const image = art.querySelector<HTMLImageElement>("img");
+        if (!image) return;
+        const showImage = () => art.classList.add("has-image");
+        const removeImage = () => image.remove();
+        image.addEventListener("load", showImage, { once: true });
+        image.addEventListener("error", removeImage, { once: true });
+        if (image.complete && image.naturalWidth > 0) showImage();
+    });
+</script>
+
+<style>
+    .badge-card { display: grid; grid-template-columns: 5.2rem minmax(0, 1fr); gap: .8rem; align-items: center; border: 1px solid rgba(174, 202, 184, .14); border-radius: .9rem; padding: .65rem; background: rgba(24, 40, 30, .28); }
+    .badge-card.is-current { border-color: rgba(199, 170, 114, .65); background: linear-gradient(135deg, rgba(199, 170, 114, .1), rgba(159, 190, 168, .05)); box-shadow: 0 0 1.5rem rgba(199, 170, 114, .08); }
+    .badge-card.is-locked { opacity: .58; }
+    .badge-art { position: relative; display: grid; place-items: center; aspect-ratio: 1; overflow: hidden; border: 1px solid rgba(159, 190, 168, .38); border-radius: 50%; background: radial-gradient(circle at 50% 30%, rgba(199, 170, 114, .28), rgba(18, 32, 24, .96) 68%); color: #c7aa72; font: 700 .95rem/1 "Orbitron", sans-serif; }
+    .badge-art img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .2s ease; }
+    .badge-art.has-image img { opacity: 1; }
+    .badge-lock { position: absolute; right: .25rem; bottom: .2rem; border-radius: 999px; padding: .18rem .28rem; color: #101d16; background: #c7aa72; font: 700 .38rem/1 "DM Sans", sans-serif; letter-spacing: .05em; }
+    .badge-copy { min-width: 0; }
+    .badge-kicker, .badge-status { display: block; color: #c7aa72; font: 500 .5rem/1.3 "DM Sans", sans-serif; letter-spacing: .1em; text-transform: uppercase; }
+    .badge-copy h3 { margin: .3rem 0; color: #e8eee9; font: 600 1rem/1.1 "DM Sans", sans-serif; letter-spacing: .04em; }
+    .badge-status { color: rgba(199, 218, 204, .62); letter-spacing: .06em; }
+    .badge-card-compact { grid-template-columns: 4.7rem minmax(0, 1fr); }
+    @media (prefers-reduced-motion: reduce) { .badge-art img { transition: none; } }
+</style>

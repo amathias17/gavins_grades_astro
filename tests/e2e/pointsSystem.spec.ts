@@ -3,10 +3,20 @@ import { calculatePoints } from "../../src/utils/points";
 import type { MarkingPeriod } from "../../src/utils/schoolCalendar";
 import { applyProtectedProgress, getProtectedTotal } from "../../src/utils/pointsProgress";
 import { formatDataUpdateTime, getLatestDataUpdate } from "../../src/utils/dataFreshness";
+import { getBadgeStates, getCurrentBadge } from "../../src/utils/badges";
 
 const period: MarkingPeriod = { number: 1, start: "2026-08-26", end: "2026-10-30" };
 
 test.describe("positive marking-period points", () => {
+  test("maps protected quest points to the capped badge progression", () => {
+    expect(getCurrentBadge(0).characterName).toBe("Goku");
+    expect(getCurrentBadge(999).characterName).toBe("Vegeta");
+    expect(getCurrentBadge(1000).characterName).toBe("Gohan");
+    expect(getCurrentBadge(5000).characterName).toBe("Gogeta");
+    expect(getBadgeStates(250).filter((badge) => badge.unlocked).map((badge) => badge.characterName)).toEqual(["Goku", "Krillin", "Piccolo"]);
+    expect(getBadgeStates(5000).at(-1)?.isFinal).toBe(true);
+  });
+
   test("selects and formats the newest data source timestamp", () => {
     const latest = getLatestDataUpdate("09/03/2026, 11:48 AM", "2026-09-03T15:48:10.742Z");
     expect(latest?.toISOString()).toBe("2026-09-03T15:48:10.742Z");

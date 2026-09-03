@@ -1,0 +1,71 @@
+---
+import fs from "node:fs/promises";
+import path from "node:path";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BadgeCard from "../components/BadgeCard.astro";
+import gradesData from "../data/grades.json";
+import missingAssignmentsData from "../data/missing_assignments.json";
+import pointsProgressData from "../data/points_progress.json";
+import { calculatePoints } from "../utils/points";
+import { applyProtectedProgress } from "../utils/pointsProgress";
+import { getMarkingPeriodStatus, schoolYear } from "../utils/schoolCalendar";
+import { getBadgeStates } from "../utils/badges";
+import type { MissingPointAssignment } from "../utils/points";
+
+type ScrapedAssignment = { name: string; dueDate: string | null; earnedPoints: number; totalPoints: number; weight?: number | null; graded: boolean };
+type ScrapedClass = { className: string; period: string; assignments: ScrapedAssignment[] };
+let scrapedClasses: ScrapedClass[] = [];
+try {
+    const raw = await fs.readFile(path.resolve("scraper", "detailed-grades.json"), "utf8");
+    scrapedClasses = (JSON.parse(raw) as { classes?: ScrapedClass[] }).classes ?? [];
+} catch { scrapedClasses = []; }
+
+const periodStatus = getMarkingPeriodStatus();
+const missingAssignments = (missingAssignmentsData.missing_assignments ?? []) as MissingPointAssignment[];
+const rawPoints = calculatePoints(gradesData.classes, scrapedClasses, periodStatus.period, missingAssignments);
+const points = applyProtectedProgress(rawPoints, pointsProgressData, schoolYear);
+const badgeStates = getBadgeStates(points.totalPoints);
+const currentBadge = badgeStates.find((badge) => badge.isCurrent) ?? badgeStates[0];
+---
+
+<BaseLayout>
+    <section class="badge-room" aria-labelledby="badge-room-title">
+        <header class="badge-room-header">
+            <div>
+                <p class="badge-room-kicker">GAVIN'S POWER ARCHIVE // {points.totalPoints.toLocaleString()} QUEST POINTS</p>
+                <h1 id="badge-room-title">BADGE ROOM</h1>
+                <p class="badge-room-intro">Every level reveals a new fighter. Keep earning points to complete the collection.</p>
+            </div>
+            <a class="back-link" href="/">BACK TO QUEST</a>
+        </header>
+        <section class="badge-room-current" aria-labelledby="badge-current-title">
+            <div>
+                <p class="badge-room-kicker">CURRENT POWER LEVEL // LEVEL {currentBadge.level}</p>
+                <h2 id="badge-current-title">{currentBadge.characterName}</h2>
+                <p>{currentBadge.isFinal ? "FINAL BADGE UNLOCKED. THE COLLECTION IS COMPLETE." : `Next badge unlocks at ${badgeStates.find((badge) => !badge.unlocked)?.unlockPoints.toLocaleString() ?? "maximum"} points.`}</p>
+            </div>
+            <BadgeCard badge={currentBadge} />
+        </section>
+        <div class="badge-grid" aria-label="DBZ character badge collection">
+            {badgeStates.map((badge) => <BadgeCard badge={badge} />)}
+        </div>
+    </section>
+</BaseLayout>
+
+<style>
+    .badge-room { width: min(100%, 70rem); margin: 0 auto; padding: clamp(2.5rem, 7vw, 5rem) 0; color: #e8eee9; font-family: "DM Sans", sans-serif; }
+    .badge-room-header { display: flex; justify-content: space-between; align-items: end; gap: 2rem; padding-bottom: 1.8rem; border-bottom: 1px solid rgba(174, 202, 184, .18); }
+    .badge-room-kicker { margin: 0 0 .7rem; color: #c7aa72; font: 500 .55rem/1.4 "DM Sans", sans-serif; letter-spacing: .14em; text-transform: uppercase; }
+    .badge-room h1 { margin: 0; color: #e8eee9; font: 600 clamp(2rem, 7vw, 4rem)/.95 "DM Sans", sans-serif; letter-spacing: .06em; }
+    .badge-room-intro { max-width: 30rem; margin: 1rem 0 0; color: rgba(199, 218, 204, .68); font-size: .9rem; line-height: 1.5; }
+    .back-link { flex: 0 0 auto; border: 1px solid rgba(159, 190, 168, .45); border-radius: 999px; padding: .7rem .9rem; color: #9fbea8; font: 500 .58rem/1 "DM Sans", sans-serif; letter-spacing: .1em; text-decoration: none; text-transform: uppercase; }
+    .back-link:hover, .back-link:focus-visible { color: #142219; background: #9fbea8; outline: none; }
+    .badge-room-current { display: grid; grid-template-columns: minmax(0, 1fr) minmax(18rem, 24rem); gap: 2rem; align-items: center; margin-top: 2rem; border: 1px solid rgba(199, 170, 114, .35); border-radius: 1.1rem; padding: clamp(1rem, 4vw, 2rem); background: radial-gradient(circle at 90% 20%, rgba(199, 170, 114, .13), transparent 42%), rgba(12, 23, 18, .65); }
+    .badge-room-current h2 { margin: 0; color: #e8eee9; font: 600 clamp(1.6rem, 5vw, 2.8rem)/1 "DM Sans", sans-serif; letter-spacing: .04em; }
+    .badge-room-current p:last-child { margin: .8rem 0 0; color: rgba(199, 218, 204, .7); font-size: .8rem; line-height: 1.5; }
+    .badge-room-current .badge-card { border: 0; padding: 0; background: transparent; box-shadow: none; }
+    .badge-room-current .badge-art { width: 8rem; justify-self: end; }
+    .badge-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .8rem; margin-top: 1.5rem; }
+    @media (max-width: 720px) { .badge-room-header { align-items: start; flex-direction: column; gap: 1rem; } .badge-room-current { grid-template-columns: 1fr; } .badge-room-current .badge-art { width: 7rem; justify-self: start; } .badge-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 450px) { .badge-grid { grid-template-columns: 1fr; } }
+</style>

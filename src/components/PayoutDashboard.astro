@@ -9,6 +9,8 @@ import { getMarkingPeriodStatus, schoolYear } from "../utils/schoolCalendar";
 import { calculatePoints, MILESTONES } from "../utils/points";
 import { applyProtectedProgress } from "../utils/pointsProgress";
 import { formatDataUpdateTime, getLatestDataUpdate } from "../utils/dataFreshness";
+import { getCurrentBadge } from "../utils/badges";
+import BadgeCard from "./BadgeCard.astro";
 import type { MissingPointAssignment } from "../utils/points";
 
 type ScrapedAssignment = { name: string; dueDate: string | null; earnedPoints: number; totalPoints: number; weight?: number | null; graded: boolean };
@@ -26,6 +28,7 @@ const periodStatus = getMarkingPeriodStatus();
 const missingAssignments = (missingAssignmentsData.missing_assignments ?? []) as MissingPointAssignment[];
 const rawPoints = calculatePoints(gradesData.classes, scrapedClasses, periodStatus.period, missingAssignments);
 const points = applyProtectedProgress(rawPoints, pointsProgressData, schoolYear);
+const currentBadge = getCurrentBadge(points.totalPoints);
 const dataUpdatedAt = formatDataUpdateTime(getLatestDataUpdate(gradesData.metadata.last_updated, scrapedAt));
 const nextMilestone = points.nextMilestone ?? points.totalPoints;
 const previousMilestone = points.nextMilestone === null ? Math.max(0, points.totalPoints - 500) : [...MILESTONES].filter((milestone) => milestone < points.nextMilestone).pop() ?? 0;
@@ -59,6 +62,10 @@ const assignmentStatusClass = (status: typeof points.assignments[number]["status
             <div class="panel-heading"><div><p class="panel-kicker">LEVEL {points.level + 1}</p><h2 id="level-heading">NEXT MILESTONE: {nextMilestone.toLocaleString()} PTS</h2></div><strong class="points-to-go">{points.pointsToNextMilestone.toLocaleString()} TO GO</strong></div>
             <div class="milestone-track" role="progressbar" aria-label={`Progress toward ${nextMilestone} points`} aria-valuemin="0" aria-valuemax={nextMilestone} aria-valuenow={points.totalPoints}><span style={`width: ${milestoneProgress}%`}></span></div>
             <div class="milestone-meta"><span>{previousMilestone.toLocaleString()} PTS</span><span>{milestoneProgress}% COMPLETE</span><span>{nextMilestone.toLocaleString()} PTS</span></div>
+        </section>
+        <section class="current-badge-panel" aria-labelledby="current-badge-heading">
+            <div class="panel-heading"><div><p class="panel-kicker">POWER LEVEL BADGE</p><h2 id="current-badge-heading">CURRENT CHARACTER</h2></div><a class="badge-room-link" href="/badges">BADGE ROOM</a></div>
+            <BadgeCard badge={currentBadge} compact />
         </section>
         <div class="point-stats" aria-label="Point breakdown">
             <div class="stat-card"><span>ASSIGNMENT POINTS</span><strong>{points.assignmentPoints.toLocaleString()}</strong></div>
@@ -196,6 +203,10 @@ const assignmentStatusClass = (status: typeof points.assignments[number]["status
     .points-value small { color: #c7aa72; font-family: "DM Sans", sans-serif; font-weight: 500; }
     .points-encouragement { color: rgba(199, 218, 204, .72); font-family: "DM Sans", sans-serif; }
     .level-panel, .opportunity-panel { border-color: rgba(174, 202, 184, .16); border-radius: .9rem; background: rgba(12, 23, 18, .56); }
+    .current-badge-panel { margin-top: 1rem; border: 1px solid rgba(174, 202, 184, .16); border-radius: .9rem; padding: 1rem; background: rgba(12, 23, 18, .56); }
+    .current-badge-panel .badge-card { max-width: 25rem; margin-top: .8rem; }
+    .badge-room-link { color: #c7aa72; font: 500 .58rem/1 "DM Sans", sans-serif; letter-spacing: .1em; text-decoration: none; text-transform: uppercase; }
+    .badge-room-link:hover, .badge-room-link:focus-visible { color: #e8eee9; text-decoration: underline; }
     .panel-kicker { color: #c7aa72; }
     .panel-heading h2 { color: #e8eee9; font-family: "DM Sans", sans-serif; font-weight: 600; letter-spacing: .06em; }
     .points-to-go, .opportunity-total { color: #c7aa72; font-family: "DM Sans", sans-serif; font-weight: 500; }
