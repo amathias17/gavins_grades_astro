@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-09-03T04:08:45.805Z",
+    "scrapedAt": "2026-09-03T14:46:20.030Z",
     "totalClasses": 13,
-    "totalAssignments": 15
+    "totalAssignments": 21
   },
   "classes": [
     {
@@ -46,6 +46,62 @@
       ]
     },
     {
+      "className": "CHEMISTRY          2",
+      "teacher": "Paula Irwin",
+      "period": "3",
+      "currentGrade": 100,
+      "assignments": [
+        {
+          "name": "Lab Safety Rules Packet",
+          "dueDate": "09/03/2026",
+          "earnedPoints": 0,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "1WS#1-SafetySymbols&Procedures",
+          "dueDate": "09/03/2026",
+          "earnedPoints": 0,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Signed Syllabus",
+          "dueDate": "09/03/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Signed Behavioral Contract",
+          "dueDate": "09/02/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Signed Lab Safety Contract",
+          "dueDate": "09/02/2026",
+          "earnedPoints": 0,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Safety in the Lab Practice",
+          "dueDate": "09/02/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        }
+      ]
+    },
+    {
       "className": "INTRMEDIATE ALG II",
       "teacher": "Jodi Lambertus",
       "period": "4",
@@ -53,9 +109,9 @@
       "assignments": [
         {
           "name": "HW #1 Simp. Rad. & Class. Num.",
-          "dueDate": "08/31/2026",
+          "dueDate": "09/02/2026",
           "earnedPoints": 0,
-          "totalPoints": 20,
+          "totalPoints": 10,
           "weight": 1,
           "graded": false
         },
@@ -142,10 +198,10 @@
         {
           "name": "Ch 1 5 Themes of Geography",
           "dueDate": "09/03/2026",
-          "earnedPoints": 0,
-          "totalPoints": 10,
+          "earnedPoints": 50,
+          "totalPoints": 50,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "ch 1 5 areas of social studies",
