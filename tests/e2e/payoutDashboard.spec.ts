@@ -25,6 +25,12 @@ test.describe("positive points dashboard", () => {
     await expect(page.locator(".badge-grid .badge-card.is-current")).toContainText("Krillin");
     await expect(page.locator(".badge-grid .badge-card.is-locked")).not.toHaveCount(0);
     await expect(page.locator(".badge-grid .badge-art")).toHaveCount(7);
+    await expect(page.locator(".badge-grid .badge-art").first()).toHaveCSS("border-radius", "12px");
+    const portraitRatio = await page.locator(".badge-grid .badge-art").first().evaluate((element) => {
+      const { width, height } = element.getBoundingClientRect();
+      return width / height;
+    });
+    expect(portraitRatio).toBeCloseTo(0.8, 1);
     await expect(page.locator(".collection-counts strong")).toHaveText("2 / 7 BADGES COLLECTED");
     await expect(page.locator(".collection-counts span")).toHaveText("5 BADGES REMAINING");
     await expect(page.getByRole("progressbar", { name: "Badge collection progress" }))
