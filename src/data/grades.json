@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "09/03/2026, 10:46 AM",
+    "last_updated": "09/03/2026, 11:48 AM",
     "most_recent_date": "9/3/2026",
     "total_classes": 13
   },
@@ -92,8 +92,8 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 100,
-      "letter_grade": "A"
+      "current_grade": 40,
+      "letter_grade": "F"
     },
     {
       "class_name": "Intrmediate Alg Ii",
@@ -1976,7 +1976,7 @@
       "8/31/2026": 0,
       "9/1/2026": 0,
       "9/2/2026": 0,
-      "9/3/2026": 100
+      "9/3/2026": 40
     },
     "Intrmediate Alg Ii": {
       "8/25/2026": null,
@@ -2063,7 +2063,7 @@
       "9/3/2026": 100
     }
   },
-  "overall_average": 92,
+  "overall_average": 80,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -2346,7 +2346,7 @@
     "8/31/2026": 87,
     "9/1/2026": 87,
     "9/2/2026": 90,
-    "9/3/2026": 92
+    "9/3/2026": 80
   },
   "streak": 0,
   "streak_history": {

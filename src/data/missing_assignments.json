@@ -1,9 +1,25 @@
 {
   "metadata": {
-    "last_updated": "09/03/2026, 10:46 AM",
-    "count": 1
+    "last_updated": "09/03/2026, 11:48 AM",
+    "count": 3
   },
   "missing_assignments": [
+    {
+      "due_date": "09/02/2026",
+      "assignment_name": "Signed Lab Safety Contract",
+      "class_name": "CHEMISTRY          2",
+      "teacher": "Paula Irwin",
+      "category": "SCIENCE",
+      "max_points": "5"
+    },
+    {
+      "due_date": "09/02/2026",
+      "assignment_name": "Safety in the Lab Practice",
+      "class_name": "CHEMISTRY          2",
+      "teacher": "Paula Irwin",
+      "category": "Class Work",
+      "max_points": "10"
+    },
     {
       "due_date": "08/31/2026",
       "assignment_name": "Signed Syllabus",
