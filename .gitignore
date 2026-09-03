@@ -28,3 +28,4 @@ scraper/detailed-grades-cache.json
 .custom-mem
 .claude
 .serena
+/public/badges
