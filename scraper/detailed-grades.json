@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-09-02T15:58:27.457Z",
+    "scrapedAt": "2026-09-03T04:08:45.805Z",
     "totalClasses": 13,
     "totalAssignments": 15
   },
@@ -22,26 +22,26 @@
         {
           "name": "Student Survey",
           "dueDate": "08/31/2026",
-          "earnedPoints": 9,
-          "totalPoints": 10,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Signed Syllabus",
-          "dueDate": "08/31/2026",
           "earnedPoints": 0,
           "totalPoints": 5,
           "weight": 1,
           "graded": true
         },
         {
-          "name": "Create your own Lab coat",
+          "name": "Signed Syllabus",
           "dueDate": "08/31/2026",
           "earnedPoints": 9,
           "totalPoints": 10,
           "weight": 1,
           "graded": true
+        },
+        {
+          "name": "Create your own Lab coat",
+          "dueDate": "08/31/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": false
         }
       ]
     },
@@ -53,9 +53,9 @@
       "assignments": [
         {
           "name": "HW #1 Simp. Rad. & Class. Num.",
-          "dueDate": "09/03/2026",
+          "dueDate": "08/31/2026",
           "earnedPoints": 0,
-          "totalPoints": 10,
+          "totalPoints": 20,
           "weight": 1,
           "graded": false
         },
@@ -77,17 +77,17 @@
       "assignments": [
         {
           "name": "Virtual Simulator mini-lab",
-          "dueDate": "08/31/2026",
-          "earnedPoints": 0,
-          "totalPoints": 10,
+          "dueDate": "09/01/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Syllabus/Grading Policy Signed",
-          "dueDate": "08/31/2026",
-          "earnedPoints": 11,
-          "totalPoints": 10,
+          "dueDate": "09/01/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         }
@@ -102,34 +102,34 @@
         {
           "name": "Powers of 10 Quiz",
           "dueDate": "09/01/2026",
-          "earnedPoints": 5,
-          "totalPoints": 5,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Signed Course Syllabus",
-          "dueDate": "08/28/2026",
           "earnedPoints": 11,
           "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
         {
+          "name": "Signed Course Syllabus",
+          "dueDate": "08/28/2026",
+          "earnedPoints": 20,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
+        {
           "name": "\"Supervolcanoes\" Sky Show",
-          "dueDate": "09/01/2026",
-          "earnedPoints": 5,
-          "totalPoints": 5,
+          "dueDate": "08/28/2026",
+          "earnedPoints": 20,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         },
         {
           "name": "CLASS PARTICIPATION",
           "dueDate": "08/26/2026",
-          "earnedPoints": 50,
-          "totalPoints": 50,
+          "earnedPoints": 0,
+          "totalPoints": 0,
           "weight": 1,
-          "graded": true
+          "graded": false
         }
       ]
     },
@@ -165,11 +165,11 @@
       "assignments": [
         {
           "name": "Survey and Character",
-          "dueDate": "08/28/2026",
-          "earnedPoints": 31,
-          "totalPoints": 33,
+          "dueDate": "09/02/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": true
+          "graded": false
         }
       ]
     }
