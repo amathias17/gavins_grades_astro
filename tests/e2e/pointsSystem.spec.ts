@@ -2,10 +2,21 @@ import { expect, test } from "@playwright/test";
 import { calculatePoints } from "../../src/utils/points";
 import type { MarkingPeriod } from "../../src/utils/schoolCalendar";
 import { applyProtectedProgress, getProtectedTotal } from "../../src/utils/pointsProgress";
+import { formatDataUpdateTime, getLatestDataUpdate } from "../../src/utils/dataFreshness";
 
 const period: MarkingPeriod = { number: 1, start: "2026-08-26", end: "2026-10-30" };
 
 test.describe("positive marking-period points", () => {
+  test("selects and formats the newest data source timestamp", () => {
+    const latest = getLatestDataUpdate("09/03/2026, 11:48 AM", "2026-09-03T15:48:10.742Z");
+    expect(latest?.toISOString()).toBe("2026-09-03T15:48:10.742Z");
+    expect(formatDataUpdateTime(latest)).toContain("Sep 3, 2026");
+    expect(formatDataUpdateTime(latest)).toMatch(/11:48\s*AM/);
+    expect(formatDataUpdateTime(getLatestDataUpdate("not a date", null))).toBe("DATA UPDATE TIME UNAVAILABLE");
+    const gradeOnly = getLatestDataUpdate("09/03/2026, 12:48 PM", "2026-09-03T16:00:00.000Z");
+    expect(gradeOnly?.toISOString()).toBe("2026-09-03T16:48:00.000Z");
+  });
+
   test("protects quest progress while keeping the current snapshot factual", () => {
     const raw = calculatePoints([], [], period);
     const ledger = { schoolYear: "2026-2027", periods: { "1": { maxTotalPoints: 169, updatedAt: "2026-09-02T00:00:00.000Z" } } };

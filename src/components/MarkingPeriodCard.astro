@@ -1,9 +1,14 @@
 ---
 import { getMarkingPeriodStatus, getSchoolDayReminder } from "../utils/schoolCalendar";
 
+interface Props {
+    updatedAt?: string | null;
+}
+
 const initialStatus = getMarkingPeriodStatus();
 const initialReminder = getSchoolDayReminder();
 const initialPeriodLabel = initialStatus.period ? `MARKING PERIOD ${initialStatus.period.number}` : initialStatus.label;
+const { updatedAt = null } = Astro.props;
 ---
 
 <aside
@@ -19,6 +24,10 @@ const initialPeriodLabel = initialStatus.period ? `MARKING PERIOD ${initialStatu
     <span class="marking-period-detail" data-marking-period-detail>{initialStatus.detail}</span>
     <div class="marking-period-track" aria-hidden="true">
         <span class="marking-period-progress" data-marking-period-progress style={`width: ${initialStatus.progressPercent}%`}></span>
+    </div>
+    <div class="data-freshness" data-data-freshness>
+        <span class="data-freshness-label">DATA UPDATED</span>
+        <time datetime={updatedAt ?? undefined}>{updatedAt ?? "DATA UPDATE TIME UNAVAILABLE"}</time>
     </div>
     <div class:list={["school-reminder", `school-reminder-${initialReminder.tone}`]} data-school-reminder hidden={initialReminder.isCheckpoint}>
         <span class="school-reminder-tag">REMINDER</span>
@@ -99,6 +108,9 @@ const initialPeriodLabel = initialStatus.period ? `MARKING PERIOD ${initialStatu
     .marking-period-detail { display: block; margin-top: .5rem; color: rgba(223, 255, 233, .68); font-size: .68rem; letter-spacing: .03em; }
     .marking-period-track { height: .28rem; margin-top: .95rem; overflow: hidden; border: 1px solid rgba(97, 212, 154, .25); background: rgba(0, 0, 0, .34); }
     .marking-period-progress { display: block; height: 100%; min-width: 0; background: repeating-linear-gradient(135deg, #61d49a 0 7px, #b6ffd0 7px 9px); box-shadow: 0 0 12px rgba(97, 212, 154, .7); transition: width .45s ease; }
+    .data-freshness { display: flex; flex-wrap: wrap; align-items: baseline; gap: .35rem .55rem; margin-top: .75rem; color: rgba(223, 255, 233, .56); font-size: .55rem; letter-spacing: .03em; }
+    .data-freshness-label { color: rgba(223, 255, 233, .4); font-size: .48rem; letter-spacing: .14em; }
+    .data-freshness time { color: rgba(223, 255, 233, .72); }
     .school-reminder { display: grid; grid-template-columns: auto 1fr; gap: .25rem .55rem; margin-top: 1rem; padding: .7rem .7rem .75rem; border-left: 2px solid #61d49a; background: rgba(0, 0, 0, .23); }
     .school-reminder-tag { grid-column: 1 / -1; color: rgba(223, 255, 233, .5); font-size: .48rem; letter-spacing: .16em; }
     .school-reminder strong { color: #dfffe9; font-size: .62rem; letter-spacing: .05em; line-height: 1.35; }

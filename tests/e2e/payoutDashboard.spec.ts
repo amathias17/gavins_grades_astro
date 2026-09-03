@@ -8,6 +8,8 @@ test.describe("positive points dashboard", () => {
     await expect(page.locator(".points-value")).toHaveText(/PTS/);
     await expect(page.locator(".milestone-track")).toHaveAttribute("role", "progressbar");
     await expect(page.locator(".point-stats")).toBeVisible();
+    await expect(page.locator("[data-data-freshness]")).toContainText("DATA UPDATED");
+    await expect(page.locator("[data-data-freshness] time")).toContainText(/2026/);
     await expect(page.locator("#opportunity-heading")).toHaveText("POINTS READY TO EARN");
     await expect(page.locator(".points-screen")).not.toContainText("$");
     await expect(page.locator(".points-screen")).not.toContainText("CAN BUY");
