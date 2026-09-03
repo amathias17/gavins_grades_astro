@@ -9,6 +9,7 @@
 const { chromium } = require('playwright');
 const fs = require('fs').promises;
 const path = require('path');
+const { updatePointsProgress } = require('./points-progress.cjs');
 
 const CACHE_FILENAME = 'detailed-grades-cache.json';
 
@@ -1202,6 +1203,13 @@ async function main() {
       : null;
     const outputChanged = await saveJsonIfChanged(outputPath, outputData, previousComparableOutput && JSON.stringify(previousComparableOutput) === JSON.stringify(comparableOutput) ? previousOutput : comparableOutput);
     console.log(`\n${outputChanged ? '✓ Data saved' : '· Data unchanged'}: ${outputPath}`);
+
+    const progress = await updatePointsProgress({
+      classes: gradeClasses,
+      scrapedClasses: dataByClass,
+      missingAssignments,
+    });
+    console.log(`${progress.changed ? '✓ Quest progress updated' : '· Quest progress unchanged'}: raw ${progress.rawTotal}, protected ${progress.protectedTotal}`);
 
     // Also save raw assignments for debugging
     const rawOutputPath = path.join(__dirname, 'detailed-grades-raw.json');

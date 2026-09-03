@@ -1,10 +1,22 @@
 import { expect, test } from "@playwright/test";
 import { calculatePoints } from "../../src/utils/points";
 import type { MarkingPeriod } from "../../src/utils/schoolCalendar";
+import { applyProtectedProgress, getProtectedTotal } from "../../src/utils/pointsProgress";
 
 const period: MarkingPeriod = { number: 1, start: "2026-08-26", end: "2026-10-30" };
 
 test.describe("positive marking-period points", () => {
+  test("protects quest progress while keeping the current snapshot factual", () => {
+    const raw = calculatePoints([], [], period);
+    const ledger = { schoolYear: "2026-2027", periods: { "1": { maxTotalPoints: 169, updatedAt: "2026-09-02T00:00:00.000Z" } } };
+    expect(getProtectedTotal(20, ledger, "2026-2027", 1)).toBe(169);
+    expect(getProtectedTotal(200, ledger, "2026-2027", 1)).toBe(200);
+    expect(getProtectedTotal(20, ledger, "2026-2027", 2)).toBe(20);
+    expect(getProtectedTotal(200, ledger, "2025-2026", 1)).toBe(200);
+    expect(applyProtectedProgress(raw, ledger, "2026-2027").totalPoints).toBe(169);
+    expect(applyProtectedProgress(raw, ledger, "2026-2027").assignmentPoints).toBe(0);
+  });
+
   test("awards actual points, full-credit bonuses, and A-grade bonuses", () => {
     const result = calculatePoints(
       [{ class_name: "English", period: "1", current_grade: 95 }],

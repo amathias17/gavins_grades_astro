@@ -18,6 +18,7 @@
 - CurrentGrades missing quests card shows a dynamic Missing.Quests count sourced from missing_assignments.json.
 - Homepage is a positive, mobile-first points quest: it shows current marking-period points, level progress, milestone distance, point bonuses, and incomplete assignments as opportunities.
 - Homepage points are derived from scraper assignments and grades by src/utils/points.ts; missing work never triggers a red alarm or subtracts points. Calculator, class-grade rules, and scraper behavior remain unchanged.
+- Protected quest progress is stored in src/data/points_progress.json by successful enhanced scraper runs. Within a school year and marking period, the displayed quest total is monotonic (the highest observed raw total); the ledger resets for a new period or school year. Current assignment breakdown rows remain factual even when protected progress is higher.
 - Points reconciliation treats src/data/missing_assignments.json as authoritative: matching records override scraper status to OPEN with 0 earned points, and valid current-period feed-only records appear as opportunities.
 - Points opportunities distinguish confirmed MISSING work from NOT GRADED work; the dashboard previews five sorted opportunities and provides an accessible full-list dialog when more exist.
 - Points dashboard totals distinguish confirmed missing points as READY TO EARN from ungraded points as AWAITING GRADES; availablePoints remains the full-period denominator for completion calculations.

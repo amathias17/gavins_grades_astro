@@ -46,6 +46,7 @@ $env:SKYWARD_USERNAME="your_username"; $env:SKYWARD_PASSWORD="your_password"; no
 The scraper will open a headless browser, log in to Skyward, and pull all Q3 assignments. It writes two files:
 - `scraper/detailed-grades.json` — per-class assignment data used by the site at build time
 - `scraper/detailed-grades-cache.json` — local-only fingerprint cache of already-scraped assignments (speeds up future runs; never commit this student data)
+- `src/data/points_progress.json` — tracked quest ledger storing the highest observed points total for each marking period in the current school year
 
 > **Tip:** Add `$env:SKYWARD_MAX_ASSIGNMENTS=10` to cap assignments per class for a quick test run.
 

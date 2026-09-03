@@ -39,6 +39,7 @@ export interface SchoolDayReminder {
 }
 
 export const markingPeriods: MarkingPeriod[] = calendarData.markingPeriods;
+export const schoolYear: string = calendarData.schoolYear;
 export const specialDays: SpecialDay[] = calendarData.specialDays;
 export const testingWindows: TestingWindow[] = calendarData.testingWindows;
 
