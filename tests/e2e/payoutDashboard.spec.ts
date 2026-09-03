@@ -10,12 +10,24 @@ test.describe("positive points dashboard", () => {
     await expect(page.locator(".point-stats")).toBeVisible();
     await expect(page.locator("#current-badge-heading")).toHaveText("CURRENT CHARACTER");
     await expect(page.locator(".current-badge-panel .badge-card")).toContainText("Piccolo");
-    await expect(page.getByRole("link", { name: "BADGE ROOM" })).toHaveAttribute("href", "/badges");
+    await expect(page.getByRole("link", { name: "OPEN BADGE ROOM", exact: true })).toHaveAttribute("href", "/badges");
+    const currentBadgeLink = page.locator(".current-badge-link");
+    await expect(currentBadgeLink).toHaveAttribute("href", "/badges");
+    await currentBadgeLink.focus();
+    await expect(currentBadgeLink).toHaveCSS("outline-style", "solid");
     await expect(page.locator("[data-data-freshness]")).toContainText("DATA UPDATED");
     await expect(page.locator("[data-data-freshness] time")).toContainText(/2026/);
     await expect(page.locator("#opportunity-heading")).toHaveText("POINTS READY TO EARN");
     await expect(page.locator(".points-screen")).not.toContainText("$");
     await expect(page.locator(".points-screen")).not.toContainText("CAN BUY");
+  });
+
+  test("opens Badge Room when the current badge card is activated", async ({ page }) => {
+    await page.goto("/");
+    const currentBadgeLink = page.locator(".current-badge-link");
+    await currentBadgeLink.focus();
+    await currentBadgeLink.press("Enter");
+    await expect(page).toHaveURL(/\/badges\/?$/);
   });
 
   test("renders the full badge room with locked states", async ({ page }) => {
@@ -31,6 +43,16 @@ test.describe("positive points dashboard", () => {
       return width / height;
     });
     expect(portraitRatio).toBeCloseTo(0.8, 1);
+    const lockedCards = page.locator(".badge-grid .badge-card.is-locked");
+    expect(await lockedCards.evaluateAll((cards) => cards.every((card) => !card.textContent?.includes("Vegeta")))).toBe(true);
+    await expect(lockedCards.locator("img")).toHaveCount(0);
+    await expect(lockedCards.locator(".badge-placeholder")).toHaveCount(0);
+    await expect(lockedCards.locator(".badge-mystery-silhouette")).toHaveCount(5);
+    const lockedText = (await lockedCards.allTextContents()).join(" ");
+    expect(lockedText).toContain("LOCKED");
+    expect(lockedText).toContain("500 PTS TO UNLOCK");
+    await expect(page.locator(".badge-grid .badge-card:not(.is-locked)").first()).toContainText("Yamcha");
+    await expect(page.locator(".badge-grid .badge-card:not(.is-locked) img").first()).toBeAttached();
     await expect(page.locator(".collection-counts strong")).toHaveText("2 / 7 BADGES COLLECTED");
     await expect(page.locator(".collection-counts span")).toHaveText("5 BADGES REMAINING");
     await expect(page.getByRole("progressbar", { name: "Badge collection progress" }))

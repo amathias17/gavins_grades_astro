@@ -7,18 +7,21 @@ interface Props {
 }
 
 const { badge, compact = false } = Astro.props;
+const isLocked = !badge.unlocked;
 ---
 
-<article class:list={["badge-card", { "badge-card-compact": compact, "is-current": badge.isCurrent, "is-locked": !badge.unlocked, "is-final": badge.isFinal }]} aria-label={`${badge.characterName} badge, ${badge.unlocked ? "unlocked" : "locked"}`}>
+<article class:list={["badge-card", { "badge-card-compact": compact, "is-current": badge.isCurrent, "is-locked": isLocked, "is-final": badge.isFinal }]} aria-label={isLocked ? `Level ${badge.level} badge, locked, ${badge.unlockPoints.toLocaleString()} points to unlock` : `${badge.characterName} badge, unlocked`}>
     <div class="badge-art" data-badge-art>
-        <span class="badge-placeholder" aria-hidden="true">{badge.characterName.slice(0, 2).toUpperCase()}</span>
-        {badge.imagePath && <img src={badge.imagePath} alt={`${badge.characterName} headshot`} loading="lazy" />}
-        {!badge.unlocked && <span class="badge-lock" aria-hidden="true">LOCKED</span>}
+        {isLocked ? <span class="badge-mystery-silhouette" aria-hidden="true"><span class="silhouette-head"></span><span class="silhouette-body"></span></span> : <>
+            <span class="badge-placeholder" aria-hidden="true">{badge.characterName.slice(0, 2).toUpperCase()}</span>
+            {badge.imagePath && <img src={badge.imagePath} alt={`${badge.characterName} headshot`} loading="lazy" />}
+        </>}
+        {isLocked && <span class="badge-lock" aria-hidden="true">LOCKED</span>}
     </div>
     <div class="badge-copy">
-        <span class="badge-kicker">LEVEL {badge.level} {badge.isFinal && "// FINAL BADGE"}</span>
-        <h3>{badge.characterName}</h3>
-        <span class="badge-status">{badge.isCurrent ? "CURRENT BADGE" : badge.unlocked ? "UNLOCKED" : `${badge.unlockPoints.toLocaleString()} PTS TO UNLOCK`}</span>
+        <span class="badge-kicker">LEVEL {badge.level} {!isLocked && badge.isFinal && "// FINAL BADGE"}</span>
+        <h3>{isLocked ? "LOCKED BADGE" : badge.characterName}</h3>
+        <span class="badge-status">{badge.isCurrent ? "CURRENT BADGE" : isLocked ? `${badge.unlockPoints.toLocaleString()} PTS TO UNLOCK` : "UNLOCKED"}</span>
     </div>
 </article>
 
@@ -41,6 +44,9 @@ const { badge, compact = false } = Astro.props;
     .badge-art { position: relative; display: grid; place-items: center; aspect-ratio: 4 / 5; overflow: hidden; border: 1px solid rgba(159, 190, 168, .38); border-radius: .75rem; background: radial-gradient(ellipse at 50% 30%, rgba(199, 170, 114, .28), rgba(18, 32, 24, .96) 68%); color: #c7aa72; font: 700 .95rem/1 "Orbitron", sans-serif; }
     .badge-art img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 8%; transform: scale(1.42); transform-origin: center top; opacity: 0; transition: opacity .2s ease; }
     .badge-art.has-image img { opacity: 1; }
+    .badge-mystery-silhouette { position: relative; display: block; width: 70%; height: 78%; overflow: hidden; border-radius: 50% 50% 34% 34%; background: linear-gradient(180deg, #101914, #070c09); box-shadow: 0 0 1.2rem rgba(0, 0, 0, .5); }
+    .silhouette-head { position: absolute; top: 11%; left: 25%; width: 50%; aspect-ratio: 1; border-radius: 50%; background: #070c09; }
+    .silhouette-body { position: absolute; right: 8%; bottom: -25%; left: 8%; height: 68%; border-radius: 50% 50% 20% 20%; background: #070c09; }
     .badge-lock { position: absolute; right: .25rem; bottom: .2rem; border-radius: 999px; padding: .18rem .28rem; color: #101d16; background: #c7aa72; font: 700 .38rem/1 "DM Sans", sans-serif; letter-spacing: .05em; }
     .badge-copy { min-width: 0; }
     .badge-kicker, .badge-status { display: block; color: #c7aa72; font: 500 .5rem/1.3 "DM Sans", sans-serif; letter-spacing: .1em; text-transform: uppercase; }
