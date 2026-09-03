@@ -30,12 +30,15 @@ test.describe("positive marking-period points", () => {
   test("hydrates badge artwork from explicit API character IDs and tolerates an unavailable image", async () => {
     const hydrated = await getBadgeStatesWithApiArtwork(2000, async (input) => {
       const id = Number(String(input).split("/").pop());
-      if (id === 13) return new Response(JSON.stringify({ id, name: "Yamcha", image: "https://example.com/yamcha.webp" }), { status: 200 });
-      if (id === 1) return new Response(JSON.stringify({ id, name: "Goku", image: "https://example.com/goku.webp", transformations: [{ id: 44, name: "Goku Ultra Instinc", image: "https://example.com/ui.webp" }] }), { status: 200 });
+      if (id === 13) return new Response(JSON.stringify({ id, name: "Yamcha", image: "https://example.com/yamcha.webp", affiliation: "Z Fighter", ki: "1,500", maxKi: "15,000" }), { status: 200 });
+      if (id === 1) return new Response(JSON.stringify({ id, name: "Goku", image: "https://example.com/goku.webp", affiliation: "Z Fighter", ki: "60,000,000", maxKi: "90,000,000", transformations: [{ id: 44, name: "Goku Ultra Instinc", image: "https://example.com/ui.webp" }] }), { status: 200 });
       return new Response("unavailable", { status: 503 });
     });
 
     expect(hydrated[0].imagePath).toBe("https://example.com/yamcha.webp");
+    expect(hydrated[0].affiliation).toBe("Z Fighter");
+    expect(hydrated[0].baseKi).toBe("1,500");
+    expect(hydrated[0].totalKi).toBe("15,000");
     expect(hydrated[1].imagePath).toBeUndefined();
     expect(hydrated.at(-1)?.imagePath).toBe("https://example.com/ui.webp");
     expect(hydrated.filter((badge) => badge.unlocked)).toHaveLength(7);

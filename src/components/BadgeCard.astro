@@ -22,6 +22,11 @@ const isLocked = !badge.unlocked;
         <span class="badge-kicker">LEVEL {badge.level} {!isLocked && badge.isFinal && "// FINAL BADGE"}</span>
         <h3>{isLocked ? "LOCKED BADGE" : badge.characterName}</h3>
         <span class="badge-status">{badge.isCurrent ? "CURRENT BADGE" : isLocked ? `${badge.unlockPoints.toLocaleString()} PTS TO UNLOCK` : "UNLOCKED"}</span>
+        {!isLocked && <dl class="badge-stats">
+            <div><dt>AFFILIATION</dt><dd>{badge.affiliation ?? "UNKNOWN"}</dd></div>
+            <div><dt>BASE KI</dt><dd>{badge.baseKi ?? "UNKNOWN"}</dd></div>
+            <div><dt>TOTAL KI</dt><dd>{badge.totalKi ?? "UNKNOWN"}</dd></div>
+        </dl>}
     </div>
 </article>
 
@@ -42,8 +47,7 @@ const isLocked = !badge.unlocked;
     .badge-card.is-current { border-color: rgba(199, 170, 114, .65); background: linear-gradient(135deg, rgba(199, 170, 114, .1), rgba(159, 190, 168, .05)); box-shadow: 0 0 1.5rem rgba(199, 170, 114, .08); }
     .badge-card.is-locked { opacity: .58; }
     .badge-art { position: relative; display: grid; place-items: center; aspect-ratio: 4 / 5; overflow: hidden; border: 1px solid rgba(159, 190, 168, .38); border-radius: .75rem; background: radial-gradient(ellipse at 50% 30%, rgba(199, 170, 114, .28), rgba(18, 32, 24, .96) 68%); color: #c7aa72; font: 700 .95rem/1 "Orbitron", sans-serif; }
-    .badge-art img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 8%; transform: scale(1.42); transform-origin: center top; opacity: 0; transition: opacity .2s ease; }
-    .badge-art.has-image img { opacity: 1; }
+    .badge-art img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 8%; transform: scale(1.42); transform-origin: center top; opacity: 1; transition: opacity .2s ease; }
     .badge-mystery-silhouette { position: relative; display: block; width: 70%; height: 78%; overflow: hidden; border-radius: 50% 50% 34% 34%; background: linear-gradient(180deg, #101914, #070c09); box-shadow: 0 0 1.2rem rgba(0, 0, 0, .5); }
     .silhouette-head { position: absolute; top: 11%; left: 25%; width: 50%; aspect-ratio: 1; border-radius: 50%; background: #070c09; }
     .silhouette-body { position: absolute; right: 8%; bottom: -25%; left: 8%; height: 68%; border-radius: 50% 50% 20% 20%; background: #070c09; }
@@ -52,6 +56,12 @@ const isLocked = !badge.unlocked;
     .badge-kicker, .badge-status { display: block; color: #c7aa72; font: 500 .5rem/1.3 "DM Sans", sans-serif; letter-spacing: .1em; text-transform: uppercase; }
     .badge-copy h3 { margin: .3rem 0; color: #e8eee9; font: 600 1rem/1.1 "DM Sans", sans-serif; letter-spacing: .04em; }
     .badge-status { color: rgba(199, 218, 204, .62); letter-spacing: .06em; }
+    .badge-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .35rem; margin: .7rem 0 0; border-top: 1px solid rgba(174, 202, 184, .14); padding-top: .55rem; }
+    .badge-stats div { min-width: 0; }
+    .badge-stats dt { color: rgba(199, 218, 204, .48); font: 500 .42rem/1.2 "DM Sans", sans-serif; letter-spacing: .08em; }
+    .badge-stats dd { overflow-wrap: anywhere; margin: .22rem 0 0; color: #e8eee9; font: 600 .55rem/1.2 "DM Mono", monospace; }
+    .badge-card-compact .badge-stats { gap: .25rem; margin-top: .55rem; }
+    .badge-card-compact .badge-stats dd { font-size: .5rem; }
     .badge-card-compact { grid-template-columns: 4.7rem minmax(0, 1fr); }
     @media (prefers-reduced-motion: reduce) { .badge-art img { transition: none; } }
 </style>

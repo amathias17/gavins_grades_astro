@@ -53,6 +53,11 @@ test.describe("positive points dashboard", () => {
     expect(lockedText).toContain("500 PTS TO UNLOCK");
     await expect(page.locator(".badge-grid .badge-card:not(.is-locked)").first()).toContainText("Yamcha");
     await expect(page.locator(".badge-grid .badge-card:not(.is-locked) img").first()).toBeAttached();
+    await expect(page.locator(".badge-grid .badge-card:not(.is-locked) .badge-stats").first()).toContainText("AFFILIATION");
+    await expect(page.locator(".badge-grid .badge-card:not(.is-locked) .badge-stats").first()).toContainText("BASE KI");
+    await expect(page.locator(".badge-grid .badge-card:not(.is-locked) .badge-stats").first()).toContainText("TOTAL KI");
+    await expect(page.locator(".badge-grid .badge-card.is-locked .badge-stats")).toHaveCount(0);
+    await expect(page.locator(".badge-grid .badge-card:not(.is-locked) img").first()).toHaveCSS("opacity", "1");
     await expect(page.locator(".collection-counts strong")).toHaveText("2 / 7 BADGES COLLECTED");
     await expect(page.locator(".collection-counts span")).toHaveText("5 BADGES REMAINING");
     await expect(page.getByRole("progressbar", { name: "Badge collection progress" }))

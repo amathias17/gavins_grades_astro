@@ -5,6 +5,8 @@ export interface DragonBallCharacter {
   name: string;
   image: string;
   affiliation?: string;
+  ki?: string;
+  maxKi?: string;
   race?: string;
   gender?: string;
   description?: string;
@@ -30,6 +32,13 @@ export interface DragonBallTransformation {
 export interface BadgeArtworkRequest {
   characterId: number;
   transformationId?: number;
+}
+
+export interface BadgeCharacterData {
+  image?: string;
+  affiliation?: string;
+  ki?: string;
+  maxKi?: string;
 }
 
 export type DragonBallFetch = (input: RequestInfo | URL, init?: RequestInit) => Promise<Response>;
@@ -79,22 +88,35 @@ export async function fetchBadgeCharacterArtwork(
   requests: BadgeArtworkRequest[],
   fetcher: DragonBallFetch = fetch,
 ): Promise<Map<number, string>> {
-  const artwork = new Map<number, string>();
+  const data = await fetchBadgeCharacterData(requests, fetcher);
+  return new Map([...data].flatMap(([id, character]) => character.image ? [[id, character.image] as const] : []));
+}
+
+export async function fetchBadgeCharacterData(
+  requests: BadgeArtworkRequest[],
+  fetcher: DragonBallFetch = fetch,
+): Promise<Map<number, BadgeCharacterData>> {
+  const data = new Map<number, BadgeCharacterData>();
   const results = await Promise.all(requests.map(async ({ characterId, transformationId }) => {
     try {
       const character = await fetchDragonBallCharacter(characterId, fetcher);
       const image = transformationId === undefined
         ? character.image
         : character.transformations?.find((transformation) => transformation.id === transformationId)?.image;
-      return image ? [transformationId ?? characterId, image] as const : null;
+      return [transformationId ?? characterId, {
+        image,
+        affiliation: character.affiliation,
+        ki: character.ki,
+        maxKi: character.maxKi,
+      }] as const;
     } catch {
       return null;
     }
   }));
 
   results.forEach((result) => {
-    if (result) artwork.set(result[0], result[1]);
+    if (result) data.set(result[0], result[1]);
   });
 
-  return artwork;
+  return data;
 }
