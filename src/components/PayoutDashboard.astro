@@ -12,6 +12,7 @@ import { formatDataUpdateTime, getLatestDataUpdate } from "../utils/dataFreshnes
 import { getBadgeStatesWithApiArtwork } from "../utils/badges";
 import BadgeCard from "./BadgeCard.astro";
 import type { MissingPointAssignment } from "../utils/points";
+import { calculateGradeRecovery } from "../utils/gradeRecovery";
 
 type ScrapedAssignment = { name: string; dueDate: string | null; earnedPoints: number; totalPoints: number; weight?: number | null; graded: boolean };
 type ScrapedClass = { className: string; period: string; assignments: ScrapedAssignment[] };
@@ -26,6 +27,17 @@ try {
 
 const periodStatus = getMarkingPeriodStatus();
 const missingAssignments = (missingAssignmentsData.missing_assignments ?? []) as MissingPointAssignment[];
+const recoverySummaries = calculateGradeRecovery(
+    gradesData.classes.map((classInfo) => ({
+        ...classInfo,
+        current_grade: typeof classInfo.current_grade === "number" ? classInfo.current_grade : null,
+        assignments: classInfo.assignments?.map((assignment) => ({ name: assignment.name, dueDate: assignment.dueDate, earnedPoints: assignment.score ?? 0, totalPoints: assignment.maxPoints }))
+    })),
+    missingAssignments,
+    scrapedClasses,
+);
+const recoveryAssignmentCount = recoverySummaries.reduce((sum, summary) => sum + summary.missingCount, 0);
+const recoveryPointTotal = recoverySummaries.reduce((sum, summary) => sum + summary.missingPoints, 0);
 const rawPoints = calculatePoints(gradesData.classes, scrapedClasses, periodStatus.period, missingAssignments);
 const points = applyProtectedProgress(rawPoints, pointsProgressData, schoolYear);
 const hydratedBadges = await getBadgeStatesWithApiArtwork(points.totalPoints);
@@ -82,6 +94,26 @@ const assignmentStatusClass = (status: typeof points.assignments[number]["status
             {opportunityPreview.length > 0 ? <ul class="opportunity-list">{opportunityPreview.map((opportunity) => <li class:list={["opportunity-item", `is-${opportunity.opportunityType}`]}><span class="opportunity-mark" aria-hidden="true">+</span><span class="opportunity-name"><strong>{opportunity.assignmentName}</strong><small>{opportunity.className}</small></span><span class="opportunity-meta"><span class="opportunity-status">{opportunity.opportunityType === "missing" ? "MISSING" : "NOT GRADED"}</span><span class="opportunity-points">{opportunity.availablePoints} PTS</span></span></li>)}</ul> : <p class="opportunity-empty">No open missions. Keep building your streak.</p>}
             {points.opportunities.length > 5 && <button class="opportunity-more" type="button" data-opportunities-open>VIEW ALL OPPORTUNITIES <span>({points.opportunities.length})</span></button>}
         </section>
+        {recoverySummaries.length > 0 && <section class="recovery-panel" aria-labelledby="recovery-heading">
+            <div class="recovery-intro">
+                <div><p class="panel-kicker">NEXT QUEST // GRADE RECOVERY</p><h2 id="recovery-heading">GRADE RECOVERY QUEST</h2><p class="recovery-prompt">EVERY COMPLETED MISSION CAN MOVE THE METER.</p></div>
+                <div class="recovery-summary" aria-label={`${recoverySummaries.length} classes with missing work, ${recoveryAssignmentCount} missing assignments, ${recoveryPointTotal} points available to recover`}>
+                    <strong>{recoverySummaries.length}</strong><span>CLASSES</span><strong>{recoveryAssignmentCount}</strong><span>MISSIONS</span><strong>{recoveryPointTotal}</strong><span>PTS TO RECOVER</span>
+                </div>
+            </div>
+            <div class="recovery-grid">
+                {recoverySummaries.map((summary) => <article class="recovery-card" aria-label={`${summary.className}, period ${summary.period}, ${summary.missingCount} missing assignments`}>
+                    <div class="recovery-card-top"><div><p class="recovery-period">PERIOD {summary.period || "—"}</p><h3>{summary.className}</h3></div><span class="recovery-ready">READY TO RECOVER</span></div>
+                    <div class="recovery-grade-row">
+                        <div><span class="recovery-label">CURRENT GRADE</span><strong aria-label={summary.currentGrade === null ? "Current grade unavailable" : `Current grade ${summary.currentGrade} percent, ${summary.currentLetterGrade ?? "letter unavailable"}`}>{summary.currentGrade === null ? "—" : `${summary.currentGrade}%`}<small>{summary.currentLetterGrade ?? "DATA NEEDED"}</small></strong></div>
+                        <div class="recovery-arrow" aria-hidden="true">→</div>
+                        <div><span class="recovery-label">IF ALL MISSIONS LAND</span><strong aria-label={summary.hasEstimate ? `Projected grade ${summary.projectedGrade} percent, ${summary.projectedLetterGrade}` : "Projection data needed"}>{summary.hasEstimate ? `${summary.projectedGrade}%` : "DATA NEEDED"}<small>{summary.projectedLetterGrade ?? (summary.hasEstimate ? "—" : "NO ESTIMATE")}</small></strong></div>
+                    </div>
+                    <div class="recovery-meta"><span>{summary.missingCount} {summary.missingCount === 1 ? "MISSION" : "MISSIONS"}</span><strong>{summary.missingPoints} PTS AVAILABLE</strong>{summary.gradeDelta !== null && <span class="recovery-delta">+{summary.gradeDelta.toFixed(2)} PTS PROJECTED</span>}</div>
+                    <a class="recovery-link" href={`/classes/${summary.period}`} aria-label={`View class plan for ${summary.className}, period ${summary.period}`}>VIEW CLASS PLAN <span aria-hidden="true">↗</span></a>
+                </article>)}
+            </div>
+        </section>}
         <MarkingPeriodCard />
         <div class="dashboard-actions"><button class="breakdown-button" type="button" data-breakdown-open>VIEW ASSIGNMENT BREAKDOWN</button><button class="feedback-button" type="button" data-feedback-open>HOW POINTS WORK</button></div>
     </div>
@@ -234,6 +266,29 @@ const assignmentStatusClass = (status: typeof points.assignments[number]["status
     .opportunity-name strong { color: #e8eee9; font-family: "DM Sans", sans-serif; font-weight: 600; letter-spacing: .03em; }
     .opportunity-name small { color: rgba(199, 218, 204, .52); font-family: "DM Sans", sans-serif; }
     .opportunity-empty, .opportunity-more { color: rgba(199, 218, 204, .68); font-family: "DM Sans", sans-serif; font-weight: 500; letter-spacing: .06em; }
+    .recovery-panel { margin-top: 1rem; border: 1px solid rgba(199, 170, 114, .25); border-radius: 1rem; padding: clamp(1rem, 3vw, 1.35rem); background: linear-gradient(145deg, rgba(35, 37, 27, .7), rgba(12, 23, 18, .56)); }
+    .recovery-intro { display: flex; align-items: flex-start; justify-content: space-between; gap: 1.25rem; }
+    .recovery-intro h2 { margin: 0; color: #e8eee9; font: 600 clamp(1rem, 4vw, 1.35rem)/1.15 "DM Sans", sans-serif; letter-spacing: .06em; }
+    .recovery-prompt { margin: .55rem 0 0; color: rgba(199, 218, 204, .68); font: 500 .62rem/1.35 "DM Sans", sans-serif; letter-spacing: .08em; }
+    .recovery-summary { display: grid; grid-template-columns: repeat(3, auto); align-items: end; gap: .2rem .65rem; flex: 0 0 auto; text-align: right; }
+    .recovery-summary strong { color: #c7aa72; font: 600 1.1rem/1 "Orbitron", sans-serif; }
+    .recovery-summary span { color: rgba(199, 218, 204, .53); font: 500 .43rem/1.2 "DM Sans", sans-serif; letter-spacing: .08em; }
+    .recovery-grid { display: grid; gap: .65rem; margin-top: 1.2rem; }
+    .recovery-card { min-width: 0; border: 1px solid rgba(174, 202, 184, .16); border-radius: .8rem; padding: .95rem; background: rgba(12, 23, 18, .65); }
+    .recovery-card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: .8rem; }
+    .recovery-period, .recovery-label { margin: 0 0 .28rem; color: rgba(199, 218, 204, .5); font: 500 .47rem/1.2 "DM Sans", sans-serif; letter-spacing: .1em; }
+    .recovery-card h3 { margin: 0; overflow-wrap: anywhere; color: #e8eee9; font: 600 .9rem/1.25 "DM Sans", sans-serif; }
+    .recovery-ready { flex: 0 0 auto; border-radius: 999px; padding: .3rem .45rem; color: #c7aa72; background: rgba(199, 170, 114, .1); font: 500 .42rem/1 "DM Sans", sans-serif; letter-spacing: .07em; white-space: nowrap; }
+    .recovery-grade-row { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: .75rem; margin-top: 1rem; }
+    .recovery-grade-row > div:not(.recovery-arrow) { min-width: 0; }
+    .recovery-grade-row strong { display: flex; align-items: baseline; gap: .35rem; color: #e8eee9; font: 600 clamp(1.35rem, 6vw, 1.8rem)/1 "Orbitron", sans-serif; }
+    .recovery-grade-row strong small { color: #9fbea8; font: 500 .65rem/1 "DM Sans", sans-serif; }
+    .recovery-arrow { color: #c7aa72; font-size: 1.25rem; }
+    .recovery-meta { display: flex; flex-wrap: wrap; align-items: center; gap: .45rem .8rem; margin-top: .95rem; color: rgba(199, 218, 204, .62); font: 500 .55rem/1.25 "DM Sans", sans-serif; letter-spacing: .05em; }
+    .recovery-meta strong, .recovery-delta { color: #c7aa72; font-weight: 600; }
+    .recovery-link { display: inline-flex; align-items: center; gap: .35rem; margin-top: .9rem; color: #b9d2bf; font: 600 .58rem/1 "DM Sans", sans-serif; letter-spacing: .1em; text-decoration: none; }
+    .recovery-link:hover, .recovery-link:focus-visible { color: #e8eee9; text-decoration: underline; text-underline-offset: .2rem; }
+    .recovery-link:focus-visible { outline: 2px solid #c7aa72; outline-offset: .25rem; border-radius: .2rem; }
     .marking-period-card { border-color: rgba(174, 202, 184, .16); border-radius: .9rem; background: rgba(12, 23, 18, .48); box-shadow: none; }
     .feedback-button { border-color: rgba(159, 190, 168, .4); border-radius: 999px; color: #9fbea8; background: rgba(12, 23, 18, .45); font-family: "DM Sans", sans-serif; font-weight: 500; letter-spacing: .1em; }
     .feedback-button:hover, .feedback-button:focus-visible { color: #142219; background: #9fbea8; box-shadow: 0 0 18px rgba(159, 190, 168, .18); }
@@ -283,6 +338,7 @@ const assignmentStatusClass = (status: typeof points.assignments[number]["status
     .breakdown-empty, .breakdown-bonus-note { margin: 1rem 0 0; color: rgba(199, 218, 204, .66); font: 500 .65rem/1.4 "DM Sans", sans-serif; letter-spacing: .05em; text-transform: uppercase; }
     .breakdown-bonus-note { color: #c7aa72; }
     @media (max-width: 560px) { .breakdown-summary { grid-template-columns: repeat(2, 1fr); } .breakdown-class li { grid-template-columns: minmax(0, 1fr) auto; } .breakdown-status { grid-column: 1 / -1; justify-self: start; } .opportunity-dialog-list li { grid-template-columns: minmax(0, 1fr); align-items: start; gap: .65rem; } .opportunity-dialog-list .opportunity-meta { min-width: 0; width: 100%; display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-start; gap: .55rem .8rem; } .opportunity-dialog-list .opportunity-points { margin-left: auto; } }
+    @media (max-width: 520px) { .recovery-intro { display: grid; gap: .9rem; } .recovery-summary { grid-template-columns: repeat(3, auto); justify-content: start; text-align: left; } .recovery-grade-row { gap: .45rem; } .recovery-grade-row strong { display: grid; gap: .2rem; } .recovery-ready { white-space: normal; text-align: right; } }
     @media (prefers-reduced-motion: reduce) { .milestone-track span { transition: none; } }
     @media (max-width: 520px) { .points-screen { padding-top: max(3rem, env(safe-area-inset-top)); padding-bottom: max(1.5rem, env(safe-area-inset-bottom)); } .status-light { font-size: .43rem; } .point-stats { gap: .4rem; } .stat-card { padding: .65rem .45rem; } .stat-card span { font-size: .42rem; } .panel-heading { gap: .65rem; } .points-to-go, .opportunity-total { font-size: .52rem; } .awaiting-total { font-size: .46rem; } }
     @media (prefers-reduced-motion: reduce) { .milestone-track span { transition: none; } }
