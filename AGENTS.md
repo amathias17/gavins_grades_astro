@@ -2,11 +2,11 @@
 
 ## Project Structure & Data
 - Astro 5 + Tailwind 4.1 (@tailwindcss/vite); layout in src/layouts/BaseLayout.astro imports src/styles/global.css and retro neon-green/black theme.
-- Pages: src/pages/index.astro (A-grade payout dashboard), src/pages/classes/[classId].astro (per-class + GradeCalculator), src/pages/calculator.astro (dashboard-style calculator), src/pages/stats.astro (grade history stats), src/pages/anime.astro (Dragon Ball Z proof-of-concept); legacy prototypes in src/pages/new.astro and src/pages/old.astro.
+- Pages: src/pages/index.astro (A-grade payout dashboard), src/pages/classes/[classId].astro (per-class plan and assignment log), src/pages/calculator.astro (dashboard-style calculator), src/pages/stats.astro (grade history stats), src/pages/anime.astro (Dragon Ball Z proof-of-concept); legacy prototypes in src/pages/new.astro and src/pages/old.astro.
 - Layout lab lives at src/pages/lab.astro for dev-only visual experiments and is not linked in navigation.
 - Class pages read scraped assignment data from scraper/detailed-grades.json at build time when available, matching by period and normalized class name.
 - Components in src/components/ (CurrentGrades.astro, GradeCalculator.astro, etc.); utilities in src/utils/gradeCalculator.ts; data in src/data/grades.json and src/data/missing_assignments.json (class_id may be absent; use period). Encoding artifacts exist; do not "clean" without source confirmation.
-- Grade impact calculators now show a calculation breakdown with current totals, hypothetical add, and projected totals on class pages and /calculator.
+- The standalone /calculator page shows the grade impact calculation breakdown; class plans do not embed the calculator.
 - Class assignments treat past-due pending items as missing, display 0/total, and include them in calculator totals.
 - Assignment score display shows 0/total when max points are known, even if the status is pending.
 - Assignment log no longer uses simulate checkboxes; clicking an assignment opens an impact modal with a 100% projection using class points.
@@ -57,7 +57,7 @@
 - npx playwright test - run all E2E tests; add --headed or --ui as needed.
 
 ## Coding Style & UX
-- TypeScript + ESM; avoid any. Reuse BaseLayout, design tokens, and getGradeColor helpers; keep retro border-heavy aesthetic. Prefer small incremental edits (apply_patch); stay ASCII unless the file already uses other characters.
+- TypeScript + ESM; avoid any. Reuse BaseLayout, design tokens, and getGradeColor helpers; keep the current rounded charcoal/sage/sand study-room treatment on active pages. Prefer small incremental edits (apply_patch); stay ASCII unless the file already uses other characters.
 - Assignments log table uses a mobile card layout at small breakpoints for readability; Category column removed.
 - Assignments log percentage display rounds to whole numbers.
 - Primary navigation lives in src/components/Header.astro with links to Home, Stats Room, and Calculator plus placeholders for future pages.
