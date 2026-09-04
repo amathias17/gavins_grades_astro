@@ -81,3 +81,4 @@
 - Grade recovery layout: PayoutDashboard groups each summary value with its label, places copy above metrics in a responsive grid, and preserves full-width recovery cards on mobile.
 - Recovery summary metric groups are centered above the class recovery cards.
 - Recovery metric band is capped and centered, with stronger labels and tighter spacing above the recovery cards.
+- Class details now reconcile authoritative missing assignments by normalized class, assignment, and due date so confirmed missing rows do not display as GRADED.

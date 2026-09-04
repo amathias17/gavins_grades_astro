@@ -13,6 +13,12 @@ test.describe("class plan", () => {
     await expect(page.locator(".assignment-impact-button")).toHaveCount(7);
     await expect(page.locator(".assignment-impact-button", { hasText: "Create your own Lab coat" })).toHaveCount(0);
     await expect(page.locator(".assignments-panel .grade-badge").first()).toHaveCSS("border-radius", "999px");
+    await expect(page.locator(".assignment-status.is-missing")).toHaveCount(4);
+    await expect(page.locator(".assignments-row").filter({ hasText: "Lab Safety Rules Packet" }).filter({ hasText: "09/03/2026" })).toContainText("MISSING");
+    await expect(page.locator(".assignments-row").filter({ hasText: "1WS#1-SafetySymbols&Procedures" })).toContainText("MISSING");
+    await expect(page.locator(".assignments-row").filter({ hasText: "Signed Lab Safety Contract" })).toContainText("MISSING");
+    await expect(page.locator(".assignments-row").filter({ hasText: "Safety in the Lab Practice" })).toContainText("MISSING");
+    await expect(page.locator(".assignment-status.is-graded")).toHaveCount(3);
   });
 
   test("keeps duplicate-period class plans separate", async ({ page }) => {

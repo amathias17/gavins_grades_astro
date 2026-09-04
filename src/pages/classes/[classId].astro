@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import gradesData from "../../data/grades.json";
+import missingAssignmentsData from "../../data/missing_assignments.json";
 import type { Class, Assignment } from "../../types/grades";
 import fs from "node:fs/promises";
 import path from "node:path";
@@ -23,6 +24,15 @@ type ScrapedClass = {
 type ScrapedGrades = {
   classes?: ScrapedClass[];
 };
+
+type MissingAssignment = {
+  assignment_name: string;
+  class_name: string;
+  due_date: string;
+  max_points: number | string;
+};
+
+const missingAssignments = missingAssignmentsData.missing_assignments as MissingAssignment[];
 
 export async function getStaticPaths() {
   const normalizePeriod = (value: string): string => value.trim();
@@ -167,6 +177,43 @@ function normalizeAssignments(items: Assignment[]): Assignment[] {
   });
 }
 
+function normalizeAssignmentName(value: string): string {
+  return normalizeClassName(value);
+}
+
+function normalizeDueDate(value: string): string {
+  const match = value.trim().match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})/);
+  return match
+    ? `${match[1].padStart(2, "0")}/${match[2].padStart(2, "0")}/${match[3]}`
+    : normalizeAssignmentName(value);
+}
+
+function assignmentKey(className: string, assignmentName: string, dueDate: string): string {
+  return `${normalizeClassName(className)}|${normalizeAssignmentName(assignmentName)}|${normalizeDueDate(dueDate)}`;
+}
+
+function reconcileMissingAssignments(items: Assignment[], className: string): Assignment[] {
+  const missingByKey = new Map<string, number>();
+  for (const missing of missingAssignments) {
+    if (normalizeClassName(missing.class_name) !== normalizeClassName(className)) continue;
+    const maxPoints = Number(missing.max_points);
+    if (!Number.isFinite(maxPoints) || maxPoints <= 0) continue;
+    missingByKey.set(assignmentKey(missing.class_name, missing.assignment_name, missing.due_date), maxPoints);
+  }
+
+  return items.map((assignment) => {
+    const missingPoints = missingByKey.get(assignmentKey(className, assignment.name, assignment.dueDate));
+    if (missingPoints === undefined) return assignment;
+    return {
+      ...assignment,
+      maxPoints: assignment.maxPoints > 0 ? assignment.maxPoints : missingPoints,
+      score: 0,
+      percentage: 0,
+      status: "missing",
+    };
+  });
+}
+
 function getScoreDisplay(assignment: Assignment): string {
   if (assignment.maxPoints > 0 && (assignment.score === null || assignment.status !== "graded")) {
     return `0/${assignment.maxPoints}`;
@@ -184,10 +231,13 @@ function getPercentageDisplay(assignment: Assignment): string {
   return `${Math.round(assignment.percentage)}%`;
 }
 
-const assignments = normalizeAssignments(
-  scrapedAssignmentRows.length > 0
-    ? scrapedAssignmentRows
-    : classInfo.assignments || []
+const assignments = reconcileMissingAssignments(
+  normalizeAssignments(
+    scrapedAssignmentRows.length > 0
+      ? scrapedAssignmentRows
+      : classInfo.assignments || []
+  ),
+  classInfo.class_name,
 );
 const hasAssignments = assignments.length > 0;
 ---
