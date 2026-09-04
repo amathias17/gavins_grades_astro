@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "09/04/2026, 12:22 AM",
+    "last_updated": "09/04/2026, 11:47 AM",
     "most_recent_date": "9/4/2026",
     "total_classes": 13
   },
@@ -32,8 +32,8 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 60,
-      "letter_grade": "D"
+      "current_grade": 48,
+      "letter_grade": "F"
     },
     {
       "class_name": "Heroes & Monsters",
@@ -62,8 +62,8 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 0,
-      "letter_grade": "F"
+      "current_grade": 70,
+      "letter_grade": "C"
     },
     {
       "class_name": "Coding W/ Python",
@@ -963,7 +963,7 @@
       "9/1/2026": 0,
       "9/2/2026": 0,
       "9/3/2026": 0,
-      "9/4/2026": 0
+      "9/4/2026": 70
     },
     "Amer Studies": {
       "11/24/2025": 100,
@@ -1943,7 +1943,7 @@
       "9/1/2026": 60,
       "9/2/2026": 60,
       "9/3/2026": 60,
-      "9/4/2026": 60
+      "9/4/2026": 48
     },
     "Heroes & Monsters": {
       "8/25/2026": null,
@@ -2076,7 +2076,7 @@
       "9/4/2026": 100
     }
   },
-  "overall_average": 78,
+  "overall_average": 75,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -2360,7 +2360,7 @@
     "9/1/2026": 87,
     "9/2/2026": 90,
     "9/3/2026": 78,
-    "9/4/2026": 78
+    "9/4/2026": 75
   },
   "streak": 0,
   "streak_history": {

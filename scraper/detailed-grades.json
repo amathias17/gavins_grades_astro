@@ -1,28 +1,60 @@
 {
   "metadata": {
-    "scrapedAt": "2026-09-04T04:22:31.733Z",
+    "scrapedAt": "2026-09-04T15:47:23.419Z",
     "totalClasses": 13,
-    "totalAssignments": 23
+    "totalAssignments": 27
   },
   "classes": [
     {
       "className": "ENVIRON SCIENCE    1",
       "teacher": "Megan Kutruff",
       "period": "1",
-      "currentGrade": 60,
+      "currentGrade": 48,
       "assignments": [
         {
-          "name": "Student Survey",
-          "dueDate": "09/03/2026",
+          "name": "Lab Safety Contract",
+          "dueDate": "09/04/2026",
           "earnedPoints": 0,
-          "totalPoints": 10,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         },
         {
+          "name": "Lab Safety Quiz",
+          "dueDate": "09/03/2026",
+          "earnedPoints": 0,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Lab Safety Contract",
+          "dueDate": "09/04/2026",
+          "earnedPoints": 0,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Lab Safety Poster",
+          "dueDate": "09/04/2026",
+          "earnedPoints": 0,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Student Survey",
+          "dueDate": "09/04/2026",
+          "earnedPoints": 0,
+          "totalPoints": 30,
+          "weight": 1,
+          "graded": false
+        },
+        {
           "name": "Signed Syllabus",
           "dueDate": "08/31/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 5,
           "totalPoints": 5,
           "weight": 1,
           "graded": true
@@ -30,8 +62,24 @@
         {
           "name": "Create your own Lab coat",
           "dueDate": "08/31/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 5,
           "totalPoints": 5,
+          "weight": 1,
+          "graded": true
+        }
+      ]
+    },
+    {
+      "className": "PHYSICAL EDUC",
+      "teacher": "Paul Picciotti",
+      "period": "2",
+      "currentGrade": 70,
+      "assignments": [
+        {
+          "name": "Week1",
+          "dueDate": "09/04/2026",
+          "earnedPoints": 35,
+          "totalPoints": 50,
           "weight": 1,
           "graded": true
         }
@@ -45,27 +93,19 @@
       "assignments": [
         {
           "name": "Lab Safety Rules Packet",
-          "dueDate": "09/03/2026",
+          "dueDate": "09/04/2026",
           "earnedPoints": 0,
-          "totalPoints": 15,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "1WS#1-SafetySymbols&Procedures",
-          "dueDate": "09/03/2026",
-          "earnedPoints": 0,
-          "totalPoints": 15,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Lab Safety Rules Packet",
-          "dueDate": "08/31/2026",
+          "dueDate": "09/03/2026",
           "earnedPoints": 0,
-          "totalPoints": 20,
+          "totalPoints": 15,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "1WS#1-SafetySymbols&Procedures",
@@ -117,8 +157,8 @@
       "assignments": [
         {
           "name": "HW #1 Simp. Rad. & Class. Num.",
-          "dueDate": "09/02/2026",
-          "earnedPoints": 0,
+          "dueDate": "09/03/2026",
+          "earnedPoints": 9,
           "totalPoints": 10,
           "weight": 1,
           "graded": true
@@ -141,16 +181,16 @@
       "assignments": [
         {
           "name": "Anatomy/Physiolgy ID exit Slip",
-          "dueDate": "09/03/2026",
-          "earnedPoints": 6,
-          "totalPoints": 5,
+          "dueDate": "08/31/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "Virtual Simulator mini-lab",
-          "dueDate": "09/03/2026",
-          "earnedPoints": 6,
+          "dueDate": "09/01/2026",
+          "earnedPoints": 5,
           "totalPoints": 5,
           "weight": 1,
           "graded": true
@@ -182,8 +222,8 @@
         {
           "name": "Signed Course Syllabus",
           "dueDate": "08/28/2026",
-          "earnedPoints": 31,
-          "totalPoints": 33,
+          "earnedPoints": 20,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         },
@@ -214,10 +254,10 @@
         {
           "name": "Ch 1 5 Themes of Geography",
           "dueDate": "09/03/2026",
-          "earnedPoints": 50,
-          "totalPoints": 50,
+          "earnedPoints": 0,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "ch 1 5 areas of social studies",

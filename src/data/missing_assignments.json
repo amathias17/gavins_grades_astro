@@ -1,9 +1,17 @@
 {
   "metadata": {
-    "last_updated": "09/04/2026, 12:22 AM",
-    "count": 5
+    "last_updated": "09/04/2026, 11:47 AM",
+    "count": 6
   },
   "missing_assignments": [
+    {
+      "due_date": "09/04/2026",
+      "assignment_name": "Lab Safety Contract",
+      "class_name": "ENVIRON SCIENCE    1",
+      "teacher": "Megan Kutruff",
+      "category": "Other",
+      "max_points": "5"
+    },
     {
       "due_date": "09/03/2026",
       "assignment_name": "Lab Safety Rules Packet",
@@ -38,11 +46,11 @@
     },
     {
       "due_date": "08/31/2026",
-      "assignment_name": "Signed Syllabus",
+      "assignment_name": "Create your own Lab coat",
       "class_name": "ENVIRON SCIENCE    1",
       "teacher": "Megan Kutruff",
-      "category": "Other",
-      "max_points": "5"
+      "category": "Class Work",
+      "max_points": "20"
     }
   ]
 }
