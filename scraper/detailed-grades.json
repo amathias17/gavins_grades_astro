@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-09-03T19:56:14.507Z",
+    "scrapedAt": "2026-09-04T04:22:31.733Z",
     "totalClasses": 13,
     "totalAssignments": 23
   },
@@ -13,8 +13,8 @@
       "assignments": [
         {
           "name": "Student Survey",
-          "dueDate": "08/31/2026",
-          "earnedPoints": 9,
+          "dueDate": "09/03/2026",
+          "earnedPoints": 0,
           "totalPoints": 10,
           "weight": 1,
           "graded": true
@@ -77,9 +77,9 @@
         },
         {
           "name": "Signed Syllabus",
-          "dueDate": "09/03/2026",
-          "earnedPoints": 0,
-          "totalPoints": 10,
+          "dueDate": "09/02/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         },
@@ -94,7 +94,7 @@
         {
           "name": "Signed Lab Safety Contract",
           "dueDate": "09/02/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 5,
           "totalPoints": 5,
           "weight": 1,
           "graded": true
@@ -103,7 +103,7 @@
           "name": "Safety in the Lab Practice",
           "dueDate": "09/02/2026",
           "earnedPoints": 0,
-          "totalPoints": 5,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         }
@@ -125,11 +125,11 @@
         },
         {
           "name": "Classroom Policy",
-          "dueDate": "08/31/2026",
-          "earnedPoints": 0,
+          "dueDate": "09/03/2026",
+          "earnedPoints": 9,
           "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         }
       ]
     },
@@ -141,11 +141,11 @@
       "assignments": [
         {
           "name": "Anatomy/Physiolgy ID exit Slip",
-          "dueDate": "08/31/2026",
-          "earnedPoints": 0,
-          "totalPoints": 10,
+          "dueDate": "09/03/2026",
+          "earnedPoints": 6,
+          "totalPoints": 5,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Virtual Simulator mini-lab",
@@ -157,9 +157,9 @@
         },
         {
           "name": "Syllabus/Grading Policy Signed",
-          "dueDate": "08/31/2026",
-          "earnedPoints": 11,
-          "totalPoints": 10,
+          "dueDate": "09/01/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         }
@@ -174,13 +174,21 @@
         {
           "name": "Powers of 10 Quiz",
           "dueDate": "09/01/2026",
-          "earnedPoints": 11,
-          "totalPoints": 10,
+          "earnedPoints": 31,
+          "totalPoints": 33,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Signed Course Syllabus",
+          "dueDate": "08/28/2026",
+          "earnedPoints": 31,
+          "totalPoints": 33,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "\"Supervolcanoes\" Sky Show",
           "dueDate": "08/28/2026",
           "earnedPoints": 20,
           "totalPoints": 20,
@@ -188,20 +196,12 @@
           "graded": true
         },
         {
-          "name": "\"Supervolcanoes\" Sky Show",
-          "dueDate": "08/28/2026",
-          "earnedPoints": 0,
-          "totalPoints": 0,
-          "weight": 1,
-          "graded": false
-        },
-        {
           "name": "CLASS PARTICIPATION",
           "dueDate": "08/26/2026",
-          "earnedPoints": 0,
-          "totalPoints": 0,
+          "earnedPoints": 50,
+          "totalPoints": 50,
           "weight": 1,
-          "graded": false
+          "graded": true
         }
       ]
     },
@@ -221,7 +221,7 @@
         },
         {
           "name": "ch 1 5 areas of social studies",
-          "dueDate": "09/02/2026",
+          "dueDate": "09/03/2026",
           "earnedPoints": 0,
           "totalPoints": 10,
           "weight": 1,
@@ -237,11 +237,11 @@
       "assignments": [
         {
           "name": "Survey and Character",
-          "dueDate": "09/02/2026",
-          "earnedPoints": 0,
-          "totalPoints": 10,
+          "dueDate": "08/28/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
           "weight": 1,
-          "graded": false
+          "graded": true
         }
       ]
     }
