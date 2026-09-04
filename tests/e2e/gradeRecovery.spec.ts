@@ -38,6 +38,9 @@ test.describe("grade recovery quest", () => {
     await expect(recoveryMetrics.nth(1).locator("span")).toHaveText("MISSIONS");
     await expect(recoveryMetrics.nth(2).locator("strong")).toHaveText("65");
     await expect(recoveryMetrics.nth(2).locator("span")).toHaveText("PTS TO RECOVER");
+    for (const metric of await recoveryMetrics.all()) {
+      await expect(metric).toHaveCSS("text-align", "center");
+    }
     await expect(page.locator(".recovery-card")).toHaveCount(2);
     await expect(page.locator(".recovery-card").first()).toContainText("Chemistry 2");
     await expect(page.locator(".recovery-card").first()).toContainText("40 PTS AVAILABLE");
