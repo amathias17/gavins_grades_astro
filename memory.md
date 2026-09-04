@@ -80,3 +80,4 @@
 - Homepage freshness: src/utils/dataFreshness.ts selects the newest valid grades metadata or detailed-grades scrape timestamp and formats it in America/New_York. MarkingPeriodCard displays it as DATA UPDATED; missing timestamps render an explicit unavailable state.
 - Grade recovery layout: PayoutDashboard groups each summary value with its label, places copy above metrics in a responsive grid, and preserves full-width recovery cards on mobile.
 - Recovery summary metric groups are centered above the class recovery cards.
+- Recovery metric band is capped and centered, with stronger labels and tighter spacing above the recovery cards.
