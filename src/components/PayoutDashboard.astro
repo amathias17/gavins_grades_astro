@@ -97,9 +97,11 @@ const assignmentStatusClass = (status: typeof points.assignments[number]["status
         </section>
         {recoverySummaries.length > 0 && <section class="recovery-panel" aria-labelledby="recovery-heading">
             <div class="recovery-intro">
-                <div><p class="panel-kicker">NEXT QUEST // GRADE RECOVERY</p><h2 id="recovery-heading">GRADE RECOVERY QUEST</h2><p class="recovery-prompt">EVERY COMPLETED MISSION CAN MOVE THE METER.</p></div>
+                <div class="recovery-copy"><p class="panel-kicker">NEXT QUEST // GRADE RECOVERY</p><h2 id="recovery-heading">GRADE RECOVERY QUEST</h2><p class="recovery-prompt">EVERY COMPLETED MISSION CAN MOVE THE METER.</p></div>
                 <div class="recovery-summary" aria-label={`${recoverySummaries.length} classes with missing work, ${recoveryAssignmentCount} missing assignments, ${recoveryPointTotal} points available to recover`}>
-                    <strong>{recoverySummaries.length}</strong><span>CLASSES</span><strong>{recoveryAssignmentCount}</strong><span>MISSIONS</span><strong>{recoveryPointTotal}</strong><span>PTS TO RECOVER</span>
+                    <div class="recovery-metric"><strong>{recoverySummaries.length}</strong><span>CLASSES</span></div>
+                    <div class="recovery-metric"><strong>{recoveryAssignmentCount}</strong><span>MISSIONS</span></div>
+                    <div class="recovery-metric"><strong>{recoveryPointTotal}</strong><span>PTS TO RECOVER</span></div>
                 </div>
             </div>
             <div class="recovery-grid">
@@ -268,13 +270,15 @@ const assignmentStatusClass = (status: typeof points.assignments[number]["status
     .opportunity-name small { color: rgba(199, 218, 204, .52); font-family: "DM Sans", sans-serif; }
     .opportunity-empty, .opportunity-more { color: rgba(199, 218, 204, .68); font-family: "DM Sans", sans-serif; font-weight: 500; letter-spacing: .06em; }
     .recovery-panel { margin-top: 1rem; border: 1px solid rgba(199, 170, 114, .25); border-radius: 1rem; padding: clamp(1rem, 3vw, 1.35rem); background: linear-gradient(145deg, rgba(35, 37, 27, .7), rgba(12, 23, 18, .56)); }
-    .recovery-intro { display: flex; align-items: flex-start; justify-content: space-between; gap: 1.25rem; }
-    .recovery-intro h2 { margin: 0; color: #e8eee9; font: 600 clamp(1rem, 4vw, 1.35rem)/1.15 "DM Sans", sans-serif; letter-spacing: .06em; }
+    .recovery-intro { display: grid; gap: 1.35rem; min-width: 0; }
+    .recovery-copy { min-width: 0; }
+    .recovery-intro h2 { margin: 0; color: #e8eee9; font: 600 clamp(1.15rem, 5vw, 1.5rem)/1.15 "DM Sans", sans-serif; letter-spacing: .06em; overflow-wrap: anywhere; }
     .recovery-prompt { margin: .55rem 0 0; color: rgba(199, 218, 204, .68); font: 500 .62rem/1.35 "DM Sans", sans-serif; letter-spacing: .08em; }
-    .recovery-summary { display: grid; grid-template-columns: repeat(3, auto); align-items: end; gap: .2rem .65rem; flex: 0 0 auto; text-align: right; }
-    .recovery-summary strong { color: #c7aa72; font: 600 1.1rem/1 "Orbitron", sans-serif; }
-    .recovery-summary span { color: rgba(199, 218, 204, .53); font: 500 .43rem/1.2 "DM Sans", sans-serif; letter-spacing: .08em; }
-    .recovery-grid { display: grid; gap: .65rem; margin-top: 1.2rem; }
+    .recovery-summary { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .75rem; width: 100%; min-width: 0; text-align: left; }
+    .recovery-metric { display: grid; min-width: 0; align-content: start; gap: .3rem; }
+    .recovery-summary strong { color: #c7aa72; font: 600 clamp(1.25rem, 5vw, 1.55rem)/1 "Orbitron", sans-serif; }
+    .recovery-summary span { color: rgba(199, 218, 204, .53); font: 500 .5rem/1.25 "DM Sans", sans-serif; letter-spacing: .08em; overflow-wrap: anywhere; }
+    .recovery-grid { display: grid; width: 100%; min-width: 0; gap: .75rem; margin-top: 1.45rem; }
     .recovery-card { min-width: 0; border: 1px solid rgba(174, 202, 184, .16); border-radius: .8rem; padding: .95rem; background: rgba(12, 23, 18, .65); }
     .recovery-card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: .8rem; }
     .recovery-period, .recovery-label { margin: 0 0 .28rem; color: rgba(199, 218, 204, .5); font: 500 .47rem/1.2 "DM Sans", sans-serif; letter-spacing: .1em; }
@@ -339,7 +343,7 @@ const assignmentStatusClass = (status: typeof points.assignments[number]["status
     .breakdown-empty, .breakdown-bonus-note { margin: 1rem 0 0; color: rgba(199, 218, 204, .66); font: 500 .65rem/1.4 "DM Sans", sans-serif; letter-spacing: .05em; text-transform: uppercase; }
     .breakdown-bonus-note { color: #c7aa72; }
     @media (max-width: 560px) { .breakdown-summary { grid-template-columns: repeat(2, 1fr); } .breakdown-class li { grid-template-columns: minmax(0, 1fr) auto; } .breakdown-status { grid-column: 1 / -1; justify-self: start; } .opportunity-dialog-list li { grid-template-columns: minmax(0, 1fr); align-items: start; gap: .65rem; } .opportunity-dialog-list .opportunity-meta { min-width: 0; width: 100%; display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-start; gap: .55rem .8rem; } .opportunity-dialog-list .opportunity-points { margin-left: auto; } }
-    @media (max-width: 520px) { .recovery-intro { display: grid; gap: .9rem; } .recovery-summary { grid-template-columns: repeat(3, auto); justify-content: start; text-align: left; } .recovery-grade-row { gap: .45rem; } .recovery-grade-row strong { display: grid; gap: .2rem; } .recovery-ready { white-space: normal; text-align: right; } }
+    @media (max-width: 520px) { .recovery-intro { gap: 1.1rem; } .recovery-summary { gap: .55rem; } .recovery-summary span { font-size: .46rem; } .recovery-grade-row { gap: .45rem; } .recovery-grade-row strong { display: grid; gap: .2rem; } .recovery-ready { white-space: normal; text-align: right; } }
     @media (prefers-reduced-motion: reduce) { .milestone-track span { transition: none; } }
     @media (max-width: 520px) { .points-screen { padding-top: max(3rem, env(safe-area-inset-top)); padding-bottom: max(1.5rem, env(safe-area-inset-bottom)); } .status-light { font-size: .43rem; } .point-stats { gap: .4rem; } .stat-card { padding: .65rem .45rem; } .stat-card span { font-size: .42rem; } .panel-heading { gap: .65rem; } .points-to-go, .opportunity-total { font-size: .52rem; } .awaiting-total { font-size: .46rem; } }
     @media (prefers-reduced-motion: reduce) { .milestone-track span { transition: none; } }

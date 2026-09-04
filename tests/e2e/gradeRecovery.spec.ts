@@ -29,17 +29,32 @@ test.describe("grade recovery quest", () => {
     await page.goto("/");
 
     await expect(page.locator("#recovery-heading")).toHaveText("GRADE RECOVERY QUEST");
+    await expect(page.locator("#recovery-heading")).toBeVisible();
+    const recoveryMetrics = page.locator(".recovery-metric");
+    await expect(recoveryMetrics).toHaveCount(3);
+    await expect(recoveryMetrics.nth(0).locator("strong")).toHaveText("2");
+    await expect(recoveryMetrics.nth(0).locator("span")).toHaveText("CLASSES");
+    await expect(recoveryMetrics.nth(1).locator("strong")).toHaveText("6");
+    await expect(recoveryMetrics.nth(1).locator("span")).toHaveText("MISSIONS");
+    await expect(recoveryMetrics.nth(2).locator("strong")).toHaveText("65");
+    await expect(recoveryMetrics.nth(2).locator("span")).toHaveText("PTS TO RECOVER");
     await expect(page.locator(".recovery-card")).toHaveCount(2);
     await expect(page.locator(".recovery-card").first()).toContainText("Chemistry 2");
     await expect(page.locator(".recovery-card").first()).toContainText("40 PTS AVAILABLE");
     await expect(page.locator(".recovery-card").first().getByRole("link", { name: /View class plan/ })).toHaveAttribute("href", "/classes/3");
     await expect(page.locator(".recovery-card").last()).toContainText("48%");
     await expect(page.locator(".recovery-card").last()).toContainText("F");
+    const summaryBox = await page.locator(".recovery-summary").boundingBox();
+    const firstCardBox = await page.locator(".recovery-card").first().boundingBox();
+    expect(summaryBox).not.toBeNull();
+    expect(firstCardBox).not.toBeNull();
+    expect(firstCardBox!.y - (summaryBox!.y + summaryBox!.height)).toBeGreaterThanOrEqual(16);
   });
 
   test("does not overflow on a phone-sized viewport", async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto("/");
     expect(await page.locator("body").evaluate((body) => body.scrollWidth <= window.innerWidth)).toBe(true);
+    expect(await page.locator(".recovery-panel").evaluate((panel) => panel.scrollWidth <= panel.clientWidth)).toBe(true);
   });
 });
