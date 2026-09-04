@@ -4,6 +4,7 @@ import gradesData from "../../data/grades.json";
 import type { Class, Assignment } from "../../types/grades";
 import fs from "node:fs/promises";
 import path from "node:path";
+import { getClassRouteKey, normalizeClassName } from "../../utils/classRoutes";
 
 type ScrapedAssignment = {
   name: string;
@@ -24,8 +25,6 @@ type ScrapedGrades = {
 };
 
 export async function getStaticPaths() {
-  const normalizeClassName = (value: string): string =>
-    value.trim().toLowerCase().replace(/[^a-z0-9]+/g, " ");
   const normalizePeriod = (value: string): string => value.trim();
 
   const classes = gradesData.classes as Class[];
@@ -38,19 +37,31 @@ export async function getStaticPaths() {
   } catch (error) {
     scrapedClasses = [];
   }
-  const scrapedByPeriod = new Map(
-    scrapedClasses.map((entry) => [normalizePeriod(entry.period), entry])
-  );
   const scrapedByName = new Map(
     scrapedClasses.map((entry) => [normalizeClassName(entry.className), entry])
   );
+  const classesByPeriod = new Map<string, Class[]>();
+  for (const classInfo of classes) {
+    const entries = classesByPeriod.get(normalizePeriod(classInfo.period)) ?? [];
+    entries.push(classInfo);
+    classesByPeriod.set(normalizePeriod(classInfo.period), entries);
+  }
+  const scrapedByPeriod = new Map<string, ScrapedClass[]>();
+  for (const entry of scrapedClasses) {
+    const period = normalizePeriod(entry.period);
+    const entries = scrapedByPeriod.get(period) ?? [];
+    entries.push(entry);
+    scrapedByPeriod.set(period, entries);
+  }
   return classes.map((classInfo) => ({
-    params: { classId: classInfo.class_id || classInfo.period },
+    params: { classId: getClassRouteKey(classInfo, classes) },
     props: (() => {
       const periodKey = normalizePeriod(classInfo.period);
       const nameKey = normalizeClassName(classInfo.class_name);
-      const scrapedMatch =
-        scrapedByPeriod.get(periodKey) ?? scrapedByName.get(nameKey);
+      const scrapedMatch = scrapedByName.get(nameKey) ??
+        (classesByPeriod.get(periodKey)?.length === 1 && scrapedByPeriod.get(periodKey)?.length === 1
+          ? scrapedByPeriod.get(periodKey)?.[0]
+          : undefined);
       return {
         classInfo,
         scrapedAssignments: scrapedMatch?.assignments ?? [],
@@ -591,7 +602,11 @@ const hasAssignments = assignments.length > 0;
     .class-info-card > span { display: block; margin-bottom: .45rem; color: rgba(199, 218, 204, .52); font: 500 .5rem/1.2 "DM Sans", sans-serif; letter-spacing: .09em; }
     .class-info-card strong { display: block; overflow-wrap: anywhere; color: #e8eee9; font: 500 .75rem/1.3 "DM Sans", sans-serif; }
     .class-grade-values { display: flex; flex-wrap: wrap; align-items: center; gap: .45rem; }
-    .class-grade-values .grade-badge { border: 0; border-radius: 999px; padding: .45rem .6rem; font: 600 .62rem/1 "DM Sans", sans-serif; }
+    .class-page .grade-badge { border: 0; border-radius: 999px; padding: .45rem .6rem; font: 600 .62rem/1 "DM Sans", sans-serif; }
+    .class-page .grade-badge.grade-a { color: #142219; background: #9fbea8; }
+    .class-page .grade-badge.grade-b { color: #242016; background: #c7aa72; }
+    .class-page .grade-badge.grade-c { color: #242016; background: #b8a47a; }
+    .class-page .grade-badge.grade-d, .class-page .grade-badge.grade-f { color: #e8eee9; background: #6c756d; }
     .assignments-panel { margin-top: 1rem; padding: clamp(1rem, 4vw, 1.5rem); }
     .assignments-heading { justify-content: flex-start; }
     .assignments-heading h2 { margin: 0; color: #e8eee9; font: 600 clamp(1rem, 4vw, 1.3rem)/1.15 "DM Sans", sans-serif; letter-spacing: .06em; }

@@ -3,6 +3,7 @@ import gradesData from "../data/grades.json";
 import missingAssignmentsData from "../data/missing_assignments.json";
 import fs from "fs/promises";
 import path from "path";
+import { getClassRouteKey, normalizeClassName as normalizeRouteClassName } from "../utils/classRoutes";
 
 type ScrapedAssignment = {
     earnedPoints: number;
@@ -43,10 +44,16 @@ const metadata = {
 };
 
 const normalizeClassName = (value: string): string =>
-    value.trim().toLowerCase().replace(/[^a-z0-9]+/g, " ");
+    normalizeRouteClassName(value);
 const classLookup = new Map(
     data.map((entry) => [normalizeClassName(entry.className), entry]),
 );
+const classesByPeriod = new Map<string, typeof data>();
+for (const entry of data) {
+    const entries = classesByPeriod.get(entry.period) ?? [];
+    entries.push(entry);
+    classesByPeriod.set(entry.period, entries);
+}
 
 const normalizeMissingDate = (value: string): string =>
     value.replace(/\u00a0/g, " ").replace(/\s*\(Q\d+\)/i, "").trim();
@@ -63,15 +70,19 @@ try {
 const scrapedByName = new Map(
     scrapedClasses.map((entry) => [normalizeClassName(entry.className), entry]),
 );
-const scrapedByPeriod = new Map(
-    scrapedClasses.map((entry) => [entry.period.trim(), entry]),
-);
+const scrapedByPeriod = new Map<string, ScrapedClass[]>();
+for (const entry of scrapedClasses) {
+    const entries = scrapedByPeriod.get(entry.period.trim()) ?? [];
+    entries.push(entry);
+    scrapedByPeriod.set(entry.period.trim(), entries);
+}
 
 function getClassPoints(className: string, classPeriod: string | null) {
     const normalizedName = normalizeClassName(className);
-    const scraped =
-        (classPeriod ? scrapedByPeriod.get(classPeriod) : undefined) ??
-        scrapedByName.get(normalizedName);
+    const scraped = scrapedByName.get(normalizedName) ??
+        (classPeriod && classesByPeriod.get(classPeriod)?.length === 1 && scrapedByPeriod.get(classPeriod)?.length === 1
+            ? scrapedByPeriod.get(classPeriod)?.[0]
+            : undefined);
     if (!scraped || !scraped.assignments?.length) {
         return null;
     }
@@ -114,6 +125,7 @@ const missingAssignments = (missingAssignmentsData as MissingAssignmentsData).mi
             classGrade: classInfo?.grade ?? null,
             classLetterGrade: classInfo?.lettergrade ?? null,
             classPeriod: classInfo?.period ?? null,
+            classRoute: classInfo ? getClassRouteKey({ class_name: classInfo.class_name, period: classInfo.period }, gradesData.classes) : null,
             classPoints,
         };
     },
@@ -262,7 +274,7 @@ const classFluctuation = new Map<string, FluctuationData>(
                         ? `${deltaSign}${fluct.delta >= 0 ? "+" : ""}${Math.round(fluct.delta)}%`
                         : "●—";
                     return (
-                        <a href={`/classes/${i.period}`} class="block p-[15px] border-[3px] border-solid border-[#555] bg-[#000] hover:border-[#00ff00] hover:shadow-[0_0_10px_rgba(0,255,0,0.3)] transition-all cursor-pointer">
+                        <a href={`/classes/${getClassRouteKey({ class_name: i.className, period: i.period }, data)}`} class="block p-[15px] border-[3px] border-solid border-[#555] bg-[#000] hover:border-[#00ff00] hover:shadow-[0_0_10px_rgba(0,255,0,0.3)] transition-all cursor-pointer">
                             <div class="flex justify-between items-center flex-wrap gap-2 mb-3">
                                 <span class="text-[0.6em] text-white uppercase flex-1 min-w-0 truncate">
                                     {i.className} <span class="text-[#777]">— {i.teacher}</span>
@@ -481,8 +493,8 @@ const classFluctuation = new Map<string, FluctuationData>(
         if (maxEl) maxEl.textContent = quest.maxPoints ? quest.maxPoints.toString() : "N/A";
 
         if (classLink) {
-            if (quest.classPeriod) {
-                classLink.href = `/classes/${quest.classPeriod}`;
+            if (quest.classRoute) {
+                classLink.href = `/classes/${quest.classRoute}`;
                 classLink.classList.remove("hidden");
             } else {
                 classLink.classList.add("hidden");

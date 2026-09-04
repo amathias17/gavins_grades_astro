@@ -10,6 +10,19 @@ test.describe("class plan", () => {
     await expect(page.locator(".class-header-card")).toHaveCSS("border-radius", "16px");
     await expect(page.locator(".assignments-panel")).toBeVisible();
     await expect(page.locator(".assignment-status").first()).toBeVisible();
+    await expect(page.locator(".assignment-impact-button")).toHaveCount(7);
+    await expect(page.locator(".assignment-impact-button", { hasText: "Create your own Lab coat" })).toHaveCount(0);
+    await expect(page.locator(".assignments-panel .grade-badge").first()).toHaveCSS("border-radius", "999px");
+  });
+
+  test("keeps duplicate-period class plans separate", async ({ page }) => {
+    await page.goto("/classes/1-heroes-monsters");
+    await expect(page.locator("#class-title")).toHaveText("Heroes & Monsters");
+    await expect(page.locator(".assignment-impact-button")).toHaveCount(0);
+
+    await page.goto("/classes/1-environ-science-1");
+    await expect(page.locator("#class-title")).toHaveText("Environ Science 1");
+    await expect(page.locator(".assignment-impact-button")).toHaveCount(7);
   });
 
   test("keeps assignment impact interaction accessible", async ({ page }) => {

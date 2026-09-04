@@ -13,6 +13,7 @@ import { getBadgeStatesWithApiArtwork } from "../utils/badges";
 import BadgeCard from "./BadgeCard.astro";
 import type { MissingPointAssignment } from "../utils/points";
 import { calculateGradeRecovery } from "../utils/gradeRecovery";
+import { getClassRouteKey } from "../utils/classRoutes";
 
 type ScrapedAssignment = { name: string; dueDate: string | null; earnedPoints: number; totalPoints: number; weight?: number | null; graded: boolean };
 type ScrapedClass = { className: string; period: string; assignments: ScrapedAssignment[] };
@@ -110,7 +111,7 @@ const assignmentStatusClass = (status: typeof points.assignments[number]["status
                         <div><span class="recovery-label">IF ALL MISSIONS LAND</span><strong aria-label={summary.hasEstimate ? `Projected grade ${summary.projectedGrade} percent, ${summary.projectedLetterGrade}` : "Projection data needed"}>{summary.hasEstimate ? `${summary.projectedGrade}%` : "DATA NEEDED"}<small>{summary.projectedLetterGrade ?? (summary.hasEstimate ? "—" : "NO ESTIMATE")}</small></strong></div>
                     </div>
                     <div class="recovery-meta"><span>{summary.missingCount} {summary.missingCount === 1 ? "MISSION" : "MISSIONS"}</span><strong>{summary.missingPoints} PTS AVAILABLE</strong>{summary.gradeDelta !== null && <span class="recovery-delta">+{summary.gradeDelta.toFixed(2)} PTS PROJECTED</span>}</div>
-                    <a class="recovery-link" href={`/classes/${summary.period}`} aria-label={`View class plan for ${summary.className}, period ${summary.period}`}>VIEW CLASS PLAN <span aria-hidden="true">↗</span></a>
+                    <a class="recovery-link" href={`/classes/${getClassRouteKey({ class_name: summary.className, period: summary.period }, gradesData.classes)}`} aria-label={`View class plan for ${summary.className}, period ${summary.period}`}>VIEW CLASS PLAN <span aria-hidden="true">↗</span></a>
                 </article>)}
             </div>
         </section>}

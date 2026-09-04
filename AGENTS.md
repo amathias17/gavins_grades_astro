@@ -4,7 +4,7 @@
 - Astro 5 + Tailwind 4.1 (@tailwindcss/vite); layout in src/layouts/BaseLayout.astro imports src/styles/global.css and retro neon-green/black theme.
 - Pages: src/pages/index.astro (A-grade payout dashboard), src/pages/classes/[classId].astro (per-class plan and assignment log), src/pages/calculator.astro (dashboard-style calculator), src/pages/stats.astro (grade history stats), src/pages/anime.astro (Dragon Ball Z proof-of-concept); legacy prototypes in src/pages/new.astro and src/pages/old.astro.
 - Layout lab lives at src/pages/lab.astro for dev-only visual experiments and is not linked in navigation.
-- Class pages read scraped assignment data from scraper/detailed-grades.json at build time when available, matching by period and normalized class name.
+- Class pages read scraped assignment data from scraper/detailed-grades.json at build time when available, matching by normalized class name first and using period only when exactly one class exists in both feeds for that period. Canonical class links use class_id or a period/name slug from src/utils/classRoutes.ts when periods are duplicated.
 - Components in src/components/ (CurrentGrades.astro, GradeCalculator.astro, etc.); utilities in src/utils/gradeCalculator.ts; data in src/data/grades.json and src/data/missing_assignments.json (class_id may be absent; use period). Encoding artifacts exist; do not "clean" without source confirmation.
 - The standalone /calculator page shows the grade impact calculation breakdown; class plans do not embed the calculator.
 - Class assignments treat past-due pending items as missing, display 0/total, and include them in calculator totals.
