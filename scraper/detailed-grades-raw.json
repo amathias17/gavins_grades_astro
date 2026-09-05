@@ -328,12 +328,12 @@
     "period": "5",
     "currentGrade": 100,
     "assignmentName": "Lab Coat Activity",
-    "dateDue": "09/03/2026",
-    "dueDate": "09/03/2026",
-    "earnedPoints": 6,
-    "totalPoints": 5,
+    "dateDue": "09/02/2026",
+    "dueDate": "09/02/2026",
+    "earnedPoints": 0,
+    "totalPoints": 15,
     "weight": 1,
-    "graded": true
+    "graded": false
   },
   {
     "classId": "47705",
