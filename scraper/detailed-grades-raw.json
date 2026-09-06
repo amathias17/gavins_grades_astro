@@ -106,8 +106,8 @@
     "assignmentName": "Signed Syllabus",
     "dateDue": "08/31/2026",
     "dueDate": "08/31/2026",
-    "earnedPoints": 9,
-    "totalPoints": 10,
+    "earnedPoints": 5,
+    "totalPoints": 5,
     "weight": 1,
     "graded": true
   },
@@ -122,8 +122,8 @@
     "assignmentName": "Create your own Lab coat",
     "dateDue": "08/31/2026",
     "dueDate": "08/31/2026",
-    "earnedPoints": 0,
-    "totalPoints": 20,
+    "earnedPoints": 5,
+    "totalPoints": 5,
     "weight": 1,
     "graded": true
   },
@@ -154,8 +154,8 @@
     "assignmentName": "Lab Safety Rules Packet",
     "dateDue": "09/03/2026",
     "dueDate": "09/03/2026",
-    "earnedPoints": 35,
-    "totalPoints": 50,
+    "earnedPoints": 0,
+    "totalPoints": 15,
     "weight": 1,
     "graded": true
   },
@@ -171,7 +171,7 @@
     "dateDue": "09/03/2026",
     "dueDate": "09/03/2026",
     "earnedPoints": 0,
-    "totalPoints": 10,
+    "totalPoints": 15,
     "weight": 1,
     "graded": true
   },
@@ -218,7 +218,7 @@
     "assignmentName": "Signed Lab Safety Contract",
     "dateDue": "09/02/2026",
     "dueDate": "09/02/2026",
-    "earnedPoints": 0,
+    "earnedPoints": 5,
     "totalPoints": 5,
     "weight": 1,
     "graded": true
@@ -248,12 +248,12 @@
     "period": "4",
     "currentGrade": 90,
     "assignmentName": "HW #2 Expressions & Operations",
-    "dateDue": "09/02/2026",
-    "dueDate": "09/02/2026",
+    "dateDue": "09/09/2026",
+    "dueDate": "09/09/2026",
     "earnedPoints": 0,
     "totalPoints": 10,
     "weight": 1,
-    "graded": true
+    "graded": false
   },
   {
     "classId": "47574",
@@ -264,12 +264,12 @@
     "period": "4",
     "currentGrade": 90,
     "assignmentName": "HW #1 Simp. Rad. & Class. Num.",
-    "dateDue": "09/03/2026",
-    "dueDate": "09/03/2026",
-    "earnedPoints": 9,
+    "dateDue": "09/09/2026",
+    "dueDate": "09/09/2026",
+    "earnedPoints": 0,
     "totalPoints": 10,
     "weight": 1,
-    "graded": true
+    "graded": false
   },
   {
     "classId": "47574",
@@ -296,8 +296,8 @@
     "period": "5",
     "currentGrade": 100,
     "assignmentName": "Human Machine",
-    "dateDue": "08/31/2026",
-    "dueDate": "08/31/2026",
+    "dateDue": "09/04/2026",
+    "dueDate": "09/04/2026",
     "earnedPoints": 0,
     "totalPoints": 10,
     "weight": 1,
@@ -312,12 +312,12 @@
     "period": "5",
     "currentGrade": 100,
     "assignmentName": "Anatomy/Physiolgy ID exit Slip",
-    "dateDue": "09/03/2026",
-    "dueDate": "09/03/2026",
-    "earnedPoints": 6,
-    "totalPoints": 5,
+    "dateDue": "09/04/2026",
+    "dueDate": "09/04/2026",
+    "earnedPoints": 0,
+    "totalPoints": 10,
     "weight": 1,
-    "graded": true
+    "graded": false
   },
   {
     "classId": "47705",
@@ -344,12 +344,12 @@
     "period": "5",
     "currentGrade": 100,
     "assignmentName": "Virtual Simulator mini-lab",
-    "dateDue": "09/02/2026",
-    "dueDate": "09/02/2026",
-    "earnedPoints": 0,
-    "totalPoints": 15,
+    "dateDue": "09/01/2026",
+    "dueDate": "09/01/2026",
+    "earnedPoints": 5,
+    "totalPoints": 5,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "47705",
@@ -360,10 +360,10 @@
     "period": "5",
     "currentGrade": 100,
     "assignmentName": "Syllabus/Grading Policy Signed",
-    "dateDue": "08/31/2026",
-    "dueDate": "08/31/2026",
-    "earnedPoints": 11,
-    "totalPoints": 10,
+    "dateDue": "09/01/2026",
+    "dueDate": "09/01/2026",
+    "earnedPoints": 5,
+    "totalPoints": 5,
     "weight": 1,
     "graded": true
   },
@@ -394,8 +394,8 @@
     "assignmentName": "Signed Course Syllabus",
     "dateDue": "08/28/2026",
     "dueDate": "08/28/2026",
-    "earnedPoints": 31,
-    "totalPoints": 33,
+    "earnedPoints": 20,
+    "totalPoints": 20,
     "weight": 1,
     "graded": true
   },
@@ -410,10 +410,10 @@
     "assignmentName": "\"Supervolcanoes\" Sky Show",
     "dateDue": "08/28/2026",
     "dueDate": "08/28/2026",
-    "earnedPoints": 0,
-    "totalPoints": 0,
+    "earnedPoints": 20,
+    "totalPoints": 20,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "47487",
@@ -442,10 +442,10 @@
     "assignmentName": "Ch 1 5 Themes of Geography",
     "dateDue": "09/03/2026",
     "dueDate": "09/03/2026",
-    "earnedPoints": 50,
-    "totalPoints": 50,
+    "earnedPoints": 0,
+    "totalPoints": 10,
     "weight": 1,
-    "graded": true
+    "graded": false
   },
   {
     "classId": "47350",
@@ -456,8 +456,8 @@
     "period": "7",
     "currentGrade": 0,
     "assignmentName": "ch 1 5 areas of social studies",
-    "dateDue": "09/02/2026",
-    "dueDate": "09/02/2026",
+    "dateDue": "09/03/2026",
+    "dueDate": "09/03/2026",
     "earnedPoints": 0,
     "totalPoints": 10,
     "weight": 1,

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-09-06T04:20:12.400Z",
+    "scrapedAt": "2026-09-06T14:58:04.229Z",
     "totalClasses": 13,
     "totalAssignments": 30
   },
@@ -54,16 +54,16 @@
         {
           "name": "Signed Syllabus",
           "dueDate": "08/31/2026",
-          "earnedPoints": 9,
-          "totalPoints": 10,
+          "earnedPoints": 5,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Create your own Lab coat",
           "dueDate": "08/31/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
+          "earnedPoints": 5,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         }
@@ -102,8 +102,8 @@
         {
           "name": "Lab Safety Rules Packet",
           "dueDate": "09/03/2026",
-          "earnedPoints": 35,
-          "totalPoints": 50,
+          "earnedPoints": 0,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
@@ -111,7 +111,7 @@
           "name": "1WS#1-SafetySymbols&Procedures",
           "dueDate": "09/03/2026",
           "earnedPoints": 0,
-          "totalPoints": 10,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
@@ -134,7 +134,7 @@
         {
           "name": "Signed Lab Safety Contract",
           "dueDate": "09/02/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 5,
           "totalPoints": 5,
           "weight": 1,
           "graded": true
@@ -157,19 +157,19 @@
       "assignments": [
         {
           "name": "HW #2 Expressions & Operations",
-          "dueDate": "09/02/2026",
+          "dueDate": "09/09/2026",
           "earnedPoints": 0,
           "totalPoints": 10,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "HW #1 Simp. Rad. & Class. Num.",
-          "dueDate": "09/03/2026",
-          "earnedPoints": 9,
+          "dueDate": "09/09/2026",
+          "earnedPoints": 0,
           "totalPoints": 10,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "Classroom Policy",
@@ -189,7 +189,7 @@
       "assignments": [
         {
           "name": "Human Machine",
-          "dueDate": "08/31/2026",
+          "dueDate": "09/04/2026",
           "earnedPoints": 0,
           "totalPoints": 10,
           "weight": 1,
@@ -197,11 +197,11 @@
         },
         {
           "name": "Anatomy/Physiolgy ID exit Slip",
-          "dueDate": "09/03/2026",
-          "earnedPoints": 6,
-          "totalPoints": 5,
+          "dueDate": "09/04/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "Lab Coat Activity",
@@ -213,17 +213,17 @@
         },
         {
           "name": "Virtual Simulator mini-lab",
-          "dueDate": "09/02/2026",
-          "earnedPoints": 0,
-          "totalPoints": 15,
+          "dueDate": "09/01/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Syllabus/Grading Policy Signed",
-          "dueDate": "08/31/2026",
-          "earnedPoints": 11,
-          "totalPoints": 10,
+          "dueDate": "09/01/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         }
@@ -246,18 +246,18 @@
         {
           "name": "Signed Course Syllabus",
           "dueDate": "08/28/2026",
-          "earnedPoints": 31,
-          "totalPoints": 33,
+          "earnedPoints": 20,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         },
         {
           "name": "\"Supervolcanoes\" Sky Show",
           "dueDate": "08/28/2026",
-          "earnedPoints": 0,
-          "totalPoints": 0,
+          "earnedPoints": 20,
+          "totalPoints": 20,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "CLASS PARTICIPATION",
@@ -278,14 +278,14 @@
         {
           "name": "Ch 1 5 Themes of Geography",
           "dueDate": "09/03/2026",
-          "earnedPoints": 50,
-          "totalPoints": 50,
+          "earnedPoints": 0,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "ch 1 5 areas of social studies",
-          "dueDate": "09/02/2026",
+          "dueDate": "09/03/2026",
           "earnedPoints": 0,
           "totalPoints": 10,
           "weight": 1,
