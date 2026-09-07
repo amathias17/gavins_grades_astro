@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-09-07T04:19:17.737Z",
+    "scrapedAt": "2026-09-07T17:16:43.974Z",
     "totalClasses": 13,
     "totalAssignments": 30
   },
@@ -54,16 +54,16 @@
         {
           "name": "Signed Syllabus",
           "dueDate": "08/31/2026",
-          "earnedPoints": 9,
-          "totalPoints": 10,
+          "earnedPoints": 5,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Create your own Lab coat",
           "dueDate": "08/31/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
+          "earnedPoints": 5,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         }
@@ -77,9 +77,9 @@
       "assignments": [
         {
           "name": "Week1",
-          "dueDate": "08/31/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
+          "dueDate": "09/04/2026",
+          "earnedPoints": 35,
+          "totalPoints": 50,
           "weight": 1,
           "graded": true
         }
@@ -102,8 +102,8 @@
         {
           "name": "Lab Safety Rules Packet",
           "dueDate": "09/03/2026",
-          "earnedPoints": 35,
-          "totalPoints": 50,
+          "earnedPoints": 0,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
@@ -111,15 +111,15 @@
           "name": "1WS#1-SafetySymbols&Procedures",
           "dueDate": "09/03/2026",
           "earnedPoints": 0,
-          "totalPoints": 10,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Signed Syllabus",
-          "dueDate": "09/03/2026",
-          "earnedPoints": 0,
-          "totalPoints": 10,
+          "dueDate": "09/02/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         },
@@ -143,7 +143,7 @@
           "name": "Safety in the Lab Practice",
           "dueDate": "09/02/2026",
           "earnedPoints": 0,
-          "totalPoints": 5,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         }
@@ -173,11 +173,11 @@
         },
         {
           "name": "Classroom Policy",
-          "dueDate": "09/03/2026",
-          "earnedPoints": 9,
+          "dueDate": "08/31/2026",
+          "earnedPoints": 0,
           "totalPoints": 10,
           "weight": 1,
-          "graded": true
+          "graded": false
         }
       ]
     },
@@ -205,11 +205,11 @@
         },
         {
           "name": "Lab Coat Activity",
-          "dueDate": "09/03/2026",
-          "earnedPoints": 6,
-          "totalPoints": 5,
+          "dueDate": "09/02/2026",
+          "earnedPoints": 0,
+          "totalPoints": 15,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "Virtual Simulator mini-lab",
@@ -238,8 +238,8 @@
         {
           "name": "Powers of 10 Quiz",
           "dueDate": "09/01/2026",
-          "earnedPoints": 11,
-          "totalPoints": 10,
+          "earnedPoints": 31,
+          "totalPoints": 33,
           "weight": 1,
           "graded": true
         },
@@ -262,10 +262,10 @@
         {
           "name": "CLASS PARTICIPATION",
           "dueDate": "08/26/2026",
-          "earnedPoints": 0,
-          "totalPoints": 0,
+          "earnedPoints": 50,
+          "totalPoints": 50,
           "weight": 1,
-          "graded": false
+          "graded": true
         }
       ]
     },
