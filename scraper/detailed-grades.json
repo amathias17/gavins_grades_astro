@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-09-06T14:58:04.229Z",
+    "scrapedAt": "2026-09-07T04:19:17.737Z",
     "totalClasses": 13,
     "totalAssignments": 30
   },
@@ -54,16 +54,16 @@
         {
           "name": "Signed Syllabus",
           "dueDate": "08/31/2026",
-          "earnedPoints": 5,
-          "totalPoints": 5,
+          "earnedPoints": 9,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Create your own Lab coat",
           "dueDate": "08/31/2026",
-          "earnedPoints": 5,
-          "totalPoints": 5,
+          "earnedPoints": 0,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         }
@@ -102,8 +102,8 @@
         {
           "name": "Lab Safety Rules Packet",
           "dueDate": "09/03/2026",
-          "earnedPoints": 0,
-          "totalPoints": 15,
+          "earnedPoints": 35,
+          "totalPoints": 50,
           "weight": 1,
           "graded": true
         },
@@ -111,7 +111,7 @@
           "name": "1WS#1-SafetySymbols&Procedures",
           "dueDate": "09/03/2026",
           "earnedPoints": 0,
-          "totalPoints": 15,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },

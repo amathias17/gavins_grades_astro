@@ -106,8 +106,8 @@
     "assignmentName": "Signed Syllabus",
     "dateDue": "08/31/2026",
     "dueDate": "08/31/2026",
-    "earnedPoints": 5,
-    "totalPoints": 5,
+    "earnedPoints": 9,
+    "totalPoints": 10,
     "weight": 1,
     "graded": true
   },
@@ -122,8 +122,8 @@
     "assignmentName": "Create your own Lab coat",
     "dateDue": "08/31/2026",
     "dueDate": "08/31/2026",
-    "earnedPoints": 5,
-    "totalPoints": 5,
+    "earnedPoints": 0,
+    "totalPoints": 20,
     "weight": 1,
     "graded": true
   },
@@ -154,8 +154,8 @@
     "assignmentName": "Lab Safety Rules Packet",
     "dateDue": "09/03/2026",
     "dueDate": "09/03/2026",
-    "earnedPoints": 0,
-    "totalPoints": 15,
+    "earnedPoints": 35,
+    "totalPoints": 50,
     "weight": 1,
     "graded": true
   },
@@ -171,7 +171,7 @@
     "dateDue": "09/03/2026",
     "dueDate": "09/03/2026",
     "earnedPoints": 0,
-    "totalPoints": 15,
+    "totalPoints": 10,
     "weight": 1,
     "graded": true
   },
