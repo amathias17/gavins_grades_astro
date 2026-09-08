@@ -136,10 +136,10 @@
     "period": "2",
     "currentGrade": 70,
     "assignmentName": "Week1",
-    "dateDue": "09/04/2026",
-    "dueDate": "09/04/2026",
-    "earnedPoints": 35,
-    "totalPoints": 50,
+    "dateDue": "08/31/2026",
+    "dueDate": "08/31/2026",
+    "earnedPoints": 0,
+    "totalPoints": 20,
     "weight": 1,
     "graded": true
   },
@@ -328,12 +328,12 @@
     "period": "5",
     "currentGrade": 100,
     "assignmentName": "Lab Coat Activity",
-    "dateDue": "09/02/2026",
-    "dueDate": "09/02/2026",
-    "earnedPoints": 0,
-    "totalPoints": 15,
+    "dateDue": "09/03/2026",
+    "dueDate": "09/03/2026",
+    "earnedPoints": 6,
+    "totalPoints": 5,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "47705",
@@ -426,10 +426,10 @@
     "assignmentName": "CLASS PARTICIPATION",
     "dateDue": "08/26/2026",
     "dueDate": "08/26/2026",
-    "earnedPoints": 50,
-    "totalPoints": 50,
+    "earnedPoints": 0,
+    "totalPoints": 0,
     "weight": 1,
-    "graded": true
+    "graded": false
   },
   {
     "classId": "47350",
