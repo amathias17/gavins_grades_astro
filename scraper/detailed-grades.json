@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-09-09T04:26:40.842Z",
+    "scrapedAt": "2026-09-09T15:59:26.848Z",
     "totalClasses": 13,
-    "totalAssignments": 32
+    "totalAssignments": 40
   },
   "classes": [
     {
@@ -97,21 +97,61 @@
       "className": "CHEMISTRY          2",
       "teacher": "Paula Irwin",
       "period": "3",
-      "currentGrade": 20,
+      "currentGrade": 44,
       "assignments": [
         {
-          "name": "Lab Safety Rules Packet",
-          "dueDate": "09/03/2026",
+          "name": "Safety Equipment WS",
+          "dueDate": "09/08/2026",
           "earnedPoints": 0,
-          "totalPoints": 15,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Safety Equipment Map WS",
+          "dueDate": "09/08/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Safety Drawing/Poster",
+          "dueDate": "09/08/2026",
+          "earnedPoints": 0,
+          "totalPoints": 25,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Safety QUIZ MC & T/F",
+          "dueDate": "09/08/2026",
+          "earnedPoints": 27,
+          "totalPoints": 34,
           "weight": 1,
           "graded": true
+        },
+        {
+          "name": "Safety QUIZ Map",
+          "dueDate": "09/08/2026",
+          "earnedPoints": 27,
+          "totalPoints": 34,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Lab Safety Rules Packet",
+          "dueDate": "09/08/2026",
+          "earnedPoints": 0,
+          "totalPoints": 11,
+          "weight": 1,
+          "graded": false
         },
         {
           "name": "1WS#1-SafetySymbols&Procedures",
           "dueDate": "09/03/2026",
           "earnedPoints": 0,
-          "totalPoints": 15,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
@@ -134,7 +174,7 @@
         {
           "name": "Signed Lab Safety Contract",
           "dueDate": "09/02/2026",
-          "earnedPoints": 5,
+          "earnedPoints": 0,
           "totalPoints": 5,
           "weight": 1,
           "graded": true
@@ -144,6 +184,14 @@
           "dueDate": "09/02/2026",
           "earnedPoints": 0,
           "totalPoints": 5,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Lab Safety Lesson Starters",
+          "dueDate": "09/02/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         }
@@ -164,6 +212,14 @@
           "graded": false
         },
         {
+          "name": "Real Numbers Math Lib Activity",
+          "dueDate": "09/09/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
           "name": "HW #1 Simp. Rad. & Class. Num.",
           "dueDate": "09/09/2026",
           "earnedPoints": 0,
@@ -173,11 +229,11 @@
         },
         {
           "name": "Classroom Policy",
-          "dueDate": "09/03/2026",
-          "earnedPoints": 9,
+          "dueDate": "08/31/2026",
+          "earnedPoints": 0,
           "totalPoints": 10,
           "weight": 1,
-          "graded": true
+          "graded": false
         }
       ]
     },
@@ -188,36 +244,44 @@
       "currentGrade": 100,
       "assignments": [
         {
+          "name": "Organization C.M and notes",
+          "dueDate": "08/31/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
           "name": "Human Machine",
-          "dueDate": "09/04/2026",
-          "earnedPoints": 11,
-          "totalPoints": 10,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Anatomy/Physiolgy ID exit Slip",
-          "dueDate": "09/04/2026",
-          "earnedPoints": 11,
-          "totalPoints": 10,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Lab Coat Activity",
-          "dueDate": "09/02/2026",
+          "dueDate": "09/09/2026",
           "earnedPoints": 0,
           "totalPoints": 15,
           "weight": 1,
           "graded": false
         },
         {
-          "name": "Virtual Simulator mini-lab",
-          "dueDate": "09/01/2026",
-          "earnedPoints": 5,
+          "name": "Anatomy/Physiolgy ID exit Slip",
+          "dueDate": "09/03/2026",
+          "earnedPoints": 6,
           "totalPoints": 5,
           "weight": 1,
           "graded": true
+        },
+        {
+          "name": "Lab Coat Activity",
+          "dueDate": "09/03/2026",
+          "earnedPoints": 6,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Virtual Simulator mini-lab",
+          "dueDate": "09/02/2026",
+          "earnedPoints": 0,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": false
         },
         {
           "name": "Syllabus/Grading Policy Signed",
@@ -247,7 +311,7 @@
           "name": "3-Ring Binder/Folder Check",
           "dueDate": "09/04/2026",
           "earnedPoints": 20,
-          "totalPoints": 20,
+          "totalPoints": 25,
           "weight": 1,
           "graded": true
         },
@@ -270,10 +334,10 @@
         {
           "name": "\"Supervolcanoes\" Sky Show",
           "dueDate": "08/28/2026",
-          "earnedPoints": 0,
-          "totalPoints": 0,
+          "earnedPoints": 20,
+          "totalPoints": 20,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "CLASS PARTICIPATION",

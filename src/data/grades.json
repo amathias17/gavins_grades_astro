@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "09/09/2026, 12:26 AM",
+    "last_updated": "09/09/2026, 11:59 AM",
     "most_recent_date": "9/9/2026",
     "total_classes": 13
   },
@@ -92,7 +92,7 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 20,
+      "current_grade": 44,
       "letter_grade": "F"
     },
     {
@@ -2012,7 +2012,7 @@
       "9/6/2026": 20,
       "9/7/2026": 20,
       "9/8/2026": 20,
-      "9/9/2026": 20
+      "9/9/2026": 44
     },
     "Intrmediate Alg Ii": {
       "8/25/2026": null,
@@ -2141,7 +2141,7 @@
       "9/9/2026": 100
     }
   },
-  "overall_average": 72,
+  "overall_average": 76,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -2430,7 +2430,7 @@
     "9/6/2026": 75,
     "9/7/2026": 75,
     "9/8/2026": 73,
-    "9/9/2026": 72
+    "9/9/2026": 76
   },
   "streak": 0,
   "streak_history": {
