@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "09/10/2026, 12:25 AM",
+    "last_updated": "09/10/2026, 11:53 AM",
     "most_recent_date": "9/10/2026",
     "total_classes": 13
   },
@@ -32,7 +32,7 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 30,
+      "current_grade": 34,
       "letter_grade": "F"
     },
     {
@@ -1961,7 +1961,7 @@
       "9/7/2026": 48,
       "9/8/2026": 30,
       "9/9/2026": 30,
-      "9/10/2026": 30
+      "9/10/2026": 34
     },
     "Heroes & Monsters": {
       "8/25/2026": null,
