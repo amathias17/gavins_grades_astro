@@ -33,6 +33,22 @@
   },
   {
     "classId": "47460",
+    "assignmentId": "1649220",
+    "studentId": "1396",
+    "className": "ENVIRON SCIENCE    1",
+    "teacher": "Megan Kutruff",
+    "period": "1",
+    "currentGrade": 30,
+    "assignmentName": "Levels of Organization Interac",
+    "dateDue": "09/04/2026",
+    "dueDate": "09/04/2026",
+    "earnedPoints": 0,
+    "totalPoints": 30,
+    "weight": 1,
+    "graded": true
+  },
+  {
+    "classId": "47460",
     "assignmentId": "1647188",
     "studentId": "1396",
     "className": "ENVIRON SCIENCE    1",
@@ -42,8 +58,8 @@
     "assignmentName": "Lab Safety Quiz",
     "dateDue": "09/04/2026",
     "dueDate": "09/04/2026",
-    "earnedPoints": 0,
-    "totalPoints": 30,
+    "earnedPoints": 10,
+    "totalPoints": 10,
     "weight": 1,
     "graded": true
   },
@@ -58,8 +74,8 @@
     "assignmentName": "Lab Safety Contract",
     "dateDue": "09/04/2026",
     "dueDate": "09/04/2026",
-    "earnedPoints": 0,
-    "totalPoints": 5,
+    "earnedPoints": 10,
+    "totalPoints": 10,
     "weight": 1,
     "graded": true
   },
@@ -187,7 +203,7 @@
     "dateDue": "09/08/2026",
     "dueDate": "09/08/2026",
     "earnedPoints": 0,
-    "totalPoints": 25,
+    "totalPoints": 20,
     "weight": 1,
     "graded": false
   },
@@ -328,12 +344,12 @@
     "period": "3",
     "currentGrade": 44,
     "assignmentName": "Lab Safety Lesson Starters",
-    "dateDue": "09/02/2026",
-    "dueDate": "09/02/2026",
+    "dateDue": "08/31/2026",
+    "dueDate": "08/31/2026",
     "earnedPoints": 0,
-    "totalPoints": 10,
+    "totalPoints": 20,
     "weight": 1,
-    "graded": true
+    "graded": false
   },
   {
     "classId": "47574",
