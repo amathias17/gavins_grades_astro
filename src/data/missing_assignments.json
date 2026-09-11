@@ -1,9 +1,25 @@
 {
   "metadata": {
-    "last_updated": "09/11/2026, 12:24 AM",
-    "count": 5
+    "last_updated": "09/11/2026, 11:56 AM",
+    "count": 7
   },
   "missing_assignments": [
+    {
+      "due_date": "09/08/2026",
+      "assignment_name": "Safety Equipment Map WS",
+      "class_name": "CHEMISTRY          2",
+      "teacher": "Paula Irwin",
+      "category": "Homework",
+      "max_points": "20"
+    },
+    {
+      "due_date": "09/08/2026",
+      "assignment_name": "Safety Drawing/Poster",
+      "class_name": "CHEMISTRY          2",
+      "teacher": "Paula Irwin",
+      "category": "Class Work",
+      "max_points": "25"
+    },
     {
       "due_date": "09/04/2026",
       "assignment_name": "Lab Safety Contract",
