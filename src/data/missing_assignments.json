@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "09/10/2026, 11:53 AM",
-    "count": 7
+    "last_updated": "09/11/2026, 12:24 AM",
+    "count": 5
   },
   "missing_assignments": [
     {
@@ -22,14 +22,6 @@
     },
     {
       "due_date": "09/03/2026",
-      "assignment_name": "Lab Safety Rules Packet",
-      "class_name": "CHEMISTRY          2",
-      "teacher": "Paula Irwin",
-      "category": "Homework",
-      "max_points": "15"
-    },
-    {
-      "due_date": "09/03/2026",
       "assignment_name": "1WS#1-SafetySymbols&Procedures",
       "class_name": "CHEMISTRY          2",
       "teacher": "Paula Irwin",
@@ -43,14 +35,6 @@
       "teacher": "Paula Irwin",
       "category": "SCIENCE",
       "max_points": "5"
-    },
-    {
-      "due_date": "09/02/2026",
-      "assignment_name": "Safety in the Lab Practice",
-      "class_name": "CHEMISTRY          2",
-      "teacher": "Paula Irwin",
-      "category": "Class Work",
-      "max_points": "10"
     },
     {
       "due_date": "08/31/2026",
