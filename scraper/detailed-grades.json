@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-09-11T15:56:20.892Z",
+    "scrapedAt": "2026-09-12T04:24:02.815Z",
     "totalClasses": 13,
     "totalAssignments": 43
   },
@@ -214,8 +214,8 @@
         {
           "name": "Safety in the Lab Practice",
           "dueDate": "09/02/2026",
-          "earnedPoints": 9,
-          "totalPoints": 10,
+          "earnedPoints": 0,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         }
