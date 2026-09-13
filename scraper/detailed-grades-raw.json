@@ -91,7 +91,7 @@
     "dateDue": "09/04/2026",
     "dueDate": "09/04/2026",
     "earnedPoints": 0,
-    "totalPoints": 5,
+    "totalPoints": 30,
     "weight": 1,
     "graded": true
   },
@@ -138,8 +138,8 @@
     "assignmentName": "Signed Syllabus",
     "dateDue": "08/31/2026",
     "dueDate": "08/31/2026",
-    "earnedPoints": 9,
-    "totalPoints": 10,
+    "earnedPoints": 5,
+    "totalPoints": 5,
     "weight": 1,
     "graded": true
   },
@@ -186,8 +186,8 @@
     "assignmentName": "Week1",
     "dateDue": "09/04/2026",
     "dueDate": "09/04/2026",
-    "earnedPoints": 40,
-    "totalPoints": 40,
+    "earnedPoints": 35,
+    "totalPoints": 50,
     "weight": 1,
     "graded": true
   },
@@ -235,7 +235,7 @@
     "dateDue": "09/08/2026",
     "dueDate": "09/08/2026",
     "earnedPoints": 0,
-    "totalPoints": 20,
+    "totalPoints": 25,
     "weight": 1,
     "graded": true
   },
@@ -280,12 +280,12 @@
     "period": "3",
     "currentGrade": 54,
     "assignmentName": "Lab Safety Rules Packet",
-    "dateDue": "09/08/2026",
-    "dueDate": "09/08/2026",
-    "earnedPoints": 0,
-    "totalPoints": 11,
+    "dateDue": "09/03/2026",
+    "dueDate": "09/03/2026",
+    "earnedPoints": 15,
+    "totalPoints": 15,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "48492",
@@ -328,10 +328,10 @@
     "period": "3",
     "currentGrade": 54,
     "assignmentName": "Signed Syllabus",
-    "dateDue": "09/03/2026",
-    "dueDate": "09/03/2026",
-    "earnedPoints": 15,
-    "totalPoints": 20,
+    "dateDue": "09/02/2026",
+    "dueDate": "09/02/2026",
+    "earnedPoints": 5,
+    "totalPoints": 5,
     "weight": 1,
     "graded": true
   },
@@ -378,8 +378,8 @@
     "assignmentName": "Safety in the Lab Practice",
     "dateDue": "09/02/2026",
     "dueDate": "09/02/2026",
-    "earnedPoints": 0,
-    "totalPoints": 5,
+    "earnedPoints": 9,
+    "totalPoints": 10,
     "weight": 1,
     "graded": true
   },
@@ -424,12 +424,12 @@
     "period": "4",
     "currentGrade": 90,
     "assignmentName": "HW #1 Simp. Rad. & Class. Num.",
-    "dateDue": "09/09/2026",
-    "dueDate": "09/09/2026",
-    "earnedPoints": 0,
+    "dateDue": "09/03/2026",
+    "dueDate": "09/03/2026",
+    "earnedPoints": 9,
     "totalPoints": 10,
     "weight": 1,
-    "graded": false
+    "graded": true
   },
   {
     "classId": "47574",
