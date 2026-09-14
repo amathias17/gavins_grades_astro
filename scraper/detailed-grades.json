@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-09-13T15:41:08.210Z",
+    "scrapedAt": "2026-09-14T04:43:04.660Z",
     "totalClasses": 13,
-    "totalAssignments": 43
+    "totalAssignments": 45
   },
   "classes": [
     {
@@ -13,11 +13,11 @@
       "assignments": [
         {
           "name": "Levels of Organization Interac",
-          "dueDate": "09/08/2026",
+          "dueDate": "09/14/2026",
           "earnedPoints": 0,
-          "totalPoints": 25,
+          "totalPoints": 20,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "Lab Safety Quiz",
@@ -105,7 +105,7 @@
       "className": "CHEMISTRY          2",
       "teacher": "Paula Irwin",
       "period": "3",
-      "currentGrade": 54,
+      "currentGrade": 56,
       "assignments": [
         {
           "name": "Safety Equipment Map WS",
@@ -143,7 +143,7 @@
           "name": "Safety Drawing/Poster",
           "dueDate": "09/08/2026",
           "earnedPoints": 0,
-          "totalPoints": 20,
+          "totalPoints": 25,
           "weight": 1,
           "graded": true
         },
@@ -165,11 +165,11 @@
         },
         {
           "name": "Lab Safety Rules Packet",
-          "dueDate": "09/08/2026",
-          "earnedPoints": 0,
-          "totalPoints": 11,
+          "dueDate": "09/03/2026",
+          "earnedPoints": 15,
+          "totalPoints": 15,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "1WS#1-SafetySymbols&Procedures",
@@ -189,9 +189,9 @@
         },
         {
           "name": "Signed Syllabus",
-          "dueDate": "09/03/2026",
-          "earnedPoints": 15,
-          "totalPoints": 20,
+          "dueDate": "09/02/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         },
@@ -245,11 +245,11 @@
         },
         {
           "name": "HW #1 Simp. Rad. & Class. Num.",
-          "dueDate": "09/09/2026",
-          "earnedPoints": 0,
+          "dueDate": "09/03/2026",
+          "earnedPoints": 9,
           "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Classroom Policy",
@@ -321,13 +321,29 @@
       "className": "ASTRONOMY",
       "teacher": "James Krug",
       "period": "6",
-      "currentGrade": 95,
+      "currentGrade": 96,
       "assignments": [
+        {
+          "name": "Assign #1: Distance, Space,...",
+          "dueDate": "09/10/2026",
+          "earnedPoints": 11,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "NCP Sky Drawing",
+          "dueDate": "09/09/2026",
+          "earnedPoints": 17,
+          "totalPoints": 18,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "\"Cosmic Voyage\" Video Review",
           "dueDate": "09/04/2026",
-          "earnedPoints": 11,
-          "totalPoints": 10,
+          "earnedPoints": 16,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
