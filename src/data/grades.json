@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "09/14/2026, 12:43 AM",
+    "last_updated": "09/14/2026, 01:46 PM",
     "most_recent_date": "9/14/2026",
     "total_classes": 13
   },
@@ -32,7 +32,7 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 34,
+      "current_grade": 28,
       "letter_grade": "F"
     },
     {
@@ -1973,7 +1973,7 @@
       "9/11/2026": 34,
       "9/12/2026": 34,
       "9/13/2026": 34,
-      "9/14/2026": 34
+      "9/14/2026": 28
     },
     "Heroes & Monsters": {
       "8/25/2026": null,
@@ -2206,7 +2206,7 @@
       "9/14/2026": 100
     }
   },
-  "overall_average": 80,
+  "overall_average": 79,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -2500,7 +2500,7 @@
     "9/11/2026": 79,
     "9/12/2026": 79,
     "9/13/2026": 79,
-    "9/14/2026": 80
+    "9/14/2026": 79
   },
   "streak": 0,
   "streak_history": {

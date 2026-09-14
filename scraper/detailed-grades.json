@@ -1,15 +1,15 @@
 {
   "metadata": {
-    "scrapedAt": "2026-09-14T04:43:04.660Z",
+    "scrapedAt": "2026-09-14T17:46:43.960Z",
     "totalClasses": 13,
-    "totalAssignments": 45
+    "totalAssignments": 50
   },
   "classes": [
     {
       "className": "ENVIRON SCIENCE    1",
       "teacher": "Megan Kutruff",
       "period": "1",
-      "currentGrade": 34,
+      "currentGrade": 28,
       "assignments": [
         {
           "name": "Levels of Organization Interac",
@@ -17,7 +17,15 @@
           "earnedPoints": 0,
           "totalPoints": 20,
           "weight": 1,
-          "graded": false
+          "graded": true
+        },
+        {
+          "name": "Levels of Organization Interac",
+          "dueDate": "09/08/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
         },
         {
           "name": "Lab Safety Quiz",
@@ -109,15 +117,7 @@
       "assignments": [
         {
           "name": "Safety Equipment Map WS",
-          "dueDate": "09/08/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Safety Drawing/Poster",
-          "dueDate": "09/08/2026",
+          "dueDate": "09/14/2026",
           "earnedPoints": 0,
           "totalPoints": 20,
           "weight": 1,
@@ -165,9 +165,9 @@
         },
         {
           "name": "Lab Safety Rules Packet",
-          "dueDate": "09/03/2026",
-          "earnedPoints": 15,
-          "totalPoints": 15,
+          "dueDate": "09/08/2026",
+          "earnedPoints": 9,
+          "totalPoints": 11,
           "weight": 1,
           "graded": true
         },
@@ -245,11 +245,11 @@
         },
         {
           "name": "HW #1 Simp. Rad. & Class. Num.",
-          "dueDate": "09/03/2026",
-          "earnedPoints": 9,
+          "dueDate": "09/09/2026",
+          "earnedPoints": 0,
           "totalPoints": 10,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "Classroom Policy",
@@ -324,12 +324,20 @@
       "currentGrade": 96,
       "assignments": [
         {
-          "name": "Assign #1: Distance, Space,...",
-          "dueDate": "09/10/2026",
+          "name": "\"Faster than Light\" Sky Show",
+          "dueDate": "09/11/2026",
           "earnedPoints": 11,
           "totalPoints": 10,
           "weight": 1,
           "graded": true
+        },
+        {
+          "name": "Assign #1: Distance, Space,...",
+          "dueDate": "09/10/2026",
+          "earnedPoints": 0,
+          "totalPoints": 18,
+          "weight": 1,
+          "graded": false
         },
         {
           "name": "NCP Sky Drawing",
@@ -396,12 +404,36 @@
       "currentGrade": 0,
       "assignments": [
         {
-          "name": "Ch 1 5 Themes of Geography",
-          "dueDate": "09/03/2026",
+          "name": "ch 2-3 plate tectonics",
+          "dueDate": "09/15/2026",
           "earnedPoints": 50,
           "totalPoints": 50,
           "weight": 1,
           "graded": true
+        },
+        {
+          "name": "ch 2-3 continental drift",
+          "dueDate": "09/15/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Ch 2-1 Goldiloks effect",
+          "dueDate": "09/14/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Ch 1 5 Themes of Geography",
+          "dueDate": "09/11/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
         },
         {
           "name": "ch 1 5 areas of social studies",
@@ -420,12 +452,20 @@
       "currentGrade": 100,
       "assignments": [
         {
-          "name": "Survey and Character",
+          "name": "Reading Comprehension Check",
           "dueDate": "09/02/2026",
           "earnedPoints": 0,
           "totalPoints": 10,
           "weight": 1,
           "graded": false
+        },
+        {
+          "name": "Survey and Character",
+          "dueDate": "09/03/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": true
         }
       ]
     }

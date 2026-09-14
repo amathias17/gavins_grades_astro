@@ -1,9 +1,17 @@
 {
   "metadata": {
-    "last_updated": "09/14/2026, 12:43 AM",
-    "count": 7
+    "last_updated": "09/14/2026, 01:46 PM",
+    "count": 8
   },
   "missing_assignments": [
+    {
+      "due_date": "09/14/2026",
+      "assignment_name": "Levels of Organization Interac",
+      "class_name": "ENVIRON SCIENCE    1",
+      "teacher": "Megan Kutruff",
+      "category": "Class Work",
+      "max_points": "20"
+    },
     {
       "due_date": "09/08/2026",
       "assignment_name": "Safety Equipment Map WS",
