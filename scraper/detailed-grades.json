@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-09-14T17:46:43.960Z",
+    "scrapedAt": "2026-09-15T04:44:17.109Z",
     "totalClasses": 13,
     "totalAssignments": 50
   },
@@ -21,7 +21,7 @@
         },
         {
           "name": "Levels of Organization Interac",
-          "dueDate": "09/08/2026",
+          "dueDate": "09/14/2026",
           "earnedPoints": 0,
           "totalPoints": 20,
           "weight": 1,
@@ -47,7 +47,7 @@
           "name": "Lab Safety Poster",
           "dueDate": "09/04/2026",
           "earnedPoints": 0,
-          "totalPoints": 5,
+          "totalPoints": 30,
           "weight": 1,
           "graded": true
         },
@@ -70,8 +70,8 @@
         {
           "name": "Signed Syllabus",
           "dueDate": "08/31/2026",
-          "earnedPoints": 9,
-          "totalPoints": 10,
+          "earnedPoints": 5,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         },
@@ -102,8 +102,8 @@
         {
           "name": "Week1",
           "dueDate": "09/04/2026",
-          "earnedPoints": 40,
-          "totalPoints": 40,
+          "earnedPoints": 35,
+          "totalPoints": 50,
           "weight": 1,
           "graded": true
         }
@@ -165,9 +165,9 @@
         },
         {
           "name": "Lab Safety Rules Packet",
-          "dueDate": "09/08/2026",
-          "earnedPoints": 9,
-          "totalPoints": 11,
+          "dueDate": "09/03/2026",
+          "earnedPoints": 15,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
@@ -214,8 +214,8 @@
         {
           "name": "Safety in the Lab Practice",
           "dueDate": "09/02/2026",
-          "earnedPoints": 0,
-          "totalPoints": 5,
+          "earnedPoints": 9,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         }
@@ -245,11 +245,11 @@
         },
         {
           "name": "HW #1 Simp. Rad. & Class. Num.",
-          "dueDate": "09/09/2026",
-          "earnedPoints": 0,
+          "dueDate": "09/03/2026",
+          "earnedPoints": 9,
           "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Classroom Policy",
@@ -334,10 +334,10 @@
         {
           "name": "Assign #1: Distance, Space,...",
           "dueDate": "09/10/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 18,
           "totalPoints": 18,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "NCP Sky Drawing",
@@ -401,7 +401,7 @@
       "className": "WORLD STUDIES",
       "teacher": "Donald Dull Jr",
       "period": "7",
-      "currentGrade": 0,
+      "currentGrade": 100,
       "assignments": [
         {
           "name": "ch 2-3 plate tectonics",
@@ -422,10 +422,10 @@
         {
           "name": "Ch 2-1 Goldiloks effect",
           "dueDate": "09/14/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Ch 1 5 Themes of Geography",
