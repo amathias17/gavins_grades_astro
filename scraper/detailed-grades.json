@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-09-15T04:44:17.109Z",
+    "scrapedAt": "2026-09-15T16:20:07.296Z",
     "totalClasses": 13,
-    "totalAssignments": 50
+    "totalAssignments": 51
   },
   "classes": [
     {
@@ -21,7 +21,7 @@
         },
         {
           "name": "Levels of Organization Interac",
-          "dueDate": "09/14/2026",
+          "dueDate": "09/08/2026",
           "earnedPoints": 0,
           "totalPoints": 20,
           "weight": 1,
@@ -47,7 +47,7 @@
           "name": "Lab Safety Poster",
           "dueDate": "09/04/2026",
           "earnedPoints": 0,
-          "totalPoints": 30,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         },
@@ -70,8 +70,8 @@
         {
           "name": "Signed Syllabus",
           "dueDate": "08/31/2026",
-          "earnedPoints": 5,
-          "totalPoints": 5,
+          "earnedPoints": 9,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
@@ -102,8 +102,8 @@
         {
           "name": "Week1",
           "dueDate": "09/04/2026",
-          "earnedPoints": 35,
-          "totalPoints": 50,
+          "earnedPoints": 40,
+          "totalPoints": 40,
           "weight": 1,
           "graded": true
         }
@@ -143,7 +143,7 @@
           "name": "Safety Drawing/Poster",
           "dueDate": "09/08/2026",
           "earnedPoints": 0,
-          "totalPoints": 25,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         },
@@ -165,9 +165,9 @@
         },
         {
           "name": "Lab Safety Rules Packet",
-          "dueDate": "09/03/2026",
-          "earnedPoints": 15,
-          "totalPoints": 15,
+          "dueDate": "09/08/2026",
+          "earnedPoints": 9,
+          "totalPoints": 11,
           "weight": 1,
           "graded": true
         },
@@ -189,9 +189,9 @@
         },
         {
           "name": "Signed Syllabus",
-          "dueDate": "09/02/2026",
-          "earnedPoints": 5,
-          "totalPoints": 5,
+          "dueDate": "09/03/2026",
+          "earnedPoints": 15,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         },
@@ -214,8 +214,8 @@
         {
           "name": "Safety in the Lab Practice",
           "dueDate": "09/02/2026",
-          "earnedPoints": 9,
-          "totalPoints": 10,
+          "earnedPoints": 0,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         }
@@ -228,8 +228,16 @@
       "currentGrade": 90,
       "assignments": [
         {
+          "name": "HW #3 Solving Equations",
+          "dueDate": "09/16/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
           "name": "HW #2 Expressions & Operations",
-          "dueDate": "09/09/2026",
+          "dueDate": "09/16/2026",
           "earnedPoints": 0,
           "totalPoints": 10,
           "weight": 1,
@@ -253,11 +261,11 @@
         },
         {
           "name": "Classroom Policy",
-          "dueDate": "08/31/2026",
-          "earnedPoints": 0,
+          "dueDate": "09/03/2026",
+          "earnedPoints": 9,
           "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         }
       ]
     },
