@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-09-15T16:20:07.296Z",
+    "scrapedAt": "2026-09-17T04:45:27.077Z",
     "totalClasses": 13,
-    "totalAssignments": 51
+    "totalAssignments": 52
   },
   "classes": [
     {
@@ -329,13 +329,21 @@
       "className": "ASTRONOMY",
       "teacher": "James Krug",
       "period": "6",
-      "currentGrade": 96,
+      "currentGrade": 98,
       "assignments": [
+        {
+          "name": "NCP Dome Quiz",
+          "dueDate": "09/15/2026",
+          "earnedPoints": 11,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "\"Faster than Light\" Sky Show",
           "dueDate": "09/11/2026",
-          "earnedPoints": 11,
-          "totalPoints": 10,
+          "earnedPoints": 27,
+          "totalPoints": 25,
           "weight": 1,
           "graded": true
         },
