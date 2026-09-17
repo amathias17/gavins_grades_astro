@@ -1,15 +1,15 @@
 {
   "metadata": {
-    "scrapedAt": "2026-09-17T04:45:27.077Z",
+    "scrapedAt": "2026-09-17T16:19:52.890Z",
     "totalClasses": 13,
-    "totalAssignments": 52
+    "totalAssignments": 51
   },
   "classes": [
     {
       "className": "ENVIRON SCIENCE    1",
       "teacher": "Megan Kutruff",
       "period": "1",
-      "currentGrade": 28,
+      "currentGrade": 24,
       "assignments": [
         {
           "name": "Levels of Organization Interac",
@@ -52,18 +52,10 @@
           "graded": true
         },
         {
-          "name": "Lab Safety Quiz",
-          "dueDate": "09/04/2026",
-          "earnedPoints": 10,
-          "totalPoints": 20,
-          "weight": 1,
-          "graded": true
-        },
-        {
           "name": "Student Survey",
-          "dueDate": "09/04/2026",
-          "earnedPoints": 10,
-          "totalPoints": 20,
+          "dueDate": "08/31/2026",
+          "earnedPoints": 9,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
@@ -78,8 +70,8 @@
         {
           "name": "Create your own Lab coat",
           "dueDate": "08/31/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
+          "earnedPoints": 5,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         }
@@ -93,9 +85,9 @@
       "assignments": [
         {
           "name": "Week 2",
-          "dueDate": "08/31/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
+          "dueDate": "09/11/2026",
+          "earnedPoints": 40,
+          "totalPoints": 40,
           "weight": 1,
           "graded": true
         },
@@ -126,16 +118,16 @@
         {
           "name": "Safety Equipment WS",
           "dueDate": "09/08/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "earnedPoints": 35,
+          "totalPoints": 50,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Safety Equipment Map WS",
           "dueDate": "09/08/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "earnedPoints": 0,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         },
@@ -150,16 +142,16 @@
         {
           "name": "Safety QUIZ MC & T/F",
           "dueDate": "09/08/2026",
-          "earnedPoints": 27,
-          "totalPoints": 34,
+          "earnedPoints": 0,
+          "totalPoints": 25,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Safety QUIZ Map",
           "dueDate": "09/08/2026",
-          "earnedPoints": 27,
-          "totalPoints": 34,
+          "earnedPoints": 9,
+          "totalPoints": 11,
           "weight": 1,
           "graded": true
         },
@@ -174,16 +166,16 @@
         {
           "name": "1WS#1-SafetySymbols&Procedures",
           "dueDate": "09/03/2026",
-          "earnedPoints": 0,
-          "totalPoints": 10,
+          "earnedPoints": 15,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Lab Safety Lesson Starters",
           "dueDate": "09/03/2026",
-          "earnedPoints": 0,
-          "totalPoints": 10,
+          "earnedPoints": 15,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         },
@@ -206,7 +198,7 @@
         {
           "name": "Signed Lab Safety Contract",
           "dueDate": "09/02/2026",
-          "earnedPoints": 5,
+          "earnedPoints": 0,
           "totalPoints": 5,
           "weight": 1,
           "graded": true
@@ -229,15 +221,15 @@
       "assignments": [
         {
           "name": "HW #3 Solving Equations",
-          "dueDate": "09/16/2026",
-          "earnedPoints": 0,
+          "dueDate": "09/02/2026",
+          "earnedPoints": 9,
           "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "HW #2 Expressions & Operations",
-          "dueDate": "09/16/2026",
+          "dueDate": "09/09/2026",
           "earnedPoints": 0,
           "totalPoints": 10,
           "weight": 1,
@@ -253,19 +245,19 @@
         },
         {
           "name": "HW #1 Simp. Rad. & Class. Num.",
-          "dueDate": "09/03/2026",
-          "earnedPoints": 9,
+          "dueDate": "09/09/2026",
+          "earnedPoints": 0,
           "totalPoints": 10,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "Classroom Policy",
-          "dueDate": "09/03/2026",
-          "earnedPoints": 9,
+          "dueDate": "08/31/2026",
+          "earnedPoints": 0,
           "totalPoints": 10,
           "weight": 1,
-          "graded": true
+          "graded": false
         }
       ]
     },
