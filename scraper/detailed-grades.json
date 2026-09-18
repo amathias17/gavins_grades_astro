@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-09-17T16:19:52.890Z",
+    "scrapedAt": "2026-09-18T04:31:14.299Z",
     "totalClasses": 13,
-    "totalAssignments": 51
+    "totalAssignments": 55
   },
   "classes": [
     {
@@ -220,7 +220,7 @@
       "currentGrade": 90,
       "assignments": [
         {
-          "name": "HW #3 Solving Equations",
+          "name": "HW #4 Absolute Value Equation",
           "dueDate": "09/02/2026",
           "earnedPoints": 9,
           "totalPoints": 10,
@@ -228,8 +228,16 @@
           "graded": true
         },
         {
+          "name": "HW #3 Solving Equations",
+          "dueDate": "09/16/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
           "name": "HW #2 Expressions & Operations",
-          "dueDate": "09/09/2026",
+          "dueDate": "09/16/2026",
           "earnedPoints": 0,
           "totalPoints": 10,
           "weight": 1,
@@ -245,19 +253,19 @@
         },
         {
           "name": "HW #1 Simp. Rad. & Class. Num.",
-          "dueDate": "09/09/2026",
-          "earnedPoints": 0,
+          "dueDate": "09/03/2026",
+          "earnedPoints": 9,
           "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Classroom Policy",
-          "dueDate": "08/31/2026",
-          "earnedPoints": 0,
+          "dueDate": "09/03/2026",
+          "earnedPoints": 9,
           "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         }
       ]
     },
@@ -268,12 +276,20 @@
       "currentGrade": 100,
       "assignments": [
         {
-          "name": "Organization C.M and notes",
+          "name": "Directional Term Practice",
           "dueDate": "08/31/2026",
           "earnedPoints": 0,
           "totalPoints": 10,
           "weight": 1,
           "graded": false
+        },
+        {
+          "name": "Organization C.M and notes",
+          "dueDate": "09/17/2026",
+          "earnedPoints": 3,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": true
         },
         {
           "name": "Human Machine",
@@ -460,10 +476,26 @@
       "currentGrade": 100,
       "assignments": [
         {
-          "name": "Reading Comprehension Check",
+          "name": "Writing Lab 1",
           "dueDate": "09/02/2026",
           "earnedPoints": 0,
           "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Diagnostic Writing",
+          "dueDate": "09/18/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Reading Comprehension Check",
+          "dueDate": "09/03/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
           "weight": 1,
           "graded": false
         },
