@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-09-18T04:31:14.299Z",
+    "scrapedAt": "2026-09-18T15:55:36.242Z",
     "totalClasses": 13,
-    "totalAssignments": 55
+    "totalAssignments": 56
   },
   "classes": [
     {
@@ -81,13 +81,21 @@
       "className": "PHYSICAL EDUC",
       "teacher": "Paul Picciotti",
       "period": "2",
-      "currentGrade": 83,
+      "currentGrade": 82,
       "assignments": [
+        {
+          "name": "Week 3",
+          "dueDate": "09/18/2026",
+          "earnedPoints": 40,
+          "totalPoints": 50,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Week 2",
           "dueDate": "09/11/2026",
           "earnedPoints": 40,
-          "totalPoints": 40,
+          "totalPoints": 50,
           "weight": 1,
           "graded": true
         },
@@ -118,16 +126,16 @@
         {
           "name": "Safety Equipment WS",
           "dueDate": "09/08/2026",
-          "earnedPoints": 35,
-          "totalPoints": 50,
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Safety Equipment Map WS",
           "dueDate": "09/08/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
@@ -142,16 +150,16 @@
         {
           "name": "Safety QUIZ MC & T/F",
           "dueDate": "09/08/2026",
-          "earnedPoints": 0,
-          "totalPoints": 25,
+          "earnedPoints": 27,
+          "totalPoints": 34,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Safety QUIZ Map",
           "dueDate": "09/08/2026",
-          "earnedPoints": 9,
-          "totalPoints": 11,
+          "earnedPoints": 27,
+          "totalPoints": 34,
           "weight": 1,
           "graded": true
         },
@@ -166,16 +174,16 @@
         {
           "name": "1WS#1-SafetySymbols&Procedures",
           "dueDate": "09/03/2026",
-          "earnedPoints": 15,
-          "totalPoints": 15,
+          "earnedPoints": 0,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Lab Safety Lesson Starters",
           "dueDate": "09/03/2026",
-          "earnedPoints": 15,
-          "totalPoints": 20,
+          "earnedPoints": 0,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
@@ -198,7 +206,7 @@
         {
           "name": "Signed Lab Safety Contract",
           "dueDate": "09/02/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 5,
           "totalPoints": 5,
           "weight": 1,
           "graded": true
@@ -221,15 +229,15 @@
       "assignments": [
         {
           "name": "HW #4 Absolute Value Equation",
-          "dueDate": "09/02/2026",
-          "earnedPoints": 9,
+          "dueDate": "09/18/2026",
+          "earnedPoints": 0,
           "totalPoints": 10,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "HW #3 Solving Equations",
-          "dueDate": "09/16/2026",
+          "dueDate": "09/18/2026",
           "earnedPoints": 0,
           "totalPoints": 10,
           "weight": 1,
@@ -253,11 +261,11 @@
         },
         {
           "name": "HW #1 Simp. Rad. & Class. Num.",
-          "dueDate": "09/03/2026",
-          "earnedPoints": 9,
+          "dueDate": "09/09/2026",
+          "earnedPoints": 0,
           "totalPoints": 10,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "Classroom Policy",
