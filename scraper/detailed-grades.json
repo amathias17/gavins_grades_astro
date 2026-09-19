@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-09-18T15:55:36.242Z",
+    "scrapedAt": "2026-09-19T04:28:52.755Z",
     "totalClasses": 13,
-    "totalAssignments": 56
+    "totalAssignments": 57
   },
   "classes": [
     {
@@ -47,7 +47,7 @@
           "name": "Lab Safety Poster",
           "dueDate": "09/04/2026",
           "earnedPoints": 0,
-          "totalPoints": 5,
+          "totalPoints": 30,
           "weight": 1,
           "graded": true
         },
@@ -436,10 +436,18 @@
       "currentGrade": 100,
       "assignments": [
         {
-          "name": "ch 2-3 plate tectonics",
-          "dueDate": "09/15/2026",
+          "name": "Ch 2-2 landforms",
+          "dueDate": "09/18/2026",
           "earnedPoints": 50,
           "totalPoints": 50,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "ch 2-3 plate tectonics",
+          "dueDate": "09/18/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
@@ -494,18 +502,18 @@
         {
           "name": "Diagnostic Writing",
           "dueDate": "09/18/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Reading Comprehension Check",
           "dueDate": "09/03/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 20,
           "totalPoints": 20,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Survey and Character",
