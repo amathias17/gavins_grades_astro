@@ -593,6 +593,22 @@
   },
   {
     "classId": "47487",
+    "assignmentId": "1656254",
+    "studentId": "1396",
+    "className": "ASTRONOMY",
+    "teacher": "James Krug",
+    "period": "6",
+    "currentGrade": 98,
+    "assignmentName": "Assign #2: Cosmology...",
+    "dateDue": "09/18/2026",
+    "dueDate": "09/18/2026",
+    "earnedPoints": 11,
+    "totalPoints": 10,
+    "weight": 1,
+    "graded": true
+  },
+  {
+    "classId": "47487",
     "assignmentId": "1654482",
     "studentId": "1396",
     "className": "ASTRONOMY",
@@ -602,10 +618,10 @@
     "assignmentName": "NCP Dome Quiz",
     "dateDue": "09/15/2026",
     "dueDate": "09/15/2026",
-    "earnedPoints": 11,
-    "totalPoints": 10,
+    "earnedPoints": 0,
+    "totalPoints": 25,
     "weight": 1,
-    "graded": true
+    "graded": false
   },
   {
     "classId": "47487",

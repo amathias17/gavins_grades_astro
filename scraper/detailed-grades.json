@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-09-19T15:28:15.430Z",
+    "scrapedAt": "2026-09-20T15:33:00.915Z",
     "totalClasses": 13,
-    "totalAssignments": 57
+    "totalAssignments": 58
   },
   "classes": [
     {
@@ -348,12 +348,20 @@
       "currentGrade": 98,
       "assignments": [
         {
-          "name": "NCP Dome Quiz",
-          "dueDate": "09/15/2026",
+          "name": "Assign #2: Cosmology...",
+          "dueDate": "09/18/2026",
           "earnedPoints": 11,
           "totalPoints": 10,
           "weight": 1,
           "graded": true
+        },
+        {
+          "name": "NCP Dome Quiz",
+          "dueDate": "09/15/2026",
+          "earnedPoints": 0,
+          "totalPoints": 25,
+          "weight": 1,
+          "graded": false
         },
         {
           "name": "\"Faster than Light\" Sky Show",
