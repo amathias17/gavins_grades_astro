@@ -1,10 +1,10 @@
 name: Scrape Grades
 
 on:
-  # Run twice daily at 7:00am and 7:00pm Eastern Standard Time (EST, UTC-5)
+  # Trigger at both UTC candidates for 7:00am, 3:00pm, and 8:00pm Eastern.
+  # The guard below keeps only the actual America/New_York target hours across DST.
   schedule:
-    - cron: '0 12 * * *'   # 7:00am EST (12:00 UTC)
-    - cron: '0 0 * * *'    # 7:00pm EST (00:00 UTC next day)
+    - cron: '0 0,1,11,12,19,20 * * *'
 
   # Allow manual triggering from GitHub Actions tab
   workflow_dispatch:
@@ -14,12 +14,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Check Eastern schedule
+        id: local_schedule
+        run: |
+          eastern_hour=$(TZ=America/New_York date +%H)
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" || "$eastern_hour" == "07" || "$eastern_hour" == "15" || "$eastern_hour" == "20" ]]; then
+            echo "should_run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "should_run=false" >> "$GITHUB_OUTPUT"
+          fi
+
       # Check out the repository
       - name: Checkout repository
+        if: steps.local_schedule.outputs.should_run == 'true'
         uses: actions/checkout@v4
 
       # Set up Node.js
       - name: Setup Node.js
+        if: steps.local_schedule.outputs.should_run == 'true'
         uses: actions/setup-node@v4
         with:
           node-version: '20'
@@ -27,14 +39,17 @@ jobs:
 
       # Install dependencies
       - name: Install dependencies
+        if: steps.local_schedule.outputs.should_run == 'true'
         run: npm ci
 
       # Install Playwright browsers
       - name: Install Playwright browsers
+        if: steps.local_schedule.outputs.should_run == 'true'
         run: npx playwright install --with-deps chromium
 
       # Run the enhanced scraper (grades + detailed assignments)
       - name: Run scraper
+        if: steps.local_schedule.outputs.should_run == 'true'
         env:
           SKYWARD_USERNAME: ${{ secrets.SKYWARD_USERNAME }}
           SKYWARD_PASSWORD: ${{ secrets.SKYWARD_PASSWORD }}
@@ -42,6 +57,7 @@ jobs:
 
       # Commit and push changes if there are any
       - name: Commit and push changes
+        if: steps.local_schedule.outputs.should_run == 'true'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"

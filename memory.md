@@ -78,6 +78,7 @@
 - Unlocked badge cards show API Affiliation, Base KI, and Total KI (`ki`/`maxKi`); locked cards do not show these stats. Artwork renders visible on first load rather than waiting for a client-side opacity class, with image-error placeholder fallback preserved. Homepage current badge heading-to-card spacing is 1.25rem.
 - Homepage DATA UPDATED is displayed immediately below the points encouragement line. The current badge card omits CURRENT BADGE, and the homepage badge panel omits the visible CURRENT CHARACTER heading while retaining an accessible section label.
 - Homepage freshness: src/utils/dataFreshness.ts selects the newest valid grades metadata or detailed-grades scrape timestamp and formats it in America/New_York. MarkingPeriodCard displays it as DATA UPDATED; missing timestamps render an explicit unavailable state.
+- GitHub Actions grade scraping now triggers at both UTC candidates for 7:00 AM, 3:00 PM, and 8:00 PM Eastern, then gates execution to those America/New_York hours so the schedule follows daylight saving time; GitHub schedule delays remain possible.
 - Grade recovery layout: PayoutDashboard groups each summary value with its label, places copy above metrics in a responsive grid, and preserves full-width recovery cards on mobile.
 - Recovery summary metric groups are centered above the class recovery cards.
 - Recovery metric band is capped and centered, with stronger labels and tighter spacing above the recovery cards.
