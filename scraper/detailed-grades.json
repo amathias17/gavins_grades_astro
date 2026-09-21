@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-09-21T04:45:25.973Z",
+    "scrapedAt": "2026-09-21T18:00:10.101Z",
     "totalClasses": 13,
-    "totalAssignments": 58
+    "totalAssignments": 64
   },
   "classes": [
     {
@@ -13,17 +13,9 @@
       "assignments": [
         {
           "name": "Levels of Organization Interac",
-          "dueDate": "09/14/2026",
+          "dueDate": "09/18/2026",
           "earnedPoints": 0,
-          "totalPoints": 20,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Levels of Organization Interac",
-          "dueDate": "09/08/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
@@ -113,20 +105,52 @@
       "className": "CHEMISTRY          2",
       "teacher": "Paula Irwin",
       "period": "3",
-      "currentGrade": 56,
+      "currentGrade": 40,
       "assignments": [
         {
-          "name": "Safety Equipment Map WS",
+          "name": "Graphing Review",
+          "dueDate": "09/18/2026",
+          "earnedPoints": 0,
+          "totalPoints": 45,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Graphing Review",
+          "dueDate": "09/18/2026",
+          "earnedPoints": 0,
+          "totalPoints": 45,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Lab Safety & Equip Crossword",
+          "dueDate": "09/18/2026",
+          "earnedPoints": 0,
+          "totalPoints": 45,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Radial Chromatography",
+          "dueDate": "09/15/2026",
+          "earnedPoints": 0,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Equip in the Lab WS -Cut/Paste",
           "dueDate": "09/14/2026",
           "earnedPoints": 0,
-          "totalPoints": 20,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Safety Equipment WS",
-          "dueDate": "09/08/2026",
-          "earnedPoints": 10,
+          "dueDate": "09/14/2026",
+          "earnedPoints": 0,
           "totalPoints": 10,
           "weight": 1,
           "graded": true
@@ -134,8 +158,8 @@
         {
           "name": "Safety Equipment Map WS",
           "dueDate": "09/08/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "earnedPoints": 0,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         },
@@ -143,15 +167,15 @@
           "name": "Safety Drawing/Poster",
           "dueDate": "09/08/2026",
           "earnedPoints": 0,
-          "totalPoints": 20,
+          "totalPoints": 25,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Safety QUIZ MC & T/F",
           "dueDate": "09/08/2026",
-          "earnedPoints": 27,
-          "totalPoints": 34,
+          "earnedPoints": 0,
+          "totalPoints": 25,
           "weight": 1,
           "graded": true
         },
@@ -165,17 +189,17 @@
         },
         {
           "name": "Lab Safety Rules Packet",
-          "dueDate": "09/08/2026",
-          "earnedPoints": 9,
-          "totalPoints": 11,
+          "dueDate": "09/03/2026",
+          "earnedPoints": 15,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
         {
           "name": "1WS#1-SafetySymbols&Procedures",
           "dueDate": "09/03/2026",
-          "earnedPoints": 0,
-          "totalPoints": 10,
+          "earnedPoints": 15,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
@@ -189,9 +213,9 @@
         },
         {
           "name": "Signed Syllabus",
-          "dueDate": "09/03/2026",
-          "earnedPoints": 15,
-          "totalPoints": 20,
+          "dueDate": "09/02/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         },
@@ -214,8 +238,8 @@
         {
           "name": "Safety in the Lab Practice",
           "dueDate": "09/02/2026",
-          "earnedPoints": 0,
-          "totalPoints": 5,
+          "earnedPoints": 9,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         }
@@ -225,47 +249,63 @@
       "className": "INTRMEDIATE ALG II",
       "teacher": "Jodi Lambertus",
       "period": "4",
-      "currentGrade": 90,
+      "currentGrade": 46,
       "assignments": [
         {
           "name": "HW #4 Absolute Value Equation",
           "dueDate": "09/18/2026",
           "earnedPoints": 0,
-          "totalPoints": 10,
+          "totalPoints": 45,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
-          "name": "HW #3 Solving Equations",
+          "name": "HW #4 Absolute Value Equation",
+          "dueDate": "09/02/2026",
+          "earnedPoints": 9,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "DM: 1-1 Review",
           "dueDate": "09/18/2026",
           "earnedPoints": 0,
           "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
+        },
+        {
+          "name": "HW #3 Solving Equations",
+          "dueDate": "09/18/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
         },
         {
           "name": "HW #2 Expressions & Operations",
           "dueDate": "09/16/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 4,
           "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Real Numbers Math Lib Activity",
           "dueDate": "09/09/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 4,
           "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "HW #1 Simp. Rad. & Class. Num.",
           "dueDate": "09/09/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 5,
           "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Classroom Policy",
@@ -289,7 +329,7 @@
           "earnedPoints": 0,
           "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Organization C.M and notes",
@@ -444,12 +484,20 @@
       "currentGrade": 100,
       "assignments": [
         {
-          "name": "Ch 2-2 landforms",
-          "dueDate": "09/18/2026",
+          "name": "Ch 2-4 physical weathering",
+          "dueDate": "09/21/2026",
           "earnedPoints": 50,
           "totalPoints": 50,
           "weight": 1,
           "graded": true
+        },
+        {
+          "name": "Ch 2-2 landforms",
+          "dueDate": "09/21/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
         },
         {
           "name": "ch 2-3 plate tectonics",

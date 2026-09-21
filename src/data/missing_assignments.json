@@ -1,23 +1,39 @@
 {
   "metadata": {
-    "last_updated": "09/21/2026, 12:45 AM",
-    "count": 8
+    "last_updated": "09/21/2026, 02:00 PM",
+    "count": 12
   },
   "missing_assignments": [
+    {
+      "due_date": "09/18/2026",
+      "assignment_name": "Graphing Review",
+      "class_name": "CHEMISTRY          2",
+      "teacher": "Paula Irwin",
+      "category": "Class Work",
+      "max_points": "45"
+    },
+    {
+      "due_date": "09/18/2026",
+      "assignment_name": "HW #4 Absolute Value Equation",
+      "class_name": "INTRMEDIATE ALG II",
+      "teacher": "Jodi Lambertus",
+      "category": "Homework",
+      "max_points": "10"
+    },
+    {
+      "due_date": "09/14/2026",
+      "assignment_name": "Equip in the Lab WS -Cut/Paste",
+      "class_name": "CHEMISTRY          2",
+      "teacher": "Paula Irwin",
+      "category": "Class Work",
+      "max_points": "10"
+    },
     {
       "due_date": "09/14/2026",
       "assignment_name": "Levels of Organization Interac",
       "class_name": "ENVIRON SCIENCE    1",
       "teacher": "Megan Kutruff",
       "category": "Class Work",
-      "max_points": "20"
-    },
-    {
-      "due_date": "09/08/2026",
-      "assignment_name": "Safety Equipment Map WS",
-      "class_name": "CHEMISTRY          2",
-      "teacher": "Paula Irwin",
-      "category": "Homework",
       "max_points": "20"
     },
     {
@@ -29,12 +45,12 @@
       "max_points": "25"
     },
     {
-      "due_date": "09/04/2026",
-      "assignment_name": "Lab Safety Contract",
-      "class_name": "ENVIRON SCIENCE    1",
-      "teacher": "Megan Kutruff",
-      "category": "Other",
-      "max_points": "5"
+      "due_date": "09/08/2026",
+      "assignment_name": "Safety Equipment Map WS",
+      "class_name": "CHEMISTRY          2",
+      "teacher": "Paula Irwin",
+      "category": "Homework",
+      "max_points": "20"
     },
     {
       "due_date": "09/04/2026",
@@ -43,6 +59,14 @@
       "teacher": "Megan Kutruff",
       "category": "Project",
       "max_points": "30"
+    },
+    {
+      "due_date": "09/04/2026",
+      "assignment_name": "Lab Safety Contract",
+      "class_name": "ENVIRON SCIENCE    1",
+      "teacher": "Megan Kutruff",
+      "category": "Other",
+      "max_points": "5"
     },
     {
       "due_date": "09/03/2026",
@@ -67,6 +91,14 @@
       "teacher": "Megan Kutruff",
       "category": "Class Work",
       "max_points": "20"
+    },
+    {
+      "due_date": "08/31/2026",
+      "assignment_name": "Classroom Policy",
+      "class_name": "INTRMEDIATE ALG II",
+      "teacher": "Jodi Lambertus",
+      "category": "Homework",
+      "max_points": "10"
     }
   ]
 }

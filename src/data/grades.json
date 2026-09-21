@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "09/21/2026, 12:45 AM",
+    "last_updated": "09/21/2026, 02:00 PM",
     "most_recent_date": "9/21/2026",
     "total_classes": 13
   },
@@ -92,7 +92,7 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 56,
+      "current_grade": 40,
       "letter_grade": "F"
     },
     {
@@ -107,8 +107,8 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 90,
-      "letter_grade": "A"
+      "current_grade": 46,
+      "letter_grade": "F"
     },
     {
       "class_name": "Anatomy & Physiol",
@@ -2084,7 +2084,7 @@
       "9/18/2026": 56,
       "9/19/2026": 56,
       "9/20/2026": 56,
-      "9/21/2026": 56
+      "9/21/2026": 40
     },
     "Intrmediate Alg Ii": {
       "8/25/2026": null,
@@ -2114,7 +2114,7 @@
       "9/18/2026": 90,
       "9/19/2026": 90,
       "9/20/2026": 90,
-      "9/21/2026": 90
+      "9/21/2026": 46
     },
     "Anatomy & Physiol": {
       "8/25/2026": null,
@@ -2297,7 +2297,7 @@
       "9/21/2026": 100
     }
   },
-  "overall_average": 81,
+  "overall_average": 74,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -2598,7 +2598,7 @@
     "9/18/2026": 81,
     "9/19/2026": 81,
     "9/20/2026": 81,
-    "9/21/2026": 81
+    "9/21/2026": 74
   },
   "streak": 0,
   "streak_history": {
