@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-09-28T19:04:50.214Z",
+    "scrapedAt": "2026-09-28T23:51:10.344Z",
     "totalClasses": 13,
     "totalAssignments": 85
   },
@@ -53,17 +53,17 @@
         },
         {
           "name": "Lab Safety Quiz",
-          "dueDate": "09/11/2026",
-          "earnedPoints": 17,
-          "totalPoints": 20,
+          "dueDate": "09/21/2026",
+          "earnedPoints": 0,
+          "totalPoints": 40,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Lab Safety Contract",
           "dueDate": "09/04/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "earnedPoints": 0,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         },
@@ -71,7 +71,7 @@
           "name": "Lab Safety Poster",
           "dueDate": "09/04/2026",
           "earnedPoints": 0,
-          "totalPoints": 30,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         },
@@ -134,8 +134,8 @@
         {
           "name": "Week1",
           "dueDate": "09/04/2026",
-          "earnedPoints": 40,
-          "totalPoints": 40,
+          "earnedPoints": 0,
+          "totalPoints": 30,
           "weight": 1,
           "graded": true
         }
@@ -237,8 +237,8 @@
         },
         {
           "name": "Safety Equipment WS",
-          "dueDate": "09/14/2026",
-          "earnedPoints": 0,
+          "dueDate": "09/08/2026",
+          "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
           "graded": true
@@ -246,8 +246,8 @@
         {
           "name": "Safety Equipment Map WS",
           "dueDate": "09/08/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
@@ -262,8 +262,8 @@
         {
           "name": "Safety QUIZ MC & T/F",
           "dueDate": "09/08/2026",
-          "earnedPoints": 0,
-          "totalPoints": 25,
+          "earnedPoints": 27,
+          "totalPoints": 34,
           "weight": 1,
           "graded": true
         },
@@ -286,8 +286,8 @@
         {
           "name": "1WS#1-SafetySymbols&Procedures",
           "dueDate": "09/03/2026",
-          "earnedPoints": 15,
-          "totalPoints": 15,
+          "earnedPoints": 0,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
@@ -381,7 +381,7 @@
         },
         {
           "name": "HW #2 Expressions & Operations",
-          "dueDate": "09/16/2026",
+          "dueDate": "09/09/2026",
           "earnedPoints": 4,
           "totalPoints": 10,
           "weight": 1,
@@ -469,11 +469,11 @@
         },
         {
           "name": "Organization C.M and notes",
-          "dueDate": "09/17/2026",
-          "earnedPoints": 3,
-          "totalPoints": 5,
+          "dueDate": "09/09/2026",
+          "earnedPoints": 0,
+          "totalPoints": 15,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "Human Machine",
@@ -493,11 +493,11 @@
         },
         {
           "name": "Lab Coat Activity",
-          "dueDate": "09/03/2026",
-          "earnedPoints": 6,
-          "totalPoints": 5,
+          "dueDate": "09/02/2026",
+          "earnedPoints": 0,
+          "totalPoints": 15,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "Virtual Simulator mini-lab",
@@ -573,17 +573,17 @@
         },
         {
           "name": "NCP Sky Drawing",
-          "dueDate": "09/09/2026",
-          "earnedPoints": 17,
-          "totalPoints": 18,
+          "dueDate": "09/01/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         },
         {
           "name": "\"Cosmic Voyage\" Video Review",
           "dueDate": "09/04/2026",
-          "earnedPoints": 16,
-          "totalPoints": 15,
+          "earnedPoints": 20,
+          "totalPoints": 25,
           "weight": 1,
           "graded": true
         },
@@ -685,9 +685,9 @@
         },
         {
           "name": "Ch 1 5 Themes of Geography",
-          "dueDate": "09/11/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "dueDate": "09/03/2026",
+          "earnedPoints": 31,
+          "totalPoints": 33,
           "weight": 1,
           "graded": true
         },
@@ -733,9 +733,9 @@
         },
         {
           "name": "Reading Comprehension Check",
-          "dueDate": "09/03/2026",
-          "earnedPoints": 20,
-          "totalPoints": 20,
+          "dueDate": "09/02/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
