@@ -1,29 +1,61 @@
 {
   "metadata": {
-    "scrapedAt": "2026-09-21T18:00:10.101Z",
+    "scrapedAt": "2026-09-28T19:04:50.214Z",
     "totalClasses": 13,
-    "totalAssignments": 64
+    "totalAssignments": 85
   },
   "classes": [
     {
       "className": "ENVIRON SCIENCE    1",
       "teacher": "Megan Kutruff",
       "period": "1",
-      "currentGrade": 24,
+      "currentGrade": 56,
       "assignments": [
         {
-          "name": "Levels of Organization Interac",
-          "dueDate": "09/18/2026",
+          "name": "Biome Travel Poster",
+          "dueDate": "09/21/2026",
           "earnedPoints": 0,
-          "totalPoints": 10,
+          "totalPoints": 40,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Food Web Diagrams",
+          "dueDate": "09/21/2026",
+          "earnedPoints": 20,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Levels of Organization Interac",
+          "dueDate": "09/21/2026",
+          "earnedPoints": 20,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Symbiosis Quiz",
+          "dueDate": "09/14/2026",
+          "earnedPoints": 15,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Friend or Foe Lab",
+          "dueDate": "09/11/2026",
+          "earnedPoints": 17,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Lab Safety Quiz",
-          "dueDate": "09/04/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "dueDate": "09/11/2026",
+          "earnedPoints": 17,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         },
@@ -39,15 +71,15 @@
           "name": "Lab Safety Poster",
           "dueDate": "09/04/2026",
           "earnedPoints": 0,
-          "totalPoints": 5,
+          "totalPoints": 30,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Student Survey",
-          "dueDate": "08/31/2026",
-          "earnedPoints": 9,
-          "totalPoints": 10,
+          "dueDate": "09/04/2026",
+          "earnedPoints": 0,
+          "totalPoints": 30,
           "weight": 1,
           "graded": true
         },
@@ -62,8 +94,8 @@
         {
           "name": "Create your own Lab coat",
           "dueDate": "08/31/2026",
-          "earnedPoints": 5,
-          "totalPoints": 5,
+          "earnedPoints": 0,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         }
@@ -73,13 +105,21 @@
       "className": "PHYSICAL EDUC",
       "teacher": "Paul Picciotti",
       "period": "2",
-      "currentGrade": 82,
+      "currentGrade": 86,
       "assignments": [
+        {
+          "name": "Week 4",
+          "dueDate": "08/31/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Week 3",
           "dueDate": "09/18/2026",
           "earnedPoints": 40,
-          "totalPoints": 50,
+          "totalPoints": 40,
           "weight": 1,
           "graded": true
         },
@@ -87,7 +127,7 @@
           "name": "Week 2",
           "dueDate": "09/11/2026",
           "earnedPoints": 40,
-          "totalPoints": 50,
+          "totalPoints": 40,
           "weight": 1,
           "graded": true
         },
@@ -105,44 +145,92 @@
       "className": "CHEMISTRY          2",
       "teacher": "Paula Irwin",
       "period": "3",
-      "currentGrade": 40,
+      "currentGrade": 50,
       "assignments": [
         {
-          "name": "Graphing Review",
-          "dueDate": "09/18/2026",
+          "name": "Sci Method - Bikini Bottom Exp",
+          "dueDate": "09/22/2026",
           "earnedPoints": 0,
-          "totalPoints": 45,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Separation of a Mixture",
+          "dueDate": "09/22/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Sci Method - Bikini Bottom Exp",
+          "dueDate": "09/22/2026",
+          "earnedPoints": 35,
+          "totalPoints": 50,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Separation of a Mixture",
+          "dueDate": "09/21/2026",
+          "earnedPoints": 0,
+          "totalPoints": 40,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Graphing Review",
-          "dueDate": "09/18/2026",
+          "dueDate": "09/21/2026",
           "earnedPoints": 0,
+          "totalPoints": 40,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Element Icosahedron",
+          "dueDate": "09/18/2026",
+          "earnedPoints": 30,
           "totalPoints": 45,
           "weight": 1,
           "graded": true
         },
         {
-          "name": "Lab Safety & Equip Crossword",
-          "dueDate": "09/18/2026",
+          "name": "Chem Apparatus WS",
+          "dueDate": "09/17/2026",
           "earnedPoints": 0,
-          "totalPoints": 45,
+          "totalPoints": 38,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Equipment QUIZ",
+          "dueDate": "09/17/2026",
+          "earnedPoints": 0,
+          "totalPoints": 38,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "WS#2LabSafety&EquipCrossword",
+          "dueDate": "09/17/2026",
+          "earnedPoints": 14.5,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Radial Chromatography",
-          "dueDate": "09/15/2026",
-          "earnedPoints": 0,
-          "totalPoints": 15,
+          "dueDate": "09/14/2026",
+          "earnedPoints": 5.5,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Equip in the Lab WS -Cut/Paste",
           "dueDate": "09/14/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 5.5,
           "totalPoints": 10,
           "weight": 1,
           "graded": true
@@ -167,7 +255,7 @@
           "name": "Safety Drawing/Poster",
           "dueDate": "09/08/2026",
           "earnedPoints": 0,
-          "totalPoints": 25,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         },
@@ -189,9 +277,9 @@
         },
         {
           "name": "Lab Safety Rules Packet",
-          "dueDate": "09/03/2026",
-          "earnedPoints": 15,
-          "totalPoints": 15,
+          "dueDate": "09/08/2026",
+          "earnedPoints": 9,
+          "totalPoints": 11,
           "weight": 1,
           "graded": true
         },
@@ -213,9 +301,9 @@
         },
         {
           "name": "Signed Syllabus",
-          "dueDate": "09/02/2026",
-          "earnedPoints": 5,
-          "totalPoints": 5,
+          "dueDate": "09/03/2026",
+          "earnedPoints": 15,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         },
@@ -238,8 +326,8 @@
         {
           "name": "Safety in the Lab Practice",
           "dueDate": "09/02/2026",
-          "earnedPoints": 9,
-          "totalPoints": 10,
+          "earnedPoints": 0,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         }
@@ -249,21 +337,29 @@
       "className": "INTRMEDIATE ALG II",
       "teacher": "Jodi Lambertus",
       "period": "4",
-      "currentGrade": 46,
+      "currentGrade": 65,
       "assignments": [
         {
-          "name": "HW #4 Absolute Value Equation",
-          "dueDate": "09/18/2026",
-          "earnedPoints": 0,
-          "totalPoints": 45,
+          "name": "HW #5 Inequalities",
+          "dueDate": "09/02/2026",
+          "earnedPoints": 9,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
         {
-          "name": "HW #4 Absolute Value Equation",
-          "dueDate": "09/02/2026",
-          "earnedPoints": 9,
+          "name": "Quiz 1-1",
+          "dueDate": "09/29/2026",
+          "earnedPoints": 0,
           "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "HW #4 Absolute Value Equation",
+          "dueDate": "09/22/2026",
+          "earnedPoints": 27,
+          "totalPoints": 36,
           "weight": 1,
           "graded": true
         },
@@ -321,13 +417,53 @@
       "className": "ANATOMY & PHYSIOL",
       "teacher": "Denise Condo",
       "period": "5",
-      "currentGrade": 100,
+      "currentGrade": 88,
       "assignments": [
         {
-          "name": "Directional Term Practice",
+          "name": "Homeostasis notes / embedded ?",
           "dueDate": "08/31/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Maintaing Life (function/need)",
+          "dueDate": "09/24/2026",
           "earnedPoints": 0,
           "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Scenario Lab",
+          "dueDate": "09/24/2026",
+          "earnedPoints": 7,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Picasso Anatomy",
+          "dueDate": "09/22/2026",
+          "earnedPoints": 0,
+          "totalPoints": 30,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Body Planes, regions, systems",
+          "dueDate": "09/21/2026",
+          "earnedPoints": 25,
+          "totalPoints": 25,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Directional Term Practice",
+          "dueDate": "09/18/2026",
+          "earnedPoints": 16,
+          "totalPoints": 25,
           "weight": 1,
           "graded": true
         },
@@ -385,13 +521,29 @@
       "className": "ASTRONOMY",
       "teacher": "James Krug",
       "period": "6",
-      "currentGrade": 97,
+      "currentGrade": 96,
       "assignments": [
+        {
+          "name": "Assign #3: Atlas of the Univ.",
+          "dueDate": "09/29/2026",
+          "earnedPoints": 11,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "\"Light Years from Andromeda\"",
+          "dueDate": "09/24/2026",
+          "earnedPoints": 22,
+          "totalPoints": 25,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Assign #2: Cosmology...",
           "dueDate": "09/18/2026",
-          "earnedPoints": 11,
-          "totalPoints": 10,
+          "earnedPoints": 21.5,
+          "totalPoints": 24,
           "weight": 1,
           "graded": true
         },
@@ -484,20 +636,28 @@
       "currentGrade": 100,
       "assignments": [
         {
-          "name": "Ch 2-4 physical weathering",
-          "dueDate": "09/21/2026",
+          "name": "Ch 2-4 erosion",
+          "dueDate": "09/23/2026",
           "earnedPoints": 50,
           "totalPoints": 50,
           "weight": 1,
           "graded": true
         },
         {
-          "name": "Ch 2-2 landforms",
-          "dueDate": "09/21/2026",
-          "earnedPoints": 0,
+          "name": "Ch 2-4 physical weathering",
+          "dueDate": "09/23/2026",
+          "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
+        },
+        {
+          "name": "Ch 2-2 landforms",
+          "dueDate": "09/21/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
         },
         {
           "name": "ch 2-3 plate tectonics",
@@ -510,10 +670,10 @@
         {
           "name": "ch 2-3 continental drift",
           "dueDate": "09/15/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Ch 2-1 Goldiloks effect",
@@ -526,18 +686,18 @@
         {
           "name": "Ch 1 5 Themes of Geography",
           "dueDate": "09/11/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "ch 1 5 areas of social studies",
           "dueDate": "09/03/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         }
       ]
     },
@@ -548,12 +708,20 @@
       "currentGrade": 100,
       "assignments": [
         {
-          "name": "Writing Lab 1",
+          "name": "\"The Man in the Well\" Notes",
           "dueDate": "09/02/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
+        },
+        {
+          "name": "Writing Lab 1",
+          "dueDate": "09/23/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": true
         },
         {
           "name": "Diagnostic Writing",

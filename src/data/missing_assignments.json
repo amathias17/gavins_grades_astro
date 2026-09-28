@@ -1,16 +1,24 @@
 {
   "metadata": {
-    "last_updated": "09/21/2026, 02:00 PM",
-    "count": 12
+    "last_updated": "09/28/2026, 03:04 PM",
+    "count": 14
   },
   "missing_assignments": [
     {
-      "due_date": "09/18/2026",
-      "assignment_name": "Graphing Review",
+      "due_date": "09/22/2026",
+      "assignment_name": "Sci Method - Bikini Bottom Exp",
       "class_name": "CHEMISTRY          2",
       "teacher": "Paula Irwin",
       "category": "Class Work",
-      "max_points": "45"
+      "max_points": "10"
+    },
+    {
+      "due_date": "09/21/2026",
+      "assignment_name": "Separation of a Mixture",
+      "class_name": "CHEMISTRY          2",
+      "teacher": "Paula Irwin",
+      "category": "Lab",
+      "max_points": "40"
     },
     {
       "due_date": "09/18/2026",
@@ -19,6 +27,22 @@
       "teacher": "Jodi Lambertus",
       "category": "Homework",
       "max_points": "10"
+    },
+    {
+      "due_date": "09/17/2026",
+      "assignment_name": "Chem Apparatus WS",
+      "class_name": "CHEMISTRY          2",
+      "teacher": "Paula Irwin",
+      "category": "Class Work",
+      "max_points": "38"
+    },
+    {
+      "due_date": "09/15/2026",
+      "assignment_name": "WS#2LabSafety&EquipCrossword",
+      "class_name": "CHEMISTRY          2",
+      "teacher": "Paula Irwin",
+      "category": "Homework",
+      "max_points": "15"
     },
     {
       "due_date": "09/14/2026",
@@ -38,19 +62,19 @@
     },
     {
       "due_date": "09/08/2026",
-      "assignment_name": "Safety Drawing/Poster",
-      "class_name": "CHEMISTRY          2",
-      "teacher": "Paula Irwin",
-      "category": "Class Work",
-      "max_points": "25"
-    },
-    {
-      "due_date": "09/08/2026",
       "assignment_name": "Safety Equipment Map WS",
       "class_name": "CHEMISTRY          2",
       "teacher": "Paula Irwin",
       "category": "Homework",
       "max_points": "20"
+    },
+    {
+      "due_date": "09/08/2026",
+      "assignment_name": "Safety Drawing/Poster",
+      "class_name": "CHEMISTRY          2",
+      "teacher": "Paula Irwin",
+      "category": "Class Work",
+      "max_points": "25"
     },
     {
       "due_date": "09/04/2026",
@@ -91,14 +115,6 @@
       "teacher": "Megan Kutruff",
       "category": "Class Work",
       "max_points": "20"
-    },
-    {
-      "due_date": "08/31/2026",
-      "assignment_name": "Classroom Policy",
-      "class_name": "INTRMEDIATE ALG II",
-      "teacher": "Jodi Lambertus",
-      "category": "Homework",
-      "max_points": "10"
     }
   ]
 }
