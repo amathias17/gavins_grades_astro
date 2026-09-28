@@ -49,6 +49,7 @@
 - Scraper supports SKYWARD_MAX_ASSIGNMENTS to cap assignment detail scraping for quick checks.
 - GitHub Actions grade scraping uses timezone-aware America/New_York schedules for 7:00 AM, 3:00 PM, and 8:00 PM; manual runs always proceed, and GitHub schedule delays can still affect exact execution time.
 - The scraper uses a local-only row metadata fingerprint cache for unchanged graded and ungraded assignments, prunes removed entries, and supports SKYWARD_FORCE_REFRESH=1 to reopen every eligible detail dialog. It logs metadata rows scanned, cache hits, dialogs opened, and pruned entries.
+- GitHub Actions restores scraper/detailed-grades-cache.json before scraping with a repository-scoped run-specific cache key and stable restore prefix, then saves it only after a successful scraper run; the cache remains gitignored and is never committed.
 - Assignment detail scraping scopes score parsing to the visible Skyward dialog, validates current-row score markers before using cached grades, and keeps explicit '* out of X' rows ungraded while preserving numeric zero grades.
 - Enhanced scraper passes the detected active quarter into browser-side missing-assignment extraction so valid rows are not lost to an uncaptured Node variable.
 - Scraper outputs omit assignDate and normalize dueDate to MM/DD/YYYY format.
