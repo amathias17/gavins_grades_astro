@@ -2,9 +2,14 @@ name: Scrape Grades
 
 on:
   # Trigger at both UTC candidates for 7:00am, 3:00pm, and 8:00pm Eastern.
-  # The guard below keeps only the actual America/New_York target hours across DST.
+  # The guard below keeps only the candidate matching the current EST/EDT offset.
   schedule:
-    - cron: '0 0,1,11,12,19,20 * * *'
+    - cron: '0 0 * * *'
+    - cron: '0 1 * * *'
+    - cron: '0 11 * * *'
+    - cron: '0 12 * * *'
+    - cron: '0 19 * * *'
+    - cron: '0 20 * * *'
 
   # Allow manual triggering from GitHub Actions tab
   workflow_dispatch:
@@ -17,8 +22,18 @@ jobs:
       - name: Check Eastern schedule
         id: local_schedule
         run: |
-          eastern_hour=$(TZ=America/New_York date +%H)
-          if [[ "${{ github.event_name }}" == "workflow_dispatch" || "$eastern_hour" == "07" || "$eastern_hour" == "15" || "$eastern_hour" == "20" ]]; then
+          scheduled_hour=$(echo "${{ github.event.schedule }}" | awk '{print $2}')
+          eastern_offset=$(TZ=America/New_York date +%z)
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            should_run=true
+          elif [[ "$eastern_offset" == "-0400" && ( "$scheduled_hour" == "0" || "$scheduled_hour" == "11" || "$scheduled_hour" == "19" ) ]]; then
+            should_run=true
+          elif [[ "$eastern_offset" == "-0500" && ( "$scheduled_hour" == "1" || "$scheduled_hour" == "12" || "$scheduled_hour" == "20" ) ]]; then
+            should_run=true
+          else
+            should_run=false
+          fi
+          if [[ "$should_run" == "true" ]]; then
             echo "should_run=true" >> "$GITHUB_OUTPUT"
           else
             echo "should_run=false" >> "$GITHUB_OUTPUT"
