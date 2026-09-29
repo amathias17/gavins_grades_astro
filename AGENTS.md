@@ -54,6 +54,7 @@
 - Enhanced scraper passes the detected active quarter into browser-side missing-assignment extraction so valid rows are not lost to an uncaptured Node variable.
 - Enhanced scraper detail collection uses authenticated `sff.request()` with `SKYWARD_CONCURRENCY` (default 5), bounded retries, `data-eid` cache fingerprinting, and sequential UI fallbacks; unresolved details stop the run before generated files or cache are written.
 - Assignment UI fallback closes controls only inside the visible detail dialog, uses Escape only while it remains visible, logs dialog lifecycle, and aborts immediately if the gradebook page/context closes.
+- Assignment UI fallback retries a link once when no dialog appears, then leaves the assignment unresolved and aborts without output writes if the dialog still does not open.
 - Scraper outputs omit assignDate and normalize dueDate to MM/DD/YYYY format.
 - Scraper fix (12/21/2025): extractAssignmentDetails now clicks assignments by unique data attributes (data-aid, data-gid) instead of DOM index to prevent mis-matching after pagination. organizeByClass groups by classId first, correctly separating 9 classes instead of lumping all into one. classIdMap now also attempts assignment row group-child/group-parent mapping with classDesc fallbacks; classId may still be used as a last resort if no mapping is available. See issue gavins_grades_astro-orf.
 

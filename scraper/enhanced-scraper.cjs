@@ -578,7 +578,7 @@ function parseAssignmentDetails(html) {
   };
 }
 
-async function extractAssignmentDetails(page, assignmentId, classId) {
+async function extractAssignmentDetails(page, assignmentId, classId, options = {}) {
   try {
     const assertPageOpen = () => {
       if (page.isClosed()) {
@@ -593,14 +593,29 @@ async function extractAssignmentDetails(page, assignmentId, classId) {
     const selector = `a#showAssignmentInfo[data-aid="${assignmentId}"][data-gid="${classId}"]`;
     const link = page.locator(selector).first();
 
-    // Wait for the link to be visible and click it
-    await link.waitFor({ state: 'visible', timeout: 5000 });
-    await link.click();
-    assertPageOpen();
-
-    // Wait for the detail modal/popup to appear
     const dialogLocator = page.locator('.sf_Dialog:visible, .ui-dialog:visible, [role="dialog"]:visible').first();
-    await dialogLocator.waitFor({ state: 'visible', timeout: 5000 });
+    const dialogTimeoutMs = options.dialogTimeoutMs ?? 5000;
+    await link.waitFor({ state: 'visible', timeout: 5000 });
+    if (await dialogLocator.isVisible()) {
+      throw new Error(`Assignment dialog was already visible before clicking ${assignmentId}`);
+    }
+    for (let attempt = 1; attempt <= 2; attempt += 1) {
+      assertPageOpen();
+      if (attempt > 1 && await dialogLocator.isVisible()) break;
+      await link.click();
+      assertPageOpen();
+      try {
+        await dialogLocator.waitFor({ state: 'visible', timeout: dialogTimeoutMs });
+        break;
+      } catch (error) {
+        assertPageOpen();
+        if (await dialogLocator.isVisible()) break;
+        if (attempt === 2) {
+          throw new Error(`No visible assignment dialog for ${assignmentId} after 2 clicks`, { cause: error });
+        }
+        console.warn(`Dialog did not open for assignment ${assignmentId}; retrying click`);
+      }
+    }
     console.log(`Dialog opened for assignment ${assignmentId}`);
 
     // Extract the assignment details from the modal

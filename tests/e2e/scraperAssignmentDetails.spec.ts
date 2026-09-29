@@ -3,7 +3,7 @@ import { createRequire } from "node:module";
 
 const require = createRequire(import.meta.url);
 const { extractAssignmentDetails, fetchAssignmentDetails, mapWithConcurrency, parseAssignmentDetails, getAssignmentScoreHint, assignmentFingerprint, canUseCachedAssignment, scrapeAllAssignments } = require("../../scraper/enhanced-scraper.cjs") as {
-  extractAssignmentDetails: (page: import("@playwright/test").Page, assignmentId: string, classId: string) => Promise<{
+  extractAssignmentDetails: (page: import("@playwright/test").Page, assignmentId: string, classId: string, options?: { dialogTimeoutMs?: number }) => Promise<{
     graded: boolean;
     earnedPoints: number | null;
     totalPoints: number | null;
@@ -20,15 +20,33 @@ const { extractAssignmentDetails, fetchAssignmentDetails, mapWithConcurrency, pa
 test.describe("assignment detail scraper", () => {
   test("uses the visible assignment dialog instead of a hidden stale dialog", async ({ page }) => {
     await page.setContent(`
-      <a id="showAssignmentInfo" data-aid="assignment-1" data-gid="class-1">Selected assignment</a>
+      <a id="showAssignmentInfo" data-aid="assignment-1" data-gid="class-1" onclick="document.querySelector('#current-dialog').style.display = 'block'">Selected assignment</a>
       <div class="sf_Dialog" style="display:none">Points Earned: 9 / 10</div>
-      <div class="sf_Dialog" role="dialog" style="display:block; width:200px; height:100px">Points Earned: 0 / 10<button class="sf_DialogClose" onclick="this.parentElement.remove()">Close</button></div>
+      <div id="current-dialog" class="sf_Dialog" role="dialog" style="display:none; width:200px; height:100px">Points Earned: 0 / 10<button class="sf_DialogClose" onclick="this.parentElement.remove()">Close</button></div>
     `);
 
-    await expect.poll(async () => (await page.locator('.sf_Dialog:visible').count())).toBe(1);
     const details = await extractAssignmentDetails(page, "assignment-1", "class-1");
 
     expect(details).toMatchObject({ graded: true, earnedPoints: 0, totalPoints: 10 });
+  });
+
+  test("retries a link that opens no dialog on the first click", async ({ page }) => {
+    await page.setContent(`
+      <a id="showAssignmentInfo" data-aid="slow" data-gid="class-1" onclick="window.clickCount = (window.clickCount || 0) + 1; if (window.clickCount === 2) document.querySelector('.sf_Dialog').style.display = 'block'">Slow assignment</a>
+      <div class="sf_Dialog" role="dialog" style="display:none">Points Earned: 6 / 8<button class="sf_DialogClose" onclick="this.parentElement.remove()">Close</button></div>
+    `);
+
+    await expect(extractAssignmentDetails(page, "slow", "class-1", { dialogTimeoutMs: 100 })).resolves.toMatchObject({ earnedPoints: 6, totalPoints: 8 });
+    expect(await page.evaluate(() => (window as unknown as { clickCount: number }).clickCount)).toBe(2);
+    expect(page.isClosed()).toBe(false);
+  });
+
+  test("reports an assignment whose dialog never opens", async ({ page }) => {
+    await page.setContent('<a id="showAssignmentInfo" data-aid="unavailable" data-gid="class-1" onclick="window.clickCount = (window.clickCount || 0) + 1">Unavailable assignment</a>');
+
+    await expect(extractAssignmentDetails(page, "unavailable", "class-1", { dialogTimeoutMs: 100 })).rejects.toThrow(/after 2 clicks/);
+    expect(await page.evaluate(() => (window as unknown as { clickCount: number }).clickCount)).toBe(2);
+    expect(page.isClosed()).toBe(false);
   });
 
   test("closes only the visible assignment dialog across sequential fallbacks", async ({ page }) => {
