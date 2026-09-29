@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-09-29T16:54:16.679Z",
+    "scrapedAt": "2026-09-29T19:27:43.239Z",
     "totalClasses": 13,
     "totalAssignments": 98
   },
@@ -13,67 +13,67 @@
       "assignments": [
         {
           "name": "Leader In Me Lesson 1.1",
-          "dueDate": "09/21/2026",
-          "earnedPoints": 0,
-          "totalPoints": 40,
+          "dueDate": "09/28/2026",
+          "earnedPoints": 100,
+          "totalPoints": 100,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Leader In Me Lesson 1.2",
           "dueDate": "09/28/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 100,
           "totalPoints": 100,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Leader in Me Lesson 2.1",
           "dueDate": "09/28/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 100,
           "totalPoints": 100,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Leader in Me Lesson 2.2",
           "dueDate": "09/28/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 100,
           "totalPoints": 100,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Leader in Me Lesson 3.1",
           "dueDate": "09/28/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 100,
           "totalPoints": 100,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Leader in Me Lesson 4.1",
           "dueDate": "09/28/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 100,
           "totalPoints": 100,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Leader in Me Lesson 4.3",
           "dueDate": "09/28/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 100,
           "totalPoints": 100,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Leader in Me Lesson 4.4",
           "dueDate": "09/28/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 100,
           "totalPoints": 100,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Leader in Me Lesson 4.5",
@@ -81,7 +81,7 @@
           "earnedPoints": 0,
           "totalPoints": 100,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Leader in Me Lesson 4.6",
@@ -89,15 +89,15 @@
           "earnedPoints": 0,
           "totalPoints": 100,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Leader in Me Lesson 5.0",
           "dueDate": "09/28/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 100,
           "totalPoints": 100,
           "weight": 1,
-          "graded": false
+          "graded": true
         }
       ]
     },
@@ -110,7 +110,7 @@
         {
           "name": "Biome Travel Poster",
           "dueDate": "09/21/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 10,
           "totalPoints": 40,
           "weight": 1,
           "graded": true
@@ -125,8 +125,8 @@
         },
         {
           "name": "Levels of Organization Interac",
-          "dueDate": "09/21/2026",
-          "earnedPoints": 20,
+          "dueDate": "09/14/2026",
+          "earnedPoints": 0,
           "totalPoints": 20,
           "weight": 1,
           "graded": true
@@ -149,9 +149,9 @@
         },
         {
           "name": "Lab Safety Quiz",
-          "dueDate": "09/21/2026",
-          "earnedPoints": 0,
-          "totalPoints": 40,
+          "dueDate": "09/04/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
@@ -167,23 +167,23 @@
           "name": "Lab Safety Poster",
           "dueDate": "09/04/2026",
           "earnedPoints": 0,
-          "totalPoints": 5,
+          "totalPoints": 30,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Student Survey",
-          "dueDate": "09/04/2026",
-          "earnedPoints": 0,
-          "totalPoints": 30,
+          "dueDate": "08/31/2026",
+          "earnedPoints": 9,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Signed Syllabus",
           "dueDate": "08/31/2026",
-          "earnedPoints": 9,
-          "totalPoints": 10,
+          "earnedPoints": 5,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         },
@@ -205,9 +205,9 @@
       "assignments": [
         {
           "name": "Week 4",
-          "dueDate": "08/31/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
+          "dueDate": "09/25/2026",
+          "earnedPoints": 40,
+          "totalPoints": 40,
           "weight": 1,
           "graded": true
         },
@@ -215,7 +215,7 @@
           "name": "Week 3",
           "dueDate": "09/18/2026",
           "earnedPoints": 40,
-          "totalPoints": 40,
+          "totalPoints": 50,
           "weight": 1,
           "graded": true
         },
@@ -230,8 +230,8 @@
         {
           "name": "Week1",
           "dueDate": "09/04/2026",
-          "earnedPoints": 0,
-          "totalPoints": 30,
+          "earnedPoints": 35,
+          "totalPoints": 50,
           "weight": 1,
           "graded": true
         }
@@ -253,17 +253,17 @@
         },
         {
           "name": "Separation of a Mixture",
-          "dueDate": "09/22/2026",
+          "dueDate": "09/21/2026",
           "earnedPoints": 0,
-          "totalPoints": 10,
+          "totalPoints": 40,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Sci Method - Bikini Bottom Exp",
           "dueDate": "09/22/2026",
-          "earnedPoints": 35,
-          "totalPoints": 50,
+          "earnedPoints": 0,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
@@ -277,17 +277,17 @@
         },
         {
           "name": "Graphing Review",
-          "dueDate": "09/21/2026",
-          "earnedPoints": 0,
-          "totalPoints": 40,
+          "dueDate": "09/18/2026",
+          "earnedPoints": 30,
+          "totalPoints": 45,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Element Icosahedron",
           "dueDate": "09/18/2026",
-          "earnedPoints": 30,
-          "totalPoints": 45,
+          "earnedPoints": 0,
+          "totalPoints": 50,
           "weight": 1,
           "graded": true
         },
@@ -302,16 +302,16 @@
         {
           "name": "Equipment QUIZ",
           "dueDate": "09/17/2026",
-          "earnedPoints": 0,
-          "totalPoints": 38,
+          "earnedPoints": 14.5,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         },
         {
           "name": "WS#2LabSafety&EquipCrossword",
-          "dueDate": "09/17/2026",
-          "earnedPoints": 14.5,
-          "totalPoints": 20,
+          "dueDate": "09/15/2026",
+          "earnedPoints": 0,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
@@ -326,7 +326,7 @@
         {
           "name": "Equip in the Lab WS -Cut/Paste",
           "dueDate": "09/14/2026",
-          "earnedPoints": 5.5,
+          "earnedPoints": 0,
           "totalPoints": 10,
           "weight": 1,
           "graded": true
@@ -342,8 +342,8 @@
         {
           "name": "Safety Equipment Map WS",
           "dueDate": "09/08/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "earnedPoints": 0,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         },
@@ -351,7 +351,7 @@
           "name": "Safety Drawing/Poster",
           "dueDate": "09/08/2026",
           "earnedPoints": 0,
-          "totalPoints": 20,
+          "totalPoints": 25,
           "weight": 1,
           "graded": true
         },
@@ -366,16 +366,16 @@
         {
           "name": "Safety QUIZ Map",
           "dueDate": "09/08/2026",
-          "earnedPoints": 27,
-          "totalPoints": 34,
+          "earnedPoints": 9,
+          "totalPoints": 11,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Lab Safety Rules Packet",
-          "dueDate": "09/08/2026",
-          "earnedPoints": 9,
-          "totalPoints": 11,
+          "dueDate": "09/03/2026",
+          "earnedPoints": 15,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
@@ -390,16 +390,16 @@
         {
           "name": "Lab Safety Lesson Starters",
           "dueDate": "09/03/2026",
-          "earnedPoints": 0,
-          "totalPoints": 10,
+          "earnedPoints": 15,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Signed Syllabus",
-          "dueDate": "09/03/2026",
-          "earnedPoints": 15,
-          "totalPoints": 20,
+          "dueDate": "09/02/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         },
@@ -414,7 +414,7 @@
         {
           "name": "Signed Lab Safety Contract",
           "dueDate": "09/02/2026",
-          "earnedPoints": 5,
+          "earnedPoints": 0,
           "totalPoints": 5,
           "weight": 1,
           "graded": true
@@ -422,8 +422,8 @@
         {
           "name": "Safety in the Lab Practice",
           "dueDate": "09/02/2026",
-          "earnedPoints": 0,
-          "totalPoints": 5,
+          "earnedPoints": 9,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         }
@@ -437,14 +437,6 @@
       "assignments": [
         {
           "name": "HW #5 Inequalities",
-          "dueDate": "09/02/2026",
-          "earnedPoints": 9,
-          "totalPoints": 10,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Quiz 1-1",
           "dueDate": "09/29/2026",
           "earnedPoints": 0,
           "totalPoints": 10,
@@ -452,7 +444,7 @@
           "graded": false
         },
         {
-          "name": "HW #4 Absolute Value Equation",
+          "name": "Quiz 1-1",
           "dueDate": "09/22/2026",
           "earnedPoints": 27,
           "totalPoints": 36,
@@ -460,7 +452,7 @@
           "graded": true
         },
         {
-          "name": "DM: 1-1 Review",
+          "name": "HW #4 Absolute Value Equation",
           "dueDate": "09/18/2026",
           "earnedPoints": 0,
           "totalPoints": 10,
@@ -468,9 +460,17 @@
           "graded": true
         },
         {
-          "name": "HW #3 Solving Equations",
+          "name": "DM: 1-1 Review",
           "dueDate": "09/18/2026",
           "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "HW #3 Solving Equations",
+          "dueDate": "09/16/2026",
+          "earnedPoints": 4,
           "totalPoints": 10,
           "weight": 1,
           "graded": true
@@ -486,23 +486,23 @@
         {
           "name": "Real Numbers Math Lib Activity",
           "dueDate": "09/09/2026",
-          "earnedPoints": 4,
-          "totalPoints": 10,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "HW #1 Simp. Rad. & Class. Num.",
-          "dueDate": "09/09/2026",
           "earnedPoints": 5,
           "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
         {
-          "name": "Classroom Policy",
+          "name": "HW #1 Simp. Rad. & Class. Num.",
           "dueDate": "09/03/2026",
           "earnedPoints": 9,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Classroom Policy",
+          "dueDate": "08/31/2026",
+          "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
           "graded": true
@@ -517,14 +517,6 @@
       "assignments": [
         {
           "name": "Homeostasis notes / embedded ?",
-          "dueDate": "08/31/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Maintaing Life (function/need)",
           "dueDate": "09/24/2026",
           "earnedPoints": 0,
           "totalPoints": 10,
@@ -532,7 +524,7 @@
           "graded": false
         },
         {
-          "name": "Scenario Lab",
+          "name": "Maintaing Life (function/need)",
           "dueDate": "09/24/2026",
           "earnedPoints": 7,
           "totalPoints": 10,
@@ -540,7 +532,7 @@
           "graded": true
         },
         {
-          "name": "Picasso Anatomy",
+          "name": "Scenario Lab",
           "dueDate": "09/22/2026",
           "earnedPoints": 0,
           "totalPoints": 30,
@@ -548,7 +540,7 @@
           "graded": false
         },
         {
-          "name": "Body Planes, regions, systems",
+          "name": "Picasso Anatomy",
           "dueDate": "09/21/2026",
           "earnedPoints": 25,
           "totalPoints": 25,
@@ -556,10 +548,18 @@
           "graded": true
         },
         {
-          "name": "Directional Term Practice",
+          "name": "Body Planes, regions, systems",
           "dueDate": "09/18/2026",
           "earnedPoints": 16,
           "totalPoints": 25,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Directional Term Practice",
+          "dueDate": "09/17/2026",
+          "earnedPoints": 3,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         },
@@ -573,17 +573,17 @@
         },
         {
           "name": "Human Machine",
-          "dueDate": "09/09/2026",
-          "earnedPoints": 0,
-          "totalPoints": 15,
-          "weight": 1,
-          "graded": false
-        },
-        {
-          "name": "Anatomy/Physiolgy ID exit Slip",
           "dueDate": "09/04/2026",
           "earnedPoints": 11,
           "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Anatomy/Physiolgy ID exit Slip",
+          "dueDate": "09/03/2026",
+          "earnedPoints": 6,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         },
@@ -597,17 +597,17 @@
         },
         {
           "name": "Virtual Simulator mini-lab",
-          "dueDate": "09/02/2026",
-          "earnedPoints": 15,
-          "totalPoints": 15,
+          "dueDate": "09/01/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Syllabus/Grading Policy Signed",
-          "dueDate": "09/01/2026",
-          "earnedPoints": 5,
-          "totalPoints": 5,
+          "dueDate": "08/31/2026",
+          "earnedPoints": 11,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         }
@@ -622,31 +622,31 @@
         {
           "name": "Assign #3: Atlas of the Univ.",
           "dueDate": "09/29/2026",
-          "earnedPoints": 11,
-          "totalPoints": 10,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "\"Light Years from Andromeda\"",
-          "dueDate": "09/24/2026",
           "earnedPoints": 22,
           "totalPoints": 25,
           "weight": 1,
           "graded": true
         },
         {
-          "name": "Assign #2: Cosmology...",
-          "dueDate": "09/18/2026",
+          "name": "\"Light Years from Andromeda\"",
+          "dueDate": "09/24/2026",
           "earnedPoints": 21.5,
           "totalPoints": 24,
           "weight": 1,
           "graded": true
         },
         {
+          "name": "Assign #2: Cosmology...",
+          "dueDate": "09/18/2026",
+          "earnedPoints": 23,
+          "totalPoints": 25,
+          "weight": 1,
+          "graded": true
+        },
+        {
           "name": "NCP Dome Quiz",
           "dueDate": "09/15/2026",
-          "earnedPoints": 23,
+          "earnedPoints": 27,
           "totalPoints": 25,
           "weight": 1,
           "graded": true
@@ -654,24 +654,24 @@
         {
           "name": "\"Faster than Light\" Sky Show",
           "dueDate": "09/11/2026",
-          "earnedPoints": 27,
-          "totalPoints": 25,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Assign #1: Distance, Space,...",
-          "dueDate": "09/10/2026",
           "earnedPoints": 18,
           "totalPoints": 18,
           "weight": 1,
           "graded": true
         },
         {
+          "name": "Assign #1: Distance, Space,...",
+          "dueDate": "09/10/2026",
+          "earnedPoints": 17,
+          "totalPoints": 18,
+          "weight": 1,
+          "graded": true
+        },
+        {
           "name": "NCP Sky Drawing",
-          "dueDate": "09/01/2026",
-          "earnedPoints": 5,
-          "totalPoints": 5,
+          "dueDate": "09/09/2026",
+          "earnedPoints": 16,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
@@ -687,28 +687,20 @@
           "name": "3-Ring Binder/Folder Check",
           "dueDate": "09/04/2026",
           "earnedPoints": 20,
-          "totalPoints": 25,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Powers of 10 Quiz",
           "dueDate": "09/01/2026",
-          "earnedPoints": 20,
-          "totalPoints": 20,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Signed Course Syllabus",
-          "dueDate": "08/28/2026",
           "earnedPoints": 31,
           "totalPoints": 33,
           "weight": 1,
           "graded": true
         },
         {
-          "name": "\"Supervolcanoes\" Sky Show",
+          "name": "Signed Course Syllabus",
           "dueDate": "08/28/2026",
           "earnedPoints": 20,
           "totalPoints": 20,
@@ -716,12 +708,20 @@
           "graded": true
         },
         {
-          "name": "CLASS PARTICIPATION",
-          "dueDate": "08/26/2026",
+          "name": "\"Supervolcanoes\" Sky Show",
+          "dueDate": "08/28/2026",
           "earnedPoints": 0,
           "totalPoints": 0,
           "weight": 1,
           "graded": false
+        },
+        {
+          "name": "CLASS PARTICIPATION",
+          "dueDate": "08/26/2026",
+          "earnedPoints": 50,
+          "totalPoints": 50,
+          "weight": 1,
+          "graded": true
         }
       ]
     },
@@ -734,69 +734,13 @@
         {
           "name": "ch 3-2 factor that influence c",
           "dueDate": "09/29/2026",
-          "earnedPoints": 31,
-          "totalPoints": 33,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Ch 3-1 weather and climate",
-          "dueDate": "09/29/2026",
           "earnedPoints": 0,
           "totalPoints": 10,
           "weight": 1,
           "graded": false
         },
         {
-          "name": "Ch 2-4 erosion",
-          "dueDate": "09/23/2026",
-          "earnedPoints": 50,
-          "totalPoints": 50,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Ch 2-4 physical weathering",
-          "dueDate": "09/23/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Ch 2-2 landforms",
-          "dueDate": "09/21/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "ch 2-3 plate tectonics",
-          "dueDate": "09/18/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "ch 2-3 continental drift",
-          "dueDate": "09/15/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Ch 2-1 Goldiloks effect",
-          "dueDate": "09/14/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Ch 1 5 Themes of Geography",
+          "name": "Ch 3-1 weather and climate",
           "dueDate": "09/28/2026",
           "earnedPoints": 0,
           "totalPoints": 12,
@@ -804,8 +748,64 @@
           "graded": false
         },
         {
-          "name": "ch 1 5 areas of social studies",
+          "name": "Ch 2-4 erosion",
+          "dueDate": "09/23/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Ch 2-4 physical weathering",
+          "dueDate": "09/21/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Ch 2-2 landforms",
+          "dueDate": "09/18/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "ch 2-3 plate tectonics",
+          "dueDate": "09/15/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "ch 2-3 continental drift",
+          "dueDate": "09/14/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Ch 2-1 Goldiloks effect",
+          "dueDate": "09/11/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Ch 1 5 Themes of Geography",
           "dueDate": "09/03/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "ch 1 5 areas of social studies",
+          "dueDate": "09/02/2026",
           "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
@@ -821,14 +821,6 @@
       "assignments": [
         {
           "name": "\"The Man in the Well\" Notes",
-          "dueDate": "09/02/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Writing Lab 1",
           "dueDate": "09/23/2026",
           "earnedPoints": 5,
           "totalPoints": 5,
@@ -836,7 +828,7 @@
           "graded": true
         },
         {
-          "name": "Diagnostic Writing",
+          "name": "Writing Lab 1",
           "dueDate": "09/18/2026",
           "earnedPoints": 10,
           "totalPoints": 10,
@@ -844,16 +836,24 @@
           "graded": true
         },
         {
+          "name": "Diagnostic Writing",
+          "dueDate": "09/14/2026",
+          "earnedPoints": 20,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
+        {
           "name": "Reading Comprehension Check",
-          "dueDate": "09/02/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "dueDate": "09/03/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Survey and Character",
-          "dueDate": "09/03/2026",
+          "dueDate": "08/28/2026",
           "earnedPoints": 5,
           "totalPoints": 5,
           "weight": 1,
