@@ -1,15 +1,15 @@
 {
   "metadata": {
-    "scrapedAt": "2026-09-29T05:29:05.196Z",
+    "scrapedAt": "2026-09-29T16:54:16.679Z",
     "totalClasses": 13,
-    "totalAssignments": 96
+    "totalAssignments": 98
   },
   "classes": [
     {
       "className": "JUNIOR SEMINAR",
       "teacher": "Sydnee Rockey",
       "period": "0",
-      "currentGrade": 0,
+      "currentGrade": 82,
       "assignments": [
         {
           "name": "Leader In Me Lesson 1.1",
@@ -149,17 +149,17 @@
         },
         {
           "name": "Lab Safety Quiz",
-          "dueDate": "09/04/2026",
+          "dueDate": "09/21/2026",
           "earnedPoints": 0,
-          "totalPoints": 100,
+          "totalPoints": 40,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Lab Safety Contract",
           "dueDate": "09/04/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "earnedPoints": 0,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         },
@@ -167,7 +167,7 @@
           "name": "Lab Safety Poster",
           "dueDate": "09/04/2026",
           "earnedPoints": 0,
-          "totalPoints": 30,
+          "totalPoints": 5,
           "weight": 1,
           "graded": true
         },
@@ -334,16 +334,16 @@
         {
           "name": "Safety Equipment WS",
           "dueDate": "09/08/2026",
-          "earnedPoints": 35,
-          "totalPoints": 50,
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Safety Equipment Map WS",
           "dueDate": "09/08/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
@@ -358,16 +358,16 @@
         {
           "name": "Safety QUIZ MC & T/F",
           "dueDate": "09/08/2026",
-          "earnedPoints": 0,
-          "totalPoints": 25,
+          "earnedPoints": 27,
+          "totalPoints": 34,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Safety QUIZ Map",
           "dueDate": "09/08/2026",
-          "earnedPoints": 9,
-          "totalPoints": 11,
+          "earnedPoints": 27,
+          "totalPoints": 34,
           "weight": 1,
           "graded": true
         },
@@ -382,16 +382,16 @@
         {
           "name": "1WS#1-SafetySymbols&Procedures",
           "dueDate": "09/03/2026",
-          "earnedPoints": 15,
-          "totalPoints": 15,
+          "earnedPoints": 0,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Lab Safety Lesson Starters",
           "dueDate": "09/03/2026",
-          "earnedPoints": 15,
-          "totalPoints": 20,
+          "earnedPoints": 0,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
@@ -414,7 +414,7 @@
         {
           "name": "Signed Lab Safety Contract",
           "dueDate": "09/02/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 5,
           "totalPoints": 5,
           "weight": 1,
           "graded": true
@@ -477,8 +477,8 @@
         },
         {
           "name": "HW #2 Expressions & Operations",
-          "dueDate": "09/02/2026",
-          "earnedPoints": 9,
+          "dueDate": "09/09/2026",
+          "earnedPoints": 4,
           "totalPoints": 10,
           "weight": 1,
           "graded": true
@@ -565,11 +565,11 @@
         },
         {
           "name": "Organization C.M and notes",
-          "dueDate": "09/03/2026",
-          "earnedPoints": 9,
-          "totalPoints": 10,
+          "dueDate": "09/09/2026",
+          "earnedPoints": 0,
+          "totalPoints": 15,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "Human Machine",
@@ -589,9 +589,9 @@
         },
         {
           "name": "Lab Coat Activity",
-          "dueDate": "09/03/2026",
-          "earnedPoints": 6,
-          "totalPoints": 5,
+          "dueDate": "09/02/2026",
+          "earnedPoints": 15,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
@@ -678,8 +678,8 @@
         {
           "name": "\"Cosmic Voyage\" Video Review",
           "dueDate": "09/04/2026",
-          "earnedPoints": 16,
-          "totalPoints": 15,
+          "earnedPoints": 20,
+          "totalPoints": 25,
           "weight": 1,
           "graded": true
         },
@@ -732,6 +732,22 @@
       "currentGrade": 100,
       "assignments": [
         {
+          "name": "ch 3-2 factor that influence c",
+          "dueDate": "09/29/2026",
+          "earnedPoints": 31,
+          "totalPoints": 33,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Ch 3-1 weather and climate",
+          "dueDate": "09/29/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
           "name": "Ch 2-4 erosion",
           "dueDate": "09/23/2026",
           "earnedPoints": 50,
@@ -781,11 +797,11 @@
         },
         {
           "name": "Ch 1 5 Themes of Geography",
-          "dueDate": "09/03/2026",
-          "earnedPoints": 31,
-          "totalPoints": 33,
+          "dueDate": "09/28/2026",
+          "earnedPoints": 0,
+          "totalPoints": 12,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "ch 1 5 areas of social studies",

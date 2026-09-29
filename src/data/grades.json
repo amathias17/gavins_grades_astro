@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "09/29/2026, 01:29 AM",
+    "last_updated": "09/29/2026, 12:54 PM",
     "most_recent_date": "9/29/2026",
     "total_classes": 13
   },
@@ -17,8 +17,8 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 0,
-      "letter_grade": "F"
+      "current_grade": 82,
+      "letter_grade": "B"
     },
     {
       "class_name": "Environ Science 1",
@@ -1968,7 +1968,7 @@
       "9/20/2026": 0,
       "9/21/2026": 0,
       "9/28/2026": 0,
-      "9/29/2026": 0
+      "9/29/2026": 82
     },
     "Environ Science 1": {
       "8/25/2026": null,
@@ -2323,7 +2323,7 @@
       "9/29/2026": 100
     }
   },
-  "overall_average": 80,
+  "overall_average": 81,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -2626,7 +2626,7 @@
     "9/20/2026": 81,
     "9/21/2026": 74,
     "9/28/2026": 80,
-    "9/29/2026": 80
+    "9/29/2026": 81
   },
   "streak": 0,
   "streak_history": {
