@@ -84,3 +84,4 @@
 - Recovery summary metric groups are centered above the class recovery cards.
 - Recovery metric band is capped and centered, with stronger labels and tighter spacing above the recovery cards.
 - Class details now reconcile authoritative missing assignments by normalized class, assignment, and due date so confirmed missing rows do not display as GRADED.
+- Enhanced assignment detail collection now uses authenticated Skyward `sff.request()` calls with bounded concurrency, retries, cache fingerprints including `data-eid`, and sequential visible-dialog fallbacks; unresolved details abort before generated files or cache are written.

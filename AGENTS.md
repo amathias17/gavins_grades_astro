@@ -52,6 +52,7 @@
 - GitHub Actions restores scraper/detailed-grades-cache.json before scraping with a repository-scoped run-specific cache key and stable restore prefix, then saves it only after a successful scraper run; the cache remains gitignored and is never committed.
 - Assignment detail scraping scopes score parsing to the visible Skyward dialog, validates current-row score markers before using cached grades, and keeps explicit '* out of X' rows ungraded while preserving numeric zero grades.
 - Enhanced scraper passes the detected active quarter into browser-side missing-assignment extraction so valid rows are not lost to an uncaptured Node variable.
+- Enhanced scraper detail collection uses authenticated `sff.request()` with `SKYWARD_CONCURRENCY` (default 5), bounded retries, `data-eid` cache fingerprinting, and sequential UI fallbacks; unresolved details stop the run before generated files or cache are written.
 - Scraper outputs omit assignDate and normalize dueDate to MM/DD/YYYY format.
 - Scraper fix (12/21/2025): extractAssignmentDetails now clicks assignments by unique data attributes (data-aid, data-gid) instead of DOM index to prevent mis-matching after pagination. organizeByClass groups by classId first, correctly separating 9 classes instead of lumping all into one. classIdMap now also attempts assignment row group-child/group-parent mapping with classDesc fallbacks; classId may still be used as a last resort if no mapping is available. See issue gavins_grades_astro-orf.
 

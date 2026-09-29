@@ -9,6 +9,7 @@
 const { chromium } = require('playwright');
 const fs = require('fs').promises;
 const path = require('path');
+const cheerio = require('cheerio');
 const { updatePointsProgress } = require('./points-progress.cjs');
 
 const CACHE_FILENAME = 'detailed-grades-cache.json';
@@ -60,6 +61,7 @@ function assignmentFingerprint(assignment) {
   const hint = assignment.rowScoreHint || { status: 'unknown', earnedPoints: null, totalPoints: null };
   return {
     assignmentId: assignment.assignmentId || null,
+    entityId: assignment.entityId || null,
     classId: assignment.classId || null,
     studentId: assignment.studentId || null,
     name: assignment.name || '',
@@ -404,6 +406,7 @@ async function getAssignmentLinks(page) {
       if (!row || row.offsetParent === null) return;
 
       const assignmentId = link.getAttribute('data-aid');
+      const entityId = link.getAttribute('data-eid');
       const classId = link.getAttribute('data-gid');
       const studentId = link.getAttribute('data-sid');
       const name = link.textContent.trim();
@@ -459,6 +462,7 @@ async function getAssignmentLinks(page) {
       assignments.push({
         index,
         assignmentId,
+        entityId,
         classId,
         studentId,
         name,
@@ -473,6 +477,105 @@ async function getAssignmentLinks(page) {
 
     return assignments;
   });
+}
+
+function parseAssignmentDetails(html) {
+  const $ = cheerio.load(String(html || ''));
+  const scope = $.root();
+  const text = scope.text() || '';
+  const pointsPatterns = [
+    /Points\s*Earned[:\s]*([*]|[\d.]+)\s*(?:\/|out\s*of)\s*([\d.]+)/i,
+    /Earned\s*Points[:\s]*([*]|[\d.]+)\s*(?:\/|out\s*of)\s*([\d.]+)/i,
+    /Score[:\s]*([*]|[\d.]+)\s*(?:\/|out\s*of)\s*([\d.]+)/i,
+    /Grade[:\s]*([*]|[\d.]+)\s*(?:\/|out\s*of)\s*([\d.]+)/i,
+    /(?:Points|Earned|Score)[^0-9*]{0,50}([*]|[\d.]+)\s*\/\s*([\d.]+)/i
+  ];
+  let earnedRaw = null;
+  let totalRaw = null;
+  for (const pattern of pointsPatterns) {
+    const match = text.match(pattern);
+    if (match) {
+      earnedRaw = match[1];
+      totalRaw = match[2];
+      break;
+    }
+  }
+  if (!totalRaw) totalRaw = text.match(/out\s*of\s*([\d.]+)/i)?.[1] || null;
+  if (!totalRaw) {
+    totalRaw = text.match(/(?:Total|Max(?:imum)?|Possible)\s*Points?[^\d]*([\d.]+)/i)?.[1]
+      || text.match(/Points?\s*(?:Possible|Total|Max(?:imum)?)[^\d]*([\d.]+)/i)?.[1]
+      || null;
+  }
+  if (!earnedRaw || !totalRaw) {
+    $('tr').each((_, row) => {
+      if (earnedRaw && totalRaw) return;
+      const rowText = $(row).text();
+      if (!/Points|Earned|Score/i.test(rowText)) return;
+      const match = rowText.match(/([*]|[\d.]+)\s*\/\s*([\d.]+)/);
+      if (match) {
+        earnedRaw = match[1];
+        totalRaw = match[2];
+      }
+    });
+  }
+  if (!earnedRaw || !totalRaw) {
+    const scoreText = text.replace(/\b\d{1,2}\/\d{1,2}\/\d{2,4}\b/g, '');
+    for (const match of scoreText.matchAll(/(\d+(?:\.\d+)?)\s*\/\s*(\d+(?:\.\d+)?)/g)) {
+      const earned = Number(match[1]);
+      const total = Number(match[2]);
+      if (earned < 1000 && total < 1000 && total > 0) {
+        earnedRaw = match[1];
+        totalRaw = match[2];
+        break;
+      }
+    }
+  }
+  const parseNumber = raw => {
+    if (!raw) return { value: null, hasStar: false };
+    const trimmed = raw.trim();
+    const hasStar = trimmed === '*';
+    const value = Number.parseFloat(trimmed.replace(/[^0-9.]/g, ''));
+    return { value: Number.isNaN(value) ? null : value, hasStar };
+  };
+  const normalizeDate = raw => {
+    if (!raw) return null;
+    const value = raw.trim();
+    const looksLikeDate = /[0-9]{1,2}\/[0-9]{1,2}/.test(value) || /[A-Za-z]{3}/.test(value) || /[0-9]{4}/.test(value);
+    if (/^[0-9]+(?:\.[0-9]+)?$/.test(value) && !looksLikeDate) return null;
+    if (/Assign\s*Date|Points\s*Earned/i.test(value)) return null;
+    return value;
+  };
+  const earnedParsed = parseNumber(earnedRaw);
+  const totalParsed = parseNumber(totalRaw);
+  const percentValue = Number(text.match(/([0-9]{1,3})\s*%/)?.[1]);
+  let earnedPoints = earnedParsed.value;
+  let totalPoints = totalParsed.value;
+  let graded = earnedPoints !== null && !earnedParsed.hasStar;
+  const hasStar = earnedParsed.hasStar;
+  if (totalPoints === 0) totalPoints = null;
+  if (hasStar) {
+    graded = false;
+    earnedPoints = 0;
+  }
+  if (!graded && !hasStar && totalPoints !== null && Number.isFinite(percentValue)) {
+    earnedPoints = Math.round((percentValue / 100) * totalPoints * 100) / 100;
+    graded = true;
+  }
+  if (!hasStar && totalPoints !== null && Number.isFinite(percentValue) && percentValue >= 0 && (earnedPoints === null || (earnedPoints === 0 && percentValue > 0))) {
+    earnedPoints = Math.round((percentValue / 100) * totalPoints * 100) / 100;
+    graded = true;
+  }
+  const dueCell = $('div:nth-of-type(2) div table tbody tr:nth-of-type(2) td:nth-of-type(4)').first().text().trim() || null;
+  const dateDueMatch = text.match(/Date\s*Due[^0-9]*([0-9/]+)/i) || text.match(/Due\s*Date[^0-9]*([0-9/]+)/i);
+  const weightMatch = text.match(/Weight[^0-9]*([\d.]+)%?/i);
+  return {
+    graded,
+    earnedPoints,
+    totalPoints,
+    weight: weightMatch ? Number.parseFloat(weightMatch[1]) : null,
+    dateDue: normalizeDate(dueCell) || (dateDueMatch ? normalizeDate(dateDueMatch[1]) : null),
+    hasStar
+  };
 }
 
 async function extractAssignmentDetails(page, assignmentId, classId) {
@@ -684,7 +787,7 @@ async function extractAssignmentDetails(page, assignmentId, classId) {
 
       for (const selector of closeSelectors) {
         try {
-          await page.click(selector, { timeout: 1000 });
+          await page.click(selector, { timeout: 200 });
           break;
         } catch (e) {
           // Try next selector
@@ -708,15 +811,80 @@ async function extractAssignmentDetails(page, assignmentId, classId) {
 
   } catch (error) {
     console.error(`Error extracting details for assignment ${assignmentId}:`, error.message);
-    return {
-      graded: false,
-      earnedPoints: 0,
-      totalPoints: null,
-      weight: null,
-      dateDue: null,
-      hasStar: false
-    };
+    throw error;
   }
+}
+
+async function fetchAssignmentDetails(page, assignment, options = {}) {
+  const timeoutMs = options.timeoutMs ?? 8000;
+  const retries = options.retries ?? 2;
+  let lastError;
+  for (let attempt = 1; attempt <= retries; attempt += 1) {
+    try {
+      const html = await page.evaluate(({ assignment: item, timeout }) => new Promise((resolve, reject) => {
+        if (!window.sff || typeof window.sff.request !== 'function') {
+          reject(new Error('Skyward sff.request is unavailable'));
+          return;
+        }
+        let settled = false;
+        const finish = (callback, value) => {
+          if (settled) return;
+          settled = true;
+          clearTimeout(timer);
+          callback(value);
+        };
+        const timer = setTimeout(() => finish(reject, new Error('Skyward detail request timed out')), timeout);
+        const callback = response => {
+          const value = typeof response === 'string'
+            ? response
+            : response?.responseText || response?.html || response?.data || response?.content;
+          if (typeof value !== 'string' || !value.trim()) {
+            finish(reject, new Error('Skyward detail request returned no HTML'));
+            return;
+          }
+          finish(resolve, value);
+        };
+        try {
+          window.sff.request({
+            eid: item.entityId,
+            entityId: item.entityId,
+            sid: item.studentId,
+            gid: item.classId,
+            aid: item.assignmentId
+          }, callback);
+        } catch (error) {
+          finish(reject, error);
+        }
+      }), { assignment, timeout: timeoutMs });
+      const details = parseAssignmentDetails(html);
+      if (!details || (details.totalPoints === null && !details.hasStar && !details.dateDue && details.earnedPoints === null)) {
+        throw new Error('Skyward detail response could not be parsed');
+      }
+      return details;
+    } catch (error) {
+      lastError = error;
+      if (attempt < retries) await page.waitForTimeout(100 * attempt);
+    }
+  }
+  throw lastError;
+}
+
+async function mapWithConcurrency(items, concurrency, worker) {
+  const results = new Array(items.length);
+  let nextIndex = 0;
+  const runWorker = async () => {
+    while (true) {
+      const index = nextIndex++;
+      if (index >= items.length) return;
+      try {
+        results[index] = { value: await worker(items[index], index) };
+      } catch (error) {
+        results[index] = { error };
+      }
+    }
+  };
+  await Promise.all(Array.from({ length: Math.min(concurrency, items.length) }, runWorker));
+  return results;
 }
 
 async function scrapeAllAssignments(page, classes, cacheAssignments = {}, classIdMap = {}, currentQuarter = null) {
@@ -740,43 +908,71 @@ async function scrapeAllAssignments(page, classes, cacheAssignments = {}, classI
   const assignmentDetails = [];
   const updatedCache = { ...cacheAssignments };
   let cacheHits = 0;
-  let detailDialogsOpened = 0;
   const currentKeys = new Set();
 
-  // Process each assignment
-  for (let i = 0; i < assignmentLimit; i++) {
+  const detailStartedAt = Date.now();
+  const candidates = [];
+  for (let i = 0; i < assignmentLimit; i += 1) {
     const assignment = assignmentLinks[i];
-
-    if (i < 5) {
-      console.log(`DEBUG: Index ${i}, assignment from array:`, JSON.stringify({name: assignment.name, classId: assignment.classId, assignmentId: assignment.assignmentId}));
-    }
-
-    // Keep assignments from the active quarter when Skyward provides a tag.
-    // If the portal has not highlighted a quarter yet, retain the assignment.
     const dueQuarter = assignment.dueDate?.match(/\(Q([1-4])\)/i)?.[1] || null;
-    if (currentQuarter && dueQuarter && dueQuarter !== currentQuarter.slice(1)) {
-      continue;
-    }
-
+    if (currentQuarter && dueQuarter && dueQuarter !== currentQuarter.slice(1)) continue;
     const cacheKey = assignmentCacheKey(assignment);
     if (cacheKey) currentKeys.add(cacheKey);
-
-    if (i < 10 || i % 50 === 0) {
-      console.log(`Processing ${i + 1}/${assignmentLinks.length}: ${assignment.name} (classId=${assignment.classId})`);
-    } else {
-      console.log(`Processing ${i + 1}/${assignmentLinks.length}: ${assignment.name}`);
-    }
-
     const cached = cacheKey ? cacheAssignments[cacheKey] : null;
+    const details = canUseCachedAssignment(assignment, cached) ? cached : null;
+    if (details) cacheHits += 1;
+    candidates.push({ assignment, cacheKey, cached, details, index: i });
+  }
+  console.log(`Discovered assignments: ${candidates.length}`);
 
-    let details = canUseCachedAssignment(assignment, cached) ? cached : null;
-    if (details) {
-      cacheHits += 1;
-    } else {
-      // Extract detailed points by clicking the assignment
-      detailDialogsOpened += 1;
-      details = await extractAssignmentDetails(page, assignment.assignmentId, assignment.classId);
+  const uncached = candidates.filter(candidate => !candidate.details);
+  const concurrencyValue = Number.parseInt(process.env.SKYWARD_CONCURRENCY || '5', 10);
+  const concurrency = Number.isFinite(concurrencyValue) && concurrencyValue > 0 ? concurrencyValue : 5;
+  let directRequests = 0;
+  let directFailures = 0;
+  const directResults = await mapWithConcurrency(uncached, concurrency, async candidate => {
+    directRequests += 1;
+    try {
+      const details = await fetchAssignmentDetails(page, candidate.assignment);
+      return details;
+    } catch (error) {
+      directFailures += 1;
+      console.log(`Direct detail request failed for ${candidate.assignment.name}: ${error.message}`);
+      throw error;
     }
+  });
+
+  const unresolved = [];
+  directResults.forEach((result, index) => {
+    if (result.value) {
+      uncached[index].details = result.value;
+    } else {
+      unresolved.push({ candidate: uncached[index], error: result.error });
+    }
+  });
+
+  let uiFallbacks = 0;
+  for (const failed of unresolved) {
+    uiFallbacks += 1;
+    const { candidate } = failed;
+    console.log(`UI fallback ${uiFallbacks}/${unresolved.length}: ${candidate.assignment.name}`);
+    try {
+      candidate.details = await extractAssignmentDetails(page, candidate.assignment.assignmentId, candidate.assignment.classId);
+    } catch (error) {
+      failed.error = error;
+    }
+  }
+  const stillUnresolved = unresolved.filter(({ candidate }) => !candidate.details);
+  if (stillUnresolved.length > 0) {
+    const unresolvedError = new Error(`Unable to resolve ${stillUnresolved.length} assignment detail(s): ${stillUnresolved.map(({ candidate }) => candidate.assignment.name).join(', ')}`);
+    unresolvedError.code = 'UNRESOLVED_ASSIGNMENT_DETAILS';
+    throw unresolvedError;
+  }
+  console.log(`Detail phase duration: ${Date.now() - detailStartedAt}ms`);
+
+  for (const candidate of candidates) {
+    const { assignment, cacheKey, cached } = candidate;
+    let details = candidate.details;
 
     if (assignment.rowScoreHint.status === 'ungraded') {
       details = {
@@ -848,10 +1044,12 @@ async function scrapeAllAssignments(page, classes, cacheAssignments = {}, classI
 
   console.log(`Metadata rows scanned: ${assignmentLinks.length}`);
   console.log(`Cache hits: ${cacheHits}`);
-  console.log(`Detail dialogs opened: ${detailDialogsOpened}`);
+  console.log(`Direct requests: ${directRequests}`);
+  console.log(`Direct request failures: ${directFailures}`);
+  console.log(`UI fallbacks: ${uiFallbacks}`);
   console.log(`Cache entries pruned: ${cacheEntriesPruned}`);
 
-  return { assignmentDetails, updatedCache, stats: { metadataRowsScanned: assignmentLinks.length, cacheHits, detailDialogsOpened, cacheEntriesPruned } };
+  return { assignmentDetails, updatedCache, stats: { metadataRowsScanned: assignmentLinks.length, cacheHits, directRequests, directFailures, uiFallbacks, cacheEntriesPruned } };
 }
 
 function organizeByClass(assignments, classes) {
@@ -1139,6 +1337,7 @@ async function saveGradesToFile(grades, missingAssignments = []) {
 async function main() {
   let browser;
   let popup;
+  const scrapeStartedAt = Date.now();
   const cache = await loadCache();
 
   try {
@@ -1221,12 +1420,13 @@ async function main() {
     console.log(`${cacheChanged ? 'Cache updated' : 'Cache unchanged'} at: ${cache.path}`);
 
     await browser.close();
+    console.log(`Total scrape duration: ${Date.now() - scrapeStartedAt}ms`);
     console.log('\n✓ Scraping complete!');
 
   } catch (error) {
     console.error('\n✗ Error during scraping:', error);
 
-    if (popup) {
+    if (popup && error.code !== 'UNRESOLVED_ASSIGNMENT_DETAILS') {
       try {
         await popup.screenshot({
           path: path.join(__dirname, 'enhanced-scraper-error.png'),
@@ -1247,6 +1447,9 @@ async function main() {
 }
 
 module.exports = {
+  parseAssignmentDetails,
+  fetchAssignmentDetails,
+  mapWithConcurrency,
   extractAssignmentDetails,
   getAssignmentScoreHint,
   scrapeMissingAssignments,
