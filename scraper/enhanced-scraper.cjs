@@ -580,6 +580,15 @@ function parseAssignmentDetails(html) {
 
 async function extractAssignmentDetails(page, assignmentId, classId) {
   try {
+    const assertPageOpen = () => {
+      if (page.isClosed()) {
+        console.error(`Page/context unexpectedly closed during UI fallback for assignment ${assignmentId}`);
+        const error = new Error('Skyward gradebook page/context unexpectedly closed');
+        error.code = 'SKYWARD_PAGE_CLOSED';
+        throw error;
+      }
+    };
+    assertPageOpen();
     // Click the assignment link with matching data attributes
     const selector = `a#showAssignmentInfo[data-aid="${assignmentId}"][data-gid="${classId}"]`;
     const link = page.locator(selector).first();
@@ -587,10 +596,12 @@ async function extractAssignmentDetails(page, assignmentId, classId) {
     // Wait for the link to be visible and click it
     await link.waitFor({ state: 'visible', timeout: 5000 });
     await link.click();
+    assertPageOpen();
 
     // Wait for the detail modal/popup to appear
     const dialogLocator = page.locator('.sf_Dialog:visible, .ui-dialog:visible, [role="dialog"]:visible').first();
     await dialogLocator.waitFor({ state: 'visible', timeout: 5000 });
+    console.log(`Dialog opened for assignment ${assignmentId}`);
 
     // Extract the assignment details from the modal
     const details = await page.evaluate(() => {
@@ -772,9 +783,8 @@ async function extractAssignmentDetails(page, assignmentId, classId) {
       };
     });
 
-    // Close the modal (try various close methods)
-    try {
-      // Look for close button
+    assertPageOpen();
+    if (await dialogLocator.isVisible()) {
       const closeSelectors = [
         '.sf_DialogClose',
         'button:has-text("Close")',
@@ -786,26 +796,25 @@ async function extractAssignmentDetails(page, assignmentId, classId) {
       ];
 
       for (const selector of closeSelectors) {
+        const closeControl = dialogLocator.locator(selector).first();
+        if (!await closeControl.isVisible()) continue;
         try {
-          await page.click(selector, { timeout: 200 });
+          await closeControl.click({ timeout: 200 });
+          assertPageOpen();
           break;
-        } catch (e) {
-          // Try next selector
+        } catch (error) {
+          assertPageOpen();
         }
       }
 
-      // If no close button found, press Escape
-      await page.keyboard.press('Escape');
-    } catch (e) {
-      // Modal might have auto-closed
+      if (await dialogLocator.isVisible()) {
+        await page.keyboard.press('Escape');
+        assertPageOpen();
+      }
     }
-
-    try {
-      const dialogLocator = page.locator('.sf_Dialog:visible, .ui-dialog:visible, [role="dialog"]:visible').first();
-      await dialogLocator.waitFor({ state: 'hidden', timeout: 2000 });
-    } catch (e) {
-      await page.waitForTimeout(200);
-    }
+    await dialogLocator.waitFor({ state: 'hidden', timeout: 2000 });
+    assertPageOpen();
+    console.log(`Dialog closed for assignment ${assignmentId}`);
 
     return details;
 
@@ -817,48 +826,92 @@ async function extractAssignmentDetails(page, assignmentId, classId) {
 
 async function fetchAssignmentDetails(page, assignment, options = {}) {
   const timeoutMs = options.timeoutMs ?? 8000;
+  const modeTimeoutMs = options.modeTimeoutMs ?? Math.min(timeoutMs, 2000);
   const retries = options.retries ?? 2;
   let lastError;
   for (let attempt = 1; attempt <= retries; attempt += 1) {
     try {
-      const html = await page.evaluate(({ assignment: item, timeout }) => new Promise((resolve, reject) => {
+      const result = await page.evaluate(({ assignment: item, timeout, modeTimeout }) => new Promise((resolve, reject) => {
         if (!window.sff || typeof window.sff.request !== 'function') {
           reject(new Error('Skyward sff.request is unavailable'));
           return;
         }
-        let settled = false;
-        const finish = (callback, value) => {
-          if (settled) return;
-          settled = true;
-          clearTimeout(timer);
-          callback(value);
+        const link = document.querySelector(`a#showAssignmentInfo[data-aid="${CSS.escape(String(item.assignmentId))}"][data-gid="${CSS.escape(String(item.classId))}"]`);
+        const modes = window.__skywardDetailRequestMode
+          ? [window.__skywardDetailRequestMode]
+          : ['data', 'element', 'positional', 'named'];
+        const requestArgs = {
+          eid: item.entityId,
+          entityId: item.entityId,
+          sid: item.studentId,
+          gid: item.classId,
+          aid: item.assignmentId
         };
-        const timer = setTimeout(() => finish(reject, new Error('Skyward detail request timed out')), timeout);
-        const callback = response => {
-          const value = typeof response === 'string'
-            ? response
-            : response?.responseText || response?.html || response?.data || response?.content;
-          if (typeof value !== 'string' || !value.trim()) {
-            finish(reject, new Error('Skyward detail request returned no HTML'));
-            return;
+        const responseHtml = response => {
+          const values = Array.isArray(response) ? response : [response];
+          for (const candidate of values.reverse()) {
+            const value = typeof candidate === 'string'
+              ? candidate
+              : candidate?.responseText || candidate?.html || candidate?.data || candidate?.content;
+            if (typeof value === 'string' && value.trim()) return value;
           }
-          finish(resolve, value);
+          return null;
         };
-        try {
-          window.sff.request({
-            eid: item.entityId,
-            entityId: item.entityId,
-            sid: item.studentId,
-            gid: item.classId,
-            aid: item.assignmentId
-          }, callback);
-        } catch (error) {
-          finish(reject, error);
-        }
-      }), { assignment, timeout: timeoutMs });
-      const details = parseAssignmentDetails(html);
+        const invoke = (mode, callback) => {
+          if (mode === 'element') return window.sff.request(link, callback);
+          if (mode === 'positional') return window.sff.request(item.entityId, item.studentId, item.classId, item.assignmentId, callback);
+          if (mode === 'named') return window.sff.request({ entityId: item.entityId, studentId: item.studentId, classId: item.classId, assignmentId: item.assignmentId }, callback);
+          return window.sff.request(requestArgs, callback);
+        };
+        const tryMode = mode => new Promise((resolveMode, rejectMode) => {
+          let settled = false;
+          const timer = setTimeout(() => {
+            if (!settled) {
+              settled = true;
+              rejectMode(new Error(`Skyward detail request timed out (${mode})`));
+            }
+          }, modeTimeout);
+          const finish = (callback, value) => {
+            if (settled) return;
+            settled = true;
+            clearTimeout(timer);
+            callback(value);
+          };
+          const callback = (...responses) => {
+            const html = responseHtml(responses);
+            if (!html) {
+              finish(rejectMode, new Error(`Skyward detail request returned no HTML (${mode})`));
+              return;
+            }
+            window.__skywardDetailRequestMode = mode;
+            finish(resolveMode, { html, mode, arity: window.sff.request.length });
+          };
+          try {
+            invoke(mode, callback);
+          } catch (error) {
+            finish(rejectMode, error);
+          }
+        });
+        (async () => {
+          let lastModeError;
+          for (const mode of modes) {
+            try {
+              resolve(await tryMode(mode));
+              return;
+            } catch (error) {
+              lastModeError = error;
+            }
+          }
+          reject(lastModeError || new Error('No Skyward request mode succeeded'));
+        })();
+      }), { assignment, timeout: timeoutMs, modeTimeout: modeTimeoutMs });
+      const details = parseAssignmentDetails(result.html);
       if (!details || (details.totalPoints === null && !details.hasStar && !details.dateDue && details.earnedPoints === null)) {
+        await page.evaluate(() => { delete window.__skywardDetailRequestMode; });
         throw new Error('Skyward detail response could not be parsed');
+      }
+      if (options.logContract) {
+        console.log(`Skyward sff.request contract: ${result.mode} (arity ${result.arity})`);
       }
       return details;
     } catch (error) {
@@ -930,7 +983,23 @@ async function scrapeAllAssignments(page, classes, cacheAssignments = {}, classI
   const concurrency = Number.isFinite(concurrencyValue) && concurrencyValue > 0 ? concurrencyValue : 5;
   let directRequests = 0;
   let directFailures = 0;
-  const directResults = await mapWithConcurrency(uncached, concurrency, async candidate => {
+  let directCandidates = uncached;
+  const unresolved = [];
+  if (uncached.length > 0) {
+    const probe = uncached[0];
+    directRequests += 1;
+    try {
+      probe.details = await fetchAssignmentDetails(page, probe.assignment, { retries: 1, modeTimeoutMs: 1500, logContract: true });
+      directCandidates = uncached.slice(1);
+      console.log(`Skyward detail request contract selected for ${probe.assignment.name}`);
+    } catch (error) {
+      directFailures += 1;
+      directCandidates = [];
+      unresolved.push(...uncached.map(candidate => ({ candidate, error })));
+      console.log(`Skyward detail request contract probe failed; using UI fallback for ${uncached.length} assignments: ${error.message}`);
+    }
+  }
+  const directResults = await mapWithConcurrency(directCandidates, concurrency, async candidate => {
     directRequests += 1;
     try {
       const details = await fetchAssignmentDetails(page, candidate.assignment);
@@ -942,17 +1011,22 @@ async function scrapeAllAssignments(page, classes, cacheAssignments = {}, classI
     }
   });
 
-  const unresolved = [];
   directResults.forEach((result, index) => {
     if (result.value) {
-      uncached[index].details = result.value;
+      directCandidates[index].details = result.value;
     } else {
-      unresolved.push({ candidate: uncached[index], error: result.error });
+      unresolved.push({ candidate: directCandidates[index], error: result.error });
     }
   });
 
   let uiFallbacks = 0;
   for (const failed of unresolved) {
+    if (page.isClosed()) {
+      console.error('Page/context unexpectedly closed during UI fallback');
+      const error = new Error('Skyward gradebook page/context unexpectedly closed');
+      error.code = 'SKYWARD_PAGE_CLOSED';
+      throw error;
+    }
     uiFallbacks += 1;
     const { candidate } = failed;
     console.log(`UI fallback ${uiFallbacks}/${unresolved.length}: ${candidate.assignment.name}`);
@@ -960,6 +1034,7 @@ async function scrapeAllAssignments(page, classes, cacheAssignments = {}, classI
       candidate.details = await extractAssignmentDetails(page, candidate.assignment.assignmentId, candidate.assignment.classId);
     } catch (error) {
       failed.error = error;
+      if (page.isClosed() || error.code === 'SKYWARD_PAGE_CLOSED') throw error;
     }
   }
   const stillUnresolved = unresolved.filter(({ candidate }) => !candidate.details);

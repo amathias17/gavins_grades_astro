@@ -53,6 +53,7 @@
 - Assignment detail scraping scopes score parsing to the visible Skyward dialog, validates current-row score markers before using cached grades, and keeps explicit '* out of X' rows ungraded while preserving numeric zero grades.
 - Enhanced scraper passes the detected active quarter into browser-side missing-assignment extraction so valid rows are not lost to an uncaptured Node variable.
 - Enhanced scraper detail collection uses authenticated `sff.request()` with `SKYWARD_CONCURRENCY` (default 5), bounded retries, `data-eid` cache fingerprinting, and sequential UI fallbacks; unresolved details stop the run before generated files or cache are written.
+- Assignment UI fallback closes controls only inside the visible detail dialog, uses Escape only while it remains visible, logs dialog lifecycle, and aborts immediately if the gradebook page/context closes.
 - Scraper outputs omit assignDate and normalize dueDate to MM/DD/YYYY format.
 - Scraper fix (12/21/2025): extractAssignmentDetails now clicks assignments by unique data attributes (data-aid, data-gid) instead of DOM index to prevent mis-matching after pagination. organizeByClass groups by classId first, correctly separating 9 classes instead of lumping all into one. classIdMap now also attempts assignment row group-child/group-parent mapping with classDesc fallbacks; classId may still be used as a last resort if no mapping is available. See issue gavins_grades_astro-orf.
 
@@ -62,6 +63,7 @@
 - npm run build - production build; also type-checks.
 - npm run preview - serve the built site locally.
 - npx playwright test - run all E2E tests; add --headed or --ui as needed.
+- npx playwright test tests/e2e/scraperAssignmentDetails.spec.ts --config=playwright.scraper.config.ts - run scraper browser tests without starting the Astro dev server.
 
 ## Coding Style & UX
 - TypeScript + ESM; avoid any. Reuse BaseLayout, design tokens, and getGradeColor helpers; keep the current rounded charcoal/sage/sand study-room treatment on active pages. Prefer small incremental edits (apply_patch); stay ASCII unless the file already uses other characters.
