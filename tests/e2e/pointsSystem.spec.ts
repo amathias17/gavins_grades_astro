@@ -13,9 +13,14 @@ test.describe("positive marking-period points", () => {
     expect(getCurrentBadge(0).characterName).toBe(badges[0].characterName);
     expect(getCurrentBadge(999).characterName).toBe("Vegeta");
     expect(getCurrentBadge(1000).characterName).toBe("Goku");
-    expect(getCurrentBadge(2000).characterName).toBe("Goku Ultra Instinct");
+    expect(getCurrentBadge(1750).characterName).toBe("Frieza");
+    expect(getCurrentBadge(2000).characterName).toBe("Broly");
+    expect(getCurrentBadge(2500).characterName).toBe("Goku Ultra Instinct");
     expect(getCurrentBadge(4000).characterName).toBe("Jiren");
     expect(getBadgeStates(250).filter((badge) => badge.unlocked).map((badge) => badge.characterName)).toEqual(badges.slice(0, 3).map((badge) => badge.characterName));
+    expect(badges.map((badge) => badge.characterName)).toEqual([
+      "Yamcha", "Piccolo", "Gohan", "Vegeta", "Goku", "Gogeta", "Frieza", "Broly", "Goku Ultra Instinct", "Beerus", "Jiren",
+    ]);
     expect(getBadgeStates(5000).at(-1)?.isFinal).toBe(true);
   });
 
@@ -23,8 +28,8 @@ test.describe("positive marking-period points", () => {
     expect(getBadgeStates(0).filter((badge) => badge.unlocked)).toHaveLength(1);
     expect(getBadgeStates(0).filter((badge) => !badge.unlocked)).toHaveLength(10);
     expect(getBadgeStates(250).filter((badge) => badge.unlocked)).toHaveLength(3);
-    expect(getBadgeStates(2000).filter((badge) => badge.unlocked)).toHaveLength(7);
-    expect(getBadgeStates(2000).filter((badge) => !badge.unlocked)).toHaveLength(4);
+    expect(getBadgeStates(2000).filter((badge) => badge.unlocked)).toHaveLength(8);
+    expect(getBadgeStates(2000).filter((badge) => !badge.unlocked)).toHaveLength(3);
     expect(getBadgeStates(0)).toHaveLength(11);
   });
 
