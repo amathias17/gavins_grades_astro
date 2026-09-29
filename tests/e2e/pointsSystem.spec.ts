@@ -38,18 +38,28 @@ test.describe("positive marking-period points", () => {
     expect(getBadgeMilestoneProgress(1950)).toMatchObject({
       previousMilestone: 1750,
       nextMilestone: 2000,
-      nextBadgeName: "Broly",
       pointsToNextMilestone: 50,
       milestoneProgressPercent: 80,
     });
+    expect(getBadgeMilestoneProgress(1950)).not.toHaveProperty("nextBadgeName");
     expect(getBadgeMilestoneProgress(4000)).toMatchObject({
       previousMilestone: 4000,
       nextMilestone: null,
-      nextBadgeName: null,
       pointsToNextMilestone: 0,
       milestoneProgressPercent: 100,
     });
     expect(getBadgeMilestoneProgress(4500).milestoneProgressPercent).toBe(100);
+  });
+
+  test("keeps each locked identity hidden until its exact unlock threshold", () => {
+    badges.forEach((badge, index) => {
+      if (index === 0) return;
+      const belowThreshold = getBadgeStates(badge.unlockPoints - 1);
+      const lockedState = belowThreshold[index];
+      expect(lockedState.unlocked).toBe(false);
+      expect(belowThreshold.slice(index).every((state) => !state.unlocked)).toBe(true);
+      expect(getCurrentBadge(badge.unlockPoints).characterName).toBe(badge.characterName);
+    });
   });
 
   test("hydrates badge artwork from explicit API character IDs and tolerates an unavailable image", async () => {
@@ -118,8 +128,8 @@ test.describe("positive marking-period points", () => {
       schoolYear: "2026-2027",
       periods: { "1": { maxPersistentPoints: 1950, updatedAt: "2026-09-02T00:00:00.000Z" } },
     }, "2026-2027");
-    expect(protectedAtBroly.nextBadgeName).toBe("Broly");
     expect(protectedAtBroly.nextMilestone).toBe(2000);
+    expect(protectedAtBroly).not.toHaveProperty("nextBadgeName");
 
     const protectedAtFinalBadge = applyProtectedProgress(raw, {
       schoolYear: "2026-2027",

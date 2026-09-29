@@ -58,7 +58,6 @@ export interface PointsSummary {
   level: number;
   previousMilestone: number;
   nextMilestone: number | null;
-  nextBadgeName: string | null;
   pointsToNextMilestone: number;
   milestoneProgressPercent: number;
   opportunities: PointOpportunity[];

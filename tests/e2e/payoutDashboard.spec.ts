@@ -20,9 +20,9 @@ test.describe("positive points dashboard", () => {
     const expectedMilestone = getBadgeMilestoneProgress(points);
     const milestoneTrack = page.locator(".milestone-track");
     await expect(milestoneTrack).toHaveAttribute("role", "progressbar");
-    if (expectedMilestone.nextBadgeName) {
-      await expect(page.locator("#level-heading")).toHaveText(`NEXT BADGE: ${expectedMilestone.nextBadgeName}`);
-      await expect(milestoneTrack).toHaveAttribute("aria-label", `Progress toward ${expectedMilestone.nextBadgeName} at ${expectedMilestone.nextMilestone} points`);
+    if (expectedMilestone.nextMilestone !== null) {
+      await expect(page.locator("#level-heading")).toHaveText("NEXT BADGE UNLOCK");
+      await expect(milestoneTrack).toHaveAttribute("aria-label", `Progress to badge unlock at ${expectedMilestone.nextMilestone} points`);
       await expect(milestoneTrack).toHaveAttribute("aria-valuemin", String(expectedMilestone.previousMilestone));
       await expect(milestoneTrack).toHaveAttribute("aria-valuemax", String(expectedMilestone.nextMilestone));
       await expect(milestoneTrack).toHaveAttribute("aria-valuenow", String(Math.min(points, expectedMilestone.nextMilestone!)));
@@ -46,6 +46,11 @@ test.describe("positive points dashboard", () => {
     await expect(page.locator("#opportunity-heading")).toHaveText("POINTS READY TO EARN");
     await expect(page.locator(".points-screen")).not.toContainText("$");
     await expect(page.locator(".points-screen")).not.toContainText("CAN BUY");
+    const lockedNames = getBadgeStates(points).filter((badge) => !badge.unlocked).map((badge) => badge.characterName);
+    const dashboardText = await page.locator(".points-screen").innerText();
+    for (const characterName of lockedNames) expect(dashboardText).not.toContain(characterName);
+    await page.getByRole("button", { name: "HOW POINTS WORK" }).click({ force: true });
+    for (const characterName of lockedNames) await expect(page.getByRole("dialog")).not.toContainText(characterName);
   });
 
   test("opens Badge Room when the current badge card is activated", async ({ page }) => {
@@ -80,8 +85,13 @@ test.describe("positive points dashboard", () => {
     const nextBadge = badgeStates.find((badge) => !badge.unlocked);
     if (lockedCount > 0) {
       const lockedText = (await lockedCards.allTextContents()).join(" ");
+      const lockedAccessibleNames = await lockedCards.evaluateAll((cards) => cards.map((card) => card.getAttribute("aria-label") ?? "").join(" "));
       expect(lockedText).toContain("LOCKED");
       badgeStates.filter((badge) => badge.unlocked).forEach((badge) => expect(lockedText).not.toContain(badge.characterName));
+      badgeStates.filter((badge) => !badge.unlocked).forEach((badge) => {
+        expect(lockedText).not.toContain(badge.characterName);
+        expect(lockedAccessibleNames).not.toContain(badge.characterName);
+      });
       if (nextBadge) expect(lockedText).toContain(`${nextBadge.unlockPoints.toLocaleString()} PTS TO UNLOCK`);
     }
     await expect(page.locator(".badge-grid .badge-card:not(.is-locked)").first()).toContainText("Yamcha");

@@ -4,7 +4,6 @@ export interface BadgeMilestoneProgress {
   level: number;
   previousMilestone: number;
   nextMilestone: number | null;
-  nextBadgeName: string | null;
   pointsToNextMilestone: number;
   milestoneProgressPercent: number;
 }
@@ -26,7 +25,6 @@ export function getBadgeMilestoneProgress(total: number): BadgeMilestoneProgress
     level: (nextBadge?.level ?? badgeData[badgeData.length - 1].level) - 1,
     previousMilestone,
     nextMilestone,
-    nextBadgeName: nextBadge?.characterName ?? null,
     pointsToNextMilestone: nextMilestone === null ? 0 : Math.max(0, nextMilestone - points),
     milestoneProgressPercent,
   };
