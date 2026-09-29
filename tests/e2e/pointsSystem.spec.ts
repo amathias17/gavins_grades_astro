@@ -1,5 +1,6 @@
 import { expect, test } from "@playwright/test";
 import { calculatePoints } from "../../src/utils/points";
+import { getBadgeMilestoneProgress } from "../../src/utils/badgeMilestones";
 import type { MarkingPeriod } from "../../src/utils/schoolCalendar";
 import { applyProtectedProgress, getProtectedPersistentPoints } from "../../src/utils/pointsProgress";
 import { formatDataUpdateTime, getLatestDataUpdate } from "../../src/utils/dataFreshness";
@@ -31,6 +32,24 @@ test.describe("positive marking-period points", () => {
     expect(getBadgeStates(2000).filter((badge) => badge.unlocked)).toHaveLength(8);
     expect(getBadgeStates(2000).filter((badge) => !badge.unlocked)).toHaveLength(3);
     expect(getBadgeStates(0)).toHaveLength(11);
+  });
+
+  test("uses the next badge unlock as the milestone and completes at the final badge", () => {
+    expect(getBadgeMilestoneProgress(1950)).toMatchObject({
+      previousMilestone: 1750,
+      nextMilestone: 2000,
+      nextBadgeName: "Broly",
+      pointsToNextMilestone: 50,
+      milestoneProgressPercent: 80,
+    });
+    expect(getBadgeMilestoneProgress(4000)).toMatchObject({
+      previousMilestone: 4000,
+      nextMilestone: null,
+      nextBadgeName: null,
+      pointsToNextMilestone: 0,
+      milestoneProgressPercent: 100,
+    });
+    expect(getBadgeMilestoneProgress(4500).milestoneProgressPercent).toBe(100);
   });
 
   test("hydrates badge artwork from explicit API character IDs and tolerates an unavailable image", async () => {
@@ -94,6 +113,20 @@ test.describe("positive marking-period points", () => {
     const raw = calculatePoints([], [], period);
     expect(applyProtectedProgress(raw, persistentLedger, "2026-2027").totalPoints).toBe(169);
     expect(applyProtectedProgress(raw, persistentLedger, "2026-2027").assignmentPoints).toBe(0);
+
+    const protectedAtBroly = applyProtectedProgress(raw, {
+      schoolYear: "2026-2027",
+      periods: { "1": { maxPersistentPoints: 1950, updatedAt: "2026-09-02T00:00:00.000Z" } },
+    }, "2026-2027");
+    expect(protectedAtBroly.nextBadgeName).toBe("Broly");
+    expect(protectedAtBroly.nextMilestone).toBe(2000);
+
+    const protectedAtFinalBadge = applyProtectedProgress(raw, {
+      schoolYear: "2026-2027",
+      periods: { "1": { maxPersistentPoints: 4000, updatedAt: "2026-09-02T00:00:00.000Z" } },
+    }, "2026-2027");
+    expect(protectedAtFinalBadge.nextMilestone).toBeNull();
+    expect(protectedAtFinalBadge.milestoneProgressPercent).toBe(100);
   });
 
   test("awards actual points, full-credit bonuses, and A-grade bonuses", () => {

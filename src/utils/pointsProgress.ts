@@ -1,4 +1,5 @@
 import type { PointsSummary } from "./points";
+import { getBadgeMilestoneProgress } from "./badgeMilestones";
 
 export interface PointsProgressPeriod {
   maxPersistentPoints: number;
@@ -36,21 +37,12 @@ export function applyProtectedProgress(
     points.period?.number ?? null,
   );
   const protectedTotal = protectedPersistentPoints + points.classGradeBonuses;
-  const nextMilestone = protectedTotal < 1000
-    ? [100, 250, 500, 1000].find((milestone) => protectedTotal < milestone) ?? null
-    : Math.floor(protectedTotal / 500 + 1) * 500;
-  let level = 0;
-  for (const milestone of [100, 250, 500, 1000]) {
-    if (protectedTotal >= milestone) level += 1;
-  }
-  const pointsToNextMilestone = nextMilestone === null ? 0 : Math.max(0, nextMilestone - protectedTotal);
+  const milestone = getBadgeMilestoneProgress(protectedTotal);
 
   return {
     ...points,
     earnedPoints: protectedTotal,
     totalPoints: protectedTotal,
-    level,
-    nextMilestone,
-    pointsToNextMilestone,
+    ...milestone,
   };
 }

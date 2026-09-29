@@ -1,4 +1,14 @@
 import { expect, test } from "@playwright/test";
+import type { Page } from "@playwright/test";
+import { getBadgeMilestoneProgress } from "../../src/utils/badgeMilestones";
+import { getBadgeStates, getCurrentBadge } from "../../src/utils/badges";
+
+async function readDisplayedPoints(page: Page, selector: string): Promise<number> {
+  const text = await page.locator(selector).innerText();
+  const match = text.match(/[\d,]+(?:\.\d+)?/);
+  if (!match) throw new Error(`Could not read displayed points from ${selector}`);
+  return Number(match[0].replaceAll(",", ""));
+}
 
 test.describe("positive points dashboard", () => {
   test("renders points, milestone progress, bonuses, and opportunities", async ({ page }) => {
@@ -6,12 +16,27 @@ test.describe("positive points dashboard", () => {
 
     await expect(page.locator("#points-heading")).toHaveText("GAVIN'S POINTS QUEST");
     await expect(page.locator(".points-value")).toHaveText(/PTS/);
-    await expect(page.locator(".milestone-track")).toHaveAttribute("role", "progressbar");
+    const points = await readDisplayedPoints(page, ".points-value");
+    const expectedMilestone = getBadgeMilestoneProgress(points);
+    const milestoneTrack = page.locator(".milestone-track");
+    await expect(milestoneTrack).toHaveAttribute("role", "progressbar");
+    if (expectedMilestone.nextBadgeName) {
+      await expect(page.locator("#level-heading")).toHaveText(`NEXT BADGE: ${expectedMilestone.nextBadgeName}`);
+      await expect(milestoneTrack).toHaveAttribute("aria-label", `Progress toward ${expectedMilestone.nextBadgeName} at ${expectedMilestone.nextMilestone} points`);
+      await expect(milestoneTrack).toHaveAttribute("aria-valuemin", String(expectedMilestone.previousMilestone));
+      await expect(milestoneTrack).toHaveAttribute("aria-valuemax", String(expectedMilestone.nextMilestone));
+      await expect(milestoneTrack).toHaveAttribute("aria-valuenow", String(Math.min(points, expectedMilestone.nextMilestone!)));
+    } else {
+      await expect(page.locator("#level-heading")).toHaveText("BADGE COLLECTION COMPLETE");
+      await expect(milestoneTrack).toHaveAttribute("aria-label", "Badge collection complete");
+    }
+    expect(await milestoneTrack.locator("span").evaluate((element) => (element as HTMLElement).style.width))
+      .toBe(`${expectedMilestone.milestoneProgressPercent}%`);
     await expect(page.locator(".point-stats")).toBeVisible();
     await expect(page.locator(".points-encouragement + .data-freshness")).toContainText("DATA UPDATED");
     await expect(page.locator(".points-hero [data-data-freshness] time")).toContainText(/2026/);
     await expect(page.locator(".current-badge-panel")).not.toContainText("CURRENT CHARACTER");
-    await expect(page.locator(".current-badge-panel .badge-card")).toContainText("Piccolo");
+    await expect(page.locator(".current-badge-panel .badge-card")).toContainText(getCurrentBadge(points).characterName);
     await expect(page.locator(".current-badge-panel .badge-card")).not.toContainText("CURRENT BADGE");
     await expect(page.getByRole("link", { name: "OPEN BADGE ROOM", exact: true })).toHaveAttribute("href", "/badges");
     const currentBadgeLink = page.locator(".current-badge-link");
@@ -34,10 +59,14 @@ test.describe("positive points dashboard", () => {
   test("renders the full badge room with locked states", async ({ page }) => {
     await page.goto("/badges");
     await expect(page.locator("#badge-room-title")).toHaveText("BADGE ROOM");
-    await expect(page.locator(".badge-grid .badge-card")).toHaveCount(7);
-    await expect(page.locator(".badge-grid .badge-card.is-current")).toContainText("Piccolo");
-    await expect(page.locator(".badge-grid .badge-card.is-locked")).not.toHaveCount(0);
-    await expect(page.locator(".badge-grid .badge-art")).toHaveCount(7);
+    const points = await readDisplayedPoints(page, ".badge-room-header .badge-room-kicker");
+    const badgeStates = getBadgeStates(points);
+    const unlockedCount = badgeStates.filter((badge) => badge.unlocked).length;
+    const lockedCount = badgeStates.length - unlockedCount;
+    await expect(page.locator(".badge-grid .badge-card")).toHaveCount(badgeStates.length);
+    await expect(page.locator(".badge-grid .badge-card.is-current")).toContainText(getCurrentBadge(points).characterName);
+    await expect(page.locator(".badge-grid .badge-card.is-locked")).toHaveCount(lockedCount);
+    await expect(page.locator(".badge-grid .badge-art")).toHaveCount(badgeStates.length);
     await expect(page.locator(".badge-grid .badge-art").first()).toHaveCSS("border-radius", "12px");
     const portraitRatio = await page.locator(".badge-grid .badge-art").first().evaluate((element) => {
       const { width, height } = element.getBoundingClientRect();
@@ -45,13 +74,16 @@ test.describe("positive points dashboard", () => {
     });
     expect(portraitRatio).toBeCloseTo(0.8, 1);
     const lockedCards = page.locator(".badge-grid .badge-card.is-locked");
-    expect(await lockedCards.evaluateAll((cards) => cards.every((card) => !card.textContent?.includes("Vegeta")))).toBe(true);
     await expect(lockedCards.locator("img")).toHaveCount(0);
     await expect(lockedCards.locator(".badge-placeholder")).toHaveCount(0);
-    await expect(lockedCards.locator(".badge-mystery-silhouette")).toHaveCount(5);
-    const lockedText = (await lockedCards.allTextContents()).join(" ");
-    expect(lockedText).toContain("LOCKED");
-    expect(lockedText).toContain("500 PTS TO UNLOCK");
+    await expect(lockedCards.locator(".badge-mystery-silhouette")).toHaveCount(lockedCount);
+    const nextBadge = badgeStates.find((badge) => !badge.unlocked);
+    if (lockedCount > 0) {
+      const lockedText = (await lockedCards.allTextContents()).join(" ");
+      expect(lockedText).toContain("LOCKED");
+      badgeStates.filter((badge) => badge.unlocked).forEach((badge) => expect(lockedText).not.toContain(badge.characterName));
+      if (nextBadge) expect(lockedText).toContain(`${nextBadge.unlockPoints.toLocaleString()} PTS TO UNLOCK`);
+    }
     await expect(page.locator(".badge-grid .badge-card:not(.is-locked)").first()).toContainText("Yamcha");
     await expect(page.locator(".badge-grid .badge-card:not(.is-locked) img").first()).toBeAttached();
     await expect(page.locator(".badge-grid .badge-card:not(.is-locked) .badge-stats").first()).toContainText("AFFILIATION");
@@ -59,14 +91,14 @@ test.describe("positive points dashboard", () => {
     await expect(page.locator(".badge-grid .badge-card:not(.is-locked) .badge-stats").first()).toContainText("TOTAL KI");
     await expect(page.locator(".badge-grid .badge-card.is-locked .badge-stats")).toHaveCount(0);
     await expect(page.locator(".badge-grid .badge-card:not(.is-locked) img").first()).toHaveCSS("opacity", "1");
-    await expect(page.locator(".collection-counts strong")).toHaveText("2 / 7 BADGES COLLECTED");
-    await expect(page.locator(".collection-counts span")).toHaveText("5 BADGES REMAINING");
+    await expect(page.locator(".collection-counts strong")).toHaveText(`${unlockedCount} / ${badgeStates.length} BADGES COLLECTED`);
+    await expect(page.locator(".collection-counts span")).toHaveText(`${lockedCount} BADGES REMAINING`);
     await expect(page.getByRole("progressbar", { name: "Badge collection progress" }))
-      .toHaveAttribute("aria-valuenow", "2");
+      .toHaveAttribute("aria-valuenow", String(unlockedCount));
     await expect(page.getByRole("progressbar", { name: "Badge collection progress" }))
       .toHaveAttribute("aria-valuemin", "0");
     await expect(page.getByRole("progressbar", { name: "Badge collection progress" }))
-      .toHaveAttribute("aria-valuemax", "7");
+      .toHaveAttribute("aria-valuemax", String(badgeStates.length));
   });
 
   test("keeps the badge collection summary readable on mobile", async ({ page }) => {
@@ -76,8 +108,10 @@ test.describe("positive points dashboard", () => {
     await expect(page.locator(".collection-summary")).toBeVisible();
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth);
     expect(overflow).toBe(false);
-    expect(await page.locator(".badge-grid .badge-card.is-locked").count()).toBe(5);
-    expect(await page.locator(".badge-grid .badge-card:not(.is-locked)").count()).toBe(2);
+    const points = await readDisplayedPoints(page, ".badge-room-header .badge-room-kicker");
+    const badgeStates = getBadgeStates(points);
+    expect(await page.locator(".badge-grid .badge-card.is-locked").count()).toBe(badgeStates.filter((badge) => !badge.unlocked).length);
+    expect(await page.locator(".badge-grid .badge-card:not(.is-locked)").count()).toBe(badgeStates.filter((badge) => badge.unlocked).length);
   });
 
   test("does not show a missing-grade alarm when incomplete work exists", async ({ page }) => {

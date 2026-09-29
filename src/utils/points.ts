@@ -1,10 +1,9 @@
 import type { MarkingPeriod } from "./schoolCalendar";
 import type { Class } from "../types/grades";
+import { getBadgeMilestoneProgress } from "./badgeMilestones";
 
 export const FULL_CREDIT_BONUS = 2;
 export const A_GRADE_BONUS = 10;
-export const MILESTONES = [100, 250, 500, 1000] as const;
-
 export interface ScrapedPointAssignment {
   name: string;
   dueDate: string | null;
@@ -57,8 +56,11 @@ export interface PointsSummary {
   persistentPoints: number;
   totalPoints: number;
   level: number;
+  previousMilestone: number;
   nextMilestone: number | null;
+  nextBadgeName: string | null;
   pointsToNextMilestone: number;
+  milestoneProgressPercent: number;
   opportunities: PointOpportunity[];
   assignments: PointAssignment[];
 }
@@ -99,23 +101,6 @@ function dateKey(value: string | null): string {
 
 function assignmentKey(className: string, assignmentName: string, dueDate: string | null): string {
   return `${normalize(className)}|${normalize(assignmentName)}|${dateKey(dueDate)}`;
-}
-
-function milestoneFor(total: number): { level: number; nextMilestone: number | null; pointsToNextMilestone: number } {
-  let level = 0;
-  for (const milestone of MILESTONES) {
-    if (total >= milestone) level += 1;
-  }
-
-  const nextMilestone = total < MILESTONES[MILESTONES.length - 1]
-    ? MILESTONES.find((milestone) => total < milestone) ?? null
-    : Math.floor(total / 500 + 1) * 500;
-
-  return {
-    level,
-    nextMilestone,
-    pointsToNextMilestone: nextMilestone === null ? 0 : Math.max(0, nextMilestone - total),
-  };
 }
 
 export function calculatePoints(
@@ -217,7 +202,7 @@ export function calculatePoints(
   const fullCreditBonuses = fullCreditCount * FULL_CREDIT_BONUS;
   const persistentPoints = assignmentPoints + fullCreditBonuses;
   const totalPoints = persistentPoints + classGradeBonuses;
-  const milestone = milestoneFor(totalPoints);
+  const milestone = getBadgeMilestoneProgress(totalPoints);
 
   return {
     period,

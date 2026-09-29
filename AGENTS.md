@@ -17,6 +17,7 @@
 - BaseLayout enables Astro view transitions with ClientRouter in the page head.
 - CurrentGrades missing quests card shows a dynamic Missing.Quests count sourced from missing_assignments.json.
 - Homepage is a positive, mobile-first points quest: it shows current marking-period points, level progress, milestone distance, point bonuses, and incomplete assignments as opportunities.
+- Homepage milestone progress follows the next badge unlock threshold and character, using the same shared calculation for raw and protected points; it shows collection complete at the final badge.
 - Homepage points are derived from scraper assignments and grades by src/utils/points.ts; missing work never triggers a red alarm or subtracts points. Calculator, class-grade rules, and scraper behavior remain unchanged.
 - Protected quest progress is stored in src/data/points_progress.json by successful enhanced scraper runs. Within a school year and marking period, the displayed quest total is monotonic (the highest observed raw total); the ledger resets for a new period or school year. Current assignment breakdown rows remain factual even when protected progress is higher.
 - Protected quest progress stores the highest persistent assignment-plus-full-credit base; the current A-grade bonus is recalculated from current grades and may rise or fall by 10 points per qualifying class. New ledger entries use maxPersistentPoints; legacy maxTotalPoints entries are read defensively.
