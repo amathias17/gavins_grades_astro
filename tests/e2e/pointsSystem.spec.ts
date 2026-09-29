@@ -13,22 +13,23 @@ test.describe("positive marking-period points", () => {
     expect(getCurrentBadge(0).characterName).toBe(badges[0].characterName);
     expect(getCurrentBadge(999).characterName).toBe("Vegeta");
     expect(getCurrentBadge(1000).characterName).toBe("Goku");
-    expect(getCurrentBadge(5000).characterName).toBe("Goku Ultra Instinct");
+    expect(getCurrentBadge(2000).characterName).toBe("Goku Ultra Instinct");
+    expect(getCurrentBadge(4000).characterName).toBe("Jiren");
     expect(getBadgeStates(250).filter((badge) => badge.unlocked).map((badge) => badge.characterName)).toEqual(badges.slice(0, 3).map((badge) => badge.characterName));
     expect(getBadgeStates(5000).at(-1)?.isFinal).toBe(true);
   });
 
   test("derives collection counts from unlocked badge states", () => {
     expect(getBadgeStates(0).filter((badge) => badge.unlocked)).toHaveLength(1);
-    expect(getBadgeStates(0).filter((badge) => !badge.unlocked)).toHaveLength(6);
+    expect(getBadgeStates(0).filter((badge) => !badge.unlocked)).toHaveLength(10);
     expect(getBadgeStates(250).filter((badge) => badge.unlocked)).toHaveLength(3);
     expect(getBadgeStates(2000).filter((badge) => badge.unlocked)).toHaveLength(7);
-    expect(getBadgeStates(2000).filter((badge) => !badge.unlocked)).toHaveLength(0);
-    expect(getBadgeStates(0)).toHaveLength(7);
+    expect(getBadgeStates(2000).filter((badge) => !badge.unlocked)).toHaveLength(4);
+    expect(getBadgeStates(0)).toHaveLength(11);
   });
 
   test("hydrates badge artwork from explicit API character IDs and tolerates an unavailable image", async () => {
-    const hydrated = await getBadgeStatesWithApiArtwork(2000, async (input) => {
+    const hydrated = await getBadgeStatesWithApiArtwork(4000, async (input) => {
       const id = Number(String(input).split("/").pop());
       if (id === 13) return new Response(JSON.stringify({ id, name: "Yamcha", image: "https://example.com/yamcha.webp", affiliation: "Z Fighter", ki: "1,500", maxKi: "15,000" }), { status: 200 });
       if (id === 1) return new Response(JSON.stringify({ id, name: "Goku", image: "https://example.com/goku.webp", affiliation: "Z Fighter", ki: "60,000,000", maxKi: "90,000,000", transformations: [{ id: 44, name: "Goku Ultra Instinc", image: "https://example.com/ui.webp" }] }), { status: 200 });
@@ -40,8 +41,8 @@ test.describe("positive marking-period points", () => {
     expect(hydrated[0].baseKi).toBe("1,500");
     expect(hydrated[0].totalKi).toBe("15,000");
     expect(hydrated[1].imagePath).toBeUndefined();
-    expect(hydrated.at(-1)?.imagePath).toBe("https://example.com/ui.webp");
-    expect(hydrated.filter((badge) => badge.unlocked)).toHaveLength(7);
+    expect(hydrated.find((badge) => badge.characterName === "Goku Ultra Instinct")?.imagePath).toBe("https://example.com/ui.webp");
+    expect(hydrated.filter((badge) => badge.unlocked)).toHaveLength(11);
   });
 
   test("reads paginated Dragon Ball character lists", async () => {
