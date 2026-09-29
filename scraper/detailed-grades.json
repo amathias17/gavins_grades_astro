@@ -1,10 +1,106 @@
 {
   "metadata": {
-    "scrapedAt": "2026-09-28T23:51:10.344Z",
+    "scrapedAt": "2026-09-29T05:29:05.196Z",
     "totalClasses": 13,
-    "totalAssignments": 85
+    "totalAssignments": 96
   },
   "classes": [
+    {
+      "className": "JUNIOR SEMINAR",
+      "teacher": "Sydnee Rockey",
+      "period": "0",
+      "currentGrade": 0,
+      "assignments": [
+        {
+          "name": "Leader In Me Lesson 1.1",
+          "dueDate": "09/21/2026",
+          "earnedPoints": 0,
+          "totalPoints": 40,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Leader In Me Lesson 1.2",
+          "dueDate": "09/28/2026",
+          "earnedPoints": 0,
+          "totalPoints": 100,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Leader in Me Lesson 2.1",
+          "dueDate": "09/28/2026",
+          "earnedPoints": 0,
+          "totalPoints": 100,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Leader in Me Lesson 2.2",
+          "dueDate": "09/28/2026",
+          "earnedPoints": 0,
+          "totalPoints": 100,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Leader in Me Lesson 3.1",
+          "dueDate": "09/28/2026",
+          "earnedPoints": 0,
+          "totalPoints": 100,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Leader in Me Lesson 4.1",
+          "dueDate": "09/28/2026",
+          "earnedPoints": 0,
+          "totalPoints": 100,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Leader in Me Lesson 4.3",
+          "dueDate": "09/28/2026",
+          "earnedPoints": 0,
+          "totalPoints": 100,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Leader in Me Lesson 4.4",
+          "dueDate": "09/28/2026",
+          "earnedPoints": 0,
+          "totalPoints": 100,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Leader in Me Lesson 4.5",
+          "dueDate": "09/28/2026",
+          "earnedPoints": 0,
+          "totalPoints": 100,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Leader in Me Lesson 4.6",
+          "dueDate": "09/28/2026",
+          "earnedPoints": 0,
+          "totalPoints": 100,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Leader in Me Lesson 5.0",
+          "dueDate": "09/28/2026",
+          "earnedPoints": 0,
+          "totalPoints": 100,
+          "weight": 1,
+          "graded": false
+        }
+      ]
+    },
     {
       "className": "ENVIRON SCIENCE    1",
       "teacher": "Megan Kutruff",
@@ -53,17 +149,17 @@
         },
         {
           "name": "Lab Safety Quiz",
-          "dueDate": "09/21/2026",
+          "dueDate": "09/04/2026",
           "earnedPoints": 0,
-          "totalPoints": 40,
+          "totalPoints": 100,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
           "name": "Lab Safety Contract",
           "dueDate": "09/04/2026",
-          "earnedPoints": 0,
-          "totalPoints": 5,
+          "earnedPoints": 10,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
@@ -71,7 +167,7 @@
           "name": "Lab Safety Poster",
           "dueDate": "09/04/2026",
           "earnedPoints": 0,
-          "totalPoints": 5,
+          "totalPoints": 30,
           "weight": 1,
           "graded": true
         },
@@ -238,16 +334,16 @@
         {
           "name": "Safety Equipment WS",
           "dueDate": "09/08/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "earnedPoints": 35,
+          "totalPoints": 50,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Safety Equipment Map WS",
           "dueDate": "09/08/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "earnedPoints": 0,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         },
@@ -262,16 +358,16 @@
         {
           "name": "Safety QUIZ MC & T/F",
           "dueDate": "09/08/2026",
-          "earnedPoints": 27,
-          "totalPoints": 34,
+          "earnedPoints": 0,
+          "totalPoints": 25,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Safety QUIZ Map",
           "dueDate": "09/08/2026",
-          "earnedPoints": 27,
-          "totalPoints": 34,
+          "earnedPoints": 9,
+          "totalPoints": 11,
           "weight": 1,
           "graded": true
         },
@@ -286,16 +382,16 @@
         {
           "name": "1WS#1-SafetySymbols&Procedures",
           "dueDate": "09/03/2026",
-          "earnedPoints": 0,
-          "totalPoints": 10,
+          "earnedPoints": 15,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
         {
           "name": "Lab Safety Lesson Starters",
           "dueDate": "09/03/2026",
-          "earnedPoints": 0,
-          "totalPoints": 10,
+          "earnedPoints": 15,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         },
@@ -318,7 +414,7 @@
         {
           "name": "Signed Lab Safety Contract",
           "dueDate": "09/02/2026",
-          "earnedPoints": 5,
+          "earnedPoints": 0,
           "totalPoints": 5,
           "weight": 1,
           "graded": true
@@ -381,8 +477,8 @@
         },
         {
           "name": "HW #2 Expressions & Operations",
-          "dueDate": "09/09/2026",
-          "earnedPoints": 4,
+          "dueDate": "09/02/2026",
+          "earnedPoints": 9,
           "totalPoints": 10,
           "weight": 1,
           "graded": true
@@ -417,7 +513,7 @@
       "className": "ANATOMY & PHYSIOL",
       "teacher": "Denise Condo",
       "period": "5",
-      "currentGrade": 88,
+      "currentGrade": 90,
       "assignments": [
         {
           "name": "Homeostasis notes / embedded ?",
@@ -469,11 +565,11 @@
         },
         {
           "name": "Organization C.M and notes",
-          "dueDate": "09/09/2026",
-          "earnedPoints": 0,
-          "totalPoints": 15,
+          "dueDate": "09/03/2026",
+          "earnedPoints": 9,
+          "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Human Machine",
@@ -493,19 +589,19 @@
         },
         {
           "name": "Lab Coat Activity",
-          "dueDate": "09/02/2026",
-          "earnedPoints": 0,
-          "totalPoints": 15,
+          "dueDate": "09/03/2026",
+          "earnedPoints": 6,
+          "totalPoints": 5,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Virtual Simulator mini-lab",
           "dueDate": "09/02/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 15,
           "totalPoints": 15,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Syllabus/Grading Policy Signed",
@@ -582,8 +678,8 @@
         {
           "name": "\"Cosmic Voyage\" Video Review",
           "dueDate": "09/04/2026",
-          "earnedPoints": 20,
-          "totalPoints": 25,
+          "earnedPoints": 16,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
