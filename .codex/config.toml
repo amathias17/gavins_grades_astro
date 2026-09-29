@@ -5,6 +5,9 @@ model_reasoning_effort = "medium"
 command = "npx"
 args = ["-y", "@playwright/mcp@latest"]
 
+[mcp_servers.playwright.tools.browser_tabs]
+approval_mode = "approve"
+
 [mcp_servers.context7]
 command = "npx"
 args = ["-y", "@upstash/context7-mcp"]
