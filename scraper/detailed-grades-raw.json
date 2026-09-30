@@ -1505,6 +1505,22 @@
   },
   {
     "classId": "47127",
+    "assignmentId": "1663336",
+    "studentId": "1396",
+    "className": "ENGLISH 11",
+    "teacher": "Audrey Cromell",
+    "period": "8",
+    "currentGrade": 100,
+    "assignmentName": "Writing Lab 2",
+    "dateDue": "09/24/2026",
+    "dueDate": "09/24/2026",
+    "earnedPoints": 10,
+    "totalPoints": 10,
+    "weight": 1,
+    "graded": true
+  },
+  {
+    "classId": "47127",
     "assignmentId": "1658825",
     "studentId": "1396",
     "className": "ENGLISH 11",
