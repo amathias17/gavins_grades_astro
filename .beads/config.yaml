@@ -62,3 +62,5 @@
 # - github.repo
 
 export.auto: true
+sync:
+    remote: "git+https://github.com/amathias17/gavins_grades_astro.git"
