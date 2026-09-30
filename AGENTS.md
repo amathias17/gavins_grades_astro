@@ -43,6 +43,7 @@
 - Payout calculation lives in src/utils/payout.ts; scraper and grade ingestion remain unchanged.
 - Phase 2 points homepage: PayoutDashboard now renders the positive points quest UI from src/utils/points.ts. Phase 3 cleanup of remaining legacy payout references is intentionally deferred until phase confirmation.
 - Homepage includes a GRADE RECOVERY QUEST below points opportunities. src/utils/gradeRecovery.ts reconciles grades.json, authoritative missing_assignments.json, and scraped assignment totals, deduplicating assignment keys and projecting 100% completion without changing points or protected progress behavior. Cards sort by recoverable points and link to /classes/{period}; incomplete data shows DATA NEEDED.
+- Homepage dashboard actions include a VIEW CURRENT GRADES link to /history, where current percentage and letter grade are shown by class.
 - Grade recovery summary metrics use explicit value/label wrappers in a two-row responsive intro so the heading stays full-width and cards remain below the metrics without mobile compression or horizontal overflow.
 - Recovery summary metric groups center their values and labels above the class recovery cards at all responsive widths.
 - Recovery metrics use a centered, tighter band with readable labels and reduced summary-to-card whitespace.

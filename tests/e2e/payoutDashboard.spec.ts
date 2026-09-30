@@ -51,6 +51,8 @@ test.describe("positive points dashboard", () => {
     await currentBadgeLink.focus();
     await expect(currentBadgeLink).toHaveCSS("outline-style", "solid");
     await expect(page.locator("#opportunity-heading")).toHaveText("POINTS READY TO EARN");
+    await expect(page.getByRole("link", { name: "View current grades by class" })).toHaveAttribute("href", "/history");
+    await expect(page.getByRole("link", { name: "View current grades by class" })).toHaveText("VIEW CURRENT GRADES");
     await expect(page.locator(".points-screen")).not.toContainText("$");
     await expect(page.locator(".points-screen")).not.toContainText("CAN BUY");
     const lockedNames = getBadgeStates(precisePoints).filter((badge) => !badge.unlocked).map((badge) => badge.characterName);
