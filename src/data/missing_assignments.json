@@ -1,9 +1,17 @@
 {
   "metadata": {
-    "last_updated": "09/30/2026, 12:45 PM",
-    "count": 14
+    "last_updated": "09/30/2026, 06:55 PM",
+    "count": 15
   },
   "missing_assignments": [
+    {
+      "due_date": "09/29/2026",
+      "assignment_name": "Soil Permeability Lab",
+      "class_name": "ENVIRON SCIENCE    1",
+      "teacher": "Megan Kutruff",
+      "category": "Lab",
+      "max_points": "20"
+    },
     {
       "due_date": "09/22/2026",
       "assignment_name": "Sci Method - Bikini Bottom Exp",

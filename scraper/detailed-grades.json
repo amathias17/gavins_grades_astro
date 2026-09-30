@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-09-30T16:45:12.386Z",
+    "scrapedAt": "2026-09-30T22:55:05.750Z",
     "totalClasses": 13,
-    "totalAssignments": 100
+    "totalAssignments": 103
   },
   "classes": [
     {
@@ -105,8 +105,40 @@
       "className": "ENVIRON SCIENCE    1",
       "teacher": "Megan Kutruff",
       "period": "1",
-      "currentGrade": 56,
+      "currentGrade": 57,
       "assignments": [
+        {
+          "name": "Soil Permeability Lab",
+          "dueDate": "09/29/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Soil Permeability Lab",
+          "dueDate": "09/29/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Freshwater Resources Notes",
+          "dueDate": "09/28/2026",
+          "earnedPoints": 15,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "U.1 Eco Villain Final Poster",
+          "dueDate": "09/28/2026",
+          "earnedPoints": 31,
+          "totalPoints": 40,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Biome Travel Poster",
           "dueDate": "09/21/2026",
@@ -248,14 +280,6 @@
           "dueDate": "09/22/2026",
           "earnedPoints": 0,
           "totalPoints": 10,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Separation of a Mixture",
-          "dueDate": "09/21/2026",
-          "earnedPoints": 0,
-          "totalPoints": 40,
           "weight": 1,
           "graded": true
         },
