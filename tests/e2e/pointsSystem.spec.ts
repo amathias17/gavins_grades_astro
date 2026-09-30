@@ -16,6 +16,7 @@ test.describe("positive marking-period points", () => {
     expect(getCurrentBadge(1000).characterName).toBe("Goku");
     expect(getCurrentBadge(1750).characterName).toBe("Frieza");
     expect(getCurrentBadge(2000).characterName).toBe("Broly");
+    expect(badges.find((badge) => badge.id === "broly")?.apiCharacterId).toBe(68);
     expect(getCurrentBadge(2500).characterName).toBe("Goku Ultra Instinct");
     expect(getCurrentBadge(4000).characterName).toBe("Jiren");
     expect(getBadgeStates(250).filter((badge) => badge.unlocked).map((badge) => badge.characterName)).toEqual(badges.slice(0, 3).map((badge) => badge.characterName));

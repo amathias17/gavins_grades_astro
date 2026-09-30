@@ -6,7 +6,7 @@
   { "id": "goku", "characterName": "Goku", "apiCharacterId": 1, "unlockPoints": 1000, "level": 5, "isFinal": false },
   { "id": "gogeta", "characterName": "Gogeta", "apiCharacterId": 65, "unlockPoints": 1500, "level": 6, "isFinal": false },
   { "id": "frieza", "characterName": "Frieza", "apiCharacterId": 5, "unlockPoints": 1750, "level": 7, "isFinal": false },
-  { "id": "broly", "characterName": "Broly", "apiCharacterId": 6, "unlockPoints": 2000, "level": 8, "isFinal": false },
+  { "id": "broly", "characterName": "Broly", "apiCharacterId": 68, "unlockPoints": 2000, "level": 8, "isFinal": false },
   { "id": "goku-ultra-instinct", "characterName": "Goku Ultra Instinct", "apiCharacterId": 1, "apiTransformationId": 44, "unlockPoints": 2500, "level": 9, "isFinal": false },
   { "id": "beerus", "characterName": "Beerus", "apiCharacterId": 4, "unlockPoints": 3000, "level": 10, "isFinal": false },
   { "id": "jiren", "characterName": "Jiren", "apiCharacterId": 7, "unlockPoints": 4000, "level": 11, "isFinal": true }
