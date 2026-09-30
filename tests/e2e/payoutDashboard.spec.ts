@@ -2,6 +2,7 @@ import { expect, test } from "@playwright/test";
 import type { Page } from "@playwright/test";
 import { getBadgeMilestoneProgress } from "../../src/utils/badgeMilestones";
 import { getBadgeStates, getCurrentBadge } from "../../src/utils/badges";
+import { formatQuestPointDisplay } from "../../src/utils/questPointDisplay";
 
 async function readDisplayedPoints(page: Page, selector: string): Promise<number> {
   const text = await page.locator(selector).innerText();
@@ -11,21 +12,27 @@ async function readDisplayedPoints(page: Page, selector: string): Promise<number
 }
 
 test.describe("positive points dashboard", () => {
+  test("rounds quest point display values without changing precise progress values", () => {
+    expect(formatQuestPointDisplay(1234.49)).toBe("1,234");
+    expect(formatQuestPointDisplay(1234.5)).toBe("1,235");
+  });
+
   test("renders points, milestone progress, bonuses, and opportunities", async ({ page }) => {
     await page.goto("/");
 
     await expect(page.locator("#points-heading")).toHaveText("GAVIN'S POINTS QUEST");
     await expect(page.locator(".points-value")).toHaveText(/PTS/);
-    const points = await readDisplayedPoints(page, ".points-value");
-    const expectedMilestone = getBadgeMilestoneProgress(points);
     const milestoneTrack = page.locator(".milestone-track");
     await expect(milestoneTrack).toHaveAttribute("role", "progressbar");
+    const precisePoints = Number(await milestoneTrack.getAttribute("aria-valuenow"));
+    const expectedMilestone = getBadgeMilestoneProgress(precisePoints);
+    await expect(readDisplayedPoints(page, ".points-value")).resolves.toBe(Math.round(precisePoints));
     if (expectedMilestone.nextMilestone !== null) {
       await expect(page.locator("#level-heading")).toHaveText("NEXT BADGE UNLOCK");
       await expect(milestoneTrack).toHaveAttribute("aria-label", `Progress to badge unlock at ${expectedMilestone.nextMilestone} points`);
       await expect(milestoneTrack).toHaveAttribute("aria-valuemin", String(expectedMilestone.previousMilestone));
       await expect(milestoneTrack).toHaveAttribute("aria-valuemax", String(expectedMilestone.nextMilestone));
-      await expect(milestoneTrack).toHaveAttribute("aria-valuenow", String(Math.min(points, expectedMilestone.nextMilestone!)));
+      await expect(milestoneTrack).toHaveAttribute("aria-valuenow", String(Math.min(precisePoints, expectedMilestone.nextMilestone!)));
     } else {
       await expect(page.locator("#level-heading")).toHaveText("BADGE COLLECTION COMPLETE");
       await expect(milestoneTrack).toHaveAttribute("aria-label", "Badge collection complete");
@@ -36,7 +43,7 @@ test.describe("positive points dashboard", () => {
     await expect(page.locator(".points-encouragement + .data-freshness")).toContainText("DATA UPDATED");
     await expect(page.locator(".points-hero [data-data-freshness] time")).toContainText(/2026/);
     await expect(page.locator(".current-badge-panel")).not.toContainText("CURRENT CHARACTER");
-    await expect(page.locator(".current-badge-panel .badge-card")).toContainText(getCurrentBadge(points).characterName);
+    await expect(page.locator(".current-badge-panel .badge-card")).toContainText(getCurrentBadge(precisePoints).characterName);
     await expect(page.locator(".current-badge-panel .badge-card")).not.toContainText("CURRENT BADGE");
     await expect(page.getByRole("link", { name: "OPEN BADGE ROOM", exact: true })).toHaveAttribute("href", "/badges");
     const currentBadgeLink = page.locator(".current-badge-link");
@@ -46,7 +53,7 @@ test.describe("positive points dashboard", () => {
     await expect(page.locator("#opportunity-heading")).toHaveText("POINTS READY TO EARN");
     await expect(page.locator(".points-screen")).not.toContainText("$");
     await expect(page.locator(".points-screen")).not.toContainText("CAN BUY");
-    const lockedNames = getBadgeStates(points).filter((badge) => !badge.unlocked).map((badge) => badge.characterName);
+    const lockedNames = getBadgeStates(precisePoints).filter((badge) => !badge.unlocked).map((badge) => badge.characterName);
     const dashboardText = await page.locator(".points-screen").innerText();
     for (const characterName of lockedNames) expect(dashboardText).not.toContain(characterName);
     await page.getByRole("button", { name: "HOW POINTS WORK" }).click({ force: true });

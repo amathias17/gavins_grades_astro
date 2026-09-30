@@ -24,3 +24,6 @@ approval_mode = "approve"
 
 [mcp_servers.astrodocs]
 url = "https://mcp.docs.astro.build/mcp"
+
+[features]
+hooks = true

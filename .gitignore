@@ -31,3 +31,10 @@ scraper/detailed-grades-cache.json
 .claude
 .serena
 /public/badges
+
+# Beads / Dolt files (added by bd init)
+.dolt/
+*.db
+.beads-credential-key
+.beads/proxieddb/
+*.gate.lock*

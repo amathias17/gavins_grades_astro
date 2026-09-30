@@ -1,4 +1,7 @@
 {
-  "database": "beads.db",
-  "jsonl_export": "issues.jsonl"
+  "database": "dolt",
+  "backend": "dolt",
+  "dolt_mode": "embedded",
+  "dolt_database": "gavins_grades_astro",
+  "project_id": "7d99893b-3a5f-4614-8e73-d005357a8126"
 }
