@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-09-30T22:55:05.750Z",
+    "scrapedAt": "2026-10-01T17:19:50.989Z",
     "totalClasses": 13,
-    "totalAssignments": 103
+    "totalAssignments": 105
   },
   "classes": [
     {
@@ -460,6 +460,14 @@
       "currentGrade": 65,
       "assignments": [
         {
+          "name": "HW #6 Compound Inequalities",
+          "dueDate": "10/02/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
           "name": "HW #5 Inequalities",
           "dueDate": "09/29/2026",
           "earnedPoints": 0,
@@ -539,6 +547,14 @@
       "period": "5",
       "currentGrade": 90,
       "assignments": [
+        {
+          "name": "Nutrient notes - class acti.",
+          "dueDate": "10/01/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Homeostasis notes / embedded ?",
           "dueDate": "09/24/2026",
