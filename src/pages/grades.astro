@@ -1,9 +1,16 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import gradesData from "../data/grades.json";
-import { getClassRouteKey } from "../utils/classRoutes";
+import detailedGrades from "../../scraper/detailed-grades.json";
+import { getClassRouteKey, normalizeClassName } from "../utils/classRoutes";
 
-const classes = gradesData.classes ?? [];
+const scrapedClasses = detailedGrades.classes ?? [];
+const activeClassKeys = new Set(
+  scrapedClasses.map((classInfo) => `${normalizeClassName(classInfo.className)}|${classInfo.period.trim()}`),
+);
+const classes = (gradesData.classes ?? []).filter((classInfo) =>
+  activeClassKeys.has(`${normalizeClassName(classInfo.class_name)}|${classInfo.period.trim()}`),
+);
 const lastUpdated = gradesData.metadata?.last_updated ?? "Unavailable";
 
 function getGradeTone(grade: number): string {
@@ -31,7 +38,7 @@ function formatLetterGrade(letter: string | null | undefined): string {
       <div>
         <p class="eyebrow">GAVIN'S CURRENT GRADES</p>
         <h1 id="grade-room-title">GRADE ROOM</h1>
-        <p class="intro">Every class, one calm place to see where things stand right now.</p>
+        <p class="intro">Your active classes, with a clear look at where things stand right now.</p>
       </div>
       <div class="freshness" aria-label={`Grade data updated ${lastUpdated}`}>
         <span>DATA UPDATED</span>
@@ -43,7 +50,7 @@ function formatLetterGrade(letter: string | null | undefined): string {
       <div class="section-heading">
         <div>
           <p class="eyebrow">CURRENT SNAPSHOT</p>
-          <h2 id="current-grades-heading">ALL CLASSES</h2>
+          <h2 id="current-grades-heading">ACTIVE CLASSES</h2>
         </div>
         <span class="class-count">{classes.length} {classes.length === 1 ? "CLASS" : "CLASSES"}</span>
       </div>
@@ -54,7 +61,7 @@ function formatLetterGrade(letter: string | null | undefined): string {
             ? classInfo.current_grade
             : null;
           const tone = getGradeTone(grade ?? 0);
-          const routeKey = getClassRouteKey(classInfo, classes);
+          const routeKey = getClassRouteKey(classInfo, gradesData.classes ?? []);
           return (
             <a
               class={`grade-card ${tone}`}
