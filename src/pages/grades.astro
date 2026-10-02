@@ -1,0 +1,128 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import gradesData from "../data/grades.json";
+import { getClassRouteKey } from "../utils/classRoutes";
+
+const classes = gradesData.classes ?? [];
+const lastUpdated = gradesData.metadata?.last_updated ?? "Unavailable";
+
+function getGradeTone(grade: number): string {
+  if (grade >= 90) return "grade-a";
+  if (grade >= 80) return "grade-b";
+  if (grade >= 70) return "grade-c";
+  if (grade >= 60) return "grade-d";
+  return "grade-f";
+}
+
+function formatGrade(grade: number | null | undefined): string {
+  return typeof grade === "number" && Number.isFinite(grade) ? `${grade}%` : "--";
+}
+
+function formatLetterGrade(letter: string | null | undefined): string {
+  return typeof letter === "string" && letter.trim() ? letter : "--";
+}
+---
+
+<BaseLayout>
+  <div class="grade-room">
+    <a class="back-link" href="/" aria-label="Back to the grades overview">← BACK TO OVERVIEW</a>
+
+    <header class="grade-room-header">
+      <div>
+        <p class="eyebrow">GAVIN'S CURRENT GRADES</p>
+        <h1 id="grade-room-title">GRADE ROOM</h1>
+        <p class="intro">Every class, one calm place to see where things stand right now.</p>
+      </div>
+      <div class="freshness" aria-label={`Grade data updated ${lastUpdated}`}>
+        <span>DATA UPDATED</span>
+        <time>{lastUpdated}</time>
+      </div>
+    </header>
+
+    <section aria-labelledby="current-grades-heading">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">CURRENT SNAPSHOT</p>
+          <h2 id="current-grades-heading">ALL CLASSES</h2>
+        </div>
+        <span class="class-count">{classes.length} {classes.length === 1 ? "CLASS" : "CLASSES"}</span>
+      </div>
+
+      <div class="grade-grid" aria-label="Current grades by class">
+        {classes.map((classInfo) => {
+          const grade = typeof classInfo.current_grade === "number" && Number.isFinite(classInfo.current_grade)
+            ? classInfo.current_grade
+            : null;
+          const tone = getGradeTone(grade ?? 0);
+          const routeKey = getClassRouteKey(classInfo, classes);
+          return (
+            <a
+              class={`grade-card ${tone}`}
+              href={`/classes/${routeKey}`}
+              data-grade-card
+              aria-label={`Open ${classInfo.class_name}, period ${classInfo.period}, current grade ${formatGrade(grade)} ${formatLetterGrade(classInfo.letter_grade)}`}
+            >
+              <div class="card-topline">
+                <span class="period">P{classInfo.period}</span>
+                <span class="open-label">VIEW CLASS <span aria-hidden="true">↗</span></span>
+              </div>
+              <div class="class-name">{classInfo.class_name}</div>
+              <div class="teacher">{classInfo.teacher}</div>
+              <div class="grade-readout">
+                <span class="percentage">{formatGrade(grade)}</span>
+                <span class="letter" aria-label={`Letter grade ${formatLetterGrade(classInfo.letter_grade)}`}>{formatLetterGrade(classInfo.letter_grade)}</span>
+              </div>
+              <div class="grade-rule" aria-hidden="true"><span style={`width: ${Math.max(0, Math.min(100, grade ?? 0))}%`}></span></div>
+              <span class="card-footer">OPEN CLASS PLAN <span aria-hidden="true">→</span></span>
+            </a>
+          );
+        })}
+      </div>
+    </section>
+  </div>
+
+  <style>
+    .grade-room { width: min(100%, 1120px); margin: 0 auto; padding: 2.5rem 0 4rem; }
+    .back-link { display: inline-flex; margin-bottom: 2rem; color: var(--ledger-muted); font: 700 .62rem/1 "DM Mono", monospace; letter-spacing: .08em; text-decoration: none; }
+    .back-link:hover, .back-link:focus-visible { color: var(--ledger-green); }
+    .grade-room-header { display: flex; align-items: end; justify-content: space-between; gap: 2rem; border: 1px solid rgba(174, 202, 184, .2); border-radius: 1.15rem; padding: clamp(1.35rem, 4vw, 2.4rem); background: radial-gradient(circle at 10% 0%, rgba(159, 190, 168, .14), transparent 38%), rgba(12, 23, 18, .68); box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .2); }
+    .eyebrow { margin: 0 0 .55rem; color: var(--ledger-green); font: 700 .58rem/1 "DM Mono", monospace; letter-spacing: .13em; text-transform: uppercase; }
+    h1, h2 { margin: 0; color: var(--ledger-ink); font-family: "Orbitron", sans-serif; letter-spacing: .05em; }
+    h1 { font-size: clamp(1.4rem, 4vw, 2.35rem); }
+    h2 { font-size: clamp(.95rem, 2vw, 1.3rem); }
+    .intro { max-width: 32rem; margin: .85rem 0 0; color: var(--ledger-muted); font: 400 .9rem/1.6 "DM Sans", sans-serif; }
+    .freshness { flex: 0 0 auto; display: grid; gap: .35rem; text-align: right; }
+    .freshness span, .class-count { color: var(--ledger-muted); font: 700 .55rem/1 "DM Mono", monospace; letter-spacing: .1em; text-transform: uppercase; }
+    .freshness time { color: var(--ledger-ink); font: 500 .72rem/1.3 "DM Mono", monospace; }
+    section { margin-top: 2.75rem; }
+    .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
+    .class-count { padding: .55rem .7rem; border: 1px solid rgba(174, 202, 184, .18); border-radius: 999px; background: rgba(159, 190, 168, .05); white-space: nowrap; }
+    .grade-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+    .grade-card { position: relative; display: flex; min-width: 0; flex-direction: column; border: 1px solid rgba(174, 202, 184, .16); border-radius: 1rem; padding: 1.15rem; color: var(--ledger-ink); background: rgba(12, 23, 18, .62); text-decoration: none; transition: transform .18s ease, border-color .18s ease, background .18s ease; }
+    .grade-card:hover { transform: translateY(-2px); border-color: rgba(159, 190, 168, .65); background: rgba(24, 40, 30, .76); }
+    .grade-card:focus-visible { outline: 3px solid var(--ledger-green); outline-offset: 4px; }
+    .card-topline { display: flex; align-items: center; justify-content: space-between; gap: .75rem; }
+    .period { color: var(--ledger-paper); border-radius: 999px; padding: .3rem .5rem; background: var(--ledger-green); font: 700 .55rem/1 "DM Mono", monospace; }
+    .open-label { color: var(--ledger-muted); font: 700 .5rem/1 "DM Mono", monospace; letter-spacing: .08em; }
+    .class-name { min-height: 3.1rem; margin-top: 1.2rem; overflow-wrap: anywhere; color: var(--ledger-ink); font: 700 1rem/1.3 "DM Sans", sans-serif; }
+    .teacher { margin-top: .35rem; overflow-wrap: anywhere; color: var(--ledger-muted); font: 400 .75rem/1.35 "DM Sans", sans-serif; }
+    .grade-readout { display: flex; align-items: baseline; gap: .7rem; margin-top: 1.35rem; }
+    .percentage { color: var(--grade-color); font: 700 clamp(1.8rem, 4vw, 2.35rem)/1 "Orbitron", sans-serif; }
+    .letter { border: 1px solid var(--grade-color); border-radius: .45rem; padding: .35rem .5rem; color: var(--grade-color); font: 700 1rem/1 "Orbitron", sans-serif; }
+    .grade-rule { height: .35rem; margin-top: 1rem; overflow: hidden; border-radius: 999px; background: rgba(174, 202, 184, .12); }
+    .grade-rule span { display: block; height: 100%; border-radius: inherit; background: var(--grade-color); }
+    .card-footer { display: flex; justify-content: space-between; gap: .5rem; margin-top: 1.2rem; color: var(--ledger-muted); font: 700 .55rem/1 "DM Mono", monospace; letter-spacing: .08em; }
+    .grade-a { --grade-color: #9fbea8; }
+    .grade-b { --grade-color: #c7aa72; }
+    .grade-c { --grade-color: #d4a373; }
+    .grade-d { --grade-color: #e59b8c; }
+    .grade-f { --grade-color: #e06c75; }
+    @media (max-width: 860px) { .grade-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 620px) {
+      .grade-room { padding-top: 1.75rem; }
+      .grade-room-header { align-items: start; flex-direction: column; gap: 1.4rem; }
+      .freshness { text-align: left; }
+      .grade-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</BaseLayout>

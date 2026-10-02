@@ -83,7 +83,7 @@
 - Homepage freshness: src/utils/dataFreshness.ts selects the newest valid grades metadata or detailed-grades scrape timestamp and formats it in America/New_York. MarkingPeriodCard displays it as DATA UPDATED; missing timestamps render an explicit unavailable state.
 - GitHub Actions grade scraping now uses timezone-aware America/New_York schedules for 7:00 AM, 3:00 PM, and 8:00 PM Eastern; manual runs always proceed and GitHub schedule delays remain possible.
 - Grade recovery layout: PayoutDashboard groups each summary value with its label, places copy above metrics in a responsive grid, and preserves full-width recovery cards on mobile.
-- Current grades access: PayoutDashboard includes an accessible VIEW CURRENT GRADES link to /history, which lists current percentage and letter grade by class.
+- Current grades access: /grades is the dedicated Grade Room listing every class percentage and letter grade from grades.json with links to class plans; PayoutDashboard's accessible VIEW CURRENT GRADES action targets /grades, while /history remains the grade trend page.
 - Recovery summary metric groups are centered above the class recovery cards.
 - Recovery metric band is capped and centered, with stronger labels and tighter spacing above the recovery cards.
 - Class details now reconcile authoritative missing assignments by normalized class, assignment, and due date so confirmed missing rows do not display as GRADED.
