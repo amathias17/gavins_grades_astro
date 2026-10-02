@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-01T17:19:50.989Z",
+    "scrapedAt": "2026-10-02T05:15:12.869Z",
     "totalClasses": 13,
-    "totalAssignments": 105
+    "totalAssignments": 106
   },
   "classes": [
     {
@@ -657,8 +657,16 @@
       "className": "ASTRONOMY",
       "teacher": "James Krug",
       "period": "6",
-      "currentGrade": 92,
+      "currentGrade": 90,
       "assignments": [
+        {
+          "name": "INDIV. EXAM #1",
+          "dueDate": "09/30/2026",
+          "earnedPoints": 55,
+          "totalPoints": 70,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Assign #3: Atlas of the Univ.",
           "dueDate": "09/29/2026",
