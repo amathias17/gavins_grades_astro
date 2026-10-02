@@ -66,8 +66,7 @@ const assignmentStatusClass = (status: typeof points.assignments[number]["status
 <section class="points-screen" aria-labelledby="points-heading">
     <div class="points-console">
         <header class="points-header">
-            <div><p class="points-eyebrow">{periodLabel} / PROGRESS</p><h1 id="points-heading">GAVIN'S POINTS QUEST</h1></div>
-            <span class="status-light" aria-label="Points system online">ONLINE</span>
+            <div><p class="points-eyebrow">{periodLabel} / PROGRESS</p><h1 id="points-heading">POINTS QUEST</h1></div>
         </header>
         <div class="points-hero">
             <div class="points-hero-label">TOTAL POINTS EARNED</div>
@@ -348,6 +347,54 @@ const assignmentStatusClass = (status: typeof points.assignments[number]["status
     @media (max-width: 560px) { .breakdown-summary { grid-template-columns: repeat(2, 1fr); } .breakdown-class li { grid-template-columns: minmax(0, 1fr) auto; } .breakdown-status { grid-column: 1 / -1; justify-self: start; } .opportunity-dialog-list li { grid-template-columns: minmax(0, 1fr); align-items: start; gap: .65rem; } .opportunity-dialog-list .opportunity-meta { min-width: 0; width: 100%; display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-start; gap: .55rem .8rem; } .opportunity-dialog-list .opportunity-points { margin-left: auto; } }
     @media (max-width: 520px) { .recovery-intro { gap: .85rem; } .recovery-summary { gap: .65rem; } .recovery-summary span { font-size: .5rem; } .recovery-grade-row { gap: .45rem; } .recovery-grade-row strong { display: grid; gap: .2rem; } .recovery-ready { white-space: normal; text-align: right; } }
     @media (prefers-reduced-motion: reduce) { .milestone-track span { transition: none; } }
+
+    /* Home page treatment: a calm, editorial quest ledger. */
+    .points-screen { padding: clamp(2.5rem, 6vw, 4rem) 0 3rem; }
+    .points-console { width: min(100%, 60rem); }
+    .points-header { align-items: end; border-color: var(--ledger-line); padding: 0 0 1.4rem; }
+    .points-eyebrow { margin-bottom: .75rem; color: var(--ledger-sand); font-size: .66rem; letter-spacing: .1em; }
+    .points-header h1 { color: var(--ledger-ink); font: 600 clamp(1.8rem, 5vw, 2.7rem)/1.05 "DM Sans", sans-serif; letter-spacing: .015em; }
+    .points-hero { display: grid; justify-items: start; margin: 1.5rem 0 1.25rem; border: 1px solid var(--ledger-line); border-radius: 1rem; padding: clamp(1.25rem, 4vw, 2rem); background: var(--ledger-surface); box-shadow: none; text-align: left; }
+    .points-hero::before { display: none; }
+    .points-hero-label { color: var(--ledger-muted); font: 500 .67rem/1.3 "DM Sans", sans-serif; letter-spacing: .1em; }
+    .points-value { margin-top: .4rem; color: var(--ledger-ink); font: 600 clamp(4rem, 14vw, 7.5rem)/.98 "DM Sans", sans-serif; letter-spacing: -.045em; text-shadow: none; }
+    .points-value small { margin-left: .35rem; color: var(--ledger-green); font: 500 .16em/1 "DM Sans", sans-serif; letter-spacing: .08em; }
+    .points-encouragement { margin-top: .7rem; color: var(--ledger-muted); font: 400 .9rem/1.5 "DM Sans", sans-serif; letter-spacing: 0; }
+    .data-freshness { justify-content: start; margin-top: 1rem; color: var(--ledger-muted); font-size: .66rem; }
+    .data-freshness-label { color: var(--ledger-sand); font-size: .58rem; }
+    .data-freshness time { color: var(--ledger-muted); }
+    .level-panel, .current-badge-panel, .opportunity-panel, .recovery-panel { border-color: var(--ledger-line); border-radius: .85rem; background: var(--ledger-surface); }
+    .level-panel, .opportunity-panel { padding: clamp(1rem, 3vw, 1.35rem); }
+    .panel-kicker { color: var(--ledger-sand); font-size: .58rem; letter-spacing: .1em; }
+    .panel-heading h2 { color: var(--ledger-ink); font: 600 clamp(1rem, 3vw, 1.2rem)/1.25 "DM Sans", sans-serif; letter-spacing: 0; }
+    .points-to-go, .opportunity-total { color: var(--ledger-sand); font: 600 .68rem/1.25 "DM Sans", sans-serif; }
+    .awaiting-total { color: var(--ledger-muted); font-size: .62rem; }
+    .milestone-track { border-color: var(--ledger-line-strong); background: #111612; }
+    .milestone-track span { background: var(--ledger-green); box-shadow: none; }
+    .milestone-meta { color: var(--ledger-muted); font: 500 .58rem/1.3 "DM Sans", sans-serif; }
+    .point-stats { gap: 0; margin-top: 1rem; border-block: 1px solid var(--ledger-line); }
+    .stat-card { border: 0; border-radius: 0; padding: 1rem; background: transparent; }
+    .stat-card + .stat-card { border-left: 1px solid var(--ledger-line); }
+    .stat-card span { color: var(--ledger-muted); font: 500 .58rem/1.4 "DM Sans", sans-serif; letter-spacing: .04em; }
+    .stat-card strong { color: var(--ledger-ink); font: 600 1.25rem/1.2 "DM Sans", sans-serif; }
+    .opportunity-list { gap: 0; margin-top: 1rem; }
+    .opportunity-list li { border: 0; border-top: 1px solid var(--ledger-line); border-radius: 0; padding: .9rem .2rem; background: transparent; }
+    .opportunity-list li.is-not-graded { background: transparent; }
+    .opportunity-mark { color: var(--ledger-sand); font: 500 1rem/1 "DM Sans", sans-serif; }
+    .opportunity-name strong { color: var(--ledger-ink); font: 600 .82rem/1.35 "DM Sans", sans-serif; text-transform: none; }
+    .opportunity-name small { color: var(--ledger-muted); font: 400 .75rem/1.4 "DM Sans", sans-serif; }
+    .opportunity-status { color: var(--ledger-sand); font-size: .55rem; }
+    .is-not-graded .opportunity-status { color: var(--ledger-green); }
+    .opportunity-points { color: var(--ledger-ink); font: 600 .72rem/1.2 "DM Sans", sans-serif; }
+    .current-badge-panel { padding: clamp(1rem, 3vw, 1.35rem); }
+    .badge-room-link { color: var(--ledger-sand); font-size: .62rem; letter-spacing: .07em; }
+    .recovery-panel { background: var(--ledger-surface); }
+    .recovery-card { border-color: var(--ledger-line); background: var(--ledger-surface-raised); }
+    .dashboard-actions { margin-top: 1.5rem; }
+    .feedback-button, .breakdown-button { min-height: 2.75rem; border-color: var(--ledger-line-strong); padding: .75rem 1rem; color: var(--ledger-green); background: transparent; font: 500 .64rem/1 "DM Sans", sans-serif; letter-spacing: .07em; }
+    .breakdown-button { color: var(--ledger-sand); }
+    .feedback-button:hover, .feedback-button:focus-visible { color: #152017; background: var(--ledger-green); box-shadow: none; }
+    .breakdown-button:hover, .breakdown-button:focus-visible { color: #201a0d; background: var(--ledger-sand); box-shadow: none; }
     @media (max-width: 520px) { .points-screen { padding-top: max(3rem, env(safe-area-inset-top)); padding-bottom: max(1.5rem, env(safe-area-inset-bottom)); } .status-light { font-size: .43rem; } .point-stats { gap: .4rem; } .stat-card { padding: .65rem .45rem; } .stat-card span { font-size: .42rem; } .panel-heading { gap: .65rem; } .points-to-go, .opportunity-total { font-size: .52rem; } .awaiting-total { font-size: .46rem; } }
     @media (prefers-reduced-motion: reduce) { .milestone-track span { transition: none; } }
 </style>
