@@ -1,4 +1,5 @@
 # Repository Memory
+- Dashboard compact character badge uses the Classes ledger treatment: full-width ruled link, flat surface, sage level label, readable character name and stats, and visible keyboard focus. Portrait cropping and Badge Room collection cards retain their existing behavior.
 
 - Stack: Astro 5 + tailwindcss@4 via vite plugin; active dashboard and class-plan styling uses DM Sans/DM Mono with a rounded charcoal/sage/sand study-room treatment; layout at src/layouts/BaseLayout.astro imports global.css.
 - AGENTS.md cleaned of encoding artifacts and duplicate sections; tooling directives consolidated.

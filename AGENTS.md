@@ -1,4 +1,5 @@
 # Repository Guidelines
+- Dashboard compact character badge uses the Classes ledger treatment: full-width ruled link, flat surface, sage level label, readable character name and stats, and visible keyboard focus. Portrait cropping and Badge Room collection cards retain their existing behavior.
 
 ## Project Structure & Data
 - Astro 5 + Tailwind 4.1 (@tailwindcss/vite); layout in src/layouts/BaseLayout.astro imports src/styles/global.css and retro neon-green/black theme.

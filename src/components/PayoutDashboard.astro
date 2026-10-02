@@ -250,7 +250,6 @@ const assignmentStatusClass = (status: typeof points.assignments[number]["status
     .level-panel, .opportunity-panel { border-color: rgba(174, 202, 184, .16); border-radius: .9rem; background: rgba(12, 23, 18, .56); }
     .current-badge-panel { margin-top: 1rem; border: 1px solid rgba(174, 202, 184, .16); border-radius: .9rem; padding: 1rem; background: rgba(12, 23, 18, .56); }
     .current-badge-link { display: block; color: inherit; text-decoration: none; cursor: pointer; }
-    .current-badge-link:hover .badge-card { border-color: rgba(199, 170, 114, .72); background: rgba(199, 170, 114, .08); transform: translateY(-1px); }
     .current-badge-link:focus-visible { border-radius: .95rem; outline: 2px solid #c7aa72; outline-offset: .3rem; }
     .badge-room-link { color: #c7aa72; font: 500 .58rem/1 "DM Sans", sans-serif; letter-spacing: .1em; text-decoration: none; text-transform: uppercase; }
     .badge-room-link:hover, .badge-room-link:focus-visible { color: #e8eee9; text-decoration: underline; }
@@ -388,14 +387,9 @@ const assignmentStatusClass = (status: typeof points.assignments[number]["status
     .current-badge-panel .panel-heading { align-items: start; gap: 1rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(174, 202, 184, .14); }
     .current-badge-panel .panel-heading h2 { margin-top: .35rem; }
     .current-badge-summary { margin: .5rem 0 0; color: var(--ledger-muted); font: 400 .82rem/1.45 "DM Sans", sans-serif; }
-    .current-badge-link { display: block; width: 100%; margin-top: 1rem; border-radius: .9rem; }
-    .current-badge-link :global(.badge-card) { grid-template-columns: clamp(6rem, 16vw, 7.25rem) minmax(0, 1fr); min-height: 10rem; gap: clamp(.9rem, 3vw, 1.35rem); padding: clamp(.75rem, 2.5vw, 1rem); transition: border-color .16s ease, background-color .16s ease, box-shadow .16s ease; }
-    .current-badge-link :global(.badge-art) { width: 100%; }
-    .current-badge-link :global(.badge-copy h3) { font-size: clamp(1.15rem, 3vw, 1.45rem); }
-    .current-badge-link :global(.badge-stats) { gap: clamp(.4rem, 2vw, .8rem); }
-    .current-badge-link :global(.badge-stats dd) { font-size: .68rem; }
-    .current-badge-link:hover :global(.badge-card) { border-color: rgba(166, 196, 167, .42); background: rgba(159, 190, 168, .055); box-shadow: none; transform: none; }
-    .current-badge-link:focus-visible { outline: 3px solid var(--ledger-green); outline-offset: 3px; }
+    .current-badge-link { display: block; width: 100%; margin-top: 1rem; border-top: 1px solid var(--ledger-line); border-radius: 0; padding: 1rem .9rem; transition: background-color .16s ease; }
+    .current-badge-link:hover { background: rgba(159, 190, 168, .055); }
+    .current-badge-link:focus-visible { border-radius: 0; outline: 3px solid var(--ledger-green); outline-offset: 2px; }
     .badge-room-link { display: inline-flex; min-height: 2.75rem; align-items: center; justify-content: center; border: 1px solid var(--ledger-line-strong); border-radius: 999px; padding: .75rem 1rem; color: var(--ledger-green); background: transparent; font: 700 .68rem/1 "DM Mono", monospace; letter-spacing: .07em; text-decoration: none; white-space: nowrap; }
     .badge-room-link:hover, .badge-room-link:focus-visible { color: #152017; background: var(--ledger-green); text-decoration: none; }
     .badge-room-link:focus-visible { outline: 2px solid var(--ledger-sand); outline-offset: 3px; }
@@ -407,7 +401,6 @@ const assignmentStatusClass = (status: typeof points.assignments[number]["status
     .feedback-button:hover, .feedback-button:focus-visible { color: #152017; background: var(--ledger-green); box-shadow: none; }
     .breakdown-button:hover, .breakdown-button:focus-visible { color: #201a0d; background: var(--ledger-sand); box-shadow: none; }
     @media (max-width: 640px) { .points-screen { padding-top: max(3rem, env(safe-area-inset-top)); padding-bottom: max(1.5rem, env(safe-area-inset-bottom)); } .points-hero { padding: 1rem; } .level-panel, .current-badge-panel, .opportunity-panel, .recovery-panel { border-radius: .85rem; } .current-badge-panel .panel-heading { align-items: stretch; flex-direction: column; } .badge-room-link { width: 100%; } .point-stats { grid-template-columns: 1fr; gap: .55rem; } .stat-card + .stat-card { border-left: 1px solid rgba(174, 202, 184, .12); padding-left: .85rem; } .opportunity-list li { align-items: flex-start; } }
-    @media (max-width: 420px) { .current-badge-link :global(.badge-card) { grid-template-columns: 5rem minmax(0, 1fr); min-height: 0; gap: .75rem; padding: .7rem; } .current-badge-link :global(.badge-stats) { gap: .45rem; } .current-badge-link :global(.badge-stats dd) { font-size: .62rem; } }
     @media (max-width: 520px) { .status-light { font-size: .43rem; } .stat-card { padding: .65rem .45rem; } .stat-card span { font-size: .42rem; } .panel-heading { gap: .65rem; } .points-to-go, .opportunity-total { font-size: .52rem; } .awaiting-total { font-size: .46rem; } }
-    @media (prefers-reduced-motion: reduce) { .milestone-track span, .current-badge-link :global(.badge-card), .badge-room-link { transition: none; } }
+    @media (prefers-reduced-motion: reduce) { .milestone-track span, .current-badge-link, .badge-room-link { transition: none; } }
 </style>
