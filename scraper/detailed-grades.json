@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-02T13:30:57.399Z",
+    "scrapedAt": "2026-10-02T18:51:05.793Z",
     "totalClasses": 13,
-    "totalAssignments": 109
+    "totalAssignments": 113
   },
   "classes": [
     {
@@ -105,16 +105,8 @@
       "className": "ENVIRON SCIENCE    1",
       "teacher": "Megan Kutruff",
       "period": "1",
-      "currentGrade": 57,
+      "currentGrade": 54,
       "assignments": [
-        {
-          "name": "Soil Permeability Lab",
-          "dueDate": "09/29/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
-          "weight": 1,
-          "graded": true
-        },
         {
           "name": "Soil Permeability Lab",
           "dueDate": "09/29/2026",
@@ -300,10 +292,42 @@
       "currentGrade": 50,
       "assignments": [
         {
-          "name": "Sci Method - Bikini Bottom Exp",
-          "dueDate": "09/22/2026",
+          "name": "Unit 1 Notes",
+          "dueDate": "10/01/2026",
           "earnedPoints": 0,
-          "totalPoints": 10,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Scientific Method Review WS",
+          "dueDate": "10/01/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Unit 1 TEST - Multiple Choice",
+          "dueDate": "10/01/2026",
+          "earnedPoints": 18,
+          "totalPoints": 23,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Scientific Method Review WS",
+          "dueDate": "10/01/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Unit 1 Notes",
+          "dueDate": "10/01/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
           "weight": 1,
           "graded": true
         },
@@ -481,11 +505,11 @@
       "className": "INTRMEDIATE ALG II",
       "teacher": "Jodi Lambertus",
       "period": "4",
-      "currentGrade": 65,
+      "currentGrade": 66,
       "assignments": [
         {
           "name": "HW #6 Compound Inequalities",
-          "dueDate": "10/02/2026",
+          "dueDate": "10/05/2026",
           "earnedPoints": 0,
           "totalPoints": 10,
           "weight": 1,
@@ -899,6 +923,14 @@
       "period": "8",
       "currentGrade": 100,
       "assignments": [
+        {
+          "name": "Writing Lab 3",
+          "dueDate": "10/02/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Writing Lab 2",
           "dueDate": "09/24/2026",
