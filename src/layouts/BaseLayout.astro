@@ -28,9 +28,9 @@ import "../styles/global.css";
 </html>
 
 <style is:global>
-    :root { --ledger-paper: #101310; --ledger-surface: #171c18; --ledger-surface-raised: #1d241f; --ledger-ink: #f0eee5; --ledger-muted: #a2a79d; --ledger-line: #303a32; --ledger-line-strong: #465348; --ledger-green: #a6c4a7; --ledger-green-dark: #a6c4a7; --ledger-sand: #d0b783; --ledger-danger: #d89186; }
-    .ledger-body { min-width: 320px; min-height: 100svh; margin: 0; padding: 0 clamp(1rem, 4vw, 3rem); background: var(--ledger-paper); color: var(--ledger-ink); font-family: "DM Sans", sans-serif; }
-    .ledger-body::before { position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: .32; background: radial-gradient(ellipse at 50% 0%, rgba(166, 196, 167, .09), transparent 55%); content: ""; }
+    :root { --ledger-paper: #080b0a; --ledger-ink: #f2f5ef; --ledger-muted: #8c9890; --ledger-line: #27332d; --ledger-line-strong: #405247; --ledger-green: #61d49a; --ledger-green-dark: #61d49a; }
+    .ledger-body { min-width: 320px; min-height: 100svh; margin: 0; padding: 0 2.5rem; background: var(--ledger-paper); color: var(--ledger-ink); }
+    .ledger-body::before { position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: .45; background: radial-gradient(circle at 50% 50%, rgba(97, 212, 154, .07), transparent 38%), radial-gradient(rgba(242, 245, 239, .08) .5px, transparent .5px); background-size: auto, 6px 6px; content: ""; }
     .dashboard { width: 100%; min-height: 100svh; margin: 0 auto; }
     .header {
     background: #1a1a1a;
@@ -73,7 +73,7 @@ import "../styles/global.css";
         background: #1a1a1a;
     }
 
-    @media (max-width: 640px) { .ledger-body { padding: 0 1rem; } }
+    @media (max-width: 640px) { .ledger-body { padding: 0 1.25rem; } }
 
 .grade-badge {
     background: #ff0000;
