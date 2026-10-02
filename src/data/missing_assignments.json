@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "10/02/2026, 02:51 PM",
+"last_updated": "10/02/2026, 02:51 PM",
     "count": 18
   },
   "missing_assignments": [
@@ -29,6 +29,14 @@
       "max_points": "20"
     },
     {
+{
+      "due_date": "09/29/2026",
+      "assignment_name": "HW #5 Inequalities",
+      "class_name": "INTRMEDIATE ALG II",
+      "teacher": "Jodi Lambertus",
+      "category": "Homework",
+      "max_points": "10"
+    }
       "due_date": "09/23/2026",
       "assignment_name": "Kudzu Inv. Spc. Case Study",
       "class_name": "ENVIRON SCIENCE    1",
