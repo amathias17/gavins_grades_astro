@@ -118,25 +118,6 @@ a, button, input, select, summary { -webkit-tap-highlight-color: transparent; }
 .ledger-page svg path { stroke: var(--ledger-green) !important; }
 .ledger-page .pulse-dot, .ledger-page .end-dot { animation: none; }
 
-/* The home dashboard keeps its quest structure and adopts the shared palette. */
-.points-console { width: min(100%, 54rem); }
-.points-screen { color: var(--ledger-ink) !important; font-family: "DM Sans", sans-serif !important; }
-.points-header { border-color: var(--ledger-line) !important; }
-.points-eyebrow, .panel-kicker, .points-to-go, .opportunity-total { color: var(--ledger-sand) !important; }
-.points-header h1, .panel-heading h2, .points-value, .stat-card strong { color: var(--ledger-ink) !important; text-shadow: none !important; }
-.points-hero { border-color: var(--ledger-line-strong) !important; border-radius: 1.1rem; background: radial-gradient(ellipse at 50% 0%, rgba(166,196,167,.1), transparent 65%), var(--ledger-surface) !important; box-shadow: var(--ledger-shadow) !important; }
-.points-hero::before { display: none; }
-.points-value small, .opportunity-points, .opportunity-mark { color: var(--ledger-sand) !important; }
-.points-encouragement, .opportunity-empty { color: var(--ledger-muted) !important; }
-.level-panel, .opportunity-panel, .current-badge-panel, .recovery-panel { border-color: var(--ledger-line) !important; border-radius: .85rem; background: var(--ledger-surface) !important; }
-.milestone-track { border-color: var(--ledger-line-strong) !important; border-radius: 999px; background: #111612 !important; }
-.milestone-track span { border-radius: inherit; background: var(--ledger-green) !important; box-shadow: none !important; }
-.stat-card { border-color: var(--ledger-line) !important; border-radius: .7rem; background: var(--ledger-surface-raised) !important; }
-.opportunity-list li { border-left-color: var(--ledger-sand) !important; border-radius: .45rem; background: rgba(208,183,131,.06) !important; }
-.opportunity-list li.is-not-graded { border-left-color: var(--ledger-green) !important; background: rgba(166,196,167,.05) !important; }
-.feedback-button, .badge-room-link { border-color: var(--ledger-line-strong) !important; color: var(--ledger-green) !important; }
-.feedback-button:hover, .feedback-button:focus-visible { color: #152017 !important; background: var(--ledger-green) !important; }
-
 @media (max-width: 640px) {
     body.ledger-body { padding-inline: 1rem; }
     .ledger-page { padding-top: max(3rem, env(safe-area-inset-top)); }
