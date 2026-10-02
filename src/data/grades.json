@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "10/02/2026, 01:15 AM",
+    "last_updated": "10/02/2026, 09:30 AM",
     "most_recent_date": "10/2/2026",
     "total_classes": 13
   },
@@ -62,7 +62,7 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 86,
+      "current_grade": 89,
       "letter_grade": "B"
     },
     {
@@ -985,7 +985,7 @@
       "9/29/2026": 86,
       "9/30/2026": 86,
       "10/1/2026": 86,
-      "10/2/2026": 86
+      "10/2/2026": 89
     },
     "Amer Studies": {
       "11/24/2025": 100,

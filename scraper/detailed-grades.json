@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-02T05:15:12.869Z",
+    "scrapedAt": "2026-10-02T13:30:57.399Z",
     "totalClasses": 13,
-    "totalAssignments": 106
+    "totalAssignments": 109
   },
   "classes": [
     {
@@ -140,6 +140,22 @@
           "graded": true
         },
         {
+          "name": "Carrying Capacity Lab",
+          "dueDate": "09/23/2026",
+          "earnedPoints": 0,
+          "totalPoints": 25,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Kudzu Inv. Spc. Case Study",
+          "dueDate": "09/23/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": false
+        },
+        {
           "name": "Biome Travel Poster",
           "dueDate": "09/21/2026",
           "earnedPoints": 10,
@@ -233,8 +249,16 @@
       "className": "PHYSICAL EDUC",
       "teacher": "Paul Picciotti",
       "period": "2",
-      "currentGrade": 86,
+      "currentGrade": 89,
       "assignments": [
+        {
+          "name": "Week 5",
+          "dueDate": "10/02/2026",
+          "earnedPoints": 50,
+          "totalPoints": 50,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Week 4",
           "dueDate": "09/25/2026",
