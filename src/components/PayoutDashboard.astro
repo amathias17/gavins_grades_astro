@@ -66,7 +66,7 @@ const assignmentStatusClass = (status: typeof points.assignments[number]["status
 <section class="points-screen" aria-labelledby="points-heading">
     <div class="points-console">
         <header class="points-header">
-            <div><p class="points-eyebrow">{periodLabel} / PROGRESS</p><h1 id="points-heading">POINTS QUEST</h1></div>
+            <div><p class="points-eyebrow">{periodLabel} / PROGRESS</p><h1 id="points-heading">GAVIN'S POINTS QUEST</h1></div>
         </header>
         <div class="points-hero">
             <div class="points-hero-label">TOTAL POINTS EARNED</div>
@@ -82,8 +82,8 @@ const assignmentStatusClass = (status: typeof points.assignments[number]["status
             <div class="milestone-track" role="progressbar" aria-label={collectionComplete ? "Badge collection complete" : `Progress to badge unlock at ${nextMilestone} points`} aria-valuemin={points.previousMilestone} aria-valuemax={nextMilestone} aria-valuenow={collectionComplete ? points.previousMilestone : Math.min(points.totalPoints, nextMilestone)}><span style={`width: ${points.milestoneProgressPercent}%`}></span></div>
             <div class="milestone-meta"><span>{formattedPreviousMilestone} PTS</span><span>{collectionComplete ? "ALL BADGES UNLOCKED" : `${points.milestoneProgressPercent}% COMPLETE`}</span><span>{collectionComplete ? "FINAL LEVEL" : `${formattedNextMilestone} PTS`}</span></div>
         </section>
-        <section class="current-badge-panel" aria-label="Power level badge">
-            <div class="panel-heading"><div><p class="panel-kicker">POWER LEVEL BADGE</p></div><a class="badge-room-link" href="/badges">OPEN BADGE ROOM</a></div>
+        <section class="current-badge-panel" aria-labelledby="current-badge-heading" aria-describedby="current-badge-summary">
+            <div class="panel-heading"><div><p class="panel-kicker">POWER LEVEL BADGE</p><h2 id="current-badge-heading">Current power level</h2><p id="current-badge-summary" class="current-badge-summary">Level {currentBadge.level} with {formattedPoints} quest points earned.</p></div><a class="badge-room-link" href="/badges">OPEN BADGE ROOM</a></div>
             <a class="current-badge-link" href="/badges" aria-label="Open Badge Room to view all badges"><BadgeCard badge={currentBadge} compact /></a>
         </section>
         <div class="point-stats" aria-label="Point breakdown">
@@ -249,11 +249,9 @@ const assignmentStatusClass = (status: typeof points.assignments[number]["status
     .data-freshness time { color: rgba(199, 218, 204, .72); }
     .level-panel, .opportunity-panel { border-color: rgba(174, 202, 184, .16); border-radius: .9rem; background: rgba(12, 23, 18, .56); }
     .current-badge-panel { margin-top: 1rem; border: 1px solid rgba(174, 202, 184, .16); border-radius: .9rem; padding: 1rem; background: rgba(12, 23, 18, .56); }
-    .current-badge-panel .badge-card { max-width: 25rem; margin-top: 1.25rem; }
-    .current-badge-link { display: block; max-width: 25rem; color: inherit; text-decoration: none; cursor: pointer; }
+    .current-badge-link { display: block; color: inherit; text-decoration: none; cursor: pointer; }
     .current-badge-link:hover .badge-card { border-color: rgba(199, 170, 114, .72); background: rgba(199, 170, 114, .08); transform: translateY(-1px); }
     .current-badge-link:focus-visible { border-radius: .95rem; outline: 2px solid #c7aa72; outline-offset: .3rem; }
-    .current-badge-link .badge-card { transition: border-color .18s ease, background .18s ease, transform .18s ease; }
     .badge-room-link { color: #c7aa72; font: 500 .58rem/1 "DM Sans", sans-serif; letter-spacing: .1em; text-decoration: none; text-transform: uppercase; }
     .badge-room-link:hover, .badge-room-link:focus-visible { color: #e8eee9; text-decoration: underline; }
     .panel-kicker { color: #c7aa72; }
@@ -349,12 +347,12 @@ const assignmentStatusClass = (status: typeof points.assignments[number]["status
     @media (prefers-reduced-motion: reduce) { .milestone-track span { transition: none; } }
 
     /* Home follows Grade Room's open ledger: one title, open metrics, ruled rows. */
-    .points-screen { padding: 2.5rem 0 4rem; }
-    .points-console { width: min(100%, 60rem); }
+    .points-screen { padding: clamp(2rem, 5vw, 4rem) 0 3rem; }
+    .points-console { width: min(100%, 52rem); }
     .points-header { align-items: end; border-color: var(--ledger-line); padding: .35rem 0 2rem; }
     .points-eyebrow { margin-bottom: .75rem; color: var(--ledger-green); font: 700 .68rem/1.2 "DM Mono", monospace; letter-spacing: .1em; }
     .points-header h1 { color: var(--ledger-ink); font: 600 clamp(2rem, 5vw, 3rem)/1.05 "DM Sans", sans-serif; letter-spacing: .02em; }
-    .points-hero { display: grid; justify-items: start; margin: 0; border: 0; border-bottom: 1px solid var(--ledger-line); border-radius: 0; padding: 1.65rem 0 1.5rem; background: transparent; box-shadow: none; text-align: left; }
+    .points-hero { display: grid; justify-items: start; margin: 0; border: 1px solid rgba(174, 202, 184, .18); border-radius: 1rem; padding: clamp(1.25rem, 4vw, 1.75rem); background: rgba(12, 23, 18, .62); box-shadow: 0 1.25rem 3rem rgba(0, 0, 0, .18); text-align: left; }
     .points-hero::before { display: none; }
     .points-hero-label { color: var(--ledger-muted); font: 700 .68rem/1.2 "DM Mono", monospace; letter-spacing: .1em; }
     .points-value { margin-top: .6rem; color: var(--ledger-ink); font: 600 clamp(3.5rem, 12vw, 6rem)/1 "DM Sans", sans-serif; letter-spacing: -.035em; text-shadow: none; }
@@ -363,8 +361,8 @@ const assignmentStatusClass = (status: typeof points.assignments[number]["status
     .data-freshness { justify-content: start; margin-top: .8rem; color: var(--ledger-muted); font-size: .68rem; }
     .data-freshness-label { color: var(--ledger-muted); font-size: .62rem; }
     .data-freshness time { color: var(--ledger-ink); }
-    .level-panel, .current-badge-panel, .opportunity-panel, .recovery-panel { border: 0; border-bottom: 1px solid var(--ledger-line); border-radius: 0; background: transparent; box-shadow: none; }
-    .level-panel, .opportunity-panel { margin: 0; padding: 1.5rem 0; }
+    .level-panel, .current-badge-panel, .opportunity-panel, .recovery-panel { border: 1px solid rgba(174, 202, 184, .18); border-radius: 1rem; background: rgba(12, 23, 18, .62); box-shadow: 0 1.25rem 3rem rgba(0, 0, 0, .18); }
+    .level-panel, .opportunity-panel { margin-top: 1rem; padding: clamp(1rem, 4vw, 1.5rem); }
     .panel-kicker { color: var(--ledger-green); font: 700 .68rem/1.2 "DM Mono", monospace; letter-spacing: .1em; }
     .panel-heading h2 { color: var(--ledger-ink); font: 600 clamp(1.15rem, 2.5vw, 1.55rem)/1.2 "DM Sans", sans-serif; letter-spacing: .02em; }
     .points-to-go, .opportunity-total { color: var(--ledger-sand); font: 600 .75rem/1.3 "DM Sans", sans-serif; }
@@ -372,30 +370,44 @@ const assignmentStatusClass = (status: typeof points.assignments[number]["status
     .milestone-track { border-color: var(--ledger-line-strong); background: #171c18; }
     .milestone-track span { background: var(--ledger-green); box-shadow: none; }
     .milestone-meta { color: var(--ledger-muted); font: 500 .65rem/1.3 "DM Sans", sans-serif; }
-    .point-stats { gap: 0; margin: 0; border-bottom: 1px solid var(--ledger-line); }
-    .stat-card { border: 0; border-radius: 0; padding: 1rem .9rem 1.2rem 0; background: transparent; }
-    .stat-card + .stat-card { border-left: 1px solid var(--ledger-line); padding-left: .9rem; }
+    .point-stats { gap: .65rem; margin-top: 1rem; }
+    .stat-card { border: 1px solid rgba(174, 202, 184, .12); border-radius: .7rem; padding: .85rem; background: rgba(24, 40, 30, .34); }
+    .stat-card + .stat-card { border-left: 1px solid rgba(174, 202, 184, .12); padding-left: .85rem; }
     .stat-card span { color: var(--ledger-muted); font: 700 .62rem/1.4 "DM Mono", monospace; letter-spacing: .04em; }
     .stat-card strong { color: var(--ledger-ink); font: 600 1.45rem/1.2 "DM Sans", sans-serif; }
     .opportunity-list { gap: 0; margin-top: 1rem; }
-    .opportunity-list li { border: 0; border-top: 1px solid var(--ledger-line); border-radius: 0; padding: .95rem .1rem; background: transparent; }
-    .opportunity-list li.is-not-graded { background: transparent; }
+    .opportunity-list li { border: 1px solid rgba(174, 202, 184, .12); border-left: 2px solid rgba(199, 170, 114, .65); border-radius: .5rem; padding: .85rem .75rem; background: rgba(199, 170, 114, .045); }
+    .opportunity-list li.is-not-graded { border-left-color: var(--ledger-green); background: rgba(159, 190, 168, .04); }
     .opportunity-mark { color: var(--ledger-green); font: 500 1rem/1 "DM Sans", sans-serif; }
     .opportunity-name strong { color: var(--ledger-ink); font: 600 .95rem/1.35 "DM Sans", sans-serif; text-transform: none; }
     .opportunity-name small { color: var(--ledger-muted); font: 400 .82rem/1.4 "DM Sans", sans-serif; }
     .opportunity-status { color: var(--ledger-sand); font: 600 .62rem/1.2 "DM Sans", sans-serif; }
     .is-not-graded .opportunity-status { color: var(--ledger-green); }
     .opportunity-points { color: var(--ledger-ink); font: 600 .82rem/1.2 "DM Sans", sans-serif; }
-    .current-badge-panel { margin: 0; padding: 1.5rem 0; }
-    .current-badge-panel .badge-card { margin-top: 1rem; }
-    .badge-room-link { color: var(--ledger-green); font: 700 .68rem/1.2 "DM Mono", monospace; letter-spacing: .08em; }
-    .recovery-panel { margin: 0; padding: 1.5rem 0; }
-    .recovery-card { border: 0; border-top: 1px solid var(--ledger-line); border-radius: 0; background: transparent; }
+    .current-badge-panel { margin-top: 1rem; padding: clamp(1rem, 4vw, 1.5rem); }
+    .current-badge-panel .panel-heading { align-items: start; gap: 1rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(174, 202, 184, .14); }
+    .current-badge-panel .panel-heading h2 { margin-top: .35rem; }
+    .current-badge-summary { margin: .5rem 0 0; color: var(--ledger-muted); font: 400 .82rem/1.45 "DM Sans", sans-serif; }
+    .current-badge-link { display: block; width: 100%; margin-top: 1rem; border-radius: .9rem; }
+    .current-badge-link :global(.badge-card) { grid-template-columns: clamp(6rem, 16vw, 7.25rem) minmax(0, 1fr); min-height: 10rem; gap: clamp(.9rem, 3vw, 1.35rem); padding: clamp(.75rem, 2.5vw, 1rem); transition: border-color .16s ease, background-color .16s ease, box-shadow .16s ease; }
+    .current-badge-link :global(.badge-art) { width: 100%; }
+    .current-badge-link :global(.badge-copy h3) { font-size: clamp(1.15rem, 3vw, 1.45rem); }
+    .current-badge-link :global(.badge-stats) { gap: clamp(.4rem, 2vw, .8rem); }
+    .current-badge-link :global(.badge-stats dd) { font-size: .68rem; }
+    .current-badge-link:hover :global(.badge-card) { border-color: rgba(166, 196, 167, .42); background: rgba(159, 190, 168, .055); box-shadow: none; transform: none; }
+    .current-badge-link:focus-visible { outline: 3px solid var(--ledger-green); outline-offset: 3px; }
+    .badge-room-link { display: inline-flex; min-height: 2.75rem; align-items: center; justify-content: center; border: 1px solid var(--ledger-line-strong); border-radius: 999px; padding: .75rem 1rem; color: var(--ledger-green); background: transparent; font: 700 .68rem/1 "DM Mono", monospace; letter-spacing: .07em; text-decoration: none; white-space: nowrap; }
+    .badge-room-link:hover, .badge-room-link:focus-visible { color: #152017; background: var(--ledger-green); text-decoration: none; }
+    .badge-room-link:focus-visible { outline: 2px solid var(--ledger-sand); outline-offset: 3px; }
+    .recovery-panel { margin-top: 1rem; padding: clamp(1rem, 3vw, 1.35rem); }
+    .recovery-card { border: 1px solid rgba(174, 202, 184, .16); border-radius: .8rem; background: rgba(12, 23, 18, .65); }
     .dashboard-actions { margin-top: 1.5rem; }
     .feedback-button, .breakdown-button { min-height: 2.75rem; border-color: var(--ledger-line-strong); padding: .75rem 1rem; color: var(--ledger-green); background: transparent; font: 500 .68rem/1 "DM Sans", sans-serif; letter-spacing: .06em; }
     .breakdown-button { color: var(--ledger-sand); }
     .feedback-button:hover, .feedback-button:focus-visible { color: #152017; background: var(--ledger-green); box-shadow: none; }
     .breakdown-button:hover, .breakdown-button:focus-visible { color: #201a0d; background: var(--ledger-sand); box-shadow: none; }
-    @media (max-width: 520px) { .points-screen { padding-top: max(3rem, env(safe-area-inset-top)); padding-bottom: max(1.5rem, env(safe-area-inset-bottom)); } .status-light { font-size: .43rem; } .point-stats { gap: .4rem; } .stat-card { padding: .65rem .45rem; } .stat-card span { font-size: .42rem; } .panel-heading { gap: .65rem; } .points-to-go, .opportunity-total { font-size: .52rem; } .awaiting-total { font-size: .46rem; } }
-    @media (prefers-reduced-motion: reduce) { .milestone-track span { transition: none; } }
+    @media (max-width: 640px) { .points-screen { padding-top: max(3rem, env(safe-area-inset-top)); padding-bottom: max(1.5rem, env(safe-area-inset-bottom)); } .points-hero { padding: 1rem; } .level-panel, .current-badge-panel, .opportunity-panel, .recovery-panel { border-radius: .85rem; } .current-badge-panel .panel-heading { align-items: stretch; flex-direction: column; } .badge-room-link { width: 100%; } .point-stats { grid-template-columns: 1fr; gap: .55rem; } .stat-card + .stat-card { border-left: 1px solid rgba(174, 202, 184, .12); padding-left: .85rem; } .opportunity-list li { align-items: flex-start; } }
+    @media (max-width: 420px) { .current-badge-link :global(.badge-card) { grid-template-columns: 5rem minmax(0, 1fr); min-height: 0; gap: .75rem; padding: .7rem; } .current-badge-link :global(.badge-stats) { gap: .45rem; } .current-badge-link :global(.badge-stats dd) { font-size: .62rem; } }
+    @media (max-width: 520px) { .status-light { font-size: .43rem; } .stat-card { padding: .65rem .45rem; } .stat-card span { font-size: .42rem; } .panel-heading { gap: .65rem; } .points-to-go, .opportunity-total { font-size: .52rem; } .awaiting-total { font-size: .46rem; } }
+    @media (prefers-reduced-motion: reduce) { .milestone-track span, .current-badge-link :global(.badge-card), .badge-room-link { transition: none; } }
 </style>

@@ -75,38 +75,38 @@ const initialPeriodLabel = initialStatus.period ? `MARKING PERIOD ${initialStatu
 
 <style>
     .marking-period-card {
-        width: min(88vw, 31rem);
-        margin: 3.5rem auto 0;
-        padding: 1.05rem 1rem 1.2rem;
-        border: 1px solid rgba(97, 212, 154, .48);
-        border-radius: 2px;
-        background: linear-gradient(105deg, rgba(10, 28, 25, .94), rgba(15, 42, 35, .72));
-        box-shadow: 0 0 0 1px rgba(97, 212, 154, .08), 0 0 28px rgba(97, 212, 154, .11);
-        color: #dfffe9;
-        font-family: "DM Mono", monospace;
+        width: 100%;
+        margin: 1rem 0 0;
+        padding: 1rem;
+        border: 1px solid rgba(174, 202, 184, .16);
+        border-radius: .9rem;
+        background: rgba(12, 23, 18, .48);
+        box-shadow: 0 1.25rem 3rem rgba(0, 0, 0, .12);
+        color: var(--ledger-ink);
+        font-family: "DM Sans", sans-serif;
         text-align: left;
     }
 
     .marking-period-meta {
         display: block;
-        color: #61d49a;
-        font-size: .57rem;
-        letter-spacing: .13em;
+        color: var(--ledger-green);
+        font: 700 .68rem/1.2 "DM Mono", monospace;
+        letter-spacing: .1em;
         line-height: 1.3;
     }
 
-    .marking-period-label { display: block; margin-top: .72rem; color: #f2f5ef; font-family: "Orbitron", sans-serif; font-size: clamp(1rem, 4vw, 1.45rem); letter-spacing: .07em; line-height: 1.1; }
-    .marking-period-detail { display: block; margin-top: .5rem; color: rgba(223, 255, 233, .68); font-size: .68rem; letter-spacing: .03em; }
-    .marking-period-track { height: .28rem; margin-top: .95rem; overflow: hidden; border: 1px solid rgba(97, 212, 154, .25); background: rgba(0, 0, 0, .34); }
-    .marking-period-progress { display: block; height: 100%; min-width: 0; background: repeating-linear-gradient(135deg, #61d49a 0 7px, #b6ffd0 7px 9px); box-shadow: 0 0 12px rgba(97, 212, 154, .7); transition: width .45s ease; }
-    .school-reminder { display: grid; grid-template-columns: auto 1fr; gap: .25rem .55rem; margin-top: 1rem; padding: .7rem .7rem .75rem; border-left: 2px solid #61d49a; background: rgba(0, 0, 0, .23); }
-    .school-reminder-tag { grid-column: 1 / -1; color: rgba(223, 255, 233, .5); font-size: .48rem; letter-spacing: .16em; }
-    .school-reminder strong { color: #dfffe9; font-size: .62rem; letter-spacing: .05em; line-height: 1.35; }
-    .school-reminder > span:last-child { color: rgba(223, 255, 233, .66); font-size: .6rem; line-height: 1.35; }
-    .school-reminder-notice { border-left-color: #ffca3a; }
-    .school-reminder-notice strong { color: #ffda70; }
-    .school-reminder-special { border-left-color: #9c8cff; }
-    .school-reminder-special strong { color: #c4bcff; }
+    .marking-period-label { display: block; margin-top: .65rem; color: var(--ledger-ink); font: 600 clamp(1.15rem, 4vw, 1.55rem)/1.15 "DM Sans", sans-serif; letter-spacing: .02em; }
+    .marking-period-detail { display: block; margin-top: .45rem; color: var(--ledger-muted); font-size: .75rem; line-height: 1.4; }
+    .marking-period-track { height: .45rem; margin-top: .9rem; overflow: hidden; border: 1px solid var(--ledger-line-strong); border-radius: 999px; background: var(--ledger-surface); }
+    .marking-period-progress { display: block; height: 100%; min-width: 0; border-radius: inherit; background: var(--ledger-green); box-shadow: none; transition: width .45s ease; }
+    .school-reminder { display: grid; grid-template-columns: auto 1fr; gap: .25rem .55rem; margin-top: 1rem; border-left: 2px solid var(--ledger-green); padding: .7rem; background: rgba(159, 190, 168, .05); }
+    .school-reminder-tag { grid-column: 1 / -1; color: var(--ledger-muted); font: 700 .48rem/1.2 "DM Mono", monospace; letter-spacing: .12em; }
+    .school-reminder strong { color: var(--ledger-ink); font-size: .68rem; letter-spacing: .03em; line-height: 1.35; }
+    .school-reminder > span:last-child { color: var(--ledger-muted); font-size: .65rem; line-height: 1.4; }
+    .school-reminder-notice { border-left-color: var(--ledger-sand); }
+    .school-reminder-notice strong { color: var(--ledger-sand); }
+    .school-reminder-special { border-left-color: var(--ledger-green); }
+    .school-reminder-special strong { color: var(--ledger-green); }
 
     @media (prefers-reduced-motion: reduce) {
         .marking-period-progress { transition: none; }
