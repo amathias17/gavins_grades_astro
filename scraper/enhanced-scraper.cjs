@@ -91,8 +91,46 @@ async function readJsonIfExists(filePath) {
     if (error.code === 'ENOENT') {
       return null;
     }
+    if (error instanceof SyntaxError) {
+      throw new Error(`Invalid JSON in ${filePath}: ${error.message}`, { cause: error });
+    }
     throw error;
   }
+}
+
+async function writeJsonAtomically(filePath, value) {
+  const tempPath = path.join(
+    path.dirname(filePath),
+    `.${path.basename(filePath)}.${process.pid}.${Date.now()}.tmp`,
+  );
+
+  try {
+    await fs.writeFile(tempPath, JSON.stringify(value, null, 2));
+    await fs.rename(tempPath, filePath);
+  } finally {
+    await fs.unlink(tempPath).catch((error) => {
+      if (error.code !== 'ENOENT') throw error;
+    });
+  }
+}
+
+async function acquireScraperLock(lockPath = path.join(__dirname, '.enhanced-scraper.lock')) {
+  let handle;
+
+  try {
+    handle = await fs.open(lockPath, 'wx');
+  } catch (error) {
+    if (error.code === 'EEXIST') {
+      throw new Error(`Another enhanced scraper run is active (${lockPath}). Wait for it to finish or remove a stale lock file.`);
+    }
+    throw error;
+  }
+
+  await handle.writeFile(JSON.stringify({ pid: process.pid, startedAt: new Date().toISOString() }));
+  await handle.close();
+  return async () => fs.unlink(lockPath).catch((error) => {
+    if (error.code !== 'ENOENT') throw error;
+  });
 }
 
 async function loadCache() {
@@ -117,7 +155,7 @@ async function saveCache(cachePath, assignments) {
     return false;
   }
 
-  await fs.writeFile(cachePath, JSON.stringify(payload, null, 2));
+  await writeJsonAtomically(cachePath, payload);
   return true;
 }
 
@@ -126,7 +164,7 @@ async function saveJsonIfChanged(filePath, value, comparableValue = value) {
   if (previous && JSON.stringify(previous) === JSON.stringify(comparableValue)) {
     return false;
   }
-  await fs.writeFile(filePath, JSON.stringify(value, null, 2));
+  await writeJsonAtomically(filePath, value);
   return true;
 }
 
@@ -1285,9 +1323,10 @@ async function saveGradesToFile(grades, missingAssignments = []) {
   };
 
   try {
-    const existingContent = await fs.readFile(gradesOutputPath, 'utf-8');
-    existingData = JSON.parse(existingContent);
+    const existing = await readJsonIfExists(gradesOutputPath);
+    if (existing) existingData = existing;
   } catch (error) {
+    if (error.code !== 'ENOENT') throw error;
     console.log('No existing grades.json found, creating new file...');
   }
 
@@ -1419,18 +1458,20 @@ async function saveGradesToFile(grades, missingAssignments = []) {
     missing_assignments: missingAssignments
   };
 
-  await fs.writeFile(gradesOutputPath, JSON.stringify(gradesOutputData, null, 2));
-  await fs.writeFile(missingOutputPath, JSON.stringify(missingAssignmentsData, null, 2));
+  await writeJsonAtomically(gradesOutputPath, gradesOutputData);
+  await writeJsonAtomically(missingOutputPath, missingAssignmentsData);
   console.log(`Grades saved to ${gradesOutputPath} and missing assignments saved to ${missingOutputPath}`);
 }
 
 async function main() {
   let browser;
   let popup;
+  let releaseLock;
   const scrapeStartedAt = Date.now();
-  const cache = await loadCache();
 
   try {
+    releaseLock = await acquireScraperLock();
+    const cache = await loadCache();
     // Login and navigate
     const result = await loginAndNavigateToGradebook();
     browser = result.browser;
@@ -1458,7 +1499,7 @@ async function main() {
 
     const missingAssignments = await scrapeMissingAssignments(popup, currentQuarter);
 
-    // Persist grades.json using the quarter detected from Skyward's highlight.
+    // Build grades.json using the quarter detected from Skyward's highlight.
     const gradeClasses = classes.map(c => ({
       class_name: c.className,
       teacher: c.teacher,
@@ -1469,8 +1510,6 @@ async function main() {
       q4_grade: c.q4_grade ?? null,
       current_grade: c.currentGrade ?? null
     }));
-    await saveGradesToFile(gradeClasses, missingAssignments);
-
     // Organize data by class
     const dataByClass = organizeByClass(assignmentDetails, classes);
 
@@ -1486,12 +1525,19 @@ async function main() {
     };
 
     const previousOutput = await readJsonIfExists(outputPath);
+    const rawOutputPath = path.join(__dirname, 'detailed-grades-raw.json');
+    await readJsonIfExists(rawOutputPath);
+    await readJsonIfExists(path.join(__dirname, '../src/data/grades.json'));
+    await readJsonIfExists(path.join(__dirname, '../src/data/missing_assignments.json'));
+    await readJsonIfExists(path.join(__dirname, '../src/data/points_progress.json'));
     const comparableOutput = { ...outputData, metadata: { ...outputData.metadata, scrapedAt: null } };
     const previousComparableOutput = previousOutput
       ? { ...previousOutput, metadata: { ...previousOutput.metadata, scrapedAt: null } }
       : null;
     const outputChanged = await saveJsonIfChanged(outputPath, outputData, previousComparableOutput && JSON.stringify(previousComparableOutput) === JSON.stringify(comparableOutput) ? previousOutput : comparableOutput);
     console.log(`\n${outputChanged ? '✓ Data saved' : '· Data unchanged'}: ${outputPath}`);
+
+    await saveGradesToFile(gradeClasses, missingAssignments);
 
     const progress = await updatePointsProgress({
       classes: gradeClasses,
@@ -1501,7 +1547,6 @@ async function main() {
     console.log(`${progress.changed ? '✓ Quest progress updated' : '· Quest progress unchanged'}: raw ${progress.rawTotal}, protected ${progress.protectedTotal}`);
 
     // Also save raw assignments for debugging
-    const rawOutputPath = path.join(__dirname, 'detailed-grades-raw.json');
     const rawChanged = await saveJsonIfChanged(rawOutputPath, assignmentDetails);
     console.log(`${rawChanged ? '✓ Raw data saved' : '· Raw data unchanged'}: ${rawOutputPath}`);
 
@@ -1532,7 +1577,11 @@ async function main() {
       await browser.close();
     }
 
-    process.exit(1);
+    process.exitCode = 1;
+  } finally {
+    if (releaseLock) {
+      await releaseLock();
+    }
   }
 }
 
@@ -1546,7 +1595,10 @@ module.exports = {
   assignmentCacheKey,
   assignmentFingerprint,
   canUseCachedAssignment,
-  scrapeAllAssignments
+  scrapeAllAssignments,
+  readJsonIfExists,
+  writeJsonAtomically,
+  acquireScraperLock
 };
 
 if (require.main === module) {

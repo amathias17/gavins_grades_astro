@@ -27,6 +27,8 @@ pnpm-debug.log*
 
 # scraper caches (student data)
 scraper/detailed-grades-cache.json
+scraper/.enhanced-scraper.lock
+scraper/enhanced-scraper-error.png
 .custom-mem
 .claude
 .serena
