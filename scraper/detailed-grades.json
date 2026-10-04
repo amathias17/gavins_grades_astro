@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-04T05:30:15.938Z",
+    "scrapedAt": "2026-10-04T15:43:49.060Z",
     "totalClasses": 13,
     "totalAssignments": 113
   },
@@ -566,9 +566,9 @@
         {
           "name": "Real Numbers Math Lib Activity",
           "dueDate": "09/09/2026",
-          "earnedPoints": 10,
-          "totalPoints": 1,
-          "weight": null,
+          "earnedPoints": 5,
+          "totalPoints": 10,
+          "weight": 1,
           "graded": true
         },
         {
