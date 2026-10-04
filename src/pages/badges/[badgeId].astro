@@ -1,0 +1,152 @@
+---
+import type { GetStaticPaths } from "astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getBadgeStatesWithApiArtwork, type BadgeState } from "../../utils/badges";
+import { getCharacterBiography, type CharacterBiography } from "../../data/characterBiographies";
+import { getCurrentQuestPoints } from "../../utils/currentQuestPoints";
+
+interface Props {
+  badge: BadgeState;
+  biography: CharacterBiography;
+}
+
+export const getStaticPaths = (async () => {
+  const points = await getCurrentQuestPoints();
+  const badgeStates = await getBadgeStatesWithApiArtwork(points.totalPoints);
+
+  return badgeStates.flatMap((badge) => {
+    const biography = getCharacterBiography(badge.id);
+    if (!badge.unlocked || !biography) return [];
+
+    return [{
+      params: { badgeId: badge.id },
+      props: { badge, biography },
+    }];
+  });
+}) satisfies GetStaticPaths;
+
+const { badge, biography } = Astro.props as Props;
+const transformations = badge.transformations ?? [];
+---
+
+<BaseLayout>
+  <article class="fighter-file" aria-labelledby="fighter-name">
+    <nav class="fighter-nav" aria-label="Badge biography navigation">
+      <a href="/badges">BACK TO BADGE ROOM</a>
+      <span>POWER ARCHIVE // FILE {String(badge.level).padStart(2, "0")}</span>
+    </nav>
+
+    <header class="fighter-hero">
+      <div class="fighter-portrait" data-fighter-art>
+        <span class="fighter-placeholder" aria-hidden="true">{badge.characterName.slice(0, 2).toUpperCase()}</span>
+        {badge.imagePath && <img src={badge.imagePath} alt={`${badge.characterName} portrait`} />}
+        <span class="portrait-level">LEVEL {badge.level}</span>
+      </div>
+
+      <div class="fighter-intro">
+        <p class="archive-kicker">UNLOCKED FIGHTER DOSSIER</p>
+        <h1 id="fighter-name">{badge.characterName}</h1>
+        <p class="fighter-title">{biography.title}</p>
+        <dl class="fighter-stats">
+          <div><dt>RACE</dt><dd>{badge.race ?? "UNKNOWN"}</dd></div>
+          <div><dt>AFFILIATION</dt><dd>{badge.affiliation ?? "UNKNOWN"}</dd></div>
+          <div><dt>BASE KI</dt><dd>{badge.baseKi ?? "UNKNOWN"}</dd></div>
+          <div><dt>TOTAL KI</dt><dd>{badge.totalKi ?? "UNKNOWN"}</dd></div>
+        </dl>
+      </div>
+    </header>
+
+    <div class="fighter-story-grid">
+      <section class="archive-panel biography-panel" aria-labelledby="biography-heading">
+        <p class="archive-kicker">ARCHIVE ENTRY</p>
+        <h2 id="biography-heading">Biography</h2>
+        <p>{biography.bio}</p>
+      </section>
+
+      <section class="archive-panel facts-panel" aria-labelledby="facts-heading">
+        <p class="archive-kicker">FIELD NOTES</p>
+        <h2 id="facts-heading">Interesting facts</h2>
+        <ol>
+          {biography.facts.map((fact, index) => <li><span>{String(index + 1).padStart(2, "0")}</span><p>{fact}</p></li>)}
+        </ol>
+      </section>
+    </div>
+
+    <section class="transformations" aria-labelledby="transformations-heading">
+      <div class="transformations-heading">
+        <div>
+          <p class="archive-kicker">POWER EVOLUTION</p>
+          <h2 id="transformations-heading">Transformations</h2>
+        </div>
+        <span>{transformations.length} {transformations.length === 1 ? "FORM" : "FORMS"} RECORDED</span>
+      </div>
+
+      {transformations.length > 0 ? (
+        <div class="transformation-grid">
+          {transformations.map((transformation) => (
+            <article class="transformation-card">
+              <div class="transformation-art" data-transformation-art>
+                <span aria-hidden="true">{badge.characterName.slice(0, 1)}</span>
+                {transformation.image && <img src={transformation.image} alt={`${transformation.name} transformation`} loading="lazy" />}
+              </div>
+              <div>
+                <h3>{transformation.name}</h3>
+                <p>{transformation.ki ? `${transformation.ki} KI` : "KI RECORD UNAVAILABLE"}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      ) : (
+        <p class="empty-transformations">No transformation records are available for this fighter yet.</p>
+      )}
+    </section>
+  </article>
+</BaseLayout>
+
+<script>
+  document.querySelectorAll<HTMLElement>("[data-fighter-art], [data-transformation-art]").forEach((art) => {
+    const image = art.querySelector<HTMLImageElement>("img");
+    if (!image) return;
+    image.addEventListener("error", () => image.remove(), { once: true });
+  });
+</script>
+
+<style>
+  .fighter-file { width: min(100%, 70rem); margin: 0 auto; padding: clamp(3rem, 7vw, 5.5rem) 0; color: #e8eee9; font-family: "DM Sans", sans-serif; }
+  .fighter-nav { display: flex; justify-content: space-between; gap: 1rem; align-items: center; margin-bottom: 1.25rem; color: rgba(199, 218, 204, .52); font: 600 .55rem/1.3 "DM Mono", monospace; letter-spacing: .1em; }
+  .fighter-nav a { border: 1px solid rgba(159, 190, 168, .38); border-radius: 999px; padding: .7rem .9rem; color: #9fbea8; text-decoration: none; }
+  .fighter-nav a:hover, .fighter-nav a:focus-visible { outline: none; color: #122018; background: #9fbea8; }
+  .fighter-hero { display: grid; grid-template-columns: minmax(16rem, 25rem) minmax(0, 1fr); min-height: 31rem; overflow: hidden; border: 1px solid rgba(199, 170, 114, .36); border-radius: 1.4rem; background: radial-gradient(circle at 80% 12%, rgba(199, 170, 114, .16), transparent 38%), rgba(12, 23, 18, .72); box-shadow: 0 1.5rem 5rem rgba(0, 0, 0, .22); }
+  .fighter-portrait { position: relative; display: grid; place-items: center; min-height: 31rem; overflow: hidden; background: radial-gradient(ellipse at 50% 28%, rgba(199, 170, 114, .32), rgba(18, 32, 24, .98) 68%); color: rgba(199, 170, 114, .44); font: 800 clamp(3rem, 10vw, 7rem)/1 "Orbitron", sans-serif; }
+  .fighter-portrait::after { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, transparent 70%, rgba(12, 23, 18, .9)), linear-gradient(0deg, rgba(8, 15, 11, .72), transparent 28%); content: ""; }
+  .fighter-portrait img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 8%; transform: scale(1.2); transform-origin: center top; }
+  .portrait-level { position: absolute; z-index: 1; left: 1.25rem; bottom: 1.1rem; border: 1px solid rgba(199, 170, 114, .55); border-radius: 999px; padding: .45rem .65rem; color: #e8eee9; background: rgba(8, 15, 11, .72); font: 600 .54rem/1 "DM Mono", monospace; letter-spacing: .12em; }
+  .fighter-intro { align-self: center; padding: clamp(1.5rem, 5vw, 4rem); }
+  .archive-kicker { margin: 0 0 .75rem; color: #c7aa72; font: 600 .55rem/1.4 "DM Mono", monospace; letter-spacing: .14em; text-transform: uppercase; }
+  .fighter-intro h1 { max-width: 11ch; margin: 0; color: #f0f3ee; font: 650 clamp(2.5rem, 7vw, 5.3rem)/.91 "DM Sans", sans-serif; letter-spacing: -.045em; }
+  .fighter-title { max-width: 34rem; margin: 1.1rem 0 0; color: rgba(199, 218, 204, .72); font: 400 clamp(1rem, 2vw, 1.25rem)/1.5 "DM Serif Display", serif; }
+  .fighter-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin: 2rem 0 0; border-top: 1px solid rgba(174, 202, 184, .18); padding-top: 1.2rem; }
+  .fighter-stats dt { color: rgba(199, 218, 204, .48); font: 600 .48rem/1.2 "DM Mono", monospace; letter-spacing: .1em; }
+  .fighter-stats dd { margin: .35rem 0 0; overflow-wrap: anywhere; color: #e8eee9; font: 600 .72rem/1.35 "DM Mono", monospace; }
+  .fighter-story-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 1rem; margin-top: 1rem; }
+  .archive-panel, .transformations { border: 1px solid rgba(174, 202, 184, .16); border-radius: 1.1rem; padding: clamp(1.25rem, 4vw, 2rem); background: rgba(24, 40, 30, .28); }
+  .archive-panel h2, .transformations h2 { margin: 0; color: #e8eee9; font: 600 clamp(1.45rem, 3vw, 2rem)/1.1 "DM Sans", sans-serif; letter-spacing: -.02em; }
+  .biography-panel > p:last-child { margin: 1.2rem 0 0; color: rgba(216, 228, 219, .76); font: 400 1rem/1.75 "DM Serif Display", serif; }
+  .facts-panel ol { display: grid; gap: .85rem; margin: 1.2rem 0 0; padding: 0; list-style: none; }
+  .facts-panel li { display: grid; grid-template-columns: 2rem minmax(0, 1fr); gap: .75rem; align-items: start; }
+  .facts-panel li span { color: #c7aa72; font: 600 .6rem/1.6 "DM Mono", monospace; }
+  .facts-panel li p { margin: 0; color: rgba(216, 228, 219, .72); font-size: .86rem; line-height: 1.55; }
+  .transformations { margin-top: 1rem; }
+  .transformations-heading { display: flex; justify-content: space-between; gap: 1rem; align-items: end; }
+  .transformations-heading > span { color: rgba(199, 218, 204, .5); font: 600 .52rem/1.3 "DM Mono", monospace; letter-spacing: .1em; }
+  .transformation-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .7rem; margin-top: 1.25rem; }
+  .transformation-card { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr); gap: .75rem; align-items: center; min-width: 0; border: 1px solid rgba(159, 190, 168, .18); border-radius: .85rem; padding: .55rem; background: rgba(8, 17, 12, .56); }
+  .transformation-art { position: relative; display: grid; place-items: center; aspect-ratio: 4 / 5; overflow: hidden; border-radius: .6rem; background: rgba(199, 170, 114, .1); color: rgba(199, 170, 114, .48); font: 700 1rem/1 "Orbitron", sans-serif; }
+  .transformation-art img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 8%; transform: scale(1.28); transform-origin: center top; }
+  .transformation-card h3 { margin: 0; overflow-wrap: anywhere; color: #e8eee9; font: 600 .76rem/1.25 "DM Sans", sans-serif; }
+  .transformation-card p { margin: .35rem 0 0; color: #c7aa72; font: 500 .48rem/1.3 "DM Mono", monospace; letter-spacing: .06em; }
+  .empty-transformations { margin: 1.25rem 0 0; border-top: 1px solid rgba(174, 202, 184, .14); padding-top: 1rem; color: rgba(199, 218, 204, .62); font-size: .82rem; }
+  @media (max-width: 800px) { .fighter-hero { grid-template-columns: minmax(12rem, .85fr) 1.15fr; } .transformation-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 620px) { .fighter-file { padding-top: 3.5rem; } .fighter-nav { align-items: flex-start; flex-direction: column; } .fighter-hero { grid-template-columns: 1fr; } .fighter-portrait { min-height: 25rem; } .fighter-portrait::after { background: linear-gradient(0deg, rgba(8, 15, 11, .8), transparent 42%); } .fighter-story-grid { grid-template-columns: 1fr; } .transformation-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 420px) { .fighter-stats { grid-template-columns: 1fr; } .transformations-heading { align-items: flex-start; flex-direction: column; } }
+</style>

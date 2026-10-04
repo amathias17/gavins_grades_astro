@@ -110,6 +110,8 @@ test.describe("positive points dashboard", () => {
     await expect(page.locator(".badge-grid .badge-card:not(.is-locked) .badge-stats").first()).toContainText("TOTAL KI");
     await expect(page.locator(".badge-grid .badge-card.is-locked .badge-stats")).toHaveCount(0);
     await expect(page.locator(".badge-grid .badge-card:not(.is-locked) img").first()).toHaveCSS("opacity", "1");
+    await expect(page.locator(".badge-grid .badge-profile-link")).toHaveCount(unlockedCount);
+    await expect(lockedCards.locator("xpath=ancestor::a")).toHaveCount(0);
     await expect(page.locator(".collection-counts strong")).toHaveText(`${unlockedCount} / ${badgeStates.length} BADGES COLLECTED`);
     await expect(page.locator(".collection-counts span")).toHaveText(`${lockedCount} BADGES REMAINING`);
     await expect(page.getByRole("progressbar", { name: "Badge collection progress" }))
@@ -118,6 +120,30 @@ test.describe("positive points dashboard", () => {
       .toHaveAttribute("aria-valuemin", "0");
     await expect(page.getByRole("progressbar", { name: "Badge collection progress" }))
       .toHaveAttribute("aria-valuemax", String(badgeStates.length));
+  });
+
+  test("opens unlocked fighter biographies and keeps locked routes unavailable", async ({ page }) => {
+    await page.goto("/badges");
+    const points = await readDisplayedPoints(page, ".badge-room-header .badge-room-kicker");
+    const badgeStates = getBadgeStates(points);
+    const firstUnlocked = badgeStates.find((badge) => badge.unlocked)!;
+    const firstLocked = badgeStates.find((badge) => !badge.unlocked);
+    const biographyLink = page.getByRole("link", { name: `Open ${firstUnlocked.characterName} biography` }).last();
+
+    await biographyLink.focus();
+    await expect(biographyLink).toBeFocused();
+    await biographyLink.press("Enter");
+    await expect(page).toHaveURL(new RegExp(`/badges/${firstUnlocked.id}/?$`));
+    await expect(page.getByRole("heading", { level: 1 })).toHaveText(firstUnlocked.characterName);
+    await expect(page.getByRole("heading", { name: "Biography" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Interesting facts" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Transformations" })).toBeVisible();
+    await expect(page.getByRole("link", { name: "BACK TO BADGE ROOM" })).toHaveAttribute("href", "/badges");
+
+    if (firstLocked) {
+      const response = await page.goto(`/badges/${firstLocked.id}`);
+      expect(response?.status()).toBe(404);
+    }
   });
 
   test("keeps the badge collection summary readable on mobile", async ({ page }) => {

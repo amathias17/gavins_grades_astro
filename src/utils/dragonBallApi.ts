@@ -39,6 +39,9 @@ export interface BadgeCharacterData {
   affiliation?: string;
   ki?: string;
   maxKi?: string;
+  description?: string;
+  race?: string;
+  transformations?: DragonBallTransformation[];
 }
 
 export type DragonBallFetch = (input: RequestInfo | URL, init?: RequestInit) => Promise<Response>;
@@ -108,6 +111,9 @@ export async function fetchBadgeCharacterData(
         affiliation: character.affiliation,
         ki: character.ki,
         maxKi: character.maxKi,
+        description: character.description,
+        race: character.race,
+        transformations: character.transformations,
       }] as const;
     } catch {
       return null;

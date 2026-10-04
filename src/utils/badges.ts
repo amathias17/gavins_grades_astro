@@ -1,5 +1,5 @@
 import badgeData from "../data/badges.json" with { type: "json" };
-import { fetchBadgeCharacterData, type DragonBallFetch } from "./dragonBallApi";
+import { fetchBadgeCharacterData, type DragonBallFetch, type DragonBallTransformation } from "./dragonBallApi";
 
 export interface BadgeDefinition {
   id: string;
@@ -18,6 +18,9 @@ export interface BadgeState extends BadgeDefinition {
   affiliation?: string;
   baseKi?: string;
   totalKi?: string;
+  apiDescription?: string;
+  race?: string;
+  transformations?: DragonBallTransformation[];
 }
 
 export const badges: BadgeDefinition[] = badgeData;
@@ -56,5 +59,8 @@ export async function getBadgeStatesWithApiArtwork(protectedTotal: number, fetch
     affiliation: characterData.get(badge.apiTransformationId ?? badge.apiCharacterId)?.affiliation,
     baseKi: characterData.get(badge.apiTransformationId ?? badge.apiCharacterId)?.ki,
     totalKi: characterData.get(badge.apiTransformationId ?? badge.apiCharacterId)?.maxKi,
+    apiDescription: characterData.get(badge.apiTransformationId ?? badge.apiCharacterId)?.description,
+    race: characterData.get(badge.apiTransformationId ?? badge.apiCharacterId)?.race,
+    transformations: characterData.get(badge.apiTransformationId ?? badge.apiCharacterId)?.transformations,
   }));
 }
