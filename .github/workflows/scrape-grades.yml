@@ -1,14 +1,15 @@
 name: Scrape Grades
 
 on:
-  # Run at 7:00am, 3:00pm, and 8:00pm Eastern year-round, including DST changes.
+  # Trigger both UTC candidates for 7:00am, 3:00pm, and 8:00pm Eastern.
+  # The gate in the scrape job runs only the candidate matching the active offset.
   schedule:
-    - cron: '0 7 * * *'
-      timezone: America/New_York
-    - cron: '0 15 * * *'
-      timezone: America/New_York
+    - cron: '0 0 * * *'
+    - cron: '0 1 * * *'
+    - cron: '0 11 * * *'
+    - cron: '0 12 * * *'
+    - cron: '0 19 * * *'
     - cron: '0 20 * * *'
-      timezone: America/New_York
 
   # Allow manual triggering from GitHub Actions tab
   workflow_dispatch:
@@ -22,12 +23,35 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Check Eastern schedule
+        id: local_schedule
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          SCHEDULE: ${{ github.event.schedule }}
+        run: |
+          eastern_offset=$(TZ=America/New_York date +%z)
+          should_run=false
+
+          if [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
+            should_run=true
+          elif [[ "$eastern_offset" == "-0400" && ( "$SCHEDULE" == "0 0 * * *" || "$SCHEDULE" == "0 11 * * *" || "$SCHEDULE" == "0 19 * * *" ) ]]; then
+            should_run=true
+          elif [[ "$eastern_offset" == "-0500" && ( "$SCHEDULE" == "0 1 * * *" || "$SCHEDULE" == "0 12 * * *" || "$SCHEDULE" == "0 20 * * *" ) ]]; then
+            should_run=true
+          fi
+
+          echo "event=$EVENT_NAME cron=${SCHEDULE:-manual} utc=$(date --utc '+%Y-%m-%dT%H:%M:%SZ') eastern=$(TZ=America/New_York date '+%Y-%m-%dT%H:%M:%S%z') offset=$eastern_offset should_run=$should_run"
+          echo "should_run=$should_run" >> "$GITHUB_OUTPUT"
+
       # Check out the repository
       - name: Checkout repository
+        if: steps.local_schedule.outputs.should_run == 'true'
         uses: actions/checkout@v4
 
       # Restore the ignored assignment-detail cache from the newest prior run.
       - name: Restore scraper assignment cache
+        if: steps.local_schedule.outputs.should_run == 'true'
         id: restore-scraper-cache
         uses: actions/cache/restore@v4
         with:
@@ -38,6 +62,7 @@ jobs:
 
       # Set up Node.js
       - name: Setup Node.js
+        if: steps.local_schedule.outputs.should_run == 'true'
         uses: actions/setup-node@v4
         with:
           node-version: '20'
@@ -45,14 +70,17 @@ jobs:
 
       # Install dependencies
       - name: Install dependencies
+        if: steps.local_schedule.outputs.should_run == 'true'
         run: npm ci
 
       # Install Playwright browsers
       - name: Install Playwright browsers
+        if: steps.local_schedule.outputs.should_run == 'true'
         run: npx playwright install --with-deps chromium
 
       # Run the enhanced scraper (grades + detailed assignments)
       - name: Run scraper
+        if: steps.local_schedule.outputs.should_run == 'true'
         env:
           SKYWARD_USERNAME: ${{ secrets.SKYWARD_USERNAME }}
           SKYWARD_PASSWORD: ${{ secrets.SKYWARD_PASSWORD }}
@@ -60,7 +88,7 @@ jobs:
 
       # Save only after a successful scrape; the cache remains gitignored.
       - name: Save scraper assignment cache
-        if: success()
+        if: success() && steps.local_schedule.outputs.should_run == 'true'
         uses: actions/cache/save@v4
         with:
           path: scraper/detailed-grades-cache.json
@@ -68,6 +96,7 @@ jobs:
 
       # Commit and push changes if there are any
       - name: Commit and push changes
+        if: steps.local_schedule.outputs.should_run == 'true'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
