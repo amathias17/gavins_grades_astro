@@ -77,7 +77,7 @@
 - TypeScript + ESM; avoid any. Reuse BaseLayout, design tokens, and getGradeColor helpers; keep the current rounded charcoal/sage/sand study-room treatment on active pages. Prefer small incremental edits (apply_patch); stay ASCII unless the file already uses other characters.
 - Assignments log table uses a mobile card layout at small breakpoints for readability; Category column removed.
 - Assignments log percentage display rounds to whole numbers.
-- Shared active-page navigation lives in src/components/PrimaryNav.astro and is rendered by BaseLayout with Home, Grade Room, Badge Room, Stats Room, and Calculator. It maps class plans to Grade Room and badge dossiers to Badge Room; legacy Header.astro is not active-page navigation.
+- Shared active-page navigation lives in src/components/PrimaryNav.astro and is rendered by BaseLayout with Home, Grade Room, and Badge Room. Stats Room and Calculator remain off the navigation until their UI refresh is complete. It maps class plans to Grade Room and badge dossiers to Badge Room; legacy Header.astro is not active-page navigation.
 
 ## Testing Guidance
 - Playwright is primary; add/adjust E2E when behavior changes. Place specs in tests/e2e/ and favor stable, accessible selectors. Build (npm run build) should pass before delivery; run targeted tests during iteration.

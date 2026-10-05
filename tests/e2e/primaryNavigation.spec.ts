@@ -4,8 +4,6 @@ const navigationLinks = [
   { name: "Home", href: "/" },
   { name: "Grade Room", href: "/grades" },
   { name: "Badge Room", href: "/badges" },
-  { name: "Stats Room", href: "/stats" },
-  { name: "Calculator", href: "/calculator" },
 ];
 
 test.describe("primary room navigation", () => {
@@ -17,6 +15,8 @@ test.describe("primary room navigation", () => {
     for (const link of navigationLinks) {
       await expect(navigation.getByRole("link", { name: link.name, exact: true })).toHaveAttribute("href", link.href);
     }
+    await expect(navigation.getByRole("link", { name: "Stats Room", exact: true })).toHaveCount(0);
+    await expect(navigation.getByRole("link", { name: "Calculator", exact: true })).toHaveCount(0);
   });
 
   test("marks the matching room active for nested routes", async ({ page }) => {
@@ -26,8 +26,6 @@ test.describe("primary room navigation", () => {
       { path: "/classes/0", active: "Grade Room" },
       { path: "/badges", active: "Badge Room" },
       { path: "/badges/yamcha", active: "Badge Room" },
-      { path: "/stats", active: "Stats Room" },
-      { path: "/calculator", active: "Calculator" },
     ];
 
     for (const route of routes) {
