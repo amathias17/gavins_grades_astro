@@ -84,7 +84,7 @@ const assignmentStatusClass = (status: typeof points.assignments[number]["status
         </section>
         <section class="current-badge-panel" aria-labelledby="current-badge-heading" aria-describedby="current-badge-summary">
             <div class="panel-heading"><div><p class="panel-kicker">POWER LEVEL BADGE</p><h2 id="current-badge-heading">Current power level</h2><p id="current-badge-summary" class="current-badge-summary">Level {currentBadge.level} with {formattedPoints} quest points earned.</p></div><a class="badge-room-link" href="/badges">OPEN BADGE ROOM</a></div>
-            <a class="current-badge-link" href="/badges" aria-label="Open Badge Room to view all badges"><BadgeCard badge={currentBadge} compact /></a>
+            <a class="current-badge-link" href="/badges" aria-label="Open Badge Room to view all badges"><BadgeCard badge={currentBadge} compact dashboard /></a>
         </section>
         <div class="point-stats" aria-label="Point breakdown">
             <div class="stat-card"><span>ASSIGNMENT POINTS</span><strong>{points.assignmentPoints.toLocaleString()}</strong></div>

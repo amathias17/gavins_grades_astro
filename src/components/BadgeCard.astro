@@ -4,13 +4,14 @@ import type { BadgeState } from "../utils/badges";
 interface Props {
     badge: BadgeState;
     compact?: boolean;
+    dashboard?: boolean;
 }
 
-const { badge, compact = false } = Astro.props;
+const { badge, compact = false, dashboard = false } = Astro.props;
 const isLocked = !badge.unlocked;
 ---
 
-<article class:list={["badge-card", { "badge-card-compact": compact, "is-current": badge.isCurrent, "is-locked": isLocked, "is-final": badge.isFinal }]} aria-label={isLocked ? `Level ${badge.level} badge, locked, ${badge.unlockPoints.toLocaleString()} points to unlock` : `${badge.characterName} badge, unlocked`}>
+<article class:list={["badge-card", { "badge-card-compact": compact, "badge-card-dashboard": dashboard, "is-current": badge.isCurrent, "is-locked": isLocked, "is-final": badge.isFinal }]} aria-label={isLocked ? `Level ${badge.level} badge, locked, ${badge.unlockPoints.toLocaleString()} points to unlock` : `${badge.characterName} badge, unlocked`}>
     <div class="badge-art" data-badge-art>
         {isLocked ? <span class="badge-mystery-silhouette" aria-hidden="true"><span class="silhouette-head"></span><span class="silhouette-body"></span></span> : <>
             <span class="badge-placeholder" aria-hidden="true">{badge.characterName.slice(0, 2).toUpperCase()}</span>
@@ -63,6 +64,8 @@ const isLocked = !badge.unlocked;
     .badge-stats dd { overflow-wrap: anywhere; margin: .22rem 0 0; color: #e8eee9; font: 600 .55rem/1.2 "DM Mono", monospace; }
     .badge-card-compact .badge-stats { gap: .25rem; margin-top: .55rem; }
     .badge-card-compact .badge-stats dd { font-size: .5rem; }
+    .badge-card-dashboard .badge-copy h3 { font-family: "Orbitron", sans-serif; font-size: .88rem; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; }
+    .badge-card-dashboard .badge-stats dd { font-family: "Orbitron", sans-serif; font-weight: 600; }
     .badge-card-compact { grid-template-columns: 4.7rem minmax(0, 1fr); }
     @media (prefers-reduced-motion: reduce) { .badge-art img { transition: none; } }
 </style>
