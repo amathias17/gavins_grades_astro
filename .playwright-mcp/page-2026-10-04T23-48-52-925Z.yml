@@ -1,0 +1,56 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - main [ref=e3]:
+    - article [ref=e5]:
+      - navigation "Badge biography navigation" [ref=e6]:
+        - link "BACK TO BADGE ROOM" [ref=e7] [cursor=pointer]:
+          - /url: /badges
+        - generic [ref=e8]: POWER ARCHIVE // FILE 01
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - generic [aria-hidden] [ref=e11]: YA
+          - img "Yamcha portrait" [ref=e12]
+          - generic [ref=e13]: LEVEL 1
+        - generic [ref=e14]:
+          - paragraph [ref=e15]: UNLOCKED FIGHTER DOSSIER
+          - heading "Yamcha" [level=1] [ref=e16]
+          - paragraph [ref=e17]: Desert fighter turned dependable ally
+          - generic [ref=e18]:
+            - generic [ref=e19]:
+              - term [ref=e20]: RACE
+              - definition [ref=e21]: Human
+            - generic [ref=e22]:
+              - term [ref=e23]: AFFILIATION
+              - definition [ref=e24]: Z Fighter
+            - generic [ref=e25]:
+              - term [ref=e26]: BASE KI
+              - definition [ref=e27]: 1.980.000
+            - generic [ref=e28]:
+              - term [ref=e29]: TOTAL KI
+              - definition [ref=e30]: 4.000.000
+      - generic [ref=e31]:
+        - region [ref=e32]:
+          - paragraph [ref=e33]: ARCHIVE ENTRY
+          - heading "Biography" [level=2] [ref=e34]
+          - paragraph [ref=e35]: Yamcha began as a desert bandit who feared speaking to women, then grew into one of Earth's earliest defenders. His confidence, loyalty, and willingness to face stronger opponents make him a fitting first step in the power archive.
+        - region [ref=e36]:
+          - paragraph [ref=e37]: FIELD NOTES
+          - heading "Interesting facts" [level=2] [ref=e38]
+          - list [ref=e39]:
+            - listitem [ref=e40]:
+              - generic [ref=e41]: "01"
+              - paragraph [ref=e42]: His signature technique is the Wolf Fang Fist.
+            - listitem [ref=e43]:
+              - generic [ref=e44]: "02"
+              - paragraph [ref=e45]: He was one of Goku's first rivals and later became a close friend.
+            - listitem [ref=e46]:
+              - generic [ref=e47]: "03"
+              - paragraph [ref=e48]: Outside battle, Yamcha became a successful professional baseball player.
+      - region [ref=e49]:
+        - generic [ref=e50]:
+          - generic [ref=e51]:
+            - paragraph [ref=e52]: POWER EVOLUTION
+            - heading "Transformations" [level=2] [ref=e53]
+          - generic [ref=e54]: 0 FORMS RECORDED
+        - paragraph [ref=e55]: No transformation records are available for this fighter yet.

@@ -1,0 +1,158 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - link "Gavin's Grades home" [ref=e4] [cursor=pointer]:
+      - /url: /
+      - generic [aria-hidden] [ref=e5]: GG
+      - generic [ref=e6]:
+        - strong [ref=e7]: GAVIN'S GRADES
+        - generic [ref=e8]: ROOM DIRECTORY
+    - navigation "Primary navigation" [ref=e9]:
+      - link "Home" [ref=e10] [cursor=pointer]:
+        - /url: /
+      - link "Grade Room" [ref=e11] [cursor=pointer]:
+        - /url: /grades
+      - link "Badge Room" [ref=e12] [cursor=pointer]:
+        - /url: /badges
+      - link "Stats Room" [ref=e13] [cursor=pointer]:
+        - /url: /stats
+      - link "Calculator" [ref=e14] [cursor=pointer]:
+        - /url: /calculator
+  - main [ref=e15]:
+    - generic [ref=e17]:
+      - link "Back to the grades overview" [ref=e18] [cursor=pointer]:
+        - /url: /
+        - text: ← BACK TO OVERVIEW
+      - generic [ref=e19]:
+        - generic [ref=e20]:
+          - paragraph [ref=e21]: GAVIN'S CURRENT GRADES
+          - heading "GRADE ROOM" [level=1] [ref=e22]
+          - paragraph [ref=e23]: Your active classes, with a clear look at where things stand right now.
+        - generic "Grade data updated 10/04/2026, 06:17 PM" [ref=e24]:
+          - generic [ref=e25]: DATA UPDATED
+          - time [ref=e26]: 10/04/2026, 06:17 PM
+      - region [ref=e27]:
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - paragraph [ref=e30]: CURRENT SNAPSHOT
+            - heading "ACTIVE CLASSES" [level=2] [ref=e31]
+          - generic [ref=e32]: 9 CLASSES
+        - generic "Current grades by class" [ref=e33]:
+          - link "Open Junior Seminar, period 0, current grade 82% B" [ref=e34] [cursor=pointer]:
+            - /url: /classes/0
+            - generic [ref=e35]:
+              - generic [ref=e36]: P0
+              - generic [ref=e37]: VIEW CLASS ↗
+            - generic [ref=e38]: Junior Seminar
+            - generic [ref=e39]: Sydnee Rockey
+            - generic [ref=e40]:
+              - generic [ref=e41]: 82%
+              - generic "Letter grade B" [ref=e42]: B
+            - generic [ref=e45]:
+              - text: OPEN CLASS PLAN
+              - generic [aria-hidden] [ref=e46]: →
+          - link "Open Environ Science 1, period 1, current grade 54% F" [ref=e47] [cursor=pointer]:
+            - /url: /classes/1-environ-science-1
+            - generic [ref=e48]:
+              - generic [ref=e49]: P1
+              - generic [ref=e50]: VIEW CLASS ↗
+            - generic [ref=e51]: Environ Science 1
+            - generic [ref=e52]: Megan Kutruff
+            - generic [ref=e53]:
+              - generic [ref=e54]: 54%
+              - generic "Letter grade F" [ref=e55]: F
+            - generic [ref=e58]:
+              - text: OPEN CLASS PLAN
+              - generic [aria-hidden] [ref=e59]: →
+          - link "Open Physical Educ, period 2, current grade 89% B" [ref=e60] [cursor=pointer]:
+            - /url: /classes/2-physical-educ
+            - generic [ref=e61]:
+              - generic [ref=e62]: P2
+              - generic [ref=e63]: VIEW CLASS ↗
+            - generic [ref=e64]: Physical Educ
+            - generic [ref=e65]: Paul Picciotti
+            - generic [ref=e66]:
+              - generic [ref=e67]: 89%
+              - generic "Letter grade B" [ref=e68]: B
+            - generic [ref=e71]:
+              - text: OPEN CLASS PLAN
+              - generic [aria-hidden] [ref=e72]: →
+          - link "Open Chemistry 2, period 3, current grade 50% F" [ref=e73] [cursor=pointer]:
+            - /url: /classes/3
+            - generic [ref=e74]:
+              - generic [ref=e75]: P3
+              - generic [ref=e76]: VIEW CLASS ↗
+            - generic [ref=e77]: Chemistry 2
+            - generic [ref=e78]: Paula Irwin
+            - generic [ref=e79]:
+              - generic [ref=e80]: 50%
+              - generic "Letter grade F" [ref=e81]: F
+            - generic [ref=e84]:
+              - text: OPEN CLASS PLAN
+              - generic [aria-hidden] [ref=e85]: →
+          - link "Open Intrmediate Alg Ii, period 4, current grade 66% D" [ref=e86] [cursor=pointer]:
+            - /url: /classes/4
+            - generic [ref=e87]:
+              - generic [ref=e88]: P4
+              - generic [ref=e89]: VIEW CLASS ↗
+            - generic [ref=e90]: Intrmediate Alg Ii
+            - generic [ref=e91]: Jodi Lambertus
+            - generic [ref=e92]:
+              - generic [ref=e93]: 66%
+              - generic "Letter grade D" [ref=e94]: D
+            - generic [ref=e97]:
+              - text: OPEN CLASS PLAN
+              - generic [aria-hidden] [ref=e98]: →
+          - link "Open Anatomy & Physiol, period 5, current grade 90% A" [ref=e99] [cursor=pointer]:
+            - /url: /classes/5-anatomy-physiol
+            - generic [ref=e100]:
+              - generic [ref=e101]: P5
+              - generic [ref=e102]: VIEW CLASS ↗
+            - generic [ref=e103]: Anatomy & Physiol
+            - generic [ref=e104]: Denise Condo
+            - generic [ref=e105]:
+              - generic [ref=e106]: 90%
+              - generic "Letter grade A" [ref=e107]: A
+            - generic [ref=e110]:
+              - text: OPEN CLASS PLAN
+              - generic [aria-hidden] [ref=e111]: →
+          - link "Open Astronomy, period 6, current grade 90% A" [ref=e112] [cursor=pointer]:
+            - /url: /classes/6-astronomy
+            - generic [ref=e113]:
+              - generic [ref=e114]: P6
+              - generic [ref=e115]: VIEW CLASS ↗
+            - generic [ref=e116]: Astronomy
+            - generic [ref=e117]: James Krug
+            - generic [ref=e118]:
+              - generic [ref=e119]: 90%
+              - generic "Letter grade A" [ref=e120]: A
+            - generic [ref=e123]:
+              - text: OPEN CLASS PLAN
+              - generic [aria-hidden] [ref=e124]: →
+          - link "Open World Studies, period 7, current grade 100% A" [ref=e125] [cursor=pointer]:
+            - /url: /classes/7
+            - generic [ref=e126]:
+              - generic [ref=e127]: P7
+              - generic [ref=e128]: VIEW CLASS ↗
+            - generic [ref=e129]: World Studies
+            - generic [ref=e130]: Donald Dull Jr
+            - generic [ref=e131]:
+              - generic [ref=e132]: 100%
+              - generic "Letter grade A" [ref=e133]: A
+            - generic [ref=e136]:
+              - text: OPEN CLASS PLAN
+              - generic [aria-hidden] [ref=e137]: →
+          - link "Open English 11, period 8, current grade 100% A" [ref=e138] [cursor=pointer]:
+            - /url: /classes/8
+            - generic [ref=e139]:
+              - generic [ref=e140]: P8
+              - generic [ref=e141]: VIEW CLASS ↗
+            - generic [ref=e142]: English 11
+            - generic [ref=e143]: Audrey Cromell
+            - generic [ref=e144]:
+              - generic [ref=e145]: 100%
+              - generic "Letter grade A" [ref=e146]: A
+            - generic [ref=e149]:
+              - text: OPEN CLASS PLAN
+              - generic [aria-hidden] [ref=e150]: →

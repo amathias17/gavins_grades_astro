@@ -1,0 +1,236 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - link "Gavin's Grades home" [ref=e4] [cursor=pointer]:
+      - /url: /
+      - generic [aria-hidden] [ref=e5]: GG
+      - generic [ref=e6]:
+        - strong [ref=e7]: GAVIN'S GRADES
+        - generic [ref=e8]: ROOM DIRECTORY
+    - navigation "Primary navigation" [ref=e9]:
+      - link "Home" [ref=e10] [cursor=pointer]:
+        - /url: /
+      - link "Grade Room" [ref=e11] [cursor=pointer]:
+        - /url: /grades
+      - link "Badge Room" [ref=e12] [cursor=pointer]:
+        - /url: /badges
+  - main [ref=e13]:
+    - region [ref=e15]:
+      - generic [ref=e16]:
+        - generic [ref=e18]:
+          - paragraph [ref=e19]: MARKING PERIOD 1 / PROGRESS
+          - heading "GAVIN'S POINTS QUEST" [level=1] [ref=e20]
+        - generic [ref=e21]:
+          - generic [ref=e22]: TOTAL POINTS EARNED
+          - generic "2,231 points earned this marking period" [ref=e23]:
+            - text: 2,231
+            - generic [ref=e24]: PTS
+          - paragraph [ref=e25]: Every completed mission moves the meter.
+          - generic [ref=e26]:
+            - generic [ref=e27]: DATA UPDATED
+            - time [ref=e28]: Oct 4, 2026, 6:17 PM
+        - region [ref=e29]:
+          - generic [ref=e30]:
+            - generic [ref=e31]:
+              - paragraph [ref=e32]: LEVEL 9
+              - heading "NEXT BADGE UNLOCK" [level=2] [ref=e33]
+            - strong [ref=e34]: 270 TO GO
+          - progressbar "Progress to badge unlock at 2500 points" [ref=e35]
+          - generic [ref=e37]:
+            - generic [ref=e38]: 2,000 PTS
+            - generic [ref=e39]: 46% COMPLETE
+            - generic [ref=e40]: 2,500 PTS
+        - region [ref=e41]:
+          - generic [ref=e42]:
+            - generic [ref=e43]:
+              - paragraph [ref=e44]: POWER LEVEL BADGE
+              - heading "Current power level" [level=2] [ref=e45]
+              - paragraph [ref=e46]: Level 8 with 2,231 quest points earned.
+            - link "OPEN BADGE ROOM" [ref=e47] [cursor=pointer]:
+              - /url: /badges
+          - link "Open Badge Room to view all badges" [ref=e48] [cursor=pointer]:
+            - /url: /badges
+            - article "Broly badge, unlocked" [ref=e49]:
+              - generic [ref=e50]:
+                - generic [aria-hidden] [ref=e51]: BR
+                - img "Broly headshot" [ref=e52]
+              - generic [ref=e53]:
+                - generic [ref=e54]: LEVEL 8
+                - heading "Broly" [level=3] [ref=e55]
+                - generic [ref=e56]: 2,000 PTS MILESTONE
+                - generic [ref=e57]:
+                  - generic [ref=e58]:
+                    - term [ref=e59]: AFFILIATION
+                    - definition [ref=e60]: Other
+                  - generic [ref=e61]:
+                    - term [ref=e62]: BASE KI
+                    - definition [ref=e63]: 7 quadrillion
+                  - generic [ref=e64]:
+                    - term [ref=e65]: TOTAL KI
+                    - definition [ref=e66]: 11.2 Septillion
+        - generic "Point breakdown" [ref=e67]:
+          - generic [ref=e68]:
+            - generic [ref=e69]: ASSIGNMENT POINTS
+            - strong [ref=e70]: 2,088.5
+          - generic [ref=e71]:
+            - generic [ref=e72]: FULL-CREDIT BONUSES
+            - strong [ref=e73]: "+102"
+          - generic [ref=e74]:
+            - generic [ref=e75]: A-GRADE BONUSES
+            - strong [ref=e76]: "+40"
+        - region [ref=e77]:
+          - generic [ref=e78]:
+            - generic [ref=e79]:
+              - paragraph [ref=e80]: OPEN OPPORTUNITIES
+              - heading "POINTS READY TO EARN" [level=2] [ref=e81]
+            - generic [ref=e82]:
+              - strong [ref=e83]: 338 READY
+              - generic [ref=e84]: 122 AWAITING GRADES
+          - list [ref=e85]:
+            - listitem [ref=e86]:
+              - generic [aria-hidden] [ref=e87]: +
+              - generic [ref=e88]:
+                - strong [ref=e89]: Soil Permeability Lab
+                - generic [ref=e90]: ENVIRON SCIENCE 1
+              - generic [ref=e91]:
+                - generic [ref=e92]: MISSING
+                - generic [ref=e93]: 20 PTS
+            - listitem [ref=e94]:
+              - generic [aria-hidden] [ref=e95]: +
+              - generic [ref=e96]:
+                - strong [ref=e97]: Kudzu Inv. Spc. Case Study
+                - generic [ref=e98]: ENVIRON SCIENCE 1
+              - generic [ref=e99]:
+                - generic [ref=e100]: MISSING
+                - generic [ref=e101]: 20 PTS
+            - listitem [ref=e102]:
+              - generic [aria-hidden] [ref=e103]: +
+              - generic [ref=e104]:
+                - strong [ref=e105]: Levels of Organization Interac
+                - generic [ref=e106]: ENVIRON SCIENCE 1
+              - generic [ref=e107]:
+                - generic [ref=e108]: MISSING
+                - generic [ref=e109]: 20 PTS
+            - listitem [ref=e110]:
+              - generic [aria-hidden] [ref=e111]: +
+              - generic [ref=e112]:
+                - strong [ref=e113]: Lab Safety Contract
+                - generic [ref=e114]: ENVIRON SCIENCE 1
+              - generic [ref=e115]:
+                - generic [ref=e116]: MISSING
+                - generic [ref=e117]: 5 PTS
+            - listitem [ref=e118]:
+              - generic [aria-hidden] [ref=e119]: +
+              - generic [ref=e120]:
+                - strong [ref=e121]: Lab Safety Poster
+                - generic [ref=e122]: ENVIRON SCIENCE 1
+              - generic [ref=e123]:
+                - generic [ref=e124]: MISSING
+                - generic [ref=e125]: 30 PTS
+          - button "VIEW ALL OPPORTUNITIES (26)" [ref=e126] [cursor=pointer]
+        - region [ref=e127]:
+          - generic [ref=e128]:
+            - generic [ref=e129]:
+              - paragraph [ref=e130]: NEXT QUEST // GRADE RECOVERY
+              - heading "GRADE RECOVERY QUEST" [level=2] [ref=e131]
+              - paragraph [ref=e132]: EVERY COMPLETED MISSION CAN MOVE THE METER.
+            - generic "3 classes with missing work, 18 missing assignments, 338 points available to recover" [ref=e133]:
+              - generic [ref=e134]:
+                - strong [ref=e135]: "3"
+                - generic [ref=e136]: CLASSES
+              - generic [ref=e137]:
+                - strong [ref=e138]: "18"
+                - generic [ref=e139]: MISSIONS
+              - generic [ref=e140]:
+                - strong [ref=e141]: "338"
+                - generic [ref=e142]: PTS TO RECOVER
+          - generic [ref=e143]:
+            - article "Chemistry 2, period 3, 11 missing assignments" [ref=e144]:
+              - generic [ref=e145]:
+                - generic [ref=e146]:
+                  - paragraph [ref=e147]: PERIOD 3
+                  - heading "Chemistry 2" [level=3] [ref=e148]
+                - generic [ref=e149]: READY TO RECOVER
+              - generic [ref=e150]:
+                - generic [ref=e151]:
+                  - text: CURRENT GRADE
+                  - strong [ref=e152]:
+                    - text: 50%
+                    - generic [ref=e153]: F
+                - generic [aria-hidden] [ref=e154]: →
+                - generic [ref=e155]:
+                  - text: IF ALL MISSIONS LAND
+                  - strong [ref=e156]:
+                    - text: 79.83%
+                    - generic [ref=e157]: C
+              - generic [ref=e158]:
+                - generic [ref=e159]: 11 MISSIONS
+                - strong [ref=e160]: 213 PTS AVAILABLE
+                - generic [ref=e161]: +29.83 PTS PROJECTED
+              - link "View class plan for Chemistry 2, period 3" [ref=e162] [cursor=pointer]:
+                - /url: /classes/3
+                - text: VIEW CLASS PLAN
+                - generic [aria-hidden] [ref=e163]: ↗
+            - article "Environ Science 1, period 1, 6 missing assignments" [ref=e164]:
+              - generic [ref=e165]:
+                - generic [ref=e166]:
+                  - paragraph [ref=e167]: PERIOD 1
+                  - heading "Environ Science 1" [level=3] [ref=e168]
+                - generic [ref=e169]: READY TO RECOVER
+              - generic [ref=e170]:
+                - generic [ref=e171]:
+                  - text: CURRENT GRADE
+                  - strong [ref=e172]:
+                    - text: 54%
+                    - generic [ref=e173]: F
+                - generic [aria-hidden] [ref=e174]: →
+                - generic [ref=e175]:
+                  - text: IF ALL MISSIONS LAND
+                  - strong [ref=e176]:
+                    - text: 78.41%
+                    - generic [ref=e177]: C
+              - generic [ref=e178]:
+                - generic [ref=e179]: 6 MISSIONS
+                - strong [ref=e180]: 115 PTS AVAILABLE
+                - generic [ref=e181]: +24.41 PTS PROJECTED
+              - link "View class plan for Environ Science 1, period 1" [ref=e182] [cursor=pointer]:
+                - /url: /classes/1-environ-science-1
+                - text: VIEW CLASS PLAN
+                - generic [aria-hidden] [ref=e183]: ↗
+            - article "Intrmediate Alg Ii, period 4, 1 missing assignments" [ref=e184]:
+              - generic [ref=e185]:
+                - generic [ref=e186]:
+                  - paragraph [ref=e187]: PERIOD 4
+                  - heading "Intrmediate Alg Ii" [level=3] [ref=e188]
+                - generic [ref=e189]: READY TO RECOVER
+              - generic [ref=e190]:
+                - generic [ref=e191]:
+                  - text: CURRENT GRADE
+                  - strong [ref=e192]:
+                    - text: 66%
+                    - generic [ref=e193]: D
+                - generic [aria-hidden] [ref=e194]: →
+                - generic [ref=e195]:
+                  - text: IF ALL MISSIONS LAND
+                  - strong [ref=e196]:
+                    - text: 62.7%
+                    - generic [ref=e197]: D
+              - generic [ref=e198]:
+                - generic [ref=e199]: 1 MISSION
+                - strong [ref=e200]: 10 PTS AVAILABLE
+                - generic [ref=e201]: +-3.30 PTS PROJECTED
+              - link "View class plan for Intrmediate Alg Ii, period 4" [ref=e202] [cursor=pointer]:
+                - /url: /classes/4
+                - text: VIEW CLASS PLAN
+                - generic [aria-hidden] [ref=e203]: ↗
+        - complementary "MARKING PERIOD 1" [ref=e204]:
+          - strong [ref=e206]: 20 SCHOOL DAYS LEFT
+          - generic [ref=e207]: Marking Period 1 ends October 30, 2026
+          - generic [ref=e210]: MARKING PERIOD 1. 20 SCHOOL DAYS LEFT. Marking Period 1 ends October 30, 2026.
+        - generic [ref=e211]:
+          - link "View current grades by class" [ref=e212] [cursor=pointer]:
+            - /url: /grades
+            - text: VIEW CURRENT GRADES
+          - button "VIEW ASSIGNMENT BREAKDOWN" [ref=e213] [cursor=pointer]
+          - button "HOW POINTS WORK" [ref=e214] [cursor=pointer]
