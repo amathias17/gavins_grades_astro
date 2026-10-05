@@ -4,7 +4,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 const isDev = import.meta.env.DEV;
 ---
 
-<BaseLayout>
+<BaseLayout showNavigation={false}>
   <div class="max-w-[1400px] mx-auto">
     <div class="shadow-[0_0_0_4px_#000,0_0_0_8px_#fff,8px_8px_0_8px_rgba(255,255,255,0.3)] relative p-5 border-4 border-solid border-white card mb-8">
       <div class="flex items-center gap-[15px] mb-5 pb-[15px] border-b-[3px] border-b-[#555] border-dashed">

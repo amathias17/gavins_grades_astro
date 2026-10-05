@@ -1,0 +1,50 @@
+---
+interface Props {
+    pathname: string;
+}
+
+const { pathname } = Astro.props;
+const currentPath = pathname === "/" ? pathname : pathname.replace(/\/+$/, "");
+const links = [
+    { href: "/", label: "Home", isActive: currentPath === "/" },
+    { href: "/grades", label: "Grade Room", isActive: currentPath === "/grades" || currentPath.startsWith("/classes/") },
+    { href: "/badges", label: "Badge Room", isActive: currentPath === "/badges" || currentPath.startsWith("/badges/") },
+    { href: "/stats", label: "Stats Room", isActive: currentPath === "/stats" },
+    { href: "/calculator", label: "Calculator", isActive: currentPath === "/calculator" },
+];
+---
+
+<header class="room-directory" role="banner">
+    <a class="directory-mark" href="/" aria-label="Gavin's Grades home">
+        <span aria-hidden="true">GG</span>
+        <span><strong>GAVIN'S GRADES</strong><small>ROOM DIRECTORY</small></span>
+    </a>
+    <nav class="directory-links" aria-label="Primary navigation">
+        {links.map((link) => (
+            <a
+                href={link.href}
+                aria-current={link.isActive ? "page" : undefined}
+                class:list={{ "is-active": link.isActive }}
+            >
+                {link.label}
+            </a>
+        ))}
+    </nav>
+</header>
+
+<style>
+    .room-directory { display: flex; align-items: center; justify-content: space-between; gap: 1.25rem 2rem; width: min(100%, 70rem); margin: 0 auto; padding: 1.15rem 0 .95rem; border-bottom: 1px solid rgba(174, 202, 184, .18); font-family: "DM Sans", sans-serif; }
+    .directory-mark { display: inline-flex; flex: 0 0 auto; align-items: center; gap: .6rem; color: #e8eee9; text-decoration: none; }
+    .directory-mark > span:first-child { display: grid; place-items: center; width: 2rem; height: 2rem; border: 1px solid rgba(199, 170, 114, .7); border-radius: .55rem; color: #c7aa72; background: rgba(199, 170, 114, .08); font: 700 .58rem/1 "Orbitron", sans-serif; letter-spacing: -.08em; }
+    .directory-mark strong, .directory-mark small { display: block; }
+    .directory-mark strong { color: #e8eee9; font: 650 .62rem/1.1 "DM Mono", monospace; letter-spacing: .09em; }
+    .directory-mark small { margin-top: .22rem; color: rgba(199, 218, 204, .5); font: 500 .45rem/1.1 "DM Mono", monospace; letter-spacing: .12em; }
+    .directory-mark:focus-visible { border-radius: .55rem; outline: 2px solid #c7aa72; outline-offset: 3px; }
+    .directory-links { display: flex; flex-wrap: wrap; justify-content: end; gap: .45rem; }
+    .directory-links a { border: 1px solid transparent; border-radius: 999px; padding: .5rem .68rem; color: rgba(199, 218, 204, .62); font: 600 .52rem/1 "DM Mono", monospace; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; transition: color .16s ease, border-color .16s ease, background .16s ease; }
+    .directory-links a:hover { color: #e8eee9; border-color: rgba(159, 190, 168, .4); background: rgba(159, 190, 168, .08); }
+    .directory-links a:focus-visible { color: #e8eee9; border-color: #c7aa72; outline: 2px solid #c7aa72; outline-offset: 2px; }
+    .directory-links a.is-active { color: #142219; border-color: #c7aa72; background: #c7aa72; }
+    @media (max-width: 720px) { .room-directory { align-items: flex-start; flex-direction: column; gap: .85rem; padding-top: 1rem; } .directory-links { justify-content: flex-start; } }
+    @media (max-width: 420px) { .directory-links { gap: .38rem; } .directory-links a { padding: .48rem .56rem; font-size: .48rem; } }
+</style>

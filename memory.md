@@ -87,6 +87,7 @@
 - Grade recovery layout: PayoutDashboard groups each summary value with its label, places copy above metrics in a responsive grid, and preserves full-width recovery cards on mobile.
 - Current grades access: /grades is the dedicated Grade Room listing active classes only, matched by normalized class name and period between grades.json and scraper/detailed-grades.json; active classes can show a blank grade and retain canonical links to class plans. Its responsive card grid keeps the retro theme and grade progress bars. PayoutDashboard's accessible VIEW CURRENT GRADES action targets /grades, while /history remains the grade trend page.
 - Active pages use the original retro neon-green and black visual theme.
+- Shared active-page navigation is rendered by BaseLayout through PrimaryNav with Home, Grade Room, Badge Room, Stats Room, and Calculator. It uses route-aware aria-current states, maps class plans and badge dossiers to their parent rooms, and wraps compactly on mobile; legacy and prototype BaseLayout pages opt out.
 - Recovery summary metric groups are centered above the class recovery cards.
 - Recovery metric band is capped and centered, with stronger labels and tighter spacing above the recovery cards.
 - Class details now reconcile authoritative missing assignments by normalized class, assignment, and due date so confirmed missing rows do not display as GRADED.
