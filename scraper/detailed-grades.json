@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-05T12:47:02.558Z",
+    "scrapedAt": "2026-10-06T04:32:43.606Z",
     "totalClasses": 13,
-    "totalAssignments": 114
+    "totalAssignments": 116
   },
   "classes": [
     {
@@ -153,7 +153,7 @@
           "earnedPoints": 0,
           "totalPoints": 20,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Biome Travel Poster",
@@ -336,6 +336,14 @@
           "dueDate": "10/01/2026",
           "earnedPoints": 0,
           "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Unit 1 Test - Free Response",
+          "dueDate": "10/01/2026",
+          "earnedPoints": 10,
+          "totalPoints": 24,
           "weight": 1,
           "graded": true
         },
@@ -601,8 +609,16 @@
       "className": "ANATOMY & PHYSIOL",
       "teacher": "Denise Condo",
       "period": "5",
-      "currentGrade": 90,
+      "currentGrade": 91,
       "assignments": [
+        {
+          "name": "Biochemistry Lab data",
+          "dueDate": "10/02/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Nutrient notes - class acti.",
           "dueDate": "10/01/2026",
