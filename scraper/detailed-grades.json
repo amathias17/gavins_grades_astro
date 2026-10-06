@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-06T04:32:43.606Z",
+    "scrapedAt": "2026-10-06T17:05:01.879Z",
     "totalClasses": 13,
-    "totalAssignments": 116
+    "totalAssignments": 117
   },
   "classes": [
     {
@@ -308,14 +308,6 @@
           "graded": true
         },
         {
-          "name": "Scientific Method Review WS",
-          "dueDate": "10/01/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
-          "weight": 1,
-          "graded": true
-        },
-        {
           "name": "Unit 1 TEST - Multiple Choice",
           "dueDate": "10/01/2026",
           "earnedPoints": 18,
@@ -521,7 +513,7 @@
       "className": "INTRMEDIATE ALG II",
       "teacher": "Jodi Lambertus",
       "period": "4",
-      "currentGrade": 66,
+      "currentGrade": 61,
       "assignments": [
         {
           "name": "HW #6 Compound Inequalities",
@@ -529,7 +521,23 @@
           "earnedPoints": 0,
           "totalPoints": 10,
           "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Compound Inequality Math Lib",
+          "dueDate": "10/07/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
           "graded": false
+        },
+        {
+          "name": "HW #6 Compound Inequalities",
+          "dueDate": "10/05/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
         },
         {
           "name": "HW #5 Inequalities",

@@ -1,9 +1,17 @@
 {
   "metadata": {
-    "last_updated": "10/06/2026, 12:32 AM",
-    "count": 18
+    "last_updated": "10/06/2026, 01:05 PM",
+    "count": 19
   },
   "missing_assignments": [
+    {
+      "due_date": "10/05/2026",
+      "assignment_name": "HW #6 Compound Inequalities",
+      "class_name": "INTRMEDIATE ALG II",
+      "teacher": "Jodi Lambertus",
+      "category": "Homework",
+      "max_points": "10"
+    },
     {
       "due_date": "10/01/2026",
       "assignment_name": "Unit 1 Notes",
