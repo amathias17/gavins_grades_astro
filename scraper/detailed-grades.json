@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-06T17:05:01.879Z",
+    "scrapedAt": "2026-10-07T03:58:47.864Z",
     "totalClasses": 13,
     "totalAssignments": 117
   },
@@ -943,8 +943,8 @@
           "name": "ch 1 5 areas of social studies",
           "dueDate": "09/02/2026",
           "earnedPoints": 10,
-          "totalPoints": 10,
-          "weight": 1,
+          "totalPoints": 5,
+          "weight": null,
           "graded": true
         }
       ]

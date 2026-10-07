@@ -1755,8 +1755,8 @@
     "dateDue": "09/02/2026",
     "dueDate": "09/02/2026",
     "earnedPoints": 10,
-    "totalPoints": 10,
-    "weight": 1,
+    "totalPoints": 5,
+    "weight": null,
     "graded": true
   },
   {
