@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-07T03:58:47.864Z",
+    "scrapedAt": "2026-10-07T17:50:42.991Z",
     "totalClasses": 13,
-    "totalAssignments": 117
+    "totalAssignments": 119
   },
   "classes": [
     {
@@ -105,7 +105,7 @@
       "className": "ENVIRON SCIENCE    1",
       "teacher": "Megan Kutruff",
       "period": "1",
-      "currentGrade": 54,
+      "currentGrade": 51,
       "assignments": [
         {
           "name": "Water Quality Lab",
@@ -113,7 +113,23 @@
           "earnedPoints": 0,
           "totalPoints": 30,
           "weight": 1,
-          "graded": false
+          "graded": true
+        },
+        {
+          "name": "Water Quality Lab",
+          "dueDate": "10/05/2026",
+          "earnedPoints": 0,
+          "totalPoints": 30,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Grace Satellites Reading",
+          "dueDate": "10/01/2026",
+          "earnedPoints": 13,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": true
         },
         {
           "name": "Soil Permeability Lab",
@@ -299,14 +315,6 @@
       "period": "3",
       "currentGrade": 50,
       "assignments": [
-        {
-          "name": "Unit 1 Notes",
-          "dueDate": "10/01/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
-          "weight": 1,
-          "graded": true
-        },
         {
           "name": "Unit 1 TEST - Multiple Choice",
           "dueDate": "10/01/2026",
@@ -619,6 +627,14 @@
       "period": "5",
       "currentGrade": 91,
       "assignments": [
+        {
+          "name": "Osmosis and cells close read",
+          "dueDate": "10/07/2026",
+          "earnedPoints": 7,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Biochemistry Lab data",
           "dueDate": "10/02/2026",
@@ -943,8 +959,8 @@
           "name": "ch 1 5 areas of social studies",
           "dueDate": "09/02/2026",
           "earnedPoints": 10,
-          "totalPoints": 5,
-          "weight": null,
+          "totalPoints": 10,
+          "weight": 1,
           "graded": true
         }
       ]

@@ -1,9 +1,17 @@
 {
   "metadata": {
-    "last_updated": "10/06/2026, 11:58 PM",
-    "count": 19
+    "last_updated": "10/07/2026, 01:50 PM",
+    "count": 20
   },
   "missing_assignments": [
+    {
+      "due_date": "10/05/2026",
+      "assignment_name": "Water Quality Lab",
+      "class_name": "ENVIRON SCIENCE    1",
+      "teacher": "Megan Kutruff",
+      "category": "Lab",
+      "max_points": "30"
+    },
     {
       "due_date": "10/05/2026",
       "assignment_name": "HW #6 Compound Inequalities",
