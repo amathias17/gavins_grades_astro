@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-08T17:47:25.094Z",
+    "scrapedAt": "2026-10-08T23:43:56.515Z",
     "totalClasses": 13,
-    "totalAssignments": 127
+    "totalAssignments": 128
   },
   "classes": [
     {
@@ -644,6 +644,14 @@
       "currentGrade": 91,
       "assignments": [
         {
+          "name": "Active Transport",
+          "dueDate": "10/08/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
           "name": "Osmosis and cells close read",
           "dueDate": "10/07/2026",
           "earnedPoints": 7,
@@ -782,10 +790,10 @@
         {
           "name": "Summer Sky Drawing",
           "dueDate": "10/06/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 15,
           "totalPoints": 15,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "INDIV. EXAM #1",
@@ -926,26 +934,26 @@
         {
           "name": "Ch 4-2 overpopulation",
           "dueDate": "10/07/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "CH 4-2 Population D&D",
           "dueDate": "10/06/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "ch3-3 how climate shape poplua",
           "dueDate": "10/01/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "ch 3-2 factor that influence c",
