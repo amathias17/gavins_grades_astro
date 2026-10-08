@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-07T17:50:42.991Z",
+    "scrapedAt": "2026-10-08T17:47:25.094Z",
     "totalClasses": 13,
-    "totalAssignments": 119
+    "totalAssignments": 127
   },
   "classes": [
     {
@@ -265,8 +265,16 @@
       "className": "PHYSICAL EDUC",
       "teacher": "Paul Picciotti",
       "period": "2",
-      "currentGrade": 89,
+      "currentGrade": 88,
       "assignments": [
+        {
+          "name": "Week 6",
+          "dueDate": "10/08/2026",
+          "earnedPoints": 40,
+          "totalPoints": 50,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Week 5",
           "dueDate": "10/02/2026",
@@ -521,15 +529,23 @@
       "className": "INTRMEDIATE ALG II",
       "teacher": "Jodi Lambertus",
       "period": "4",
-      "currentGrade": 61,
+      "currentGrade": 60,
       "assignments": [
         {
-          "name": "HW #6 Compound Inequalities",
-          "dueDate": "10/05/2026",
+          "name": "Compound Inequality Math Lib",
+          "dueDate": "10/07/2026",
           "earnedPoints": 0,
           "totalPoints": 10,
           "weight": 1,
           "graded": true
+        },
+        {
+          "name": "HW #7 Absolute Value Inequal.",
+          "dueDate": "10/12/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
         },
         {
           "name": "Compound Inequality Math Lib",
@@ -537,7 +553,7 @@
           "earnedPoints": 0,
           "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "HW #6 Compound Inequalities",
@@ -631,6 +647,14 @@
           "name": "Osmosis and cells close read",
           "dueDate": "10/07/2026",
           "earnedPoints": 7,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Passive transport nearpod",
+          "dueDate": "10/07/2026",
+          "earnedPoints": 9,
           "totalPoints": 10,
           "weight": 1,
           "graded": true
@@ -755,6 +779,14 @@
       "period": "6",
       "currentGrade": 90,
       "assignments": [
+        {
+          "name": "Summer Sky Drawing",
+          "dueDate": "10/06/2026",
+          "earnedPoints": 0,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "INDIV. EXAM #1",
           "dueDate": "09/30/2026",
@@ -883,6 +915,38 @@
       "period": "7",
       "currentGrade": 100,
       "assignments": [
+        {
+          "name": "ch 4-1 culture: language",
+          "dueDate": "10/08/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Ch 4-2 overpopulation",
+          "dueDate": "10/07/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "CH 4-2 Population D&D",
+          "dueDate": "10/06/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "ch3-3 how climate shape poplua",
+          "dueDate": "10/01/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "ch 3-2 factor that influence c",
           "dueDate": "09/29/2026",

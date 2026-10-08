@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "10/08/2026, 12:12 AM",
+    "last_updated": "10/08/2026, 01:47 PM",
     "most_recent_date": "10/8/2026",
     "total_classes": 13
   },
@@ -62,7 +62,7 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 89,
+      "current_grade": 88,
       "letter_grade": "B"
     },
     {
@@ -107,7 +107,7 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 61,
+      "current_grade": 60,
       "letter_grade": "D"
     },
     {
@@ -991,7 +991,7 @@
       "10/5/2026": 89,
       "10/6/2026": 89,
       "10/7/2026": 89,
-      "10/8/2026": 89
+      "10/8/2026": 88
     },
     "Amer Studies": {
       "11/24/2025": 100,
@@ -2191,7 +2191,7 @@
       "10/5/2026": 66,
       "10/6/2026": 61,
       "10/7/2026": 61,
-      "10/8/2026": 61
+      "10/8/2026": 60
     },
     "Anatomy & Physiol": {
       "8/25/2026": null,
