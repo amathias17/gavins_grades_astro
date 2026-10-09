@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-09T04:18:10.653Z",
+    "scrapedAt": "2026-10-09T17:23:10.420Z",
     "totalClasses": 13,
-    "totalAssignments": 129
+    "totalAssignments": 130
   },
   "classes": [
     {
@@ -1049,8 +1049,16 @@
       "className": "ENGLISH 11",
       "teacher": "Audrey Cromell",
       "period": "8",
-      "currentGrade": 100,
+      "currentGrade": 93,
       "assignments": [
+        {
+          "name": "Writing Lab 4",
+          "dueDate": "10/08/2026",
+          "earnedPoints": 5,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Writing Lab 3",
           "dueDate": "10/02/2026",

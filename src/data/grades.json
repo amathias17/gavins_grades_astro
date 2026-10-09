@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "10/09/2026, 12:18 AM",
+    "last_updated": "10/09/2026, 01:23 PM",
     "most_recent_date": "10/9/2026",
     "total_classes": 13
   },
@@ -197,7 +197,7 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 100,
+      "current_grade": 93,
       "letter_grade": "A"
     }
   ],
@@ -2450,10 +2450,10 @@
       "10/6/2026": 100,
       "10/7/2026": 100,
       "10/8/2026": 100,
-      "10/9/2026": 100
+      "10/9/2026": 93
     }
   },
-  "overall_average": 79,
+  "overall_average": 78,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -2766,7 +2766,7 @@
     "10/6/2026": 80,
     "10/7/2026": 79,
     "10/8/2026": 79,
-    "10/9/2026": 79
+    "10/9/2026": 78
   },
   "streak": 0,
   "streak_history": {
