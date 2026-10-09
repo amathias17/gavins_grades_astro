@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-08T23:43:56.515Z",
+    "scrapedAt": "2026-10-09T04:18:10.653Z",
     "totalClasses": 13,
-    "totalAssignments": 128
+    "totalAssignments": 129
   },
   "classes": [
     {
@@ -641,15 +641,23 @@
       "className": "ANATOMY & PHYSIOL",
       "teacher": "Denise Condo",
       "period": "5",
-      "currentGrade": 91,
+      "currentGrade": 90,
       "assignments": [
+        {
+          "name": "Cells and transport SG",
+          "dueDate": "10/12/2026",
+          "earnedPoints": 0,
+          "totalPoints": 25,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Active Transport",
           "dueDate": "10/08/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 7,
           "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Osmosis and cells close read",
