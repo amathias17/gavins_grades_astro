@@ -586,9 +586,9 @@
     "assignmentName": "Week1",
     "dateDue": "09/04/2026",
     "dueDate": "09/04/2026",
-    "earnedPoints": 35,
-    "totalPoints": 50,
-    "weight": 1,
+    "earnedPoints": 10,
+    "totalPoints": 7,
+    "weight": null,
     "graded": true
   },
   {
@@ -1468,6 +1468,22 @@
     "dueDate": "08/31/2026",
     "earnedPoints": 11,
     "totalPoints": 10,
+    "weight": 1,
+    "graded": true
+  },
+  {
+    "classId": "47487",
+    "assignmentId": "1670458",
+    "studentId": "1396",
+    "className": "ASTRONOMY",
+    "teacher": "James Krug",
+    "period": "6",
+    "currentGrade": 90,
+    "assignmentName": "Assign #4: Humans of the...",
+    "dateDue": "10/08/2026",
+    "dueDate": "10/08/2026",
+    "earnedPoints": 19,
+    "totalPoints": 21,
     "weight": 1,
     "graded": true
   },

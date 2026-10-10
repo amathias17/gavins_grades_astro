@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-09T17:23:10.420Z",
+    "scrapedAt": "2026-10-10T05:10:51.246Z",
     "totalClasses": 13,
-    "totalAssignments": 130
+    "totalAssignments": 131
   },
   "classes": [
     {
@@ -310,9 +310,9 @@
         {
           "name": "Week1",
           "dueDate": "09/04/2026",
-          "earnedPoints": 35,
-          "totalPoints": 50,
-          "weight": 1,
+          "earnedPoints": 10,
+          "totalPoints": 7,
+          "weight": null,
           "graded": true
         }
       ]
@@ -795,6 +795,14 @@
       "period": "6",
       "currentGrade": 90,
       "assignments": [
+        {
+          "name": "Assign #4: Humans of the...",
+          "dueDate": "10/08/2026",
+          "earnedPoints": 19,
+          "totalPoints": 21,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Summer Sky Drawing",
           "dueDate": "10/06/2026",
