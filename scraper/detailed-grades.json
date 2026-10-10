@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-10T05:10:51.246Z",
+    "scrapedAt": "2026-10-10T16:09:04.460Z",
     "totalClasses": 13,
     "totalAssignments": 131
   },
@@ -310,9 +310,9 @@
         {
           "name": "Week1",
           "dueDate": "09/04/2026",
-          "earnedPoints": 10,
-          "totalPoints": 7,
-          "weight": null,
+          "earnedPoints": 35,
+          "totalPoints": 50,
+          "weight": 1,
           "graded": true
         }
       ]
