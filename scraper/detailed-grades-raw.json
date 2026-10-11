@@ -811,8 +811,8 @@
     "dateDue": "09/08/2026",
     "dueDate": "09/08/2026",
     "earnedPoints": 10,
-    "totalPoints": 7,
-    "weight": null,
+    "totalPoints": 10,
+    "weight": 1,
     "graded": true
   },
   {
@@ -1210,9 +1210,9 @@
     "assignmentName": "Active Transport",
     "dateDue": "10/08/2026",
     "dueDate": "10/08/2026",
-    "earnedPoints": 10,
-    "totalPoints": 7,
-    "weight": null,
+    "earnedPoints": 7,
+    "totalPoints": 10,
+    "weight": 1,
     "graded": true
   },
   {
