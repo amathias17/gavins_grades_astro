@@ -1,9 +1,17 @@
 {
   "metadata": {
-    "last_updated": "10/12/2026, 07:35 AM",
-    "count": 20
+    "last_updated": "10/12/2026, 04:10 PM",
+    "count": 21
   },
   "missing_assignments": [
+    {
+      "due_date": "10/12/2026",
+      "assignment_name": "HW #7 Absolute Value Inequal.",
+      "class_name": "INTRMEDIATE ALG II",
+      "teacher": "Jodi Lambertus",
+      "category": "Homework",
+      "max_points": "10"
+    },
     {
       "due_date": "10/07/2026",
       "assignment_name": "Compound Inequality Math Lib",

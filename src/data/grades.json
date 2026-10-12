@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "10/12/2026, 07:35 AM",
+    "last_updated": "10/12/2026, 04:10 PM",
     "most_recent_date": "10/12/2026",
     "total_classes": 13
   },
@@ -107,8 +107,8 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 60,
-      "letter_grade": "D"
+      "current_grade": 55,
+      "letter_grade": "F"
     },
     {
       "class_name": "Anatomy & Physiol",
@@ -2219,7 +2219,7 @@
       "10/9/2026": 60,
       "10/10/2026": 60,
       "10/11/2026": 60,
-      "10/12/2026": 60
+      "10/12/2026": 55
     },
     "Anatomy & Physiol": {
       "8/25/2026": null,
