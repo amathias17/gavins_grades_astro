@@ -657,6 +657,22 @@
   },
   {
     "classId": "48492",
+    "assignmentId": "1671860",
+    "studentId": "1396",
+    "className": "CHEMISTRY          2",
+    "teacher": "Paula Irwin",
+    "period": "3",
+    "currentGrade": 50,
+    "assignmentName": "Bunsen Burner",
+    "dateDue": "09/28/2026",
+    "dueDate": "09/28/2026",
+    "earnedPoints": 18,
+    "totalPoints": 45,
+    "weight": 1,
+    "graded": true
+  },
+  {
+    "classId": "48492",
     "assignmentId": "1658835",
     "studentId": "1396",
     "className": "CHEMISTRY          2",
@@ -1006,6 +1022,22 @@
     "totalPoints": 10,
     "weight": 1,
     "graded": false
+  },
+  {
+    "classId": "47574",
+    "assignmentId": "1671624",
+    "studentId": "1396",
+    "className": "INTRMEDIATE ALG II",
+    "teacher": "Jodi Lambertus",
+    "period": "4",
+    "currentGrade": 55,
+    "assignmentName": "DM: Unit 1 Review",
+    "dateDue": "10/12/2026",
+    "dueDate": "10/12/2026",
+    "earnedPoints": 5,
+    "totalPoints": 10,
+    "weight": 1,
+    "graded": true
   },
   {
     "classId": "47574",

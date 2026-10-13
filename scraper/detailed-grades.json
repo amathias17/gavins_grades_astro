@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-12T20:10:49.938Z",
+    "scrapedAt": "2026-10-13T18:01:32.039Z",
     "totalClasses": 13,
-    "totalAssignments": 132
+    "totalAssignments": 134
   },
   "classes": [
     {
@@ -348,6 +348,14 @@
           "graded": true
         },
         {
+          "name": "Bunsen Burner",
+          "dueDate": "09/28/2026",
+          "earnedPoints": 18,
+          "totalPoints": 45,
+          "weight": 1,
+          "graded": true
+        },
+        {
           "name": "Sci Method - Bikini Bottom Exp",
           "dueDate": "09/22/2026",
           "earnedPoints": 0,
@@ -546,6 +554,14 @@
           "totalPoints": 10,
           "weight": 1,
           "graded": false
+        },
+        {
+          "name": "DM: Unit 1 Review",
+          "dueDate": "10/12/2026",
+          "earnedPoints": 5,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
         },
         {
           "name": "Compound Inequality Math Lib",
