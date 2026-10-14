@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-14T15:45:13.673Z",
+    "scrapedAt": "2026-10-14T22:12:32.740Z",
     "totalClasses": 13,
-    "totalAssignments": 136
+    "totalAssignments": 139
   },
   "classes": [
     {
@@ -668,6 +668,14 @@
       "currentGrade": 90,
       "assignments": [
         {
+          "name": "Career Fair - programs - info",
+          "dueDate": "10/14/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": true
+        },
+        {
           "name": "Cells and transport SG",
           "dueDate": "10/12/2026",
           "earnedPoints": 0,
@@ -827,6 +835,14 @@
       "period": "6",
       "currentGrade": 91,
       "assignments": [
+        {
+          "name": "Summer Individual Dome Quiz",
+          "dueDate": "10/13/2026",
+          "earnedPoints": 0,
+          "totalPoints": 25,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Assign #4: Humans of the...",
           "dueDate": "10/08/2026",
@@ -1099,6 +1115,14 @@
       "period": "8",
       "currentGrade": 93,
       "assignments": [
+        {
+          "name": "Writing Lab 5",
+          "dueDate": "10/14/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Writing Lab 4",
           "dueDate": "10/08/2026",
