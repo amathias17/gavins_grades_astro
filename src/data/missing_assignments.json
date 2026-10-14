@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "10/13/2026, 11:17 PM",
-    "count": 21
+    "last_updated": "10/14/2026, 11:45 AM",
+    "count": 22
   },
   "missing_assignments": [
     {
@@ -19,6 +19,14 @@
       "teacher": "Jodi Lambertus",
       "category": "Other",
       "max_points": "10"
+    },
+    {
+      "due_date": "10/05/2026",
+      "assignment_name": "Measurement Practice WS",
+      "class_name": "CHEMISTRY          2",
+      "teacher": "Paula Irwin",
+      "category": "Class Work",
+      "max_points": "20"
     },
     {
       "due_date": "10/05/2026",

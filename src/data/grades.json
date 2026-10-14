@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "10/13/2026, 11:17 PM",
+    "last_updated": "10/14/2026, 11:45 AM",
     "most_recent_date": "10/14/2026",
     "total_classes": 13
   },
@@ -152,7 +152,7 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 90,
+      "current_grade": 91,
       "letter_grade": "A"
     },
     {
@@ -2374,7 +2374,7 @@
       "10/11/2026": 90,
       "10/12/2026": 90,
       "10/13/2026": 90,
-      "10/14/2026": 90
+      "10/14/2026": 91
     },
     "Mod Film & Culture": {
       "8/25/2026": null,

@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-13T18:01:32.039Z",
+    "scrapedAt": "2026-10-14T15:45:13.673Z",
     "totalClasses": 13,
-    "totalAssignments": 134
+    "totalAssignments": 136
   },
   "classes": [
     {
@@ -315,6 +315,14 @@
       "period": "3",
       "currentGrade": 50,
       "assignments": [
+        {
+          "name": "Measurement Practice WS",
+          "dueDate": "10/05/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Unit 1 TEST - Multiple Choice",
           "dueDate": "10/01/2026",
@@ -817,12 +825,20 @@
       "className": "ASTRONOMY",
       "teacher": "James Krug",
       "period": "6",
-      "currentGrade": 90,
+      "currentGrade": 91,
       "assignments": [
         {
           "name": "Assign #4: Humans of the...",
           "dueDate": "10/08/2026",
           "earnedPoints": 19,
+          "totalPoints": 21,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "\"Violent Universe\" Sky Show",
+          "dueDate": "10/08/2026",
+          "earnedPoints": 21,
           "totalPoints": 21,
           "weight": 1,
           "graded": true
