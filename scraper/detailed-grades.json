@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-15T02:56:03.702Z",
+    "scrapedAt": "2026-10-15T15:32:15.647Z",
     "totalClasses": 13,
-    "totalAssignments": 139
+    "totalAssignments": 145
   },
   "classes": [
     {
@@ -316,6 +316,38 @@
       "currentGrade": 50,
       "assignments": [
         {
+          "name": "Trouble with Turtles",
+          "dueDate": "10/14/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Density WS",
+          "dueDate": "10/13/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Significant Figures WS",
+          "dueDate": "10/12/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "% Error",
+          "dueDate": "10/07/2026",
+          "earnedPoints": 0,
+          "totalPoints": 8,
+          "weight": 1,
+          "graded": false
+        },
+        {
           "name": "Measurement Practice WS",
           "dueDate": "10/05/2026",
           "earnedPoints": 0,
@@ -537,7 +569,7 @@
       "className": "INTRMEDIATE ALG II",
       "teacher": "Jodi Lambertus",
       "period": "4",
-      "currentGrade": 55,
+      "currentGrade": 57,
       "assignments": [
         {
           "name": "HW #7 Absolute Value Inequal.",
@@ -554,6 +586,22 @@
           "totalPoints": 10,
           "weight": 1,
           "graded": true
+        },
+        {
+          "name": "Unit 1 Review Packet",
+          "dueDate": "10/15/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Unit 1 Test",
+          "dueDate": "10/15/2026",
+          "earnedPoints": 0,
+          "totalPoints": 52,
+          "weight": 1,
+          "graded": false
         },
         {
           "name": "HW #7 Absolute Value Inequal.",
