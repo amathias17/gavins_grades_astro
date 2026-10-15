@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-14T22:12:32.740Z",
+    "scrapedAt": "2026-10-15T02:56:03.702Z",
     "totalClasses": 13,
     "totalAssignments": 139
   },
@@ -833,7 +833,7 @@
       "className": "ASTRONOMY",
       "teacher": "James Krug",
       "period": "6",
-      "currentGrade": 91,
+      "currentGrade": 92,
       "assignments": [
         {
           "name": "Summer Individual Dome Quiz",
