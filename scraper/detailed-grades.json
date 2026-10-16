@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-15T15:32:15.647Z",
+    "scrapedAt": "2026-10-16T04:09:05.538Z",
     "totalClasses": 13,
-    "totalAssignments": 145
+    "totalAssignments": 147
   },
   "classes": [
     {
@@ -105,8 +105,32 @@
       "className": "ENVIRON SCIENCE    1",
       "teacher": "Megan Kutruff",
       "period": "1",
-      "currentGrade": 51,
+      "currentGrade": 50,
       "assignments": [
+        {
+          "name": "AMD Case Study",
+          "dueDate": "10/15/2026",
+          "earnedPoints": 0,
+          "totalPoints": 25,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "AMD Case Study",
+          "dueDate": "10/15/2026",
+          "earnedPoints": 0,
+          "totalPoints": 25,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Water Filter Challenge",
+          "dueDate": "10/12/2026",
+          "earnedPoints": 20,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Water Quality Lab",
           "dueDate": "10/05/2026",
@@ -321,6 +345,14 @@
           "earnedPoints": 0,
           "totalPoints": 10,
           "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Trouble with Turtles",
+          "dueDate": "10/14/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
           "graded": false
         },
         {
@@ -342,10 +374,10 @@
         {
           "name": "% Error",
           "dueDate": "10/07/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 6,
           "totalPoints": 8,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Measurement Practice WS",
@@ -571,22 +603,6 @@
       "period": "4",
       "currentGrade": 57,
       "assignments": [
-        {
-          "name": "HW #7 Absolute Value Inequal.",
-          "dueDate": "10/12/2026",
-          "earnedPoints": 0,
-          "totalPoints": 10,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Compound Inequality Math Lib",
-          "dueDate": "10/07/2026",
-          "earnedPoints": 0,
-          "totalPoints": 10,
-          "weight": 1,
-          "graded": true
-        },
         {
           "name": "Unit 1 Review Packet",
           "dueDate": "10/15/2026",
