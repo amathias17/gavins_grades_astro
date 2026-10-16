@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-16T04:09:05.538Z",
+    "scrapedAt": "2026-10-16T15:18:23.982Z",
     "totalClasses": 13,
-    "totalAssignments": 147
+    "totalAssignments": 149
   },
   "classes": [
     {
@@ -120,6 +120,14 @@
           "dueDate": "10/15/2026",
           "earnedPoints": 0,
           "totalPoints": 25,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Water Pollution Notes",
+          "dueDate": "10/13/2026",
+          "earnedPoints": 0,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
@@ -281,8 +289,16 @@
       "className": "PHYSICAL EDUC",
       "teacher": "Paul Picciotti",
       "period": "2",
-      "currentGrade": 88,
+      "currentGrade": 89,
       "assignments": [
+        {
+          "name": "week 7",
+          "dueDate": "10/16/2026",
+          "earnedPoints": 50,
+          "totalPoints": 50,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Week 6",
           "dueDate": "10/08/2026",
