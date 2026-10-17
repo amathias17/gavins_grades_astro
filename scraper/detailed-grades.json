@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-17T04:01:17.934Z",
+    "scrapedAt": "2026-10-17T21:23:28.329Z",
     "totalClasses": 13,
-    "totalAssignments": 150
+    "totalAssignments": 152
   },
   "classes": [
     {
@@ -923,6 +923,22 @@
       "period": "6",
       "currentGrade": 92,
       "assignments": [
+        {
+          "name": "Google Earth Observatories...",
+          "dueDate": "10/19/2026",
+          "earnedPoints": 0,
+          "totalPoints": 25,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "College-Style Lecture #1:",
+          "dueDate": "10/16/2026",
+          "earnedPoints": 21,
+          "totalPoints": 22,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Summer Individual Dome Quiz",
           "dueDate": "10/13/2026",
