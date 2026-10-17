@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "10/16/2026, 11:18 AM",
-    "count": 27
+    "last_updated": "10/17/2026, 12:01 AM",
+    "count": 26
   },
   "missing_assignments": [
     {
@@ -42,14 +42,6 @@
       "class_name": "CHEMISTRY          2",
       "teacher": "Paula Irwin",
       "category": "Class Work",
-      "max_points": "10"
-    },
-    {
-      "due_date": "10/12/2026",
-      "assignment_name": "HW #7 Absolute Value Inequal.",
-      "class_name": "INTRMEDIATE ALG II",
-      "teacher": "Jodi Lambertus",
-      "category": "Homework",
       "max_points": "10"
     },
     {
