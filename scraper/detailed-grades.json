@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-17T21:23:28.329Z",
+    "scrapedAt": "2026-10-19T17:22:42.328Z",
     "totalClasses": 13,
     "totalAssignments": 152
   },
@@ -353,7 +353,7 @@
       "className": "CHEMISTRY          2",
       "teacher": "Paula Irwin",
       "period": "3",
-      "currentGrade": 50,
+      "currentGrade": 33,
       "assignments": [
         {
           "name": "Trouble with Turtles",
@@ -1217,7 +1217,7 @@
       "className": "ENGLISH 11",
       "teacher": "Audrey Cromell",
       "period": "8",
-      "currentGrade": 93,
+      "currentGrade": 94,
       "assignments": [
         {
           "name": "Writing Lab 5",
@@ -1230,9 +1230,9 @@
         {
           "name": "Writing Lab 4",
           "dueDate": "10/08/2026",
-          "earnedPoints": 5,
-          "totalPoints": 10,
-          "weight": 1,
+          "earnedPoints": 10,
+          "totalPoints": 15,
+          "weight": null,
           "graded": true
         },
         {
