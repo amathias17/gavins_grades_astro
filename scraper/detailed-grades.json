@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-19T17:22:42.328Z",
+    "scrapedAt": "2026-10-19T22:53:05.894Z",
     "totalClasses": 13,
     "totalAssignments": 152
   },
@@ -1230,9 +1230,9 @@
         {
           "name": "Writing Lab 4",
           "dueDate": "10/08/2026",
-          "earnedPoints": 10,
-          "totalPoints": 15,
-          "weight": null,
+          "earnedPoints": 5,
+          "totalPoints": 10,
+          "weight": 1,
           "graded": true
         },
         {

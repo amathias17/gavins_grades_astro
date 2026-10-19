@@ -2314,9 +2314,9 @@
     "assignmentName": "Writing Lab 4",
     "dateDue": "10/08/2026",
     "dueDate": "10/08/2026",
-    "earnedPoints": 10,
-    "totalPoints": 15,
-    "weight": null,
+    "earnedPoints": 5,
+    "totalPoints": 10,
+    "weight": 1,
     "graded": true
   },
   {
