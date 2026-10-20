@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-19T22:53:05.894Z",
+    "scrapedAt": "2026-10-20T15:35:39.204Z",
     "totalClasses": 13,
-    "totalAssignments": 152
+    "totalAssignments": 157
   },
   "classes": [
     {
@@ -116,10 +116,42 @@
           "graded": true
         },
         {
+          "name": "U.2 Study Gudie",
+          "dueDate": "10/20/2026",
+          "earnedPoints": 0,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "U.2 Freshwater Resources Test",
+          "dueDate": "10/20/2026",
+          "earnedPoints": 21.5,
+          "totalPoints": 32,
+          "weight": 1,
+          "graded": true
+        },
+        {
           "name": "AMD Case Study",
           "dueDate": "10/15/2026",
           "earnedPoints": 0,
           "totalPoints": 25,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Biomagnification Lab",
+          "dueDate": "10/15/2026",
+          "earnedPoints": 24,
+          "totalPoints": 25,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Water Pollution Reading",
+          "dueDate": "10/14/2026",
+          "earnedPoints": 0,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
@@ -1219,6 +1251,14 @@
       "period": "8",
       "currentGrade": 94,
       "assignments": [
+        {
+          "name": "Short Story Graphic Organizer",
+          "dueDate": "10/21/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Writing Lab 5",
           "dueDate": "10/14/2026",

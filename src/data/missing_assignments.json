@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "10/19/2026, 11:08 PM",
-    "count": 24
+    "last_updated": "10/20/2026, 11:35 AM",
+    "count": 25
   },
   "missing_assignments": [
     {
@@ -19,6 +19,14 @@
       "teacher": "Paula Irwin",
       "category": "Lab",
       "max_points": "10"
+    },
+    {
+      "due_date": "10/14/2026",
+      "assignment_name": "Water Pollution Reading",
+      "class_name": "ENVIRON SCIENCE    1",
+      "teacher": "Megan Kutruff",
+      "category": "Class Work",
+      "max_points": "15"
     },
     {
       "due_date": "10/13/2026",
