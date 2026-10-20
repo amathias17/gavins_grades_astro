@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-20T15:35:39.204Z",
+    "scrapedAt": "2026-10-20T22:13:56.890Z",
     "totalClasses": 13,
-    "totalAssignments": 157
+    "totalAssignments": 160
   },
   "classes": [
     {
@@ -1131,6 +1131,30 @@
       "period": "7",
       "currentGrade": 100,
       "assignments": [
+        {
+          "name": "Ch 4-4 Urbanization",
+          "dueDate": "10/16/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Ch 4-1intro to world religions",
+          "dueDate": "10/15/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Ch 4-1 cultural hearths",
+          "dueDate": "10/15/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "ch 4-1 culture: language",
           "dueDate": "10/08/2026",
