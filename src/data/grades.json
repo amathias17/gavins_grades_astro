@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "10/20/2026, 11:03 PM",
+    "last_updated": "10/21/2026, 11:52 AM",
     "most_recent_date": "10/21/2026",
     "total_classes": 13
   },
@@ -182,8 +182,8 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 100,
-      "letter_grade": "A"
+      "current_grade": 88,
+      "letter_grade": "B"
     },
     {
       "class_name": "English 11",
@@ -2552,7 +2552,7 @@
       "10/18/2026": 100,
       "10/19/2026": 100,
       "10/20/2026": 100,
-      "10/21/2026": 100
+      "10/21/2026": 88
     },
     "English 11": {
       "8/25/2026": null,
@@ -2609,7 +2609,7 @@
       "10/21/2026": 94
     }
   },
-  "overall_average": 77,
+  "overall_average": 76,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -2934,7 +2934,7 @@
     "10/18/2026": 79,
     "10/19/2026": 77,
     "10/20/2026": 77,
-    "10/21/2026": 77
+    "10/21/2026": 76
   },
   "streak": 0,
   "streak_history": {

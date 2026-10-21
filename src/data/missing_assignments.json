@@ -1,9 +1,17 @@
 {
   "metadata": {
-    "last_updated": "10/20/2026, 11:03 PM",
-    "count": 25
+    "last_updated": "10/21/2026, 11:52 AM",
+    "count": 27
   },
   "missing_assignments": [
+    {
+      "due_date": "10/16/2026",
+      "assignment_name": "Ch 4-4 Urbanization",
+      "class_name": "WORLD STUDIES",
+      "teacher": "Donald Dull Jr",
+      "category": "Class Work",
+      "max_points": "10"
+    },
     {
       "due_date": "10/15/2026",
       "assignment_name": "AMD Case Study",
@@ -11,6 +19,14 @@
       "teacher": "Megan Kutruff",
       "category": "Class Work",
       "max_points": "25"
+    },
+    {
+      "due_date": "10/15/2026",
+      "assignment_name": "Ch 4-1 cultural hearths",
+      "class_name": "WORLD STUDIES",
+      "teacher": "Donald Dull Jr",
+      "category": "Class Work",
+      "max_points": "10"
     },
     {
       "due_date": "10/14/2026",
