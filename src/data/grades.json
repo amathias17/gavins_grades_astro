@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "10/21/2026, 11:52 AM",
+    "last_updated": "10/21/2026, 02:46 PM",
     "most_recent_date": "10/21/2026",
     "total_classes": 13
   },
@@ -122,8 +122,8 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 90,
-      "letter_grade": "A"
+      "current_grade": 81,
+      "letter_grade": "B"
     },
     {
       "class_name": "Science Of Science Fiction",
@@ -2336,7 +2336,7 @@
       "10/18/2026": 90,
       "10/19/2026": 90,
       "10/20/2026": 90,
-      "10/21/2026": 90
+      "10/21/2026": 81
     },
     "Science Of Science Fiction": {
       "8/25/2026": null,
@@ -2609,7 +2609,7 @@
       "10/21/2026": 94
     }
   },
-  "overall_average": 76,
+  "overall_average": 75,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -2934,7 +2934,7 @@
     "10/18/2026": 79,
     "10/19/2026": 77,
     "10/20/2026": 77,
-    "10/21/2026": 76
+    "10/21/2026": 75
   },
   "streak": 0,
   "streak_history": {

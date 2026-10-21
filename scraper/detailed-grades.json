@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-21T15:52:40.738Z",
+    "scrapedAt": "2026-10-21T18:46:24.254Z",
     "totalClasses": 13,
-    "totalAssignments": 163
+    "totalAssignments": 167
   },
   "classes": [
     {
@@ -646,9 +646,9 @@
         {
           "name": "Safety in the Lab Practice",
           "dueDate": "09/02/2026",
-          "earnedPoints": 9,
-          "totalPoints": 10,
-          "weight": 1,
+          "earnedPoints": 10,
+          "totalPoints": 16,
+          "weight": null,
           "graded": true
         }
       ]
@@ -793,8 +793,32 @@
       "className": "ANATOMY & PHYSIOL",
       "teacher": "Denise Condo",
       "period": "5",
-      "currentGrade": 90,
+      "currentGrade": 81,
       "assignments": [
+        {
+          "name": "Exits Slip",
+          "dueDate": "10/21/2026",
+          "earnedPoints": 0,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Lacks & HeLa Cells-Close read",
+          "dueDate": "10/21/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Cell Size Lab",
+          "dueDate": "10/19/2026",
+          "earnedPoints": 6,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Microscope FUnction and Parts",
           "dueDate": "10/16/2026",
@@ -1305,6 +1329,14 @@
           "earnedPoints": 0,
           "totalPoints": 10,
           "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Marking Period 1 Final",
+          "dueDate": "10/19/2026",
+          "earnedPoints": 0,
+          "totalPoints": 15.36,
+          "weight": 0.64,
           "graded": false
         },
         {
