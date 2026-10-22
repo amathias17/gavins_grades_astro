@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-22T03:09:25.191Z",
+    "scrapedAt": "2026-10-22T15:55:09.750Z",
     "totalClasses": 13,
-    "totalAssignments": 168
+    "totalAssignments": 170
   },
   "classes": [
     {
@@ -387,6 +387,22 @@
       "period": "3",
       "currentGrade": 33,
       "assignments": [
+        {
+          "name": "1MP Review WS/Study Guide",
+          "dueDate": "10/21/2026",
+          "earnedPoints": 0,
+          "totalPoints": 30,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Dimensional Analysis WS",
+          "dueDate": "10/19/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Trouble with Turtles",
           "dueDate": "10/14/2026",
