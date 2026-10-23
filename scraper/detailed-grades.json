@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-22T15:55:09.750Z",
+    "scrapedAt": "2026-10-23T03:06:30.608Z",
     "totalClasses": 13,
-    "totalAssignments": 170
+    "totalAssignments": 174
   },
   "classes": [
     {
@@ -105,13 +105,21 @@
       "className": "ENVIRON SCIENCE    1",
       "teacher": "Megan Kutruff",
       "period": "1",
-      "currentGrade": 50,
+      "currentGrade": 49,
       "assignments": [
         {
-          "name": "AMD Case Study",
-          "dueDate": "10/15/2026",
+          "name": "Marine Ecosystems Matching",
+          "dueDate": "10/21/2026",
           "earnedPoints": 0,
-          "totalPoints": 25,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Marine Ecosystems Matching",
+          "dueDate": "10/21/2026",
+          "earnedPoints": 0,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
@@ -790,9 +798,9 @@
         {
           "name": "HW #1 Simp. Rad. & Class. Num.",
           "dueDate": "09/03/2026",
-          "earnedPoints": 9,
-          "totalPoints": 10,
-          "weight": 1,
+          "earnedPoints": 10,
+          "totalPoints": 21,
+          "weight": null,
           "graded": true
         },
         {
@@ -811,6 +819,22 @@
       "period": "5",
       "currentGrade": 81,
       "assignments": [
+        {
+          "name": "MP participation",
+          "dueDate": "10/22/2026",
+          "earnedPoints": 0,
+          "totalPoints": 45,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Way of a trout",
+          "dueDate": "10/22/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Exits Slip",
           "dueDate": "10/21/2026",
@@ -1011,6 +1035,14 @@
       "period": "6",
       "currentGrade": 92,
       "assignments": [
+        {
+          "name": "\"Habitat Earth\" Sky Show",
+          "dueDate": "10/20/2026",
+          "earnedPoints": 0,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Google Earth Observatories...",
           "dueDate": "10/19/2026",

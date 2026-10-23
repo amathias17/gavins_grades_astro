@@ -1,9 +1,17 @@
 {
   "metadata": {
-    "last_updated": "10/22/2026, 11:55 AM",
-    "count": 27
+    "last_updated": "10/22/2026, 11:06 PM",
+    "count": 28
   },
   "missing_assignments": [
+    {
+      "due_date": "10/21/2026",
+      "assignment_name": "Marine Ecosystems Matching",
+      "class_name": "ENVIRON SCIENCE    1",
+      "teacher": "Megan Kutruff",
+      "category": "Class Work",
+      "max_points": "15"
+    },
     {
       "due_date": "10/16/2026",
       "assignment_name": "Ch 4-4 Urbanization",
@@ -166,14 +174,6 @@
     },
     {
       "due_date": "09/08/2026",
-      "assignment_name": "Safety Equipment Map WS",
-      "class_name": "CHEMISTRY          2",
-      "teacher": "Paula Irwin",
-      "category": "Homework",
-      "max_points": "20"
-    },
-    {
-      "due_date": "09/08/2026",
       "assignment_name": "Safety Drawing/Poster",
       "class_name": "CHEMISTRY          2",
       "teacher": "Paula Irwin",
@@ -181,12 +181,12 @@
       "max_points": "25"
     },
     {
-      "due_date": "09/04/2026",
-      "assignment_name": "Lab Safety Poster",
-      "class_name": "ENVIRON SCIENCE    1",
-      "teacher": "Megan Kutruff",
-      "category": "Project",
-      "max_points": "30"
+      "due_date": "09/08/2026",
+      "assignment_name": "Safety Equipment Map WS",
+      "class_name": "CHEMISTRY          2",
+      "teacher": "Paula Irwin",
+      "category": "Homework",
+      "max_points": "20"
     },
     {
       "due_date": "09/04/2026",
@@ -195,6 +195,14 @@
       "teacher": "Megan Kutruff",
       "category": "Other",
       "max_points": "5"
+    },
+    {
+      "due_date": "09/04/2026",
+      "assignment_name": "Lab Safety Poster",
+      "class_name": "ENVIRON SCIENCE    1",
+      "teacher": "Megan Kutruff",
+      "category": "Project",
+      "max_points": "30"
     },
     {
       "due_date": "09/03/2026",
