@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-23T15:40:37.111Z",
+    "scrapedAt": "2026-10-23T21:59:15.298Z",
     "totalClasses": 13,
     "totalAssignments": 181
   },
@@ -849,21 +849,21 @@
       "className": "ANATOMY & PHYSIOL",
       "teacher": "Denise Condo",
       "period": "5",
-      "currentGrade": 81,
+      "currentGrade": 80,
       "assignments": [
+        {
+          "name": "Cancer presentation notes",
+          "dueDate": "10/23/2026",
+          "earnedPoints": 2,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "MP participation",
           "dueDate": "10/22/2026",
           "earnedPoints": 0,
           "totalPoints": 45,
-          "weight": 1,
-          "graded": false
-        },
-        {
-          "name": "Way of a trout",
-          "dueDate": "10/22/2026",
-          "earnedPoints": 0,
-          "totalPoints": 10,
           "weight": 1,
           "graded": false
         },
