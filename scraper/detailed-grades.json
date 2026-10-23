@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-23T03:06:30.608Z",
+    "scrapedAt": "2026-10-23T15:40:37.111Z",
     "totalClasses": 13,
-    "totalAssignments": 174
+    "totalAssignments": 181
   },
   "classes": [
     {
@@ -114,6 +114,22 @@
           "totalPoints": 15,
           "weight": 1,
           "graded": true
+        },
+        {
+          "name": "MP1 Participation",
+          "dueDate": "10/27/2026",
+          "earnedPoints": 50,
+          "totalPoints": 50,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "MP1 Bonus",
+          "dueDate": "10/27/2026",
+          "earnedPoints": 0,
+          "totalPoints": 0,
+          "weight": 1,
+          "graded": false
         },
         {
           "name": "Marine Ecosystems Matching",
@@ -329,8 +345,16 @@
       "className": "PHYSICAL EDUC",
       "teacher": "Paul Picciotti",
       "period": "2",
-      "currentGrade": 89,
+      "currentGrade": 88,
       "assignments": [
+        {
+          "name": "Week 8",
+          "dueDate": "10/23/2026",
+          "earnedPoints": 40,
+          "totalPoints": 50,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "week 7",
           "dueDate": "10/16/2026",
@@ -393,7 +417,7 @@
       "className": "CHEMISTRY          2",
       "teacher": "Paula Irwin",
       "period": "3",
-      "currentGrade": 33,
+      "currentGrade": 31,
       "assignments": [
         {
           "name": "1MP Review WS/Study Guide",
@@ -454,10 +478,10 @@
         {
           "name": "Candle Lab - Data/Graph/Ques",
           "dueDate": "10/05/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 14,
           "totalPoints": 63,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Candle Lab Conclusion",
@@ -465,7 +489,7 @@
           "earnedPoints": 0,
           "totalPoints": 21,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Unit 1 TEST - Multiple Choice",
@@ -692,6 +716,14 @@
           "graded": false
         },
         {
+          "name": "1st Marking Period Benchmark",
+          "dueDate": "10/22/2026",
+          "earnedPoints": 0,
+          "totalPoints": 24,
+          "weight": 1,
+          "graded": false
+        },
+        {
           "name": "Unit 1 Review Packet",
           "dueDate": "10/15/2026",
           "earnedPoints": 0,
@@ -798,9 +830,9 @@
         {
           "name": "HW #1 Simp. Rad. & Class. Num.",
           "dueDate": "09/03/2026",
-          "earnedPoints": 10,
-          "totalPoints": 21,
-          "weight": null,
+          "earnedPoints": 9,
+          "totalPoints": 10,
+          "weight": 1,
           "graded": true
         },
         {
@@ -1033,7 +1065,7 @@
       "className": "ASTRONOMY",
       "teacher": "James Krug",
       "period": "6",
-      "currentGrade": 92,
+      "currentGrade": 93,
       "assignments": [
         {
           "name": "\"Habitat Earth\" Sky Show",
@@ -1236,6 +1268,22 @@
           "graded": true
         },
         {
+          "name": "ch 18-1 gret rift valley",
+          "dueDate": "10/23/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Ch 18-1 African river systems",
+          "dueDate": "10/23/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
           "name": "Ch 4-4 Urbanization",
           "dueDate": "10/16/2026",
           "earnedPoints": 0,
@@ -1379,6 +1427,14 @@
       "period": "8",
       "currentGrade": 94,
       "assignments": [
+        {
+          "name": "Short Story",
+          "dueDate": "10/27/2026",
+          "earnedPoints": 0,
+          "totalPoints": 25,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Short Story Graphic Organizer",
           "dueDate": "10/21/2026",

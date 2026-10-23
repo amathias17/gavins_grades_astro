@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "10/22/2026, 11:06 PM",
+    "last_updated": "10/23/2026, 11:40 AM",
     "most_recent_date": "10/23/2026",
     "total_classes": 13
   },
@@ -62,7 +62,7 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 89,
+      "current_grade": 88,
       "letter_grade": "B"
     },
     {
@@ -92,7 +92,7 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 33,
+      "current_grade": 31,
       "letter_grade": "F"
     },
     {
@@ -152,7 +152,7 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 92,
+      "current_grade": 93,
       "letter_grade": "A"
     },
     {
@@ -1006,7 +1006,7 @@
       "10/20/2026": 89,
       "10/21/2026": 89,
       "10/22/2026": 89,
-      "10/23/2026": 89
+      "10/23/2026": 88
     },
     "Amer Studies": {
       "11/24/2025": 100,
@@ -2240,7 +2240,7 @@
       "10/20/2026": 33,
       "10/21/2026": 33,
       "10/22/2026": 33,
-      "10/23/2026": 33
+      "10/23/2026": 31
     },
     "Intrmediate Alg Ii": {
       "8/25/2026": null,
@@ -2464,7 +2464,7 @@
       "10/20/2026": 92,
       "10/21/2026": 92,
       "10/22/2026": 92,
-      "10/23/2026": 92
+      "10/23/2026": 93
     },
     "Mod Film & Culture": {
       "8/25/2026": null,
