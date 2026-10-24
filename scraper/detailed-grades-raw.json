@@ -2362,9 +2362,9 @@
     "assignmentName": "Powers of 10 Quiz",
     "dateDue": "09/01/2026",
     "dueDate": "09/01/2026",
-    "earnedPoints": 10,
-    "totalPoints": 23,
-    "weight": null,
+    "earnedPoints": 31,
+    "totalPoints": 33,
+    "weight": 1,
     "graded": true
   },
   {
@@ -2718,6 +2718,22 @@
     "totalPoints": 10,
     "weight": 1,
     "graded": true
+  },
+  {
+    "classId": "47127",
+    "assignmentId": "1677884",
+    "studentId": "1396",
+    "className": "ENGLISH 11",
+    "teacher": "Audrey Cromell",
+    "period": "8",
+    "currentGrade": 94,
+    "assignmentName": "Story Revision Checklist",
+    "dateDue": "10/28/2026",
+    "dueDate": "10/28/2026",
+    "earnedPoints": 0,
+    "totalPoints": 10,
+    "weight": 1,
+    "graded": false
   },
   {
     "classId": "47127",

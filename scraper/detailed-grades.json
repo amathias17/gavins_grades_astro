@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-24T03:02:16.673Z",
+    "scrapedAt": "2026-10-24T14:20:29.634Z",
     "totalClasses": 13,
-    "totalAssignments": 182
+    "totalAssignments": 183
   },
   "classes": [
     {
@@ -1238,9 +1238,9 @@
         {
           "name": "Powers of 10 Quiz",
           "dueDate": "09/01/2026",
-          "earnedPoints": 10,
-          "totalPoints": 23,
-          "weight": null,
+          "earnedPoints": 31,
+          "totalPoints": 33,
+          "weight": 1,
           "graded": true
         },
         {
@@ -1435,6 +1435,14 @@
       "period": "8",
       "currentGrade": 94,
       "assignments": [
+        {
+          "name": "Story Revision Checklist",
+          "dueDate": "10/28/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Short Story",
           "dueDate": "10/27/2026",
