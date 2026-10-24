@@ -1,5 +1,21 @@
 [
   {
+    "classId": "47705",
+    "assignmentId": "1680177",
+    "studentId": "1396",
+    "className": "ANATOMY & PHYSIOL",
+    "teacher": "Denise Condo",
+    "period": "5",
+    "currentGrade": 80,
+    "assignmentName": "Cancer Presentation",
+    "dateDue": "10/23/2026",
+    "dueDate": "10/23/2026",
+    "earnedPoints": 0,
+    "totalPoints": 25,
+    "weight": 1,
+    "graded": false
+  },
+  {
     "classId": "47460",
     "assignmentId": "1679034",
     "studentId": "1396",
@@ -12,22 +28,6 @@
     "dueDate": "10/21/2026",
     "earnedPoints": 0,
     "totalPoints": 15,
-    "weight": 1,
-    "graded": true
-  },
-  {
-    "classId": "47350",
-    "assignmentId": "1676995",
-    "studentId": "1396",
-    "className": "WORLD STUDIES",
-    "teacher": "Donald Dull Jr",
-    "period": "7",
-    "currentGrade": 88,
-    "assignmentName": "Ch 4-4 Urbanization",
-    "dateDue": "10/16/2026",
-    "dueDate": "10/16/2026",
-    "earnedPoints": 0,
-    "totalPoints": 10,
     "weight": 1,
     "graded": true
   },
@@ -1633,6 +1633,22 @@
   },
   {
     "classId": "47705",
+    "assignmentId": "1680177",
+    "studentId": "1396",
+    "className": "ANATOMY & PHYSIOL",
+    "teacher": "Denise Condo",
+    "period": "5",
+    "currentGrade": 80,
+    "assignmentName": "Cancer Presentation",
+    "dateDue": "10/23/2026",
+    "dueDate": "10/23/2026",
+    "earnedPoints": 0,
+    "totalPoints": 25,
+    "weight": 1,
+    "graded": false
+  },
+  {
+    "classId": "47705",
     "assignmentId": "1678872",
     "studentId": "1396",
     "className": "ANATOMY & PHYSIOL",
@@ -2346,9 +2362,9 @@
     "assignmentName": "Powers of 10 Quiz",
     "dateDue": "09/01/2026",
     "dueDate": "09/01/2026",
-    "earnedPoints": 31,
-    "totalPoints": 33,
-    "weight": 1,
+    "earnedPoints": 10,
+    "totalPoints": 23,
+    "weight": null,
     "graded": true
   },
   {

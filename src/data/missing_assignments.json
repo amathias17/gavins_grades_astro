@@ -1,9 +1,17 @@
 {
   "metadata": {
-    "last_updated": "10/23/2026, 05:59 PM",
-    "count": 28
+    "last_updated": "10/23/2026, 11:02 PM",
+    "count": 29
   },
   "missing_assignments": [
+    {
+      "due_date": "10/23/2026",
+      "assignment_name": "Cancer Presentation",
+      "class_name": "ANATOMY & PHYSIOL",
+      "teacher": "Denise Condo",
+      "category": "Project",
+      "max_points": "25"
+    },
     {
       "due_date": "10/21/2026",
       "assignment_name": "Marine Ecosystems Matching",
@@ -94,18 +102,18 @@
     },
     {
       "due_date": "10/01/2026",
-      "assignment_name": "Unit 1 Notes",
-      "class_name": "CHEMISTRY          2",
-      "teacher": "Paula Irwin",
-      "category": "Other",
-      "max_points": "20"
-    },
-    {
-      "due_date": "10/01/2026",
       "assignment_name": "Scientific Method Review WS",
       "class_name": "CHEMISTRY          2",
       "teacher": "Paula Irwin",
       "category": "Class Work",
+      "max_points": "20"
+    },
+    {
+      "due_date": "10/01/2026",
+      "assignment_name": "Unit 1 Notes",
+      "class_name": "CHEMISTRY          2",
+      "teacher": "Paula Irwin",
+      "category": "Other",
       "max_points": "20"
     },
     {
