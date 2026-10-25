@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-24T14:20:29.634Z",
+    "scrapedAt": "2026-10-25T03:30:49.487Z",
     "totalClasses": 13,
-    "totalAssignments": 183
+    "totalAssignments": 188
   },
   "classes": [
     {
@@ -849,7 +849,7 @@
       "className": "ANATOMY & PHYSIOL",
       "teacher": "Denise Condo",
       "period": "5",
-      "currentGrade": 80,
+      "currentGrade": 69,
       "assignments": [
         {
           "name": "Cancer Presentation",
@@ -964,6 +964,14 @@
           "graded": true
         },
         {
+          "name": "Biochemistry Lab Analysis Ques",
+          "dueDate": "10/07/2026",
+          "earnedPoints": 8,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
+        {
           "name": "Biochemistry Lab data",
           "dueDate": "10/02/2026",
           "earnedPoints": 10,
@@ -972,10 +980,26 @@
           "graded": true
         },
         {
+          "name": "Elements in the body",
+          "dueDate": "10/02/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
           "name": "Nutrient notes - class acti.",
           "dueDate": "10/01/2026",
           "earnedPoints": 5,
           "totalPoints": 5,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Scientific Method Study guide",
+          "dueDate": "10/01/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
@@ -996,10 +1020,26 @@
           "graded": true
         },
         {
+          "name": "Homeostasis Worksheet/graphing",
+          "dueDate": "09/24/2026",
+          "earnedPoints": 3,
+          "totalPoints": 25,
+          "weight": 1,
+          "graded": true
+        },
+        {
           "name": "Scenario Lab",
           "dueDate": "09/22/2026",
           "earnedPoints": 0,
           "totalPoints": 30,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Microscope Lab",
+          "dueDate": "09/22/2026",
+          "earnedPoints": 0,
+          "totalPoints": 50,
           "weight": 1,
           "graded": false
         },
