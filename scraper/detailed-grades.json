@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-26T17:10:42.303Z",
+    "scrapedAt": "2026-10-26T23:16:02.059Z",
     "totalClasses": 13,
-    "totalAssignments": 194
+    "totalAssignments": 197
   },
   "classes": [
     {
@@ -881,7 +881,7 @@
       "className": "ANATOMY & PHYSIOL",
       "teacher": "Denise Condo",
       "period": "5",
-      "currentGrade": 63,
+      "currentGrade": 62,
       "assignments": [
         {
           "name": "Cancer Presentation",
@@ -890,6 +890,30 @@
           "totalPoints": 25,
           "weight": 1,
           "graded": false
+        },
+        {
+          "name": "MP participation",
+          "dueDate": "10/27/2026",
+          "earnedPoints": 0,
+          "totalPoints": 45,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Presentation Notes Day #22",
+          "dueDate": "10/26/2026",
+          "earnedPoints": 2,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Exit Slip - Tissues",
+          "dueDate": "10/26/2026",
+          "earnedPoints": 1,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": true
         },
         {
           "name": "Cancer presentation notes",
@@ -904,14 +928,6 @@
           "dueDate": "10/23/2026",
           "earnedPoints": 0,
           "totalPoints": 25,
-          "weight": 1,
-          "graded": false
-        },
-        {
-          "name": "MP participation",
-          "dueDate": "10/22/2026",
-          "earnedPoints": 0,
-          "totalPoints": 45,
           "weight": 1,
           "graded": false
         },
@@ -952,6 +968,14 @@
           "dueDate": "10/16/2026",
           "earnedPoints": 0,
           "totalPoints": 25,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Microscope Lab",
+          "dueDate": "10/16/2026",
+          "earnedPoints": 0,
+          "totalPoints": 50,
           "weight": 1,
           "graded": false
         },
@@ -1076,14 +1100,6 @@
           "graded": false
         },
         {
-          "name": "Microscope Lab",
-          "dueDate": "09/22/2026",
-          "earnedPoints": 0,
-          "totalPoints": 50,
-          "weight": 1,
-          "graded": false
-        },
-        {
           "name": "Picasso Anatomy",
           "dueDate": "09/21/2026",
           "earnedPoints": 25,
@@ -1161,7 +1177,7 @@
       "className": "ASTRONOMY",
       "teacher": "James Krug",
       "period": "6",
-      "currentGrade": 89,
+      "currentGrade": 85,
       "assignments": [
         {
           "name": "Assign #6: Global Warming vs.",
@@ -1170,6 +1186,14 @@
           "totalPoints": 28,
           "weight": 1,
           "graded": false
+        },
+        {
+          "name": "\"Fire from the Sky\" Video Rev.",
+          "dueDate": "10/23/2026",
+          "earnedPoints": 29,
+          "totalPoints": 30,
+          "weight": 1,
+          "graded": true
         },
         {
           "name": "\"Habitat Earth\" Sky Show",
