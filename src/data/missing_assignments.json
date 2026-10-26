@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "10/25/2026, 11:41 PM",
-    "count": 29
+    "last_updated": "10/26/2026, 01:10 PM",
+    "count": 32
   },
   "missing_assignments": [
     {
@@ -13,12 +13,36 @@
       "max_points": "25"
     },
     {
+      "due_date": "10/22/2026",
+      "assignment_name": "Unit 2 Notes",
+      "class_name": "CHEMISTRY          2",
+      "teacher": "Paula Irwin",
+      "category": "Other",
+      "max_points": "20"
+    },
+    {
+      "due_date": "10/21/2026",
+      "assignment_name": "1MP Review WS/Study Guide",
+      "class_name": "CHEMISTRY          2",
+      "teacher": "Paula Irwin",
+      "category": "Homework",
+      "max_points": "30"
+    },
+    {
       "due_date": "10/21/2026",
       "assignment_name": "Marine Ecosystems Matching",
       "class_name": "ENVIRON SCIENCE    1",
       "teacher": "Megan Kutruff",
       "category": "Class Work",
       "max_points": "15"
+    },
+    {
+      "due_date": "10/19/2026",
+      "assignment_name": "Dimensional Analysis WS",
+      "class_name": "CHEMISTRY          2",
+      "teacher": "Paula Irwin",
+      "category": "Class Work",
+      "max_points": "10"
     },
     {
       "due_date": "10/16/2026",
@@ -102,18 +126,18 @@
     },
     {
       "due_date": "10/01/2026",
-      "assignment_name": "Scientific Method Review WS",
-      "class_name": "CHEMISTRY          2",
-      "teacher": "Paula Irwin",
-      "category": "Class Work",
-      "max_points": "20"
-    },
-    {
-      "due_date": "10/01/2026",
       "assignment_name": "Unit 1 Notes",
       "class_name": "CHEMISTRY          2",
       "teacher": "Paula Irwin",
       "category": "Other",
+      "max_points": "20"
+    },
+    {
+      "due_date": "10/01/2026",
+      "assignment_name": "Scientific Method Review WS",
+      "class_name": "CHEMISTRY          2",
+      "teacher": "Paula Irwin",
+      "category": "Class Work",
       "max_points": "20"
     },
     {
@@ -198,19 +222,19 @@
     },
     {
       "due_date": "09/04/2026",
-      "assignment_name": "Lab Safety Contract",
-      "class_name": "ENVIRON SCIENCE    1",
-      "teacher": "Megan Kutruff",
-      "category": "Other",
-      "max_points": "5"
-    },
-    {
-      "due_date": "09/04/2026",
       "assignment_name": "Lab Safety Poster",
       "class_name": "ENVIRON SCIENCE    1",
       "teacher": "Megan Kutruff",
       "category": "Project",
       "max_points": "30"
+    },
+    {
+      "due_date": "09/04/2026",
+      "assignment_name": "Lab Safety Contract",
+      "class_name": "ENVIRON SCIENCE    1",
+      "teacher": "Megan Kutruff",
+      "category": "Other",
+      "max_points": "5"
     },
     {
       "due_date": "09/03/2026",

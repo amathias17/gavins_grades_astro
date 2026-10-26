@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "10/25/2026, 11:41 PM",
+    "last_updated": "10/26/2026, 01:10 PM",
     "most_recent_date": "10/26/2026",
     "total_classes": 13
   },
@@ -92,7 +92,7 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 31,
+      "current_grade": 30,
       "letter_grade": "F"
     },
     {
@@ -107,7 +107,7 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 62,
+      "current_grade": 67,
       "letter_grade": "D"
     },
     {
@@ -122,7 +122,7 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 69,
+      "current_grade": 63,
       "letter_grade": "D"
     },
     {
@@ -2258,7 +2258,7 @@
       "10/23/2026": 31,
       "10/24/2026": 31,
       "10/25/2026": 31,
-      "10/26/2026": 31
+      "10/26/2026": 30
     },
     "Intrmediate Alg Ii": {
       "8/25/2026": null,
@@ -2317,7 +2317,7 @@
       "10/23/2026": 62,
       "10/24/2026": 62,
       "10/25/2026": 62,
-      "10/26/2026": 62
+      "10/26/2026": 67
     },
     "Anatomy & Physiol": {
       "8/25/2026": null,
@@ -2376,7 +2376,7 @@
       "10/23/2026": 80,
       "10/24/2026": 80,
       "10/25/2026": 69,
-      "10/26/2026": 69
+      "10/26/2026": 63
     },
     "Science Of Science Fiction": {
       "8/25/2026": null,

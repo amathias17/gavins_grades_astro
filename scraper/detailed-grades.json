@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-26T03:41:09.935Z",
+    "scrapedAt": "2026-10-26T17:10:42.303Z",
     "totalClasses": 13,
-    "totalAssignments": 189
+    "totalAssignments": 194
   },
   "classes": [
     {
@@ -107,14 +107,6 @@
       "period": "1",
       "currentGrade": 49,
       "assignments": [
-        {
-          "name": "Marine Ecosystems Matching",
-          "dueDate": "10/21/2026",
-          "earnedPoints": 0,
-          "totalPoints": 15,
-          "weight": 1,
-          "graded": true
-        },
         {
           "name": "MP1 Participation",
           "dueDate": "10/27/2026",
@@ -417,8 +409,40 @@
       "className": "CHEMISTRY          2",
       "teacher": "Paula Irwin",
       "period": "3",
-      "currentGrade": 31,
+      "currentGrade": 30,
       "assignments": [
+        {
+          "name": "Unit 2 Notes",
+          "dueDate": "10/22/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "States of Matter WS",
+          "dueDate": "10/28/2026",
+          "earnedPoints": 0,
+          "totalPoints": 12,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Unit 2 Notes",
+          "dueDate": "10/22/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Metric Measurement & Density",
+          "dueDate": "10/22/2026",
+          "earnedPoints": 0,
+          "totalPoints": 40,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "1MP Review WS/Study Guide",
           "dueDate": "10/21/2026",
@@ -426,6 +450,14 @@
           "totalPoints": 30,
           "weight": 1,
           "graded": false
+        },
+        {
+          "name": "1MP Quarterly Assessment Exam",
+          "dueDate": "10/21/2026",
+          "earnedPoints": 36,
+          "totalPoints": 80,
+          "weight": 1,
+          "graded": true
         },
         {
           "name": "Dimensional Analysis WS",
@@ -705,7 +737,7 @@
       "className": "INTRMEDIATE ALG II",
       "teacher": "Jodi Lambertus",
       "period": "4",
-      "currentGrade": 62,
+      "currentGrade": 67,
       "assignments": [
         {
           "name": "Benchmark Review",
@@ -759,7 +791,7 @@
           "name": "Compound Inequality Math Lib",
           "dueDate": "10/07/2026",
           "earnedPoints": 0,
-          "totalPoints": 10,
+          "totalPoints": 0,
           "weight": 1,
           "graded": true
         },
@@ -823,7 +855,7 @@
           "name": "Real Numbers Math Lib Activity",
           "dueDate": "09/09/2026",
           "earnedPoints": 5,
-          "totalPoints": 10,
+          "totalPoints": 0,
           "weight": 1,
           "graded": true
         },
@@ -849,7 +881,7 @@
       "className": "ANATOMY & PHYSIOL",
       "teacher": "Denise Condo",
       "period": "5",
-      "currentGrade": 69,
+      "currentGrade": 63,
       "assignments": [
         {
           "name": "Cancer Presentation",
@@ -882,6 +914,14 @@
           "totalPoints": 45,
           "weight": 1,
           "graded": false
+        },
+        {
+          "name": "10/21Cancer Research",
+          "dueDate": "10/22/2026",
+          "earnedPoints": 0,
+          "totalPoints": 25,
+          "weight": 1,
+          "graded": true
         },
         {
           "name": "Exits Slip",
