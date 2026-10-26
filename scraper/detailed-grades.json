@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-25T03:30:49.487Z",
+    "scrapedAt": "2026-10-26T03:41:09.935Z",
     "totalClasses": 13,
-    "totalAssignments": 188
+    "totalAssignments": 189
   },
   "classes": [
     {
@@ -1121,8 +1121,16 @@
       "className": "ASTRONOMY",
       "teacher": "James Krug",
       "period": "6",
-      "currentGrade": 93,
+      "currentGrade": 89,
       "assignments": [
+        {
+          "name": "Assign #6: Global Warming vs.",
+          "dueDate": "10/26/2026",
+          "earnedPoints": 0,
+          "totalPoints": 28,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "\"Habitat Earth\" Sky Show",
           "dueDate": "10/20/2026",
