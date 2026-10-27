@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "10/27/2026, 12:28 PM",
+    "last_updated": "10/27/2026, 06:56 PM",
     "most_recent_date": "10/27/2026",
     "total_classes": 13
   },
@@ -122,8 +122,8 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 62,
-      "letter_grade": "D"
+      "current_grade": 71,
+      "letter_grade": "C"
     },
     {
       "class_name": "Science Of Science Fiction",
@@ -182,7 +182,7 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 87,
+      "current_grade": 89,
       "letter_grade": "B"
     },
     {
@@ -2384,7 +2384,7 @@
       "10/24/2026": 80,
       "10/25/2026": 69,
       "10/26/2026": 62,
-      "10/27/2026": 62
+      "10/27/2026": 71
     },
     "Science Of Science Fiction": {
       "8/25/2026": null,
@@ -2624,7 +2624,7 @@
       "10/24/2026": 88,
       "10/25/2026": 88,
       "10/26/2026": 88,
-      "10/27/2026": 87
+      "10/27/2026": 89
     },
     "English 11": {
       "8/25/2026": null,
@@ -2687,7 +2687,7 @@
       "10/27/2026": 94
     }
   },
-  "overall_average": 71,
+  "overall_average": 72,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -3018,7 +3018,7 @@
     "10/24/2026": 74,
     "10/25/2026": 73,
     "10/26/2026": 72,
-    "10/27/2026": 71
+    "10/27/2026": 72
   },
   "streak": 0,
   "streak_history": {

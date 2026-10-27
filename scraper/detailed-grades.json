@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-27T16:28:22.293Z",
+    "scrapedAt": "2026-10-27T22:56:20.498Z",
     "totalClasses": 13,
     "totalAssignments": 200
   },
@@ -526,9 +526,9 @@
         {
           "name": "Measurement Practice WS",
           "dueDate": "10/05/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
-          "weight": 1,
+          "earnedPoints": 10,
+          "totalPoints": 27,
+          "weight": null,
           "graded": true
         },
         {
@@ -905,7 +905,7 @@
       "className": "ANATOMY & PHYSIOL",
       "teacher": "Denise Condo",
       "period": "5",
-      "currentGrade": 62,
+      "currentGrade": 71,
       "assignments": [
         {
           "name": "MP participation",
@@ -914,6 +914,14 @@
           "totalPoints": 45,
           "weight": 1,
           "graded": false
+        },
+        {
+          "name": "Tissue Types Nearpod",
+          "dueDate": "10/27/2026",
+          "earnedPoints": 15,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": true
         },
         {
           "name": "Presentation Notes Day #22",
@@ -946,14 +954,6 @@
           "totalPoints": 25,
           "weight": 1,
           "graded": false
-        },
-        {
-          "name": "10/21Cancer Research",
-          "dueDate": "10/22/2026",
-          "earnedPoints": 0,
-          "totalPoints": 25,
-          "weight": 1,
-          "graded": true
         },
         {
           "name": "Exits Slip",
@@ -1401,7 +1401,7 @@
       "className": "WORLD STUDIES",
       "teacher": "Donald Dull Jr",
       "period": "7",
-      "currentGrade": 87,
+      "currentGrade": 89,
       "assignments": [
         {
           "name": "Ch 18-1 Africa's Resource Curse",

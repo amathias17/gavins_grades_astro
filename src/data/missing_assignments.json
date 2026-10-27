@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "10/27/2026, 12:28 PM",
-    "count": 34
+    "last_updated": "10/27/2026, 06:56 PM",
+    "count": 33
   },
   "missing_assignments": [
     {
@@ -19,14 +19,6 @@
       "teacher": "Megan Kutruff",
       "category": "Class Work",
       "max_points": "15"
-    },
-    {
-      "due_date": "10/23/2026",
-      "assignment_name": "Cancer Presentation",
-      "class_name": "ANATOMY & PHYSIOL",
-      "teacher": "Denise Condo",
-      "category": "Project",
-      "max_points": "25"
     },
     {
       "due_date": "10/22/2026",
@@ -142,18 +134,18 @@
     },
     {
       "due_date": "10/01/2026",
-      "assignment_name": "Unit 1 Notes",
-      "class_name": "CHEMISTRY          2",
-      "teacher": "Paula Irwin",
-      "category": "Other",
-      "max_points": "20"
-    },
-    {
-      "due_date": "10/01/2026",
       "assignment_name": "Scientific Method Review WS",
       "class_name": "CHEMISTRY          2",
       "teacher": "Paula Irwin",
       "category": "Class Work",
+      "max_points": "20"
+    },
+    {
+      "due_date": "10/01/2026",
+      "assignment_name": "Unit 1 Notes",
+      "class_name": "CHEMISTRY          2",
+      "teacher": "Paula Irwin",
+      "category": "Other",
       "max_points": "20"
     },
     {
