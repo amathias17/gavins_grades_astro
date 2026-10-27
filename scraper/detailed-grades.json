@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-26T23:16:02.059Z",
+    "scrapedAt": "2026-10-27T16:28:22.293Z",
     "totalClasses": 13,
-    "totalAssignments": 197
+    "totalAssignments": 200
   },
   "classes": [
     {
@@ -105,8 +105,24 @@
       "className": "ENVIRON SCIENCE    1",
       "teacher": "Megan Kutruff",
       "period": "1",
-      "currentGrade": 49,
+      "currentGrade": 46,
       "assignments": [
+        {
+          "name": "Ocean Acidification Lab",
+          "dueDate": "10/27/2026",
+          "earnedPoints": 0,
+          "totalPoints": 25,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Coral Bleaching Case Study",
+          "dueDate": "10/27/2026",
+          "earnedPoints": 0,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "MP1 Participation",
           "dueDate": "10/27/2026",
@@ -122,6 +138,22 @@
           "totalPoints": 0,
           "weight": 1,
           "graded": false
+        },
+        {
+          "name": "Coral Bleaching Case Study",
+          "dueDate": "10/27/2026",
+          "earnedPoints": 0,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Ocean Acidification Lab",
+          "dueDate": "10/27/2026",
+          "earnedPoints": 0,
+          "totalPoints": 25,
+          "weight": 1,
+          "graded": true
         },
         {
           "name": "Marine Ecosystems Matching",
@@ -411,14 +443,6 @@
       "period": "3",
       "currentGrade": 30,
       "assignments": [
-        {
-          "name": "Unit 2 Notes",
-          "dueDate": "10/22/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
-          "weight": 1,
-          "graded": true
-        },
         {
           "name": "States of Matter WS",
           "dueDate": "10/28/2026",
@@ -883,14 +907,6 @@
       "period": "5",
       "currentGrade": 62,
       "assignments": [
-        {
-          "name": "Cancer Presentation",
-          "dueDate": "10/23/2026",
-          "earnedPoints": 0,
-          "totalPoints": 25,
-          "weight": 1,
-          "graded": false
-        },
         {
           "name": "MP participation",
           "dueDate": "10/27/2026",
@@ -1385,8 +1401,16 @@
       "className": "WORLD STUDIES",
       "teacher": "Donald Dull Jr",
       "period": "7",
-      "currentGrade": 88,
+      "currentGrade": 87,
       "assignments": [
+        {
+          "name": "Ch 18-1 Africa's Resource Curse",
+          "dueDate": "10/27/2026",
+          "earnedPoints": 7,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "ch 18-1 gret rift valley",
           "dueDate": "10/23/2026",
