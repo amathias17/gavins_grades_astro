@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-28T03:44:06.871Z",
+    "scrapedAt": "2026-10-28T17:03:14.594Z",
     "totalClasses": 13,
     "totalAssignments": 200
   },
@@ -441,7 +441,7 @@
       "className": "CHEMISTRY          2",
       "teacher": "Paula Irwin",
       "period": "3",
-      "currentGrade": 30,
+      "currentGrade": 50,
       "assignments": [
         {
           "name": "States of Matter WS",
@@ -1078,9 +1078,9 @@
         {
           "name": "Scientific Method Study guide",
           "dueDate": "10/01/2026",
-          "earnedPoints": 10,
-          "totalPoints": 27,
-          "weight": null,
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
           "graded": true
         },
         {

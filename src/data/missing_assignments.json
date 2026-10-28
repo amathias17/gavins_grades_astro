@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "10/27/2026, 11:44 PM",
-    "count": 33
+    "last_updated": "10/28/2026, 01:03 PM",
+    "count": 34
   },
   "missing_assignments": [
     {
@@ -19,6 +19,14 @@
       "teacher": "Megan Kutruff",
       "category": "Class Work",
       "max_points": "15"
+    },
+    {
+      "due_date": "10/22/2026",
+      "assignment_name": "Metric Measurement & Density",
+      "class_name": "CHEMISTRY          2",
+      "teacher": "Paula Irwin",
+      "category": "Lab",
+      "max_points": "40"
     },
     {
       "due_date": "10/22/2026",
@@ -134,18 +142,18 @@
     },
     {
       "due_date": "10/01/2026",
-      "assignment_name": "Scientific Method Review WS",
-      "class_name": "CHEMISTRY          2",
-      "teacher": "Paula Irwin",
-      "category": "Class Work",
-      "max_points": "20"
-    },
-    {
-      "due_date": "10/01/2026",
       "assignment_name": "Unit 1 Notes",
       "class_name": "CHEMISTRY          2",
       "teacher": "Paula Irwin",
       "category": "Other",
+      "max_points": "20"
+    },
+    {
+      "due_date": "10/01/2026",
+      "assignment_name": "Scientific Method Review WS",
+      "class_name": "CHEMISTRY          2",
+      "teacher": "Paula Irwin",
+      "category": "Class Work",
       "max_points": "20"
     },
     {
