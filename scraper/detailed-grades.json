@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-28T17:03:14.594Z",
+    "scrapedAt": "2026-10-28T23:06:14.503Z",
     "totalClasses": 13,
-    "totalAssignments": 200
+    "totalAssignments": 205
   },
   "classes": [
     {
@@ -105,7 +105,7 @@
       "className": "ENVIRON SCIENCE    1",
       "teacher": "Megan Kutruff",
       "period": "1",
-      "currentGrade": 46,
+      "currentGrade": 50,
       "assignments": [
         {
           "name": "Ocean Acidification Lab",
@@ -905,7 +905,7 @@
       "className": "ANATOMY & PHYSIOL",
       "teacher": "Denise Condo",
       "period": "5",
-      "currentGrade": 71,
+      "currentGrade": 73,
       "assignments": [
         {
           "name": "MP participation",
@@ -1140,12 +1140,44 @@
           "graded": true
         },
         {
-          "name": "Organization C.M and notes",
-          "dueDate": "09/09/2026",
-          "earnedPoints": 0,
+          "name": "Human Torso Model",
+          "dueDate": "09/15/2026",
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Direstionality/Body Cavaties",
+          "dueDate": "09/14/2026",
+          "earnedPoints": 5,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Safety Dissection",
+          "dueDate": "09/11/2026",
+          "earnedPoints": 15,
           "totalPoints": 15,
           "weight": 1,
-          "graded": false
+          "graded": true
+        },
+        {
+          "name": "Ch1 Intro - Body systems",
+          "dueDate": "09/11/2026",
+          "earnedPoints": 10,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Organization C.M and notes",
+          "dueDate": "09/09/2026",
+          "earnedPoints": 15,
+          "totalPoints": 15,
+          "weight": 1,
+          "graded": true
         },
         {
           "name": "Human Machine",
@@ -1403,6 +1435,14 @@
       "period": "7",
       "currentGrade": 89,
       "assignments": [
+        {
+          "name": "Ch 18-2 Climate and Vegetation",
+          "dueDate": "10/28/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Ch 18-1 Africa's Resource Curse",
           "dueDate": "10/27/2026",
