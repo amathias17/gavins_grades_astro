@@ -986,9 +986,9 @@
     "assignmentName": "Measurement Practice WS",
     "dateDue": "10/05/2026",
     "dueDate": "10/05/2026",
-    "earnedPoints": 10,
-    "totalPoints": 27,
-    "weight": null,
+    "earnedPoints": 0,
+    "totalPoints": 20,
+    "weight": 1,
     "graded": true
   },
   {
@@ -2058,9 +2058,9 @@
     "assignmentName": "Scientific Method Study guide",
     "dateDue": "10/01/2026",
     "dueDate": "10/01/2026",
-    "earnedPoints": 0,
-    "totalPoints": 10,
-    "weight": 1,
+    "earnedPoints": 10,
+    "totalPoints": 27,
+    "weight": null,
     "graded": true
   },
   {
