@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "10/29/2026, 01:21 PM",
+    "last_updated": "10/29/2026, 07:14 PM",
     "most_recent_date": "10/29/2026",
     "total_classes": 13
   },
@@ -197,8 +197,8 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 70,
-      "letter_grade": "C"
+      "current_grade": 65,
+      "letter_grade": "D"
     }
   ],
   "grade_history": {
@@ -2710,7 +2710,7 @@
       "10/26/2026": 94,
       "10/27/2026": 94,
       "10/28/2026": 94,
-      "10/29/2026": 70
+      "10/29/2026": 65
     }
   },
   "overall_average": 72,

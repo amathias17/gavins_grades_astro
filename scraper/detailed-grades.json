@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-29T17:21:11.193Z",
+    "scrapedAt": "2026-10-29T23:14:05.785Z",
     "totalClasses": 13,
-    "totalAssignments": 213
+    "totalAssignments": 214
   },
   "classes": [
     {
@@ -446,9 +446,9 @@
         {
           "name": "Week1",
           "dueDate": "09/04/2026",
-          "earnedPoints": 10,
-          "totalPoints": 28,
-          "weight": null,
+          "earnedPoints": 35,
+          "totalPoints": 50,
+          "weight": 1,
           "graded": true
         }
       ]
@@ -1292,6 +1292,14 @@
       "currentGrade": 85,
       "assignments": [
         {
+          "name": "\"Oasis in Space\" Sky Show",
+          "dueDate": "10/29/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": false
+        },
+        {
           "name": "Assign #6: Global Warming vs.",
           "dueDate": "10/26/2026",
           "earnedPoints": 0,
@@ -1673,7 +1681,7 @@
       "className": "ENGLISH 11",
       "teacher": "Audrey Cromell",
       "period": "8",
-      "currentGrade": 70,
+      "currentGrade": 65,
       "assignments": [
         {
           "name": "Story Revision Checklist",

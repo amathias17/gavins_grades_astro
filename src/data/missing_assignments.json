@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "10/29/2026, 01:21 PM",
-    "count": 39
+    "last_updated": "10/29/2026, 07:14 PM",
+    "count": 40
   },
   "missing_assignments": [
     {
@@ -83,6 +83,14 @@
       "teacher": "Paula Irwin",
       "category": "Homework",
       "max_points": "30"
+    },
+    {
+      "due_date": "10/21/2026",
+      "assignment_name": "Short Story Graphic Organizer",
+      "class_name": "ENGLISH 11",
+      "teacher": "Audrey Cromell",
+      "category": "Class Work",
+      "max_points": "10"
     },
     {
       "due_date": "10/21/2026",
