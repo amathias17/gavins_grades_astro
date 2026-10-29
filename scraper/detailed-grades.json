@@ -1,16 +1,40 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-29T04:05:08.207Z",
+    "scrapedAt": "2026-10-29T17:21:11.193Z",
     "totalClasses": 13,
-    "totalAssignments": 207
+    "totalAssignments": 213
   },
   "classes": [
     {
       "className": "JUNIOR SEMINAR",
       "teacher": "Sydnee Rockey",
       "period": "0",
-      "currentGrade": 82,
+      "currentGrade": 0,
       "assignments": [
+        {
+          "name": "Leader In Me pg 18",
+          "dueDate": "10/29/2026",
+          "earnedPoints": 100,
+          "totalPoints": 100,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Leader in Me pg 19",
+          "dueDate": "10/29/2026",
+          "earnedPoints": 100,
+          "totalPoints": 100,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Leader in Me pg 20-29",
+          "dueDate": "10/29/2026",
+          "earnedPoints": 100,
+          "totalPoints": 100,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Leader In Me Lesson 1.1",
           "dueDate": "09/28/2026",
@@ -107,22 +131,6 @@
       "period": "1",
       "currentGrade": 50,
       "assignments": [
-        {
-          "name": "Ocean Acidification Lab",
-          "dueDate": "10/27/2026",
-          "earnedPoints": 0,
-          "totalPoints": 25,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Coral Bleaching Case Study",
-          "dueDate": "10/27/2026",
-          "earnedPoints": 0,
-          "totalPoints": 15,
-          "weight": 1,
-          "graded": true
-        },
         {
           "name": "MP1 Participation",
           "dueDate": "10/27/2026",
@@ -369,8 +377,16 @@
       "className": "PHYSICAL EDUC",
       "teacher": "Paul Picciotti",
       "period": "2",
-      "currentGrade": 88,
+      "currentGrade": 90,
       "assignments": [
+        {
+          "name": "Week 9",
+          "dueDate": "10/29/2026",
+          "earnedPoints": 50,
+          "totalPoints": 50,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Week 8",
           "dueDate": "10/23/2026",
@@ -430,9 +446,9 @@
         {
           "name": "Week1",
           "dueDate": "09/04/2026",
-          "earnedPoints": 35,
-          "totalPoints": 50,
-          "weight": 1,
+          "earnedPoints": 10,
+          "totalPoints": 28,
+          "weight": null,
           "graded": true
         }
       ]
@@ -444,12 +460,44 @@
       "currentGrade": 50,
       "assignments": [
         {
+          "name": "Phys&ChemProp&ChangesWS",
+          "dueDate": "10/28/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "States of Matter WS",
+          "dueDate": "10/28/2026",
+          "earnedPoints": 0,
+          "totalPoints": 12,
+          "weight": 1,
+          "graded": true
+        },
+        {
           "name": "States of Matter WS",
           "dueDate": "10/28/2026",
           "earnedPoints": 0,
           "totalPoints": 12,
           "weight": 1,
           "graded": false
+        },
+        {
+          "name": "Phys&ChemProp&ChangesWS",
+          "dueDate": "10/28/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Classifying Matter",
+          "dueDate": "10/26/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
         },
         {
           "name": "Unit 2 Notes",
@@ -925,11 +973,11 @@
       "assignments": [
         {
           "name": "MP participation",
-          "dueDate": "10/27/2026",
-          "earnedPoints": 0,
+          "dueDate": "10/29/2026",
+          "earnedPoints": 42,
           "totalPoints": 45,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Tissue Types Nearpod",
@@ -1625,7 +1673,7 @@
       "className": "ENGLISH 11",
       "teacher": "Audrey Cromell",
       "period": "8",
-      "currentGrade": 94,
+      "currentGrade": 70,
       "assignments": [
         {
           "name": "Story Revision Checklist",

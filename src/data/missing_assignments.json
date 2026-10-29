@@ -1,9 +1,41 @@
 {
   "metadata": {
-    "last_updated": "10/29/2026, 12:05 AM",
-    "count": 34
+    "last_updated": "10/29/2026, 01:21 PM",
+    "count": 39
   },
   "missing_assignments": [
+    {
+      "due_date": "10/28/2026",
+      "assignment_name": "Phys&ChemProp&ChangesWS",
+      "class_name": "CHEMISTRY          2",
+      "teacher": "Paula Irwin",
+      "category": "Class Work",
+      "max_points": "10"
+    },
+    {
+      "due_date": "10/28/2026",
+      "assignment_name": "States of Matter WS",
+      "class_name": "CHEMISTRY          2",
+      "teacher": "Paula Irwin",
+      "category": "Class Work",
+      "max_points": "12"
+    },
+    {
+      "due_date": "10/28/2026",
+      "assignment_name": "Story Revision Checklist",
+      "class_name": "ENGLISH 11",
+      "teacher": "Audrey Cromell",
+      "category": "Writing",
+      "max_points": "10"
+    },
+    {
+      "due_date": "10/27/2026",
+      "assignment_name": "Short Story",
+      "class_name": "ENGLISH 11",
+      "teacher": "Audrey Cromell",
+      "category": "Writing",
+      "max_points": "25"
+    },
     {
       "due_date": "10/27/2026",
       "assignment_name": "Ocean Acidification Lab",
@@ -19,6 +51,14 @@
       "teacher": "Megan Kutruff",
       "category": "Class Work",
       "max_points": "15"
+    },
+    {
+      "due_date": "10/26/2026",
+      "assignment_name": "Classifying Matter",
+      "class_name": "CHEMISTRY          2",
+      "teacher": "Paula Irwin",
+      "category": "Lab",
+      "max_points": "10"
     },
     {
       "due_date": "10/22/2026",
@@ -142,18 +182,18 @@
     },
     {
       "due_date": "10/01/2026",
-      "assignment_name": "Unit 1 Notes",
-      "class_name": "CHEMISTRY          2",
-      "teacher": "Paula Irwin",
-      "category": "Other",
-      "max_points": "20"
-    },
-    {
-      "due_date": "10/01/2026",
       "assignment_name": "Scientific Method Review WS",
       "class_name": "CHEMISTRY          2",
       "teacher": "Paula Irwin",
       "category": "Class Work",
+      "max_points": "20"
+    },
+    {
+      "due_date": "10/01/2026",
+      "assignment_name": "Unit 1 Notes",
+      "class_name": "CHEMISTRY          2",
+      "teacher": "Paula Irwin",
+      "category": "Other",
       "max_points": "20"
     },
     {
@@ -222,14 +262,6 @@
     },
     {
       "due_date": "09/08/2026",
-      "assignment_name": "Safety Drawing/Poster",
-      "class_name": "CHEMISTRY          2",
-      "teacher": "Paula Irwin",
-      "category": "Class Work",
-      "max_points": "25"
-    },
-    {
-      "due_date": "09/08/2026",
       "assignment_name": "Safety Equipment Map WS",
       "class_name": "CHEMISTRY          2",
       "teacher": "Paula Irwin",
@@ -237,12 +269,12 @@
       "max_points": "20"
     },
     {
-      "due_date": "09/04/2026",
-      "assignment_name": "Lab Safety Contract",
-      "class_name": "ENVIRON SCIENCE    1",
-      "teacher": "Megan Kutruff",
-      "category": "Other",
-      "max_points": "5"
+      "due_date": "09/08/2026",
+      "assignment_name": "Safety Drawing/Poster",
+      "class_name": "CHEMISTRY          2",
+      "teacher": "Paula Irwin",
+      "category": "Class Work",
+      "max_points": "25"
     },
     {
       "due_date": "09/04/2026",
@@ -251,6 +283,14 @@
       "teacher": "Megan Kutruff",
       "category": "Project",
       "max_points": "30"
+    },
+    {
+      "due_date": "09/04/2026",
+      "assignment_name": "Lab Safety Contract",
+      "class_name": "ENVIRON SCIENCE    1",
+      "teacher": "Megan Kutruff",
+      "category": "Other",
+      "max_points": "5"
     },
     {
       "due_date": "09/03/2026",

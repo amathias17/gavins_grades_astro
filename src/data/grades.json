@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "10/29/2026, 12:05 AM",
+    "last_updated": "10/29/2026, 01:21 PM",
     "most_recent_date": "10/29/2026",
     "total_classes": 13
   },
@@ -17,8 +17,8 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 82,
-      "letter_grade": "B"
+      "current_grade": 0,
+      "letter_grade": "F"
     },
     {
       "class_name": "Environ Science 1",
@@ -62,8 +62,8 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 88,
-      "letter_grade": "B"
+      "current_grade": 90,
+      "letter_grade": "A"
     },
     {
       "class_name": "Coding W/ Python",
@@ -197,8 +197,8 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 94,
-      "letter_grade": "A"
+      "current_grade": 70,
+      "letter_grade": "C"
     }
   ],
   "grade_history": {
@@ -1012,7 +1012,7 @@
       "10/26/2026": 88,
       "10/27/2026": 88,
       "10/28/2026": 88,
-      "10/29/2026": 88
+      "10/29/2026": 90
     },
     "Amer Studies": {
       "11/24/2025": 100,
@@ -2028,7 +2028,7 @@
       "10/26/2026": 82,
       "10/27/2026": 82,
       "10/28/2026": 82,
-      "10/29/2026": 82
+      "10/29/2026": 0
     },
     "Environ Science 1": {
       "8/25/2026": null,
@@ -2710,10 +2710,10 @@
       "10/26/2026": 94,
       "10/27/2026": 94,
       "10/28/2026": 94,
-      "10/29/2026": 94
+      "10/29/2026": 70
     }
   },
-  "overall_average": 76,
+  "overall_average": 72,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -3046,7 +3046,7 @@
     "10/26/2026": 72,
     "10/27/2026": 72,
     "10/28/2026": 75,
-    "10/29/2026": 76
+    "10/29/2026": 72
   },
   "streak": 0,
   "streak_history": {
