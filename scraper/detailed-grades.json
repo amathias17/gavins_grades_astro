@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-29T23:14:05.785Z",
+    "scrapedAt": "2026-10-30T16:58:57.652Z",
     "totalClasses": 13,
     "totalAssignments": 214
   },
@@ -1004,20 +1004,20 @@
           "graded": true
         },
         {
-          "name": "Cancer presentation notes",
-          "dueDate": "10/23/2026",
-          "earnedPoints": 2,
-          "totalPoints": 5,
-          "weight": 1,
-          "graded": true
-        },
-        {
           "name": "Cancer Presentation",
           "dueDate": "10/23/2026",
           "earnedPoints": 0,
           "totalPoints": 25,
           "weight": 1,
           "graded": false
+        },
+        {
+          "name": "Cancer presentation notes",
+          "dueDate": "10/23/2026",
+          "earnedPoints": 2,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": true
         },
         {
           "name": "Exits Slip",
@@ -1289,7 +1289,7 @@
       "className": "ASTRONOMY",
       "teacher": "James Krug",
       "period": "6",
-      "currentGrade": 85,
+      "currentGrade": 82,
       "assignments": [
         {
           "name": "\"Oasis in Space\" Sky Show",

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "10/30/2026, 12:06 AM",
+    "last_updated": "10/30/2026, 12:58 PM",
     "most_recent_date": "10/30/2026",
     "total_classes": 13
   },
@@ -152,7 +152,7 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 85,
+      "current_grade": 82,
       "letter_grade": "B"
     },
     {
@@ -2534,7 +2534,7 @@
       "10/27/2026": 85,
       "10/28/2026": 85,
       "10/29/2026": 85,
-      "10/30/2026": 85
+      "10/30/2026": 82
     },
     "Mod Film & Culture": {
       "8/25/2026": null,
@@ -2726,7 +2726,7 @@
       "10/30/2026": 65
     }
   },
-  "overall_average": 72,
+  "overall_average": 71,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -3060,7 +3060,7 @@
     "10/27/2026": 72,
     "10/28/2026": 75,
     "10/29/2026": 72,
-    "10/30/2026": 72
+    "10/30/2026": 71
   },
   "streak": 0,
   "streak_history": {
