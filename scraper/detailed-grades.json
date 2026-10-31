@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-30T22:56:02.431Z",
+    "scrapedAt": "2026-10-31T03:50:08.351Z",
     "totalClasses": 13,
     "totalAssignments": 214
   },
@@ -878,9 +878,9 @@
         {
           "name": "Compound Inequality Math Lib",
           "dueDate": "10/07/2026",
-          "earnedPoints": 0,
-          "totalPoints": 0,
-          "weight": 1,
+          "earnedPoints": 10,
+          "totalPoints": 28,
+          "weight": null,
           "graded": true
         },
         {

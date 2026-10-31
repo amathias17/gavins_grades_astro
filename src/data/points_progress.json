@@ -4,6 +4,10 @@
     "1": {
       "maxPersistentPoints": 3297,
       "updatedAt": "2026-10-29T23:14:05.803Z"
+    },
+    "2": {
+      "maxPersistentPoints": 0,
+      "updatedAt": "2026-10-31T03:50:08.372Z"
     }
   }
 }
