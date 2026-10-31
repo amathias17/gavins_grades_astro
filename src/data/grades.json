@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "10/30/2026, 11:50 PM",
+    "last_updated": "10/31/2026, 11:59 AM",
     "most_recent_date": "10/31/2026",
     "total_classes": 13
   },
@@ -32,7 +32,7 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 50,
+      "current_grade": 0,
       "letter_grade": "F"
     },
     {
@@ -62,8 +62,8 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 90,
-      "letter_grade": "A"
+      "current_grade": 0,
+      "letter_grade": "F"
     },
     {
       "class_name": "Coding W/ Python",
@@ -92,7 +92,7 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 50,
+      "current_grade": 0,
       "letter_grade": "F"
     },
     {
@@ -107,8 +107,8 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 67,
-      "letter_grade": "D"
+      "current_grade": 0,
+      "letter_grade": "F"
     },
     {
       "class_name": "Anatomy & Physiol",
@@ -122,8 +122,8 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 76,
-      "letter_grade": "C"
+      "current_grade": 0,
+      "letter_grade": "F"
     },
     {
       "class_name": "Science Of Science Fiction",
@@ -152,8 +152,8 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 82,
-      "letter_grade": "B"
+      "current_grade": 0,
+      "letter_grade": "F"
     },
     {
       "class_name": "Mod Film & Culture",
@@ -182,8 +182,8 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 89,
-      "letter_grade": "B"
+      "current_grade": 0,
+      "letter_grade": "F"
     },
     {
       "class_name": "English 11",
@@ -197,8 +197,8 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 65,
-      "letter_grade": "D"
+      "current_grade": 0,
+      "letter_grade": "F"
     }
   ],
   "grade_history": {
@@ -1014,7 +1014,7 @@
       "10/28/2026": 88,
       "10/29/2026": 90,
       "10/30/2026": 90,
-      "10/31/2026": 90
+      "10/31/2026": 0
     },
     "Amer Studies": {
       "11/24/2025": 100,
@@ -2096,7 +2096,7 @@
       "10/28/2026": 50,
       "10/29/2026": 50,
       "10/30/2026": 50,
-      "10/31/2026": 50
+      "10/31/2026": 0
     },
     "Heroes & Monsters": {
       "8/25/2026": null,
@@ -2288,7 +2288,7 @@
       "10/28/2026": 50,
       "10/29/2026": 50,
       "10/30/2026": 50,
-      "10/31/2026": 50
+      "10/31/2026": 0
     },
     "Intrmediate Alg Ii": {
       "8/25/2026": null,
@@ -2352,7 +2352,7 @@
       "10/28/2026": 67,
       "10/29/2026": 67,
       "10/30/2026": 67,
-      "10/31/2026": 67
+      "10/31/2026": 0
     },
     "Anatomy & Physiol": {
       "8/25/2026": null,
@@ -2416,7 +2416,7 @@
       "10/28/2026": 73,
       "10/29/2026": 76,
       "10/30/2026": 76,
-      "10/31/2026": 76
+      "10/31/2026": 0
     },
     "Science Of Science Fiction": {
       "8/25/2026": null,
@@ -2544,7 +2544,7 @@
       "10/28/2026": 85,
       "10/29/2026": 85,
       "10/30/2026": 82,
-      "10/31/2026": 82
+      "10/31/2026": 0
     },
     "Mod Film & Culture": {
       "8/25/2026": null,
@@ -2672,7 +2672,7 @@
       "10/28/2026": 89,
       "10/29/2026": 89,
       "10/30/2026": 89,
-      "10/31/2026": 89
+      "10/31/2026": 0
     },
     "English 11": {
       "8/25/2026": null,
@@ -2736,10 +2736,10 @@
       "10/28/2026": 94,
       "10/29/2026": 65,
       "10/30/2026": 65,
-      "10/31/2026": 65
+      "10/31/2026": 0
     }
   },
-  "overall_average": 71,
+  "overall_average": 0,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -3074,9 +3074,9 @@
     "10/28/2026": 75,
     "10/29/2026": 72,
     "10/30/2026": 71,
-    "10/31/2026": 71
+    "10/31/2026": 0
   },
-  "streak": 0,
+  "streak": 1,
   "streak_history": {
     "11/24/2025": 0,
     "11/25/2025": 0,
@@ -3411,6 +3411,6 @@
     "10/28/2026": 0,
     "10/29/2026": 0,
     "10/30/2026": 0,
-    "10/31/2026": 0
+    "10/31/2026": 1
   }
 }

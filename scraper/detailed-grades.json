@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-10-31T03:50:08.351Z",
+    "scrapedAt": "2026-10-31T15:59:09.345Z",
     "totalClasses": 13,
-    "totalAssignments": 214
+    "totalAssignments": 212
   },
   "classes": [
     {
@@ -129,7 +129,7 @@
       "className": "ENVIRON SCIENCE    1",
       "teacher": "Megan Kutruff",
       "period": "1",
-      "currentGrade": 50,
+      "currentGrade": 0,
       "assignments": [
         {
           "name": "MP1 Participation",
@@ -377,7 +377,7 @@
       "className": "PHYSICAL EDUC",
       "teacher": "Paul Picciotti",
       "period": "2",
-      "currentGrade": 90,
+      "currentGrade": 0,
       "assignments": [
         {
           "name": "Week 9",
@@ -457,24 +457,8 @@
       "className": "CHEMISTRY          2",
       "teacher": "Paula Irwin",
       "period": "3",
-      "currentGrade": 50,
+      "currentGrade": 0,
       "assignments": [
-        {
-          "name": "Phys&ChemProp&ChangesWS",
-          "dueDate": "10/28/2026",
-          "earnedPoints": 0,
-          "totalPoints": 10,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "States of Matter WS",
-          "dueDate": "10/28/2026",
-          "earnedPoints": 0,
-          "totalPoints": 12,
-          "weight": 1,
-          "graded": true
-        },
         {
           "name": "States of Matter WS",
           "dueDate": "10/28/2026",
@@ -809,7 +793,7 @@
       "className": "INTRMEDIATE ALG II",
       "teacher": "Jodi Lambertus",
       "period": "4",
-      "currentGrade": 67,
+      "currentGrade": 0,
       "assignments": [
         {
           "name": "HW #1 Relations & Functions",
@@ -878,9 +862,9 @@
         {
           "name": "Compound Inequality Math Lib",
           "dueDate": "10/07/2026",
-          "earnedPoints": 10,
-          "totalPoints": 28,
-          "weight": null,
+          "earnedPoints": 0,
+          "totalPoints": 0,
+          "weight": 1,
           "graded": true
         },
         {
@@ -969,7 +953,7 @@
       "className": "ANATOMY & PHYSIOL",
       "teacher": "Denise Condo",
       "period": "5",
-      "currentGrade": 76,
+      "currentGrade": 0,
       "assignments": [
         {
           "name": "MP participation",
@@ -988,17 +972,17 @@
           "graded": true
         },
         {
-          "name": "Presentation Notes Day #22",
+          "name": "Exit Slip - Tissues",
           "dueDate": "10/26/2026",
-          "earnedPoints": 2,
+          "earnedPoints": 1,
           "totalPoints": 5,
           "weight": 1,
           "graded": true
         },
         {
-          "name": "Exit Slip - Tissues",
+          "name": "Presentation Notes Day #22",
           "dueDate": "10/26/2026",
-          "earnedPoints": 1,
+          "earnedPoints": 2,
           "totalPoints": 5,
           "weight": 1,
           "graded": true
@@ -1289,7 +1273,7 @@
       "className": "ASTRONOMY",
       "teacher": "James Krug",
       "period": "6",
-      "currentGrade": 82,
+      "currentGrade": 0,
       "assignments": [
         {
           "name": "\"Oasis in Space\" Sky Show",
@@ -1505,7 +1489,7 @@
       "className": "WORLD STUDIES",
       "teacher": "Donald Dull Jr",
       "period": "7",
-      "currentGrade": 89,
+      "currentGrade": 0,
       "assignments": [
         {
           "name": "Ch 18-2 Climate and Vegetation",
@@ -1681,7 +1665,7 @@
       "className": "ENGLISH 11",
       "teacher": "Audrey Cromell",
       "period": "8",
-      "currentGrade": 65,
+      "currentGrade": 0,
       "assignments": [
         {
           "name": "Story Revision Checklist",
