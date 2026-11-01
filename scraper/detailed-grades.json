@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-11-01T03:59:13.661Z",
+    "scrapedAt": "2026-11-01T07:16:21.671Z",
     "totalClasses": 13,
     "totalAssignments": 212
   },
@@ -574,9 +574,9 @@
         {
           "name": "Candle Lab Conclusion",
           "dueDate": "10/05/2026",
-          "earnedPoints": 10,
-          "totalPoints": 29,
-          "weight": null,
+          "earnedPoints": 0,
+          "totalPoints": 21,
+          "weight": 1,
           "graded": true
         },
         {
@@ -972,17 +972,17 @@
           "graded": true
         },
         {
-          "name": "Exit Slip - Tissues",
+          "name": "Presentation Notes Day #22",
           "dueDate": "10/26/2026",
-          "earnedPoints": 1,
+          "earnedPoints": 2,
           "totalPoints": 5,
           "weight": 1,
           "graded": true
         },
         {
-          "name": "Presentation Notes Day #22",
+          "name": "Exit Slip - Tissues",
           "dueDate": "10/26/2026",
-          "earnedPoints": 2,
+          "earnedPoints": 1,
           "totalPoints": 5,
           "weight": 1,
           "graded": true
