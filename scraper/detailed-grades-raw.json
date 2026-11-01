@@ -1841,22 +1841,6 @@
   },
   {
     "classId": "47705",
-    "assignmentId": "1681576",
-    "studentId": "1396",
-    "className": "ANATOMY & PHYSIOL",
-    "teacher": "Denise Condo",
-    "period": "5",
-    "currentGrade": 0,
-    "assignmentName": "Exit Slip - Tissues",
-    "dateDue": "10/26/2026",
-    "dueDate": "10/26/2026",
-    "earnedPoints": 1,
-    "totalPoints": 5,
-    "weight": 1,
-    "graded": true
-  },
-  {
-    "classId": "47705",
     "assignmentId": "1681575",
     "studentId": "1396",
     "className": "ANATOMY & PHYSIOL",
@@ -1867,6 +1851,22 @@
     "dateDue": "10/26/2026",
     "dueDate": "10/26/2026",
     "earnedPoints": 2,
+    "totalPoints": 5,
+    "weight": 1,
+    "graded": true
+  },
+  {
+    "classId": "47705",
+    "assignmentId": "1681576",
+    "studentId": "1396",
+    "className": "ANATOMY & PHYSIOL",
+    "teacher": "Denise Condo",
+    "period": "5",
+    "currentGrade": 0,
+    "assignmentName": "Exit Slip - Tissues",
+    "dateDue": "10/26/2026",
+    "dueDate": "10/26/2026",
+    "earnedPoints": 1,
     "totalPoints": 5,
     "weight": 1,
     "graded": true
@@ -2429,6 +2429,22 @@
     "earnedPoints": 11,
     "totalPoints": 10,
     "weight": 1,
+    "graded": true
+  },
+  {
+    "classId": "47487",
+    "assignmentId": "1685829",
+    "studentId": "1396",
+    "className": "ASTRONOMY",
+    "teacher": "James Krug",
+    "period": "6",
+    "currentGrade": 0,
+    "assignmentName": "INDIV. EXAM 2: The Future...",
+    "dateDue": "11/04/2026",
+    "dueDate": "11/04/2026",
+    "earnedPoints": 10,
+    "totalPoints": 29,
+    "weight": null,
     "graded": true
   },
   {
