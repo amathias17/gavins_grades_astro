@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-11-01T23:18:29.730Z",
+    "scrapedAt": "2026-11-02T07:31:33.721Z",
     "totalClasses": 13,
     "totalAssignments": 213
   },
@@ -734,9 +734,9 @@
         {
           "name": "Lab Safety Rules Packet",
           "dueDate": "09/03/2026",
-          "earnedPoints": 15,
-          "totalPoints": 15,
-          "weight": 1,
+          "earnedPoints": 10,
+          "totalPoints": 29,
+          "weight": null,
           "graded": true
         },
         {
@@ -1273,14 +1273,14 @@
       "className": "ASTRONOMY",
       "teacher": "James Krug",
       "period": "6",
-      "currentGrade": 0,
+      "currentGrade": 83,
       "assignments": [
         {
           "name": "INDIV. EXAM 2: The Future...",
-          "dueDate": "11/04/2026",
-          "earnedPoints": 10,
-          "totalPoints": 29,
-          "weight": null,
+          "dueDate": "11/02/2026",
+          "earnedPoints": 50,
+          "totalPoints": 60,
+          "weight": 1,
           "graded": true
         },
         {
