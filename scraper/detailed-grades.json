@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-11-02T07:31:33.721Z",
+    "scrapedAt": "2026-11-02T21:32:55.873Z",
     "totalClasses": 13,
-    "totalAssignments": 213
+    "totalAssignments": 218
   },
   "classes": [
     {
@@ -734,9 +734,9 @@
         {
           "name": "Lab Safety Rules Packet",
           "dueDate": "09/03/2026",
-          "earnedPoints": 10,
-          "totalPoints": 29,
-          "weight": null,
+          "earnedPoints": 15,
+          "totalPoints": 15,
+          "weight": 1,
           "graded": true
         },
         {
@@ -1499,6 +1499,46 @@
       "period": "7",
       "currentGrade": 0,
       "assignments": [
+        {
+          "name": "Ch 18-3 Niger R. Delta Environmental Crisis",
+          "dueDate": "11/02/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Ch 18-3 Aswan High Dam",
+          "dueDate": "11/02/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Ch 18-3 Niger R. Delta Environmental Crisis",
+          "dueDate": "11/02/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Ch 18-3 Aswan High Dam",
+          "dueDate": "11/02/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Ch 18-3 Shrinking Savanna: Desertification",
+          "dueDate": "11/02/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Ch 18-2 Climate and Vegetation",
           "dueDate": "10/28/2026",
