@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-11-03T01:57:49.490Z",
+    "scrapedAt": "2026-11-03T07:46:05.938Z",
     "totalClasses": 13,
     "totalAssignments": 218
   },
@@ -1598,9 +1598,9 @@
         {
           "name": "ch 4-1 culture: language",
           "dueDate": "10/08/2026",
-          "earnedPoints": 11,
-          "totalPoints": 2,
-          "weight": null,
+          "earnedPoints": 10,
+          "totalPoints": 10,
+          "weight": 1,
           "graded": true
         },
         {
