@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-11-03T07:46:05.938Z",
+    "scrapedAt": "2026-11-03T19:16:45.746Z",
     "totalClasses": 13,
-    "totalAssignments": 218
+    "totalAssignments": 219
   },
   "classes": [
     {
@@ -793,7 +793,7 @@
       "className": "INTRMEDIATE ALG II",
       "teacher": "Jodi Lambertus",
       "period": "4",
-      "currentGrade": 0,
+      "currentGrade": 96,
       "assignments": [
         {
           "name": "HW #1 Relations & Functions",
@@ -810,6 +810,14 @@
           "totalPoints": 10,
           "weight": 1,
           "graded": false
+        },
+        {
+          "name": "DM: 2-1 Review",
+          "dueDate": "11/02/2026",
+          "earnedPoints": 9.6,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
         },
         {
           "name": "Benchmark Review",
