@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "11/04/2026, 02:23 AM",
+    "last_updated": "11/04/2026, 02:33 PM",
     "most_recent_date": "11/4/2026",
     "total_classes": 13
   },
@@ -81,8 +81,8 @@
       "letter_grade": null
     },
     {
-      "class_name": "Chemistry 2",
-      "teacher": "Paula Irwin",
+      "class_name": "Chemistry",
+      "teacher": "Patrick Kirby",
       "period": "3",
       "q1_grade": null,
       "q1_letter_grade": null,
@@ -2788,6 +2788,9 @@
       "11/1/2026": 0,
       "11/2/2026": 0,
       "11/3/2026": 0,
+      "11/4/2026": 0
+    },
+    "Chemistry": {
       "11/4/2026": 0
     }
   },

@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-11-03T19:16:45.746Z",
+    "scrapedAt": "2026-11-04T19:33:12.901Z",
     "totalClasses": 13,
-    "totalAssignments": 219
+    "totalAssignments": 217
   },
   "classes": [
     {
@@ -454,338 +454,306 @@
       ]
     },
     {
-      "className": "CHEMISTRY          2",
-      "teacher": "Paula Irwin",
+      "className": "CHEMISTRY",
+      "teacher": "Patrick Kirby",
       "period": "3",
       "currentGrade": 0,
       "assignments": [
         {
-          "name": "States of Matter WS",
-          "dueDate": "10/28/2026",
+          "name": "The Mad Hatter",
+          "dueDate": "10/23/2026",
           "earnedPoints": 0,
-          "totalPoints": 12,
+          "totalPoints": 0,
           "weight": 1,
           "graded": false
         },
         {
-          "name": "Phys&ChemProp&ChangesWS",
-          "dueDate": "10/28/2026",
-          "earnedPoints": 0,
-          "totalPoints": 10,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Classifying Matter",
-          "dueDate": "10/26/2026",
-          "earnedPoints": 0,
-          "totalPoints": 10,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Unit 2 Notes",
+          "name": "The Salem Witch Trials",
           "dueDate": "10/22/2026",
           "earnedPoints": 0,
-          "totalPoints": 20,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Metric Measurement & Density",
-          "dueDate": "10/22/2026",
-          "earnedPoints": 0,
-          "totalPoints": 40,
+          "totalPoints": 0,
           "weight": 1,
           "graded": false
         },
         {
-          "name": "1MP Review WS/Study Guide",
+          "name": "MP1 Final Exam",
           "dueDate": "10/21/2026",
           "earnedPoints": 0,
+          "totalPoints": 0,
+          "weight": 2.2,
+          "graded": false
+        },
+        {
+          "name": "MP1 Exam Practice Test",
+          "dueDate": "10/20/2026",
+          "earnedPoints": 30,
           "totalPoints": 30,
           "weight": 1,
-          "graded": false
-        },
-        {
-          "name": "1MP Quarterly Assessment Exam",
-          "dueDate": "10/21/2026",
-          "earnedPoints": 36,
-          "totalPoints": 80,
-          "weight": 1,
           "graded": true
         },
         {
-          "name": "Dimensional Analysis WS",
+          "name": "MP1 Exam Study Guide",
           "dueDate": "10/19/2026",
           "earnedPoints": 0,
-          "totalPoints": 20,
+          "totalPoints": 0,
           "weight": 1,
           "graded": false
         },
         {
-          "name": "Trouble with Turtles",
+          "name": "APEs Quiz",
+          "dueDate": "10/19/2026",
+          "earnedPoints": 0,
+          "totalPoints": 0,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "APEs Game Quest",
+          "dueDate": "10/15/2026",
+          "earnedPoints": 0,
+          "totalPoints": 0,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Error Notes",
           "dueDate": "10/14/2026",
           "earnedPoints": 0,
-          "totalPoints": 10,
+          "totalPoints": 0,
           "weight": 1,
           "graded": false
         },
         {
-          "name": "Density WS",
+          "name": "Accuracy & Precision Notes",
           "dueDate": "10/13/2026",
           "earnedPoints": 0,
-          "totalPoints": 10,
+          "totalPoints": 0,
           "weight": 1,
           "graded": false
         },
         {
-          "name": "Significant Figures WS",
+          "name": "Units Quiz",
           "dueDate": "10/12/2026",
           "earnedPoints": 0,
-          "totalPoints": 10,
+          "totalPoints": 0,
           "weight": 1,
           "graded": false
         },
         {
-          "name": "% Error",
+          "name": "APEs Playbook",
+          "dueDate": "10/12/2026",
+          "earnedPoints": 0,
+          "totalPoints": 0,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Unruly Units",
+          "dueDate": "10/08/2026",
+          "earnedPoints": 0,
+          "totalPoints": 0,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "SI Units Notes",
           "dueDate": "10/07/2026",
-          "earnedPoints": 6,
-          "totalPoints": 8,
+          "earnedPoints": 0,
+          "totalPoints": 0,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
-          "name": "Measurement Practice WS",
+          "name": "Metric and Imperial Units Notes",
+          "dueDate": "10/06/2026",
+          "earnedPoints": 0,
+          "totalPoints": 0,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Desk Ball 10/2",
           "dueDate": "10/05/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Candle Lab - Data/Graph/Ques",
-          "dueDate": "10/05/2026",
-          "earnedPoints": 14,
-          "totalPoints": 63,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Candle Lab Conclusion",
-          "dueDate": "10/05/2026",
-          "earnedPoints": 0,
-          "totalPoints": 21,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Unit 1 TEST - Multiple Choice",
-          "dueDate": "10/01/2026",
-          "earnedPoints": 18,
-          "totalPoints": 23,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Scientific Method Review WS",
-          "dueDate": "10/01/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Unit 1 Notes",
-          "dueDate": "10/01/2026",
-          "earnedPoints": 0,
-          "totalPoints": 20,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Unit 1 Test - Free Response",
-          "dueDate": "10/01/2026",
           "earnedPoints": 10,
-          "totalPoints": 24,
+          "totalPoints": 2,
           "weight": 1,
           "graded": true
         },
         {
-          "name": "Bunsen Burner",
+          "name": "Experimentation/Branches of Chemistry Quiz",
+          "dueDate": "10/05/2026",
+          "earnedPoints": 0,
+          "totalPoints": 0,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Units Reading",
+          "dueDate": "10/05/2026",
+          "earnedPoints": 0,
+          "totalPoints": 0,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Careers in Chemistry",
+          "dueDate": "10/01/2026",
+          "earnedPoints": 0,
+          "totalPoints": 0,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Branches of Chemistry Notes",
+          "dueDate": "09/30/2026",
+          "earnedPoints": 0,
+          "totalPoints": 0,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Experimentation Notes",
+          "dueDate": "09/29/2026",
+          "earnedPoints": 0,
+          "totalPoints": 0,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Bunsen Burner Quiz",
           "dueDate": "09/28/2026",
-          "earnedPoints": 18,
-          "totalPoints": 45,
+          "earnedPoints": 0,
+          "totalPoints": 0,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
-          "name": "Sci Method - Bikini Bottom Exp",
+          "name": "Bunsen Burner Lab",
+          "dueDate": "09/24/2026",
+          "earnedPoints": 0,
+          "totalPoints": 0,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Combustion Notes",
           "dueDate": "09/22/2026",
           "earnedPoints": 0,
-          "totalPoints": 10,
+          "totalPoints": 0,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
-          "name": "Separation of a Mixture",
+          "name": "Equipment Quiz",
           "dueDate": "09/21/2026",
           "earnedPoints": 0,
-          "totalPoints": 40,
+          "totalPoints": 0,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
-          "name": "Graphing Review",
-          "dueDate": "09/18/2026",
-          "earnedPoints": 30,
-          "totalPoints": 45,
+          "name": "Robert Bunsen Reading",
+          "dueDate": "09/21/2026",
+          "earnedPoints": 0,
+          "totalPoints": 0,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
-          "name": "Element Icosahedron",
+          "name": "Equipment Catalog",
           "dueDate": "09/18/2026",
           "earnedPoints": 0,
-          "totalPoints": 50,
+          "totalPoints": 0,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
-          "name": "Chem Apparatus WS",
-          "dueDate": "09/17/2026",
+          "name": "Equipment Notes",
+          "dueDate": "09/16/2026",
           "earnedPoints": 0,
-          "totalPoints": 38,
+          "totalPoints": 0,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
-          "name": "Equipment QUIZ",
-          "dueDate": "09/17/2026",
-          "earnedPoints": 14.5,
-          "totalPoints": 20,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "WS#2LabSafety&EquipCrossword",
+          "name": "Equipment Drawings",
           "dueDate": "09/15/2026",
           "earnedPoints": 0,
-          "totalPoints": 15,
+          "totalPoints": 0,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
-          "name": "Radial Chromatography",
-          "dueDate": "09/14/2026",
-          "earnedPoints": 5.5,
-          "totalPoints": 10,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Equip in the Lab WS -Cut/Paste",
+          "name": "Safety Quiz",
           "dueDate": "09/14/2026",
           "earnedPoints": 0,
-          "totalPoints": 10,
+          "totalPoints": 0,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
-          "name": "Safety Equipment WS",
-          "dueDate": "09/08/2026",
-          "earnedPoints": 10,
-          "totalPoints": 10,
+          "name": "Lab Rats",
+          "dueDate": "09/11/2026",
+          "earnedPoints": 0,
+          "totalPoints": 0,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
-          "name": "Safety Equipment Map WS",
+          "name": "Safety Contract - Sign/Return",
+          "dueDate": "09/10/2026",
+          "earnedPoints": 0,
+          "totalPoints": 0,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Safety Videos",
+          "dueDate": "09/10/2026",
+          "earnedPoints": 0,
+          "totalPoints": 0,
+          "weight": 1,
+          "graded": false
+        },
+        {
+          "name": "Policy & Room Quiz",
           "dueDate": "09/08/2026",
           "earnedPoints": 0,
-          "totalPoints": 20,
+          "totalPoints": 0,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
-          "name": "Safety Drawing/Poster",
+          "name": "Safety Second",
           "dueDate": "09/08/2026",
           "earnedPoints": 0,
-          "totalPoints": 25,
+          "totalPoints": 0,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
-          "name": "Safety QUIZ MC & T/F",
-          "dueDate": "09/08/2026",
-          "earnedPoints": 27,
-          "totalPoints": 34,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Safety QUIZ Map",
-          "dueDate": "09/08/2026",
-          "earnedPoints": 9,
-          "totalPoints": 11,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Lab Safety Rules Packet",
-          "dueDate": "09/03/2026",
-          "earnedPoints": 15,
-          "totalPoints": 15,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "1WS#1-SafetySymbols&Procedures",
-          "dueDate": "09/03/2026",
+          "name": "Cartography Project",
+          "dueDate": "09/04/2026",
           "earnedPoints": 0,
-          "totalPoints": 10,
+          "totalPoints": 0,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
-          "name": "Lab Safety Lesson Starters",
-          "dueDate": "09/03/2026",
-          "earnedPoints": 15,
-          "totalPoints": 20,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Signed Syllabus",
-          "dueDate": "09/02/2026",
-          "earnedPoints": 5,
-          "totalPoints": 5,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Signed Behavioral Contract",
-          "dueDate": "09/02/2026",
-          "earnedPoints": 5,
-          "totalPoints": 5,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Signed Lab Safety Contract",
-          "dueDate": "09/02/2026",
+          "name": "Class Policy Poster",
+          "dueDate": "09/01/2026",
           "earnedPoints": 0,
-          "totalPoints": 5,
+          "totalPoints": 0,
           "weight": 1,
-          "graded": true
+          "graded": false
         },
         {
-          "name": "Safety in the Lab Practice",
-          "dueDate": "09/02/2026",
-          "earnedPoints": 9,
-          "totalPoints": 10,
+          "name": "Class Policy - Sign/Return",
+          "dueDate": "08/31/2026",
+          "earnedPoints": 0,
+          "totalPoints": 0,
           "weight": 1,
-          "graded": true
+          "graded": false
         }
       ]
     },
@@ -795,6 +763,14 @@
       "period": "4",
       "currentGrade": 96,
       "assignments": [
+        {
+          "name": "2-1 Quiz",
+          "dueDate": "11/04/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "HW #1 Relations & Functions",
           "dueDate": "11/02/2026",
@@ -1723,6 +1699,14 @@
       "period": "8",
       "currentGrade": 0,
       "assignments": [
+        {
+          "name": "\"The Pedestrian\" Notes",
+          "dueDate": "11/04/2026",
+          "earnedPoints": 0,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "Story Revision Checklist",
           "dueDate": "10/28/2026",
