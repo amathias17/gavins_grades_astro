@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-11-04T19:33:12.901Z",
+    "scrapedAt": "2026-11-05T19:43:24.137Z",
     "totalClasses": 13,
-    "totalAssignments": 217
+    "totalAssignments": 219
   },
   "classes": [
     {
@@ -761,15 +761,15 @@
       "className": "INTRMEDIATE ALG II",
       "teacher": "Jodi Lambertus",
       "period": "4",
-      "currentGrade": 96,
+      "currentGrade": 65,
       "assignments": [
         {
           "name": "2-1 Quiz",
           "dueDate": "11/04/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 10,
           "totalPoints": 20,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "HW #1 Relations & Functions",
@@ -937,8 +937,16 @@
       "className": "ANATOMY & PHYSIOL",
       "teacher": "Denise Condo",
       "period": "5",
-      "currentGrade": 0,
+      "currentGrade": 84,
       "assignments": [
+        {
+          "name": "Tissue Quiz",
+          "dueDate": "11/05/2026",
+          "earnedPoints": 21,
+          "totalPoints": 25,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "MP participation",
           "dueDate": "10/29/2026",
@@ -1259,6 +1267,14 @@
       "period": "6",
       "currentGrade": 83,
       "assignments": [
+        {
+          "name": "Assign #7: Extrasolar Worlds..",
+          "dueDate": "11/04/2026",
+          "earnedPoints": 0,
+          "totalPoints": 21,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "INDIV. EXAM 2: The Future...",
           "dueDate": "11/02/2026",

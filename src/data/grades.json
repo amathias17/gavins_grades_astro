@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "11/05/2026, 02:49 AM",
+    "last_updated": "11/05/2026, 02:43 PM",
     "most_recent_date": "11/5/2026",
     "total_classes": 13
   },
@@ -107,8 +107,8 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 96,
-      "letter_grade": "A"
+      "current_grade": 65,
+      "letter_grade": "D"
     },
     {
       "class_name": "Anatomy & Physiol",
@@ -122,8 +122,8 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 0,
-      "letter_grade": "F"
+      "current_grade": 84,
+      "letter_grade": "B"
     },
     {
       "class_name": "Science Of Science Fiction",
@@ -2386,7 +2386,7 @@
       "11/2/2026": 0,
       "11/3/2026": 96,
       "11/4/2026": 96,
-      "11/5/2026": 96
+      "11/5/2026": 65
     },
     "Anatomy & Physiol": {
       "8/25/2026": null,
@@ -2455,7 +2455,7 @@
       "11/2/2026": 0,
       "11/3/2026": 0,
       "11/4/2026": 0,
-      "11/5/2026": 0
+      "11/5/2026": 84
     },
     "Science Of Science Fiction": {
       "8/25/2026": null,
@@ -2807,7 +2807,7 @@
       "11/5/2026": 0
     }
   },
-  "overall_average": 90,
+  "overall_average": 77,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -3147,7 +3147,7 @@
     "11/2/2026": 83,
     "11/3/2026": 90,
     "11/4/2026": 90,
-    "11/5/2026": 90
+    "11/5/2026": 77
   },
   "streak": 0,
   "streak_history": {
