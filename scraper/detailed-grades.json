@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-11-05T19:43:24.137Z",
+    "scrapedAt": "2026-11-06T19:04:51.650Z",
     "totalClasses": 13,
-    "totalAssignments": 219
+    "totalAssignments": 230
   },
   "classes": [
     {
@@ -457,8 +457,80 @@
       "className": "CHEMISTRY",
       "teacher": "Patrick Kirby",
       "period": "3",
-      "currentGrade": 0,
+      "currentGrade": 100,
       "assignments": [
+        {
+          "name": "Intensive vs. Extensive",
+          "dueDate": "11/05/2026",
+          "earnedPoints": 20,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Physical vs. Chemical",
+          "dueDate": "11/04/2026",
+          "earnedPoints": 20,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "The Science of Halloween Quiz",
+          "dueDate": "11/02/2026",
+          "earnedPoints": 0,
+          "totalPoints": 35,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Properties Reading",
+          "dueDate": "11/02/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Jack the Ripper",
+          "dueDate": "11/02/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Radium Girls",
+          "dueDate": "11/02/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Jane Toppan",
+          "dueDate": "11/02/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "The Tylenol Murders",
+          "dueDate": "11/02/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Slime Lab",
+          "dueDate": "11/02/2026",
+          "earnedPoints": 30,
+          "totalPoints": 30,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "The Mad Hatter",
           "dueDate": "10/23/2026",
@@ -764,6 +836,14 @@
       "currentGrade": 65,
       "assignments": [
         {
+          "name": "HW #3 Writing Linear Equations",
+          "dueDate": "11/10/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
+        {
           "name": "2-1 Quiz",
           "dueDate": "11/04/2026",
           "earnedPoints": 10,
@@ -937,8 +1017,16 @@
       "className": "ANATOMY & PHYSIOL",
       "teacher": "Denise Condo",
       "period": "5",
-      "currentGrade": 84,
+      "currentGrade": 87,
       "assignments": [
+        {
+          "name": "Thin slide tattoos/ skin",
+          "dueDate": "11/06/2026",
+          "earnedPoints": 5,
+          "totalPoints": 5,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Tissue Quiz",
           "dueDate": "11/05/2026",
