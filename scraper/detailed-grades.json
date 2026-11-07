@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-11-06T19:04:51.650Z",
+    "scrapedAt": "2026-11-07T06:57:27.161Z",
     "totalClasses": 13,
     "totalAssignments": 230
   },
@@ -1801,15 +1801,15 @@
       "className": "ENGLISH 11",
       "teacher": "Audrey Cromell",
       "period": "8",
-      "currentGrade": 0,
+      "currentGrade": 100,
       "assignments": [
         {
           "name": "\"The Pedestrian\" Notes",
           "dueDate": "11/04/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 5,
           "totalPoints": 5,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "Story Revision Checklist",
