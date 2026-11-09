@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-11-08T23:23:50.044Z",
+    "scrapedAt": "2026-11-09T22:05:49.422Z",
     "totalClasses": 13,
-    "totalAssignments": 231
+    "totalAssignments": 234
   },
   "classes": [
     {
@@ -465,8 +465,16 @@
       "className": "CHEMISTRY",
       "teacher": "Patrick Kirby",
       "period": "3",
-      "currentGrade": 100,
+      "currentGrade": 98,
       "assignments": [
+        {
+          "name": "Properties Quiz",
+          "dueDate": "11/09/2026",
+          "earnedPoints": 28,
+          "totalPoints": 30,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Intensive vs. Extensive",
           "dueDate": "11/05/2026",
@@ -1593,7 +1601,7 @@
       "className": "WORLD STUDIES",
       "teacher": "Donald Dull Jr",
       "period": "7",
-      "currentGrade": 0,
+      "currentGrade": 50,
       "assignments": [
         {
           "name": "Ch 18-3 Niger R. Delta Environmental Crisis",
@@ -1607,6 +1615,14 @@
           "name": "Ch 18-3 Aswan High Dam",
           "dueDate": "11/02/2026",
           "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "CH 19-1 Lucy",
+          "dueDate": "11/04/2026",
+          "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
           "graded": true
@@ -1630,7 +1646,7 @@
         {
           "name": "Ch 18-3 Shrinking Savanna: Desertification",
           "dueDate": "11/02/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 10,
           "totalPoints": 10,
           "weight": 1,
           "graded": true
@@ -1811,6 +1827,14 @@
       "period": "8",
       "currentGrade": 100,
       "assignments": [
+        {
+          "name": "F451 Background Research & Poster",
+          "dueDate": "11/06/2026",
+          "earnedPoints": 20,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "\"The Pedestrian\" Notes",
           "dueDate": "11/04/2026",
