@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "11/10/2026, 03:10 AM",
+    "last_updated": "11/10/2026, 02:29 PM",
     "most_recent_date": "11/10/2026",
     "total_classes": 13
   },
@@ -32,7 +32,7 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 0,
+      "current_grade": 33,
       "letter_grade": "F"
     },
     {
@@ -107,8 +107,8 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 65,
-      "letter_grade": "D"
+      "current_grade": 53,
+      "letter_grade": "F"
     },
     {
       "class_name": "Anatomy & Physiol",
@@ -2126,7 +2126,7 @@
       "11/7/2026": 0,
       "11/8/2026": 0,
       "11/9/2026": 0,
-      "11/10/2026": 0
+      "11/10/2026": 33
     },
     "Heroes & Monsters": {
       "8/25/2026": null,
@@ -2416,7 +2416,7 @@
       "11/7/2026": 65,
       "11/8/2026": 65,
       "11/9/2026": 65,
-      "11/10/2026": 65
+      "11/10/2026": 53
     },
     "Anatomy & Physiol": {
       "8/25/2026": null,
@@ -2872,7 +2872,7 @@
       "11/10/2026": 98
     }
   },
-  "overall_average": 81,
+  "overall_average": 72,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -3217,7 +3217,7 @@
     "11/7/2026": 87,
     "11/8/2026": 87,
     "11/9/2026": 81,
-    "11/10/2026": 81
+    "11/10/2026": 72
   },
   "streak": 0,
   "streak_history": {

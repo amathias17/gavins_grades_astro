@@ -1,9 +1,41 @@
 {
   "metadata": {
-    "last_updated": "11/10/2026, 03:10 AM",
-    "count": 2
+    "last_updated": "11/10/2026, 02:29 PM",
+    "count": 6
   },
   "missing_assignments": [
+    {
+      "due_date": "11/04/2026",
+      "assignment_name": "Plastic Pathways",
+      "class_name": "ENVIRON SCIENCE    1",
+      "teacher": "Megan Kutruff",
+      "category": "Class Work",
+      "max_points": "20"
+    },
+    {
+      "due_date": "11/02/2026",
+      "assignment_name": "Deepwater Horizon Case Study",
+      "class_name": "ENVIRON SCIENCE    1",
+      "teacher": "Megan Kutruff",
+      "category": "Class Work",
+      "max_points": "30"
+    },
+    {
+      "due_date": "11/02/2026",
+      "assignment_name": "Plastic Pollution Notes",
+      "class_name": "ENVIRON SCIENCE    1",
+      "teacher": "Megan Kutruff",
+      "category": "Class Work",
+      "max_points": "10"
+    },
+    {
+      "due_date": "11/02/2026",
+      "assignment_name": "HW #2 SIF & SF",
+      "class_name": "INTRMEDIATE ALG II",
+      "teacher": "Jodi Lambertus",
+      "category": "Homework",
+      "max_points": "10"
+    },
     {
       "due_date": "11/02/2026",
       "assignment_name": "Ch 18-3 Niger R. Delta Environmental Crisis",

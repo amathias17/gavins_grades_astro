@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-11-09T22:05:49.422Z",
+    "scrapedAt": "2026-11-10T19:29:32.174Z",
     "totalClasses": 13,
-    "totalAssignments": 234
+    "totalAssignments": 237
   },
   "classes": [
     {
@@ -129,15 +129,55 @@
       "className": "ENVIRON SCIENCE    1",
       "teacher": "Megan Kutruff",
       "period": "1",
-      "currentGrade": 0,
+      "currentGrade": 33,
       "assignments": [
+        {
+          "name": "Plastic Pathways",
+          "dueDate": "11/04/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Deepwater Horizon Case Study",
           "dueDate": "11/02/2026",
           "earnedPoints": 0,
           "totalPoints": 30,
           "weight": 1,
-          "graded": false
+          "graded": true
+        },
+        {
+          "name": "Plastic Pathways",
+          "dueDate": "11/04/2026",
+          "earnedPoints": 0,
+          "totalPoints": 20,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Deepwater Horizon Case Study",
+          "dueDate": "11/02/2026",
+          "earnedPoints": 0,
+          "totalPoints": 30,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Oil Spill Containment Lab",
+          "dueDate": "11/02/2026",
+          "earnedPoints": 30,
+          "totalPoints": 30,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Plastic Pollution Notes",
+          "dueDate": "11/02/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
         },
         {
           "name": "MP1 Participation",
@@ -849,11 +889,11 @@
       "className": "INTRMEDIATE ALG II",
       "teacher": "Jodi Lambertus",
       "period": "4",
-      "currentGrade": 65,
+      "currentGrade": 53,
       "assignments": [
         {
           "name": "HW #3 Writing Linear Equations",
-          "dueDate": "11/10/2026",
+          "dueDate": "11/12/2026",
           "earnedPoints": 0,
           "totalPoints": 10,
           "weight": 1,
@@ -870,10 +910,10 @@
         {
           "name": "HW #1 Relations & Functions",
           "dueDate": "11/02/2026",
-          "earnedPoints": 0,
+          "earnedPoints": 7,
           "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "HW #2 SIF & SF",
@@ -881,7 +921,7 @@
           "earnedPoints": 0,
           "totalPoints": 10,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "DM: 2-1 Review",
@@ -1603,22 +1643,6 @@
       "period": "7",
       "currentGrade": 50,
       "assignments": [
-        {
-          "name": "Ch 18-3 Niger R. Delta Environmental Crisis",
-          "dueDate": "11/02/2026",
-          "earnedPoints": 0,
-          "totalPoints": 10,
-          "weight": 1,
-          "graded": true
-        },
-        {
-          "name": "Ch 18-3 Aswan High Dam",
-          "dueDate": "11/02/2026",
-          "earnedPoints": 0,
-          "totalPoints": 10,
-          "weight": 1,
-          "graded": true
-        },
         {
           "name": "CH 19-1 Lucy",
           "dueDate": "11/04/2026",
