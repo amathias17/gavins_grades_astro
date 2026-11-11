@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-11-11T00:24:05.316Z",
+    "scrapedAt": "2026-11-11T19:24:42.578Z",
     "totalClasses": 13,
-    "totalAssignments": 238
+    "totalAssignments": 239
   },
   "classes": [
     {
@@ -1409,13 +1409,21 @@
       "className": "ASTRONOMY",
       "teacher": "James Krug",
       "period": "6",
-      "currentGrade": 68,
+      "currentGrade": 72,
       "assignments": [
         {
           "name": "Swipe Right",
           "dueDate": "11/12/2026",
           "earnedPoints": 25,
           "totalPoints": 30,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Fall Night Sky Drawing",
+          "dueDate": "11/05/2026",
+          "earnedPoints": 16,
+          "totalPoints": 15,
           "weight": 1,
           "graded": true
         },
