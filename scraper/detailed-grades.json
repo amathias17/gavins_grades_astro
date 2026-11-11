@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-11-10T19:29:32.174Z",
+    "scrapedAt": "2026-11-11T00:24:05.316Z",
     "totalClasses": 13,
-    "totalAssignments": 237
+    "totalAssignments": 238
   },
   "classes": [
     {
@@ -1409,15 +1409,23 @@
       "className": "ASTRONOMY",
       "teacher": "James Krug",
       "period": "6",
-      "currentGrade": 83,
+      "currentGrade": 68,
       "assignments": [
+        {
+          "name": "Swipe Right",
+          "dueDate": "11/12/2026",
+          "earnedPoints": 25,
+          "totalPoints": 30,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Assign #7: Extrasolar Worlds..",
           "dueDate": "11/04/2026",
           "earnedPoints": 0,
           "totalPoints": 21,
           "weight": 1,
-          "graded": false
+          "graded": true
         },
         {
           "name": "INDIV. EXAM 2: The Future...",
