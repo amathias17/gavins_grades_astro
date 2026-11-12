@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "11/12/2026, 03:05 AM",
+    "last_updated": "11/12/2026, 02:43 PM",
     "most_recent_date": "11/12/2026",
     "total_classes": 13
   },
@@ -32,7 +32,7 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 33,
+      "current_grade": 25,
       "letter_grade": "F"
     },
     {
@@ -92,8 +92,8 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 98,
-      "letter_grade": "A"
+      "current_grade": 89,
+      "letter_grade": "B"
     },
     {
       "class_name": "Intrmediate Alg Ii",
@@ -107,7 +107,7 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 53,
+      "current_grade": 44,
       "letter_grade": "F"
     },
     {
@@ -182,7 +182,7 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 50,
+      "current_grade": 55,
       "letter_grade": "F"
     },
     {
@@ -2132,7 +2132,7 @@
       "11/9/2026": 0,
       "11/10/2026": 33,
       "11/11/2026": 33,
-      "11/12/2026": 33
+      "11/12/2026": 25
     },
     "Heroes & Monsters": {
       "8/25/2026": null,
@@ -2428,7 +2428,7 @@
       "11/9/2026": 65,
       "11/10/2026": 53,
       "11/11/2026": 53,
-      "11/12/2026": 53
+      "11/12/2026": 44
     },
     "Anatomy & Physiol": {
       "8/25/2026": null,
@@ -2808,7 +2808,7 @@
       "11/9/2026": 50,
       "11/10/2026": 50,
       "11/11/2026": 50,
-      "11/12/2026": 50
+      "11/12/2026": 55
     },
     "English 11": {
       "8/25/2026": null,
@@ -2895,10 +2895,10 @@
       "11/9/2026": 98,
       "11/10/2026": 98,
       "11/11/2026": 98,
-      "11/12/2026": 98
+      "11/12/2026": 89
     }
   },
-  "overall_average": 70,
+  "overall_average": 67,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -3245,7 +3245,7 @@
     "11/9/2026": 81,
     "11/10/2026": 72,
     "11/11/2026": 70,
-    "11/12/2026": 70
+    "11/12/2026": 67
   },
   "streak": 0,
   "streak_history": {
