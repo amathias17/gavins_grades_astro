@@ -1,9 +1,17 @@
 {
   "metadata": {
-    "last_updated": "11/13/2026, 02:43 AM",
-    "count": 9
+    "last_updated": "11/13/2026, 02:24 PM",
+    "count": 10
   },
   "missing_assignments": [
+    {
+      "due_date": "11/12/2026",
+      "assignment_name": "Types of Mixtures",
+      "class_name": "CHEMISTRY",
+      "teacher": "Patrick Kirby",
+      "category": "Class Work",
+      "max_points": "20"
+    },
     {
       "due_date": "11/12/2026",
       "assignment_name": "HW #3 Writing Linear Equations",

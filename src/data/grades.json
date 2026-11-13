@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "11/13/2026, 02:43 AM",
+    "last_updated": "11/13/2026, 02:24 PM",
     "most_recent_date": "11/13/2026",
     "total_classes": 13
   },
@@ -62,8 +62,8 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 0,
-      "letter_grade": "F"
+      "current_grade": 100,
+      "letter_grade": "A"
     },
     {
       "class_name": "Coding W/ Python",
@@ -92,8 +92,8 @@
       "q3_letter_grade": null,
       "q4_grade": null,
       "q4_letter_grade": null,
-      "current_grade": 89,
-      "letter_grade": "B"
+      "current_grade": 75,
+      "letter_grade": "C"
     },
     {
       "class_name": "Intrmediate Alg Ii",
@@ -1027,7 +1027,7 @@
       "11/10/2026": 0,
       "11/11/2026": 0,
       "11/12/2026": 0,
-      "11/13/2026": 0
+      "11/13/2026": 100
     },
     "Amer Studies": {
       "11/24/2025": 100,
@@ -2908,10 +2908,10 @@
       "11/10/2026": 98,
       "11/11/2026": 98,
       "11/12/2026": 89,
-      "11/13/2026": 89
+      "11/13/2026": 75
     }
   },
-  "overall_average": 68,
+  "overall_average": 70,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -3259,7 +3259,7 @@
     "11/10/2026": 72,
     "11/11/2026": 70,
     "11/12/2026": 67,
-    "11/13/2026": 68
+    "11/13/2026": 70
   },
   "streak": 0,
   "streak_history": {
