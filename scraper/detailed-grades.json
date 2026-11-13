@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-11-12T19:43:08.093Z",
+    "scrapedAt": "2026-11-13T00:51:44.231Z",
     "totalClasses": 13,
     "totalAssignments": 248
   },
@@ -1449,7 +1449,7 @@
       "className": "ASTRONOMY",
       "teacher": "James Krug",
       "period": "6",
-      "currentGrade": 72,
+      "currentGrade": 75,
       "assignments": [
         {
           "name": "Swipe Right",
