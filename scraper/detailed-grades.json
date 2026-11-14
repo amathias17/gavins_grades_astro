@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scrapedAt": "2026-11-13T19:24:37.263Z",
+    "scrapedAt": "2026-11-14T00:37:38.073Z",
     "totalClasses": 13,
     "totalAssignments": 255
   },
@@ -294,9 +294,9 @@
         {
           "name": "Grace Satellites Reading",
           "dueDate": "10/01/2026",
-          "earnedPoints": 11,
-          "totalPoints": 12,
-          "weight": null,
+          "earnedPoints": 13,
+          "totalPoints": 15,
+          "weight": 1,
           "graded": true
         },
         {
@@ -1985,7 +1985,7 @@
       "className": "ENGLISH 11",
       "teacher": "Audrey Cromell",
       "period": "8",
-      "currentGrade": 100,
+      "currentGrade": 97,
       "assignments": [
         {
           "name": "F451 Notes (Pages 1-16)",
