@@ -1,206 +1,10 @@
 {
   "metadata": {
-    "last_updated": "11/14/2026, 06:35 PM",
-    "most_recent_date": "11/14/2026",
-    "total_classes": 13
+    "last_updated": "11/15/2026, 02:42 AM",
+    "most_recent_date": "11/15/2026",
+    "total_classes": 0
   },
-  "classes": [
-    {
-      "class_name": "Junior Seminar",
-      "teacher": "Sydnee Rockey",
-      "period": "0",
-      "q1_grade": null,
-      "q1_letter_grade": null,
-      "q2_grade": null,
-      "q2_letter_grade": null,
-      "q3_grade": null,
-      "q3_letter_grade": null,
-      "q4_grade": null,
-      "q4_letter_grade": null,
-      "current_grade": 0,
-      "letter_grade": "F"
-    },
-    {
-      "class_name": "Environ Science 1",
-      "teacher": "Megan Kutruff",
-      "period": "1",
-      "q1_grade": null,
-      "q1_letter_grade": null,
-      "q2_grade": null,
-      "q2_letter_grade": null,
-      "q3_grade": null,
-      "q3_letter_grade": null,
-      "q4_grade": null,
-      "q4_letter_grade": null,
-      "current_grade": 25,
-      "letter_grade": "F"
-    },
-    {
-      "class_name": "Heroes & Monsters",
-      "teacher": "Megan Leone",
-      "period": "1",
-      "q1_grade": null,
-      "q1_letter_grade": null,
-      "q2_grade": null,
-      "q2_letter_grade": null,
-      "q3_grade": null,
-      "q3_letter_grade": null,
-      "q4_grade": null,
-      "q4_letter_grade": null,
-      "current_grade": null,
-      "letter_grade": null
-    },
-    {
-      "class_name": "Physical Educ",
-      "teacher": "Paul Picciotti",
-      "period": "2",
-      "q1_grade": null,
-      "q1_letter_grade": null,
-      "q2_grade": null,
-      "q2_letter_grade": null,
-      "q3_grade": null,
-      "q3_letter_grade": null,
-      "q4_grade": null,
-      "q4_letter_grade": null,
-      "current_grade": 100,
-      "letter_grade": "A"
-    },
-    {
-      "class_name": "Coding W/ Python",
-      "teacher": "Christopher King",
-      "period": "2",
-      "q1_grade": null,
-      "q1_letter_grade": null,
-      "q2_grade": null,
-      "q2_letter_grade": null,
-      "q3_grade": null,
-      "q3_letter_grade": null,
-      "q4_grade": null,
-      "q4_letter_grade": null,
-      "current_grade": null,
-      "letter_grade": null
-    },
-    {
-      "class_name": "Chemistry",
-      "teacher": "Patrick Kirby",
-      "period": "3",
-      "q1_grade": null,
-      "q1_letter_grade": null,
-      "q2_grade": null,
-      "q2_letter_grade": null,
-      "q3_grade": null,
-      "q3_letter_grade": null,
-      "q4_grade": null,
-      "q4_letter_grade": null,
-      "current_grade": 75,
-      "letter_grade": "C"
-    },
-    {
-      "class_name": "Intrmediate Alg Ii",
-      "teacher": "Jodi Lambertus",
-      "period": "4",
-      "q1_grade": null,
-      "q1_letter_grade": null,
-      "q2_grade": null,
-      "q2_letter_grade": null,
-      "q3_grade": null,
-      "q3_letter_grade": null,
-      "q4_grade": null,
-      "q4_letter_grade": null,
-      "current_grade": 44,
-      "letter_grade": "F"
-    },
-    {
-      "class_name": "Anatomy & Physiol",
-      "teacher": "Denise Condo",
-      "period": "5",
-      "q1_grade": null,
-      "q1_letter_grade": null,
-      "q2_grade": null,
-      "q2_letter_grade": null,
-      "q3_grade": null,
-      "q3_letter_grade": null,
-      "q4_grade": null,
-      "q4_letter_grade": null,
-      "current_grade": 87,
-      "letter_grade": "B"
-    },
-    {
-      "class_name": "Science Of Science Fiction",
-      "teacher": "Jason Geis",
-      "period": "5",
-      "q1_grade": null,
-      "q1_letter_grade": null,
-      "q2_grade": null,
-      "q2_letter_grade": null,
-      "q3_grade": null,
-      "q3_letter_grade": null,
-      "q4_grade": null,
-      "q4_letter_grade": null,
-      "current_grade": null,
-      "letter_grade": null
-    },
-    {
-      "class_name": "Astronomy",
-      "teacher": "James Krug",
-      "period": "6",
-      "q1_grade": null,
-      "q1_letter_grade": null,
-      "q2_grade": null,
-      "q2_letter_grade": null,
-      "q3_grade": null,
-      "q3_letter_grade": null,
-      "q4_grade": null,
-      "q4_letter_grade": null,
-      "current_grade": 75,
-      "letter_grade": "C"
-    },
-    {
-      "class_name": "Mod Film & Culture",
-      "teacher": "David McCarter",
-      "period": "6",
-      "q1_grade": null,
-      "q1_letter_grade": null,
-      "q2_grade": null,
-      "q2_letter_grade": null,
-      "q3_grade": null,
-      "q3_letter_grade": null,
-      "q4_grade": null,
-      "q4_letter_grade": null,
-      "current_grade": null,
-      "letter_grade": null
-    },
-    {
-      "class_name": "World Studies",
-      "teacher": "Donald Dull Jr",
-      "period": "7",
-      "q1_grade": null,
-      "q1_letter_grade": null,
-      "q2_grade": null,
-      "q2_letter_grade": null,
-      "q3_grade": null,
-      "q3_letter_grade": null,
-      "q4_grade": null,
-      "q4_letter_grade": null,
-      "current_grade": 55,
-      "letter_grade": "F"
-    },
-    {
-      "class_name": "English 11",
-      "teacher": "Audrey Cromell",
-      "period": "8",
-      "q1_grade": null,
-      "q1_letter_grade": null,
-      "q2_grade": null,
-      "q2_letter_grade": null,
-      "q3_grade": null,
-      "q3_letter_grade": null,
-      "q4_grade": null,
-      "q4_letter_grade": null,
-      "current_grade": 97,
-      "letter_grade": "A"
-    }
-  ],
+  "classes": [],
   "grade_history": {
     "Sophomore Seminar": {
       "11/24/2025": 66,
@@ -2924,7 +2728,7 @@
       "11/14/2026": 75
     }
   },
-  "overall_average": 70,
+  "overall_average": 0,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -3273,9 +3077,10 @@
     "11/11/2026": 70,
     "11/12/2026": 67,
     "11/13/2026": 70,
-    "11/14/2026": 70
+    "11/14/2026": 70,
+    "11/15/2026": 0
   },
-  "streak": 0,
+  "streak": 1,
   "streak_history": {
     "11/24/2025": 0,
     "11/25/2025": 0,
@@ -3624,6 +3429,7 @@
     "11/11/2026": 0,
     "11/12/2026": 0,
     "11/13/2026": 0,
-    "11/14/2026": 0
+    "11/14/2026": 0,
+    "11/15/2026": 1
   }
 }
