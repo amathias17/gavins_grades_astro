@@ -1,10 +1,206 @@
 {
   "metadata": {
-    "last_updated": "11/16/2026, 02:48 AM",
+    "last_updated": "11/16/2026, 01:01 PM",
     "most_recent_date": "11/16/2026",
-    "total_classes": 0
+    "total_classes": 13
   },
-  "classes": [],
+  "classes": [
+    {
+      "class_name": "Junior Seminar",
+      "teacher": "Sydnee Rockey",
+      "period": "0",
+      "q1_grade": null,
+      "q1_letter_grade": null,
+      "q2_grade": null,
+      "q2_letter_grade": null,
+      "q3_grade": null,
+      "q3_letter_grade": null,
+      "q4_grade": null,
+      "q4_letter_grade": null,
+      "current_grade": 0,
+      "letter_grade": "F"
+    },
+    {
+      "class_name": "Environ Science 1",
+      "teacher": "Megan Kutruff",
+      "period": "1",
+      "q1_grade": null,
+      "q1_letter_grade": null,
+      "q2_grade": null,
+      "q2_letter_grade": null,
+      "q3_grade": null,
+      "q3_letter_grade": null,
+      "q4_grade": null,
+      "q4_letter_grade": null,
+      "current_grade": 25,
+      "letter_grade": "F"
+    },
+    {
+      "class_name": "Heroes & Monsters",
+      "teacher": "Megan Leone",
+      "period": "1",
+      "q1_grade": null,
+      "q1_letter_grade": null,
+      "q2_grade": null,
+      "q2_letter_grade": null,
+      "q3_grade": null,
+      "q3_letter_grade": null,
+      "q4_grade": null,
+      "q4_letter_grade": null,
+      "current_grade": null,
+      "letter_grade": null
+    },
+    {
+      "class_name": "Physical Educ",
+      "teacher": "Paul Picciotti",
+      "period": "2",
+      "q1_grade": null,
+      "q1_letter_grade": null,
+      "q2_grade": null,
+      "q2_letter_grade": null,
+      "q3_grade": null,
+      "q3_letter_grade": null,
+      "q4_grade": null,
+      "q4_letter_grade": null,
+      "current_grade": 100,
+      "letter_grade": "A"
+    },
+    {
+      "class_name": "Coding W/ Python",
+      "teacher": "Christopher King",
+      "period": "2",
+      "q1_grade": null,
+      "q1_letter_grade": null,
+      "q2_grade": null,
+      "q2_letter_grade": null,
+      "q3_grade": null,
+      "q3_letter_grade": null,
+      "q4_grade": null,
+      "q4_letter_grade": null,
+      "current_grade": null,
+      "letter_grade": null
+    },
+    {
+      "class_name": "Chemistry",
+      "teacher": "Patrick Kirby",
+      "period": "3",
+      "q1_grade": null,
+      "q1_letter_grade": null,
+      "q2_grade": null,
+      "q2_letter_grade": null,
+      "q3_grade": null,
+      "q3_letter_grade": null,
+      "q4_grade": null,
+      "q4_letter_grade": null,
+      "current_grade": 79,
+      "letter_grade": "C"
+    },
+    {
+      "class_name": "Intrmediate Alg Ii",
+      "teacher": "Jodi Lambertus",
+      "period": "4",
+      "q1_grade": null,
+      "q1_letter_grade": null,
+      "q2_grade": null,
+      "q2_letter_grade": null,
+      "q3_grade": null,
+      "q3_letter_grade": null,
+      "q4_grade": null,
+      "q4_letter_grade": null,
+      "current_grade": 52,
+      "letter_grade": "F"
+    },
+    {
+      "class_name": "Anatomy & Physiol",
+      "teacher": "Denise Condo",
+      "period": "5",
+      "q1_grade": null,
+      "q1_letter_grade": null,
+      "q2_grade": null,
+      "q2_letter_grade": null,
+      "q3_grade": null,
+      "q3_letter_grade": null,
+      "q4_grade": null,
+      "q4_letter_grade": null,
+      "current_grade": 87,
+      "letter_grade": "B"
+    },
+    {
+      "class_name": "Science Of Science Fiction",
+      "teacher": "Jason Geis",
+      "period": "5",
+      "q1_grade": null,
+      "q1_letter_grade": null,
+      "q2_grade": null,
+      "q2_letter_grade": null,
+      "q3_grade": null,
+      "q3_letter_grade": null,
+      "q4_grade": null,
+      "q4_letter_grade": null,
+      "current_grade": null,
+      "letter_grade": null
+    },
+    {
+      "class_name": "Astronomy",
+      "teacher": "James Krug",
+      "period": "6",
+      "q1_grade": null,
+      "q1_letter_grade": null,
+      "q2_grade": null,
+      "q2_letter_grade": null,
+      "q3_grade": null,
+      "q3_letter_grade": null,
+      "q4_grade": null,
+      "q4_letter_grade": null,
+      "current_grade": 75,
+      "letter_grade": "C"
+    },
+    {
+      "class_name": "Mod Film & Culture",
+      "teacher": "David McCarter",
+      "period": "6",
+      "q1_grade": null,
+      "q1_letter_grade": null,
+      "q2_grade": null,
+      "q2_letter_grade": null,
+      "q3_grade": null,
+      "q3_letter_grade": null,
+      "q4_grade": null,
+      "q4_letter_grade": null,
+      "current_grade": null,
+      "letter_grade": null
+    },
+    {
+      "class_name": "World Studies",
+      "teacher": "Donald Dull Jr",
+      "period": "7",
+      "q1_grade": null,
+      "q1_letter_grade": null,
+      "q2_grade": null,
+      "q2_letter_grade": null,
+      "q3_grade": null,
+      "q3_letter_grade": null,
+      "q4_grade": null,
+      "q4_letter_grade": null,
+      "current_grade": 43,
+      "letter_grade": "F"
+    },
+    {
+      "class_name": "English 11",
+      "teacher": "Audrey Cromell",
+      "period": "8",
+      "q1_grade": null,
+      "q1_letter_grade": null,
+      "q2_grade": null,
+      "q2_letter_grade": null,
+      "q3_grade": null,
+      "q3_letter_grade": null,
+      "q4_grade": null,
+      "q4_letter_grade": null,
+      "current_grade": 97,
+      "letter_grade": "A"
+    }
+  ],
   "grade_history": {
     "Sophomore Seminar": {
       "11/24/2025": 66,
@@ -832,7 +1028,8 @@
       "11/11/2026": 0,
       "11/12/2026": 0,
       "11/13/2026": 100,
-      "11/14/2026": 100
+      "11/14/2026": 100,
+      "11/16/2026": 100
     },
     "Amer Studies": {
       "11/24/2025": 100,
@@ -1864,7 +2061,8 @@
       "11/11/2026": 0,
       "11/12/2026": 0,
       "11/13/2026": 0,
-      "11/14/2026": 0
+      "11/14/2026": 0,
+      "11/16/2026": 0
     },
     "Environ Science 1": {
       "8/25/2026": null,
@@ -1942,7 +2140,8 @@
       "11/11/2026": 33,
       "11/12/2026": 25,
       "11/13/2026": 25,
-      "11/14/2026": 25
+      "11/14/2026": 25,
+      "11/16/2026": 25
     },
     "Heroes & Monsters": {
       "8/25/2026": null,
@@ -2020,7 +2219,8 @@
       "11/11/2026": null,
       "11/12/2026": null,
       "11/13/2026": null,
-      "11/14/2026": null
+      "11/14/2026": null,
+      "11/16/2026": null
     },
     "Coding W/ Python": {
       "8/25/2026": null,
@@ -2098,7 +2298,8 @@
       "11/11/2026": null,
       "11/12/2026": null,
       "11/13/2026": null,
-      "11/14/2026": null
+      "11/14/2026": null,
+      "11/16/2026": null
     },
     "Chemistry 2": {
       "8/25/2026": null,
@@ -2244,7 +2445,8 @@
       "11/11/2026": 53,
       "11/12/2026": 44,
       "11/13/2026": 44,
-      "11/14/2026": 44
+      "11/14/2026": 44,
+      "11/16/2026": 52
     },
     "Anatomy & Physiol": {
       "8/25/2026": null,
@@ -2322,7 +2524,8 @@
       "11/11/2026": 87,
       "11/12/2026": 87,
       "11/13/2026": 87,
-      "11/14/2026": 87
+      "11/14/2026": 87,
+      "11/16/2026": 87
     },
     "Science Of Science Fiction": {
       "8/25/2026": null,
@@ -2400,7 +2603,8 @@
       "11/11/2026": null,
       "11/12/2026": null,
       "11/13/2026": null,
-      "11/14/2026": null
+      "11/14/2026": null,
+      "11/16/2026": null
     },
     "Astronomy": {
       "8/25/2026": 100,
@@ -2478,7 +2682,8 @@
       "11/11/2026": 72,
       "11/12/2026": 72,
       "11/13/2026": 75,
-      "11/14/2026": 75
+      "11/14/2026": 75,
+      "11/16/2026": 75
     },
     "Mod Film & Culture": {
       "8/25/2026": null,
@@ -2556,7 +2761,8 @@
       "11/11/2026": null,
       "11/12/2026": null,
       "11/13/2026": null,
-      "11/14/2026": null
+      "11/14/2026": null,
+      "11/16/2026": null
     },
     "World Studies": {
       "8/25/2026": null,
@@ -2634,7 +2840,8 @@
       "11/11/2026": 50,
       "11/12/2026": 55,
       "11/13/2026": 55,
-      "11/14/2026": 55
+      "11/14/2026": 55,
+      "11/16/2026": 43
     },
     "English 11": {
       "8/25/2026": null,
@@ -2712,7 +2919,8 @@
       "11/11/2026": 100,
       "11/12/2026": 100,
       "11/13/2026": 100,
-      "11/14/2026": 97
+      "11/14/2026": 97,
+      "11/16/2026": 97
     },
     "Chemistry": {
       "11/4/2026": 0,
@@ -2725,10 +2933,11 @@
       "11/11/2026": 98,
       "11/12/2026": 89,
       "11/13/2026": 75,
-      "11/14/2026": 75
+      "11/14/2026": 75,
+      "11/16/2026": 79
     }
   },
-  "overall_average": 0,
+  "overall_average": 70,
   "average_history": {
     "11/24/2025": 84,
     "11/25/2025": 84,
@@ -3079,9 +3288,9 @@
     "11/13/2026": 70,
     "11/14/2026": 70,
     "11/15/2026": 0,
-    "11/16/2026": 0
+    "11/16/2026": 70
   },
-  "streak": 2,
+  "streak": 0,
   "streak_history": {
     "11/24/2025": 0,
     "11/25/2025": 0,
@@ -3432,6 +3641,6 @@
     "11/13/2026": 0,
     "11/14/2026": 0,
     "11/15/2026": 1,
-    "11/16/2026": 2
+    "11/16/2026": 0
   }
 }
