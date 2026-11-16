@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scrapedAt": "2026-11-16T18:01:26.232Z",
+    "scrapedAt": "2026-11-16T21:48:55.812Z",
     "totalClasses": 13,
-    "totalAssignments": 257
+    "totalAssignments": 260
   },
   "classes": [
     {
@@ -529,8 +529,16 @@
       "className": "CHEMISTRY",
       "teacher": "Patrick Kirby",
       "period": "3",
-      "currentGrade": 79,
+      "currentGrade": 75,
       "assignments": [
+        {
+          "name": "Solutions Reading",
+          "dueDate": null,
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": true
+        },
         {
           "name": "Types of Mixtures",
           "dueDate": null,
@@ -544,6 +552,14 @@
           "dueDate": "11/16/2026",
           "earnedPoints": 24,
           "totalPoints": 30,
+          "weight": 1,
+          "graded": true
+        },
+        {
+          "name": "Solutions Reading",
+          "dueDate": "11/16/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
           "weight": 1,
           "graded": true
         },
@@ -955,14 +971,6 @@
       "period": "4",
       "currentGrade": 52,
       "assignments": [
-        {
-          "name": "HW #3 Writing Linear Equations",
-          "dueDate": "11/12/2026",
-          "earnedPoints": 0,
-          "totalPoints": 10,
-          "weight": 1,
-          "graded": true
-        },
         {
           "name": "HW #4 App. & Lin. Reg.",
           "dueDate": "11/17/2026",
@@ -1492,6 +1500,14 @@
       "currentGrade": 75,
       "assignments": [
         {
+          "name": "\"America the Beautiful\" Sky...",
+          "dueDate": "11/13/2026",
+          "earnedPoints": 0,
+          "totalPoints": 0,
+          "weight": 1,
+          "graded": true
+        },
+        {
           "name": "Swipe Right",
           "dueDate": "11/12/2026",
           "earnedPoints": 25,
@@ -1747,6 +1763,14 @@
       "period": "7",
       "currentGrade": 43,
       "assignments": [
+        {
+          "name": "Ch 19-2 Modern egypt: Traditions and Daily life",
+          "dueDate": "11/17/2026",
+          "earnedPoints": 0,
+          "totalPoints": 10,
+          "weight": 1,
+          "graded": false
+        },
         {
           "name": "CH 19-2 Egypt and the Nile",
           "dueDate": "11/16/2026",
